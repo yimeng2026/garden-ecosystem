@@ -45,3 +45,21 @@ python research/paper-direction-audit-2026-11-10/scripts/inventory_papers.py
 最终实际退出码：**0**。读取 751 份文档，识别 18 组完全重复。第一次执行因根目录递归进入工具链而失败，随后已将共享目录与论文专属目录的资产扫描分开并重新生成；该失败不计为验证通过记录。
 
 上述 PASS 均来自本次真实执行。它们只覆盖脚本明确检查的命题，不构成论文新颖性、全部数据真实性或外部同行评议证明。
+
+## 主系列初审 Word 交付
+
+执行最终结构验证：
+
+```bash
+python <kimi-word>/scripts/docx.py validate PROVIDER_REVIEW.docx
+```
+
+实际退出码：**0**，结果为 `PASSED (17 parts XSD + semantic checks; gen: 6 checks clean)`。
+
+执行视觉预览：
+
+```bash
+python <kimi-word>/scripts/docx.py render PROVIDER_REVIEW.docx <qa-dir>
+```
+
+实际渲染 **11 页**，`near-blank pages: none`。已查看联系表，逐篇表格、页眉和原生页码存在；预览引擎仅报告编号级别覆盖的低风险兼容提示，未报告正文内容丢失。

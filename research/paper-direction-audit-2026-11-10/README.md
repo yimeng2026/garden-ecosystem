@@ -16,7 +16,7 @@
 - 实际读取 751 份文档，形成 `inventory.json`、`inventory.csv` 与 `INVENTORY.md`。
 - 文档类型分为论文、综述、研究报告、评论、审计、索引和方法文档；18 组字节级完全重复已登记。
 - 生成 78 个有界阅读包；这些是可再生中间文件，目录已在 `.gitignore` 中排除，不进入版本库。
-- 31 篇主花园量子系列已逐篇初审，见 `PROVIDER_REVIEW.md`；P0 10 篇、P1 18 篇、P2 3 篇。
+- 31 篇主花园量子系列已逐篇初审，见 `PROVIDER_REVIEW.md`；P0 10 篇、P1 18 篇、P2 3 篇。另有 `PROVIDER_REVIEW.docx` 原生 Word 版，含目录、页眉、原生页码和真正 Word 表格。
 - 外部前沿首轮使用 12 项查询，覆盖 Majorana 2、Google below-threshold、Fibonacci、qLDPC、实时解码、AM–SC、非绝热几何门、Stim／PyMatching、cultivation、离子阱与量子网络标准。
 - 两套现有验证脚本已真实运行，命令、退出码和证据边界见 `VALIDATION_LOG.md`。
 
