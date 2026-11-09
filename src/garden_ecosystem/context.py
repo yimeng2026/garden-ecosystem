@@ -26,8 +26,9 @@ class UsageAnchor:
     input_tokens: int
 
     def __post_init__(self) -> None:
-        if isinstance(self.input_tokens, bool) or self.input_tokens <= 0:
-            raise ValueError("input_tokens must be positive")
+        if (isinstance(self.input_tokens, bool) or not isinstance(self.input_tokens, int)
+                or self.input_tokens <= 0):
+            raise ValueError("input_tokens must be a positive integer")
 
 
 @dataclass(frozen=True)

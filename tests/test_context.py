@@ -14,6 +14,10 @@ class ContextTests(unittest.TestCase):
         self.messages = [{"role": "user", "content": "检查引力"}]
         self.anchor = UsageAnchor("m", stable_hash(self.messages), 20)
 
+    def test_anchor_requires_integer_tokens(self):
+        with self.assertRaises(ValueError):
+            UsageAnchor("m", "prefix", 1.5)
+
     def test_measured_anchor_must_match_model_and_exact_prefix(self):
         self.assertEqual(resolve_budget(self.messages, "m", 100, 40, self.anchor).source, "measured")
         self.assertEqual(resolve_budget(self.messages, "m", 100, 40,

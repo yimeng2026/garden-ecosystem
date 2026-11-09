@@ -82,6 +82,8 @@ class LearningLedger:
 
     def evaluate(self, candidate_id: str, helped: bool, task: str, date: str,
                  harmed: bool = False, control: bool = False) -> LearningCandidate:
+        if not self.enabled:
+            raise LearningDisabled("learning is disabled by default")
         item = self.candidates[candidate_id]
         evidence = LearningEvidence(task, date, helped, harmed, control)
         item.evidence.append(evidence)

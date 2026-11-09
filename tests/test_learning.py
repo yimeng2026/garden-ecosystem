@@ -9,6 +9,10 @@ class LearningTests(unittest.TestCase):
         with self.assertRaises(LearningDisabled):
             LearningLedger().record({"text": "keep this", "kind": "guideline"})
 
+    def test_disabled_learning_cannot_evaluate(self):
+        with self.assertRaises(LearningDisabled):
+            LearningLedger().evaluate("unknown", helped=True, task="a", date="2026-11-09")
+
     def test_two_independent_help_events_activate(self):
         ledger = LearningLedger(enabled=True)
         item = ledger.record({"text": "run checks", "kind": "guideline"})

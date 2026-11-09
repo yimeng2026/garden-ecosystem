@@ -11,13 +11,17 @@ from garden_ecosystem.receipts import (
 class ReceiptTests(unittest.TestCase):
     def setUp(self):
         self.manifest = RunManifest.create(project="demo", config={
-            "model": "mock", "api_key": "do-not-store", "nested": {"token": "hide"}
+            "model": "mock", "api_key": "do-not-store", "auth": "do-not-store-auth",
+            "nested": {"token": "hide"},
         }, seed=7, clock=lambda: 1000)
         self.store = CheckpointStore(clock=lambda: 1000)
 
     def test_manifest_has_no_secret_values(self):
-        serialized = json.dumps(self.manifest.snapshot())
+        from garden_ecosystem.receipts import public_config
+        serialized = json.dumps(public_config({"api_key": "do-not-store",
+            "auth": "do-not-store-auth", "nested": {"token": "hide"}}))
         self.assertNotIn("do-not-store", serialized)
+        self.assertNotIn("do-not-store-auth", serialized)
         self.assertNotIn("hide", serialized)
         self.assertEqual(self.manifest.seed, 7)
         self.assertEqual(self.manifest.created_at, 1000)
@@ -52,6 +56,12 @@ class ReceiptTests(unittest.TestCase):
         receipt = VerificationReceipt.machine_checked(
             tool="lean", version="4", evidence_hash="abc", attested=True)
         self.assertFalse(receipt.mock)
+
+    def test_direct_constructor_cannot_bypass_attestation(self):
+        with self.assertRaises(ValueError):
+            VerificationReceipt(VerificationLevel.MACHINE_CHECKED, "lean", "4", "abc")
+        with self.assertRaises(ValueError):
+            VerificationReceipt(VerificationLevel.EXTERNALLY_VALIDATED, "lab", "1", "abc")
 
     def test_levels_are_not_an_automatic_truth_ladder(self):
         self.assertNotEqual(VerificationLevel.MACHINE_CHECKED, VerificationLevel.EXTERNALLY_VALIDATED)

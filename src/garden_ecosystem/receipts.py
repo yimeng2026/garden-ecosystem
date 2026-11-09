@@ -15,19 +15,24 @@ from .errors import CheckpointMismatch, GardenError
 from .security import stable_hash
 
 
-def _public(value: Any) -> Any:
+def public_config(value: Any) -> Any:
+    """Return a JSON-safe configuration view with credential-shaped values removed."""
     if isinstance(value, dict):
         result = {}
         for key, item in value.items():
             normalized = str(key).lower().replace("-", "_")
-            if any(part in normalized for part in ("secret", "token", "password", "api_key", "apikey", "credential", "authorization")):
+            if (any(part in normalized for part in ("secret", "token", "password", "api_key", "apikey", "credential", "authorization"))
+                    or normalized in {"auth", "key"}):
                 result[str(key)] = "[redacted]"
             else:
-                result[str(key)] = _public(item)
+                result[str(key)] = public_config(item)
         return result
     if isinstance(value, (list, tuple)):
-        return [_public(item) for item in value]
+        return [public_config(item) for item in value]
     return value
+
+
+_public = public_config
 
 
 @dataclass(frozen=True)
@@ -123,6 +128,11 @@ class VerificationReceipt:
         object.__setattr__(self, "level", VerificationLevel(self.level))
         if not self.tool or not self.version or not self.evidence_hash:
             raise ValueError("tool, version and evidence hash are required")
+        if (self.level in {VerificationLevel.MACHINE_CHECKED,
+                           VerificationLevel.NUMERICALLY_REPRODUCED,
+                           VerificationLevel.EXTERNALLY_VALIDATED}
+                and not self.mock and not self.attested):
+            raise ValueError("verified receipt requires external attestation or explicit mock=True")
 
     @classmethod
     def machine_checked(cls, tool: str, version: str, evidence_hash: str,
