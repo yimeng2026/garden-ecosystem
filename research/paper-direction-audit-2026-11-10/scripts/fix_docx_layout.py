@@ -6,6 +6,7 @@ from pathlib import Path
 from lxml import etree
 
 ROOT = Path(sys.argv[1]).resolve()
+LAYOUT = sys.argv[2] if len(sys.argv) > 2 else "provider"
 W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 W14 = "http://schemas.microsoft.com/office/word/2010/wordml"
 NS = {"w": W}
@@ -49,6 +50,8 @@ for table in tree.xpath("//w:tbl", namespaces=NS):
     first_cells = table.xpath("./w:tr[1]/w:tc", namespaces=NS)
     if len(first_cells) == 6:
         widths = [650, 750, 750, 800, 1000, available - 3950]
+    elif len(first_cells) == 5 and LAYOUT == "core-open":
+        widths = [500, 1500, 1400, 2500, available - 5900]
     elif len(first_cells) == 5:
         widths = [1500, 1900, 1900, 3000, available - 8300]
     elif len(first_cells) == 2:
