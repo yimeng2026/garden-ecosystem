@@ -28,5 +28,18 @@
     "full_k1_completed": false,
     "general_k0_completed": false,
     "original_role_novelty_unfinished_priority_preserved": true
+  },
+  "k1b_resolution": {
+    "paper_id": "toe-sylva:papers/数学基础强化_系列/21_代数K理论_从向量丛到普适不变量.md",
+    "status": "pass",
+    "compile_exit_code": 0,
+    "checks": "11/11",
+    "axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "k1_interfaces_completed": true,
+    "general_k0_completed": false,
+    "original_role_novelty_unfinished_priority_preserved": true
   }
 }

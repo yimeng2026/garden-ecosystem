@@ -232,7 +232,7 @@
       "evidence": "papers/数学基础强化_系列/21_代数K理论_从向量丛到普适不变量.md",
       "source_line_1": "# 代数 K 理论：从向量丛到普适不变量",
       "resolution_2026_11_10": {
-        "status": "K1a_verified_K1b_to_K4_open",
+        "status": "K1a_K1b_verified_K2_to_K4_open",
         "theorem": "SylvaK0Probe.universal_property",
         "upstream": "Algebra.GrothendieckAddGroup.lift（mathlib 已有同态等价）",
         "compile_exit_code": 0,
@@ -247,7 +247,22 @@
         "report": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K0_UNIVERSAL_PROPERTY_VERIFICATION.md",
         "native_word": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K0_UNIVERSAL_PROPERTY_VERIFICATION.docx",
         "scope": "仅 K1a 泛性质接口；消去性充要条件、投射模、环、拓扑 K 理论和 Bott 周期性仍开放。",
-        "external_novelty": "无：复用 mathlib 已有等价，只验证 ∃! 接口。"
+        "external_novelty": "无：复用 mathlib 已有等价，只验证 ∃! 接口。",
+        "k1b": {
+          "theorem": "SylvaK0CancellationProbe.inclusion_injective_iff",
+          "upstream": "AddSubmonoid.LocalizationMap.top_injective_iff",
+          "compile_exit_code": 0,
+          "checks": "11/11",
+          "axioms": [
+            "propext",
+            "Quot.sound"
+          ],
+          "proof": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k0_cancellation_probe_20261110.lean",
+          "log": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k0_cancellation_compile_log_20261110.txt",
+          "report": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K0_CANCELLATION_VERIFICATION.md",
+          "native_word": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K0_CANCELLATION_VERIFICATION.docx",
+          "scope": "单射性当且仅当全消去律；K2–K4 继续开放。"
+        }
       }
     },
     {

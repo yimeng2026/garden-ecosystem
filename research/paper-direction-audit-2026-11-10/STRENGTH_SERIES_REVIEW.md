@@ -136,3 +136,9 @@ $$\psi_{\mathrm{toy}}''(\mu)=1 \quad\Longrightarrow\quad \frac{1}{\psi_{\mathrm{
 - [验证报告](kimi-cite://text?path=C%3A%5CUsers%5C%E4%B8%80%E6%A2%A6%5CDocuments%5Ckimi%5Cworkspace%5C.worktrees%5Ctoe-k0-universal%5Cpapers%5C%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96_%E7%B3%BB%E5%88%97%5C_panel_records%5CK0_UNIVERSAL_PROPERTY_VERIFICATION.md&text=K1a%EF%BC%9AGrothendieck%20%E7%BE%A4%E5%AE%8C%E5%A4%87%E5%8C%96%E6%B3%9B%E6%80%A7%E8%B4%A8%E7%9A%84%E7%9C%9F%E5%AE%9E%E7%BC%96%E8%AF%91%E9%AA%8C%E8%AF%81 "citation")及[原生 Word](C:\Users\一梦\Documents\kimi\workspace\.worktrees\toe-k0-universal\papers\数学基础强化_系列\_panel_records\K0_UNIVERSAL_PROPERTY_VERIFICATION.docx)。
 - `SylvaK0Probe.universal_property` 真实编译退出码 0，10/10 检查通过，公理仅 Lean 标准三项。
 - 本项只完成 K1a；K1b 消去性充要条件、K2–K4 与整篇论文的未竟工作不变。mathlib 已有 `Algebra.GrothendieckAddGroup.lift`，不主张外部数学首创。
+
+## K1b 单射性与全消去律复核补记（2026-11-10）
+
+- [K1b 验证报告](kimi-cite://text?path=C%3A%5CUsers%5C%E4%B8%80%E6%A2%A6%5CDocuments%5Ckimi%5Cworkspace%5C.worktrees%5Ctoe-k0-universal%5Cpapers%5C%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96_%E7%B3%BB%E5%88%97%5C_panel_records%5CK0_CANCELLATION_VERIFICATION.md&text=K1b%EF%BC%9A%E6%A0%87%E5%87%86%E6%98%A0%E5%B0%84%E5%8D%95%E5%B0%84%E6%80%A7%E5%BD%93%E4%B8%94%E4%BB%85%E5%BD%93%E5%85%A8%E6%B6%88%E5%8E%BB%E5%BE%8B "citation")及[原生 Word](C:\Users\一梦\Documents\kimi\workspace\.worktrees\toe-k0-universal\papers\数学基础强化_系列\_panel_records\K0_CANCELLATION_VERIFICATION.docx)。
+- `inclusion_injective_iff` 编译退出码 0，11/11 检查通过，实际公理为 `propext, Quot.sound`。
+- K1a＋K1b 接口闭合；K2–K4 未竟工作不变。标准局部化定理复用不构成外部数学首创。
