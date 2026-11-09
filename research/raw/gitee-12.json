@@ -1,0 +1,7 @@
+{
+  "site": "gitee",
+  "query": "世界模型",
+  "url": "https://gitee.com/api/v5/search/repositories?q=%E4%B8%96%E7%95%8C%E6%A8%A1%E5%9E%8B&per_page=50",
+  "ok": true,
+  "data": []
+}

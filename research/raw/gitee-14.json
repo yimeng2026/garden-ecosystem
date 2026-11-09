@@ -1,0 +1,7 @@
+{
+  "site": "gitee",
+  "query": "AgentScope",
+  "url": "https://gitee.com/api/v5/search/repositories?q=AgentScope&per_page=50",
+  "ok": true,
+  "data": []
+}

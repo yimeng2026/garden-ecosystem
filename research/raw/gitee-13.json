@@ -1,0 +1,7 @@
+{
+  "site": "gitee",
+  "query": "科学智能体",
+  "url": "https://gitee.com/api/v5/search/repositories?q=%E7%A7%91%E5%AD%A6%E6%99%BA%E8%83%BD%E4%BD%93&per_page=50",
+  "ok": true,
+  "data": []
+}

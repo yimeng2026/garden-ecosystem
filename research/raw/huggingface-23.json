@@ -1,0 +1,3062 @@
+{
+  "site": "huggingface",
+  "query": "world model",
+  "url": "https://huggingface.co/api/models?search=world+model&limit=50&full=true",
+  "ok": true,
+  "data": [
+    {
+      "_id": "6abc40d4858e372b9284b9e1",
+      "id": "jepa-world-models/h-jepa",
+      "author": "jepa-world-models",
+      "gated": false,
+      "lastModified": "2026-10-20T02:28:57.000Z",
+      "likes": 22,
+      "trendingScore": 2,
+      "private": false,
+      "sha": "08fc8a21208671a87741f2960aeba9b5db4420e0",
+      "downloads": 0,
+      "tags": [
+        "pytorch",
+        "world-models",
+        "jepa",
+        "planning",
+        "robotics",
+        "dataset:jepa-world-models/h-jepa",
+        "arxiv:2610.06805",
+        "license:mit",
+        "region:us"
+      ],
+      "pipeline_tag": "robotics",
+      "library_name": "pytorch",
+      "createdAt": "2026-09-29T22:51:00.000Z",
+      "modelId": "jepa-world-models/h-jepa",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "LICENSE"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l2/seed42/ant_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l2/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l2/seed43/ant_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l2/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l2/seed44/ant_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l2/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l3/seed42/ant_hjepa_l3_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l3/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l3/seed43/ant_hjepa_l3_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l3/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l3/seed44/ant_hjepa_l3_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l3/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l4/seed42/ant_hjepa_l4_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l4/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l4/seed43/ant_hjepa_l4_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l4/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l4/seed44/ant_hjepa_l4_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hjepa_l4/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l2/seed42/ant_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l2/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l2/seed43/ant_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l2/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l2/seed44/ant_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l2/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l3/seed42/ant_hwm_l3_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l3/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l3/seed43/ant_hwm_l3_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l3/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l3/seed44/ant_hwm_l3_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l3/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l4/seed42/ant_hwm_l4_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l4/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l4/seed43/ant_hwm_l4_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l4/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l4/seed44/ant_hwm_l4_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_hwm_l4/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_lewm/seed42/ant_lewm_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_lewm/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_lewm/seed43/ant_lewm_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_lewm/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "ant/ant_lewm/seed44/ant_lewm_object.ckpt"
+        },
+        {
+          "rfilename": "ant/ant_lewm/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l2/seed42/cube_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l2/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l2/seed43/cube_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l2/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l2/seed44/cube_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l2/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l3/seed42/cube_hjepa_l3_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l3/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l3/seed43/cube_hjepa_l3_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l3/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l3/seed44/cube_hjepa_l3_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l3/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l4/seed42/cube_hjepa_l4_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l4/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l4/seed43/cube_hjepa_l4_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l4/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l4/seed44/cube_hjepa_l4_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hjepa_l4/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l2/seed42/cube_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l2/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l2/seed43/cube_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l2/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l2/seed44/cube_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l2/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l3/seed42/cube_hwm_l3_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l3/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l3/seed43/cube_hwm_l3_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l3/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l3/seed44/cube_hwm_l3_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l3/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l4/seed42/cube_hwm_l4_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l4/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l4/seed43/cube_hwm_l4_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l4/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l4/seed44/cube_hwm_l4_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_hwm_l4/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_lewm/seed42/cube_lewm_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_lewm/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_lewm/seed43/cube_lewm_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_lewm/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "cube/cube_lewm/seed44/cube_lewm_object.ckpt"
+        },
+        {
+          "rfilename": "cube/cube_lewm/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "droid/droid_hjepa_l2/seed1/droid_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "droid/droid_hjepa_l2/seed1/normalizer.pt"
+        },
+        {
+          "rfilename": "droid/droid_hjepa_l2/seed1000/droid_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "droid/droid_hjepa_l2/seed1000/normalizer.pt"
+        },
+        {
+          "rfilename": "droid/droid_hjepa_l2/seed10000/droid_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "droid/droid_hjepa_l2/seed10000/normalizer.pt"
+        },
+        {
+          "rfilename": "droid/droid_hwm_l2/seed1/droid_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "droid/droid_hwm_l2/seed1/normalizer.pt"
+        },
+        {
+          "rfilename": "droid/droid_hwm_l2/seed1000/droid_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "droid/droid_hwm_l2/seed1000/normalizer.pt"
+        },
+        {
+          "rfilename": "droid/droid_hwm_l2/seed10000/droid_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "droid/droid_hwm_l2/seed10000/normalizer.pt"
+        },
+        {
+          "rfilename": "droid/droid_lewm/seed1/droid_lewm_object.ckpt"
+        },
+        {
+          "rfilename": "droid/droid_lewm/seed1/normalizer.pt"
+        },
+        {
+          "rfilename": "droid/droid_lewm/seed1000/droid_lewm_object.ckpt"
+        },
+        {
+          "rfilename": "droid/droid_lewm/seed1000/normalizer.pt"
+        },
+        {
+          "rfilename": "droid/droid_lewm/seed10000/droid_lewm_object.ckpt"
+        },
+        {
+          "rfilename": "droid/droid_lewm/seed10000/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l2/seed42/fourroom_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l2/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l2/seed43/fourroom_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l2/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l2/seed44/fourroom_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l2/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l3/seed42/fourroom_hjepa_l3_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l3/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l3/seed43/fourroom_hjepa_l3_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l3/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l3/seed44/fourroom_hjepa_l3_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l3/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l4/seed42/fourroom_hjepa_l4_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l4/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l4/seed43/fourroom_hjepa_l4_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l4/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l4/seed44/fourroom_hjepa_l4_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hjepa_l4/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l2/seed42/fourroom_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l2/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l2/seed43/fourroom_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l2/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l2/seed44/fourroom_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l2/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l3/seed42/fourroom_hwm_l3_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l3/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l3/seed43/fourroom_hwm_l3_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l3/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l3/seed44/fourroom_hwm_l3_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l3/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l4/seed42/fourroom_hwm_l4_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l4/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l4/seed43/fourroom_hwm_l4_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l4/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l4/seed44/fourroom_hwm_l4_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_hwm_l4/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_lewm/seed42/fourroom_lewm_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_lewm/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_lewm/seed43/fourroom_lewm_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_lewm/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_lewm/seed44/fourroom_lewm_object.ckpt"
+        },
+        {
+          "rfilename": "fourroom/fourroom_lewm/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l2/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l2/seed42/pusht_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l2/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l2/seed43/pusht_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l2/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l2/seed44/pusht_hjepa_l2_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l3/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l3/seed42/pusht_hjepa_l3_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l3/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l3/seed43/pusht_hjepa_l3_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l3/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l3/seed44/pusht_hjepa_l3_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l4/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l4/seed42/pusht_hjepa_l4_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l4/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l4/seed43/pusht_hjepa_l4_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l4/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hjepa_l4/seed44/pusht_hjepa_l4_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l2/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l2/seed42/pusht_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l2/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l2/seed43/pusht_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l2/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l2/seed44/pusht_hwm_l2_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l3/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l3/seed42/pusht_hwm_l3_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l3/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l3/seed43/pusht_hwm_l3_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l3/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l3/seed44/pusht_hwm_l3_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l4/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l4/seed42/pusht_hwm_l4_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l4/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l4/seed43/pusht_hwm_l4_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l4/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_hwm_l4/seed44/pusht_hwm_l4_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_lewm/seed42/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_lewm/seed42/pusht_lewm_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_lewm/seed43/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_lewm/seed43/pusht_lewm_object.ckpt"
+        },
+        {
+          "rfilename": "pusht/pusht_lewm/seed44/normalizer.pt"
+        },
+        {
+          "rfilename": "pusht/pusht_lewm/seed44/pusht_lewm_object.ckpt"
+        }
+      ]
+    },
+    {
+      "_id": "6a0a1b8205befdcbd3b4fe38",
+      "id": "NU-World-Model-Embodied-AI/phyworld",
+      "author": "NU-World-Model-Embodied-AI",
+      "gated": false,
+      "lastModified": "2026-08-07T00:55:15.000Z",
+      "likes": 37,
+      "trendingScore": 1.5,
+      "private": false,
+      "sha": "888b77522ae2de7a5f204c6966fdef6ec9ae701b",
+      "downloads": 0,
+      "tags": [
+        "custom",
+        "world-model",
+        "video-generation",
+        "physical-ai",
+        "physics",
+        "flow-matching",
+        "dpo",
+        "wan2.2",
+        "arxiv:2605.19242",
+        "video-to-video",
+        "en",
+        "dataset:NU-World-Model-Embodied-AI/phyground",
+        "base_model:Wan-AI/Wan2.2-I2V-A14B",
+        "base_model:finetune:Wan-AI/Wan2.2-I2V-A14B",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "pipeline_tag": "video-to-video",
+      "library_name": "custom",
+      "createdAt": "2026-05-17T19:48:18.000Z",
+      "modelId": "NU-World-Model-Embodied-AI/phyworld",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "Wan2.1_VAE.pth"
+        },
+        {
+          "rfilename": "assets/comp_effic.png"
+        },
+        {
+          "rfilename": "assets/logo.png"
+        },
+        {
+          "rfilename": "assets/moe_2.png"
+        },
+        {
+          "rfilename": "assets/moe_arch.png"
+        },
+        {
+          "rfilename": "assets/performance.png"
+        },
+        {
+          "rfilename": "assets/vae.png"
+        },
+        {
+          "rfilename": "configuration.json"
+        },
+        {
+          "rfilename": "examples/i2v_input.JPG"
+        },
+        {
+          "rfilename": "file_sha.cache.json"
+        },
+        {
+          "rfilename": "google/umt5-xxl/special_tokens_map.json"
+        },
+        {
+          "rfilename": "google/umt5-xxl/spiece.model"
+        },
+        {
+          "rfilename": "google/umt5-xxl/tokenizer.json"
+        },
+        {
+          "rfilename": "google/umt5-xxl/tokenizer_config.json"
+        },
+        {
+          "rfilename": "high_noise_model/config.json"
+        },
+        {
+          "rfilename": "high_noise_model/diffusion.safetensors"
+        },
+        {
+          "rfilename": "low_noise_model/config.json"
+        },
+        {
+          "rfilename": "low_noise_model/diffusion.safetensors"
+        },
+        {
+          "rfilename": "models_t5_umt5-xxl-enc-bf16.pth"
+        },
+        {
+          "rfilename": "nohup.out"
+        }
+      ]
+    },
+    {
+      "_id": "6a3580820530479fad529bfc",
+      "id": "NU-World-Model-Embodied-AI/ActQuant-Pi05-LIBERO-3bpw",
+      "author": "NU-World-Model-Embodied-AI",
+      "gated": false,
+      "lastModified": "2026-06-19T18:31:38.000Z",
+      "likes": 1,
+      "trendingScore": 1,
+      "private": false,
+      "sha": "4d03f36f1ac019ad5e314dea584697ab29644171",
+      "downloads": 287,
+      "tags": [
+        "gguf",
+        "vla",
+        "vision-language-action",
+        "quantization",
+        "libero",
+        "pi0.5",
+        "actquant",
+        "robotics",
+        "arxiv:2605.24011",
+        "base_model:lerobot/pi05_libero_finetuned_v044",
+        "base_model:quantized:lerobot/pi05_libero_finetuned_v044",
+        "license:mit",
+        "region:us"
+      ],
+      "pipeline_tag": "robotics",
+      "library_name": "gguf",
+      "createdAt": "2026-06-19T17:46:42.000Z",
+      "modelId": "NU-World-Model-Embodied-AI/ActQuant-Pi05-LIBERO-3bpw",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "norm_stats.json"
+        },
+        {
+          "rfilename": "pi05.gguf"
+        },
+        {
+          "rfilename": "tokenizer.model"
+        }
+      ]
+    },
+    {
+      "_id": "6addce7dffe165f1843115ba",
+      "id": "JahaoZhang/Bipartite-World-Modeling",
+      "author": "JahaoZhang",
+      "gated": false,
+      "lastModified": "2026-10-25T10:09:03.000Z",
+      "likes": 1,
+      "trendingScore": 1,
+      "private": false,
+      "sha": "baaedce6ee80aefa8e48738209dcfb2d350df228",
+      "downloads": 18,
+      "tags": [
+        "safetensors",
+        "openvla",
+        "custom_code",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "createdAt": "2026-10-25T09:40:13.000Z",
+      "modelId": "JahaoZhang/Bipartite-World-Modeling",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "action_head--18000_checkpoint.pt"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "configuration_prismatic.py"
+        },
+        {
+          "rfilename": "dataset_statistics.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "lora_adapter/README.md"
+        },
+        {
+          "rfilename": "lora_adapter/adapter_config.json"
+        },
+        {
+          "rfilename": "lora_adapter/adapter_model.safetensors"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "modeling_prismatic.py"
+        },
+        {
+          "rfilename": "path_point_head--18000_checkpoint.pt"
+        },
+        {
+          "rfilename": "path_point_token_MLP--18000_checkpoint.pt"
+        },
+        {
+          "rfilename": "position_head--18000_checkpoint.pt"
+        },
+        {
+          "rfilename": "position_token_MLP--18000_checkpoint.pt"
+        },
+        {
+          "rfilename": "preprocessor_config.json"
+        },
+        {
+          "rfilename": "processing_prismatic.py"
+        },
+        {
+          "rfilename": "processor_config.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6af12f5c9cd91f015e1346c9",
+      "id": "Monster-Code/worlds-smallest-model-v1",
+      "author": "Monster-Code",
+      "gated": false,
+      "lastModified": "2026-11-09T02:26:39.000Z",
+      "likes": 1,
+      "trendingScore": 1,
+      "private": false,
+      "sha": "cbe79b781551ea3409d1215fadb1907974418d0b",
+      "downloads": 19,
+      "tags": [
+        "safetensors",
+        "micro-model",
+        "fun",
+        "license:mit",
+        "region:us"
+      ],
+      "createdAt": "2026-11-09T02:26:36.000Z",
+      "modelId": "Monster-Code/worlds-smallest-model-v1",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "model.safetensors"
+        }
+      ]
+    },
+    {
+      "_id": "6a19500ecd64315d6b50a5b5",
+      "id": "BLM-Lab/Boundless-World-Model",
+      "author": "BLM-Lab",
+      "gated": false,
+      "lastModified": "2026-05-29T15:05:07.000Z",
+      "likes": 14,
+      "trendingScore": 0.5,
+      "private": false,
+      "sha": "738a8d3c008e637b8b1b18d5e98a82f6de9c04aa",
+      "downloads": 67,
+      "tags": [
+        "pytorch",
+        "video-generation",
+        "image-to-video",
+        "world-model",
+        "robotics",
+        "action-conditioned",
+        "en",
+        "base_model:Wan-AI/Wan2.2-TI2V-5B",
+        "base_model:finetune:Wan-AI/Wan2.2-TI2V-5B",
+        "region:us"
+      ],
+      "pipeline_tag": "image-to-video",
+      "library_name": "pytorch",
+      "createdAt": "2026-05-29T08:36:30.000Z",
+      "modelId": "BLM-Lab/Boundless-World-Model",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "step-12000.safetensors"
+        }
+      ]
+    },
+    {
+      "_id": "6aab8b237d86d6d02a151bf0",
+      "id": "LIN-linlin/4D-World-Models-Robotic-Manipulation",
+      "author": "LIN-linlin",
+      "gated": false,
+      "lastModified": "2026-09-17T06:50:02.000Z",
+      "likes": 32,
+      "trendingScore": 0.5,
+      "private": false,
+      "sha": "61925f57bf92f84983ab4fa0f442772973c8fddd",
+      "downloads": 0,
+      "tags": [
+        "robotics",
+        "world-model",
+        "diffusion-policy",
+        "libero",
+        "license:other",
+        "region:us"
+      ],
+      "pipeline_tag": "robotics",
+      "createdAt": "2026-09-17T06:39:31.000Z",
+      "modelId": "LIN-linlin/4D-World-Models-Robotic-Manipulation",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "policy_libero_spatial/best_action_policy_ema.pt"
+        },
+        {
+          "rfilename": "policy_libero_spatial/interface.json"
+        },
+        {
+          "rfilename": "world_model/best.pt"
+        }
+      ]
+    },
+    {
+      "_id": "621ffdc136468d709f177b95",
+      "id": "WindJ/hello_world_model",
+      "author": "WindJ",
+      "gated": false,
+      "lastModified": "2021-07-16T11:11:05.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "c6c86818d2902dbbea4e92d9ced0dfe8f9e0f628",
+      "downloads": 0,
+      "tags": [
+        "region:us"
+      ],
+      "createdAt": "2022-03-02T23:29:05.000Z",
+      "modelId": "WindJ/hello_world_model",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        }
+      ]
+    },
+    {
+      "_id": "639602964fa1f32592327e71",
+      "id": "pgfeldman/model_explorer_hello_world",
+      "author": "pgfeldman",
+      "gated": false,
+      "lastModified": "2022-12-11T16:28:54.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "111ce1a89f5c678982b1af250cad452f63dd7f16",
+      "downloads": 10,
+      "tags": [
+        "transformers",
+        "pytorch",
+        "gpt2",
+        "text-generation",
+        "license:cc-by-4.0",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2022-12-11T16:17:26.000Z",
+      "modelId": "pgfeldman/model_explorer_hello_world",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "all_results.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "eval_results.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "pytorch_model.bin"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "train_results.json"
+        },
+        {
+          "rfilename": "trainer_state.json"
+        },
+        {
+          "rfilename": "training_args.bin"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "63ed03e7eba811fd642e9cb7",
+      "id": "manil5267/hello-world-model",
+      "author": "manil5267",
+      "gated": false,
+      "lastModified": "2023-02-15T16:10:15.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "39c5eb9b6ef08ae543b1a92d71f29f8ca8abb738",
+      "downloads": 0,
+      "tags": [
+        "region:us"
+      ],
+      "createdAt": "2023-02-15T16:10:15.000Z",
+      "modelId": "manil5267/hello-world-model",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        }
+      ]
+    },
+    {
+      "_id": "65116ca19119618a243d7076",
+      "id": "MaxxxP/WorldModel",
+      "author": "MaxxxP",
+      "gated": false,
+      "lastModified": "2023-09-25T11:30:17.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "6de4ef766151c4fe7d56a2af49bfbb74416ad792",
+      "downloads": 0,
+      "tags": [
+        "license:mit",
+        "region:us"
+      ],
+      "createdAt": "2023-09-25T11:18:57.000Z",
+      "modelId": "MaxxxP/WorldModel",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "masked_gptMc_weights.pt"
+        }
+      ]
+    },
+    {
+      "_id": "65c1bdd5dc62122db7978c3c",
+      "id": "bubl-ai/model_HELLO_WORLD",
+      "author": "bubl-ai",
+      "gated": false,
+      "lastModified": "2024-02-06T05:04:21.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "28f93c38be941a50341ebf78fd4d8825d200d747",
+      "downloads": 0,
+      "tags": [
+        "region:us"
+      ],
+      "createdAt": "2024-02-06T05:04:21.000Z",
+      "modelId": "bubl-ai/model_HELLO_WORLD",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        }
+      ]
+    },
+    {
+      "_id": "66484d2729eadb3ab41227cc",
+      "id": "USTC-3DVLab/worldmodel",
+      "author": "USTC-3DVLab",
+      "gated": false,
+      "lastModified": "2024-05-19T08:08:53.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "cb4a401f1f869c0adfb4cd61ca78da019138331c",
+      "downloads": 0,
+      "tags": [
+        "region:us"
+      ],
+      "createdAt": "2024-05-18T06:39:35.000Z",
+      "modelId": "USTC-3DVLab/worldmodel",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "submission.pkl"
+        }
+      ]
+    },
+    {
+      "_id": "6671d3c39ddd725254bbe34f",
+      "id": "1x-technologies/worldmodel_unet_v0",
+      "author": "1x-technologies",
+      "gated": false,
+      "lastModified": "2024-07-30T21:43:08.000Z",
+      "likes": 4,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "f63b7933e7b02ea4ad8c1ce48e83d886a73b6970",
+      "downloads": 29,
+      "tags": [
+        "diffusers",
+        "safetensors",
+        "dataset:1x-technologies/worldmodel",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "library_name": "diffusers",
+      "createdAt": "2024-06-18T18:36:51.000Z",
+      "modelId": "1x-technologies/worldmodel_unet_v0",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "diffusion_pytorch_model.safetensors"
+        }
+      ]
+    },
+    {
+      "_id": "6683214b2d89090894a1092c",
+      "id": "KicksOnFire/hello-world-model",
+      "author": "KicksOnFire",
+      "gated": false,
+      "lastModified": "2024-07-02T00:21:42.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "b20c94cf8dc9b8e7c6c0aa0fe36557e430c2e1cd",
+      "downloads": 0,
+      "tags": [
+        "license:mit",
+        "region:us"
+      ],
+      "createdAt": "2024-07-01T21:36:11.000Z",
+      "modelId": "KicksOnFire/hello-world-model",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": ".ipynb_checkpoints/hello-world-checkpoint.ipynb"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "hello-world.ipynb"
+        }
+      ]
+    },
+    {
+      "_id": "668cef453b77560291823495",
+      "id": "PhoenixStormJr/Super-Mario-World-PSD-image-models",
+      "author": "PhoenixStormJr",
+      "gated": false,
+      "lastModified": "2025-02-03T06:21:42.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "a9e0da7dd52eb755a5940f995fb42a8cc3c81863",
+      "downloads": 0,
+      "tags": [
+        "license:cc",
+        "region:us"
+      ],
+      "createdAt": "2024-07-09T08:05:25.000Z",
+      "modelId": "PhoenixStormJr/Super-Mario-World-PSD-image-models",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "YoshiImageModel.zip"
+        }
+      ]
+    },
+    {
+      "_id": "66ca09b5d2d84bde3c287815",
+      "id": "code-world-model/llama7b_math_pot",
+      "author": "code-world-model",
+      "gated": false,
+      "lastModified": "2024-08-25T08:13:36.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "8949ff24118a03e366ea23dffe65bfff6ed3e55f",
+      "downloads": 12,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "llama",
+        "feature-extraction",
+        "arxiv:1910.09700",
+        "text-embeddings-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "feature-extraction",
+      "library_name": "transformers",
+      "createdAt": "2024-08-24T16:26:29.000Z",
+      "modelId": "code-world-model/llama7b_math_pot",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "model-00001-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00005-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00006-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer.model"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "66cae9bfe51ba30092ea38ee",
+      "id": "code-world-model/llama7b_math_cot",
+      "author": "code-world-model",
+      "gated": false,
+      "lastModified": "2024-08-25T08:25:51.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "13cb06ab2f0f5f6a445c73b6bd56ec429c87f6ad",
+      "downloads": 13,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "llama",
+        "feature-extraction",
+        "arxiv:1910.09700",
+        "text-embeddings-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "feature-extraction",
+      "library_name": "transformers",
+      "createdAt": "2024-08-25T08:22:23.000Z",
+      "modelId": "code-world-model/llama7b_math_cot",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "model-00001-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00005-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00006-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer.model"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "66caeab66f8945277ce19ff3",
+      "id": "code-world-model/llama7b_math_codegen",
+      "author": "code-world-model",
+      "gated": false,
+      "lastModified": "2024-08-25T08:29:48.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "59b94a71586bbbd2f524f16612859dc62c4324d7",
+      "downloads": 42,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "llama",
+        "feature-extraction",
+        "arxiv:1910.09700",
+        "text-embeddings-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "feature-extraction",
+      "library_name": "transformers",
+      "createdAt": "2024-08-25T08:26:30.000Z",
+      "modelId": "code-world-model/llama7b_math_codegen",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "model-00001-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00005-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00006-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer.model"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "66caeb9a01fbc62ecd51d824",
+      "id": "code-world-model/llama7b_math_pot_trace",
+      "author": "code-world-model",
+      "gated": false,
+      "lastModified": "2024-08-25T08:33:40.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "1011ca8560c9e04cbe12be12ba9a7b29b26c6e30",
+      "downloads": 16,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "llama",
+        "feature-extraction",
+        "arxiv:1910.09700",
+        "text-embeddings-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "feature-extraction",
+      "library_name": "transformers",
+      "createdAt": "2024-08-25T08:30:18.000Z",
+      "modelId": "code-world-model/llama7b_math_pot_trace",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "model-00001-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00005-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model-00006-of-00006.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer.model"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "66cb79f1c218946abe956037",
+      "id": "LangAGI-Lab/worldmodel_wa_acctree_formatted",
+      "author": "LangAGI-Lab",
+      "gated": false,
+      "lastModified": "2024-08-25T18:37:37.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "289dc6134c3aa2b96de2a026d7cd50d55b65da87",
+      "downloads": 0,
+      "tags": [
+        "region:us"
+      ],
+      "createdAt": "2024-08-25T18:37:37.000Z",
+      "modelId": "LangAGI-Lab/worldmodel_wa_acctree_formatted",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        }
+      ]
+    },
+    {
+      "_id": "66f7e9f2f49cf9203d5940bb",
+      "id": "archit11/qwen_worldmodel",
+      "author": "archit11",
+      "gated": false,
+      "lastModified": "2024-09-30T08:12:53.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "72d9631f71bcc84fdd32f4e37b1e71a5a3f5ebcf",
+      "downloads": 73,
+      "tags": [
+        "transformers",
+        "tensorboard",
+        "safetensors",
+        "gguf",
+        "qwen2",
+        "text-generation",
+        "generated_from_trainer",
+        "qwen",
+        "GGUF",
+        "worldmodel",
+        "worldbuilding",
+        "dataset:archit11/worldbuilding",
+        "base_model:Qwen/Qwen2.5-0.5B",
+        "base_model:quantized:Qwen/Qwen2.5-0.5B",
+        "license:apache-2.0",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us",
+        "conversational"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-09-28T11:35:14.000Z",
+      "modelId": "archit11/qwen_worldmodel",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "qwen_worldmodel0.1.gguf"
+        },
+        {
+          "rfilename": "runs/Sep28_10-42-26_e89ab5377562/events.out.tfevents.1727520148.e89ab5377562.24.0"
+        },
+        {
+          "rfilename": "training_args.bin"
+        }
+      ]
+    },
+    {
+      "_id": "66f857b420b9a6265756f54a",
+      "id": "archit11/worldmodel2",
+      "author": "archit11",
+      "gated": false,
+      "lastModified": "2024-09-28T19:30:25.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "0a6ec6d55eda4cbe9c991402eee712f6e7bb341b",
+      "downloads": 7,
+      "tags": [
+        "transformers",
+        "tensorboard",
+        "safetensors",
+        "llama",
+        "text-generation",
+        "generated_from_trainer",
+        "base_model:nisten/Biggie-SmoLlm-0.15B-Base",
+        "base_model:finetune:nisten/Biggie-SmoLlm-0.15B-Base",
+        "license:mit",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "text-generation",
+      "library_name": "transformers",
+      "createdAt": "2024-09-28T19:23:32.000Z",
+      "modelId": "archit11/worldmodel2",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "runs/Sep28_17-36-28_5b62026256e8/events.out.tfevents.1727544990.5b62026256e8.22.0"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "training_args.bin"
+        }
+      ]
+    },
+    {
+      "_id": "66f8903126514d0aaa816eae",
+      "id": "uladkaminski/hello-world-model",
+      "author": "uladkaminski",
+      "gated": false,
+      "lastModified": "2024-09-28T23:24:37.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "233ef41dd33908d3de032698c9e2dc454346658b",
+      "downloads": 0,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "arxiv:1910.09700",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "library_name": "transformers",
+      "createdAt": "2024-09-28T23:24:33.000Z",
+      "modelId": "uladkaminski/hello-world-model",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "adapter_config.json"
+        },
+        {
+          "rfilename": "adapter_model.safetensors"
+        }
+      ]
+    },
+    {
+      "_id": "67c5912a6a0236814b1b216b",
+      "id": "mirac-akbulut/hello_world_model",
+      "author": "mirac-akbulut",
+      "gated": false,
+      "lastModified": "2025-03-03T11:23:23.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "0ff05761bf755569be49c0a65ba39ac5609e1ddf",
+      "downloads": 0,
+      "tags": [
+        "region:us"
+      ],
+      "createdAt": "2025-03-03T11:23:22.000Z",
+      "modelId": "mirac-akbulut/hello_world_model",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        }
+      ]
+    },
+    {
+      "_id": "67d2a4e004e727ca41cbf652",
+      "id": "mradermacher/worldmodel2-GGUF",
+      "author": "mradermacher",
+      "gated": false,
+      "lastModified": "2025-07-11T10:00:45.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "fb671b92ac4286bb9ec9bee1df0aeca691acd00a",
+      "downloads": 68,
+      "tags": [
+        "transformers",
+        "gguf",
+        "generated_from_trainer",
+        "en",
+        "base_model:archit11/worldmodel2",
+        "base_model:quantized:archit11/worldmodel2",
+        "license:mit",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "library_name": "transformers",
+      "createdAt": "2025-03-13T09:26:56.000Z",
+      "modelId": "mradermacher/worldmodel2-GGUF",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "worldmodel2.IQ4_XS.gguf"
+        },
+        {
+          "rfilename": "worldmodel2.Q2_K.gguf"
+        },
+        {
+          "rfilename": "worldmodel2.Q3_K_L.gguf"
+        },
+        {
+          "rfilename": "worldmodel2.Q3_K_M.gguf"
+        },
+        {
+          "rfilename": "worldmodel2.Q3_K_S.gguf"
+        },
+        {
+          "rfilename": "worldmodel2.Q4_K_M.gguf"
+        },
+        {
+          "rfilename": "worldmodel2.Q4_K_S.gguf"
+        },
+        {
+          "rfilename": "worldmodel2.Q5_K_M.gguf"
+        },
+        {
+          "rfilename": "worldmodel2.Q5_K_S.gguf"
+        },
+        {
+          "rfilename": "worldmodel2.Q6_K.gguf"
+        },
+        {
+          "rfilename": "worldmodel2.Q8_0.gguf"
+        },
+        {
+          "rfilename": "worldmodel2.f16.gguf"
+        }
+      ]
+    },
+    {
+      "_id": "67d8ffbc7f61dda9ea6705e2",
+      "id": "chaotic-world12/dummy_model",
+      "author": "chaotic-world12",
+      "gated": false,
+      "lastModified": "2025-03-18T05:09:44.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "705e157f46faf5b02e70bb412b8518eed527ccf5",
+      "downloads": 9,
+      "tags": [
+        "transformers",
+        "safetensors",
+        "camembert",
+        "fill-mask",
+        "arxiv:1910.09700",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "fill-mask",
+      "library_name": "transformers",
+      "createdAt": "2025-03-18T05:08:12.000Z",
+      "modelId": "chaotic-world12/dummy_model",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "sentencepiece.bpe.model"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "6802800b052239369a0b041f",
+      "id": "matthieunlp/spatial_world_models",
+      "author": "matthieunlp",
+      "gated": false,
+      "lastModified": "2025-04-18T16:38:36.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "e2872cf062ae3026d57e2de6317c049001ab5fdc",
+      "downloads": 0,
+      "tags": [
+        "region:us"
+      ],
+      "createdAt": "2025-04-18T16:38:35.000Z",
+      "modelId": "matthieunlp/spatial_world_models",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        }
+      ]
+    },
+    {
+      "_id": "6825ac8dc5863d34e3ad725b",
+      "id": "agibot-world/EWMBench-model",
+      "author": "agibot-world",
+      "gated": false,
+      "lastModified": "2025-05-16T03:58:40.000Z",
+      "likes": 4,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "85a49f8118ec656c9d511c5236582ac7fde16fbc",
+      "downloads": 0,
+      "tags": [
+        "arxiv:2505.09694",
+        "license:cc-by-nc-sa-4.0",
+        "region:us"
+      ],
+      "createdAt": "2025-05-15T08:57:49.000Z",
+      "modelId": "agibot-world/EWMBench-model",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "dinov2-EWMBench-v0.1.pth"
+        },
+        {
+          "rfilename": "figs/dashboard.jpg"
+        },
+        {
+          "rfilename": "figs/dataset.jpg"
+        },
+        {
+          "rfilename": "figs/pipe.jpg"
+        },
+        {
+          "rfilename": "yoloworld-EWMBench-v0.1.pt"
+        }
+      ]
+    },
+    {
+      "_id": "682c5bed91ead114568a4430",
+      "id": "Zery/CUA_World_State_Model",
+      "author": "Zery",
+      "gated": false,
+      "lastModified": "2025-08-07T03:42:54.000Z",
+      "likes": 12,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "475b79cf316b9e6f6d0d1218e072349a55e31dfc",
+      "downloads": 72,
+      "tags": [
+        "transformers",
+        "pytorch",
+        "qwen2_5_vl",
+        "image-text-to-text",
+        "multimodal",
+        "conversational",
+        "en",
+        "arxiv:2508.04700",
+        "base_model:Qwen/Qwen2.5-VL-7B-Instruct",
+        "base_model:finetune:Qwen/Qwen2.5-VL-7B-Instruct",
+        "license:apache-2.0",
+        "text-generation-inference",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "pipeline_tag": "image-text-to-text",
+      "library_name": "transformers",
+      "createdAt": "2025-05-20T10:39:41.000Z",
+      "modelId": "Zery/CUA_World_State_Model",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "chat_template.json"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "preprocessor_config.json"
+        },
+        {
+          "rfilename": "pytorch_model-00001-of-00004.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00002-of-00004.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00003-of-00004.bin"
+        },
+        {
+          "rfilename": "pytorch_model-00004-of-00004.bin"
+        },
+        {
+          "rfilename": "pytorch_model.bin.index.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "682f33c5dd59b3d95ed7c6e3",
+      "id": "thuml/rt1-world-model-multi-step-base",
+      "author": "thuml",
+      "gated": false,
+      "lastModified": "2025-05-22T15:06:59.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "242d6b7723d4b10ee0acd5f2cb8b4a98373ad9d8",
+      "downloads": 23,
+      "tags": [
+        "safetensors",
+        "llama",
+        "robotic-manipulation",
+        "rt1",
+        "world-model",
+        "video-prediction",
+        "arxiv:2505.13934",
+        "license:mit",
+        "region:us"
+      ],
+      "createdAt": "2025-05-22T14:25:09.000Z",
+      "modelId": "thuml/rt1-world-model-multi-step-base",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "682f35270d0f95d33b1049d5",
+      "id": "thuml/rt1-world-model-multi-step-rlvr",
+      "author": "thuml",
+      "gated": false,
+      "lastModified": "2025-05-26T16:55:37.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "df03df501812c6c20d051ffb9ca1846ec22412fe",
+      "downloads": 27,
+      "tags": [
+        "safetensors",
+        "llama",
+        "robotic-manipulation",
+        "rt1",
+        "world-model",
+        "video-prediction",
+        "rlvr",
+        "arxiv:2505.13934",
+        "base_model:thuml/rt1-world-model-multi-step-base",
+        "base_model:finetune:thuml/rt1-world-model-multi-step-base",
+        "license:mit",
+        "region:us"
+      ],
+      "createdAt": "2025-05-22T14:31:03.000Z",
+      "modelId": "thuml/rt1-world-model-multi-step-rlvr",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "682f360a792ff25e50f9f000",
+      "id": "thuml/rt1-world-model-single-step-rlvr",
+      "author": "thuml",
+      "gated": false,
+      "lastModified": "2025-05-26T16:55:05.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "ba6dae4049067c703f236f709720f6ff216c7e5f",
+      "downloads": 15,
+      "tags": [
+        "safetensors",
+        "llama",
+        "robotic-manipulation",
+        "rt1",
+        "world-model",
+        "video-prediction",
+        "rlvr",
+        "arxiv:2505.13934",
+        "base_model:thuml/rt1-world-model-single-step-base",
+        "base_model:finetune:thuml/rt1-world-model-single-step-base",
+        "license:mit",
+        "region:us"
+      ],
+      "createdAt": "2025-05-22T14:34:50.000Z",
+      "modelId": "thuml/rt1-world-model-single-step-rlvr",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "682f36bd0cd3a4c972d7a1e9",
+      "id": "thuml/rt1-world-model-single-step-base",
+      "author": "thuml",
+      "gated": false,
+      "lastModified": "2025-05-22T15:07:26.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "563df3a0c3a493b16c5704c868a3bca69fa9e5a1",
+      "downloads": 14,
+      "tags": [
+        "safetensors",
+        "llama",
+        "robotic-manipulation",
+        "rt1",
+        "world-model",
+        "video-prediction",
+        "arxiv:2505.13934",
+        "license:mit",
+        "region:us"
+      ],
+      "createdAt": "2025-05-22T14:37:49.000Z",
+      "modelId": "thuml/rt1-world-model-single-step-base",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "683465e3c83810c4e852976f",
+      "id": "thuml/webarena-world-model-sft",
+      "author": "thuml",
+      "gated": false,
+      "lastModified": "2025-05-26T16:57:17.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "eeae2c4e3e446ee1e210aeaa2973980280ff83b8",
+      "downloads": 14,
+      "tags": [
+        "safetensors",
+        "qwen2",
+        "web-agent",
+        "webarena",
+        "world-model",
+        "dataset:thuml/webarena-world-model-cot",
+        "arxiv:2505.13934",
+        "base_model:deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+        "base_model:finetune:deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+        "license:mit",
+        "region:us"
+      ],
+      "createdAt": "2025-05-26T13:00:19.000Z",
+      "modelId": "thuml/webarena-world-model-sft",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "LICENSE"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "6834691c19852283c4cf71d2",
+      "id": "thuml/webarena-world-model-rlvr",
+      "author": "thuml",
+      "gated": false,
+      "lastModified": "2025-05-26T16:56:14.000Z",
+      "likes": 13,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "44fbd3beabda9e2b2ae7a31d24a0aef44da60671",
+      "downloads": 73,
+      "tags": [
+        "safetensors",
+        "qwen2",
+        "web-agent",
+        "webarena",
+        "world-model",
+        "rlvr",
+        "dataset:thuml/webarena-world-model-cot",
+        "arxiv:2505.13934",
+        "base_model:thuml/webarena-world-model-sft",
+        "base_model:finetune:thuml/webarena-world-model-sft",
+        "license:mit",
+        "region:us"
+      ],
+      "createdAt": "2025-05-26T13:14:04.000Z",
+      "modelId": "thuml/webarena-world-model-rlvr",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "LICENSE"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "683489602dd8fce5a034a47f",
+      "id": "thuml/bytesized32-world-model-sft",
+      "author": "thuml",
+      "gated": false,
+      "lastModified": "2025-05-26T17:00:11.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "6121292e508946986d1a934ab14327f42bd6a745",
+      "downloads": 17,
+      "tags": [
+        "safetensors",
+        "qwen2",
+        "text-game",
+        "world-model",
+        "dataset:thuml/bytesized32-world-model-cot",
+        "arxiv:2505.13934",
+        "base_model:deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+        "base_model:finetune:deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+        "license:mit",
+        "region:us"
+      ],
+      "createdAt": "2025-05-26T15:31:44.000Z",
+      "modelId": "thuml/bytesized32-world-model-sft",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "68349849b5bb541d2e0b0ceb",
+      "id": "thuml/bytesized32-world-model-rlvr-binary-reward",
+      "author": "thuml",
+      "gated": false,
+      "lastModified": "2025-05-26T17:01:13.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "501a03ca1f9b55497cf3d58b7901d27c87b2fb18",
+      "downloads": 12,
+      "tags": [
+        "safetensors",
+        "qwen2",
+        "text-game",
+        "world-model",
+        "rlvr",
+        "dataset:thuml/bytesized32-world-model-cot",
+        "arxiv:2505.13934",
+        "base_model:thuml/bytesized32-world-model-sft",
+        "base_model:finetune:thuml/bytesized32-world-model-sft",
+        "license:mit",
+        "region:us"
+      ],
+      "createdAt": "2025-05-26T16:35:21.000Z",
+      "modelId": "thuml/bytesized32-world-model-rlvr-binary-reward",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "6834985f7ee4a4407e8bd395",
+      "id": "thuml/bytesized32-world-model-rlvr-task-specific-reward",
+      "author": "thuml",
+      "gated": false,
+      "lastModified": "2025-05-26T17:01:43.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "153dd625edde0fef09bad468235c14019d91ce3f",
+      "downloads": 13,
+      "tags": [
+        "safetensors",
+        "qwen2",
+        "text-game",
+        "world-model",
+        "rlvr",
+        "dataset:thuml/bytesized32-world-model-cot",
+        "arxiv:2505.13934",
+        "base_model:thuml/bytesized32-world-model-sft",
+        "base_model:finetune:thuml/bytesized32-world-model-sft",
+        "license:mit",
+        "region:us"
+      ],
+      "createdAt": "2025-05-26T16:35:43.000Z",
+      "modelId": "thuml/bytesized32-world-model-rlvr-task-specific-reward",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        }
+      ]
+    },
+    {
+      "_id": "683980984d9866c160441311",
+      "id": "yfqiu-nlp/chameleon-world-model-aurora-bootstrap",
+      "author": "yfqiu-nlp",
+      "gated": false,
+      "lastModified": "2025-06-12T07:48:49.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "a02da2f9dc993d1a3b4f50f14679f183f8df1e66",
+      "downloads": 4,
+      "tags": [
+        "peft",
+        "safetensors",
+        "image-to-image",
+        "arxiv:2506.06006",
+        "base_model:leloy/Anole-7b-v0.1-hf",
+        "base_model:adapter:leloy/Anole-7b-v0.1-hf",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "pipeline_tag": "image-to-image",
+      "library_name": "peft",
+      "createdAt": "2025-05-30T09:55:36.000Z",
+      "modelId": "yfqiu-nlp/chameleon-world-model-aurora-bootstrap",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "adapter_config.json"
+        },
+        {
+          "rfilename": "adapter_model.safetensors"
+        }
+      ]
+    },
+    {
+      "_id": "683982b038d3eb578988dad6",
+      "id": "yfqiu-nlp/chameleon-world-model-aurora",
+      "author": "yfqiu-nlp",
+      "gated": false,
+      "lastModified": "2025-06-12T07:48:57.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "7620671a34a5954b615375ba4297e7ab2a196afa",
+      "downloads": 9,
+      "tags": [
+        "peft",
+        "safetensors",
+        "image-to-image",
+        "arxiv:2506.06006",
+        "base_model:leloy/Anole-7b-v0.1-hf",
+        "base_model:adapter:leloy/Anole-7b-v0.1-hf",
+        "region:us"
+      ],
+      "pipeline_tag": "image-to-image",
+      "library_name": "peft",
+      "createdAt": "2025-05-30T10:04:32.000Z",
+      "modelId": "yfqiu-nlp/chameleon-world-model-aurora",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "adapter_config.json"
+        },
+        {
+          "rfilename": "adapter_model.safetensors"
+        }
+      ]
+    },
+    {
+      "_id": "684ee325c5fe917a31d91684",
+      "id": "LeRobot-worldwide-hackathon/311-panda-right-cell-ACT-model",
+      "author": "LeRobot-worldwide-hackathon",
+      "gated": false,
+      "lastModified": "2025-06-18T08:16:39.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "50f7c3c49d9559eaed10fac4818104c75cda011d",
+      "downloads": 0,
+      "tags": [
+        "safetensors",
+        "region:eu"
+      ],
+      "createdAt": "2025-06-15T15:13:41.000Z",
+      "modelId": "LeRobot-worldwide-hackathon/311-panda-right-cell-ACT-model",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/020000/pretrained_model/config.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/020000/pretrained_model/model.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/020000/pretrained_model/train_config.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/020000/training_state/optimizer_param_groups.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/020000/training_state/optimizer_state.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/020000/training_state/rng_state.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/020000/training_state/training_step.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/040000/pretrained_model/config.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/040000/pretrained_model/model.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/040000/pretrained_model/train_config.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/040000/training_state/optimizer_param_groups.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/040000/training_state/optimizer_state.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/040000/training_state/rng_state.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/040000/training_state/training_step.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/060000/pretrained_model/config.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/060000/pretrained_model/model.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/060000/pretrained_model/train_config.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/060000/training_state/optimizer_param_groups.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/060000/training_state/optimizer_state.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/060000/training_state/rng_state.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/060000/training_state/training_step.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/080000/pretrained_model/config.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/080000/pretrained_model/model.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/080000/pretrained_model/train_config.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/080000/training_state/optimizer_param_groups.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/080000/training_state/optimizer_state.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/080000/training_state/rng_state.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/080000/training_state/training_step.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/100000/pretrained_model/config.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/100000/pretrained_model/model.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/100000/pretrained_model/train_config.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/100000/training_state/optimizer_param_groups.json"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/100000/training_state/optimizer_state.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/100000/training_state/rng_state.safetensors"
+        },
+        {
+          "rfilename": "act_panda/checkpoints/100000/training_state/training_step.json"
+        }
+      ]
+    },
+    {
+      "_id": "68689a64407bb88f75ce945b",
+      "id": "takumi123xxx/qa-model-hello-world",
+      "author": "takumi123xxx",
+      "gated": false,
+      "lastModified": "2025-07-05T03:25:21.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "1123eef97446601310961e9deefb57263e598220",
+      "downloads": 3,
+      "tags": [
+        "safetensors",
+        "roberta",
+        "question-answering",
+        "en",
+        "dataset:custom",
+        "license:mit",
+        "region:us"
+      ],
+      "pipeline_tag": "question-answering",
+      "createdAt": "2025-07-05T03:22:12.000Z",
+      "modelId": "takumi123xxx/qa-model-hello-world",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model.safetensors"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "6869029d169d8080342352dc",
+      "id": "bindhugrashia/world-eq-forecast-model",
+      "author": "bindhugrashia",
+      "gated": false,
+      "lastModified": "2025-07-05T10:47:06.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "3bb4287e019ba36c311a51e52d3c80a12df42c76",
+      "downloads": 0,
+      "tags": [
+        "region:us"
+      ],
+      "createdAt": "2025-07-05T10:46:53.000Z",
+      "modelId": "bindhugrashia/world-eq-forecast-model",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "eq_model.pkl"
+        }
+      ]
+    },
+    {
+      "_id": "686b40942f1be8f90afdad4e",
+      "id": "bindhugrashia/world-eq-forecast-model_old",
+      "author": "bindhugrashia",
+      "gated": false,
+      "lastModified": "2025-07-07T03:35:54.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "b1d89a6389434a1e1a6692a00caab0bf85e59efe",
+      "downloads": 0,
+      "tags": [
+        "region:us"
+      ],
+      "createdAt": "2025-07-07T03:35:48.000Z",
+      "modelId": "bindhugrashia/world-eq-forecast-model_old",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "eq_model.pkl"
+        }
+      ]
+    },
+    {
+      "_id": "688c3917d85905eaf443d08f",
+      "id": "ZHLiu627/sciworld_worldmodels2_sciworld_Llama-3.1-8B-Instruct",
+      "author": "ZHLiu627",
+      "gated": false,
+      "lastModified": "2025-08-01T03:57:58.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "1ad237d70f3569fba4283cb1fe45e39001bb2a45",
+      "downloads": 1,
+      "tags": [
+        "safetensors",
+        "llama",
+        "region:us"
+      ],
+      "createdAt": "2025-08-01T03:48:39.000Z",
+      "modelId": "ZHLiu627/sciworld_worldmodels2_sciworld_Llama-3.1-8B-Instruct",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "trainer_state.json"
+        },
+        {
+          "rfilename": "training_args.bin"
+        }
+      ]
+    },
+    {
+      "_id": "688c3946b79d3f494c4ab08e",
+      "id": "ZHLiu627/sciworld_worldmodels2_sciworld_Llama-3.2-3B-Instruct",
+      "author": "ZHLiu627",
+      "gated": false,
+      "lastModified": "2025-08-01T03:51:03.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "4bcda86801298ca89482308497a932ac36b19fb6",
+      "downloads": 4,
+      "tags": [
+        "safetensors",
+        "llama",
+        "region:us"
+      ],
+      "createdAt": "2025-08-01T03:49:26.000Z",
+      "modelId": "ZHLiu627/sciworld_worldmodels2_sciworld_Llama-3.2-3B-Instruct",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "model-00001-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00002.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "trainer_state.json"
+        },
+        {
+          "rfilename": "training_args.bin"
+        }
+      ]
+    },
+    {
+      "_id": "688c3a7e7fe8d27362d76217",
+      "id": "ZHLiu627/sciworld_worldmodels2_sciworld_Qwen2.5-7B-Instruct",
+      "author": "ZHLiu627",
+      "gated": false,
+      "lastModified": "2025-08-01T03:56:14.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "3b0e8615d3fcf165bd85799ae93129d4029b8bf7",
+      "downloads": 3,
+      "tags": [
+        "safetensors",
+        "qwen2",
+        "region:us"
+      ],
+      "createdAt": "2025-08-01T03:54:38.000Z",
+      "modelId": "ZHLiu627/sciworld_worldmodels2_sciworld_Qwen2.5-7B-Instruct",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "added_tokens.json"
+        },
+        {
+          "rfilename": "chat_template.jinja"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "generation_config.json"
+        },
+        {
+          "rfilename": "merges.txt"
+        },
+        {
+          "rfilename": "model-00001-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00002-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00003-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model-00004-of-00004.safetensors"
+        },
+        {
+          "rfilename": "model.safetensors.index.json"
+        },
+        {
+          "rfilename": "special_tokens_map.json"
+        },
+        {
+          "rfilename": "tokenizer.json"
+        },
+        {
+          "rfilename": "tokenizer_config.json"
+        },
+        {
+          "rfilename": "trainer_state.json"
+        },
+        {
+          "rfilename": "training_args.bin"
+        },
+        {
+          "rfilename": "vocab.json"
+        }
+      ]
+    },
+    {
+      "_id": "68bf2d614a14b9f2230c4296",
+      "id": "iantc104/wmil_peg_in_hole_world_model",
+      "author": "iantc104",
+      "gated": false,
+      "lastModified": "2025-09-08T19:24:21.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "043721eb8bf19abc2d01fbdf58bd435c5b7093e2",
+      "downloads": 1,
+      "tags": [
+        "safetensors",
+        "model_hub_mixin",
+        "pytorch_model_hub_mixin",
+        "region:us"
+      ],
+      "createdAt": "2025-09-08T19:24:17.000Z",
+      "modelId": "iantc104/wmil_peg_in_hole_world_model",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "model.safetensors"
+        }
+      ]
+    },
+    {
+      "_id": "68bf2d668135595e0e23e3d2",
+      "id": "iantc104/wmil_peg_in_hole_inverse_world_model",
+      "author": "iantc104",
+      "gated": false,
+      "lastModified": "2025-09-08T19:24:38.000Z",
+      "likes": 0,
+      "trendingScore": 0,
+      "private": false,
+      "sha": "eba35a04e8a1d53888fe8b78b9387505bbb91de8",
+      "downloads": 2,
+      "tags": [
+        "safetensors",
+        "model_hub_mixin",
+        "pytorch_model_hub_mixin",
+        "region:us"
+      ],
+      "createdAt": "2025-09-08T19:24:22.000Z",
+      "modelId": "iantc104/wmil_peg_in_hole_inverse_world_model",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes"
+        },
+        {
+          "rfilename": "README.md"
+        },
+        {
+          "rfilename": "config.json"
+        },
+        {
+          "rfilename": "model.safetensors"
+        }
+      ]
+    }
+  ]
+}

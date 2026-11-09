@@ -1,0 +1,10 @@
+{
+  "site": "codeberg",
+  "query": "multi agent",
+  "url": "https://codeberg.org/api/v1/repos/search?q=multi+agent&limit=50",
+  "ok": true,
+  "data": {
+    "ok": true,
+    "data": []
+  }
+}

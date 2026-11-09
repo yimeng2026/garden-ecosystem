@@ -1,0 +1,10 @@
+{
+  "site": "codeberg",
+  "query": "agent framework",
+  "url": "https://codeberg.org/api/v1/repos/search?q=agent+framework&limit=50",
+  "ok": true,
+  "data": {
+    "ok": true,
+    "data": []
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "site": "gitee",
+  "query": "智能体框架",
+  "url": "https://gitee.com/api/v5/search/repositories?q=%E6%99%BA%E8%83%BD%E4%BD%93%E6%A1%86%E6%9E%B6&per_page=50",
+  "ok": true,
+  "data": []
+}
