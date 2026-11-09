@@ -7,8 +7,9 @@
 ## 当前状态
 
 - **已实现**：11 个公共模块、离线组合演示、98 项标准库 `unittest` 测试，以及真实 Lean 健康检查和受控 stdio 服务。
-- **主花园桥接已实现**：在 `feature/garden-ecosystem-bridge` 分支提供 TypeScript 客户端和 `POST /api/garden-ecosystem`，已完成真实 HTTP 验收；主花园既有蜂群、provider-pool、Next.js/SSE 逻辑保持不动。
-- **未做**：真实模型实测、Lean 编译或证明、OpenFOAM 执行、沙箱隔离、模型权重下载、全球项目穷尽。本机真实 Lean 健康检查返回 `unavailable`，不会生成虚假的真实执行回执。
+- **主花园桥接已合并**：两个桥接 PR 均已合并至各自 `main`，`POST /api/garden-ecosystem` 已完成真实 HTTP 验收，Vercel 预览部署也已通过；主花园既有蜂群、provider-pool、Next.js/SSE 逻辑保持不动。
+- **真实 Lean 已接入**：本地安装官方 Lean 4.35.0 并校验 SHA-256，健康检查返回 `available` 与 `EXECUTED`，独立最小定理示例编译通过；适配器仍只允许版本操作。
+- **未做**：真实模型实测、项目级 Lean 形式化验证、OpenFOAM 执行、沙箱隔离、模型权重下载、全球项目穷尽。不会把版本检查或 mock 冒称为机器证明。
 
 ## 快速开始
 
@@ -32,6 +33,19 @@ python -m unittest discover -s tests -v
 ```
 
 演示只使用 mock：一次模拟限流后的供应商切换、一次预算不足拒绝、一次写入拦截、一次迁移回滚、两个可重放情景、空评测、默认关闭学习和显式 mock 验证回执。`ok: true` 只表示这些离线断言成立，不表示真实工具已经通过验证。
+
+### 本地 Lean（可选）
+
+```bash
+# 官方发布包与 SHA-256 校验；已有目录不会被覆盖
+python scripts/install_lean_local.py
+
+# Git Bash，在本仓库根目录设置实际工具路径
+export LEAN_EXECUTABLE="$PWD/.tools/lean-4.35.0/lean-4.35.0-windows/bin/lean.exe"
+PYTHONPATH=src python -c "from garden_ecosystem.lean import LeanAdapter; print(LeanAdapter().health())"
+```
+
+工具链、下载缓存和最小示例均位于被忽略的 `.tools/` 目录，不进入 Git 或 Python 发布包。真实回执只覆盖版本命令；最小示例是环境验收，不是项目级证明。
 
 ## 模块与用途
 

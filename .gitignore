@@ -11,3 +11,4 @@ upstream/
 node_modules/
 research/word-qa/
 docs/bridge-word-qa/
+.tools/

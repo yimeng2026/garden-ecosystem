@@ -11,7 +11,7 @@
 - `bloombloomgarden/src/lib/garden-ecosystem.ts`：限制动作、环境、输入、输出和时间的 TypeScript 客户端。
 - `bloombloomgarden/src/app/api/garden-ecosystem/route.ts`：Next.js API Route。
 
-主花园修改位于独立 worktree 的 `feature/garden-ecosystem-bridge` 分支；适配项目修改位于 `feature/controlled-bridge` 分支。两个分支分别审查，不直接覆盖主花园其他未提交工作。
+两个桥接 PR 已分别合并至 `main`。实施过程使用独立 worktree 和功能分支，未覆盖主花园其他未提交工作。Vercel 原先因项目预设为 `Other` 而错误寻找 `public`，最终通过仓库内 `vercel.json` 的 `framework: "nextjs"` 修正，预览部署成功。
 
 ## 2. 本地配置
 
@@ -106,11 +106,12 @@ python scripts/validate_bridge_preview.py
 - Python **98 项测试通过**，stdio 实际往返成功。
 - TypeScript **10 项测试通过**，类型检查通过。
 - 真实 TypeScript→Python 调用返回 11 个模块名。
-- 本机 `LeanAdapter().health()` 返回 `unavailable`：没有找到 Lean 可执行文件；未安装或伪造 Lean。
-- 真实 HTTP `capabilities` 成功，`lean_health` 返回 unavailable，未知 `shell` 返回 400。
+- 官方 Lean **4.35.0** 已安装到被忽略的 `.tools` 目录，下载的 SHA-256 与官方发布值一致；真实 `LeanAdapter().health()` 返回 `available`，`lean_receipt` 返回 `EXECUTED`、`mock: false`、`attested: true`。
+- 独立最小示例 `theorem one_add_one_eq_two : 1 + 1 = 2 := by rfl` 已由该工具链编译通过。此结果只验证本地工具链，不开放适配器的编译接口，也不构成项目级形式化验证。
+- 真实 HTTP `capabilities` 成功，未知 `shell` 返回 400；真实 Vercel 预览部署在加入 `vercel.json` 的 `framework: "nextjs"` 后成功。
 - 验收脚本返回 `server_stopped: true`，Next、npm 与 Python 联调进程均未保留。
 - Next 构建通过，但有一条 `unexpected file in NFT list` 警告。它提示动态外部运行目录可能导致过宽跟踪；不把该警告称为已消除，也不据此声称部署包已经优化。
 
 ## 7. 当前未覆盖
 
-没有真实 Lean 编译、定理证明、模型推理、OpenFOAM、沙箱或模型权重验证。Lean 可用时也只允许版本操作。后续如需编译，必须另设文件白名单、工作区、工具链版本、公理与 `sorry` 审计、资源预算和独立回执，不能把当前健康接口直接扩展成任意执行器。
+没有项目级 Lean 形式化验证、模型推理、OpenFOAM、沙箱或模型权重验证。Lean 可用时也只允许版本操作；独立最小编译示例仅用于本机环境验收。后续如需编译，必须另设文件白名单、工作区、工具链版本、公理与 `sorry` 审计、资源预算和独立回执，不能把当前健康接口直接扩展成任意执行器。
