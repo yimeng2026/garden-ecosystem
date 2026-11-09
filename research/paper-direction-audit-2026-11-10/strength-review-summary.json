@@ -19,5 +19,14 @@
   "unique_ids": 55,
   "evidence_files_exist": true,
   "external_novelty_certified": false,
-  "machine_proofs_certified_by_this_review": false
+  "machine_proofs_certified_by_this_review": false,
+  "k1a_resolution": {
+    "paper_id": "toe-sylva:papers/数学基础强化_系列/21_代数K理论_从向量丛到普适不变量.md",
+    "status": "pass",
+    "compile_exit_code": 0,
+    "checks": "10/10",
+    "full_k1_completed": false,
+    "general_k0_completed": false,
+    "original_role_novelty_unfinished_priority_preserved": true
+  }
 }
