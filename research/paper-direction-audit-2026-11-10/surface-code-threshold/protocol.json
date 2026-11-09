@@ -1,0 +1,21 @@
+{
+  "schema": "surface-code-threshold-protocol-v1",
+  "purpose": "Independent circuit-level Monte Carlo benchmark; not a reconstruction of the manuscript's missing original simulation.",
+  "circuit": "surface_code:rotated_memory_x",
+  "distances": [3, 5, 7, 9],
+  "rounds_rule": "distance",
+  "probabilities": [0.004, 0.005, 0.006, 0.007, 0.008, 0.009, 0.01],
+  "noise_parameters": [
+    "after_clifford_depolarization",
+    "before_round_data_depolarization",
+    "after_reset_flip_probability",
+    "before_measure_flip_probability"
+  ],
+  "shots": 20000,
+  "seed_base": 20261110,
+  "decoder": "PyMatching MWPM from detector_error_model(decompose_errors=True)",
+  "interval": "Wilson 95% (z=1.959963984540054)",
+  "crossing_method": "Pairwise crossings of piecewise-linear log10 logical error rates; report median and observed range, not an FSS confidence interval.",
+  "zero_rate_policy": "Exclude zero-rate rows from logarithmic crossing estimates and report them explicitly.",
+  "dependency_policy": "Fail if Stim or PyMatching is unavailable; never substitute formula-generated logical error rates."
+}
