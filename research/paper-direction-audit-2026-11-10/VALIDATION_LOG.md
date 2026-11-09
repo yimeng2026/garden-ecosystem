@@ -101,3 +101,18 @@ python <kimi-word>/scripts/docx.py validate SURFACE_CODE_BENCHMARK.docx
 跨 worktree 复验曾发现 Git 的 Windows 换行转换导致原始协议字节哈希不同。随后新增 `protocol_digest`，以排序且压缩的 JSON 语义内容计算 SHA-256。LF 与 CRLF 测试先失败后通过，完整重跑的 28 个科学数据点与修复前逐项相同。最终规范化协议 SHA-256 为 `51603b03a4eb108842f8f84ec2d07d2d9e2b4d29aebfcf83df57781cd2612feb`，Word 中的协议标识也已局部更新并重新通过 17 部件验证。
 
 科学边界：该结果只适用于冻结的电路级协议。交叉范围不是 FSS 置信区间，也不是对原稿 1.03% 的直接否证。原稿仍需提供其原始 shots、DEM、种子与拟合协议。
+
+## TOE 核心开放问题证据纠偏
+
+在 `toe-sylva-audit` 主分支 `423836ba6f0c82dfa32dc4dc3f3fb094fbd70a26` 上执行：
+
+```bash
+python scripts/build_core_open_report.py
+python scripts/verify_honest_repo.py --ci
+```
+
+两条命令实际退出码均为 **0**。第一条校验 O1–O10 的 ID 完整性及所有本地证据行和引用文本，输出 6 项理论开放、2 项概念进展、2 项工程未决；第二条输出 `ALL CHECKS PASSED`，仅有三条作者名信息提示，没有失败项。
+
+原生 Word 通过 17 部件验证并嵌入 1 幅状态图。首次五列表格出现长句逐字竖排，调整为专用 `core-open` 列宽后重新渲染为 **8 页**，`near-blank pages: none`，已逐页查看总表、外部基线和逐项证据。
+
+科学边界：本轮完成的是证据纠偏，不是任何核心问题的理论或工程解决。O1–O10 的后续完成声明必须另行提供独立推导、最小算例、真实编译或共同似然检验。

@@ -28,6 +28,13 @@
 - `SURFACE_CODE_BENCHMARK.md` 与原生 `SURFACE_CODE_BENCHMARK.docx` 已交付，Word 含真实阈值图、目录、页眉、原生页码和完整结果表。
 - 独立复验、14 项专项测试、发布审计和 6 页视觉预览均已通过；主系列 `PROVIDER_REVIEW` 已同步回写。协议哈希使用规范化 JSON 内容，避免 Windows 换行转换造成跨 worktree 假失配。
 
+## 已完成的第三阶段：TOE 核心开放问题纠偏
+
+- 逐项复核 O1–O10 及其桥接文档、治理登记、CI 和外部原始来源，撤回旧“8/10 已解决”，改登记为 6 项理论开放、2 项概念进展、2 项工程未决。
+- 修正 CODATA 2022、五次簇 χ=-200、Pardon 归属和 DESI 状态；明确非 BPS 熵分解、最小公理 DAG、eta-DT、p-adic 乘积和费米子质量谱仍未闭合。
+- `OPEN_PROBLEMS.md` 已升级为 v2.0，`ERRATA_AND_NEGATIVE_RESULTS.md` 已登记 FE-17。TOE-SYLVA PR #1 已合并，主提交为 `423836ba6f0c82dfa32dc4dc3f3fb094fbd70a26`。
+- 交付 `CORE_OPEN_PROBLEMS_AUDIT_2026-11-10.md` 与原生 Word，8 页无空白页，含 1 幅状态图、17 部件验证、逐行证据锚点和真正 Word 表格。
+
 ## 重建与核验
 
 ```bash
