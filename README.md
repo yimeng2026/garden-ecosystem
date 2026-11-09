@@ -6,10 +6,10 @@
 
 ## 当前状态
 
-- **已实现**：11 个公共模块、离线组合演示、98 项标准库 `unittest` 测试，以及真实 Lean 健康检查和受控 stdio 服务。
+- **已实现**：12 个公共模块、离线组合演示、111 项标准库 `unittest` 测试，以及真实 Lean 健康检查和受控 stdio 服务。
 - **主花园桥接已合并**：两个桥接 PR 均已合并至各自 `main`，`POST /api/garden-ecosystem` 已完成真实 HTTP 验收，Vercel 预览部署也已通过；主花园既有蜂群、provider-pool、Next.js/SSE 逻辑保持不动。
-- **真实 Lean 已接入**：本地安装官方 Lean 4.35.0 并校验 SHA-256，健康检查返回 `available` 与 `EXECUTED`，独立最小定理示例编译通过；适配器仍只允许版本操作。
-- **未做**：真实模型实测、项目级 Lean 形式化验证、OpenFOAM 执行、沙箱隔离、模型权重下载、全球项目穷尽。不会把版本检查或 mock 冒称为机器证明。
+- **真实 Lean 已接入**：本地安装官方 Lean 4.35.0 并校验 SHA-256，健康检查返回 `available` 与 `EXECUTED`；受限 `lean_check` 已真实返回 `MACHINE_CHECKED`，独立最小定理不依赖公理。
+- **未做**：真实模型实测、项目级 Lean 形式化验证、任意导入或宏、OpenFOAM 执行、完整操作系统沙箱、模型权重下载、全球项目穷尽。不会把版本检查或 mock 冒称为机器证明。
 
 ## 快速开始
 
@@ -43,9 +43,10 @@ python scripts/install_lean_local.py
 # Git Bash，在本仓库根目录设置实际工具路径
 export LEAN_EXECUTABLE="$PWD/.tools/lean-4.35.0/lean-4.35.0-windows/bin/lean.exe"
 PYTHONPATH=src python -c "from garden_ecosystem.lean import LeanAdapter; print(LeanAdapter().health())"
+PYTHONPATH=src python -c "from garden_ecosystem.service import Service; import json; print(json.dumps(Service().handle_safely({'id':'proof','action':'lean_check','params':{'path':'examples/LeanSmoke.lean','declaration':'one_add_one_eq_two'}}),ensure_ascii=False))"
 ```
 
-工具链、下载缓存和最小示例均位于被忽略的 `.tools/` 目录，不进入 Git 或 Python 发布包。真实回执只覆盖版本命令；最小示例是环境验收，不是项目级证明。
+工具链、下载缓存和临时包装均位于被忽略的 `.tools/` 与 `.garden_tmp/` 目录，不进入 Git 或 Python 发布包。真实版本回执只覆盖版本命令；`lean_check` 的机器检查仅覆盖白名单内自包含源码和公理输出，最小示例不是项目级证明。
 
 ## 模块与用途
 
@@ -61,7 +62,8 @@ PYTHONPATH=src python -c "from garden_ecosystem.lean import LeanAdapter; print(L
 | `research` | 预登记冻结、追加观察、负结果、参数来源分层 | 外部标定不写成内生；冻结内容不可覆盖 |
 | `receipts` | 运行清单、哈希检查点、外部健康状态、分级验证回执 | mock 明示；真实机器检查需要外部 attestation |
 | `lean` | 真实 Lean 可执行文件探测、版本检查与执行回执 | 仅 `--version`；不是编译或定理证明 |
-| `service` | 四类白名单动作的 stdio 请求与结构化响应 | 不开放任意命令、任意参数或任意文件 |
+| `proof` | 白名单内自包含源码编译、公理输出解析、路径与临时文件治理 | 禁止导入、宏、求值指令、危险声明；不是完整沙箱 |
+| `service` | 五类白名单动作的 stdio 请求与结构化响应 | 不开放任意命令、任意参数或任意文件 |
 
 ## 与千界花园的接口
 

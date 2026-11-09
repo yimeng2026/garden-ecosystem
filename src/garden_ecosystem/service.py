@@ -4,20 +4,24 @@ from __future__ import annotations
 import json
 import sys
 from dataclasses import asdict
+from pathlib import Path
 from typing import Any
 
 from .bridge import capabilities, health
 from .errors import GardenError
 from .lean import LeanAdapter
+from .proof import LeanProofAdapter
 from .receipts import ExternalToolAdapter
 
-ACTIONS = {"capabilities", "health", "lean_health", "lean_receipt"}
+ACTIONS = {"capabilities", "health", "lean_health", "lean_receipt", "lean_check"}
 MAX_REQUEST_BYTES = 16_384
 
 
 class Service:
-    def __init__(self, lean: ExternalToolAdapter | None = None):
+    def __init__(self, lean: ExternalToolAdapter | None = None,
+                 proof: LeanProofAdapter | None = None):
         self.lean = lean or LeanAdapter()
+        self.proof = proof or LeanProofAdapter(Path.cwd())
 
     def handle(self, request: dict[str, Any]) -> dict[str, Any]:
         if not isinstance(request, dict):
@@ -32,6 +36,9 @@ class Service:
         if action == "lean_receipt":
             if set(params) - {"operation"}:
                 raise ValueError("unsupported receipt params")
+        elif action == "lean_check":
+            if set(params) - {"path", "declaration"}:
+                raise ValueError("lean_check accepts only path and declaration")
         elif params:
             raise ValueError("this action does not accept params")
         return {"id": request_id, "ok": True, "result": self._dispatch(action, params)}
@@ -43,6 +50,12 @@ class Service:
             return health([self.lean])
         if action == "lean_health":
             return asdict(self.lean.health())
+        if action == "lean_check":
+            return asdict(self.proof.execute({
+                "operation": "check_file",
+                "path": params.get("path"),
+                "declaration": params.get("declaration"),
+            }))
         return asdict(self.lean.execute({"operation": params.get("operation", "health")}))
 
     def handle_safely(self, request: Any) -> dict[str, Any]:
