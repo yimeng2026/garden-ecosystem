@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import csv
-import hashlib
 import importlib.metadata
 import json
 import math
@@ -12,7 +11,7 @@ from pathlib import Path
 import pymatching
 import stim
 
-from surface_code_stats import estimate_crossings, validate_protocol, wilson_interval
+from surface_code_stats import estimate_crossings, protocol_digest, validate_protocol, wilson_interval
 
 AUDIT_DIR = Path(__file__).resolve().parents[1]
 DEFAULT_PROTOCOL = AUDIT_DIR / "surface-code-threshold" / "protocol.json"
@@ -89,7 +88,7 @@ def main() -> int:
     crossing_summary = estimate_crossings(points)
     payload = {
         "schema": "surface-code-threshold-results-v1",
-        "protocol_sha256": hashlib.sha256(protocol_bytes).hexdigest(),
+        "protocol_sha256": protocol_digest(protocol_bytes),
         "protocol": protocol,
         "dependencies": dependency_versions(),
         "points": points,

@@ -1,9 +1,14 @@
 import unittest
 
-from surface_code_stats import crossing, estimate_crossings, validate_protocol, wilson_interval
+from surface_code_stats import crossing, estimate_crossings, protocol_digest, validate_protocol, wilson_interval
 
 
 class StatisticsTests(unittest.TestCase):
+    def test_protocol_digest_is_line_ending_and_whitespace_independent(self):
+        compact = b'{"shots":20000,"distances":[3,5]}'
+        expanded = b'{\r\n  "distances": [3, 5],\r\n  "shots": 20000\r\n}\r\n'
+        self.assertEqual(protocol_digest(compact), protocol_digest(expanded))
+
     def test_wilson_handles_boundaries_and_center(self):
         self.assertEqual(wilson_interval(0, 100)[0], 0.0)
         self.assertEqual(wilson_interval(100, 100)[2], 1.0)

@@ -1,12 +1,22 @@
 """Statistics for the independent surface-code benchmark."""
 from __future__ import annotations
 
+import hashlib
 import itertools
+import json
 import math
 import statistics
 from collections import defaultdict
 
 Z_95 = 1.959963984540054
+
+
+def protocol_digest(raw: bytes) -> str:
+    """Hash canonical JSON semantics rather than platform-dependent source bytes."""
+    payload = json.loads(raw.decode("utf-8-sig"))
+    canonical = json.dumps(payload, ensure_ascii=False, sort_keys=True,
+                           separators=(",", ":"), allow_nan=False).encode("utf-8")
+    return hashlib.sha256(canonical).hexdigest()
 
 
 def wilson_interval(errors: int, shots: int, z: float = Z_95) -> tuple[float, float, float]:
