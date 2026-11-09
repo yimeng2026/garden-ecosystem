@@ -6,7 +6,7 @@
 
 ## 当前状态
 
-- **已实现**：12 个公共模块、离线组合演示、111 项标准库 `unittest` 测试，以及真实 Lean 健康检查和受控 stdio 服务。
+- **已实现**：12 个公共模块、离线组合演示、113 项标准库 `unittest` 测试，以及真实 Lean 健康检查和受控 stdio 服务。
 - **主花园桥接已合并**：两个桥接 PR 均已合并至各自 `main`，`POST /api/garden-ecosystem` 已完成真实 HTTP 验收，Vercel 预览部署也已通过；主花园既有蜂群、provider-pool、Next.js/SSE 逻辑保持不动。
 - **真实 Lean 已接入**：本地安装官方 Lean 4.35.0 并校验 SHA-256，健康检查返回 `available` 与 `EXECUTED`；受限 `lean_check` 已真实返回 `MACHINE_CHECKED`，独立最小定理不依赖公理。
 - **未做**：真实模型实测、项目级 Lean 形式化验证、任意导入或宏、OpenFOAM 执行、完整操作系统沙箱、模型权重下载、全球项目穷尽。不会把版本检查或 mock 冒称为机器证明。

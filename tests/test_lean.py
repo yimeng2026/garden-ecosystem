@@ -1,13 +1,25 @@
 import subprocess
+import sys
 import unittest
 from types import SimpleNamespace
 from unittest.mock import patch
 
-from garden_ecosystem.lean import LeanAdapter
+from garden_ecosystem.lean import LeanAdapter, _run
 from garden_ecosystem.receipts import ExternalToolUnavailable, VerificationLevel
 
 
 class LeanTests(unittest.TestCase):
+    def test_default_runner_decodes_utf8_stdout_and_stderr(self):
+        child = (
+            "import sys; "
+            "sys.stdout.buffer.write('Lean ‘proof’'.encode('utf-8')); "
+            "sys.stderr.buffer.write('诊断'.encode('utf-8'))"
+        )
+        result = _run([sys.executable, "-c", child], 3.0)
+        self.assertEqual(result.returncode, 0)
+        self.assertEqual(result.stdout, "Lean ‘proof’")
+        self.assertEqual(result.stderr, "诊断")
+
     def test_missing_executable_is_unavailable(self):
         adapter = LeanAdapter(executable="definitely-not-a-real-lean")
         health = adapter.health()

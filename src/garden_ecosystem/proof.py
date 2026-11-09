@@ -213,7 +213,8 @@ class LeanProofAdapter:
         temporary_root.mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(prefix="proof-", dir=temporary_root) as directory:
             wrapper = Path(directory) / "Check.lean"
-            wrapper.write_text(source + f"\n#print axioms {declaration}\n", encoding="utf-8")
+            wrapper.write_text(source + f"\n#print axioms {declaration}\n", encoding="utf-8",
+                               newline="\n")
             try:
                 result = self.runner([executable, str(wrapper)], self.timeout)
                 stdout = result.stdout or ""
