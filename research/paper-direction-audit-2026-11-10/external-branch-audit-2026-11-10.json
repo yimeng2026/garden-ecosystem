@@ -1,0 +1,62 @@
+{
+  "schema": "external-branch-audit-v1",
+  "date": "2026-11-10",
+  "status": "pass_with_explicit_external_limits",
+  "scope": "只核查本轮 p+ip 与 K2 路线的分支血缘、外部方法来源和可见 mathlib／第三方接口，不是全代码托管平台或全部论文的穷尽查新。",
+  "pip": {
+    "provider_reference": {
+      "branch": "research/provider-main-integration-20261106",
+      "remote_head": "415e3afb8e89a3004b0056bc4c63cd22889e6dc4",
+      "tests": "15/15",
+      "role": "双方法独立基准与三篇稿件约定修复"
+    },
+    "legacy_follow_up": {
+      "sign_branch": "fix/legacy-pip-chern-sign",
+      "sign_remote_head": "4503b2c6ba59bcf33cb4995b8fc0d2b5665307e1",
+      "gapless_branch": "fix/legacy-pip-gapless",
+      "gapless_remote_head": "6829c69af26572414bc2e2328720b0fcd2c15cab",
+      "gapless_tests": "5/5",
+      "lineage": "59de3a2 → dff5f57 → 6829c69；顺序后续，不是重复分支",
+      "role": "旧 TOE 单方法脚本的兼容修复，不替代 provider 双方法基准"
+    },
+    "duplicate_implementation_found_within_audited_branches": false,
+    "external_method": {
+      "fhs_primary_source": "http://home.ustc.edu.cn/~lxsphys/2021-4-15/jpsj.74.1674.pdf",
+      "fhs_doi": "10.1143/JPSJ.74.1674",
+      "assessment": "FHS 链接变量是既有方法；本项目增量是统一定约定、交叉复核与修复证据链，不声称外部首创。"
+    }
+  },
+  "k2": {
+    "remote_branch_chain": [
+      {"branch": "fix/k0-universal-property", "head": "e40f44a1baa2cce90f33d19fa63a1fc4b87b7008"},
+      {"branch": "fix/k0-cancellation", "head": "c5ffc6ef7eea86bf97e8914e17cce0f6ba19d5f1"},
+      {"branch": "fix/k2-idempotent-representation", "head": "1009cce61809276f98460aead216592cc45bc8bc"},
+      {"branch": "fix/k2-similarity-core", "head": "25afc0a87e3072b539b7059ed7b4510e301b7ca2"},
+      {"branch": "fix/k2-zero-extension", "head": "feb763065924f6555d4bba9f5d4af73ddae5c859"}
+    ],
+    "lineage": "K1a → K1b → 幂等实例 → 普通相似核 → 具体零扩展；各分支处理不同接口",
+    "local_mathlib_snapshot": {
+      "root": "D:\\kimi-workspace\\TOE-SYLVA-pull\\sylva_formalization\\SylvaFormalization\\.lake\\packages\\mathlib\\Mathlib",
+      "k0_filename_matches": 0,
+      "grothendieck_addgroup_reference": "Algebra/AffineMonoid/Embedding.lean:36",
+      "limit": "这是本地依赖快照，不证明远端最新 mathlib 绝对缺位。"
+    },
+    "external_search": {
+      "verified_complete_mathlib_k0_implementation": false,
+      "third_party_roadmap": {
+        "url": "https://github.com/TauCetiProject/TauCetiRoadmap/blob/main/TauCetiRoadmap/GrothendieckEulerForms/README.md",
+        "kind": "split/exact/abelian/triangulated K0 的分类路线图",
+        "implementation_evidence_observed": false,
+        "usage": "只作后续小骨架、商关系和泛性质接口参照，不作为已编译实现或我们路线重复的证据。"
+      },
+      "current_completion_boundary": "稳定相似、投射模同构类和 K0(R) 仍未完成；既有 Lean 证据只到具体零扩展接口。"
+    }
+  },
+  "decision": {
+    "do_not_merge_or_duplicate_existing_branches": true,
+    "next_pip_candidate": "评估旧脚本中心差分的解析导数升级，并与 provider 双方法逐点交叉验证",
+    "next_k2_candidate": "把具体零扩展推广为任意幂等块，再定义稳定相似",
+    "external_novelty_certified": false,
+    "latest_mathlib_absence_certified": false
+  }
+}

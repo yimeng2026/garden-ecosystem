@@ -45,9 +45,16 @@ python research/paper-direction-audit-2026-11-10/scripts/render_provider_review.
 
 `render_provider_review.py` 会验证 31 个 ID 与总账完全匹配，缺漏或多评都会直接失败。
 
+## 外部与重复分支核查（2026-11-10）
+
+- p+ip 的 provider 双方法基准、旧脚本符号修复和相变点修复具有顺序血缘与不同角色，未发现本轮审计分支内的重复实现；原三稿 15 项测试与旧脚本后续 5 项测试分开登记。
+- K2 各远端分支依次覆盖 K1a、K1b、幂等实例、普通相似核和具体零扩展。当前本地 mathlib 快照未见 `K0` 文件，但这不证明远端最新版本绝对缺位。
+- 外部方法以 FHS 原始论文为基线；第三方分类 K0 路线图只作后续接口参照，不作为已编译实现或重复证据。[FHS 原始论文](kimi-cite://web?url=http%3A%2F%2Fhome.ustc.edu.cn%2F%7Elxsphys%2F2021-4-15%2Fjpsj.74.1674.pdf "citation")，[第三方 K0 路线图](kimi-cite://web?url=https%3A%2F%2Fgithub.com%2FTauCetiProject%2FTauCetiRoadmap%2Fblob%2Fmain%2FTauCetiRoadmap%2FGrothendieckEulerForms%2FREADME.md "citation")
+- 机读记录：`external-branch-audit-2026-11-10.json`，包含远端哈希、分支血缘、外部来源和不可外推边界。
+
 ## 下一步
 
 1. 继续 TOE 644 份文档的权威版本映射与方向聚类，优先核心理论、模块强化、数学基础强化、室温超导、落地验证和回应中涉及的实质主张。
 2. 逐篇补充外部原始文献，不能把“我们提出”或“已解决”作为新颖性证明。
-3. 首先推进表面码真实蒙特卡洛阈值基准，再处理 p+ip 相图、离子阱计数、魔术态资源核算与验证协议。
-4. 汇总为总报告和原生 Word 图文版；不把本阶段底账称为全部论文终审。
+3. p+ip 相图、符号和相变点拒算已完成局部清偿；后续候选是旧脚本解析导数升级、CdGM 与实验数字独立核查，不把局部通过扩张为整篇 P0 解除。
+4. K2 下一步是把具体零扩展推广为任意幂等块，再定义稳定相似；汇总时继续提供原生 Word 图文版，不把本阶段底账称为全部论文终审。

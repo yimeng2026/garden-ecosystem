@@ -11,5 +11,14 @@
   "test_count": 15,
   "maximum_absolute_method_difference": 1.7522414162307598e-05,
   "full_p0_resolved": false,
-  "source_files_exist": true
+  "source_files_exist": true,
+  "external_branch_audit": "external-branch-audit-2026-11-10.json",
+  "legacy_follow_up": {
+    "sign_branch": "fix/legacy-pip-chern-sign",
+    "sign_remote_head": "4503b2c6ba59bcf33cb4995b8fc0d2b5665307e1",
+    "gapless_branch": "fix/legacy-pip-gapless",
+    "gapless_remote_head": "6829c69af26572414bc2e2328720b0fcd2c15cab",
+    "gapless_tests": 5,
+    "note": "旧 TOE 脚本的顺序后续修复，不属于原三稿 15 项测试；provider 双方法基准仍独立保留。"
+  }
 }
