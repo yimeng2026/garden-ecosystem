@@ -9,8 +9,10 @@ ROOT = Path(sys.argv[1]).resolve()
 LAYOUT = sys.argv[2] if len(sys.argv) > 2 else "provider"
 W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 W14 = "http://schemas.microsoft.com/office/word/2010/wordml"
-NS = {"w": W}
+M = "http://schemas.openxmlformats.org/officeDocument/2006/math"
+NS = {"w": W, "m": M}
 qn = lambda name: f"{{{W}}}{name}"
+mqn = lambda name: f"{{{M}}}{name}"
 
 
 def save(tree, path):
@@ -39,6 +41,17 @@ for name in ("document.xml", "styles.xml"):
 
 path = ROOT / "word" / "document.xml"
 tree = etree.parse(str(path))
+# Pandoc 的 pmatrix 可能把 mcJc 放在 count 前；ISO/IEC 29500 的 CT_MCPr 要求 count 先出现。
+reordered = 0
+for mc_pr in tree.xpath("//m:mcPr[m:count and m:mcJc]", namespaces=NS):
+    count = mc_pr.find(mqn("count"))
+    if mc_pr.index(count) > mc_pr.index(mc_pr.find(mqn("mcJc"))):
+        mc_pr.remove(count)
+        mc_pr.insert(0, count)
+        reordered += 1
+if reordered:
+    save(tree, path)
+print(f"document.xml: matrix mcPr reordered={reordered}")
 sect = tree.xpath("//w:sectPr[last()]", namespaces=NS)[0]
 page = sect.find(qn("pgSz"))
 if page is None:

@@ -142,3 +142,9 @@ $$\psi_{\mathrm{toy}}''(\mu)=1 \quad\Longrightarrow\quad \frac{1}{\psi_{\mathrm{
 - [K1b 验证报告](kimi-cite://text?path=C%3A%5CUsers%5C%E4%B8%80%E6%A2%A6%5CDocuments%5Ckimi%5Cworkspace%5C.worktrees%5Ctoe-k0-universal%5Cpapers%5C%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96_%E7%B3%BB%E5%88%97%5C_panel_records%5CK0_CANCELLATION_VERIFICATION.md&text=K1b%EF%BC%9A%E6%A0%87%E5%87%86%E6%98%A0%E5%B0%84%E5%8D%95%E5%B0%84%E6%80%A7%E5%BD%93%E4%B8%94%E4%BB%85%E5%BD%93%E5%85%A8%E6%B6%88%E5%8E%BB%E5%BE%8B "citation")及[原生 Word](C:\Users\一梦\Documents\kimi\workspace\.worktrees\toe-k0-universal\papers\数学基础强化_系列\_panel_records\K0_CANCELLATION_VERIFICATION.docx)。
 - `inclusion_injective_iff` 编译退出码 0，11/11 检查通过，实际公理为 `propext, Quot.sound`。
 - K1a＋K1b 接口闭合；K2–K4 未竟工作不变。标准局部化定理复用不构成外部数学首创。
+
+## K2 幂等矩阵表示例复核补记（2026-11-10）
+
+- [K2 表示验证报告](kimi-cite://text?path=C%3A%5CUsers%5C%E4%B8%80%E6%A2%A6%5CDocuments%5Ckimi%5Cworkspace%5C.worktrees%5Ctoe-k0-universal%5Cpapers%5C%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96_%E7%B3%BB%E5%88%97%5C_panel_records%5CK2_IDEMPOTENT_REPRESENTATION.md&text=K2%20%E8%B5%B7%E7%82%B9%EF%BC%9A%E9%9D%9E%E5%B9%B3%E5%87%A1%E5%B9%82%E7%AD%89%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E9%AA%8C%E8%AF%81 "citation")及[原生 Word](C:\Users\一梦\Documents\kimi\workspace\.worktrees\toe-k0-universal\papers\数学基础强化_系列\_panel_records\K2_IDEMPOTENT_REPRESENTATION.docx)。
+- 五条 `#print axioms` 均仅 Lean 标准三项；14/14 检查通过，编译退出码 0。
+- 本次只验证非平凡幂等矩阵，不宣称投射模同构类、稳定相似或 K0(R) 已完成。K2–K4 的未竟工作不变。
