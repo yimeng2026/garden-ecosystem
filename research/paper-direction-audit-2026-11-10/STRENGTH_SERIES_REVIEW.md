@@ -168,3 +168,10 @@ $$\psi_{\mathrm{toy}}''(\mu)=1 \quad\Longrightarrow\quad \frac{1}{\psi_{\mathrm{
 - `python verify_k2_general_zero_extension_20261110.py` 实际退出码 0，11/11 检查通过；任意环与有限 m、n 上的零扩展幂等和三次幂保持均只依赖 Lean 标准三公理。
 - 原生 Word 共 4 页并逐页检查，无空白页或裁切；低风险 `w:lvlOverride` 仅为目录编号兼容提示。
 - 通用零扩展不等于稳定相似；重索引、稳定相似、投射模同构类和 K0(R) 仍未完成。
+
+## K2 重索引与交换零扩展复核补记（2026-11-10）
+
+- [重索引与零块交换报告](kimi-cite://text?path=C%3A%5CUsers%5C%E4%B8%80%E6%A2%A6%5CDocuments%5Ckimi%5Cworkspace%5C.worktrees%5Ctoe-k0-universal%5Cpapers%5C%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96_%E7%B3%BB%E5%88%97%5C_panel_records%5CK2_REINDEX_ZERO_SWAP.md&text=K2%20%E5%89%8D%E7%BD%AE%E6%8E%A5%E5%8F%A3%EF%BC%9A%E9%87%8D%E7%B4%A2%E5%BC%95%E7%9B%B8%E4%BC%BC%E4%B8%8E%E4%BA%A4%E6%8D%A2%E9%9B%B6%E6%89%A9%E5%B1%95 "citation")及[原生 Word](C:\Users\一梦\Documents\kimi\workspace\.worktrees\toe-k0-universal\papers\数学基础强化_系列\_panel_records\K2_REINDEX_ZERO_SWAP.docx)。
+- `python verify_k2_reindex_zero_swap_20261110.py` 实际退出码 0，12/12 检查通过；三条接口定理均只依赖 Lean 标准三公理。
+- 原生 Word 共 4 页并逐页检查，无空白页或裁切；低风险 `w:lvlOverride` 仅为目录编号兼容提示。
+- 当前只完成重索引和交换零扩展前置接口；稳定相似、投射模同构类和 K0(R) 仍未完成。
