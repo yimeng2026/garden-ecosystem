@@ -17,7 +17,32 @@
       "external_novelty": "模型本身不新；符号约定、跨稿件一致性和可复现协议可形成方法增量。",
       "unfinished": "统一相图和陈数符号；公开涡旋 CdGM 求解、有限尺寸标度、无序与相互作用扩展。",
       "priority": "P0",
-      "risk": "稿件写 μ>0 时 Ch=-1，系列另一稿写 Ch=+1，TOE 脚本也得到 +1；相变边界叙述亦不一致。"
+      "risk": "稿件写 μ>0 时 Ch=-1，系列另一稿写 Ch=+1，TOE 脚本也得到 +1；相变边界叙述亦不一致。",
+      "resolution_2026_11_10": {
+        "status": "resolved_within_limited_scope",
+        "scope": "仅 p+ip 相图、陈数符号、统一约定与直接数值证据；不解除 CdGM、实验数字或整篇 P0 风险。",
+        "report": ".worktrees\\provider-main-integration\\papers\\topo-quantum-internet\\P_IP_CHERN_CONVENTION_AUDIT.md",
+        "native_word": ".worktrees\\provider-main-integration\\papers\\topo-quantum-internet\\P_IP_CHERN_CONVENTION_AUDIT.docx",
+        "raw_results": ".worktrees\\provider-main-integration\\papers\\topo-quantum-internet\\verification\\pip_chern_convention_results.json",
+        "validation": {
+          "unit_tests": 15,
+          "exit_code": 0,
+          "maximum_absolute_method_difference": 1.7522414162307598e-05,
+          "lattice_sweep_points": 241,
+          "continuum_points": 60,
+          "word_pages": 6,
+          "word_ooxml_parts": 17,
+          "near_blank_pages": 0,
+          "visual_review": "contact-sheet及重点表格页已查看，无裁切或代码重叠"
+        },
+        "legacy_readonly_audit": ".worktrees\\provider-main-integration\\papers\\topo-quantum-internet\\verification\\legacy_pip_chern_audit.json",
+        "remaining": [
+          "旧 TOE 脚本独立分支修复",
+          "涡旋 CdGM 真实求解",
+          "实验数字逐项回源",
+          "无序、相互作用与有限尺寸标度"
+        ]
+      }
     },
     {
       "id": "provider-topo:papers/topo-quantum-internet/paper12_first_principles_topology.md",
@@ -49,7 +74,32 @@
       "external_novelty": "“首次给出完整解析表达式”不成立为标准模型的新颖性声明；应撤改为复现与整理。",
       "unfinished": "与论文二合并模型基线，纠正相图，核验实验数字与 25 nm 局域长度的参数推导。",
       "priority": "P0",
-      "risk": "相图与其他稿件冲突，且把实验一致性、严格解析和首次表述写得过强。"
+      "risk": "相图与其他稿件冲突，且把实验一致性、严格解析和首次表述写得过强。",
+      "resolution_2026_11_10": {
+        "status": "resolved_within_limited_scope",
+        "scope": "仅 p+ip 相图、陈数符号、统一约定与直接数值证据；不解除 CdGM、实验数字或整篇 P0 风险。",
+        "report": ".worktrees\\provider-main-integration\\papers\\topo-quantum-internet\\P_IP_CHERN_CONVENTION_AUDIT.md",
+        "native_word": ".worktrees\\provider-main-integration\\papers\\topo-quantum-internet\\P_IP_CHERN_CONVENTION_AUDIT.docx",
+        "raw_results": ".worktrees\\provider-main-integration\\papers\\topo-quantum-internet\\verification\\pip_chern_convention_results.json",
+        "validation": {
+          "unit_tests": 15,
+          "exit_code": 0,
+          "maximum_absolute_method_difference": 1.7522414162307598e-05,
+          "lattice_sweep_points": 241,
+          "continuum_points": 60,
+          "word_pages": 6,
+          "word_ooxml_parts": 17,
+          "near_blank_pages": 0,
+          "visual_review": "contact-sheet及重点表格页已查看，无裁切或代码重叠"
+        },
+        "legacy_readonly_audit": ".worktrees\\provider-main-integration\\papers\\topo-quantum-internet\\verification\\legacy_pip_chern_audit.json",
+        "remaining": [
+          "旧 TOE 脚本独立分支修复",
+          "涡旋 CdGM 真实求解",
+          "实验数字逐项回源",
+          "无序、相互作用与有限尺寸标度"
+        ]
+      }
     },
     {
       "id": "provider-topo:papers/topo-quantum-internet/拓扑量子比特的容错分析_非阿贝尔任意子编织与表面码纠错.md",
@@ -65,7 +115,32 @@
       "external_novelty": "主要是已知理论与实验综述；应保留教学与血缘价值。",
       "unfinished": "删除无法独立证明的严格性、首次和工程成熟承诺；同步各子稿修正并增加证据分级表。",
       "priority": "P1",
-      "risk": "把理论预测、最新实验和产业化前景连为过强结论，容易掩盖子稿之间的矛盾。"
+      "risk": "把理论预测、最新实验和产业化前景连为过强结论，容易掩盖子稿之间的矛盾。",
+      "resolution_2026_11_10": {
+        "status": "resolved_within_limited_scope",
+        "scope": "仅 p+ip 相图、陈数符号、统一约定与直接数值证据；不解除 CdGM、实验数字或整篇 P0 风险。",
+        "report": ".worktrees\\provider-main-integration\\papers\\topo-quantum-internet\\P_IP_CHERN_CONVENTION_AUDIT.md",
+        "native_word": ".worktrees\\provider-main-integration\\papers\\topo-quantum-internet\\P_IP_CHERN_CONVENTION_AUDIT.docx",
+        "raw_results": ".worktrees\\provider-main-integration\\papers\\topo-quantum-internet\\verification\\pip_chern_convention_results.json",
+        "validation": {
+          "unit_tests": 15,
+          "exit_code": 0,
+          "maximum_absolute_method_difference": 1.7522414162307598e-05,
+          "lattice_sweep_points": 241,
+          "continuum_points": 60,
+          "word_pages": 6,
+          "word_ooxml_parts": 17,
+          "near_blank_pages": 0,
+          "visual_review": "contact-sheet及重点表格页已查看，无裁切或代码重叠"
+        },
+        "legacy_readonly_audit": ".worktrees\\provider-main-integration\\papers\\topo-quantum-internet\\verification\\legacy_pip_chern_audit.json",
+        "remaining": [
+          "旧 TOE 脚本独立分支修复",
+          "涡旋 CdGM 真实求解",
+          "实验数字逐项回源",
+          "无序、相互作用与有限尺寸标度"
+        ]
+      }
     },
     {
       "id": "provider-topo:papers/topo-quantum-internet/论文七_Altermagnet超导体高阶拓扑Majorana角点模.md",

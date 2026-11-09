@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "updated_ids": [
+    "provider-topo:papers/topo-quantum-internet/Kitaev链与p_ip拓扑超导体_Majorana零能模数值研究.md",
+    "provider-topo:papers/topo-quantum-internet/拓扑超导马约拉纳零能模_能谱分析与拓扑保护_投稿物理学报.md",
+    "provider-topo:papers/topo-quantum-internet/拓扑量子物态与量子计算研究综述_投稿物理学报.md"
+  ],
+  "count": 3,
+  "original_risks_preserved": true,
+  "resolution_key": "resolution_2026_11_10",
+  "test_count": 15,
+  "maximum_absolute_method_difference": 1.7522414162307598e-05,
+  "full_p0_resolved": false,
+  "source_files_exist": true
+}

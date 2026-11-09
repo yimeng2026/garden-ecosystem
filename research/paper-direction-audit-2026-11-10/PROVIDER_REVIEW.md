@@ -85,3 +85,12 @@
 5. **最后再扩写论文**：只有完成上述证据闭环的方向才进入新论文；其余稿件保持综述、复现或勘误状态。
 
 本轮裁决不是对 31 篇论文的最终外部查新。后续仍需对 644 份 TOE 文档、67 份前沿报告、两份物理直觉总报告和 7 份根目录独立稿件应用同一标准，并把完全重复与近重复版本映射到唯一权威稿。
+
+## p+ip 相图与符号复核补记（2026-11-10）
+
+本轮已完成限定范围的修复，不覆盖上述初审记录：
+
+- [双方法勘误报告](kimi-cite://text?path=C%3A%5CUsers%5C%E4%B8%80%E6%A2%A6%5CDocuments%5Ckimi%5Cworkspace%5C.worktrees%5Cprovider-main-integration%5Cpapers%5Ctopo-quantum-internet%5CP_IP_CHERN_CONVENTION_AUDIT.md&text=p%2Bip%20%E7%9B%B8%E5%9B%BE%E4%B8%8E%E9%99%88%E6%95%B0%E7%AC%A6%E5%8F%B7%EF%BC%9A%E5%8F%8C%E6%96%B9%E6%B3%95%E5%A4%8D%E6%A0%B8%E5%8F%8A%E4%B8%89%E7%A8%BF%E5%8B%98%E8%AF%AF "citation")及[原生 Word](C:\Users\一梦\Documents\kimi\workspace\.worktrees\provider-main-integration\papers\topo-quantum-internet\P_IP_CHERN_CONVENTION_AUDIT.docx)（6 页）已交付。
+- 晶格相区为 0<μ<4t 时 −1、−4t<μ<0 时 +1、|μ|>4t 时 0；连续弱配对为 +1、强配对为 0。
+- 15 项测试退出码 0；双方法最大差为 1.7522414162307598e-05；旧 TOE 脚本只读复核确认实际输出与自身注释反号。
+- 保留的未竟工作：旧脚本独立分支修复、CdGM 真实求解、实验数字逐项回源、无序／相互作用／有限尺寸标度。整篇 P0 风险不因本次局部修复自动解除。
