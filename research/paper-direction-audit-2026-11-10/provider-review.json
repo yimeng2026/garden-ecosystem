@@ -1,0 +1,255 @@
+{
+  "schema": "provider-direction-review-v1",
+  "scope": "31 standalone manuscripts in the provider worktree; merged exports are excluded.",
+  "review_standard": "Project-direction role and external novelty are separate. Novelty judgments are preliminary until the claim-level source and reproducibility audits are complete.",
+  "records": [
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/Bi2Se3_拓扑绝缘体表面态数值模拟_原创研究.md",
+      "role": "四带 k·p 与 Fu–Kane 方法的教学级数值复现；是系列入口，不是独立新学科方向。",
+      "external_novelty": "现有模型与方法的复现，不宜以“原创研究”作为新颖性证明。",
+      "unfinished": "公开模型参数、slab 构造、TRIM 宇称、ARPES 原始数据与拟合不确定度；再推进八带模型、外场和输运。",
+      "priority": "P1",
+      "risk": "主花园副本无生成脚本和 ARPES 原始数据，当前不能核实“定量高度吻合”。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/Kitaev链与p_ip拓扑超导体_Majorana零能模数值研究.md",
+      "role": "Kitaev 链与 p+ip 标准模型的数值复现，为后续编织和器件研究提供共同基线。",
+      "external_novelty": "模型本身不新；符号约定、跨稿件一致性和可复现协议可形成方法增量。",
+      "unfinished": "统一相图和陈数符号；公开涡旋 CdGM 求解、有限尺寸标度、无序与相互作用扩展。",
+      "priority": "P0",
+      "risk": "稿件写 μ>0 时 Ch=-1，系列另一稿写 Ch=+1，TOE 脚本也得到 +1；相变边界叙述亦不一致。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/paper12_first_principles_topology.md",
+      "role": "材料数据库—紧束缚—拓扑不变量的多尺度集成方向。",
+      "external_novelty": "高通量拓扑材料筛选已是成熟方向；潜在增量在特定 AM–SC 工作流，而非“第一性原理筛选”概念。",
+      "unfinished": "提供真实 DFT 输入输出、结构 ID、能源与泛函、瓦尼尔拟合和 2287→100→20 的逐条候选清单；否则改称参数化模型筛选。",
+      "priority": "P0",
+      "risk": "未见可支撑真实 DFT、2287 材料筛选和 Top20 结论的数据包，核心表述超过当前证据。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/paper13_superconductor_magnetic_phase.md",
+      "role": "S/F、S/AM、vdW 与 Josephson 器件的文献整合和参数地图。",
+      "external_novelty": "各器件方向均已有研究；价值在统一比较与动态相图，不在重新发现这些效应。",
+      "unfinished": "逐项核验最高值、材料体系和测量条件；以同一自由能／结模型计算相图，再考虑 Floquet 驱动。",
+      "priority": "P1",
+      "risk": "多个“当前最高”“终极目标”和精确参数窗口随时间与模型而变，需逐条来源和适用边界。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/paper14_tqips_standard.md",
+      "role": "TQIPS 与 GEM 的协议架构候选，是项目内可独立发展的系统方向。",
+      "external_novelty": "五层模型和跨层资源视图本身不新；只有相对 IRTF 多平面架构、QNA 与接口草案的可证明差异才可能新颖。",
+      "unfinished": "给出 GEM 状态模型、接口 schema、资源一致性规则、仿真对照和与现有标准的映射；修正延迟单位并公开 100 节点实验。",
+      "priority": "P1",
+      "risk": "传输层延迟在约 4 µs 与 3.96 ms 的表述之间不一致；拓扑保真度与吞吐提升缺少公开仿真。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/拓扑超导马约拉纳零能模_能谱分析与拓扑保护_投稿物理学报.md",
+      "role": "Kitaev／p+ip 解析与数值综述，和论文二高度重叠。",
+      "external_novelty": "“首次给出完整解析表达式”不成立为标准模型的新颖性声明；应撤改为复现与整理。",
+      "unfinished": "与论文二合并模型基线，纠正相图，核验实验数字与 25 nm 局域长度的参数推导。",
+      "priority": "P0",
+      "risk": "相图与其他稿件冲突，且把实验一致性、严格解析和首次表述写得过强。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/拓扑量子比特的容错分析_非阿贝尔任意子编织与表面码纠错.md",
+      "role": "Ising／Fibonacci 编织与表面码资源的比较框架。",
+      "external_novelty": "理论比较主题已有大量文献；可发展为统一噪声下的混合拓扑—主动纠错评估。",
+      "unfinished": "用同一物理错误模型和完整门集比较资源，不能只比较理想编织与工程化表面码；纳入测量、泄漏和非拓扑操作。",
+      "priority": "P1",
+      "risk": "“无需主动纠错”“理想无限保真度”“约 10:1 开销”容易被读成已实现硬件结论，需降级并注明假设。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/拓扑量子物态与量子计算研究综述_投稿物理学报.md",
+      "role": "系列导航综述，不是新研究方向。",
+      "external_novelty": "主要是已知理论与实验综述；应保留教学与血缘价值。",
+      "unfinished": "删除无法独立证明的严格性、首次和工程成熟承诺；同步各子稿修正并增加证据分级表。",
+      "priority": "P1",
+      "risk": "把理论预测、最新实验和产业化前景连为过强结论，容易掩盖子稿之间的矛盾。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/论文七_Altermagnet超导体高阶拓扑Majorana角点模.md",
+      "role": "AM–SC 高阶拓扑平台的数值复现与参数扩展。",
+      "external_novelty": "2023–2026 年已有多篇角点模、调控和编织工作；可在大晶格、无序和完整动力学上形成增量。",
+      "unfinished": "复现公开模型后扩展 L≥22、无序、多实时读者与完整 2π 绝热编织；区分角点移动和非阿贝尔门保真度。",
+      "priority": "P1",
+      "risk": "角点模周期移动本身不能证明非阿贝尔统计或 √Z／√X 门已实现。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/论文九_非阿贝尔拓扑量子纠错码与逻辑架构.md",
+      "role": "Majorana 表面码、Turaev–Viro 码与通用门资源的系统架构候选。",
+      "external_novelty": "编码族与架构概念已有；可能的增量是端到端资源模型和跨码族统一基准。",
+      "unfinished": "给出码构造、噪声、解码、逻辑门和计数公式；对 4.7% 阈值、10^-4–10^-8 逻辑错误率和 0.7%／4.9% 对照实际复算。",
+      "priority": "P0",
+      "risk": "核心数值缺少公开脚本，且把厂商参数与理论结果混为可直接实现的指标。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/论文五_非绝热Majorana编织与T门几何相位.md",
+      "role": "非绝热复合脉冲与几何门算法候选，是较明确的潜在算法增量。",
+      "external_novelty": "STA、复合脉冲和几何 T 门已有；只有特定 Majorana 脉冲序列及 T^-4 标度经独立对比后才可判断新颖性。",
+      "unfinished": "公开哈密顿量、四段脉冲、时间步长收敛、理想目标门和完整保真度定义；与 GRAPE／STA／简单回波在相同总时间和耦合约束下比较。",
+      "priority": "P1",
+      "risk": "理想三 Majorana 模型和估算的宇称寿命不足以证明实验可行或 10^7 次无误差操作。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/论文八_Parafermion梯子Fibonacci拓扑序涌现.md",
+      "role": "Z₃ parafermion 梯子、anyon 凝聚与 Fibonacci 通用编织的复现与扩展。",
+      "external_novelty": "Fibonacci 数据和 2024 年量子处理器编织实验均已有；梯子相变与编译优化仍可研究。",
+      "unfinished": "公开梯子哈密顿量、有限尺寸与边界条件、简并和能隙计算；把数字量子模拟与自然存在的任意子明确区分。",
+      "priority": "P1",
+      "risk": "“实验就绪”不能由 F／R 矩阵计算和外部数字模拟直接推出，梯子涌现机制需要独立证据。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/论文六_Majorana非阿贝尔统计严格验证协议.md",
+      "role": "融合—见证—编织三层验证协议，是有潜力的方法论方向。",
+      "external_novelty": "各单项测试已有研究；组合成带假阳性预算的协议可能形成增量。",
+      "unfinished": "建立平庸 ABS／杂质态零模型、设备无关假设、相关重复测量和联合显著性；证明 CHSH 类见证与统计非阿贝尔性的逻辑关系。",
+      "priority": "P0",
+      "risk": "排除局域隐变量不等同于证明非阿贝尔统计；10^-5–10^-9 累积假阳性率和“实验就绪”需要独立推导。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/论文十_拓扑量子处理器微架构.md",
+      "role": "拓扑 ISA、调度与实时反馈的工程架构方向。",
+      "external_novelty": "测量驱动拓扑计算与经典控制已有；特定 ISA 和调度器可形成项目内独立成果。",
+      "unfinished": "提供指令语义、调度算法、资源约束和可执行仿真；把厂商实测参数、设想参数与模型输出分层。",
+      "priority": "P1",
+      "risk": "“延迟不随比特数增长”“百万比特功耗”是强外推，需要通信、控制、串扰和布线模型。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/论文十一_分布式拓扑量子网络.md",
+      "role": "任意子链路与分布式量子网络的系统模型候选。",
+      "external_novelty": "量子中继与分布式计算已有；拓扑链路特有的资源模型可能有增量。",
+      "unfinished": "在相同距离、损耗、探测效率、纯化和经典延迟下比较拓扑与光子方案；公开最优节点数与保真度计算。",
+      "priority": "P1",
+      "risk": "当前跨器件融合／编织未实现，不能与成熟光子链路直接作工程性能宣判。"
+    },
+    {
+      "id": "provider-topo:papers/topo-quantum-internet/论文四_拓扑绝缘体超导体异质结Majorana零能模.md",
+      "role": "Fu–Kane TI／SC 涡旋与 STS 数值复现及参数优化。",
+      "external_novelty": "既有模型复现；增量在定量拟合、无序与器件参数，而不是模型名称。",
+      "unfinished": "公开涡旋 BdG、迷你能隙、STS 热展宽与实验数据；检查“迷你能隙提高 80 倍”和临界间距的同口径比较。",
+      "priority": "P1",
+      "risk": "外部 trijunction 结果不能直接证明本文模型或逻辑门已经实现。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/00_综述/论文1_Review_of_QEC_FTQC.md",
+      "role": "QEC–FTQC 系列导航综述，不是独立新方向。",
+      "external_novelty": "已知理论与实验的组织。",
+      "unfinished": "更新到 qLDPC 多平台实验、cultivation 和实时解码现状；给后续论文标记证据等级与失效结论。",
+      "priority": "P2",
+      "risk": "不能把子系列的数值声明自动视为综述已核实事实。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/01_论文一/论文1_Decoherence_Noise_Spectrum.md",
+      "role": "Lindblad 退相干和噪声谱的基础数值演示。",
+      "external_novelty": "标准教学内容；可成为硬件噪声数据接口，而非新理论。",
+      "unfinished": "公开求解器和参数，加入非指数、非马尔可夫与真实谱反演；用实测 T1／T2 数据替换跨平台概括。",
+      "priority": "P2",
+      "risk": "跨平台 T2／T1 比值不是普适常数，当前图文不足以支撑硬件参数预测。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/02_论文二/论文2_Superconducting_Transmon_Energy_Spectrum.md",
+      "role": "Transmon 微扰能谱与参数扫描的基础复现。",
+      "external_novelty": "标准模型；增量只能在具体损耗模型或器件数据。",
+      "unfinished": "加入完整 Cos²φ 对角化、电荷色散、参与率与介电／准粒子损耗数据；验证 T1／T2 与码距的联动而非经验外推。",
+      "priority": "P2",
+      "risk": "T1／T2 和“提升相干时间即可降低码距”的数值不能由能谱微扰单独推出。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/03_论文三/论文3_surface_code_threshold.md",
+      "role": "表面码阈值和有限尺寸标度的核心可复现研究方向。",
+      "external_novelty": "阈值本身不新；公开、严格、可复验的噪声—解码基准具有方法价值。",
+      "unfinished": "用 Stim＋PyMatching 进行真实逐 shot 蒙特卡洛，保存种子、DEM、置信区间和 FSS；再扩展相关噪声和其他解码器。",
+      "priority": "P0",
+      "risk": "现有 TOE 脚本只代入标度公式，未支持声称的大规模模拟；摘要和结论的不确定度还分别为 ±0.05% 与 ±0.06%。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/04_论文四/论文4_ColorCode_vs_SurfaceCode.md",
+      "role": "颜色码与表面码的统一基准比较。",
+      "external_novelty": "比较主题已有；严格同噪声、同解码、同资源口径仍有工程价值。",
+      "unfinished": "使用实际码电路和同 shot 数据比较；分别报告数据／测量比特、阈值、逻辑门成本和延迟。",
+      "priority": "P1",
+      "risk": "目前数值来自未公开模型，不能把理想解码与编码格点计数直接转化为实际资源胜负。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/05_论文五/论文5_QLDPC_Construction_Performance.md",
+      "role": "qLDPC 构造、解码与硬件连接的独立发展主线。",
+      "external_novelty": "好码和 BP+OSD 不新，且 2025–2026 已进入实验；特定构造与跨平台基准仍可发展。",
+      "unfinished": "给出每个矩阵的 [[n,k,d]] 验证、稀疏度、BP+OSD 原始数据和电路映射；区分好码渐近性质与有限实例性能。",
+      "priority": "P1",
+      "risk": "2%–5% 阈值和线性复杂度不能泛化到所有码族、噪声和 OSD 实现。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/06_论文六/论文6_Decoder_Comparison.md",
+      "role": "多解码器精度—延迟—泛化基准方向。",
+      "external_novelty": "解码器比较已有；统一数据集、真实延迟和分布外噪声可形成方法增量。",
+      "unfinished": "在相同 Stim 电路上比较 MWPM、UF、BP+OSD 与 NN，保存真实运行时间、训练集和逻辑错误置信区间。",
+      "priority": "P0",
+      "risk": "当前阈值和亚微秒延迟没有公开算法实现或硬件测量支撑。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/07_论文七/论文7_MagicStateDistillation.md",
+      "role": "魔术态蒸馏资源核算方向，需要升级到 cultivation 时代。",
+      "external_novelty": "两种旧方案不新；全成本模型、新实验基线和级联优化仍可研究。",
+      "unfinished": "统一原始态数、时空体积、逻辑量子比特和晶圆面积口径；加入 cultivation、零级蒸馏与现代蒸馏基线。",
+      "priority": "P0",
+      "risk": "摘要说总开销约降低 40%，结论说约 97%；需要真实公式解释差异，不能只保留更有利数字。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/08_论文八/论文8_Logical_Qubit_Init_Readout_Gate.md",
+      "role": "逻辑初始化、读出和门操作的全栈协议与资源评估。",
+      "external_novelty": "协议组件已有；端到端联合资源模型可能有增量。",
+      "unfinished": "用电路级噪声模拟初始化、测量、lattice surgery 和注入，明确多数投票的相关失败与解码成本。",
+      "priority": "P1",
+      "risk": "当前主要是理想化公式推导，不能把 10^-7 测量残余和寿命提升当成已演示结果。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/09_论文九/论文9_Cascaded_Codes_Code_Switching.md",
+      "role": "级联码、代码转换和异构容错架构方向。",
+      "external_novelty": "概念已有；特定存储—计算分离模型可形成系统增量。",
+      "unfinished": "公开转换电路和噪声传播，按同等逻辑保护比较转换成本；加入 cultivation／grafting 的新实验基线。",
+      "priority": "P1",
+      "risk": "“码距悖论”主要反映转换操作数增加，不能据此推出更大码距总体更差或架构优势。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/10_论文十/论文10_RealTime_Decoder_Architecture.md",
+      "role": "解码器硬件、并行调度和端到端延迟的独立工程主线。",
+      "external_novelty": "FPGA／ASIC 实时解码已存在且快速演进；增量在实际工作负载基准而非“ASIC 必经之路”。",
+      "unfinished": "使用公开数据集和真实硬件／仿真器测量，区分算法复杂度、通信和解码反馈；加入 LCD、GPU 与新 ASIC 基线。",
+      "priority": "P1",
+      "risk": "当前延迟数字是模型估算，不应被写成实测；ASIC 是候选路径之一，不是已证明的唯一解。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/11_论文十一/论文11_Error_Budget_System_Optimization.md",
+      "role": "全栈错误预算与系统优化的独立工程方向。",
+      "external_novelty": "错误预算方法已有；可验证的组件级模型和联合优化有实际价值。",
+      "unfinished": "建立组件误差联合分布、相关错误和实测校准输入；统一码距、物理比特数与 pL 公式，做敏感度而非单点承诺。",
+      "priority": "P0",
+      "risk": "摘要与结论对 p=0.05% 时所需码距写法冲突，d=15 的 421 等计数也与常用公式不一致。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/12_论文十二/论文12_IonTrap_QEC.md",
+      "role": "离子阱长程连接与 qLDPC 的架构研究方向。",
+      "external_novelty": "长程连接优势真实存在且已有实验；需要转向具体电路和码族，不是泛化的“高维表面码更优”。",
+      "unfinished": "修正算术与阈值，采用 IonQ／Quantinuum 的真实码模型，比较长链、QCCD、BB／BB5 与表面码。",
+      "priority": "P0",
+      "risk": "摘要写三维码 n=49、结论写 n=343；p_th≈1.5×10^-3 是 0.15%，不能称为高于约 1% 的表面码阈值。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/13_论文十三/论文13_Rydberg_Error_Correction.md",
+      "role": "中性原子移动码、重排和泄漏处理的平台研究方向。",
+      "external_novelty": "中性原子逻辑处理器和重排已有；增量在移动成本、泄漏与 qLDPC 映射。",
+      "unfinished": "用实际移动、阻塞、门速度和误差模型计算周期；加入 erasure conversion、泄漏检测与真实逻辑处理器对照。",
+      "priority": "P1",
+      "risk": "长程相互作用不等于无条件全连接，“室温操作”也不能掩盖激光冷却与高真空要求。"
+    },
+    {
+      "id": "provider-qec:papers/qec-ftqc/14_论文十四/论文14_FTQC_Standardization_Roadmap.md",
+      "role": "FTQC benchmark 与标准化路线图的治理方向。",
+      "external_novelty": "六元组和五层 KPI 可作为项目规范，但须与现有 QIRG、QEC 接口和行业 benchmark 对齐。",
+      "unfinished": "更新已发生的实验，区分预测和事实；扩展噪声、解码、逻辑门、后选择、空间时间体积和复现元数据。",
+      "priority": "P1",
+      "risk": "2025–2027 首个 qLDPC 验证等表述已过时，2027／2030／2035 时间表不是已验证结论。"
+    }
+  ]
+}
