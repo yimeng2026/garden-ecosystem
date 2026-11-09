@@ -14,7 +14,7 @@ def capabilities() -> dict[str, object]:
         "default_policy": "deny", "network": "injected_only",
         "external_tools": "explicit_adapters_only",
         "modules": ["providers", "context", "reliability", "worlds", "evaluation",
-                    "learning", "research", "receipts"],
+                    "learning", "research", "receipts", "lean", "service"],
     }
 
 

@@ -10,3 +10,4 @@ upstream/
 .coverage
 node_modules/
 research/word-qa/
+docs/bridge-word-qa/
