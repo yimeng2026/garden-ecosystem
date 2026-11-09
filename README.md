@@ -6,7 +6,7 @@
 
 ## 当前状态
 
-- **已实现**：9 个公共模块、离线组合演示、83 项标准库 `unittest` 测试。
+- **已实现**：9 个公共模块、离线组合演示、84 项标准库 `unittest` 测试。
 - **接口已定义**：`bridge.capabilities()`、`bridge.health()` 与 `ExternalToolAdapter`。
 - **主花园尚未直接调用本包**：主花园的蜂群、provider-pool、Next.js/SSE 保持不动；接入时由受控 Python 服务调用本包，不需要重写前端或数据库。
 - **未做**：真实模型实测、Lean/OpenFOAM 执行、沙箱隔离、模型权重下载、全球项目穷尽。默认外部工具为 `unavailable`，不会生成虚假的真实执行回执。

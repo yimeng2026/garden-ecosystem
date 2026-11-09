@@ -18,7 +18,8 @@ SECRET_PATTERNS = {
 
 
 def main() -> None:
-    paths = subprocess.check_output(["git", "ls-files"], cwd=ROOT, text=True).splitlines()
+    paths = subprocess.check_output(["git", "ls-files"], cwd=ROOT, text=True,
+                                    encoding="utf-8").splitlines()
     failures = []
     text_files = 0
     for name in paths:
