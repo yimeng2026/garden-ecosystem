@@ -159,9 +159,9 @@
       "id": "provider-qec:papers/qec-ftqc/03_论文三/论文3_surface_code_threshold.md",
       "role": "表面码阈值和有限尺寸标度的核心可复现研究方向。",
       "external_novelty": "阈值本身不新；公开、严格、可复验的噪声—解码基准具有方法价值。",
-      "unfinished": "用 Stim＋PyMatching 进行真实逐 shot 蒙特卡洛，保存种子、DEM、置信区间和 FSS；再扩展相关噪声和其他解码器。",
+      "unfinished": "真实 Stim＋PyMatching 基准已完成 28 点、560,000 shots，交叉中位数 0.006725、范围 0.006478–0.007494；下一步扩展有限尺寸标度、相关噪声和其他解码器，并用原稿协议复算 1.03%。",
       "priority": "P0",
-      "risk": "现有 TOE 脚本只代入标度公式，未支持声称的大规模模拟；摘要和结论的不确定度还分别为 ±0.05% 与 ±0.06%。"
+      "risk": "原稿仍未提供支持 1.03% 的原始逐 shot 数据，摘要和结论的不确定度还分别为 ±0.05% 与 ±0.06%；新基准只适用于明确冻结的电路级协议，不能替代原稿修正。"
     },
     {
       "id": "provider-qec:papers/qec-ftqc/04_论文四/论文4_ColorCode_vs_SurfaceCode.md",

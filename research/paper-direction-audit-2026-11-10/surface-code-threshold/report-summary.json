@@ -1,0 +1,9 @@
+{
+  "points": 28,
+  "total_shots": 560000,
+  "crossing_median": 0.0067253928077561816,
+  "crossing_minimum": 0.006478471377103944,
+  "crossing_maximum": 0.00749362675686226,
+  "verification": "pass",
+  "protocol_sha256": "223f30a7b9520cd4e7b22a089e13d49673c635dcde64c1cf470dcdaad074fa63"
+}

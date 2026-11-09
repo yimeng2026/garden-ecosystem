@@ -1,0 +1,406 @@
+{
+  "schema": "surface-code-threshold-results-v1",
+  "protocol_sha256": "223f30a7b9520cd4e7b22a089e13d49673c635dcde64c1cf470dcdaad074fa63",
+  "protocol": {
+    "schema": "surface-code-threshold-protocol-v1",
+    "purpose": "Independent circuit-level Monte Carlo benchmark; not a reconstruction of the manuscript's missing original simulation.",
+    "circuit": "surface_code:rotated_memory_x",
+    "distances": [
+      3,
+      5,
+      7,
+      9
+    ],
+    "rounds_rule": "distance",
+    "probabilities": [
+      0.004,
+      0.005,
+      0.006,
+      0.007,
+      0.008,
+      0.009,
+      0.01
+    ],
+    "noise_parameters": [
+      "after_clifford_depolarization",
+      "before_round_data_depolarization",
+      "after_reset_flip_probability",
+      "before_measure_flip_probability"
+    ],
+    "shots": 20000,
+    "seed_base": 20261110,
+    "decoder": "PyMatching MWPM from detector_error_model(decompose_errors=True)",
+    "interval": "Wilson 95% (z=1.959963984540054)",
+    "crossing_method": "Pairwise crossings of piecewise-linear log10 logical error rates; report median and observed range, not an FSS confidence interval.",
+    "zero_rate_policy": "Exclude zero-rate rows from logarithmic crossing estimates and report them explicitly.",
+    "dependency_policy": "Fail if Stim or PyMatching is unavailable; never substitute formula-generated logical error rates."
+  },
+  "dependencies": {
+    "python": "3.12.16",
+    "stim": "1.16.0",
+    "pymatching": "2.4.0",
+    "numpy": "2.5.4"
+  },
+  "points": [
+    {
+      "distance": 3,
+      "p": 0.004,
+      "shots": 20000,
+      "seed": 20264110,
+      "errors": 267,
+      "rate": 0.01335,
+      "wilson95_low": 0.011850284576118465,
+      "wilson95_high": 0.015036624117288167,
+      "log10_rate": -1.8745187342994059
+    },
+    {
+      "distance": 3,
+      "p": 0.005,
+      "shots": 20000,
+      "seed": 20264111,
+      "errors": 383,
+      "rate": 0.01915,
+      "wilson95_low": 0.017340869184467655,
+      "wilson95_high": 0.021143811890688157,
+      "log10_rate": -1.7178312216953584
+    },
+    {
+      "distance": 3,
+      "p": 0.006,
+      "shots": 20000,
+      "seed": 20264112,
+      "errors": 575,
+      "rate": 0.02875,
+      "wilson95_low": 0.0265230638174635,
+      "wilson95_high": 0.031157930165415106,
+      "log10_rate": -1.5413621509743507
+    },
+    {
+      "distance": 3,
+      "p": 0.007,
+      "shots": 20000,
+      "seed": 20264113,
+      "errors": 708,
+      "rate": 0.0354,
+      "wilson95_low": 0.032926919289797865,
+      "wilson95_high": 0.03805152061353456,
+      "log10_rate": -1.4509967379742121
+    },
+    {
+      "distance": 3,
+      "p": 0.008,
+      "shots": 20000,
+      "seed": 20264114,
+      "errors": 882,
+      "rate": 0.0441,
+      "wilson95_low": 0.041340975630812515,
+      "wilson95_high": 0.04703412284514369,
+      "log10_rate": -1.3555614105321614
+    },
+    {
+      "distance": 3,
+      "p": 0.009,
+      "shots": 20000,
+      "seed": 20264115,
+      "errors": 1117,
+      "rate": 0.05585,
+      "wilson95_low": 0.05275197922458176,
+      "wilson95_high": 0.05911860640405597,
+      "log10_rate": -1.2529768225483722
+    },
+    {
+      "distance": 3,
+      "p": 0.01,
+      "shots": 20000,
+      "seed": 20264116,
+      "errors": 1373,
+      "rate": 0.06865,
+      "wilson95_low": 0.06522782334028965,
+      "wilson95_high": 0.07223784616531181,
+      "log10_rate": -1.163359458427226
+    },
+    {
+      "distance": 5,
+      "p": 0.004,
+      "shots": 20000,
+      "seed": 20266110,
+      "errors": 163,
+      "rate": 0.00815,
+      "wilson95_low": 0.006994949153050663,
+      "wilson95_high": 0.009493956715339456,
+      "log10_rate": -2.0888423912600236
+    },
+    {
+      "distance": 5,
+      "p": 0.005,
+      "shots": 20000,
+      "seed": 20266111,
+      "errors": 317,
+      "rate": 0.01585,
+      "wilson95_low": 0.014209719536812656,
+      "wilson95_high": 0.017676228976313445,
+      "log10_rate": -1.7999707334462298
+    },
+    {
+      "distance": 5,
+      "p": 0.006,
+      "shots": 20000,
+      "seed": 20266112,
+      "errors": 520,
+      "rate": 0.026,
+      "wilson95_low": 0.02388389875712033,
+      "wilson95_high": 0.028298151424066848,
+      "log10_rate": -1.585026652029182
+    },
+    {
+      "distance": 5,
+      "p": 0.007,
+      "shots": 20000,
+      "seed": 20266113,
+      "errors": 790,
+      "rate": 0.0395,
+      "wilson95_low": 0.03688776226389894,
+      "wilson95_high": 0.04228910294377342,
+      "log10_rate": -1.4034029043735399
+    },
+    {
+      "distance": 5,
+      "p": 0.008,
+      "shots": 20000,
+      "seed": 20266114,
+      "errors": 1179,
+      "rate": 0.05895,
+      "wilson95_low": 0.055769677717666805,
+      "wilson95_high": 0.06229971728742309,
+      "log10_rate": -1.229516190568892
+    },
+    {
+      "distance": 5,
+      "p": 0.009,
+      "shots": 20000,
+      "seed": 20266115,
+      "errors": 1468,
+      "rate": 0.0734,
+      "wilson95_low": 0.06986701565977019,
+      "wilson95_high": 0.0770968295032983,
+      "log10_rate": -1.1343039400839294
+    },
+    {
+      "distance": 5,
+      "p": 0.01,
+      "shots": 20000,
+      "seed": 20266116,
+      "errors": 1852,
+      "rate": 0.0926,
+      "wilson95_low": 0.08866052513451218,
+      "wilson95_high": 0.09669594584400186,
+      "log10_rate": -1.0333890133180657
+    },
+    {
+      "distance": 7,
+      "p": 0.004,
+      "shots": 20000,
+      "seed": 20268110,
+      "errors": 98,
+      "rate": 0.0049,
+      "wilson95_low": 0.004022757384341803,
+      "wilson95_high": 0.005967396718412997,
+      "log10_rate": -2.309803919971486
+    },
+    {
+      "distance": 7,
+      "p": 0.005,
+      "shots": 20000,
+      "seed": 20268111,
+      "errors": 258,
+      "rate": 0.0129,
+      "wilson95_low": 0.011426997345725403,
+      "wilson95_high": 0.014560084180131725,
+      "log10_rate": -1.889410289700751
+    },
+    {
+      "distance": 7,
+      "p": 0.006,
+      "shots": 20000,
+      "seed": 20268112,
+      "errors": 451,
+      "rate": 0.02255,
+      "wilson95_low": 0.020582277779796012,
+      "wilson95_high": 0.024701097450178292,
+      "log10_rate": -1.6468534537860207
+    },
+    {
+      "distance": 7,
+      "p": 0.007,
+      "shots": 20000,
+      "seed": 20268113,
+      "errors": 843,
+      "rate": 0.04215,
+      "wilson95_low": 0.03945208904607184,
+      "wilson95_high": 0.04502375837050317,
+      "log10_rate": -1.3752024210392388
+    },
+    {
+      "distance": 7,
+      "p": 0.008,
+      "shots": 20000,
+      "seed": 20268114,
+      "errors": 1285,
+      "rate": 0.06425,
+      "wilson95_low": 0.06093477076047865,
+      "wilson95_high": 0.06773258866241652,
+      "log10_rate": -1.192126867996668
+    },
+    {
+      "distance": 7,
+      "p": 0.009,
+      "shots": 20000,
+      "seed": 20268115,
+      "errors": 1873,
+      "rate": 0.09365,
+      "wilson95_low": 0.08968995908828431,
+      "wilson95_high": 0.0977661086145119,
+      "log10_rate": -1.028492218288744
+    },
+    {
+      "distance": 7,
+      "p": 0.01,
+      "shots": 20000,
+      "seed": 20268116,
+      "errors": 2427,
+      "rate": 0.12135,
+      "wilson95_low": 0.11689712344989941,
+      "wilson95_high": 0.12594830545538863,
+      "log10_rate": -0.9159602193320464
+    },
+    {
+      "distance": 9,
+      "p": 0.004,
+      "shots": 20000,
+      "seed": 20270110,
+      "errors": 52,
+      "rate": 0.0026,
+      "wilson95_low": 0.001983395563263493,
+      "wilson95_high": 0.0034076419053493887,
+      "log10_rate": -2.5850266520291822
+    },
+    {
+      "distance": 9,
+      "p": 0.005,
+      "shots": 20000,
+      "seed": 20270111,
+      "errors": 183,
+      "rate": 0.00915,
+      "wilson95_low": 0.00792140894437842,
+      "wilson95_high": 0.010567112851899492,
+      "log10_rate": -2.0385789059335515
+    },
+    {
+      "distance": 9,
+      "p": 0.006,
+      "shots": 20000,
+      "seed": 20270112,
+      "errors": 440,
+      "rate": 0.022,
+      "wilson95_low": 0.02005702696295643,
+      "wilson95_high": 0.024126559506679586,
+      "log10_rate": -1.6575773191777938
+    },
+    {
+      "distance": 9,
+      "p": 0.007,
+      "shots": 20000,
+      "seed": 20270113,
+      "errors": 769,
+      "rate": 0.03845,
+      "wilson95_low": 0.03587260052086774,
+      "wilson95_high": 0.04120466796252244,
+      "log10_rate": -1.4151036558625503
+    },
+    {
+      "distance": 9,
+      "p": 0.008,
+      "shots": 20000,
+      "seed": 20270114,
+      "errors": 1412,
+      "rate": 0.0706,
+      "wilson95_low": 0.06713177465538077,
+      "wilson95_high": 0.07423314590960188,
+      "log10_rate": -1.1511952989481962
+    },
+    {
+      "distance": 9,
+      "p": 0.009,
+      "shots": 20000,
+      "seed": 20270115,
+      "errors": 2157,
+      "rate": 0.10785,
+      "wilson95_low": 0.10362611295971082,
+      "wilson95_high": 0.11222450091909204,
+      "log10_rate": -0.9671798505614362
+    },
+    {
+      "distance": 9,
+      "p": 0.01,
+      "shots": 20000,
+      "seed": 20270116,
+      "errors": 3054,
+      "rate": 0.1527,
+      "wilson95_low": 0.14778165716530317,
+      "wilson95_high": 0.1577517310792671,
+      "log10_rate": -0.8161609629435788
+    }
+  ],
+  "zero_rate_points": [],
+  "crossing_summary": {
+    "crossings": [
+      {
+        "pair": [
+          3,
+          5
+        ],
+        "p": 0.006478471377103944
+      },
+      {
+        "pair": [
+          3,
+          7
+        ],
+        "p": 0.00658190662314584
+      },
+      {
+        "pair": [
+          3,
+          9
+        ],
+        "p": 0.006764029353849602
+      },
+      {
+        "pair": [
+          5,
+          7
+        ],
+        "p": 0.00668675626166276
+      },
+      {
+        "pair": [
+          5,
+          9
+        ],
+        "p": 0.007129977093116942
+      },
+      {
+        "pair": [
+          7,
+          9
+        ],
+        "p": 0.00749362675686226
+      }
+    ],
+    "skipped_pairs": [],
+    "median": 0.0067253928077561816,
+    "minimum": 0.006478471377103944,
+    "maximum": 0.00749362675686226
+  },
+  "evidence_boundary": "These are real results only for the frozen circuit-level protocol. The crossing estimate is exploratory and is not an FSS fit or a reproduction of the manuscript's missing original simulation."
+}
