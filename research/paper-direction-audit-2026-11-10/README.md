@@ -20,6 +20,14 @@
 - 外部前沿首轮使用 12 项查询，覆盖 Majorana 2、Google below-threshold、Fibonacci、qLDPC、实时解码、AM–SC、非绝热几何门、Stim／PyMatching、cultivation、离子阱与量子网络标准。
 - 两套现有验证脚本已真实运行，命令、退出码和证据边界见 `VALIDATION_LOG.md`。
 
+## 已完成的第二阶段：真实表面码基准
+
+- `surface-code-threshold/protocol.json` 冻结电路、噪声、码距、概率、shots、种子、解码器和交叉估计规则。
+- 28 个网格点、560,000 个真实 Stim shots 已完成；PyMatching 逐 shot 解码，无公式生成替代值。
+- 成对交叉中位数为 0.006725，范围 0.006478–0.007494；这是本协议下的探索性结果，不是原稿 1.03% 的直接复现或否证。
+- `SURFACE_CODE_BENCHMARK.md` 与原生 `SURFACE_CODE_BENCHMARK.docx` 已交付，Word 含真实阈值图、目录、页眉、原生页码和完整结果表。
+- 独立复验、13 项专项测试、发布审计和 6 页视觉预览均已通过；主系列 `PROVIDER_REVIEW` 已同步回写。
+
 ## 重建与核验
 
 ```bash

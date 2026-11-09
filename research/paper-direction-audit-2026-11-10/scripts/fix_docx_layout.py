@@ -47,7 +47,9 @@ margins.set(qn("gutter"), "0")
 available = int(page.get(qn("w"))) - int(margins.get(qn("left"))) - int(margins.get(qn("right")))
 for table in tree.xpath("//w:tbl", namespaces=NS):
     first_cells = table.xpath("./w:tr[1]/w:tc", namespaces=NS)
-    if len(first_cells) == 5:
+    if len(first_cells) == 6:
+        widths = [650, 750, 750, 800, 1000, available - 3950]
+    elif len(first_cells) == 5:
         widths = [1500, 1900, 1900, 3000, available - 8300]
     elif len(first_cells) == 2:
         widths = [1800, available - 1800]

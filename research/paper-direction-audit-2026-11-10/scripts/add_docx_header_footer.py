@@ -11,12 +11,13 @@ from docx.oxml.ns import qn
 from docx.shared import Pt, RGBColor
 
 root = Path(sys.argv[1]).resolve()
+report_title = sys.argv[2] if len(sys.argv) > 2 else "论文方向与未竟工作初审 · 2026-11-10"
 with opc.edit_docx(root) as doc:
     for section in doc.sections:
         section.header.is_linked_to_previous = False
         paragraph = section.header.paragraphs[0]
         paragraph.style = doc.styles["Normal"]
-        paragraph.text = "论文方向与未竟工作初审 · 2026-11-10"
+        paragraph.text = report_title
         paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
         for run in paragraph.runs:
             run.font.name = "Times New Roman"

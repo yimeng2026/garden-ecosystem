@@ -63,3 +63,39 @@ python <kimi-word>/scripts/docx.py render PROVIDER_REVIEW.docx <qa-dir>
 ```
 
 实际渲染 **11 页**，`near-blank pages: none`。已查看联系表，逐篇表格、页眉和原生页码存在；预览引擎仅报告编号级别覆盖的低风险兼容提示，未报告正文内容丢失。
+
+## 真实表面码阈值基准
+
+执行：
+
+```bash
+PYTHONPATH=research/paper-direction-audit-2026-11-10/scripts .tools/qec-venv/Scripts/python research/paper-direction-audit-2026-11-10/scripts/run_surface_code_threshold.py
+PYTHONPATH=research/paper-direction-audit-2026-11-10/scripts .tools/qec-venv/Scripts/python research/paper-direction-audit-2026-11-10/scripts/verify_surface_code_threshold.py
+PYTHONPATH=research/paper-direction-audit-2026-11-10/scripts .tools/qec-venv/Scripts/python research/paper-direction-audit-2026-11-10/scripts/plot_surface_code_threshold.py
+```
+
+三条命令实际退出码均为 **0**。28 个点共 **560,000 shots** 全部来自真实 Stim 采样和 PyMatching MWPM 解码。成对交叉中位数为 **0.0067253928077561816**，最小值 **0.006478471377103944**，最大值 **0.00749362675686226**；六个交叉均成功，没有跳过码距对。
+
+独立复验结果：
+
+```json
+{"point_count": 28, "mismatches": [], "csv_mismatches": [], "status": "pass"}
+```
+
+专项测试命令：
+
+```bash
+PYTHONPATH=research/paper-direction-audit-2026-11-10/scripts .tools/qec-venv/Scripts/python -m unittest discover -s research/paper-direction-audit-2026-11-10/tests -p "test_surface_code_*.py" -v
+```
+
+实际结果：**13 项测试全部通过**。覆盖 Wilson 边界、合成曲线交叉、协议拒绝规则、零噪声、同种子复现、真实小电路、篡改检测和 SVG 标签。
+
+最终 Word 验证：
+
+```bash
+python <kimi-word>/scripts/docx.py validate SURFACE_CODE_BENCHMARK.docx
+```
+
+实际退出码：**0**，`PASSED (17 parts XSD + semantic checks; gen: 6 checks clean)`。包内确认存在 `word/media/rId20.png`，不是图片说明文字。视觉预览为 **6 页**，`near-blank pages: none`，已查看嵌入曲线、28 点表格和六个交叉结果。首次转换曾因资源路径未嵌入图片，已用显式 `--resource-path` 重新生成并通过上述最终验收；中间版本不作为交付。
+
+科学边界：该结果只适用于冻结的电路级协议。交叉范围不是 FSS 置信区间，也不是对原稿 1.03% 的直接否证。原稿仍需提供其原始 shots、DEM、种子与拟合协议。
