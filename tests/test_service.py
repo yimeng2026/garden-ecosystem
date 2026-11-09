@@ -7,6 +7,8 @@ import unittest
 
 from garden_ecosystem.receipts import UnavailableExternalTool
 from garden_ecosystem.service import Service
+from garden_ecosystem.proof import ProofReport
+from garden_ecosystem.receipts import VerificationLevel, VerificationReceipt
 
 
 class ServiceTests(unittest.TestCase):
@@ -22,6 +24,7 @@ class ServiceTests(unittest.TestCase):
         capabilities = self.service.handle({"id": "c", "action": "capabilities", "params": {}})
         self.assertIn("lean", capabilities["result"]["modules"])
         self.assertIn("service", capabilities["result"]["modules"])
+        self.assertIn("proof", capabilities["result"]["modules"])
         health = self.service.handle({"id": "h", "action": "health", "params": {}})
         self.assertEqual(health["result"]["tools"]["lean"]["status"], "unavailable")
 
@@ -29,6 +32,28 @@ class ServiceTests(unittest.TestCase):
         response = self.service.handle_safely({"id": "r", "action": "lean_receipt", "params": {}})
         self.assertFalse(response["ok"])
         self.assertEqual(response["error"]["type"], "ExternalToolUnavailable")
+
+    def test_lean_check_returns_structured_proof_report(self):
+        receipt = VerificationReceipt(VerificationLevel.MACHINE_CHECKED,
+                                      "lean", "4.35.0", "evidence", mock=True)
+        expected = ProofReport(True, receipt, "one_add_one_eq_two", "Smoke.lean",
+                               False, (), "", "", "source-hash")
+        class FakeProof:
+            def execute(self, action):
+                self.action = action
+                return expected
+        fake = FakeProof()
+        response = Service(proof=fake).handle({"id": "proof", "action": "lean_check",
+            "params": {"path": "Smoke.lean", "declaration": "one_add_one_eq_two"}})
+        self.assertTrue(response["ok"])
+        self.assertEqual(response["result"]["receipt"]["level"], "machine_checked")
+        self.assertEqual(fake.action["operation"], "check_file")
+
+    def test_lean_check_rejects_extra_params(self):
+        response = self.service.handle_safely({"id": "bad-proof", "action": "lean_check",
+            "params": {"path": "Smoke.lean", "declaration": "one_add_one_eq_two", "command": "lake"}})
+        self.assertFalse(response["ok"])
+        self.assertEqual(response["error"]["type"], "ValueError")
 
     def test_unknown_action_and_bad_params_are_rejected(self):
         unknown = self.service.handle_safely({"id": "bad", "action": "shell", "params": {}})
