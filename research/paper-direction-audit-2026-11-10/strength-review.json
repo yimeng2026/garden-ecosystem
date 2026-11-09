@@ -232,7 +232,7 @@
       "evidence": "papers/数学基础强化_系列/21_代数K理论_从向量丛到普适不变量.md",
       "source_line_1": "# 代数 K 理论：从向量丛到普适不变量",
       "resolution_2026_11_10": {
-        "status": "K1_verified_K2_zero_extension_stable_similarity_open",
+        "status": "K1_verified_K2_general_zero_extension_stable_similarity_open",
         "theorem": "SylvaK0Probe.universal_property",
         "upstream": "Algebra.GrothendieckAddGroup.lift（mathlib 已有同态等价）",
         "compile_exit_code": 0,
@@ -323,6 +323,26 @@
           "word_qa": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2-zero-extension-word-qa-final\\report.json",
           "word_pages": 4,
           "scope": "具体幂等矩阵的分块零扩展及幂等保持；一般稳定相似、投射模同构类、K0(R)、K3、K4 未完成。"
+        },
+        "k2_general_zero_extension": {
+          "theorems": [
+            "zeroExtend_idempotent",
+            "zeroExtend_pow_three"
+          ],
+          "compile_exit_code": 0,
+          "checks": "11/11",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "proof": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2_general_zero_extension_probe_20261110.lean",
+          "log": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2_general_zero_extension_compile_log_20261110.txt",
+          "report": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K2_GENERAL_ZERO_EXTENSION.md",
+          "native_word": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K2_GENERAL_ZERO_EXTENSION.docx",
+          "word_qa": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2-general-zero-extension-word-qa\\report.json",
+          "word_pages": 4,
+          "scope": "任意环与有限 m、n 上的分块零扩展及幂等保持；稳定相似、投射模同构类、K0(R)、K3、K4 未完成。"
         }
       }
     },

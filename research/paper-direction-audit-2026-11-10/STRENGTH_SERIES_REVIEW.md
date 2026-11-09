@@ -161,3 +161,10 @@ $$\psi_{\mathrm{toy}}''(\mu)=1 \quad\Longrightarrow\quad \frac{1}{\psi_{\mathrm{
 - `python verify_k2_zero_extension_20261110.py` 实际退出码 0，11/11 检查通过；零扩展幂等与三次幂保持均只依赖 Lean 标准三公理。
 - 原生 Word 共 4 页并逐页检查，无空白页或裁切；低风险 `w:lvlOverride` 仅为目录编号兼容提示。
 - 当前只完成具体矩阵的零扩展接口；一般零扩展、稳定相似、投射模同构类和 K0(R) 仍未完成。
+
+## K2 通用分块零扩展复核补记（2026-11-10）
+
+- [通用零扩展验证报告](kimi-cite://text?path=C%3A%5CUsers%5C%E4%B8%80%E6%A2%A6%5CDocuments%5Ckimi%5Cworkspace%5C.worktrees%5Ctoe-k0-universal%5Cpapers%5C%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96_%E7%B3%BB%E5%88%97%5C_panel_records%5CK2_GENERAL_ZERO_EXTENSION.md&text=K2%20%E9%80%9A%E7%94%A8%E9%9B%B6%E6%89%A9%E5%B1%95%EF%BC%9A%E4%BB%BB%E6%84%8F%E6%9C%89%E9%99%90%E5%B9%82%E7%AD%89%E5%9D%97%E8%A1%A5%E9%9B%B6%E5%90%8E%E4%BB%8D%E5%B9%82%E7%AD%89 "citation")及[原生 Word](C:\Users\一梦\Documents\kimi\workspace\.worktrees\toe-k0-universal\papers\数学基础强化_系列\_panel_records\K2_GENERAL_ZERO_EXTENSION.docx)。
+- `python verify_k2_general_zero_extension_20261110.py` 实际退出码 0，11/11 检查通过；任意环与有限 m、n 上的零扩展幂等和三次幂保持均只依赖 Lean 标准三公理。
+- 原生 Word 共 4 页并逐页检查，无空白页或裁切；低风险 `w:lvlOverride` 仅为目录编号兼容提示。
+- 通用零扩展不等于稳定相似；重索引、稳定相似、投射模同构类和 K0(R) 仍未完成。
