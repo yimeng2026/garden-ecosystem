@@ -85,6 +85,8 @@ cd backend
 
 本次还修复了现有 `scripts/dev-all.mjs` 的 Windows 启动问题：带空格的 `.exe` 路径不再交给 `shell:true`，只有 `npm.cmd` 保留 Windows 所需处理方式。该修改通过真实 `npm run dev` 验证。
 
+Lean 核验在 Windows 中文环境下显式按 UTF-8 解码子进程输出，并以 `newline="\n"` 禁止临时包装文件重复转换 CRLF；两项真实字节流与换行回归测试覆盖该路径。
+
 ## 6. 验证命令与已观察结果
 
 适配项目：
@@ -106,7 +108,7 @@ python scripts/validate_bridge_preview.py
 
 已观察：
 
-- Python **111 项测试通过**，stdio 实际往返成功。
+- Python **113 项测试通过**，stdio 实际往返成功；Windows UTF-8 与 CRLF 两项回归测试均先复现失败、修复后通过。
 - TypeScript **11 项测试通过**，类型检查通过。
 - 真实 TypeScript→Python 调用返回 12 个模块名。
 - 官方 Lean **4.35.0** 已安装到被忽略的 `.tools` 目录，下载的 SHA-256 与官方发布值一致；真实 `LeanAdapter().health()` 返回 `available`，`lean_receipt` 返回 `EXECUTED`、`mock: false`、`attested: true`。

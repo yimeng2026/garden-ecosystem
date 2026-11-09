@@ -25,6 +25,7 @@ class FakeRunner:
         if command[1:] == ["--version"]:
             return SimpleNamespace(returncode=0, stdout="Lean (version 4.35.0, x86_64)", stderr="")
         self.wrapper = Path(command[-1])
+        self.wrapper_bytes = self.wrapper.read_bytes()
         self.wrapper_text = self.wrapper.read_text(encoding="utf-8")
         return SimpleNamespace(returncode=self.returncode, stdout=self.stdout, stderr=self.stderr)
 
@@ -63,6 +64,17 @@ class ProofTests(unittest.TestCase):
             "operation": "check_file", "path": "Smoke.lean", "declaration": "one_add_one_eq_two",
         })
         self.assertFalse(runner.wrapper.parent.exists())
+
+    def test_crlf_source_is_not_double_translated_in_wrapper(self):
+        source = THEOREM.replace("\n", "\r\n")
+        (self.workspace / "Crlf.lean").write_bytes(source.encode("utf-8"))
+        runner = FakeRunner()
+        self.adapter(runner).execute({
+            "operation": "check_file", "path": "Crlf.lean", "declaration": "one_add_one_eq_two",
+        })
+        self.assertNotIn(b"\r\r\n", runner.wrapper_bytes)
+        self.assertEqual(runner.wrapper_bytes,
+                         source.encode("utf-8") + b"\n#print axioms one_add_one_eq_two\n")
 
     def test_comments_and_strings_do_not_trigger_directives(self):
         (self.workspace / "Commented.lean").write_text(
