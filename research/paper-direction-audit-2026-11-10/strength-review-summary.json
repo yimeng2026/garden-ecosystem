@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "reviewed": 55,
+  "series": {
+    "math": 25,
+    "module": 30
+  },
+  "priorities": {
+    "math": {
+      "P0": 4,
+      "P1": 18,
+      "P2": 3
+    },
+    "module": {
+      "P0": 24,
+      "P1": 6
+    }
+  },
+  "unique_ids": 55,
+  "evidence_files_exist": true,
+  "external_novelty_certified": false,
+  "machine_proofs_certified_by_this_review": false
+}

@@ -1,5 +1,6 @@
-"""Add a restrained header and a native PAGE field to an unpacked report."""
+"""Add a restrained header and a native PAGE field to a DOCX or unpacked report."""
 from pathlib import Path
+from contextlib import nullcontext
 import sys
 
 VERIFY = r"C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\verify"
@@ -12,7 +13,7 @@ from docx.shared import Pt, RGBColor
 
 root = Path(sys.argv[1]).resolve()
 report_title = sys.argv[2] if len(sys.argv) > 2 else "论文方向与未竟工作初审 · 2026-11-10"
-with opc.edit_docx(root) as doc:
+with (opc.edit_docx(root) if root.is_dir() else nullcontext(__import__("docx").Document(str(root)))) as doc:
     for section in doc.sections:
         section.header.is_linked_to_previous = False
         paragraph = section.header.paragraphs[0]
@@ -54,4 +55,6 @@ with opc.edit_docx(root) as doc:
             run.font.size = Pt(8.5)
             run.font.color.rgb = RGBColor(0x55, 0x71, 0x80)
             run._element.get_or_add_rPr().get_or_add_rFonts().set(qn("w:eastAsia"), "SimSun")
+if root.is_file():
+    doc.save(str(root))
 print("header and native PAGE field added")

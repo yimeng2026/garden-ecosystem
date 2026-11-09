@@ -25,6 +25,14 @@ for name in ("document.xml", "styles.xml"):
         if fonts.get(qn("eastAsia")) is None and (fonts.get(qn("ascii")) or fonts.get(qn("hAnsi"))):
             fonts.set(qn("eastAsia"), "SimSun")
             changed += 1
+    if name == "styles.xml":
+        # 避免 doc-k 对 Consolas 与 CJK 混排行内代码的字宽计算重叠。
+        # 独立代码块仍保留 Consolas；仅行内代码继承正文字体。
+        for fonts in tree.xpath("//w:style[@w:styleId='VerbatimChar']/w:rPr/w:rFonts", namespaces=NS):
+            fonts.set(qn("ascii"), "Times New Roman")
+            fonts.set(qn("hAnsi"), "Times New Roman")
+            fonts.set(qn("eastAsia"), "SimSun")
+            changed += 1
     if changed:
         save(tree, path)
     print(f"{name}: eastAsia additions={changed}")
@@ -48,7 +56,9 @@ margins.set(qn("gutter"), "0")
 available = int(page.get(qn("w"))) - int(margins.get(qn("left"))) - int(margins.get(qn("right")))
 for table in tree.xpath("//w:tbl", namespaces=NS):
     first_cells = table.xpath("./w:tr[1]/w:tc", namespaces=NS)
-    if len(first_cells) == 6:
+    if len(first_cells) == 6 and LAYOUT == "strength":
+        widths = [420, 1350, 1250, 1700, 3506, available - 8226]
+    elif len(first_cells) == 6:
         widths = [650, 750, 750, 800, 1000, available - 3950]
     elif len(first_cells) == 5 and LAYOUT == "core-open":
         widths = [500, 1500, 1400, 2500, available - 5900]

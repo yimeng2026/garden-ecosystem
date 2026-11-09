@@ -1,0 +1,116 @@
+{
+  "status": "pass",
+  "scope": "55条总账完整性、DOCX资产与渲染证据；不是数学证明或外部新颖性认证。",
+  "checks": [
+    {
+      "label": "唯一论文ID",
+      "pass": true,
+      "expected": 55,
+      "actual": 55
+    },
+    {
+      "label": "数学基础篇数",
+      "pass": true,
+      "expected": 25,
+      "actual": 25
+    },
+    {
+      "label": "模块强化篇数",
+      "pass": true,
+      "expected": 30,
+      "actual": 30
+    },
+    {
+      "label": "全部六字段非空",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "label": "渲染页数等于总页数",
+      "pass": true,
+      "expected": 16,
+      "actual": 16
+    },
+    {
+      "label": "渲染页数非零",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "label": "空白页",
+      "pass": true,
+      "expected": [],
+      "actual": []
+    },
+    {
+      "label": "裁切页",
+      "pass": true,
+      "expected": [],
+      "actual": []
+    },
+    {
+      "label": "内容丢失仅为低风险目录编号",
+      "pass": true,
+      "expected": [
+        [
+          "w:lvlOverride",
+          "low"
+        ]
+      ],
+      "actual": [
+        [
+          "w:lvlOverride",
+          "low"
+        ]
+      ]
+    },
+    {
+      "label": "DOCX内嵌PNG数",
+      "pass": true,
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "label": "内嵌图与状态图源一致",
+      "pass": true,
+      "expected": "334c9ddbe6840bfdb55f472bb57060ef5c6a5c986e926939a7bf5ae2413ae63b",
+      "actual": "334c9ddbe6840bfdb55f472bb57060ef5c6a5c986e926939a7bf5ae2413ae63b"
+    },
+    {
+      "label": "两张逐篇裁决表",
+      "pass": true,
+      "expected": 2,
+      "actual": 2
+    },
+    {
+      "label": "原生目录域",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "label": "原生Word公式",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "label": "中文页眉",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "label": "原生PAGE页码",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    }
+  ],
+  "passed": 16,
+  "total": 16,
+  "manual_visual_review": "contact-sheet全部16页已查看，并抽查重点图表页；无空白页、裁切或逐字竖排。",
+  "ooxml_gate_observed": "docx.py validate：PASSED（17 parts XSD + semantic checks; gen: 6 checks clean）"
+}
