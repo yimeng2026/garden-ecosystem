@@ -148,3 +148,9 @@ $$\psi_{\mathrm{toy}}''(\mu)=1 \quad\Longrightarrow\quad \frac{1}{\psi_{\mathrm{
 - [K2 表示验证报告](kimi-cite://text?path=C%3A%5CUsers%5C%E4%B8%80%E6%A2%A6%5CDocuments%5Ckimi%5Cworkspace%5C.worktrees%5Ctoe-k0-universal%5Cpapers%5C%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96_%E7%B3%BB%E5%88%97%5C_panel_records%5CK2_IDEMPOTENT_REPRESENTATION.md&text=K2%20%E8%B5%B7%E7%82%B9%EF%BC%9A%E9%9D%9E%E5%B9%B3%E5%87%A1%E5%B9%82%E7%AD%89%E7%9F%A9%E9%98%B5%E8%A1%A8%E7%A4%BA%E9%AA%8C%E8%AF%81 "citation")及[原生 Word](C:\Users\一梦\Documents\kimi\workspace\.worktrees\toe-k0-universal\papers\数学基础强化_系列\_panel_records\K2_IDEMPOTENT_REPRESENTATION.docx)。
 - 五条 `#print axioms` 均仅 Lean 标准三项；14/14 检查通过，编译退出码 0。
 - 本次只验证非平凡幂等矩阵，不宣称投射模同构类、稳定相似或 K0(R) 已完成。K2–K4 的未竟工作不变。
+
+## K2 普通相似核复核补记（2026-11-10）
+
+- [相似核验证报告](kimi-cite://text?path=C%3A%5CUsers%5C%E4%B8%80%E6%A2%A6%5CDocuments%5Ckimi%5Cworkspace%5C.worktrees%5Ctoe-k0-universal%5Cpapers%5C%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96_%E7%B3%BB%E5%88%97%5C_panel_records%5CK2_SIMILARITY_CORE.md&text=K2%20%E7%9B%B8%E4%BC%BC%E6%A0%B8%EF%BC%9A%E6%99%AE%E9%80%9A%E7%9B%B8%E4%BC%BC%E7%9A%84%E7%AD%89%E4%BB%B7%E5%85%B3%E7%B3%BB%E4%B8%8E%E5%B9%82%E7%AD%89%E4%BF%9D%E6%8C%81 "citation")及[原生 Word](C:\Users\一梦\Documents\kimi\workspace\.worktrees\toe-k0-universal\papers\数学基础强化_系列\_panel_records\K2_SIMILARITY_CORE.docx)。
+- 普通相似的自反、对称、传递与幂等保持真实编译通过，12/12 检查通过。
+- 共轭传递按 `v*u` 顺序展开；普通相似不等于稳定相似，零扩展、投射模同构类和 K0(R) 仍未完成。

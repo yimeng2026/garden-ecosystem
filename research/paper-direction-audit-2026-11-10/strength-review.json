@@ -232,7 +232,7 @@
       "evidence": "papers/数学基础强化_系列/21_代数K理论_从向量丛到普适不变量.md",
       "source_line_1": "# 代数 K 理论：从向量丛到普适不变量",
       "resolution_2026_11_10": {
-        "status": "K1_verified_K2_representation_example_K2_to_K4_open",
+        "status": "K1_verified_K2_similarity_core_stable_similarity_open",
         "theorem": "SylvaK0Probe.universal_property",
         "upstream": "Algebra.GrothendieckAddGroup.lift（mathlib 已有同态等价）",
         "compile_exit_code": 0,
@@ -283,6 +283,26 @@
           "report": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K2_IDEMPOTENT_REPRESENTATION.md",
           "native_word": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K2_IDEMPOTENT_REPRESENTATION.docx",
           "scope": "非平凡幂等矩阵表示例；投射模同构类、稳定相似、K0(R)、K3、K4 未完成。"
+        },
+        "k2_similarity_core": {
+          "theorems": [
+            "similar_refl",
+            "similar_symm",
+            "similar_trans",
+            "similar_idempotent"
+          ],
+          "compile_exit_code": 0,
+          "checks": "12/12",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "proof": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2_similarity_probe_20261110.lean",
+          "log": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2_similarity_compile_log_20261110.txt",
+          "report": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K2_SIMILARITY_CORE.md",
+          "native_word": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K2_SIMILARITY_CORE.docx",
+          "scope": "同维普通相似及幂等保持；零扩展稳定相似、投射模同构类、K0(R)、K3、K4 未完成。"
         }
       }
     },

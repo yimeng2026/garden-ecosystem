@@ -50,5 +50,15 @@
     "theorems_audited": 5,
     "general_k0_completed": false,
     "original_role_novelty_unfinished_priority_preserved": true
+  },
+  "k2_similarity_core": {
+    "paper_id": "toe-sylva:papers/数学基础强化_系列/21_代数K理论_从向量丛到普适不变量.md",
+    "status": "pass",
+    "compile_exit_code": 0,
+    "checks": "12/12",
+    "theorems_audited": 4,
+    "stable_similarity_completed": false,
+    "general_k0_completed": false,
+    "original_role_novelty_unfinished_priority_preserved": true
   }
 }
