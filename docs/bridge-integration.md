@@ -33,7 +33,7 @@ Content-Type: application/json
 
 该令牌不会出现在桥接模块的白名单环境中，因此不会转发给 Python 子进程。验收脚本只在内存中生成临时测试令牌，不落盘，也不绕过代理。
 
-## 3. 四个动作
+## 3. 五个动作
 
 请求体最多 16 KiB：
 
@@ -47,6 +47,9 @@ Content-Type: application/json
 | `health` | 返回整体健康与 Lean 状态 | 不读取模型密钥 |
 | `lean_health` | 真实执行 `lean --version` 探测 | 文件缺失为 unavailable，异常为 degraded |
 | `lean_receipt` | Lean 可用时生成版本执行回执 | 仅为 EXECUTED，不是 machine_checked |
+| `lean_check` | 编译白名单内的自包含 `.lean` 文件并检查公理输出 | 满足证据条件为 machine_checked，否则为 executed 或输入拒绝 |
+
+`lean_check` 仅接受 `path` 与 `declaration` 两个参数。文件必须在工作区内，禁止导入、宏、求值指令和危险声明；临时包装自动清理，不能把它用于任意 Lean 项目或宏执行。
 
 stdio 内部格式带请求 ID：
 
@@ -103,15 +106,15 @@ python scripts/validate_bridge_preview.py
 
 已观察：
 
-- Python **98 项测试通过**，stdio 实际往返成功。
-- TypeScript **10 项测试通过**，类型检查通过。
-- 真实 TypeScript→Python 调用返回 11 个模块名。
+- Python **111 项测试通过**，stdio 实际往返成功。
+- TypeScript **11 项测试通过**，类型检查通过。
+- 真实 TypeScript→Python 调用返回 12 个模块名。
 - 官方 Lean **4.35.0** 已安装到被忽略的 `.tools` 目录，下载的 SHA-256 与官方发布值一致；真实 `LeanAdapter().health()` 返回 `available`，`lean_receipt` 返回 `EXECUTED`、`mock: false`、`attested: true`。
-- 独立最小示例 `theorem one_add_one_eq_two : 1 + 1 = 2 := by rfl` 已由该工具链编译通过。此结果只验证本地工具链，不开放适配器的编译接口，也不构成项目级形式化验证。
-- 真实 HTTP `capabilities` 成功，未知 `shell` 返回 400；真实 Vercel 预览部署在加入 `vercel.json` 的 `framework: "nextjs"` 后成功。
+- 独立最小示例 `theorem one_add_one_eq_two : 1 + 1 = 2 := by rfl` 已由该工具链编译通过；真实 `lean_check` 返回 `MACHINE_CHECKED`、`depends_on_axioms: false`、`mock: false`、`attested: true`，临时包装目录已清理。
+- 真实 HTTP `capabilities` 成功，`lean_check` 返回 `machine_checked`，未知 `shell` 返回 400；真实 Vercel 预览部署在加入 `vercel.json` 的 `framework: "nextjs"` 后成功。
 - 验收脚本返回 `server_stopped: true`，Next、npm 与 Python 联调进程均未保留。
 - Next 构建通过，但有一条 `unexpected file in NFT list` 警告。它提示动态外部运行目录可能导致过宽跟踪；不把该警告称为已消除，也不据此声称部署包已经优化。
 
 ## 7. 当前未覆盖
 
-没有项目级 Lean 形式化验证、模型推理、OpenFOAM、沙箱或模型权重验证。Lean 可用时也只允许版本操作；独立最小编译示例仅用于本机环境验收。后续如需编译，必须另设文件白名单、工作区、工具链版本、公理与 `sorry` 审计、资源预算和独立回执，不能把当前健康接口直接扩展成任意执行器。
+没有项目级 Lean 形式化验证、模型推理、OpenFOAM、完整操作系统沙箱或模型权重验证。当前接口只支持白名单内自包含 Lean 源码，不支持任意导入、宏或任意文件。静态白名单、输出限制和超时不能等同于完整操作系统隔离。后续扩大语言范围前，必须补充隔离执行、资源测量、工具链版本、公理与 `sorry` 审计和独立回执，不能把普通 subprocess 直接描述为安全沙箱。
