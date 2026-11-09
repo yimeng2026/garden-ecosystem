@@ -88,7 +88,7 @@ PYTHONPATH=research/paper-direction-audit-2026-11-10/scripts .tools/qec-venv/Scr
 PYTHONPATH=research/paper-direction-audit-2026-11-10/scripts .tools/qec-venv/Scripts/python -m unittest discover -s research/paper-direction-audit-2026-11-10/tests -p "test_surface_code_*.py" -v
 ```
 
-实际结果：**13 项测试全部通过**。覆盖 Wilson 边界、合成曲线交叉、协议拒绝规则、零噪声、同种子复现、真实小电路、篡改检测和 SVG 标签。
+实际结果：**14 项测试全部通过**。覆盖 Wilson 边界、合成曲线交叉、协议拒绝规则、零噪声、同种子复现、真实小电路、篡改检测、规范化 JSON 哈希和 SVG 标签。
 
 最终 Word 验证：
 
@@ -97,5 +97,7 @@ python <kimi-word>/scripts/docx.py validate SURFACE_CODE_BENCHMARK.docx
 ```
 
 实际退出码：**0**，`PASSED (17 parts XSD + semantic checks; gen: 6 checks clean)`。包内确认存在 `word/media/rId20.png`，不是图片说明文字。视觉预览为 **6 页**，`near-blank pages: none`，已查看嵌入曲线、28 点表格和六个交叉结果。首次转换曾因资源路径未嵌入图片，已用显式 `--resource-path` 重新生成并通过上述最终验收；中间版本不作为交付。
+
+跨 worktree 复验曾发现 Git 的 Windows 换行转换导致原始协议字节哈希不同。随后新增 `protocol_digest`，以排序且压缩的 JSON 语义内容计算 SHA-256。LF 与 CRLF 测试先失败后通过，完整重跑的 28 个科学数据点与修复前逐项相同。最终规范化协议 SHA-256 为 `51603b03a4eb108842f8f84ec2d07d2d9e2b4d29aebfcf83df57781cd2612feb`，Word 中的协议标识也已局部更新并重新通过 17 部件验证。
 
 科学边界：该结果只适用于冻结的电路级协议。交叉范围不是 FSS 置信区间，也不是对原稿 1.03% 的直接否证。原稿仍需提供其原始 shots、DEM、种子与拟合协议。

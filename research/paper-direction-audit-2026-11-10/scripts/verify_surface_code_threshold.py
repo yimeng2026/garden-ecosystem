@@ -2,12 +2,11 @@
 from __future__ import annotations
 
 import csv
-import hashlib
 import json
 import math
 from pathlib import Path
 
-from surface_code_stats import estimate_crossings, wilson_interval
+from surface_code_stats import estimate_crossings, protocol_digest, wilson_interval
 
 AUDIT_DIR = Path(__file__).resolve().parents[1]
 RESULTS = AUDIT_DIR / "surface-code-threshold" / "results.json"
@@ -60,7 +59,7 @@ def verify_csv(path: Path, points: list[dict]) -> list[str]:
 
 def main() -> int:
     payload = json.loads(RESULTS.read_text(encoding="utf-8"))
-    protocol_sha256 = hashlib.sha256(PROTOCOL.read_bytes()).hexdigest()
+    protocol_sha256 = protocol_digest(PROTOCOL.read_bytes())
     report = verify_payload(payload, protocol_sha256)
     report["csv_mismatches"] = verify_csv(CSV_RESULTS, payload["points"])
     report["status"] = "pass" if not report["mismatches"] and not report["csv_mismatches"] else "fail"

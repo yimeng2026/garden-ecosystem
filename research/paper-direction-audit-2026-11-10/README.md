@@ -26,7 +26,7 @@
 - 28 个网格点、560,000 个真实 Stim shots 已完成；PyMatching 逐 shot 解码，无公式生成替代值。
 - 成对交叉中位数为 0.006725，范围 0.006478–0.007494；这是本协议下的探索性结果，不是原稿 1.03% 的直接复现或否证。
 - `SURFACE_CODE_BENCHMARK.md` 与原生 `SURFACE_CODE_BENCHMARK.docx` 已交付，Word 含真实阈值图、目录、页眉、原生页码和完整结果表。
-- 独立复验、13 项专项测试、发布审计和 6 页视觉预览均已通过；主系列 `PROVIDER_REVIEW` 已同步回写。
+- 独立复验、14 项专项测试、发布审计和 6 页视觉预览均已通过；主系列 `PROVIDER_REVIEW` 已同步回写。协议哈希使用规范化 JSON 内容，避免 Windows 换行转换造成跨 worktree 假失配。
 
 ## 重建与核验
 
