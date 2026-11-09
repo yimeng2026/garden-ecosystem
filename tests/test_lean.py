@@ -26,8 +26,8 @@ class LeanTests(unittest.TestCase):
             receipt = adapter.execute({"operation": "health"})
         self.assertEqual(commands, [["lean", "--version"], ["lean", "--version"]])
         self.assertEqual(receipt.level, VerificationLevel.EXECUTED)
-        self.assertTrue(receipt.attested)
-        self.assertFalse(receipt.mock)
+        self.assertFalse(receipt.attested)
+        self.assertTrue(receipt.mock)
         self.assertEqual(receipt.version, "4.31.0")
 
     def test_nonzero_and_empty_output_are_degraded(self):

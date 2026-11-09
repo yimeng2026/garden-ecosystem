@@ -32,7 +32,7 @@ class LeanAdapter:
     name = "lean"
 
     def __init__(self, executable: str | None = None, runner: Runner | None = None,
-                 timeout: float = 3.0):
+                 timeout: float = 3.0, resolver=None):
         self.executable = executable or os.environ.get("LEAN_EXECUTABLE", "lean")
         if not self.executable:
             raise ValueError("a Lean executable is required")
@@ -41,9 +41,12 @@ class LeanAdapter:
             raise ValueError("timeout must be positive")
         self.timeout = float(timeout)
         self.runner = runner or _run
+        self.mock = runner is not None
+        self.resolver = resolver
 
     def _probe(self) -> _Probe:
-        resolved = shutil.which(self.executable)
+        resolver = self.resolver or shutil.which
+        resolved = resolver(self.executable)
         if resolved is None:
             return _Probe("unavailable", "Lean executable was not found")
         try:
@@ -71,5 +74,5 @@ class LeanAdapter:
         if probe.status != "available" or probe.version is None:
             raise ExternalToolUnavailable(probe.reason)
         evidence = stable_hash({"operation": "version", "version": probe.version, "returncode": 0})
-        return VerificationReceipt(VerificationLevel.EXECUTED,
-                                   self.name, probe.version, evidence, attested=True)
+        return VerificationReceipt(VerificationLevel.EXECUTED, self.name, probe.version,
+                                   evidence, mock=self.mock, attested=not self.mock)
