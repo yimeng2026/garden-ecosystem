@@ -6,10 +6,9 @@
 
 ## 当前状态
 
-- **已实现**：9 个公共模块、离线组合演示、84 项标准库 `unittest` 测试。
-- **接口已定义**：`bridge.capabilities()`、`bridge.health()` 与 `ExternalToolAdapter`。
-- **主花园尚未直接调用本包**：主花园的蜂群、provider-pool、Next.js/SSE 保持不动；接入时由受控 Python 服务调用本包，不需要重写前端或数据库。
-- **未做**：真实模型实测、Lean/OpenFOAM 执行、沙箱隔离、模型权重下载、全球项目穷尽。默认外部工具为 `unavailable`，不会生成虚假的真实执行回执。
+- **已实现**：11 个公共模块、离线组合演示、98 项标准库 `unittest` 测试，以及真实 Lean 健康检查和受控 stdio 服务。
+- **主花园桥接已实现**：在 `feature/garden-ecosystem-bridge` 分支提供 TypeScript 客户端和 `POST /api/garden-ecosystem`，已完成真实 HTTP 验收；主花园既有蜂群、provider-pool、Next.js/SSE 逻辑保持不动。
+- **未做**：真实模型实测、Lean 编译或证明、OpenFOAM 执行、沙箱隔离、模型权重下载、全球项目穷尽。本机真实 Lean 健康检查返回 `unavailable`，不会生成虚假的真实执行回执。
 
 ## 快速开始
 
@@ -47,8 +46,12 @@ python -m unittest discover -s tests -v
 | `learning` | tentative→active→retired、正反证据、回滚、内容白名单 | 默认关闭；不存/执行代码、命令、工具配置或密钥 |
 | `research` | 预登记冻结、追加观察、负结果、参数来源分层 | 外部标定不写成内生；冻结内容不可覆盖 |
 | `receipts` | 运行清单、哈希检查点、外部健康状态、分级验证回执 | mock 明示；真实机器检查需要外部 attestation |
+| `lean` | 真实 Lean 可执行文件探测、版本检查与执行回执 | 仅 `--version`；不是编译或定理证明 |
+| `service` | 四类白名单动作的 stdio 请求与结构化响应 | 不开放任意命令、任意参数或任意文件 |
 
 ## 与千界花园的接口
+
+完整手册与验证记录：[Markdown](docs/bridge-integration.md) · [原生 Word 图文版](docs/bridge-integration.docx)。
 
 ### 能力和健康状态
 

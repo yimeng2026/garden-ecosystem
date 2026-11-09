@@ -9,7 +9,10 @@ import {
 
 const outputPath = process.argv[2];
 if (!outputPath) throw new Error("Usage: create_landscape_docx.js output.docx");
-const sourcePath = path.join(path.dirname(outputPath), "landscape.md");
+const sourcePath = process.env.DOCX_SOURCE || path.join(path.dirname(outputPath), "landscape.md");
+const isBridgeGuide = path.basename(sourcePath) === "bridge-integration.md";
+const documentTitle = isBridgeGuide ? "千界花园受控桥接使用手册与验证记录" : "千界花园同类开源项目广泛调研与整体设计依据";
+const documentSubtitle = isBridgeGuide ? "受控 stdio · 真实 Lean 健康检查 · Next.js API" : "GitHub · Gitee · GitLab · Codeberg · Hugging Face";
 const sourceDir = path.dirname(sourcePath);
 const font = { ascii: "Times New Roman", hAnsi: "Times New Roman", cs: "Times New Roman", eastAsia: "SimSun" };
 const run = (text, options = {}) => new TextRun({ text, font, size: 22, ...options });
@@ -85,10 +88,10 @@ const toc = ImportedXmlComponent.fromXmlString(`<w:sdt xmlns:w="http://schemas.o
 
 const children = [
   para(run("千界花园", { bold: true, size: 34, color: "557180" }), { alignment: AlignmentType.CENTER, spacing: { before: 2200, after: 400 } }),
-  para(run("同类开源项目广泛调研与整体设计依据", { bold: true, size: 44, color: "203746" }), { heading: HeadingLevel.TITLE, alignment: AlignmentType.CENTER, spacing: { after: 500 } }),
-  para(run("GitHub · Gitee · GitLab · Codeberg · Hugging Face", { size: 24, color: "557180" }), { alignment: AlignmentType.CENTER, spacing: { after: 240 } }),
+  para(run(documentTitle, { bold: true, size: 44, color: "203746" }), { heading: HeadingLevel.TITLE, alignment: AlignmentType.CENTER, spacing: { after: 500 } }),
+  para(run(documentSubtitle, { size: 24, color: "557180" }), { alignment: AlignmentType.CENTER, spacing: { after: 240 } }),
   para(run("2026 年 11 月 9 日", { size: 24, color: "557180" }), { alignment: AlignmentType.CENTER, spacing: { after: 1200 } }),
-  para(run("可追溯采样，不宣称全球穷尽；候选数量不等于可用项目数量。", { size: 22, color: "557180" }), { alignment: AlignmentType.CENTER }),
+  para(run(isBridgeGuide ? "真实协议与边界验证，不把健康检查或 mock 冒称为定理证明。" : "可追溯采样，不宣称全球穷尽；候选数量不等于可用项目数量。", { size: 22, color: "557180" }), { alignment: AlignmentType.CENTER }),
   new Paragraph({ children: [new PageBreak()] }),
   para(run("目录", { bold: true, size: 30, color: "203746" }), { alignment: AlignmentType.CENTER }),
   para(run("打开 Word/WPS 后更新目录域可刷新页码。", { size: 18, color: "6D7D86", italics: true }), { alignment: AlignmentType.CENTER }),
@@ -134,8 +137,8 @@ for (const block of blocks) {
 
 const doc = new Document({
   creator: "garden-ecosystem contributors",
-  title: "千界花园同类开源项目广泛调研与整体设计依据",
-  description: "公开代码平台调研、许可证边界与花园适配层总体设计",
+  title: documentTitle,
+  description: isBridgeGuide ? "受控 stdio、真实 Lean 健康检查与 Next.js 桥接验证" : "公开代码平台调研、许可证边界与花园适配层总体设计",
   features: { updateFields: true },
   styles: {
     default: { document: { run: { font, size: 22 } } },
@@ -144,7 +147,7 @@ const doc = new Document({
   },
   sections: [{
     properties: { page: { margin: { top: 1200, right: 1200, bottom: 1200, left: 1200 } } },
-    headers: { default: new Header({ children: [para(run("千界花园 · 开源生态调研与总体设计", { size: 17, color: "557180" }), { alignment: AlignmentType.CENTER })] }) },
+    headers: { default: new Header({ children: [para(run(isBridgeGuide ? "千界花园 · 受控桥接与真实验证" : "千界花园 · 开源生态调研与总体设计", { size: 17, color: "557180" }), { alignment: AlignmentType.CENTER })] }) },
     footers: { default: new Footer({ children: [para(new TextRun({ children: [PageNumber.CURRENT] }), { alignment: AlignmentType.CENTER })] }) },
     children,
   }],
