@@ -36,6 +36,6 @@
 ### Task 4：回归与交付
 
 - [x] fresh 运行两套测试、JSON 解析、DOCX 哈希、`docx.py validate` 和 `git diff --check`，全部退出 0。
-- [ ] 仅暂存本批及规格计划，提交 `docs: audit magazine science communication and production`。
-- [ ] 推送 `audit/room-temp-magazine-design`，核对本地与远端哈希，不合并主分支。
-- [ ] 以 `docs: record magazine design audit delivery` 记录交付；继续目录索引与项目介绍，保持全库目标 active。
+- [x] 仅暂存本批及规格计划，提交 `docs: audit magazine science communication and production`。
+- [x] 推送 `audit/room-temp-magazine-design`，核对本地与远端哈希，不合并主分支。
+- [x] 以 `docs: record magazine design audit delivery` 记录交付；目录索引与项目介绍列入后续审计，全库目标保持 active。
