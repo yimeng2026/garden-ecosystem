@@ -12,6 +12,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
+from verify_tbc import determinant_winding  # noqa: E402
 from run_disorder import (  # noqa: E402
     beta_for,
     evaluate_realization,
@@ -78,6 +79,19 @@ class DisorderContractTests(unittest.TestCase):
             self.assertTrue(second["complete"])
             retained = [row for row in second["rows"] if row["seed"] == 0]
             self.assertEqual(json.dumps(retained, sort_keys=True), original)
+
+    def test_independent_vector_mu_reconstruction(self):
+        result = determinant_winding(
+            8,
+            np.full(8, 2.5),
+            0.05 * beta_for(0, 8),
+            7.0,
+            0.0,
+            nominal_step=0.025,
+        )
+        self.assertEqual(result["status"], "ok")
+        self.assertEqual(result["nearest_integer"], 1)
+        self.assertLess(result["max_symmetry_error"], 1e-9)
 
 
 def run_all_tests():
