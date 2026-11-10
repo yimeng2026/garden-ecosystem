@@ -236,3 +236,17 @@ Xie／LaH₁₀ 的 2025 年官方 DOI 页面和原文镜像已核。原文给�
 交付件：`necessity-theorem/REVIEW.md`、`REVIEW.docx`、`review.json`、`counterexample.json`、`counterexample.log`、`word-qa/report.json`。Word 校验退出码 **0**，`PASSED (17 parts XSD + semantic checks; gen: 6 checks clean)`；最终 **4/4 页**已逐页检查，无近空白或裁切，仅低风险目录编号兼容提示。原稿未修改。
 
 TOE 勘误簿已登记 FE-18，分支 `audit/necessity-counterexample`，提交 `a610606`。该登记只保留反例与研究方向，不宣称原稿已修订或中心问题已解决。
+
+### 室温超导版本血缘补记
+
+逐项读取 `manuscript.tex`、Science、Nature、arXiv 与主模板，机读 `lineage-review.json` 确认五者属于同一错误研究纲领，独立新方向为 0：
+
+- Science 在同一段先算约 148 K，再直接声称超过 300 K，属于直接内部矛盾；
+- Nature 压缩继承同一必然性断言；
+- arXiv 的完整证明与参考文献仍为占位；
+- 主模板虽有作者名，理论结构、证明、预测、验证、图件、数据和代码仍大量待填；
+- `organized/02-主论文` 只有四份 Markdown，无计算脚本、结构文件、求解输出或收敛日志，不能由方法叙事证明 DFT／EPW 已执行。
+
+交付 `LINEAGE_AUDIT.md`、`LINEAGE_AUDIT.docx`、`lineage-review.json`、`lineage.log`、`lineage-word-qa/report.json`。Word 校验退出码 **0**，`PASSED (17 parts XSD + semantic checks; gen: 6 checks clean)`；最终 **3/3 页**已逐页检查，无近空白或裁切，仅低风险目录编号兼容提示。原文件均未修改。
+
+FE-18 已补全受影响版本，提交 `37ea8d0`。后续只设一个反例与临界流形项目，不为 Science、Nature、arXiv 分别立项。

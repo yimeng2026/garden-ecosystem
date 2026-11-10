@@ -1,0 +1,58 @@
+{
+  "schema": "necessity-lineage-v1",
+  "records": [
+    {
+      "version": "manuscript",
+      "path": "papers\\room_temp_sc\\manuscript.tex",
+      "content_sha256": "1e31067672c0836406f034c2215f42db79a418252acae25227653874c3292cd8",
+      "necessity_claim": true,
+      "guarantees_300K": true,
+      "proof_placeholder": false,
+      "bibliography_placeholder": false,
+      "author_placeholder": false
+    },
+    {
+      "version": "science",
+      "path": "papers\\room_temp_sc\\organized\\02-主论文\\03-Science版本.md",
+      "content_sha256": "3058cf9d67c8949c3546f2ba02486a27c3d888a97e66354d2ba3416b2c45444b",
+      "necessity_claim": true,
+      "guarantees_300K": true,
+      "proof_placeholder": false,
+      "bibliography_placeholder": false,
+      "author_placeholder": true
+    },
+    {
+      "version": "nature",
+      "path": "papers\\room_temp_sc\\organized\\02-主论文\\02-Nature版本.md",
+      "content_sha256": "d607f134e7b1b880735f56d11606337e253b39b38f0a9d1ae86ce0e45383deef",
+      "necessity_claim": true,
+      "guarantees_300K": true,
+      "proof_placeholder": false,
+      "bibliography_placeholder": false,
+      "author_placeholder": true
+    },
+    {
+      "version": "arxiv",
+      "path": "papers\\room_temp_sc\\organized\\02-主论文\\04-arXiv版本.md",
+      "content_sha256": "3a9a010ee52cfff83e3c4b3c77702a27124bc7f742c7e2c8a1af93e0c7f91b3f",
+      "necessity_claim": true,
+      "guarantees_300K": true,
+      "proof_placeholder": true,
+      "bibliography_placeholder": true,
+      "author_placeholder": true
+    },
+    {
+      "version": "main_template",
+      "path": "papers\\room_temp_sc\\organized\\02-主论文\\01-主论文.md",
+      "content_sha256": "c26ca6ae976ee66dbe0519fcaa97c7c5cef3ebd65332d9efa31065f200309e46",
+      "necessity_claim": true,
+      "guarantees_300K": true,
+      "proof_placeholder": true,
+      "bibliography_placeholder": false,
+      "author_placeholder": false
+    }
+  ],
+  "shared_defect_family": true,
+  "independent_new_directions": 0,
+  "source_files_modified": false
+}
