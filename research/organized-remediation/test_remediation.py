@@ -122,6 +122,47 @@ class RemediationTests(unittest.TestCase):
         self.assertIn("导航与参考文献修复", header.decode("utf-8"))
         self.assertTrue(any(name.startswith("word/media/") for name in names))
 
+    def test_toc_cache_and_footnote_claim_mapping(self):
+        import xml.etree.ElementTree as ET
+
+        namespace = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+        ns = {"w": namespace}
+        with zipfile.ZipFile(ROOT / "REMEDIATION.docx") as package:
+            root = ET.fromstring(package.read("word/document.xml"))
+
+        def text_of(element):
+            return "".join(node.text or "" for node in element.findall(".//w:t", ns))
+
+        toc = root.find(".//w:sdt", ns)
+        self.assertIsNotNone(toc)
+        cached = [text_of(p) for p in toc.findall(".//w:p", ns)]
+        titles = ["一、整改交付与证据图", "二、真实导航与现代来源", "三、输入血缘与验证", "四、剩余边界与下一步"]
+        for title, page in zip(titles, [2, 2, 3, 3]):
+            self.assertIn(f"{title}{page}", cached)
+
+        expected_references = {
+            "覆盖清单来自实际 44 个 Markdown 路径": {"1"},
+            "基础 24 条作为字节级前缀保留": {"2"},
+            "三条新增记录分别承担理论预测": {"3"},
+            "题名、年份、卷页和标识来自": {"4"},
+            "旧增强参考文献只有": {"5"},
+        }
+        referenced = set()
+        paragraphs = root.findall(".//w:p", ns)
+        for marker, expected in expected_references.items():
+            matches = [
+                p for p in paragraphs
+                if marker in text_of(p) and p.find(".//w:footnoteReference", ns) is not None
+            ]
+            self.assertEqual(len(matches), 1, marker)
+            actual = {
+                node.attrib[f"{{{namespace}}}id"]
+                for node in matches[0].findall(".//w:footnoteReference", ns)
+            }
+            self.assertEqual(actual, expected, marker)
+            referenced.update(actual)
+        self.assertEqual(referenced, {"1", "2", "3", "4", "5"})
+
 
 def run_all_tests():
     suite = unittest.defaultTestLoader.loadTestsFromModule(sys.modules[__name__])

@@ -1,0 +1,835 @@
+{
+  "schema": "organized-remediation-v1",
+  "date": "2026-11-11",
+  "scope": "独立导航与参考文献修复包；原始证据只读，不宣称科学验证或全部回源。",
+  "source_inputs": [
+    {
+      "id": "coverage_inventory",
+      "path": "project-intro/sources/coverage-inventory.json",
+      "sha256": "638f1e0cfb41ed7902869d28677d6adf50cc7644abe7de3a82a9e0ba6d025f7b",
+      "read_only": true
+    },
+    {
+      "id": "base_bib",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/09-参考文献/01-参考文献.bib",
+      "sha256": "ca014a4bae5023081149a1c4d051917e7f0540df18241400992c2b2276d43698",
+      "read_only": true
+    },
+    {
+      "id": "main_claims_review",
+      "path": "main-claims/review.json",
+      "sha256": "e9ac6ff0bc88f11b1c2c91ae61ce398a05fc077815803f48669b46536d6f2f45",
+      "read_only": true
+    },
+    {
+      "id": "main_claims_builder",
+      "path": "main-claims/build_report.js",
+      "sha256": "ebd3fa8f7459a502218f58e10f1629e0c7de38f9f37905a6ac1c0bde72a4958d",
+      "read_only": true
+    },
+    {
+      "id": "old_enhanced_bib",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/09-参考文献/02-增强参考文献.bib",
+      "sha256": "d4a7d80243bc2fec0b05af4b0c9519d1be86edd0a62cd0d3d82b94a912ab870f",
+      "read_only": true
+    }
+  ],
+  "coverage": {
+    "rows": [
+      {
+        "path": "00-目录索引.md",
+        "source_id": "directory_index",
+        "source_sha256": "633844466f9c1fad0929a5250380a7e0467b7a458c24dc9006d820071dcad317",
+        "batch": "project-intro",
+        "review_path": "project-intro/review.json",
+        "review_sha256": null,
+        "direction_ids": [
+          "coverage_governance"
+        ],
+        "direction_scope": "current_document",
+        "represents_new_theory": false
+      },
+      {
+        "path": "01-封面与介绍/01-项目说明.md",
+        "source_id": "project_intro",
+        "source_sha256": "ddab8da04e8373fccedacc4634dfee09c7fc4be8eee5064e050f162f6bee4164",
+        "batch": "project-intro",
+        "review_path": "project-intro/review.json",
+        "review_sha256": null,
+        "direction_ids": [
+          "conditional_formalization"
+        ],
+        "direction_scope": "current_document",
+        "represents_new_theory": false
+      },
+      {
+        "path": "01-封面与介绍/02-手册说明.md",
+        "source_id": "handbook_intro",
+        "source_sha256": "dd6721843deed0ad442b5ec3fc53303d4c895b6638d5d3dd5eb8b207b166161a",
+        "batch": "project-intro",
+        "review_path": "project-intro/review.json",
+        "review_sha256": null,
+        "direction_ids": [
+          "handbook_reference_governance"
+        ],
+        "direction_scope": "current_document",
+        "represents_new_theory": false
+      },
+      {
+        "path": "01-封面与介绍/03-杂志简介.md",
+        "source_id": "magazine_plan",
+        "source_sha256": "7f691b8f56f4d7ff04d4a3b3090cc4b48974fd7da89922ddeb8597bd046c34aa",
+        "batch": "project-intro",
+        "review_path": "project-intro/review.json",
+        "review_sha256": null,
+        "direction_ids": [
+          "public_communication"
+        ],
+        "direction_scope": "current_document",
+        "represents_new_theory": false
+      },
+      {
+        "path": "02-主论文/01-主论文.md",
+        "source_id": "main_master",
+        "source_sha256": "862e3232520ee961bc307a8e97cfd0b32a869a97197b159281596be3437d227f",
+        "batch": "main-claims",
+        "review_path": "main-claims/review.json",
+        "review_sha256": "e9ac6ff0bc88f11b1c2c91ae61ce398a05fc077815803f48669b46536d6f2f45",
+        "direction_ids": [
+          "necessity_proof",
+          "reproducible_computation",
+          "experimental_controversy",
+          "publication_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "02-主论文/02-Nature版本.md",
+        "source_id": "nature_version",
+        "source_sha256": "fc5505cff6e3f65ee080ae4ec7a8f51f8ea2b4404e33a0d59146122bf91c568c",
+        "batch": "main-claims",
+        "review_path": "main-claims/review.json",
+        "review_sha256": "e9ac6ff0bc88f11b1c2c91ae61ce398a05fc077815803f48669b46536d6f2f45",
+        "direction_ids": [
+          "necessity_proof",
+          "reproducible_computation",
+          "experimental_controversy",
+          "publication_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "02-主论文/03-Science版本.md",
+        "source_id": "science_version",
+        "source_sha256": "598de079d503596b9c9a5d43ba5027fafc5d9a13a12c4b3b03a3ba3e36d2e809",
+        "batch": "main-claims",
+        "review_path": "main-claims/review.json",
+        "review_sha256": "e9ac6ff0bc88f11b1c2c91ae61ce398a05fc077815803f48669b46536d6f2f45",
+        "direction_ids": [
+          "necessity_proof",
+          "reproducible_computation",
+          "experimental_controversy",
+          "publication_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "02-主论文/04-arXiv版本.md",
+        "source_id": "arxiv_version",
+        "source_sha256": "7893cc30f25baca9aef27a3a3f9fc1a232e86fafdde109753885487f9268fc3b",
+        "batch": "main-claims",
+        "review_path": "main-claims/review.json",
+        "review_sha256": "e9ac6ff0bc88f11b1c2c91ae61ce398a05fc077815803f48669b46536d6f2f45",
+        "direction_ids": [
+          "necessity_proof",
+          "reproducible_computation",
+          "experimental_controversy",
+          "publication_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "03-理论框架/01-理论框架.md",
+        "source_id": "theory_framework",
+        "source_sha256": "c53b9b8fbab8018e3e2948e8ecff71d0232dd47e60c8a86f4281e58200c262fb",
+        "batch": "theory-breakthrough",
+        "review_path": "theory-breakthrough/review.json",
+        "review_sha256": "e6acb59a95f4dc159db2692e5db0a6ae40d640f8a8aef04ca1b69da80e3ed8c8",
+        "direction_ids": [
+          "conditional_proof",
+          "assumption_falsifiability",
+          "experimental_controversy",
+          "provenance_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "04-材料预测/01-材料预测.md",
+        "source_id": "material_predictions",
+        "source_sha256": "050b52aa56bb633fd1db95e198f9804085de26080f4b18f135f44e3c8ef326ef",
+        "batch": "validation-materials",
+        "review_path": "validation-materials/review.json",
+        "review_sha256": "17eaa27d30df6849f752e3712d563ebe492ae394ea9c74b1b072ac0755acb491",
+        "direction_ids": [
+          "formula_evidence",
+          "sample_doping",
+          "higher_order_hydride",
+          "validation_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "05-实验验证/01-实验验证.md",
+        "source_id": "validation_report",
+        "source_sha256": "51a4709522000dca521dcecd071f20766763821eca94cb9e279335ea91f47e90",
+        "batch": "validation-materials",
+        "review_path": "validation-materials/review.json",
+        "review_sha256": "17eaa27d30df6849f752e3712d563ebe492ae394ea9c74b1b072ac0755acb491",
+        "direction_ids": [
+          "formula_evidence",
+          "sample_doping",
+          "higher_order_hydride",
+          "validation_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "06-突破详解/01-2025年10月突破.md",
+        "source_id": "breakthrough_report",
+        "source_sha256": "7d9711df200880690a82c814380e4392f35a1ca3c6df957cabe6607678ba00ce",
+        "batch": "theory-breakthrough",
+        "review_path": "theory-breakthrough/review.json",
+        "review_sha256": "e6acb59a95f4dc159db2692e5db0a6ae40d640f8a8aef04ca1b69da80e3ed8c8",
+        "direction_ids": [
+          "conditional_proof",
+          "assumption_falsifiability",
+          "experimental_controversy",
+          "provenance_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "07-形式化代码/01-Lean形式化代码.md",
+        "source_id": "lean_markdown",
+        "source_sha256": "c171f6e5d5e5b6547bddc88d94138b9dc0a87d8c3a6ec59ff696e35746f59141",
+        "batch": "room-temp-methods",
+        "review_path": "room-temp-methods/review.json",
+        "review_sha256": "f30d15d8665644d11957166efaea95d59f7a742037dc697b737704cd15dc9e21",
+        "direction_ids": [
+          "floquet_evidence",
+          "eliashberg_bounds",
+          "lean_formalization",
+          "literature_digest",
+          "reproducible_si"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "08-手册章节/01-第1-2章_超导入门与科普.md",
+        "source_id": "handbook_intro",
+        "source_sha256": "bb67c6d7b57a2dad1f42eed1bd2729697e590c643953e05e19ca0a7016463d23",
+        "batch": "handbook-chapters",
+        "review_path": "handbook-chapters/review.json",
+        "review_sha256": "0394b996c271a6ca24b4692d7bd078b4c0fa8925eefde6df0347a478f298ac48",
+        "direction_ids": [
+          "pedagogical_physics",
+          "conditional_model",
+          "experimental_roles",
+          "unit_provenance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "08-手册章节/02-第3章_必然性定理.md",
+        "source_id": "handbook_theorem",
+        "source_sha256": "062b0011cc45b34ed8545a5890769ca71382608b09371641af5a51060c476e97",
+        "batch": "handbook-chapters",
+        "review_path": "handbook-chapters/review.json",
+        "review_sha256": "0394b996c271a6ca24b4692d7bd078b4c0fa8925eefde6df0347a478f298ac48",
+        "direction_ids": [
+          "pedagogical_physics",
+          "conditional_model",
+          "experimental_roles",
+          "unit_provenance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "08-手册章节/03-第4-5章_材料与实验.md",
+        "source_id": "handbook_materials",
+        "source_sha256": "2816948242751325c7d3d28995f1ce836fb064e426f7d2bc941df3b14c8d5acd",
+        "batch": "main-claims",
+        "review_path": "main-claims/review.json",
+        "review_sha256": "e9ac6ff0bc88f11b1c2c91ae61ce398a05fc077815803f48669b46536d6f2f45",
+        "direction_ids": [
+          "necessity_proof",
+          "reproducible_computation",
+          "experimental_controversy",
+          "publication_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "08-手册章节/04-第6章_未来展望.md",
+        "source_id": "handbook_future",
+        "source_sha256": "43e7826fac1fd4260e1cf0c01bf2ba6c1ffd6616652bb9b8825ea4fa006443bd",
+        "batch": "main-claims",
+        "review_path": "main-claims/review.json",
+        "review_sha256": "e9ac6ff0bc88f11b1c2c91ae61ce398a05fc077815803f48669b46536d6f2f45",
+        "direction_ids": [
+          "necessity_proof",
+          "reproducible_computation",
+          "experimental_controversy",
+          "publication_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "10-技术文档/01-交付摘要.md",
+        "source_id": "delivery_summary",
+        "source_sha256": "957e71d98c74e813bed8780614552b20b0802f0ec6c4c598e2f3a39d2c49cdfc",
+        "batch": "technical-docs",
+        "review_path": "technical-docs/review.json",
+        "review_sha256": "d27fca5597387c24e9d0038e971055566522441a1f1f1dd8a0dd7dfe662e305f",
+        "direction_ids": [
+          "artifact_existence",
+          "status_evidence",
+          "scientific_validation",
+          "delivery_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "10-技术文档/02-最终报告.md",
+        "source_id": "final_report",
+        "source_sha256": "563b2fae7222a9ac9ccec3fac849b467e9ae46d571e99def0ef423a9f878e667",
+        "batch": "technical-docs",
+        "review_path": "technical-docs/review.json",
+        "review_sha256": "d27fca5597387c24e9d0038e971055566522441a1f1f1dd8a0dd7dfe662e305f",
+        "direction_ids": [
+          "artifact_existence",
+          "status_evidence",
+          "scientific_validation",
+          "delivery_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "10-技术文档/03-进度报告.md",
+        "source_id": "progress_report",
+        "source_sha256": "a4ffcdc575a2d9f0ae21108b5679856ed022c827bdd549020dc1f3be59d524bb",
+        "batch": "technical-docs",
+        "review_path": "technical-docs/review.json",
+        "review_sha256": "d27fca5597387c24e9d0038e971055566522441a1f1f1dd8a0dd7dfe662e305f",
+        "direction_ids": [
+          "artifact_existence",
+          "status_evidence",
+          "scientific_validation",
+          "delivery_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "10-技术文档/04-质量进展.md",
+        "source_id": "quality_progress",
+        "source_sha256": "0da15ed8122b1908bb8ce155956aebd55166330ca094982f81c6637624354d64",
+        "batch": "technical-docs",
+        "review_path": "technical-docs/review.json",
+        "review_sha256": "d27fca5597387c24e9d0038e971055566522441a1f1f1dd8a0dd7dfe662e305f",
+        "direction_ids": [
+          "artifact_existence",
+          "status_evidence",
+          "scientific_validation",
+          "delivery_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "10-技术文档/05-整合检查清单.md",
+        "source_id": "integration_checklist",
+        "source_sha256": "1510c3bc360560a1b131c9352616cd28717691abee41ff3951231a65d26d2909",
+        "batch": "technical-docs",
+        "review_path": "technical-docs/review.json",
+        "review_sha256": "d27fca5597387c24e9d0038e971055566522441a1f1f1dd8a0dd7dfe662e305f",
+        "direction_ids": [
+          "artifact_existence",
+          "status_evidence",
+          "scientific_validation",
+          "delivery_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "10-技术文档/06-补充信息.md",
+        "source_id": "si_template",
+        "source_sha256": "9d54064ba6089c82de39ddef90afeb82e47d511f95b35dd0490ee50aef63d97f",
+        "batch": "room-temp-methods",
+        "review_path": "room-temp-methods/review.json",
+        "review_sha256": "f30d15d8665644d11957166efaea95d59f7a742037dc697b737704cd15dc9e21",
+        "direction_ids": [
+          "floquet_evidence",
+          "eliashberg_bounds",
+          "lean_formalization",
+          "literature_digest",
+          "reproducible_si"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "11-杂志设计/01-杂志说明.md",
+        "source_id": "magazine_readme",
+        "source_sha256": "8462664575ea8c2be26f87edb185bd92ad5bd79ed05edc4d9b83a86508f46920",
+        "batch": "magazine-design",
+        "review_path": "magazine-design/review.json",
+        "review_sha256": "f025cef1935a604b67fe1c0504d6cdfc377ab2c69db450d3fd2da6034364b3bb",
+        "direction_ids": [
+          "editorial_evidence",
+          "computational_design",
+          "accessible_media",
+          "production_provenance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "11-杂志设计/02-杂志简介.md",
+        "source_id": "magazine_intro",
+        "source_sha256": "7137a7552f2eefd97eee3681da904a35d4bffcb68af12c0e063620f6106f2b3d",
+        "batch": "magazine-design",
+        "review_path": "magazine-design/review.json",
+        "review_sha256": "f025cef1935a604b67fe1c0504d6cdfc377ab2c69db450d3fd2da6034364b3bb",
+        "direction_ids": [
+          "editorial_evidence",
+          "computational_design",
+          "accessible_media",
+          "production_provenance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "11-杂志设计/03-黑白像素系统.md",
+        "source_id": "pixel_system",
+        "source_sha256": "2b05baac70fe8d8760df027d2d625f2801c5c0e947ece6beb3de93a4defe31b2",
+        "batch": "magazine-design",
+        "review_path": "magazine-design/review.json",
+        "review_sha256": "f025cef1935a604b67fe1c0504d6cdfc377ab2c69db450d3fd2da6034364b3bb",
+        "direction_ids": [
+          "editorial_evidence",
+          "computational_design",
+          "accessible_media",
+          "production_provenance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "11-杂志设计/04-VI设计.md",
+        "source_id": "vi_design",
+        "source_sha256": "a7508aeda44598c028c200c0b3bdd1f30807f652c9cc26c88b9171dbefe52826",
+        "batch": "magazine-design",
+        "review_path": "magazine-design/review.json",
+        "review_sha256": "f025cef1935a604b67fe1c0504d6cdfc377ab2c69db450d3fd2da6034364b3bb",
+        "direction_ids": [
+          "editorial_evidence",
+          "computational_design",
+          "accessible_media",
+          "production_provenance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "11-杂志设计/05-排版系统.md",
+        "source_id": "layout_system",
+        "source_sha256": "4602f8893cf31707858ff373c76068d2f080283599cc5894f2ee741d332089f8",
+        "batch": "magazine-design",
+        "review_path": "magazine-design/review.json",
+        "review_sha256": "f025cef1935a604b67fe1c0504d6cdfc377ab2c69db450d3fd2da6034364b3bb",
+        "direction_ids": [
+          "editorial_evidence",
+          "computational_design",
+          "accessible_media",
+          "production_provenance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "11-杂志设计/06-内容架构.md",
+        "source_id": "content_architecture",
+        "source_sha256": "97cfb31cdb3269f3645f5f953b418d001139137eadfae2f562aa37d61db3670a",
+        "batch": "magazine-design",
+        "review_path": "magazine-design/review.json",
+        "review_sha256": "f025cef1935a604b67fe1c0504d6cdfc377ab2c69db450d3fd2da6034364b3bb",
+        "direction_ids": [
+          "editorial_evidence",
+          "computational_design",
+          "accessible_media",
+          "production_provenance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "11-杂志设计/07-网页风格排版.md",
+        "source_id": "web_layout",
+        "source_sha256": "6c1d2e6d183b63d62a8a7355180f3c6fcbf6711da81a189ae959fe8430c943c4",
+        "batch": "magazine-design",
+        "review_path": "magazine-design/review.json",
+        "review_sha256": "f025cef1935a604b67fe1c0504d6cdfc377ab2c69db450d3fd2da6034364b3bb",
+        "direction_ids": [
+          "editorial_evidence",
+          "computational_design",
+          "accessible_media",
+          "production_provenance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "11-杂志设计/08-网聊文化融入.md",
+        "source_id": "chat_culture",
+        "source_sha256": "fe0dbae3b98307a02b32a286055657e7ecb604f31d621e579789880fe6746a7b",
+        "batch": "magazine-design",
+        "review_path": "magazine-design/review.json",
+        "review_sha256": "f025cef1935a604b67fe1c0504d6cdfc377ab2c69db450d3fd2da6034364b3bb",
+        "direction_ids": [
+          "editorial_evidence",
+          "computational_design",
+          "accessible_media",
+          "production_provenance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "11-杂志设计/09-页面设计.md",
+        "source_id": "page_designs",
+        "source_sha256": "740e6d85ceb025e263f62d1772c8c60270836a39d595c07bf7e696ac71400036",
+        "batch": "magazine-design",
+        "review_path": "magazine-design/review.json",
+        "review_sha256": "f025cef1935a604b67fe1c0504d6cdfc377ab2c69db450d3fd2da6034364b3bb",
+        "direction_ids": [
+          "editorial_evidence",
+          "computational_design",
+          "accessible_media",
+          "production_provenance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "11-杂志设计/10-印刷指南.md",
+        "source_id": "print_guide",
+        "source_sha256": "d7ea6c943ea3c33ed16c4d41cbda3e8e5caed48573a3f4104aa8d0a09571ef72",
+        "batch": "magazine-design",
+        "review_path": "magazine-design/review.json",
+        "review_sha256": "f025cef1935a604b67fe1c0504d6cdfc377ab2c69db450d3fd2da6034364b3bb",
+        "direction_ids": [
+          "editorial_evidence",
+          "computational_design",
+          "accessible_media",
+          "production_provenance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "11-杂志设计/11-设计笔记.md",
+        "source_id": "design_notes",
+        "source_sha256": "71780e9bce7b365779a7b462091d405100f17508da378d3cb020dc0cc8cc2221",
+        "batch": "magazine-design",
+        "review_path": "magazine-design/review.json",
+        "review_sha256": "f025cef1935a604b67fe1c0504d6cdfc377ab2c69db450d3fd2da6034364b3bb",
+        "direction_ids": [
+          "editorial_evidence",
+          "computational_design",
+          "accessible_media",
+          "production_provenance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "12-资料收集-氢化物与验证进展.md",
+        "source_id": "hydrides_overview",
+        "source_sha256": "5b3c56d2ea572412b894f6643fb2ab7e31e693ad7755b63e112e51c0fa46f277",
+        "batch": "data-governance",
+        "review_path": "data-governance/review.json",
+        "review_sha256": "e09aeb77dd254d061d980c306e6762c1ef21ad8a5e826be6a08226d581680aa8",
+        "direction_ids": [
+          "claim_lineage",
+          "benchmark_scope",
+          "data_completeness",
+          "research_update"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "13-资料收集-Floquet工程LaH10.md",
+        "source_id": "floquet_notes",
+        "source_sha256": "37b5436dc39bada84c3a520943ea94515d5d08e75c27e808aba5070059d48ab9",
+        "batch": "room-temp-methods",
+        "review_path": "room-temp-methods/review.json",
+        "review_sha256": "f30d15d8665644d11957166efaea95d59f7a742037dc697b737704cd15dc9e21",
+        "direction_ids": [
+          "floquet_evidence",
+          "eliashberg_bounds",
+          "lean_formalization",
+          "literature_digest",
+          "reproducible_si"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "14-资料收集-DMRG-Hubbard模型.md",
+        "source_id": "dmrg_notes",
+        "source_sha256": "59e6b00f0cb240b9b0d3417f0f7906ae0fb5cf4a9b7cbcf79a8229181147d392",
+        "batch": "dmrg-qec",
+        "review_path": "dmrg-qec/review.json",
+        "review_sha256": "367fada5ec9f68011ea50bb437922d140aa7fcb77bbab7517d8548196332a68d",
+        "direction_ids": [
+          "dmrg_evidence_ladder",
+          "extended_model_completion",
+          "qec_benchmark_roles",
+          "cross_domain_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "15-资料收集-Eliashberg理论边界.md",
+        "source_id": "eliashberg_notes",
+        "source_sha256": "841c1954c7fea9c41e3179476602c64b47eca936643f383e24215284324d0a20",
+        "batch": "room-temp-methods",
+        "review_path": "room-temp-methods/review.json",
+        "review_sha256": "f30d15d8665644d11957166efaea95d59f7a742037dc697b737704cd15dc9e21",
+        "direction_ids": [
+          "floquet_evidence",
+          "eliashberg_bounds",
+          "lean_formalization",
+          "literature_digest",
+          "reproducible_si"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "16-资料收集-总览与下一步.md",
+        "source_id": "batch_overview",
+        "source_sha256": "243ef403bc372d13b442cc0086807fade7f7f478dba010bbfef2d3b9eeb11167",
+        "batch": "data-governance",
+        "review_path": "data-governance/review.json",
+        "review_sha256": "e09aeb77dd254d061d980c306e6762c1ef21ad8a5e826be6a08226d581680aa8",
+        "direction_ids": [
+          "claim_lineage",
+          "benchmark_scope",
+          "data_completeness",
+          "research_update"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "17-资料收集-同位素效应与压力导数.md",
+        "source_id": "isotope_pressure",
+        "source_sha256": "6199a3f71c53ffe6dfe9505f942d713cdb8b8c8da87d35913898163c04366c07",
+        "batch": "isotope-dft",
+        "review_path": "isotope-dft/review.json",
+        "review_sha256": "e04428ca5980171619ca97bd2cc450fa772074cd9edd73f980905a72b1c2d4b4",
+        "direction_ids": [
+          "isotope_lineage",
+          "method_aware_pressure",
+          "reproducible_dft",
+          "ml_benchmark_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "18-资料收集-量子纠错码进展.md",
+        "source_id": "qec_notes",
+        "source_sha256": "59e747f55a96fd8d93885455d7ae7c2579acdeff4139e292023f5a723ec3fce2",
+        "batch": "dmrg-qec",
+        "review_path": "dmrg-qec/review.json",
+        "review_sha256": "367fada5ec9f68011ea50bb437922d140aa7fcb77bbab7517d8548196332a68d",
+        "direction_ids": [
+          "dmrg_evidence_ladder",
+          "extended_model_completion",
+          "qec_benchmark_roles",
+          "cross_domain_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "19-资料收集-多层结构DFT参数.md",
+        "source_id": "multilayer_dft",
+        "source_sha256": "ef31a1048fe415dfff433effc7fd7caefc4b124b320b104eb5e595e6d0752c5c",
+        "batch": "isotope-dft",
+        "review_path": "isotope-dft/review.json",
+        "review_sha256": "e04428ca5980171619ca97bd2cc450fa772074cd9edd73f980905a72b1c2d4b4",
+        "direction_ids": [
+          "isotope_lineage",
+          "method_aware_pressure",
+          "reproducible_dft",
+          "ml_benchmark_governance"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "20-资料收集-总览与完整清单.md",
+        "source_id": "complete_overview",
+        "source_sha256": "314402bf0ae374bd74200c3a8492af8727b53082062d26b3bb7eaf28f2aa4fc7",
+        "batch": "data-governance",
+        "review_path": "data-governance/review.json",
+        "review_sha256": "e09aeb77dd254d061d980c306e6762c1ef21ad8a5e826be6a08226d581680aa8",
+        "direction_ids": [
+          "claim_lineage",
+          "benchmark_scope",
+          "data_completeness",
+          "research_update"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      },
+      {
+        "path": "21-技术复盘-全领域数据审计.md",
+        "source_id": "technical_review",
+        "source_sha256": "992707a8092e65297ebe604d16d5ca203c0f2e0e32a76b43132e16133b7bea05",
+        "batch": "data-governance",
+        "review_path": "data-governance/review.json",
+        "review_sha256": "e09aeb77dd254d061d980c306e6762c1ef21ad8a5e826be6a08226d581680aa8",
+        "direction_ids": [
+          "claim_lineage",
+          "benchmark_scope",
+          "data_completeness",
+          "research_update"
+        ],
+        "direction_scope": "shared_batch",
+        "represents_new_theory": false
+      }
+    ],
+    "actual_markdown_count": 44,
+    "covered_count": 44,
+    "prior_covered_count": 40,
+    "current_batch_count": 4,
+    "uncovered": [],
+    "duplicates": [],
+    "groups": [
+      "00",
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21"
+    ],
+    "prl_delivered": false
+  },
+  "navigation": {
+    "index_file": "INDEX.md",
+    "csv_file": "coverage.csv",
+    "audit_links_verified": true
+  },
+  "references": {
+    "base_entries": 24,
+    "new_entries": 3,
+    "total_entries": 27,
+    "unique_keys": 27,
+    "placeholder_sections": 5,
+    "placeholder_token_occurrences": 6,
+    "old_enhanced_entries": 0,
+    "old_enhanced_bytes": 22,
+    "new_library_parseable": true,
+    "reference_library_ready": false
+  },
+  "modern_sources": [
+    {
+      "id": "pnas_2024",
+      "identifier": "10.1073/pnas.2401840121",
+      "role": "theoretical_prediction",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2401840121"
+    },
+    {
+      "id": "song_2025",
+      "identifier": "2510.01273",
+      "role": "author_positive_preprint",
+      "url": "https://arxiv.org/abs/2510.01273"
+    },
+    {
+      "id": "semenok_2026",
+      "identifier": "2605.29985",
+      "role": "independent_negative_preprint",
+      "url": "https://arxiv.org/abs/2605.29985"
+    }
+  ],
+  "open_boundaries": {
+    "navigation_delivery_complete": true,
+    "reference_delivery_parseable": true,
+    "reference_library_ready": false,
+    "scientific_validation_complete": false,
+    "all_unfinished_work_completed": false,
+    "lean_proof_complete": false,
+    "experimental_replication_complete": false,
+    "whole_repository_research_complete": false
+  },
+  "figure": {
+    "svg": "remediation-evidence.svg",
+    "png": "remediation-evidence.png",
+    "labels": [
+      "44／44",
+      "24＋3＝27",
+      "5 个待补区块",
+      "可解析≠全部回源"
+    ],
+    "caption": "图 1　真实导航与新参考文献：交付改善与开放边界并存",
+    "insert_after": "整改资产表",
+    "insert_before": "剩余证据边界",
+    "completion_percentage_plotted": false
+  },
+  "verification_scope": {
+    "source_documents_modified": false,
+    "all_legacy_entries_reverified": false,
+    "new_lean_or_experiment": false,
+    "whole_repository_research_complete": false
+  }
+}

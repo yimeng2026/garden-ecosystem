@@ -1,0 +1,6 @@
+# Preserve generated evidence verbatim.
+remediation-evidence.svg whitespace=-trailing-space
+references_repaired.bib whitespace=-trailing-space
+sources/*.pdf binary
+sources/*.txt whitespace=-trailing-space
+sources/*.csv whitespace=-trailing-space

@@ -22,3 +22,41 @@ old_enhanced_bib=d4a7d80243bc2fec0b05af4b0c9519d1be86edd0a62cd0d3d82b94a912ab870
 退出码：1
 关键输出：setUpClass ERROR；FileNotFoundError: organized-remediation/remediation.json；Ran 0 tests；FAILED (errors=1)。
 判定：符合预期 RED，修复证据对象尚未生成；零测试发现保护生效。
+
+[asset-build-and-independent-verification]
+build_remediation.py：退出码 0；coverage=44，groups=22，bib_entries=27，unique_keys=27，placeholder_sections=5，placeholder_tokens=6。
+remediation.json SHA-256：84da6bedc3880a1180aeb368d328e9a735745433fc95e65d68ab40e289db4db6。
+verify_remediation.py：退出码 0；Ran 6 tests；OK。
+主合同此阶段退出码 1；Ran 7 tests；6 项通过，仅 REMEDIATION.docx 缺失，符合预期。
+旧 24 条以原始字节前缀保留；三条现代记录追加；旧增强 22 字节内容未复用。
+
+[figure-review]
+初版图件底部说明与柱形区域重叠；加入半透明白底提高对比度后重新读取，未见裁切或文字遮挡，数值不变。
+
+[native-word-layout-and-regression]
+check-docx：退出码 0；Materializing vendored docx 9.7.1；FOUND docx。
+docx.py build：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+首次渲染：退出码 0；5 页、5 页渲染、无近空白页，但后三节留白较多。
+取消后续强制分页后为 3 页；实际目录为 [2,2,3,3]。
+新增目录与五条脚注映射合同后，主测试退出码 1；Ran 8 tests；仅旧目录缓存不符合实际页面。
+修正目录并重建后，主合同退出码 0，Ran 8 tests，OK；独立验证退出码 0，Ran 6 tests，OK。
+最终渲染：退出码 0；3 页、3 页渲染、无近空白页。
+逐页观察：目录正确；整改资产、原生公式、对照图、批次和现代来源完整；五项输入、验证条件、双边界和五条脚注完整，无裁切或孤立末页。
+渲染器仍报告 content-loss/low w:lvlOverride x1；逐页未见编号导致的内容缺失。未使用 LibreOffice。
+
+[final-validation-and-fresh-regression]
+docx.py validate REMEDIATION.docx：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+最终 DOCX SHA-256：b85c42e860165360d2b4c0c2c5d28a40ba0573d24d4a4feca6190fbdf8d4ed74。
+主合同：退出码 0；Ran 8 tests；OK。
+独立验证：退出码 0；Ran 6 tests；OK。
+JSON／CSV／BibTeX 解析、44 路径、27 唯一 key、五项输入哈希、三页人工验收和 DOCX 哈希一致性：退出码 0。
+git diff --check：退出码 0；只有 LF/CRLF 提示，无空白错误。
+
+[scope-guard]
+导航与引用交付的局部整改已完成；全部旧文献回源、科学验证、Lean 证明、独立实验复现和整个仓库研究仍未完成。
+原始证据未修改，未新增 axiom/postulate/sorry，未新增实验或独立复现。后续继续推进未竟工作。
+
+[staged-whitespace-gate]
+首次 git diff --cached --check：退出码 2；references_repaired.bib 第 295 行有旧条目行尾空格，文件末尾有新增空行。
+处理：删除拼接时额外添加的末尾空行；旧 24 条前缀不做清洗，按 references_repaired.bib whitespace=-trailing-space 保留证据原样。
+重建后两套测试均退出 0；再次 git diff --cached --check 退出 0，18 个暂存文件范围正确。
