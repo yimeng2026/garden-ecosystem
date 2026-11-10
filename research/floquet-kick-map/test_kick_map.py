@@ -44,9 +44,10 @@ class UniformArtifactTests(unittest.TestCase):
     def setUpClass(cls):
         cls.data = json.loads((ROOT / "results.json").read_text(encoding="utf-8"))
 
-    def test_grid_has_45_records_and_two_singularities(self):
+    def test_grid_has_45_records_and_two_unique_singular_amplitudes(self):
         self.assertEqual(len(self.data["grid"]), 45)
-        self.assertEqual(sum(row["endpoint"]["status"] == "gapless_or_undefined" for row in self.data["grid"]), 2)
+        self.assertEqual(sum(row["endpoint"]["status"] == "gapless_or_undefined" for row in self.data["grid"]), 6)
+        self.assertEqual(len(self.data["analytic_singularities"]), 2)
         self.assertEqual(self.data["sizes"], [80, 160, 320, 640])
         with (ROOT / "uniform_grid.csv").open(encoding="utf-8", newline="") as stream:
             self.assertEqual(len(list(csv.DictReader(stream))), 90)

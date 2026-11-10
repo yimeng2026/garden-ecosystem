@@ -103,10 +103,11 @@ git commit -m "test: add gapless-safe uniform kick model"
 - [ ] **Step 1: Add artifact contracts before running the grid**
 
 ```python
-def test_grid_has_45_records_and_two_singularities():
+def test_grid_has_45_records_and_two_unique_singular_amplitudes():
     data = json.loads((ROOT / "results.json").read_text(encoding="utf-8"))
     assert len(data["grid"]) == 45
-    assert sum(row["endpoint"]["status"] == "gapless_or_undefined" for row in data["grid"]) == 2
+    assert sum(row["endpoint"]["status"] == "gapless_or_undefined" for row in data["grid"]) == 6
+    assert len(data["analytic_singularities"]) == 2
     assert data["sizes"] == [80, 160, 320, 640]
 ```
 
@@ -134,7 +135,7 @@ For each `N<640` and target, sort by amplitude and emit each contiguous run with
 - [ ] **Step 4: Run the 45-point study and commit**
 
 Run: `python research/floquet-kick-map/run_kick_map.py`
-Expected: 45 records, two singular records, normalized profiles, both target observations per point. Run `test_kick_map.py -v` and require all grid contracts to pass.
+Expected: 45 records, six singular grid rows at two unique amplitudes (`a=0` and `a=π/14`, each at N=80,160,320), normalized profiles, both target observations per point. Run `test_kick_map.py -v` and require all grid contracts to pass.
 
 ```bash
 git add research/floquet-kick-map/run_kick_map.py research/floquet-kick-map/results.json research/floquet-kick-map/uniform_grid.csv research/floquet-kick-map/profiles.npz research/floquet-kick-map/test_kick_map.py
