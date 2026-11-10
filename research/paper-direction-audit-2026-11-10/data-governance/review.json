@@ -1,0 +1,275 @@
+{
+  "schema": "data-governance-audit-v1",
+  "date": "2026-11-10",
+  "scope": "第 12、16、20、21 份资料、总览与技术复盘；只审计，不重跑计算或实验。",
+  "sources": [
+    {
+      "id": "hydrides_overview",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/12-资料收集-氢化物与验证进展.md",
+      "sha256": "5b3c56d2ea572412b894f6643fb2ab7e31e693ad7755b63e112e51c0fa46f277",
+      "read_only": true
+    },
+    {
+      "id": "batch_overview",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/16-资料收集-总览与下一步.md",
+      "sha256": "243ef403bc372d13b442cc0086807fade7f7f478dba010bbfef2d3b9eeb11167",
+      "read_only": true
+    },
+    {
+      "id": "complete_overview",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/20-资料收集-总览与完整清单.md",
+      "sha256": "314402bf0ae374bd74200c3a8492af8727b53082062d26b3bb7eaf28f2aa4fc7",
+      "read_only": true
+    },
+    {
+      "id": "technical_review",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/21-技术复盘-全领域数据审计.md",
+      "sha256": "992707a8092e65297ebe604d16d5ca203c0f2e0e32a76b43132e16133b7bea05",
+      "read_only": true
+    },
+    {
+      "id": "htsc_pdf",
+      "path": "sources/htsc-2506.03837v2.pdf",
+      "sha256": "b1669a6771c685519a5fbcfb45258dd606b957df23720405663408f59809af01",
+      "read_only": true
+    },
+    {
+      "id": "patsnap_excerpts",
+      "path": "sources/patsnap-excerpts.md",
+      "sha256": "4c43394d89bf1d8eb48e2a9dadb6b7396b2640f1a702f7ae87a19c65bb6d6a10",
+      "read_only": true
+    },
+    {
+      "id": "boron_prb111_excerpts",
+      "path": "sources/boron-prb111-excerpts.md",
+      "sha256": "542a2bac4ad20821e68b87879c7a07a1c10128dabfe3b6e9c8207f5c51973883",
+      "read_only": true
+    },
+    {
+      "id": "main_claims_review",
+      "path": "main-claims/review.json",
+      "sha256": "e9ac6ff0bc88f11b1c2c91ae61ce398a05fc077815803f48669b46536d6f2f45",
+      "read_only": true
+    },
+    {
+      "id": "validation_materials_review",
+      "path": "validation-materials/review.json",
+      "sha256": "17eaa27d30df6849f752e3712d563ebe492ae394ea9c74b1b072ac0755acb491",
+      "read_only": true
+    },
+    {
+      "id": "isotope_dft_review",
+      "path": "isotope-dft/review.json",
+      "sha256": "e04428ca5980171619ca97bd2cc450fa772074cd9edd73f980905a72b1c2d4b4",
+      "read_only": true
+    },
+    {
+      "id": "dmrg_qec_review",
+      "path": "dmrg-qec/review.json",
+      "sha256": "367fada5ec9f68011ea50bb437922d140aa7fcb77bbab7517d8548196332a68d",
+      "read_only": true
+    },
+    {
+      "id": "methods_review",
+      "path": "room-temp-methods/review.json",
+      "sha256": "f30d15d8665644d11957166efaea95d59f7a742037dc697b737704cd15dc9e21",
+      "read_only": true
+    }
+  ],
+  "source_lineage": {
+    "research_program_count": 1,
+    "decision": "四份文档是同一研究纲领的资料、总览与技术复盘层，不是四个独立新理论。"
+  },
+  "directions": [
+    {
+      "id": "claim_lineage",
+      "role": "原始证据、单篇审计和多份总览之间的单一事实源与纠错传播",
+      "closed": "Song 循环确认、Kruglov 和 QEC 重复错误已定位。",
+      "unfinished": "其余总览引文未全审，四份原文尚未同步修订。",
+      "next": "以结构化证据卡为唯一事实源，传播勘误并保留修改记录。"
+    },
+    {
+      "id": "benchmark_scope",
+      "role": "HTSC 的样本、压力、BCS、去泄漏和外部验证范围治理",
+      "closed": "140 个样本、27.3 K 平均值、160 K 上限及排除规则已核实。",
+      "unfinished": "Jiang 原始值、外部模型评估、独立 DFT 验证和数据版本差异未闭合。",
+      "next": "冻结去泄漏划分，分开常压基准与高压候选并公开失败案例。"
+    },
+    {
+      "id": "data_completeness",
+      "role": "从有表格升级为谱函数、结构、输入、日志和不确定度的可复现完整性",
+      "closed": "N_F 单位、Kruglov 文章号、方法混用和 SI 模板边界已核清。",
+      "unfinished": "完整谱函数、结构、赝势、k/q、收敛日志和不确定度仍缺失。",
+      "next": "为每个数据矩阵项绑定原始文件、输入、日志、单位和可复算脚本。"
+    },
+    {
+      "id": "research_update",
+      "role": "B–C、Chen、Floquet 和 QEC 等方向的证据分级与动态更新",
+      "closed": "B–C 预测、Chen 8-leg、Google 和中性原子角色已分开。",
+      "unfinished": "B–C 实验、Chen 更宽系统、Floquet 实验和涡旋量子比特仍未验证。",
+      "next": "按预测、作者报告、独立复现和工程实现滚动更新，不复制旧结论。"
+    }
+  ],
+  "evidence": {
+    "song": {
+      "arxiv": "2510.01273",
+      "onset_tc_k": [
+        271,
+        298
+      ],
+      "direct_meissner_completed": false,
+      "independent_positive_replication": false,
+      "first_four_standards_met": false,
+      "all_five_standards_met": false,
+      "duplicate_overviews_not_independent_evidence": true
+    },
+    "htsc": {
+      "arxiv": "2506.03837v2",
+      "sample_count": 140,
+      "average_tc_k": 27.3,
+      "maximum_tc_k": 160,
+      "high_pressure_excluded": true,
+      "unconventional_excluded": true,
+      "leakage_exclusion_required": true,
+      "open_data_available": true,
+      "open_data_url": "https://github.com/xqh19970407/HTSC-2025",
+      "li2nah17_document_tc_k": 340,
+      "li2nah17_htsc_discussion_tc_k": 297,
+      "li2nah17_outside_benchmark": true,
+      "li2nah17_requires_jiang_source": true
+    },
+    "validation": {
+      "patsnap_secondary_blog": true,
+      "global_consensus_established": false,
+      "blog_threshold_k": 273,
+      "project_theorem_threshold_k": 300
+    },
+    "boron": {
+      "article": "PRB 111, 014510",
+      "compound_count": 96,
+      "ca_b8c_predicted_tc_k": 77.1,
+      "experimental_realization": false
+    },
+    "kruglov": {
+      "article": "024508",
+      "nf_unit": "states/f.u./Ry",
+      "nf_unit_states_per_ev": false,
+      "full_spectrum_and_inputs_open": false
+    },
+    "pressure": {
+      "mixed_method_curve": true,
+      "experimental_curve_established": false
+    },
+    "research_update": {
+      "dmrg": {
+        "chen_legs": 8,
+        "thermodynamic_limit_proven": false,
+        "static_all_controversy_only": false,
+        "code_data_available": true
+      },
+      "qec": {
+        "google_absolute_first_supported": false,
+        "neutral_48_ldpc_distance7": false,
+        "neutral_48_code": "3D [[8,3,2]]"
+      }
+    },
+    "governance": {
+      "completed_status_not_evidence": true,
+      "duplicates_not_independent": true,
+      "all_overview_claims_checked": false
+    }
+  },
+  "corrections": [
+    {
+      "id": "song_circular",
+      "severity": "P0",
+      "finding": "多份总览把 Song 写成迈斯纳已证实和前四项满足。",
+      "action": "改为作者正向预印本；直接 Meissner、独立复现和同行评议未确立，重复总览不是独立证据。"
+    },
+    {
+      "id": "htsc_scope",
+      "severity": "P0",
+      "finding": "常压 HTSC 与 300 GPa 候选混写。",
+      "action": "保留 140／27.3／160 与去泄漏规则；Li₂NaH₁₇ 不纳入，340／297 差异列 Jiang 原文待核。"
+    },
+    {
+      "id": "validation_consensus",
+      "severity": "P1",
+      "finding": "Patsnap 五项标准被当成全球共识。",
+      "action": "降为二手博客框架；273 K 与项目 300 K 分开，具体材料逐项回源。"
+    },
+    {
+      "id": "boron_experiment",
+      "severity": "P1",
+      "finding": "B–C 预测被写成实验里程碑。",
+      "action": "保留 96 个化合物与 CaB₈C 77.1 K 预测，明确尚无实验实现。"
+    },
+    {
+      "id": "kruglov_units",
+      "severity": "P0",
+      "finding": "Kruglov 文章号 224508 和 N_F 的 eV 单位重复错误。",
+      "action": "改为 024508 与 states/f.u./Ry；保留参数表，不冒称全谱和输入开放。"
+    },
+    {
+      "id": "pressure_method",
+      "severity": "P1",
+      "finding": "压力斜率被当成同一方法或纯实验曲线。",
+      "action": "按 Eliashberg／SCDFT／实验分轨，方法一致时再求导。"
+    },
+    {
+      "id": "dmrg_update",
+      "severity": "P1",
+      "finding": "总览只重复 DMRG 全部争议，未吸收 Chen 新结果。",
+      "action": "更新为 Chen 8-leg 基态进展与二维极限未闭合，复用公开代码数据。"
+    },
+    {
+      "id": "qec_copy",
+      "severity": "P0",
+      "finding": "Google 首次与 48×distance-7 LDPC 的复制错误进入总览。",
+      "action": "Google 改为后续里程碑；中性原子改为 48×3D [[8,3,2]]，d=7 Bell 对另列。"
+    },
+    {
+      "id": "data_matrix",
+      "severity": "P1",
+      "finding": "有参数表被当成完整谱、完整输入和可复现数据。",
+      "action": "为每个矩阵项绑定原始谱、结构、输入、日志、单位和不确定度。"
+    },
+    {
+      "id": "completed_status",
+      "severity": "P1",
+      "finding": "归档和完成状态被当成证据闭合，重复引用被当成独立确认。",
+      "action": "状态只表示文件归档；以原始证据卡和独立复核决定完成度。"
+    }
+  ],
+  "open_boundaries": {
+    "meissner_verified": false,
+    "first_four_standards_met": false,
+    "htsc_high_pressure_included": false,
+    "boron_experimental_realization": false,
+    "full_spectrum_open": false,
+    "all_overview_claims_checked": false,
+    "full_repository_audit": false
+  },
+  "figure": {
+    "svg": "data-governance-evidence.svg",
+    "png": "data-governance-evidence.png",
+    "labels": [
+      "140",
+      "27.3 K",
+      "77.1 K",
+      "[[8,3,2]]",
+      "直接 Meissner 未确立"
+    ],
+    "caption": "图 1　总览宣称必须回到原始证据",
+    "insert_after": "证据角色表",
+    "insert_before": "结果解释",
+    "verification_percentage_plotted": false
+  },
+  "verification_scope": {
+    "source_documents_modified": false,
+    "new_dft_dmrg_decoder_or_experiment": false,
+    "jiang_original_value_verified": false,
+    "all_overview_claims_checked": false,
+    "full_repository_audit": false
+  }
+}

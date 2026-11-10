@@ -1,0 +1,619 @@
+=== PDF PAGE 1 ===
+HTSC-2025: A Benchmark Dataset of Ambient-Pressure High-Temperature
+Superconductors for AI-Driven Critical Temperature Prediction
+Xiao-Qi Han 1,2, Ze-Feng Gao1,2,∗ Xin-De Wang1,2, Zhenfeng Ouyang 1,2, Peng-Jie Guo 1,2, and Zhong-Yi Lu 1,2,3
+1. School of Physics and Beijing Key Laboratory of Opto-electronic Functional
+Materials&Micro-nano Devices. Renmin University of China, Beijing 100872, China
+2. Key Laboratory of Quantum State Construction and Manipulation (Ministry of Education),
+Renmin University of China, Beijing 100872, China and
+3. Hefei National Laboratory, Hefei 230088, China
+(Dated: May 19, 2026)
+The discovery of high-temperature superconducting materials holds great significance for human
+industry and daily life. In recent years, research on predicting superconducting transition tem-
+peratures using artificial intelligence (AI) has gained popularity, with most of these tools claiming
+to achieve remarkable accuracy. However, the lack of widely accepted benchmark datasets in this
+field has severely hindered fair comparisons between different AI algorithms and impeded further
+advancement of these methods. In this work, we presentHTSC-2025, an ambient-pressure high-
+temperature superconducting benchmark dataset. This comprehensive compilation encompasses
+theoretically predicted superconducting materials discovered by theoretical physicists from 2023 to
+2025 based on BCS superconductivity theory, including the renowned X 2YH6 system, perovskite
+MXH3 system, M 3XH8 system, cage-like BCN-doped metal atomic systems derived from LaH 10
+structural evolution, and two-dimensional honeycomb-structured systems evolving from MgB 2. In
+addition, we note a range of approaches inspired by physical intuition for designing high-temperature
+superconductors, such as hole doping, the introduction of light elements to form strong covalent
+bonds, and the tuning of spin–orbit coupling. The HTSC-2025 benchmark has been open-sourced
+at[https://github.com/xqh19970407/HTSC-2025]and will be continuously updated. This bench-
+mark holds significant importance for accelerating the discovery of superconducting materials using
+AI-based methods.
+Keywords: Benchmark, Superconductors, Artificial Intelligence
+Introduction.Superconducting materials, character-
+ized by their exceptional property of zero electrical re-
+sistance, have remained a central research focus in con-
+densed matter physics since their discovery in 1911 (when
+mercury exhibited superconductivity at 4.2 K [1]). As
+evidenced by the arXiv [2] preprint repository, scholarly
+publications containing the keyword “Superconductiv-
+ity” have now surpassed 60,000 entries to date, under-
+scoring the sustained scientific significance of this field.
+High-temperature superconducting materials serve as key
+components for energy-efficient transmission [3], mag-
+netic resonance imaging (MRI) [4], nuclear magnetic res-
+onance (NMR) [5], and fusion devices [6]. Therefore,
+the discovery of new high-temperature, or even room-
+temperature, superconductors holds great significance for
+human production and daily life.
+With technological advancements, AI has become an
+essential tool for discovering superconducting materi-
+als [7]. Kamal Choudharyet al.[8] performed large-
+scale calculations on crystal materials databaszes based
+on atomistic line graph neural network (ALIGNN) [9]
+predictions and identified 105 dynamically stable super-
+conductors withT c >5 K. Similarly, Miguel A. L. Mar-
+queset al.[10] applied this approach to hydrogen-based
+systems and discovered 59 superconducting materials,
+among which Li 2CuH6 exhibits a superconducting tran-
+∗ zfgao@ruc.edu.cn
+sition temperature of 86 K. InvDesFlow [11] explored
+new chemical spaces through a crystal generative model,
+demonstrating the feasibility of generative models in su-
+perconducting material discovery. In its latest applica-
+tion, InvDesFlow identified Li 2AuH6 [12] with a super-
+conducting transition temperature of 140 K, which sig-
+nificantly exceeds the McMillan limit and even surpasses
+the liquid nitrogen temperature regime.
+Recently, numerous AI tools have been employed to
+predict superconducting transition temperatures. The
+ALIGNN model has achieved a mean absolute error
+(MAE) of less than 2 K in its predictions [8]. The boot-
+strapped ensemble of tempered equivariant graph neural
+networks (BETE-NET) [13] predictsT c using three mo-
+ments (λ,⟨ω⟩, andω 2) of the spectral functionα 2F(ω),
+reducing the MAE to 2.1 K. The BANS [14] model, based
+on a deep learning framework that incorporates a 3d
+vision transformer (3D-ViT) architecture and attention
+mechanisms, predictsT c by analyzing electronic band
+structures. For systems withT c <10 K, the prediction
+error is less than 2 K, while for high-T c superconductors,
+the error remains below 25 K. The InvDesFlow-AL [15]
+proposes the SuperconGNN model, which employs an
+equivariant graph neural network based on spherical har-
+monics to predict superconducting transition tempera-
+tures. This framework achieves a prediction accuracy
+of less than 2 K for conventional BCS superconductors
+as well. However, these models lack a unified standard
+for evaluating their performance. Developing standard-
+arXiv:2506.03837v2  [cond-mat.supr-con]  18 May 2026
+
+=== PDF PAGE 2 ===
+2
+ized benchmarks is crucial for the advancement of algo-
+rithms. For example, in protein structure prediction, the
+PoseBusters benchmark introduced by AlphaFold3 [16]
+has been widely adopted for assessing various AI tools.
+In this work, we compile superconducting materials
+newly reported during the 2024–2025 period, includ-
+ing X 2YH6 systems, perovskite-type MXH 3 structures,
+fluorite-type M 3XH8 compounds, cage-like BCN-based
+materials evolved from the LaH 10 structure with metal
+atom doping, and two-dimensional honeycomb structures
+derived from MgB 2. Additionally, we highlight several
+approaches based on physical intuition for the inverse
+design of high-Tc superconductors. A retrospective anal-
+ysis of these strategies offers valuable insights for future
+efforts in discovering materials with even higher super-
+conducting transition temperatures.
+Methods.In this section, we present the establishment
+process of HTSC-2025, the testing methodology for AI
+algorithms on this benchmark, and the validation proce-
+dures for AI-discovered novel materials.
+As illustrated in Figure 1(a), our construction pro-
+cess initiates with an extensive literature review of the-
+oretically predicted superconductors. Considering the
+essential requirements of timeliness, high application
+value, and rapid validation for benchmark systems, we
+specifically focus on high-temperature superconducting
+materials discovered since 2024 that exhibit ambient-
+pressure superconductivity. To enable efficient verifica-
+tion of AI performance, we prioritize materials identified
+through BCS superconducting mechanisms, as this selec-
+tion ensures that AI predictions can be rapidly validated
+through density functional theory (DFT) calculations.
+Subsequently, we systematically collect crystal struc-
+ture information (CIF files) and corresponding theoreti-
+cally predicted superconducting transition temperatures
+through multiple approaches: expert manual construc-
+tion, automated script replacement, and direct commu-
+nication with original authors via email. Finally, through
+systematic literature analysis, we categorize these mate-
+rials into specific crystalline systems: X 2YH6-type struc-
+tures, perovskite MXH 3-type structures, M 3XH8-type
+structures, LaH 8-type clathrates, MgB 2-like 2D honey-
+comb lattices, and other structures, thereby establishing
+a structured framework for subsequent AI performance
+evaluation.
+As illustrated in Figure 1(b), prior to evaluating
+AI models on the HTSC-2025 benchmark, the training
+dataset must rigorously exclude these materials to pre-
+vent data leakage. The AI models then convert crys-
+tal data into graph representations or other structured
+formats for input, subsequently predicting the super-
+conductingT c of the materials. To quantify predic-
+tive performance, we calculate the mean absolute error
+(MAE) between model predictions and DFT-computed
+results. For comprehensive evaluation, the test set
+is partitioned according to the aforementioned crys-
+talline systems (X 2YH6, MXH 3, etc.), enabling both
+system-specific MAE calculations and total MAE. Fur-
+thermore, given the greater application value of high-
+temperature superconductors compared to their low-
+temperature counterparts, we introduce an additional
+evaluation metric: the prediction success rate across dif-
+ferent critical temperature intervals. This stratified anal-
+ysis aims to quantify the performance of AI in identifying
+materials within specificT c ranges, with particular focus
+on technologically critical regimes such as the McMillan
+limit and the liquid nitrogen temperature range.
+As shown in Figure 1 (c), the performance of AI mod-
+els is often further validated by their ability to discover
+new high-temperature superconducting materials. For
+AI-recommended candidate superconductors, the BCS
+theory provides a convenient framework for verification
+using first-principles methods, such as those implemented
+in VASP [17] and Quantum Espresso [18]. According
+to BCS theory, superconductivity arises from the forma-
+tion of cooper pairs—electron pairs bound via phonon-
+mediated interactions that overcome coulomb repulsion.
+The collective condensation of these cooper pairs near the
+fermi surface opens a superconducting energy gap, result-
+ing in the characteristic zero-resistance state. To verify
+whether a candidate material follows the BCS supercon-
+ducting mechanism, a systematic first-principles compu-
+tational protocol is employed, including crystal structure
+optimization, phonon spectrum analysis, and electron-
+phonon coupling calculations.
+Results.In this section, we analyze the ambient-
+pressure superconducting materials and their mecha-
+nisms within HTCS-2025. Notably, the HTCS-2025 ex-
+cludes comprehensive literature-reported materials, re-
+taining only representative candidates. This selective cu-
+ration enhances AI model training by ensuring exposure
+to related superconducting materials (outside HTCS-
+2025), thereby improving generalization performance.
+Figure 2(a) presents a histogram of theT c distribu-
+tion, where the vertical axis indicates the number of ma-
+terials within eachT c interval. The HTCS-2025 dataset
+contains a total of 140 samples, with an averageT c of
+27.3 K. Notably, more than half of the crystals exhibit
+aT c exceeding 20 K, highlighting the dataset’s focus on
+evaluating materials with relatively highT c values. Fig-
+ure 2(b) shows a heatmap overlaid on the periodic table,
+in which the color intensity represents the frequency of
+each element appearing in HTCS-2025. Hydrogen is the
+most frequently occurring element, present in 79 com-
+pounds, underscoring the significant potential of hydrides
+in achieving high-temperature superconductivity. Fig-
+ure 2(c) illustrates representative materials from different
+material systems. Table I presents the averageT c, max-
+imumT c, corresponding chemical formula, space group,
+and the number of materials for each material system.
+As illustrated in Figure 2 (c), the discovery of Mg2IrH6
+(Tc = 160 K) [19] has inspired researchers to conduct
+more detailed investigations into X 2YH6 systems. Many
+systems with superconductingT c exceeding 20 K—and
+even reaching up to 70 K—have been discovered. No-
+table examples include Li 2CuH6 (Tc = 86 K), Mg 2PtH6
+
+=== PDF PAGE 3 ===
+3
+Survey of the Literature on 
+Superconducting Materials
+Expert manual construction,
+automated script replacement,
+contacting the authors via email
+HTSC-2025
+HTSC-2025: X₂YH₆, perovskite MXH₃, 
+M₃XH₈, LaH₁₀ clathrates, MgB₂-like 2D 
+honeycombs, and others.
+Performance evaluation of different AI models on the HTSC-2025 benchmark.
+(a)
+(b)
+HTSC-2025
+Further validation of AI-predicted 
+superconducting candidates.
+(c)
+Band Structure
+EPC
+Phonon Spectrum
+FIG. 1. Construction and Application of the HTSC-2025 Benchmark. (a) Workflow of HTSC-2025 benchmark dataset con-
+struction, starting from a literature review of theoretically predicted ambient-pressure high-T c superconductors (since 2024),
+focusing on BCS-type candidates for rapid DFT validation. Crystal structures and Tc values are collected via expert curation,
+scripts, and author correspondence, and categorized into representative structural types for AI evaluation. (b) Evaluation
+pipeline for AI models on HTSC-2025: Training data exclusion prevents leakage,T c prediction from crystal structures, MAE
+analysis (system-specific/overall), success rates acrossT c intervals highlight high-T c identification. (c) First-principles calcu-
+lations for validating AI-predicted new superconducting materials, including crystal structure optimization, phonon spectrum
+evaluation, and electron-phonon coupling analysis.
+(Tc = 78 K), Mg2PdH6 (Tc = 63 K), Mg2RhH6 (Tc = 53
+K) [10], as well as the recently AI-discovered Li2AuH6 (Tc
+= 140 K) [12]. The superconducting mechanisms of these
+structures appear to be similar. The electronic structure
+of X 2YH6 compounds reveals the presence of van hove
+singularities near the fermi level, which may contribute
+to their highT c. In addition, the significant contribution
+of hydrogen 1s orbitals to the electronic density of states
+enables strong coupling between high-frequency phonon
+modes and electrons near the fermi level, thereby enhanc-
+ing the overall electron–phonon coupling strength.
+Inspired by studies on X 2YH6 compounds, fluorite-
+type M 3XH8 compounds (Figure 2 (c)) with theP m ¯3m
+space group, where M = Li, Na, Mg, Al, K, Ca, Ga, Rb,
+Sr, and In, and X denotes 3d, 4d, or 5d transition met-
+als, have also attracted considerable attention. A total
+of 29 dynamically stable compounds have been identified.
+The band structure of Mg 3OsH8 (Tc = 73 K) [20] shows
+three bands crossing the fermi level, indicating its metal-
+lic nature. The electronic density of states of hydrogen
+is uniformly distributed near the fermi level, facilitat-
+ing electron-phonon coupling. Furthermore, the signifi-
+cant phonon density of states contribution from hydro-
+gen atoms in the high-frequency phonon region further
+enhances this coupling.
+The high-throughput computational discovery of
+ZnHCr3 (Tc = 30 K), ZnHAl 3 (Tc = 80 K) [21], and
+MgHCu3 (Tc = 42 K) [22] has sparked increasing in-
+terest in the superconducting properties of cubic per-
+ovskite MXH 3 systems [23]. Miguel A. L. Marqueset
+al.have also identified a series of superconducting mate-
+rials [10, 24, 25] within the MXH 3 family, such as KInH3
+(Tc = 73 K), KAlH 3 (Tc = 52 K), AlHgH 3 (Tc = 28 K),
+PbHgH3 (Tc = 25 K), KCaH3 (Tc = 23 K), and PbOsH 3
+(Tc = 23 K). Recently, Bin Liet al. systematically ex-
+plored perovskite hydrides by selecting alkali and post-
+transition metals as the M-site elements and 3d, 4d, and
+5d transition metals as the X-site elements. Through
+high-throughput calculations, they identified 17 dynam-
+ically stable perovskite hydrides [26]. Notably, SrAuH 3
+(Tc = 132 K) and SrZnH 3 (Tc = 107 K) exhibit excep-
+tionally high superconducting transition temperatures,
+highlighting the great potential of this family of mate-
+rials for achieving high-T c superconductivity. Multiple
+electronic bands cross the fermi level. The 5d orbitals of
+Au contribute significantly near the fermi level, forming a
+
+=== PDF PAGE 4 ===
+4
+Number of Materials
+60
+50
+40
+30
+20
+10
+0
+0 20 40 60 80 100 120 140 160
+Tc
+X2YH6—M2IrH6
+ LaH10—KPbB6C6 X2YMH6—Na2LiAgH6 M2XH8—Mg2OsH8 Others—MgB2MXH3—SrAuH3
+(a) (b)
+(c)
+FIG. 2. Statistics and elemental composition of theHTCS-2025Benchmark. (a) Histogram of superconducting transition
+temperatures (T c) for 140 materials in HTCS-2025, with an averageT c of 27.3 K. (b) Elemental heatmap on the periodic table
+based on occurrence frequency; hydrogen appears most frequently, highlighting the prominence of hydrides. (c) Representative
+high-Tc materials from different material systems.
+pronounced van hove singularity, which may enhance the
+density of states at the fermi level and thereby promote
+superconductivity. More recently, additional supercon-
+ducting materials within this system have continued to
+be discovered [27], such as KScH 3 (Tc = 40 K), RbScH 3
+(Tc = 32 K), and CsScH 3 (Tc = 18 K).
+The dynamical stability of cage-like hydrides such as
+CaH6 [28, 29], YH 6 [30, 31], CeH 10 [32], and LaH 10 [33,
+34] requires high-pressure conditions, which limits their
+synthesis and practical applications. However, the con-
+ventional superconducting mechanisms observed in these
+materials have inspired physicists to explore the possi-
+bility of achieving high-temperature superconductivity
+within BCS-type materials. Given that B and C are
+the lightest elements capable of forming strong covalent
+bonds, and considering the compositional diversity of
+guest metal atoms, significant progress has been made
+in substituting hydrogen in cage-like hydride structures
+with these elements. The hexagonal cage-structured
+XB8C compounds (X = Ca, Sr, Ba) exhibit super-
+conductivity withT c=77.1, 64.4, and 53.2 K, respec-
+tively [35]. First-principles calculations reveal a metal-
+lic ground state characterized by multiple bands crossing
+the fermi level. The coexistence of flat and dispersive
+bands near fermi level leads to an enhanced electron-
+phonon coupling strength, providing a mechanism for the
+observed elevatedT c values. Phonon spectrum calcula-
+tions show that the electron-phonon coupling is mainly
+concentrated in the high-frequency optical modes.
+La(BN)5 and Y(BN) 5 [36] adopt cage-like crystal
+structures analogous to that of LaH 10, in which boron
+and nitrogen atoms substitute for hydrogen to reduce
+the high pressure typically required for maintaining dy-
+namical stability. Their superconducting transition tem-
+peratures are 69 K and 59 K, respectively. A similar
+structure, AlB 6N6, exhibits a predictedT c of 47 K [37].
+Quaternary superconductors, including RbBaB 6C6 (Tc
+= 68 K) [38] and KPbB 6C6 (Tc = 88 K) [39], exhibit
+crystal structures primarily composed of a covalent B–C
+framework, with metal atoms doped as guest species.
+By doping metals into the boron-nitride cage (BN) 5,
+four stable superconductors M(BN) 5 (M = Na, Al, In,
+Tl) are obtained, with correspondingT c of 8 K, 22 K, 15
+K, and 15 K, respectively. The electronic band structure
+of Al(BN)5 [40] reveals multiple bands crossing the fermi
+level, giving rise to both electron-type and hole-type
+fermi surfaces. The electronic states at the fermi sur-
+face are primarily derived from theporbitals of B and N
+atoms, as well as theporbitals of the Al atom, which is fa-
+vorable for Cooper pair formation and enhances electron-
+phonon coupling. Atomic doping is an effective approach
+to enhance the superconducting transition temperature.
+The transition from insulator to metal and the induc-
+tion of high-temperature superconductivity are achieved
+by doping guest atoms (such as Li and Mg) into zinc
+blende-type structures (XY 4Z4, where Y 4Z4 = B 4N4,
+
+=== PDF PAGE 5 ===
+5
+Si4C4, B 4P4) [41]. Notably, LiB 4N4 and MgB 4P4 ex-
+hibit superconducting transition temperatures as high as
+67 K and 45 K, respectively, surpassing that of the con-
+ventional high-temperature superconductor MgB 2. The
+elevatedT c values in these compounds are attributed to
+a high electronic density of states at the fermi level and
+the softening of low-frequency acoustic phonon modes,
+which significantly enhance the electron-phonon coupling
+strength. By introducing potassium atoms into the metal
+borohydride Ca(BH4)2, strong electron-phonon coupling
+between B–Hσmolecular orbitals and bond-stretching
+phonon modes can be achieved. At a doping concentra-
+tion of 0.10, the transition temperature reaches a maxi-
+mum value of 130 K [42].
+In addition to the material systems mentioned above,
+we also observe progress in physics-inspired strategies for
+discovering high-temperature superconductors, such as
+hole doping, introducing light elements to form strong co-
+valent bonds, and tuning spin–orbit coupling. The com-
+pound (BN) 5 exhibits insulating behavior in its pristine
+state. However, hole doping induces a downward shift
+of the fermi level, leading to the metallization of the sp3
+hybridizedσ-bonding band. This electronic transition
+is accompanied by the emergence of high-temperature
+superconductivity with aT c reaching 96 K [43]. With
+increasing hole concentration, although the overall elec-
+tronic structure remains largely unchanged, strong cou-
+pling arises between mid-frequency optical phonon modes
+and theσ-electrons, contributing significantly to the to-
+tal electron–phonon coupling.
+At ambient pressure, MgB 2C2 and hole-doped NaBC
+exhibit potential for high-temperature superconductiv-
+ity [44]. The hole concentration can be tuned via thermal
+deintercalation methods. For instance, low-temperature
+sodium deintercalation in NaBC effectively suppresses
+the formation of defects in BC layers and preserves strong
+electron-phonon coupling. The deintercalated layered
+structures (e.g., Na 3/4BC and Mg 2/3B2C2) remain sta-
+ble under kinetic constraints, and the planarity of the BC
+layers is crucial to superconductivity. Excessive buckling,
+such as in Na 2/3BC whered avg = 0.12 ˚A, disrupts the
+coupling betweenσ-band electrons and high-frequency
+bond-stretching phonons ( ˜65 meV), significantly reduc-
+ing theT c. These hole-doped materials exhibit strong
+electron-phonon coupling strengths (λ∼0.95–1.32) and
+a characteristic two-gap superconducting behavior simi-
+lar to MgB 2, withT c values ranging from 43 K to 88 K,
+the highest being observed in Na 7/8BC.
+The two-dimensional honeycomb structure KB2C2 (Tc
+= 153 K) [45] is designed based on the AlB 2-type struc-
+ture of MgB2 [46]. By introducing carbon atoms to form
+strong covalent B-Cσbonds, a strong coupling between
+electrons and high-frequency in-plane phonon vibrations
+is achieved. Its multigap nature (coexistence ofσandπ
+states) further facilitates cooper pair formation. Biaxial
+tensile strain induces phonon mode softening and signif-
+icantly enhances the electron-phonon coupling constant
+λ, far exceeding that of conventional two-dimensional su-
+perconductors. Similarly, by replacing the B–B surface
+layer of MgB 2 with a B–C layer, the two-dimensional
+material Mg 2B4C2 exhibits high-temperature supercon-
+ductivity, with a predictedT c estimated to be around
+47–48 K [47].
+At ambient pressure, I4mm-Mg 2BN, Cm-Mg 2BN,
+Cmmm-MgB2N, and R3m-Mg2BN exhibit superconduct-
+ing transition temperaturesT c of 31 K, 19 K, 11 K, and
+4.5 K [48], respectively. The low-frequency lattice vibra-
+tions primarily contributed by Mg and B atoms play a
+dominant role in electron-phonon coupling, serving as a
+key factor for superconductivity. Among these phases,
+I4mm-Mg2BN exhibits the strongest EPC (λ= 1.33),
+corresponding to its highestT c (31 K), whereas R3m-
+Mg2BN shows the weakest EPC (λ= 0.38).
+The kagome metals Rh 3M2S2 (M = Pb, In, Tl) ex-
+hibit the coexistence of superconductivity and topolog-
+ical states [49]. These materials are weak superconduc-
+tors, with superconducting transition temperaturesT c of
+1.03 K (Pb), 2.31 K (In), and 5.39 K (Tl), respectively.
+Notably, spin-orbit coupling has a significant influence
+onT c.
+Discussion and Conclusion.Most of AI-based studies
+on superconductingT c prediction have claimed signifi-
+cant improvements in accuracy [8, 13–15]. However, the
+field still lacks a unified, open, and extensible benchmark,
+which hinders fair comparisons between models and lim-
+its further development. In this work, we propose HTSC-
+2025, a benchmark dataset for high-T c superconductors
+under ambient pressure. It features timely coverage (ma-
+terials predicted from 2023 to May 2025), practical value
+(ambient pressure and highT c focus), quick verifiabil-
+ity (compatible with BCS theory and DFT), and broad
+scope (including X2YH6, perovskite-type MXH3, M3XH8
+systems, etc.). We also review a series of physically in-
+spired design strategies, highlighting that hole doping,
+the introduction of light atoms forming strong covalent
+bonds, and spin-orbit coupling engineering can enhance
+Tc. HTSC-2025 is publicly released and will be continu-
+ously maintained. It provides a reproducible and quan-
+titative basis for cross-model evaluation and offers phys-
+ically interpretable templates to support inverse design
+and the discovery of new high-T c superconductors.
+Recently, AI has driven significant progress in the dis-
+covery of high-pressure superconductors. For example,
+Jianget al. [50] developed aT c prediction model under
+high pressure and identified 14 new clathrate hydride
+prototypes. Among them, 11 ternary clathrate struc-
+tures were predicted to exhibitT c values above 250 K
+at 300 GPa, with Li 2NaH17 and ThY 2H24 approaching
+room-temperatureT c (297 K and 303 K, respectively)
+at lower pressures. Wanget al. [51] also identified 144
+high-pressure superconductors using AI tools. However,
+HTSC-2025 does not include these materials. This re-
+flects a balance between practical and academic value:
+while high-pressure superconductors offer insights into
+achieving room-temperatureT c, their extreme pressure
+conditions limit real-world applications. HTSC-2025 also
+
+=== PDF PAGE 6 ===
+6
+TABLE I. Crystalline materials included in theHTSC-2025benchmark.
+Material Class AverageT c (K) MaxT c F ormula Space Group MaxT c (K) Number
+X2YH6 55.4 Mg 2IrH6 F m¯3m160 19
+LaH10 53.0 KPbB 6C6 P m¯3 88 12
+X2YMH6 35.5 Na 2LiAgH6 F m¯3m86 23
+MXH3 35.3 SrAuH 3 P m¯3m132 15
+M3XH8 20.40 Mg 3OsH8 P m¯3m73 18
+Others 7.9 MgB 2 P6 3/mmm39.0 53
+T otal27.3 Mg 2IrH6 F m¯3m160140
+excludes unconventional superconductors, as the lack of
+a unified theoretical framework makes it difficult to verify
+AI-predicted candidates or assess benchmark quality. We
+hope to extend HTSC-2025 to these domains as scientific
+understanding advances.
+In the future, we will continuously expand and up-
+date the HTSC-2025 benchmark, develop related AI algo-
+rithms, and conduct extensive evaluations on this bench-
+mark to facilitate the discovery of high-temperature su-
+perconductors. In addition, we will also explore physics-
+inspired approaches to discover new high-T c supercon-
+ducting materials.
+Open Data and Code Availability.To support the
+discovery of superconducting materials and the evalu-
+ation of AI tools, we open-source this benchmark at
+[https://github.com/xqh19970407/HTSC-2025].
+Acknowledgments.This work was financially sup-
+ported by the National Natural Science Founda-
+tion of China (Grant No.62476278, No.12434009, and
+No.12204533), the National Key R&D Program of China
+(Grants No. 2024YFA1408601), and the Innovation Pro-
+gram for Quantum Science and Technology (Grant No.
+2021ZD0302402). Computational resources have been
+provided by the Physical Laboratory of High Perfor-
+mance Computing at Renmin University of China.
+[1] Onnes H K 1911Commun Theor Phys120
+[2] arXivhttps://arxiv.org/
+[3] Coombs T A, Wang Q, Shah A, Hu J, Hao L, Patel I, Wei H,
+Wu Y, Coombs T, Wang W 2024Nature Reviews Electrical
+Engineering1788
+[4] Yao C and Ma Y 2021iScience24102541
+[5] Pustogow A, Luo Y, Chronister Aet al.2019Nature574
+72–75
+[6] Bruzzone P, Fietz W H, Minervini J V, Novikov M, Yanagi N,
+Zhai Y and Zheng J 2018Nucl. Fusion58103001
+[7] Han X Q, Wang X D, Xu M Y, Feng Z, Yao B W, Guo P J,
+Gao Z F and Lu Z Y 2025Chinese Phys. Lett.42027403
+[8] Choudhary K, Garrity K 2022NPJ Comput. Mater.8244
+[9] Choudhary K, DeCost B 2021NPJ Comput. Mater.7185
+[10] Cerqueira T F T, Fang Y W, Errea I, Sanna A and Marques
+M A L 2024Adv. Funct. Mater.342404043
+[11] Han X Q, Ouyang Z F, Guo P J, Sun H, Gao Z F and Lu Z
+Y 2024Chin. Phys. Lett.42047301
+[12] Ouyang Z F, Yao B W, Han X Q, Guo P J, Gao Z F and Lu
+Z Y 2025Phys. Rev. B111L140501
+[13] Gibson J B, Hire A C, Dee P M, Barrera O, Geisler B,
+Hirschfeld P J and Hennig R G 2025npj Comput. Mater.
+117
+[14] Li J, Fang W Q, Jin S J, Zhang T D, Wu Y L, Xu X D, Liu
+Y and Yao D X 2024arXiv:2409.07721
+[15] Han X Q, Guo P J, Gao Z F, Sun H and Lu Z Y 2025
+arXiv:2505.09203
+[16] Abramson J, Adler J and Dunger J 2024Nature630493–500
+[17] Wang V, Xu N, Liu J C, Tang G and Geng W T 2021Comput.
+Phys. Commun.267108033
+[18] Quantum ESPRESSOhttps://www.quantum-espresso.org/
+[19] Dolui K, Conway L J, Heil C, Strobel T A, Prasankumar R P
+and Pickard C J 2024Phys. Rev. Lett.132166001
+[20] Li B, Fan Y X, Zhai J J, Cao Z S, Zhu C, Cheng J, Liu S L
+and Shi Z X 2025J. Phys. Chem. C1297098–7106
+[21] Liu S M, Shi J J, He Y, Tian C, Zhu Y H, Wang X Q and
+Zhong H X 2024Adv. Funct. Mater.342315386
+[22] Tian C, He Y, Zhu Y H, Du J, Liu S M, Guo W H, Zhong H
+X, Lu J, Wang X Q and Shi J J 2024Adv. Funct. Mater.34
+2304919
+[23] He Y, Lu J, Wang X Q and Shi J J 2023Phys. Rev. B108
+054515
+[24] Cerqueira T F T, Sanna A and Marques M A L 2024Adv.
+Mater.362307085
+[25] Wines D and Choudhary K 2024Mater. Futures3025602
+[26] Li B, Zhu C, Zhai J J, Yin C H, Fan Y X, Cheng J, Liu S L
+and Shi Z X 2024Phys. Rev. B110214504
+[27] Quan H, Shi X B, Han Y L, Zhang P and Wang B T 2025
+Phys. Rev. B111134509
+[28] Wang H, Tse J S, Tanaka K, Iitaka T and Ma Y M 2012Proc.
+Natl. Acad. Sci. USA1096463
+[29] Ma L, Wang K, Xie Y, Yang X, Wang Y Y, Zhou M, Liu H
+Y, Yu X H, Zhao Y S, Wang H B, Liu G T and Ma Y M 2022
+Phys. Rev. Lett.128167001
+[30] Li Y W, Hao J, Liu H Y, Tse J S, Wang Y C and Ma Y M
+2015Sci. Rep.59948
+[31] Troyan I A, Semenok D V, Kvashnin A G, Sadakov A V,
+Sobolevskiy O A, Pudalov V M and Oganov A R 2021Adv.
+Mater.332006832
+[32] Chen W H, Semenok D V, Huang X L, Shu H Y, Li X, Duan D
+F, Cui T and Oganov A R 2021Phys. Rev. Lett.127117001
+[33] Somayazulu M, Ahart M, Mishra A K, Geballe Z M, Baldini
+M, Meng Y, Struzhkin V V and Hemley R J 2019Phys. Rev.
+Lett.122027001
+[34] Drozdov A P, Kong P P, Minkov V S, Besedin S P, Ku-
+zovnikov M A, Mozaffari S, Balicas L, Balakirev F F, Graf
+D E, Prakapenka V B, Greenberg E, Knyazev D A, Tkacz M
+and Eremets M I 2019Nature569528
+[35] Li B, Fan Y X, Yin C H, Zhai J J, Zhu C, Cao Z S, Cheng J
+and Liu S L 2025Phys. Rev. B111014510
+
+=== PDF PAGE 7 ===
+7
+[36] Ding H B, Feng Y J, Jiang M J, Tian H L, Zhong G H, Yang
+C L, Chen X J and Lin H Q 2022Phys. Rev. B106104508
+[37] Li X, Yong X, Wu M, Lu S Y, Liu H Y, Meng S, Tse J S and
+Li Y W 2019J. Phys. Chem. Lett.102554–2560
+[38] Duan Q Z, Zhan L H, Shen J Y, Zhong X and Lu C 2024
+Phys. Rev. B109054505
+[39] Geng N, Hilleke K P, Zhu L, Wang X Y, Strobel T A and
+Zurek E 2023J. Am. Chem. Soc.1451696–1706
+[40] Chen C, Miao J Y, Zuo J N, He S and Lu C 2024Phys. Rev.
+B110174514
+[41] Jiang Q W, Chen L, Ma H, Li C D, Duan D F and Cui T 2025
+Inorg. Chem.64[DOI: 10.1021/acs.inorgchem.4c04932]
+[42] Di Cataldo S and Boeri L 2023Phys. Rev. B107L060501
+[43] Han Y L, Jiang K Y, Wang B T, Zhang P and Lu H Y 2025
+Phys. Rev. B111094520
+[44] Tomassetti C R, Gochitashvili D, Renskers C, Margine E R
+and Kolmogorov A N 2024Phys. Rev. Mater.8114801
+[45] Liu H D, Fu X P, Fu Z G, Lu H Y and Zhang P 2025Phys.
+Rev. B111184502
+[46] Nagamatsu J, Nakagawa N, Muranaka T, Zenitani Y and
+Akimitsu J 2001Nature41063
+[47] Singh S, Romero A H, Mella J D, Eremeev V, Mu˜ noz E,
+Alexandrova A N, Rabe K M, Vanderbilt D and Mu˜ noz F
+2022npj Quantum Mater.737
+[48] Jiang J J, Xue Y M, Zha L L, Yao S W, Wang B, Hu W J,
+Peng L, Shi T T, Chen J, Liu X L and Lin J 2025J. Mater.
+Chem. C
+[49] Liu W Y, Wang X J, Li Y Q, Wei Y H, Zhong M M and Kuang
+M Q 2025Supercond. Sci. Technol.38045024
+[50] Jiang B, Luo X S, Sun Y, Zhong X, Lv J, Xie Y, Ma Y M and
+Liu H Y 2025Phys. Rev. B111054505
+[51] Wang X Y, Zhang C Q, Wang Z Y, Liu H Y, Lv J, Wang H,
+E W N and Ma Y M 2025arXiv:2502.16558
