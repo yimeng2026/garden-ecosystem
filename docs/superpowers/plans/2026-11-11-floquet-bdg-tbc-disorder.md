@@ -13,7 +13,7 @@
 - Branch: `research/floquet-bdg-topology`; worktree: `.worktrees/room-temp-isotope-dft-audit`; no merge or prior-evidence edits.
 - Admission requires `results.json.status == "clean_floquet_baseline_passed"` and `static.passed == true`.
 - `N=80`, seeds `0,1,2,3`, strengths `0.05,0.1,0.2`; `beta=default_rng(20261111+seed).random(320)[:N]`.
-- Disordered full-kick matrix parameter is `2*r*beta`; each separate uniform-mean control uses `2*r*np.ones(N)`.
+- Disordered K-matrix parameter is `r*beta`; each separate uniform-mean control uses `r*np.ones(N)`. The half-kick rotation angle is `r*beta`, and the full symmetric rotation angle is `2*r*beta`; these two roles are not conflated. Superseded double-parameter checkpoints are retained under `diagnostics/double-kick/`.
 - Winding uses nominal theta steps `0.05,0.025`, `gap_tolerance=1e-8`, condition limit `1e12`, integer and mesh tolerance `1e-3`.
 - Every raw failure, nonconvergence, and undefined result is retained. No seed changes, post-hoc threshold tuning, eigenvalue averaging, or integer fabrication.
 - Endpoint candidates remain observables, not a substitute for winding. A result is not called topologically robust from a majority vote alone.
@@ -45,7 +45,8 @@ class DisorderContractTests(unittest.TestCase):
         expected = np.random.default_rng(20261111).random(320)[:80]
         np.testing.assert_array_equal(beta, expected)
         row = evaluate_realization(8, 0, 0.05, "disorder", (0.2, 0.1))
-        self.assertEqual(row["full_kick_parameter"], "2*r*beta")
+        self.assertEqual(row["full_kick_parameter"], "K parameter r*beta; full symmetric rotation angle 2*r*beta")
+        self.assertLess(row["half_kick_convention_error"], 1e-12)
         self.assertEqual(row["kind"], "disorder")
         self.assertEqual(row["seed"], 0)
 
@@ -69,7 +70,7 @@ Run `python research/floquet-bdg-tbc/test_disorder.py -v`; expected failure is `
 `require_baseline` loads the stored file and raises unless both baseline flags pass. `beta_for` delegates to the existing verified `beta_sequence`. `evaluate_realization` rejects unknown `kind`, creates either the fixed disordered beta or a new ones vector, and calls:
 
 ```python
-case = {"n": n, "mu0": np.full(n, 2.5), "mu1": 2*strength*beta,
+case = {"n": n, "mu0": np.full(n, 2.5), "mu1": strength*beta,
         "omega": 7.0, "gamma": 1.0, "delta": 1.0}
 zero = winding_convergence(case, 0.0, nominal_steps, keep_curve=False)
 pi = winding_convergence(case, np.pi, nominal_steps, keep_curve=False)

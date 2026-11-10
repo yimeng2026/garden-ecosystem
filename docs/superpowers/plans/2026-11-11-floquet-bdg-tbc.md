@@ -17,7 +17,7 @@
 - Use `phi=-arg(lambda)`, `phi_eff=2 epsilon-|phi|` for valence and `|phi|-2 pi` for conduction; the fractional inverse factor is `exp(+i phi_eff t/T)` in a unitary Schur basis. The conduction shift is required by the static half-period chiral limits.
 - `gap_tolerance=1e-8`, block condition limit `1e12`, nominal theta steps `0.05` and `0.025`, quantization and mesh-difference tolerances `1e-3`.
 - Static baselines precede clean kicked; any failure stops promotion. No integer is manufactured by rounding a nonconverged result.
-- Existing kicked endpoint reference is `mu0=2.5, mu1=0.2, omega=7, gamma=delta=1`, with `p0=p_pi=1`; disorder full-kick amplitudes are `2*r*beta`, not `r*beta`.
+- Existing kicked endpoint reference is `mu0=2.5, mu1=0.2, omega=7, gamma=delta=1`, with `p0=p_pi=1`. Disorder uses K-matrix parameter `r*beta`; its half-kick rotation angle is `r*beta` and full symmetric rotation angle is `2*r*beta`. The superseded `2*r*beta` matrix parameter is retained only as a labeled diagnostic.
 - No `axiom`, `postulate`, `sorry`, `admit`, `native_decide`, fabricated result, or replacement of failed samples.
 
 ## File Map
@@ -186,7 +186,7 @@ return {"status": "clean_floquet_baseline_passed", "static": static,
         "clean": clean, "disorder": run_disorder()}
 ```
 
-For each `n=80`, seed `0..3`, and `r=(0.05,0.1,0.2)`, use `beta=np.random.default_rng(20261111+seed).random(320)[:n]`, `mu0=np.full(n,2.5)`, and full-kick matrix onsite parameters `2*r*beta`. Save separate uniform-mean controls with `2*r*np.ones(n)`. Save each raw winding and rejection; do not average eigenvalues or substitute a uniform chain for a disordered one.
+For each `n=80`, seed `0..3`, and `r=(0.05,0.1,0.2)`, use `beta=np.random.default_rng(20261111+seed).random(320)[:n]`, `mu0=np.full(n,2.5)`, and K-matrix onsite parameters `r*beta`. Save separate uniform-mean controls with `r*np.ones(n)`. The full symmetric rotation angle is `2*r*beta`, but it is not the K-matrix parameter. Save each raw winding and rejection; do not average eigenvalues or substitute a uniform chain for a disordered one.
 
 - [ ] **Step 3: Execute the gate and preserve its outcome**
 

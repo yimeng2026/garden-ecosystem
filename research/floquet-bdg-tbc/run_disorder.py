@@ -14,9 +14,10 @@ ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT.parent / "floquet-bdg-convention"))
 sys.path.insert(0, str(ROOT.parent / "floquet-bdg-disorder"))
 
+from scipy.linalg import expm  # noqa: E402
 from convention_model import quasienergy_spectrum  # noqa: E402
-from disorder_model import beta_sequence, disordered_floquet, observe_candidate  # noqa: E402
-from tbc_model import winding_convergence  # noqa: E402
+from disorder_model import beta_sequence, chemical_kick, disordered_floquet, observe_candidate  # noqa: E402
+from tbc_model import twisted_majorana_k, winding_convergence  # noqa: E402
 
 STRENGTHS = (0.05, 0.1, 0.2)
 SEEDS = (0, 1, 2, 3)
@@ -46,11 +47,15 @@ def evaluate_realization(n, seed, strength, kind, nominal_steps):
     case = {
         "n": n,
         "mu0": np.full(n, 2.5),
-        "mu1": 2 * strength * beta,
+        "mu1": strength * beta,
         "omega": 7.0,
         "gamma": 1.0,
         "delta": 1.0,
     }
+    half_kick = expm(-2 * twisted_majorana_k(strength * beta, 0.0, gamma=0.0, delta=0.0))
+    half_kick_error = float(np.max(np.abs(half_kick - chemical_kick(strength * beta))))
+    if half_kick_error > 1e-12:
+        raise RuntimeError("TBC and open-chain half-kick conventions disagree")
     zero = winding_convergence(case, 0.0, nominal_steps, keep_curve=False)
     pi = winding_convergence(case, np.pi, nominal_steps, keep_curve=False)
     u, period = disordered_floquet(n, 2.5, beta, strength, 7.0, 1.0, 1.0)
@@ -64,7 +69,8 @@ def evaluate_realization(n, seed, strength, kind, nominal_steps):
         "strength": float(strength),
         "kind": kind,
         "beta_sha256": sha256_bytes(beta.tobytes()),
-        "full_kick_parameter": "2*r*beta",
+        "full_kick_parameter": "K parameter r*beta; full symmetric rotation angle 2*r*beta",
+        "half_kick_convention_error": half_kick_error,
         "zero": zero,
         "pi": pi,
         "endpoint": endpoint,
@@ -206,6 +212,7 @@ def merge_checkpoints(paths):
             or data.get("n") != 80
             or len(data.get("rows", [])) != 8
             or {(row["seed"], row["kind"]) for row in data["rows"]} != expected
+            or any(row.get("half_kick_convention_error", np.inf) > 1e-12 for row in data["rows"])
         ):
             raise ValueError("incomplete preregistered disorder checkpoints")
         rows.extend(data["rows"])
@@ -219,7 +226,7 @@ def merge_checkpoints(paths):
         "strengths": list(STRENGTHS),
         "seeds": list(SEEDS),
         "random_protocol": "default_rng(20261111+seed).random(320)[:80]",
-        "full_kick_parameter": "2*r*beta; uniform control uses 2*r*ones",
+        "full_kick_parameter": "K parameter r*beta; full symmetric rotation angle 2*r*beta; mean control uses r*ones",
         "baseline_sha256": baseline_hashes,
         "checkpoint_sha256": {path.name: sha256_bytes(path.read_bytes()) for path in paths},
         "realizations": rows,

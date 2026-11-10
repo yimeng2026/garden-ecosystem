@@ -28,7 +28,8 @@ class DisorderContractTests(unittest.TestCase):
         expected = np.random.default_rng(20261111).random(320)[:80]
         np.testing.assert_array_equal(beta, expected)
         row = evaluate_realization(8, 0, 0.05, "disorder", (0.2, 0.1))
-        self.assertEqual(row["full_kick_parameter"], "2*r*beta")
+        self.assertEqual(row["full_kick_parameter"], "K parameter r*beta; full symmetric rotation angle 2*r*beta")
+        self.assertLess(row["half_kick_convention_error"], 1e-12)
         self.assertEqual(row["kind"], "disorder")
         self.assertEqual(row["seed"], 0)
         self.assertEqual(row["beta_sha256"], hashlib.sha256(beta_for(0, 8).tobytes()).hexdigest())
