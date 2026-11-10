@@ -1,24 +1,101 @@
 {
-  "schema": "floquet-bdg-tbc-baseline-verification-v1",
-  "recorded_utc": "2026-11-10T22:03:46.076942+00:00",
+  "schema": "floquet-bdg-tbc-complete-verification-v2",
+  "recorded_utc": "2026-11-10T23:18:03.382029+00:00",
   "all_passed": true,
-  "test_count": 9,
+  "test_counts": {
+    "baseline": 9,
+    "disorder": 8,
+    "report": 5
+  },
   "commands": [
     {
-      "script": "test_tbc.py",
-      "arguments": [
+      "label": "baseline_tests",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_tbc.py",
         "-v"
       ],
       "exit_code": 0
     },
     {
-      "script": "run_tbc.py",
-      "arguments": [],
+      "label": "baseline_compute",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\run_tbc.py"
+      ],
       "exit_code": 0
     },
     {
-      "script": "verify_tbc.py",
-      "arguments": [],
+      "label": "baseline_independent",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\verify_tbc.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "disorder_tests",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_disorder.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "disorder_checkpoint_integrity",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\run_disorder.py",
+        "--merge-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "disorder_independent_recheck",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\verify_disorder.py",
+        "--nominal-step",
+        "0.05",
+        "--output",
+        "disorder_recheck.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_data_and_figures",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\build_disorder_report.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_structure_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-TBC无序对照报告.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_word_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_report.py",
+        "-v"
+      ],
       "exit_code": 0
     }
   ],
@@ -30,20 +107,52 @@
     "cache_root": "D:\\kimi-cache\\tbc"
   },
   "sha256": {
-    "results.json": "92b90537a94c9f75e0d61a45e76218b5ec8224956265a6596226dbf0f812c2e9",
+    "results.json": "02ba343f5f804220436d5b6e5b7e22618c8e6d6278e585f06bfb700d2f21e193",
     "independent_verification.json": "e0c4097f897646bb63f97c4699e5164b3302838747e5f955d093b507d315abb7",
-    "run.log": "9b3c08e3ec108468a4c03151f47139ef58f7321517afec2b7ab7cecbf5cccb2a",
+    "disorder_results.json": "454ec9a5012a5196cba1b310ad0e7d80816082926268e318b35d52e05ad16e4a",
+    "disorder_results.csv": "4fee714b29a81b36222e19598c0669dcfa51c4c08c274cd9d2cd07cb5a79be3e",
+    "disorder_r0p05.json": "1a7ebc415f8ce3d6a0b3dd613e91f6757fd99cf3ff1aba67fc1558e632bbc582",
+    "disorder_r0p10.json": "a0ad419915819786d3be0bbfcd533a9dbe5606d813373d743d7b5621535f151c",
+    "disorder_r0p20.json": "41b0b4bffe492c2b738449faa46f721e4a9d2f193afa4c98af712db40a7fed57",
+    "disorder_independent.json": "f7a053795fcb58efdd76ff2c37a8d7475b211af478ecb660eb76764ac6a62786",
+    "disorder_recheck.json": "854609dd144c735764648b123eb8ee019393eafe313dbcf2f03aec754ce92f5b",
+    "disorder-winding.png": "19fa91bec73823429327b921b6d153a97de17a2d1d034282657b33522da2b321",
+    "disorder-gaps.png": "1a77233603959221fcc987a0322253e2cd314b08908dedd73bfc82b87b29b7f1",
+    "REPORT.md": "f1c7d2678b1c0082fef1d57840171fc592b8e9670b0fd6d02d42e19e873ec9ed",
+    "Floquet-BdG-TBC无序对照报告.docx": "039dbf5b4bd73e90492932bc5ec98d32c644948da5af730fd9087fd80f222939",
+    "word-qa/report.json": "92a0f7bf561ce940ddd27bb580d67ce585f648f8c15e7f202f5a0b61eb8b6812",
+    "run.log": "c481c3ddd78c847c808c3a8aa90d8bc8ce4f4bedb70c2567ac74e2bf1612aadf",
+    "ERRATA.md": "e435f0115edbb8fd7b26218515204d1501e2db94ef94935c1b15cc1bddb6b229",
     "tbc_model.py": "81ae7f8230c26800c611ac5f92e26739e27a9e24a4f7c6bbfabf531944162b3a",
     "test_tbc.py": "b9c6d07e0571a059bf9af0f8179fd0e1fa18e43673f733eb1db958aa1dfb841f",
     "run_tbc.py": "ca2f38ef0623a7b941d9240b795a7995ffd226083a73c681c42469fa821d59ff",
-    "verify_tbc.py": "d5da7bb60bc8dff5e4c9c08ebbed6bf0386af1412874f5ad7f4213a1ce504b16"
+    "verify_tbc.py": "d5da7bb60bc8dff5e4c9c08ebbed6bf0386af1412874f5ad7f4213a1ce504b16",
+    "run_disorder.py": "aca147fff35ee3c60ae7b87fb94c305407ada820e7e6499435f9b88f0dac14e7",
+    "test_disorder.py": "61c45ce410652f1be2555224e7f8eed3d192e8048e229320fc9d85efc6e2cc5a",
+    "verify_disorder.py": "658054f1d44a3c873b232b3f8524183903a0a49d4dd9086d23d521e12e37ec88",
+    "build_disorder_report.py": "11bc3eb37f4a0a8657bfb902687b55e8bed5f07230963849603f3a928aa32884",
+    "build_report.js": "9a7d3463ca8a54ec48f659b294a59feb02909ec05529ed3af13eb917a961e276",
+    "record_word_qa.py": "05923bfe7343998bcf1da68ee4e0fb175f9863a924968eb614c94b05fdb85168",
+    "test_report.py": "ae5a094729fc9aac80c7ad935bb9277281cb73dc16ecfaf1e061a371a263cbda"
   },
   "observed_status": "clean_floquet_baseline_passed",
+  "disorder_status": "complete_raw_results",
   "independent_passed": true,
+  "recheck_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 6,
+  "main_winding_valid_count": 46,
+  "main_winding_not_converged_count": 2,
   "scope": {
     "static_baseline_checked": true,
     "clean_kicked_baseline_checked": true,
-    "disorder_evaluated": false,
+    "disorder_evaluated": true,
+    "independent_disorder_realizations": 12,
+    "paired_control_rows": 12,
+    "uniform_controls_are_independent_random_samples": false,
+    "double_kick_diagnostic_excluded": true,
+    "old_disorder_assessment": "not_supported",
+    "old_full_size_rule_status": "inconclusive_preserved",
     "thermodynamic_limit_proof": false,
     "interactions_or_dissipation": false,
     "material_tc_or_experiment": false

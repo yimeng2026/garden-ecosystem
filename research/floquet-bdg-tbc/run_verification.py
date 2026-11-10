@@ -1,4 +1,4 @@
-"""Reproduce the static and clean TBC baselines with logs and SHA-256 manifests."""
+"""Reproduce TBC baselines, corrected disorder evidence, and bound report artifacts."""
 
 import datetime
 import hashlib
@@ -15,6 +15,8 @@ import scipy
 ROOT = Path(__file__).resolve().parent
 WORKTREE = ROOT.parents[1]
 CACHE = Path("D:/kimi-cache/tbc")
+DOCX_PY = Path("C:/Users/一梦/AppData/Roaming/kimi-desktop/daimon-share/daimon/runtime/kimi-code/home/plugins/managed/kimi-word/skills/kimi-word/scripts/docx.py")
+DOCX = ROOT / "Floquet-BdG-TBC无序对照报告.docx"
 
 
 def sha256(path):
@@ -22,90 +24,89 @@ def sha256(path):
 
 
 def main():
-    for name in ("tmp", "pycache"):
+    for name in ("tmp", "pycache", "matplotlib", "npm"):
         (CACHE / name).mkdir(parents=True, exist_ok=True)
     env = os.environ.copy()
     env.update({
-        "TMP": str(CACHE / "tmp"),
-        "TEMP": str(CACHE / "tmp"),
+        "TMP": str(CACHE / "tmp"), "TEMP": str(CACHE / "tmp"),
         "PYTHONPYCACHEPREFIX": str(CACHE / "pycache"),
-        "OPENBLAS_NUM_THREADS": "1",
-        "OMP_NUM_THREADS": "1",
+        "MPLCONFIGDIR": str(CACHE / "matplotlib"), "NPM_CONFIG_CACHE": str(CACHE / "npm"),
+        "OPENBLAS_NUM_THREADS": "1", "OMP_NUM_THREADS": "1",
+        "PATH": r"C:\Program Files\nodejs" + os.pathsep + env.get("PATH", ""),
     })
-    scripts = [
-        ("test_tbc.py", ["-v"]),
-        ("run_tbc.py", []),
-        ("verify_tbc.py", []),
+    commands = [
+        ("baseline_tests", [sys.executable, str(ROOT / "test_tbc.py"), "-v"], 120),
+        ("baseline_compute", [sys.executable, str(ROOT / "run_tbc.py")], 120),
+        ("baseline_independent", [sys.executable, str(ROOT / "verify_tbc.py")], 180),
+        ("disorder_tests", [sys.executable, str(ROOT / "test_disorder.py"), "-v"], 120),
+        ("disorder_checkpoint_integrity", [sys.executable, str(ROOT / "run_disorder.py"), "--merge-only"], 60),
+        ("disorder_independent_recheck", [sys.executable, str(ROOT / "verify_disorder.py"), "--nominal-step", "0.05", "--output", "disorder_recheck.json"], 180),
+        ("report_data_and_figures", [sys.executable, str(ROOT / "build_disorder_report.py")], 60),
+        ("docx_structure_gate", [sys.executable, str(DOCX_PY), "validate", str(DOCX)], 120),
+        ("visual_hash_binding", [sys.executable, str(ROOT / "record_word_qa.py")], 60),
+        ("report_contracts", [sys.executable, str(ROOT / "test_report.py"), "-v"], 60),
     ]
     rows, logs = [], []
-    for script, arguments in scripts:
-        command = [sys.executable, str(ROOT / script), *arguments]
-        completed = subprocess.run(
-            command,
-            cwd=WORKTREE,
-            env=env,
-            text=True,
-            encoding="utf-8",
-            capture_output=True,
-            timeout=240,
-        )
+    for label, command, timeout in commands:
+        completed = subprocess.run(command, cwd=WORKTREE, env=env, text=True, encoding="utf-8", capture_output=True, timeout=timeout)
         output = completed.stdout + completed.stderr
-        logs.extend([
-            f"$ python research/floquet-bdg-tbc/{script}" + (" " + " ".join(arguments) if arguments else ""),
-            output.rstrip(),
-            f"exit_code={completed.returncode}",
-        ])
-        rows.append({
-            "script": script,
-            "arguments": arguments,
-            "exit_code": completed.returncode,
-        })
+        logs.extend([f"$ {label}: {' '.join(command)}", output.rstrip(), f"exit_code={completed.returncode}"])
+        rows.append({"label": label, "command": command, "exit_code": completed.returncode})
         if completed.returncode != 0:
             break
-    passed = len(rows) == len(scripts) and all(row["exit_code"] == 0 for row in rows)
+    passed = len(rows) == len(commands) and all(row["exit_code"] == 0 for row in rows)
     (ROOT / "run.log").write_text("\n".join(logs) + "\n", encoding="utf-8")
+    result_data = json.loads((ROOT / "results.json").read_text(encoding="utf-8"))
+    disorder = json.loads((ROOT / "disorder_results.json").read_text(encoding="utf-8"))
+    independent = json.loads((ROOT / "disorder_independent.json").read_text(encoding="utf-8"))
+    recheck = json.loads((ROOT / "disorder_recheck.json").read_text(encoding="utf-8")) if (ROOT / "disorder_recheck.json").exists() else {}
+    qa = json.loads((ROOT / "word-qa" / "report.json").read_text(encoding="utf-8"))
+    old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
-        "results.json",
-        "independent_verification.json",
-        "run.log",
-        "tbc_model.py",
-        "test_tbc.py",
-        "run_tbc.py",
-        "verify_tbc.py",
+        "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
+        "disorder_r0p05.json", "disorder_r0p10.json", "disorder_r0p20.json", "disorder_independent.json",
+        "disorder_recheck.json", "disorder-winding.png", "disorder-gaps.png", "REPORT.md",
+        "Floquet-BdG-TBC无序对照报告.docx", "word-qa/report.json", "run.log", "ERRATA.md",
+        "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
+        "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
+        "record_word_qa.py", "test_report.py",
     ]
-    result_data = json.loads((ROOT / "results.json").read_text(encoding="utf-8")) if (ROOT / "results.json").exists() else {}
-    independent = json.loads((ROOT / "independent_verification.json").read_text(encoding="utf-8")) if (ROOT / "independent_verification.json").exists() else {}
+    valid_count = sum(row[target]["status"] == "ok" for row in disorder["realizations"] for target in ("zero", "pi"))
+    nc_count = sum(row[target]["status"] == "not_converged" for row in disorder["realizations"] for target in ("zero", "pi"))
     record = {
-        "schema": "floquet-bdg-tbc-baseline-verification-v1",
+        "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_count": 9 if passed else None,
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None},
         "commands": rows,
         "environment": {
-            "python": platform.python_version(),
-            "numpy": np.__version__,
-            "scipy": scipy.__version__,
-            "openblas_num_threads": "1",
-            "cache_root": str(CACHE),
+            "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
+            "openblas_num_threads": "1", "cache_root": str(CACHE),
         },
         "sha256": {name: sha256(ROOT / name) for name in artifacts if (ROOT / name).exists()},
         "observed_status": result_data.get("status"),
+        "disorder_status": disorder.get("status"),
         "independent_passed": independent.get("passed"),
+        "recheck_passed": recheck.get("passed"),
+        "visual_review_status": qa.get("manualReview", {}).get("status"),
+        "rendered_pages": qa.get("rendered"),
+        "main_winding_valid_count": valid_count,
+        "main_winding_not_converged_count": nc_count,
         "scope": {
-            "static_baseline_checked": passed,
-            "clean_kicked_baseline_checked": passed,
-            "disorder_evaluated": False,
-            "thermodynamic_limit_proof": False,
-            "interactions_or_dissipation": False,
+            "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
+            "disorder_evaluated": passed, "independent_disorder_realizations": 12,
+            "paired_control_rows": 12, "uniform_controls_are_independent_random_samples": False,
+            "double_kick_diagnostic_excluded": True,
+            "old_disorder_assessment": old_disorder["assessment"]["status"],
+            "old_full_size_rule_status": old_disorder["assessment"]["full_size_rule_status"],
+            "thermodynamic_limit_proof": False, "interactions_or_dissipation": False,
             "material_tc_or_experiment": False,
         },
         "log": "run.log",
     }
-    (ROOT / "verification.json").write_text(
-        json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
+    (ROOT / "verification.json").write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("\n".join(logs))
-    print("overall", "passed" if passed else "failed")
+    print("overall", "passed" if passed else "failed", "valid_winding", valid_count, "not_converged", nc_count)
     return 0 if passed else 1
 
 

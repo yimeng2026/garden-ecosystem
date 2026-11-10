@@ -1,4 +1,4 @@
-$ python research/floquet-bdg-tbc/test_tbc.py -v
+$ baseline_tests: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_tbc.py -v
 test_clean_kicked_matches_existing_endpoint_counts (__main__.TBCCleanBaselineTests.test_clean_kicked_matches_existing_endpoint_counts) ... ok
 test_endpoint_and_half_period_chiral_blocks (__main__.TBCPeriodizationTests.test_endpoint_and_half_period_chiral_blocks) ... ok
 test_zero_kick_zero_gap_is_rejected (__main__.TBCPeriodizationTests.test_zero_kick_zero_gap_is_rejected) ... ok
@@ -10,11 +10,11 @@ test_disordered_onsite_terms_and_chiral (__main__.TBCStructureTests.test_disorde
 test_step_origin_and_unitarity (__main__.TBCStructureTests.test_step_origin_and_unitarity) ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 11.525s
+Ran 9 tests in 11.554s
 
 OK
 exit_code=0
-$ python research/floquet-bdg-tbc/run_tbc.py
+$ baseline_compute: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_tbc.py
 static_passed True
 topological_omega7 zero {'status': 'ok', 'value': 0.9998955646717206, 'nearest_integer': 1, 'min_bulk_gap': 1.5636629649360587, 'mesh_difference': 0.00030995861435489935, 'integer_residual': 0.00041439394263431684}
 topological_omega7 pi {'status': 'ok', 'value': 5.028595411767406e-31, 'nearest_integer': 0, 'min_bulk_gap': 1.2469796037174665, 'mesh_difference': 6.061253398112509e-32, 'integer_residual': 5.634720751578657e-31}
@@ -27,7 +27,7 @@ clean_reference {'p0': 1, 'p_pi': 1}
 status clean_floquet_baseline_passed
 results C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\results.json
 exit_code=0
-$ python research/floquet-bdg-tbc/verify_tbc.py
+$ baseline_independent: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_tbc.py
 static_topological_zero {"status": "ok", "method": "independent Schur reconstruction and unwrapped det(block) phase", "nominal_step": 0.00625, "actual_step": 0.006251925678785658, "points": 1005, "raw_signed": -1.0, "value": 1.0, "nearest_integer": 1, "integer_residual": 0.0, "min_bulk_gap": 1.5636629649360587, "max_symmetry_error": 1.5865879683389802e-15, "max_block_condition": 1.0000000000000047, "passed": true}
 comparison {"stored_nearest_integer": 1, "independent_nearest_integer": 1, "absolute_raw_difference": 0.0, "agrees": true}
 static_topological_pi {"status": "ok", "method": "independent Schur reconstruction and unwrapped det(block) phase", "nominal_step": 0.00625, "actual_step": 0.006251925678785658, "points": 1005, "raw_signed": -0.0, "value": 0.0, "nearest_integer": 0, "integer_residual": 0.0, "min_bulk_gap": 1.246979603717466, "max_symmetry_error": 1.6232221041664075e-15, "max_block_condition": 1.000000000000002, "passed": true}
@@ -37,4 +37,63 @@ comparison {"stored_nearest_integer": 1, "independent_nearest_integer": 1, "abso
 clean_pi_n80 {"status": "ok", "method": "independent Schur reconstruction and unwrapped det(block) phase", "nominal_step": 0.00625, "actual_step": 0.006251925678785658, "points": 1005, "raw_signed": -1.0, "value": 1.0, "nearest_integer": 1, "integer_residual": 0.0, "min_bulk_gap": 0.04161338552797906, "max_symmetry_error": 1.3802783892515045e-14, "max_block_condition": 1.0000000000000073, "passed": true}
 comparison {"stored_nearest_integer": 1, "independent_nearest_integer": 1, "absolute_raw_difference": 0.0, "agrees": true}
 independent_passed True
+exit_code=0
+$ disorder_tests: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_disorder.py -v
+test_baseline_failure_blocks_promotion (__main__.DisorderContractTests.test_baseline_failure_blocks_promotion) ... ok
+test_current_baseline_admits_disorder (__main__.DisorderContractTests.test_current_baseline_admits_disorder) ... ok
+test_fixed_sequence_and_full_kick_amplitude (__main__.DisorderContractTests.test_fixed_sequence_and_full_kick_amplitude) ... ok
+test_incremental_checkpoint_resumes_without_recomputing (__main__.DisorderContractTests.test_incremental_checkpoint_resumes_without_recomputing) ... ok
+test_independent_vector_mu_reconstruction (__main__.DisorderContractTests.test_independent_vector_mu_reconstruction) ... ok
+test_partial_checkpoints_cannot_complete (__main__.DisorderContractTests.test_partial_checkpoints_cannot_complete) ... ok
+test_strength_checkpoint_row_counts (__main__.DisorderContractTests.test_strength_checkpoint_row_counts) ... ok
+test_uniform_control_is_separate (__main__.DisorderContractTests.test_uniform_control_is_separate) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.557s
+
+OK
+exit_code=0
+$ disorder_checkpoint_integrity: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_disorder.py --merge-only
+merged_realizations 24
+summary [{"strength": 0.05, "kind": "disorder", "target": "zero", "total": 4, "valid_winding_count": 2, "undefined_count": 0, "not_converged_count": 2, "nearest_integer_frequencies": {"1": 2, "None": 2}, "median_raw_value": 0.9998408978799456, "minimum_bulk_gap": 0.0009520417962027572, "endpoint_joint_pass_count": 0}, {"strength": 0.05, "kind": "disorder", "target": "pi", "total": 4, "valid_winding_count": 4, "undefined_count": 0, "not_converged_count": 0, "nearest_integer_frequencies": {"1": 4}, "median_raw_value": 0.9998586264126477, "minimum_bulk_gap": 0.01199512208629988, "endpoint_joint_pass_count": 0}, {"strength": 0.05, "kind": "uniform_mean", "target": "zero", "total": 4, "valid_winding_count": 4, "undefined_count": 0, "not_converged_count": 0, "nearest_integer_frequencies": {"1": 4}, "median_raw_value": 0.9998930979719487, "minimum_bulk_gap": 0.011128009590064466, "endpoint_joint_pass_count": 0}, {"strength": 0.05, "kind": "uniform_mean", "target": "pi", "total": 4, "valid_winding_count": 4, "undefined_count": 0, "not_converged_count": 0, "nearest_integer_frequencies": {"1": 4}, "median_raw_value": 0.9998932376027639, "minimum_bulk_gap": 0.028550366404350474, "endpoint_joint_pass_count": 0}, {"strength": 0.1, "kind": "disorder", "target": "zero", "total": 4, "valid_winding_count": 4, "undefined_count": 0, "not_converged_count": 0, "nearest_integer_frequencies": {"1": 4}, "median_raw_value": 0.9998740947719567, "minimum_bulk_gap": 0.0027524180245286876, "endpoint_joint_pass_count": 0}, {"strength": 0.1, "kind": "disorder", "target": "pi", "total": 4, "valid_winding_count": 4, "undefined_count": 0, "not_converged_count": 0, "nearest_integer_frequencies": {"1": 4}, "median_raw_value": 0.9998919149579799, "minimum_bulk_gap": 0.017365959365639883, "endpoint_joint_pass_count": 0}, {"strength": 0.1, "kind": "uniform_mean", "target": "zero", "total": 4, "valid_winding_count": 4, "undefined_count": 0, "not_converged_count": 0, "nearest_integer_frequencies": {"1": 4}, "median_raw_value": 0.9998955222347601, "minimum_bulk_gap": 0.030947089845828713, "endpoint_joint_pass_count": 4}, {"strength": 0.1, "kind": "uniform_mean", "target": "pi", "total": 4, "valid_winding_count": 4, "undefined_count": 0, "not_converged_count": 0, "nearest_integer_frequencies": {"1": 4}, "median_raw_value": 0.9998955315753009, "minimum_bulk_gap": 0.04981641057306398, "endpoint_joint_pass_count": 0}, {"strength": 0.2, "kind": "disorder", "target": "zero", "total": 4, "valid_winding_count": 4, "undefined_count": 0, "not_converged_count": 0, "nearest_integer_frequencies": {"1": 4}, "median_raw_value": 0.9998876249192648, "minimum_bulk_gap": 0.005824135320287776, "endpoint_joint_pass_count": 0}, {"strength": 0.2, "kind": "disorder", "target": "pi", "total": 4, "valid_winding_count": 4, "undefined_count": 0, "not_converged_count": 0, "nearest_integer_frequencies": {"1": 4}, "median_raw_value": 0.9998954878739098, "minimum_bulk_gap": 0.026172137526904615, "endpoint_joint_pass_count": 2}, {"strength": 0.2, "kind": "uniform_mean", "target": "zero", "total": 4, "valid_winding_count": 4, "undefined_count": 0, "not_converged_count": 0, "nearest_integer_frequencies": {"1": 4}, "median_raw_value": 0.9998955646411216, "minimum_bulk_gap": 0.08390514763034575, "endpoint_joint_pass_count": 4}, {"strength": 0.2, "kind": "uniform_mean", "target": "pi", "total": 4, "valid_winding_count": 4, "undefined_count": 0, "not_converged_count": 0, "nearest_integer_frequencies": {"1": 4}, "median_raw_value": 0.9998955646585707, "minimum_bulk_gap": 0.04161339979538486, "endpoint_joint_pass_count": 4}]
+exit_code=0
+$ disorder_independent_recheck: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_disorder.py --nominal-step 0.05 --output disorder_recheck.json
+r=0.05 seed=0 kind=disorder target=zero production=ok/1 independent=ok/1 raw=1.0
+r=0.05 seed=0 kind=disorder target=pi production=ok/1 independent=ok/1 raw=1.0
+r=0.05 seed=0 kind=uniform_mean target=zero production=ok/1 independent=ok/1 raw=1.0
+r=0.05 seed=0 kind=uniform_mean target=pi production=ok/1 independent=ok/1 raw=1.0
+r=0.05 seed=2 kind=disorder target=zero production=not_converged/None independent=ok/1 raw=1.0
+r=0.05 seed=3 kind=disorder target=zero production=not_converged/None independent=ok/1 raw=1.0
+r=0.1 seed=0 kind=disorder target=zero production=ok/1 independent=ok/1 raw=0.9999999999999999
+r=0.1 seed=0 kind=disorder target=pi production=ok/1 independent=ok/1 raw=1.0
+r=0.1 seed=0 kind=uniform_mean target=zero production=ok/1 independent=ok/1 raw=1.0
+r=0.1 seed=0 kind=uniform_mean target=pi production=ok/1 independent=ok/1 raw=1.0
+r=0.2 seed=0 kind=disorder target=zero production=ok/1 independent=ok/1 raw=1.0
+r=0.2 seed=0 kind=disorder target=pi production=ok/1 independent=ok/1 raw=1.0
+r=0.2 seed=0 kind=uniform_mean target=zero production=ok/1 independent=ok/1 raw=1.0
+r=0.2 seed=0 kind=uniform_mean target=pi production=ok/1 independent=ok/1 raw=1.0
+selected 14 rejection_categories 2 passed True
+exit_code=0
+$ report_data_and_figures: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\build_disorder_report.py
+generated disorder-winding.png disorder-gaps.png REPORT.md
+exit_code=0
+$ docx_structure_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-TBC无序对照报告.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_word_qa.py
+{"pages": 6, "manualReview": "passed", "docxSha256": "039dbf5b4bd73e90492932bc5ec98d32c644948da5af730fd9087fd80f222939"}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_report.py -v
+test_docx_native_structure (__main__.ReportContractTests.test_docx_native_structure) ... ok
+test_ensemble_counts (__main__.ReportContractTests.test_ensemble_counts) ... ok
+test_figures_are_nonempty (__main__.ReportContractTests.test_figures_are_nonempty) ... ok
+test_markdown_matches_failures_and_control_scope (__main__.ReportContractTests.test_markdown_matches_failures_and_control_scope) ... ok
+test_visual_review_hashes_are_current (__main__.ReportContractTests.test_visual_review_hashes_are_current) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.014s
+
+OK
 exit_code=0
