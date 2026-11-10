@@ -1,0 +1,7 @@
+$ python research/floquet-kick-map/test_kick_map.py -v
+Traceback (most recent call last):
+  File "C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-kick-map\test_kick_map.py", line 15, in <module>
+    from kick_map import safe_endpoint_counts, uniform_floquet  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'kick_map'
+exit_code=1
