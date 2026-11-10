@@ -47,7 +47,7 @@ Xie 等的论文确为 2025 年 npj Computational Materials 工作，官方 DOI 
 
 由此得到三项修订要求：
 
-1. 将“2023 年提出 Floquet-DFPT”改为与原始出版物一致的 2025 年；综述第 1.3 节当前写作 2023。[floquet_superconductivity_deep](kimi-cite://md-line?path=C%3A%5CUsers%5C%E4%B8%80%E6%A2%A6%5CDocuments%5Ckimi%5Cworkspace%5Ctoe-sylva-audit%5Cpapers%5Croom_temp_sc%5Cfloquet_superconductivity_deep.md&line=43&text=2023 "citation")
+1. 将“2023 年提出 Floquet-DFPT”明确标为 **2023 年 arXiv 预印本**，并另注 **2025 年期刊正式发表**，不得把两个时间点混为同一事件。arXiv:2312.12706 的 v1 日期为 2023-12-20，期刊 DOI 页面为 2025 年。[arXiv:2312.12706](kimi-cite://web?url=https%3A%2F%2Farxiv.org%2Fabs%2F2312.12706&text=Wed%2C%2020%20Dec%202023 "citation")，[npj Computational Materials](kimi-cite://web?url=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41524-025-01725-z&text=In%20this%20paper%2C%20we%20present%20a%20dynamical%20method "citation")
 2. 将 285 K、301 K 标为特定条件下的 DOS 标度估计及下界，不写成无条件、精确的 $T_c$ 预测。
 3. 不把 LaH₁₀ 的计算直接外推为其他氢化物或其他材料的同级证据。
 
@@ -97,7 +97,7 @@ Xie 等的论文确为 2025 年 npj Computational Materials 工作，官方 DOI 
 
 ## 六、建议的修订与验收顺序
 
-1. **P0：修正来源与时间线**：Xie 改为 2025，补齐 DOI 和原文图表位置。
+1. **P0：修正来源与时间线**：区分 Xie 的 2023 年 arXiv 预印本与 2025 年期刊正式发表，补齐 arXiv、DOI 和原文图表位置。
 2. **P0：拆分样品与模型**：FeSe/STO 和 FeSe₀.₅Te₀.₅分开；LSCO 的频率与波长回源。
 3. **P0：撤回或降级无来源数值**：YH₁₀ 的 350–400 K 不得保留为预测结论。
 4. **P0：加入结论与局限**：明确脚本不覆盖材料预测，LaH₁₀ 标度值不是精确预言。

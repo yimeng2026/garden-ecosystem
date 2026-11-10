@@ -212,3 +212,9 @@ Xie／LaH₁₀ 的 2025 年官方 DOI 页面和原文镜像已核。原文给�
 - NbSe₂ 原始论文支持可逆等离子体调制，但是否满足本项目所用 Floquet 稳态定义仍需独立论证。
 
 最终对照表 Word 的 OOXML 校验退出码 **0**，`PASSED (17 parts XSD + semantic checks; gen: 6 checks clean)`。最终视图 **3/3 页**已逐页检查，`nearBlankPages=[]`，所有 `clipped=false`，`content-loss=0`。页眉写入曾发生 `E_SWAP_FAILED`，已保留并改名交换目录后成功重试，未删除备份；中间工作目录与页面图片不纳入提交。
+
+### Xie 预印本与正式发表时间更正
+
+追加检索 arXiv:2312.12706 后确认：v1 于 **2023-12-20** 发布，2025 年为 npj Computational Materials 正式发表。先前“把 2023 改为 2025”的简化修订建议已撤回，改为**分别标注 2023 预印本与 2025 正式发表**。`REVIEW.md`、`REVIEW.docx`、`CLAIM_SOURCE_MAP.md`、`CLAIM_SOURCE_MAP.docx` 及两份 JSON 已统一这一区分；原论文仍未修改。[arXiv:2312.12706](kimi-cite://web?url=https%3A%2F%2Farxiv.org%2Fabs%2F2312.12706&text=Wed%2C%2020%20Dec%202023 "citation")
+
+两份 Word 经工作副本局部更正后均再次通过 `PASSED (17 parts XSD + semantic checks; gen: 6 checks clean)`。`REVIEW.docx` 最终 **5/5 页**无近空白或裁切，QA 为 `review-time-correction-qa-final2/report.json`；`CLAIM_SOURCE_MAP.docx` 最终 **3/3 页**无近空白或裁切且 `content-loss=0`，QA 为 `claim-map-time-correction-qa-final/report.json`。长 URL 曾造成一条孤立末页，已缩短为 arXiv ID 和 DOI 后重新验证；修订顺序中的旧“Xie 改为 2025”也已同步更正。

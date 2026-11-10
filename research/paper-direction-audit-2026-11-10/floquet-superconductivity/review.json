@@ -15,9 +15,11 @@
   },
   "external_source_checked": {
     "work": "Xie et al., LaH10 Floquet-DFPT",
-    "year": 2025,
+    "preprint_year": 2023,
+    "preprint_url": "https://arxiv.org/abs/2312.12706",
+    "publication_year": 2025,
     "doi_page": "https://www.nature.com/articles/s41524-025-01725-z",
-    "scope": "潜在 20–30% 提升；低压 DOS 标度不是精确预测，而是相应下界估计。",
+    "scope": "2023 arXiv 预印本，2025 期刊正式发表；潜在 20–30% 提升；低压 DOS 标度不是精确预测，而是相应下界估计。",
     "covers_yh10": false
   },
   "findings": [
@@ -25,7 +27,7 @@
       "id": "F1",
       "severity": "P0",
       "kind": "chronology",
-      "claim": "综述写 2023 年提出 Floquet-DFPT，原始出版来源为 2025 年。"
+      "claim": "2023 对应 arXiv 预印本，2025 对应期刊正式发表；必须分别标注，不能简单把 2023 改成 2025。"
     },
     {
       "id": "F2",

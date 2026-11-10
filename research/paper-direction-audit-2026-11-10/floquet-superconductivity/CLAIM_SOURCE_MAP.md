@@ -7,7 +7,7 @@
 
 | 主张 | 综述位置 | 原始证据 | 裁决与修订动作 |
 |---|---|---|---|
-| Floquet-DFPT 于 2023 年提出 | §1.3 | Xie 等官方 DOI 页面为 2025 年。[npj Computational Materials](kimi-cite://web?url=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41524-025-01725-z&text=In%20this%20paper%2C%20we%20present%20a%20dynamical%20method "citation") | **更正年份为 2025**，并补 DOI `10.1038/s41524-025-01725-z`。 |
+| Floquet-DFPT 于 2023 年提出 | §1.3 | arXiv:2312.12706 的 v1 确为 2023-12-20；期刊正式发表为 2025 年。[arXiv:2312.12706](kimi-cite://web?url=https%3A%2F%2Farxiv.org%2Fabs%2F2312.12706&text=Wed%2C%2020%20Dec%202023 "citation")，[npj Computational Materials](kimi-cite://web?url=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41524-025-01725-z&text=In%20this%20paper%2C%20we%20present%20a%20dynamical%20method "citation") | **分别标注 2023 预印本与 2025 正式发表**，并补 arXiv 和 DOI `10.1038/s41524-025-01725-z`；不是简单把 2023 改成 2025。 |
 | LaH₁₀ 在低压下达到 285／301 K | §4.1.2 | Xie 原文说明 DOS 标度不是精确预测，而是相应下界估计。[Xie 等原文镜像](kimi-cite://web?url=https%3A%2F%2Fquantum.emorychem.science%2Fwp-content%2Fuploads%2F2025%2F07%2FnpjComputMater.11.227.pdf&text=should%20not%20be%20regarded%20as%20an%20accurate%20prediction "citation") | 改为**特定条件下的 DOS 标度下界估计**，不得写成无条件精确值。 |
 | Giorgianni 的 Nat. Phys. 15, 341 可支撑 LSCO 瞬态超导 | §3.2.2 | 该文实际研究多带超导体 **MgB₂** 的 Leggett 模，不是 LSCO。[NASA ADS](kimi-cite://web?url=http%3A%2F%2Fui.adsabs.harvard.edu%2Fabs%2F2019NatPh..15..341G%2Fabstract&text=multiband%20superconductor%20MgB2 "citation") | **来源与材料错配**。从 LSCO 段移除该引文，LSCO 结论另找对应原始实验，不能换标题后继续使用。 |
 | LSCO 驱动为约 10–100 THz，又为约 800 nm | §3.2.3、§7.1 | 综述内部同时写两个不同量级；本次没有取得能统一二者的原始泵浦参数。 | 标为**内部不一致且待核**，分别固定波长、频率、脉宽和电场；不得用“近红外”笼统覆盖。 |

@@ -7,11 +7,12 @@
     {
       "id": "C1",
       "topic": "Floquet-DFPT 年份",
-      "status": "corrected",
+      "status": "clarified_preprint_vs_publication",
       "review_claim": "2023",
-      "evidence_claim": "2025",
+      "evidence_claim": "2023 arXiv 预印本；2025 期刊正式发表",
+      "preprint_source": "https://arxiv.org/abs/2312.12706",
       "source": "https://www.nature.com/articles/s41524-025-01725-z",
-      "action": "改为 2025 并补 DOI"
+      "action": "分别标注 2023 预印本与 2025 正式发表，并补 arXiv 和 DOI；不是简单把 2023 改成 2025"
     },
     {
       "id": "C2",
