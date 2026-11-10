@@ -47,3 +47,9 @@ HasEquiv 语义、三条物理定理、材料预测、数值模型和实验复�
 首次 git diff --cached --check：退出码 2；Matplotlib 生成的 compatible-definitions.svg 含大量原始行尾空格。
 处理：compatible-definitions.svg whitespace=-trailing-space，保持图件原样，不改写路径或内容。
 再次检查：退出码 0；16 个暂存文件，未纳入 .lake 或 node_modules。
+
+[named-branch-delivery]
+修复提交：27e800d228f037163d868631a3da630825a579d5。
+git push -u origin fix/lean-compatible-definitions：退出码 0，新远端分支已建立并设置跟踪。
+git rev-parse HEAD 与 git ls-remote origin refs/heads/fix/lean-compatible-definitions：退出码 0；本地与远端均为 27e800d228f037163d868631a3da630825a579d5。
+未合并主分支。局部兼容清偿已交付；HasEquiv、物理证明与实验复现继续作为未竟工作，全库目标保持 active。

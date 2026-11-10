@@ -24,5 +24,5 @@
 ### Task 4：交付
 
 - [x] 重跑两套测试、JSON 解析、原文件哈希和 `git diff --check`，全部退出 0。
-- [ ] 提交 `feat: add Lean compatible definition slice` 并推送具名分支，不合并主分支。
-- [ ] 以 `docs: record Lean compatible definitions delivery` 记录交付；继续 `HasEquiv` 语义、物理证明和实验复现，保持全库目标 active。
+- [x] 提交 `feat: add Lean compatible definition slice` 并推送具名分支，不合并主分支。
+- [x] 以 `docs: record Lean compatible definitions delivery` 记录交付；继续 `HasEquiv` 语义、物理证明和实验复现，保持全库目标 active。
