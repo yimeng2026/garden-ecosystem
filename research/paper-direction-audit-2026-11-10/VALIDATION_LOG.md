@@ -199,3 +199,16 @@ Xie／LaH₁₀ 的 2025 年官方 DOI 页面和原文镜像已核。原文给�
 - `floquet-superconductivity/word-qa/report.json`
 
 最终 Word 执行 `docx.py validate`，退出码 **0**，`PASSED (17 parts XSD + semantic checks; gen: 6 checks clean)`。最终视图渲染并逐页检查 **5/5 页**，`nearBlankPages=[]`，所有 `clipped=false`；仅低风险 `w:lvlOverride` 目录编号兼容提示。原论文未修改，`word-work/` 与 QA 页面图片不纳入提交。
+
+### Floquet 主张—来源对照补记
+
+在初审基础上继续回源并形成 `CLAIM_SOURCE_MAP.md`、`CLAIM_SOURCE_MAP.json` 与原生 `CLAIM_SOURCE_MAP.docx`，共 8 条主张及 7 个统一修订字段。
+
+新增直接证据：
+
+- Giorgianni《Leggett mode controlled by light pulses》研究对象为 **MgB₂**，不是 LSCO；该引文存在来源与材料错配，不能仅修正频率后继续使用。
+- Isoyama 原文样品为 **FeSe₀.₅Te₀.₅薄膜**，不是 FeSe/STO，必须拆分样品和来源。
+- Xie 原文虽考察 YH₁₀ 等其他氢化物，但明确并非所有体系都超过室温；YH₁₀ 的 350–400 K 外推已建议撤回。独立实验研究给出静态理论值 305–326 K，同时未观察到 fcc-YH₁₀，三种证据状态不得混写。
+- NbSe₂ 原始论文支持可逆等离子体调制，但是否满足本项目所用 Floquet 稳态定义仍需独立论证。
+
+最终对照表 Word 的 OOXML 校验退出码 **0**，`PASSED (17 parts XSD + semantic checks; gen: 6 checks clean)`。最终视图 **3/3 页**已逐页检查，`nearBlankPages=[]`，所有 `clipped=false`，`content-loss=0`。页眉写入曾发生 `E_SWAP_FAILED`，已保留并改名交换目录后成功重试，未删除备份；中间工作目录与页面图片不纳入提交。

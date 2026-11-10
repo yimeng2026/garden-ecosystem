@@ -1,0 +1,86 @@
+{
+  "schema": "claim-source-map-v1",
+  "paper_id": "toe-sylva:papers/room_temp_sc/floquet_superconductivity_deep.md",
+  "review_date": "2026-11-10",
+  "source_file_modified": false,
+  "claims": [
+    {
+      "id": "C1",
+      "topic": "Floquet-DFPT 年份",
+      "status": "corrected",
+      "review_claim": "2023",
+      "evidence_claim": "2025",
+      "source": "https://www.nature.com/articles/s41524-025-01725-z",
+      "action": "改为 2025 并补 DOI"
+    },
+    {
+      "id": "C2",
+      "topic": "LaH10 低压 285／301 K",
+      "status": "lower_bound_not_exact_prediction",
+      "source": "https://quantum.emorychem.science/wp-content/uploads/2025/07/npjComputMater.11.227.pdf",
+      "action": "标为特定条件下的 DOS 标度下界估计"
+    },
+    {
+      "id": "C3",
+      "topic": "Giorgianni 支撑 LSCO",
+      "status": "source_and_sample_mismatch",
+      "review_sample": "LSCO",
+      "evidence_sample": "MgB2",
+      "source": "http://ui.adsabs.harvard.edu/abs/2019NatPh..15..341G/abstract",
+      "action": "从 LSCO 段移除该引文，另找对应原始实验"
+    },
+    {
+      "id": "C4",
+      "topic": "LSCO 频率与波长",
+      "status": "internally_inconsistent_unverified",
+      "review_values": ["约 10–100 THz", "约 800 nm（约 375 THz）"],
+      "action": "回源分别固定频率、波长、脉宽和场强"
+    },
+    {
+      "id": "C5",
+      "topic": "Isoyama 支撑 FeSe/STO",
+      "status": "sample_mismatch",
+      "review_sample": "FeSe 单分子层／SrTiO3",
+      "evidence_sample": "FeSe0.5Te0.5 薄膜",
+      "source": "https://www.nature.com/articles/s42005-021-00663-8",
+      "action": "拆分样品与来源，不共享实验结论"
+    },
+    {
+      "id": "C6",
+      "topic": "YH10 的 350–400 K",
+      "status": "withdraw_unsupported_extrapolation",
+      "evidence_scope": "Xie 考察其他氢化物但明确并非都超过室温；独立静态理论常见 305–326 K，实验未观察到 fcc-YH10",
+      "sources": [
+        "https://quantum.emorychem.science/wp-content/uploads/2025/07/npjComputMater.11.227.pdf",
+        "https://arxiv.org/pdf/1909.10482"
+      ],
+      "action": "撤回 350–400 K，分开登记静态理论、Floquet 估计和实验未见样品"
+    },
+    {
+      "id": "C7",
+      "topic": "NbSe2 连续波调控归类",
+      "status": "verified_modulation_floquet_classification_open",
+      "source": "https://link.springer.com/article/10.1038/s41467-024-50452-4",
+      "action": "标为连续波近场调控，是否满足 Floquet 稳态定义另行论证"
+    },
+    {
+      "id": "C8",
+      "topic": "verify_rtsc.py 的覆盖范围",
+      "status": "generic_toolbox_pass_only",
+      "exit_code": 0,
+      "modules": "3/3",
+      "source": "run.log",
+      "action": "不得外推为材料级主张通过"
+    }
+  ],
+  "required_fields": [
+    "样品与结构",
+    "驱动条件",
+    "理论模型",
+    "观测量",
+    "来源定位",
+    "证据等级",
+    "反例与限制"
+  ],
+  "unverified_remainder": "LSCO 真实泵浦条件、FeSe/STO 对应来源及 K3C60、YBCO、NbSe2 的其余参数仍需逐项终审。"
+}
