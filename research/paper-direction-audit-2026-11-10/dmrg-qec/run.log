@@ -1,0 +1,29 @@
+DMRG 与量子纠错资料审计验证记录
+日期：2026-11-10
+分支：audit/room-temp-dmrg-qec
+基线：488beb64db767afb2cb14411596baa3bff4ac6f8
+工作树：复用 room-temp-isotope-dft-audit，未嵌套创建工作树。
+
+[source-freeze]
+dmrg_notes=59e6b00f0cb240b9b0d3417f0f7906ae0fb5cf4a9b7cbcf79a8229181147d392
+qec_notes=59e747f55a96fd8d93885455d7ae7c2579acdeff4139e292023f5a723ec3fce2
+stripes_pdf=d37490cd24da075fd622ef48bc3f212ce35fa09ec8db8bcd737a7fe4b04e1531
+finite_temperature_pdf=e1ce8e1480fcf95156b7fffd23800b2b8dc4d6def9b64afb5835903cca3ae107
+extended_hubbard_pdf=2cbaa6cd2ec3e9b00a61627d23cf3f5e3f5ac022b1cd80d73e495028646a7a55
+global_dwave_html=3c2a77b1550f35e8a8eb8870150872cdc5e7b80c3ddd1d2799f9f455d3a2daca
+google_pdf=9ba05a64dfec13f5d733e0e22484e8f22db2482dc2a5a0d63e6f0766c9c3d368
+xzzx_pdf=918860f120639eb6897faff9d834aa977fbf54f781522276bff17c88c8db0cb7
+neutral_atoms_pdf=0b81702eedfd2525eb6ab74fe82f43a7dbc930a219298f1f21c7ee7698afa8e7
+
+[retrieval-and-extraction]
+Scholar：Chen 全局相图、Qu 有限温度、Peng 扩展 Hubbard、XZZX、Google、中性原子均已检索。
+六份 PDF 提取成功：stripes=8页/48204字符；finite-T=16页/64197；extended=6页/28006；Google=27页/113823；XZZX=13页/59877；neutral=28页/162638。
+XZZX Nature PDF 一次连接中断，使用 Scholar 返回的备用原文成功获取，不使用残缺下载。
+Chen arXiv PDF 一次连接失败、PNAS PDF 一次 403，随后成功读取 arXiv HTML 全文并冻结相关原文摘录；不声称获得 PDF。
+两份原文与外部证据只读，不修改。
+
+[RED: missing review.json]
+命令：python research/paper-direction-audit-2026-11-10/dmrg-qec/test_dmrg_qec_audit.py -v
+退出码：1
+关键输出：setUpClass ERROR；FileNotFoundError: dmrg-qec/review.json；Ran 0 tests；FAILED (errors=1)。
+判定：符合预期 RED，唯一证据对象尚未生成；零测试发现保护生效。
