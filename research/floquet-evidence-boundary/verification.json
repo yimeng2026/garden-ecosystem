@@ -1,0 +1,44 @@
+{
+  "schema": "floquet-evidence-verification-v1",
+  "recorded_utc": "2026-11-10T18:14:59.773286+00:00",
+  "all_passed": true,
+  "results": [
+    {
+      "script": "build_evidence.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-evidence-boundary\\build_evidence.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "test_floquet_evidence_boundary.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-evidence-boundary\\test_floquet_evidence_boundary.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "verify_floquet_evidence_boundary.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-evidence-boundary\\verify_floquet_evidence_boundary.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "contract_tests": 7,
+  "independent_tests": 6,
+  "source_anchors": 15,
+  "evidence_sha256": "e21efe16f3f85bb3abd5f0daf7b6ca1815b8365d943e92be47cb69e909a6cbe9",
+  "scope": {
+    "source_and_logic_boundary_checked": true,
+    "floquet_dfpt_reproduced": false,
+    "physical_enhancement_proven": false,
+    "experimental_validation_completed": false
+  },
+  "log": "run.log"
+}

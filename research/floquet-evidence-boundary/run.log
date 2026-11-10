@@ -1,0 +1,33 @@
+$ python research/floquet-evidence-boundary/build_evidence.py
+source anchors checked: 15
+original SHA-256: 1971e95d7b375c24778d3adae8a1ab3be4c5abeb1ee8b79a2b1f347b7aa00439
+Xie text SHA-256: 0d1e333a112e18e49ef564e2d6be915f8dcc63c45bcdde0fdf8baebfdd577f14
+wrote evidence.json and README.md; no original source modified
+exit_code=0
+$ python research/floquet-evidence-boundary/test_floquet_evidence_boundary.py -v
+test_checked_paper_is_off_resonant_not_two_gap_resonance (__main__.FloquetEvidenceBoundaryTests.test_checked_paper_is_off_resonant_not_two_gap_resonance) ... ok
+test_limitations_and_negative_boundaries_remain_open (__main__.FloquetEvidenceBoundaryTests.test_limitations_and_negative_boundaries_remain_open) ... ok
+test_pressure_and_estimator_roles_are_not_conflated (__main__.FloquetEvidenceBoundaryTests.test_pressure_and_estimator_roles_are_not_conflated) ... ok
+test_readme_separates_logic_countermodel_from_physics (__main__.FloquetEvidenceBoundaryTests.test_readme_separates_logic_countermodel_from_physics) ... ok
+test_resonance_has_no_modeled_tc_relation (__main__.FloquetEvidenceBoundaryTests.test_resonance_has_no_modeled_tc_relation) ... ok
+test_sources_are_immutable_and_traceable (__main__.FloquetEvidenceBoundaryTests.test_sources_are_immutable_and_traceable) ... ok
+test_verbatim_evidence_is_really_in_the_local_primary_text (__main__.FloquetEvidenceBoundaryTests.test_verbatim_evidence_is_really_in_the_local_primary_text) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.003s
+
+OK
+exit_code=0
+$ python research/floquet-evidence-boundary/verify_floquet_evidence_boundary.py -v
+test_countermodel_only_tests_the_missing_response_relation (__main__.IndependentFloquetEvidenceTests.test_countermodel_only_tests_the_missing_response_relation) ... ok
+test_every_anchor_matches_the_read_only_text (__main__.IndependentFloquetEvidenceTests.test_every_anchor_matches_the_read_only_text) ... ok
+test_off_resonance_and_allen_dynes_are_explicit (__main__.IndependentFloquetEvidenceTests.test_off_resonance_and_allen_dynes_are_explicit) ... ok
+test_open_physics_and_no_vacuous_lean_patch (__main__.IndependentFloquetEvidenceTests.test_open_physics_and_no_vacuous_lean_patch) ... ok
+test_original_statement_and_proof_debt_unchanged (__main__.IndependentFloquetEvidenceTests.test_original_statement_and_proof_debt_unchanged) ... ok
+test_temperature_rows_match_source_and_rounded_percentages (__main__.IndependentFloquetEvidenceTests.test_temperature_rows_match_source_and_rounded_percentages) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.003s
+
+OK
+exit_code=0

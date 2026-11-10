@@ -1,0 +1,292 @@
+{
+  "schema": "floquet-evidence-boundary-v1",
+  "date": "2026-11-11",
+  "scope": "Check whether the original two-gap-resonance premise entails a driven critical-temperature increase, and identify the actual assumptions in Xie et al. This is not an experimental falsification or reproduction.",
+  "sources": [
+    {
+      "id": "original_lean",
+      "path": "toe-sylva-audit/papers/room_temp_sc/room_temp_sc_Formalization.lean",
+      "sha256": "1971e95d7b375c24778d3adae8a1ab3be4c5abeb1ee8b79a2b1f347b7aa00439",
+      "modified": false
+    },
+    {
+      "id": "xie_2025",
+      "path": "research/paper-direction-audit-2026-11-10/room-temp-methods/sources/xie-floquet-fulltext.txt",
+      "sha256": "0d1e333a112e18e49ef564e2d6be915f8dcc63c45bcdde0fdf8baebfdd577f14",
+      "doi": "10.1038/s41524-025-01725-z",
+      "title": "Dynamical approach to realize room-temperature superconductivity in LaH10",
+      "publication": "npj Computational Materials 11, 227 (2025)",
+      "modified": false
+    }
+  ],
+  "source_anchors": [
+    {
+      "id": "diagonal_floquet_blocks",
+      "lines": [
+        194,
+        203
+      ],
+      "quote": "We analyze the non -thermal steady-state electronic",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    },
+    {
+      "id": "off_resonant_400mev",
+      "lines": [
+        204,
+        212
+      ],
+      "quote": "chosen as the mid-IR laser (ℏΩ = 400 meV)",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    },
+    {
+      "id": "off_resonant_approximation",
+      "lines": [
+        204,
+        212
+      ],
+      "quote": "allowing the off-resonance approximations in the Floquet-DFPT calcula-",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    },
+    {
+      "id": "fixed_phonons",
+      "lines": [
+        263,
+        280
+      ],
+      "quote": "unchanged in the non-thermal state, since the equilibrium states are",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    },
+    {
+      "id": "allen_dynes_estimator",
+      "lines": [
+        420,
+        428
+      ],
+      "quote": "Here, we estimate the nonequilibriumTc using the Allen-Dynes formula61",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    },
+    {
+      "id": "tc_220gpa",
+      "lines": [
+        420,
+        428
+      ],
+      "quote": "Tc from 258 K at equilibrium to 320 K",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    },
+    {
+      "id": "tc_250gpa",
+      "lines": [
+        420,
+        428
+      ],
+      "quote": "Tc rises from 237 K to 322 K yielding a",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    },
+    {
+      "id": "dos_scaling",
+      "lines": [
+        438,
+        465
+      ],
+      "quote": "this DOS scaling approximates",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    },
+    {
+      "id": "low_pressure_unreliable",
+      "lines": [
+        547,
+        559
+      ],
+      "quote": "direct simulations become unreliable",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    },
+    {
+      "id": "tc_150_200gpa",
+      "lines": [
+        575,
+        584
+      ],
+      "quote": "the Tc rises from 249 K to 285 K for 150 GPa LaH10 and from 240 K to 301 K",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    },
+    {
+      "id": "dos_not_accurate",
+      "lines": [
+        580,
+        584
+      ],
+      "quote": "should not be regarded as an accurate prediction",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    },
+    {
+      "id": "nonthermal_challenge",
+      "lines": [
+        692,
+        708
+      ],
+      "quote": "achieving non-thermal Floquet states in experiments remains a signiﬁcant",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    },
+    {
+      "id": "finite_order_distribution",
+      "lines": [
+        692,
+        708
+      ],
+      "quote": "electronic state distribution",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    },
+    {
+      "id": "strong_coupling_boundary",
+      "lines": [
+        709,
+        727
+      ],
+      "quote": "c reaches 0.1ω Debye",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    },
+    {
+      "id": "extrapolation_boundary",
+      "lines": [
+        718,
+        727
+      ],
+      "quote": "Extending this method to superconducting materials with either",
+      "role": "verbatim_whitespace_normalized_excerpt"
+    }
+  ],
+  "original_theorem": {
+    "name": "floquet_enhanced_tc",
+    "source_lines": [
+      171,
+      185
+    ],
+    "status": "proof_debt_not_a_physical_theorem",
+    "bare_existential_trivially_inhabitable": true,
+    "trivial_witness": "T_c_eq + 1",
+    "trivial_witness_accepted_as_physics": false,
+    "intended_physical_claim_follows_from_premise": false,
+    "countermodel_is_physical_evidence": false,
+    "missing_premises": [
+      "Tc_as_a_function_of_drive_and_material",
+      "positive_planck_constant",
+      "pairing_and_distribution_response",
+      "nonthermal_steady_state_domain",
+      "pumping_heating_and_damage_domain",
+      "estimator_validity_domain"
+    ],
+    "countermodel": {
+      "scope": "stronger_material_response_relation_not_formalized_in_original",
+      "delta": 1,
+      "hbar": 1,
+      "omega_drive": 2,
+      "resonance_exact": true,
+      "t_c_eq_k": 250,
+      "t_c_f_k": 200,
+      "enhancement": false,
+      "interpretation": "A mathematical assignment satisfying resonance but not enhancement. It shows that a material-response relation is missing; it does not prove that nature suppresses superconductivity."
+    }
+  },
+  "xie_model_assumptions": {
+    "photon_energy_mev": 400,
+    "laser_wavelength_um": 3,
+    "drive_regime": "off_resonant_lowest_order_floquet",
+    "tc_estimator": "Allen-Dynes",
+    "two_gap_resonance_used_to_derive_tc": false,
+    "nonthermal_distribution_scope": "checked_finite_order_assumption_not_general_proof",
+    "phonon_assumption": "equilibrium_energies_and_eigenmodes_retained",
+    "source_scope": "the_checked_article_only_not_all_possible_floquet_mechanisms"
+  },
+  "xie_tc_estimates": [
+    {
+      "pressure_gpa": 220,
+      "equilibrium_k": 258,
+      "driven_k": 320,
+      "reported_increase_percent": 25,
+      "role": "direct_floquet_dfpt_allen_dynes_estimate",
+      "accurate_prediction": false,
+      "source_lines": [
+        420,
+        436
+      ],
+      "recomputed_increase_percent": 24.031007751937985,
+      "experimental_confirmation": false
+    },
+    {
+      "pressure_gpa": 250,
+      "equilibrium_k": 237,
+      "driven_k": 322,
+      "reported_increase_percent": 35,
+      "role": "direct_floquet_dfpt_allen_dynes_estimate",
+      "accurate_prediction": false,
+      "source_lines": [
+        420,
+        436
+      ],
+      "recomputed_increase_percent": 35.86497890295359,
+      "experimental_confirmation": false
+    },
+    {
+      "pressure_gpa": 150,
+      "equilibrium_k": 249,
+      "driven_k": 285,
+      "reported_increase_percent": null,
+      "role": "dos_scaling_lower_bound_claim_not_general_bound",
+      "accurate_prediction": false,
+      "source_lines": [
+        547,
+        584
+      ],
+      "recomputed_increase_percent": 14.457831325301203,
+      "experimental_confirmation": false
+    },
+    {
+      "pressure_gpa": 200,
+      "equilibrium_k": 240,
+      "driven_k": 301,
+      "reported_increase_percent": null,
+      "role": "dos_scaling_lower_bound_claim_not_general_bound",
+      "accurate_prediction": false,
+      "source_lines": [
+        547,
+        584
+      ],
+      "recomputed_increase_percent": 25.416666666666664,
+      "experimental_confirmation": false
+    }
+  ],
+  "limitations": {
+    "nonthermal_steady_state_experimental_challenge": "Explicitly acknowledged by the source; no generic steady-state existence theorem is supplied here.",
+    "fixed_equilibrium_phonons": "Assumption tied to pulse duration and structural stability, not an unconditional driven-lattice calculation.",
+    "finite_order_electronic_distribution": "Finite-order Fermi-sea-like distribution is an approximation; its overlap with real-time dynamics is not an exact self-consistent non-equilibrium solution.",
+    "multireference_dft": "Kohn-Sham multi-reference limitations and perturbative Coulomb pseudopotential remain.",
+    "strong_coupling_quantum_fluctuations": "The source describes an approximate Tc ~ 0.1 omega_Debye ~ 330 K caution for hydrides, not a sharp universal phase boundary.",
+    "experimental_confirmation": "Not established by this article or this audit.",
+    "independent_reproduction": "Not performed; this package audits evidence, not DFPT outputs."
+  },
+  "other_materials": {
+    "xie_checked_scope": [
+      "YH10",
+      "CeH9",
+      "CaH6"
+    ],
+    "all_above_room_temperature": false,
+    "original_yh10_350_400_k_claim_supported_by_checked_xie_article": false,
+    "qualification": "This does not prove that no other source supports a YH10 estimate. It requires a separate primary calculation and pressure/pump domain."
+  },
+  "conclusion": {
+    "resonance_enhancement": "not_derived",
+    "resonance_enhancement_disproved_experimentally": false,
+    "xie_material_estimates_experimentally_confirmed": false,
+    "physics_proof_complete": false,
+    "next_permitted_formal_step": "Define an explicit driven material-response model and its parameter domain before stating any comparison of driven and equilibrium Tc.",
+    "next_empirical_step": "Obtain original Floquet-DFPT inputs, distribution and phonon corrections, then independently reproduce before proposing a material prediction."
+  },
+  "build_validation": {
+    "source_anchor_count": 15,
+    "all_source_anchors_checked": true,
+    "original_sorry_line": 185,
+    "original_source_modified": false
+  }
+}
