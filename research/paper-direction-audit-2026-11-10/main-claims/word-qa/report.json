@@ -1,0 +1,33 @@
+{
+  "file": "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-methods-audit\\research\\paper-direction-audit-2026-11-10\\main-claims\\REVIEW.docx",
+  "engine": "doc-k final view",
+  "pages": 5,
+  "rendered": 5,
+  "finalRenderReport": "word-qa-final/report.json",
+  "finalValidation": {
+    "sha256": "f17c0f28d46d48b7c952122913322678f48c3addebca06206adcadb4b18ee220",
+    "buildExitCode": 0,
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "initialRenderExitCode": 0,
+    "finalRenderExitCode": 0
+  },
+  "manualReview": {
+    "contactSheetReadFirst": true,
+    "allPagesRead": true,
+    "initialDefect": "第一版第2页的 Song 表格行跨页拆分，最后一个“行”字孤立于第3页；内容未丢失，但排版不合格。",
+    "regressionContract": "先得到 0 <w:cantSplit> 的失败，再为全部表格行加入 cantSplit=true，最终至少30个合同元素通过。",
+    "finalObservations": [
+      "第1页：标题、九节目录和页码完整。",
+      "第2页：十项来源哈希、四方向表与 PNAS 行完整；Song 行被整体移至下一页，没有拆行。",
+      "第3页：Song 与 Semenok 两行均完整，时间线图、图注、Nature 错配和四条脚注清楚，无单字孤行。",
+      "第4页：原生公式、三个反例锚点、手册叙事边界和临界流形脚注完整。",
+      "第5页：六项勘误建议、九项 false 边界和全库未完成声明完整。"
+    ],
+    "contentLossReview": "唯一 content-loss/low 为默认 w:lvlOverride；最终视图未见编号缺失、错序或实质内容损失。degraded 项主要是复杂脚本属性、边距和底纹建模差异。",
+    "nearBlankPagesReviewed": true,
+    "clippedPagesObserved": [],
+    "visualQaPassedWithRendererNotes": true
+  },
+  "nearBlankPages": [],
+  "clippedPages": []
+}

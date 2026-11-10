@@ -1,0 +1,3 @@
+sources/*.pdf binary
+claims-timeline.svg whitespace=-trailing-space
+sources/*-fulltext.txt whitespace=-trailing-space

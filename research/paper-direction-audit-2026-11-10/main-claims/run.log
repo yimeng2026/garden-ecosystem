@@ -39,3 +39,103 @@ FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\一梦\\Docu
 Ran 0 tests in 0.002s
 FAILED (errors=1)
 判定：符合预期 RED，原因是唯一证据对象尚不存在。
+
+[GREEN: evidence object, figure, Markdown]
+命令：python research/paper-direction-audit-2026-11-10/main-claims/build_review.py
+退出码：0
+关键输出：sources=10；research_program_count=1；directions=4；corrections=6；song_runs=13；semenok_unsuccessful=7；nature_citation_mismatch=true；critical_anchors_below_300=true。
+时间线图 claims-timeline.svg/.png 已生成并人工读取，标题为“理论预测、实验宣称与独立负向复现：不是真伪投票”。
+
+[independent-primary-source]
+命令：python research/paper-direction-audit-2026-11-10/main-claims/verify_primary_sources.py -v
+退出码：0
+关键输出：Ran 5 tests in 0.004s；OK。
+
+[INTERMEDIATE: Word not yet built]
+命令：python research/paper-direction-audit-2026-11-10/main-claims/test_main_claims_audit.py -v
+退出码：1
+结果：10 项中 9 项 ok；只有 test_markdown_and_native_word_contract ERROR，原因是 FileNotFoundError: REVIEW.docx。不是最终通过记录。
+
+[native-word-build]
+命令：PATH="/c/Program Files/nodejs:$PATH" python "{kimi-word}/scripts/docx.py" check-docx "{absolute main-claims}"
+退出码：0
+关键输出：Materializing vendored docx 9.7.1；FOUND docx。
+
+命令：PATH="/c/Program Files/nodejs:$PATH" python "{kimi-word}/scripts/docx.py" build "{absolute main-claims/build_report.js}" "{absolute main-claims/REVIEW.docx}"
+退出码：0
+关键输出：PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+辅助警告：node --localstorage-file was provided without a valid path；不影响生成与验证退出码。
+
+[GREEN: initial complete contracts]
+命令：python research/paper-direction-audit-2026-11-10/main-claims/test_main_claims_audit.py -v && python research/paper-direction-audit-2026-11-10/main-claims/verify_primary_sources.py -v
+退出码：0
+关键输出：Ran 10 tests，OK；Ran 5 tests，OK。
+
+[visual-qa: initial artifact]
+命令：PATH="/c/Program Files/nodejs:$PATH" python "{kimi-word}/scripts/docx.py" render "{absolute main-claims/REVIEW.docx}" "{absolute main-claims/word-qa}"
+退出码：0
+结果：5 pages rendered；near-blank pages none；content-loss/low w:lvlOverride ×1。
+人工逐页发现：Song 表格行在第2/3页拆分，最后一个“行”字成为第3页孤行。内容未丢失，但排版不合格。
+
+[layout-regression-red]
+新增合同：document.count(b"<w:cantSplit") >= 30。
+命令：python research/paper-direction-audit-2026-11-10/main-claims/test_main_claims_audit.py -v
+退出码：1
+关键失败：AssertionError: 0 not greater than or equal to 30。
+根因：makeTable 的 TableRow 未设置 cantSplit；不是内容数据错误。
+
+[layout-fix-and-green]
+修改：build_report.js 中所有表头与数据 TableRow 均加 cantSplit=true；不改变证据或正文。
+命令：PATH="/c/Program Files/nodejs:$PATH" python "{kimi-word}/scripts/docx.py" build "{absolute main-claims/build_report.js}" "{absolute main-claims/REVIEW.docx}" && python .../test_main_claims_audit.py -v && python .../verify_primary_sources.py -v
+退出码：0
+关键输出：21 parts PASSED；10/10 OK；5/5 OK。
+
+[visual-qa: final corrected artifact]
+命令：PATH="/c/Program Files/nodejs:$PATH" python "{kimi-word}/scripts/docx.py" render "{absolute main-claims/REVIEW.docx}" "{absolute main-claims/word-qa-final}"
+退出码：0
+结果：5 pages rendered；near-blank pages none；content-loss/low w:lvlOverride ×1。
+最终 DOCX SHA-256：f17c0f28d46d48b7c952122913322678f48c3addebca06206adcadb4b18ee220。
+人工先读 contact-sheet，再读全部五页：Song 行完整位于第3页，已无单字孤行；表格、时间线图、公式、目录、页眉页码和五条脚注均可读，无近空白或裁切。初始 QA 与最终 QA 均保留，最终摘要为 word-qa/report.json，完整机器报告为 word-qa-final/report.json。
+
+[FINAL FRESH REGRESSION]
+命令：python research/paper-direction-audit-2026-11-10/main-claims/test_main_claims_audit.py -v
+退出码：0
+关键输出：Ran 10 tests in 0.002s；OK。
+
+命令：python research/paper-direction-audit-2026-11-10/main-claims/verify_primary_sources.py -v
+退出码：0
+关键输出：Ran 5 tests in 0.003s；OK。
+
+命令：python -m json.tool research/paper-direction-audit-2026-11-10/main-claims/review.json > /dev/null
+退出码：0
+
+命令：python -m json.tool research/paper-direction-audit-2026-11-10/main-claims/word-qa/report.json > /dev/null
+退出码：0
+
+命令：python -m json.tool research/paper-direction-audit-2026-11-10/main-claims/word-qa-final/report.json > /dev/null
+退出码：0
+
+命令：PATH="/c/Program Files/nodejs:$PATH" python "{kimi-word}/scripts/docx.py" validate "{absolute main-claims/REVIEW.docx}"
+退出码：0
+关键输出：PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。无机械修复记录。
+
+命令：sha256sum research/paper-direction-audit-2026-11-10/main-claims/REVIEW.docx
+退出码：0
+关键输出：f17c0f28d46d48b7c952122913322678f48c3addebca06206adcadb4b18ee220；与最终视觉 QA 哈希一致。
+
+命令：git diff --check
+退出码：0
+关键输出：只有 LF→CRLF 提示，无 whitespace error。
+
+完成边界：仅完成四份主论文版本与两章手册的审计，不修改原文、不合并主分支、不宣称全库完成。
+
+[STAGED DELIVERY CHECK]
+初次命令：git add research/paper-direction-audit-2026-11-10/main-claims docs/superpowers/plans/2026-11-10-main-claims-audit.md && git diff --cached --check
+退出码：2
+失败性质：claims-timeline.svg 的 Matplotlib 行尾空格和 sources/*-fulltext.txt 的原始提取行尾空格／EOF 空行被报告。未修改图件或原始证据。
+
+处置：.gitattributes 仅对 claims-timeline.svg 与 sources/*-fulltext.txt 设置 whitespace=-trailing-space；sources/*.pdf 继续保持 binary。
+
+最终命令：git add research/paper-direction-audit-2026-11-10/main-claims/.gitattributes && git diff --cached --check && git status --short && git diff --cached --stat
+退出码：0
+关键输出：26 个暂存文件；PDF 均显示 Bin；最终 QA 图页纳入交付；无 whitespace error。

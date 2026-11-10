@@ -133,6 +133,7 @@ class MainClaimsAuditTests(unittest.TestCase):
         self.assertIn(b"<m:oMath", document)
         self.assertIn(b"TOC", document)
         self.assertGreaterEqual(document.count(b"<w:tbl>"), 4)
+        self.assertGreaterEqual(document.count(b"<w:cantSplit"), 30)
         self.assertIn(b"PAGE", footer)
         self.assertIn("主论文与手册", header.decode("utf-8"))
         self.assertTrue(any(name.startswith("word/media/") for name in names))
