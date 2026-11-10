@@ -1,0 +1,33 @@
+总览与技术复盘数据治理审计验证记录
+日期：2026-11-10
+分支：audit/room-temp-data-governance
+基线：2434e892f5c953daf32c730cf1fa4adfd12dc0fa
+工作树：复用 room-temp-isotope-dft-audit，未嵌套创建工作树。
+
+[source-freeze]
+hydrides_overview=5b3c56d2ea572412b894f6643fb2ab7e31e693ad7755b63e112e51c0fa46f277
+batch_overview=243ef403bc372d13b442cc0086807fade7f7f478dba010bbfef2d3b9eeb11167
+complete_overview=314402bf0ae374bd74200c3a8492af8727b53082062d26b3bb7eaf28f2aa4fc7
+technical_review=992707a8092e65297ebe604d16d5ca203c0f2e0e32a76b43132e16133b7bea05
+htsc_pdf=b1669a6771c685519a5fbcfb45258dd606b957df23720405663408f59809af01
+patsnap_excerpts=4c43394d89bf1d8eb48e2a9dadb6b7396b2640f1a702f7ae87a19c65bb6d6a10
+boron_prb111_excerpts=542a2bac4ad20821e68b87879c7a07a1c10128dabfe3b6e9c8207f5c51973883
+main_claims_review=e9ac6ff0bc88f11b1c2c91ae61ce398a05fc077815803f48669b46536d6f2f45
+validation_materials_review=17eaa27d30df6849f752e3712d563ebe492ae394ea9c74b1b072ac0755acb491
+isotope_dft_review=e04428ca5980171619ca97bd2cc450fa772074cd9edd73f980905a72b1c2d4b4
+dmrg_qec_review=367fada5ec9f68011ea50bb437922d140aa7fcb77bbab7517d8548196332a68d
+methods_review=f30d15d8665644d11957166efaea95d59f7a742037dc697b737704cd15dc9e21
+
+[primary-evidence]
+HTSC：140 个样本、平均 27.3 K、最高 160 K；排除高压和非 BCS；训练集需排除防泄漏；开放数据存在。
+Li₂NaH₁₇ 在 HTSC 讨论中不纳入基准，原文值 297 K；资料写 340 K，列 Jiang 原文待核，不擅断。
+Patsnap 五项标准为二手博客框架；273 K 与项目 300 K 口径不同。
+B–C：PRB 111, 014510，96 个化合物，CaB₈C 预测 77.1 K，不是实验实现。
+Song 直接 Meissner、独立正向复现和同行评议未确立；多份总览重复不构成独立证据。
+两份原文与外部证据只读，不修改。
+
+[RED: missing review.json]
+命令：python research/paper-direction-audit-2026-11-10/data-governance/test_data_governance_audit.py -v
+退出码：1
+关键输出：setUpClass ERROR；FileNotFoundError: data-governance/review.json；Ran 0 tests；FAILED (errors=1)。
+判定：符合预期 RED，唯一证据对象尚未生成；零测试发现保护生效。
