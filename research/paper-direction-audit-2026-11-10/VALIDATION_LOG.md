@@ -152,3 +152,23 @@ python "research\paper-direction-audit-2026-11-10\scripts\verify_strength_delive
 只读审查还发现 `scripts/render_strength_review.py` 会分别重写 `strength-review.json`、`strength-review-summary.json` 和 `STRENGTH_SERIES_REVIEW.md`。该脚本生成的是早期基线，不包含后续 resolution 字段和 17 节补记；在 preservation 测试与增量生成设计落地前，直接重跑可能覆盖后续成果。此项登记为 **P1 再生成覆盖风险**。
 
 后续修复必须先添加两类失败测试：其一，Word 缺少任一补记标题时失败；其二，基础再生成不得删除既有 resolution 与补记。测试确认能捕获当前缺陷后，才能修改生成或同步流程；最终仍需独立执行 OOXML 验证和逐页视觉检查。
+
+## 四份哈希变化文档的权威血缘复核（2026-11-10）
+
+对旧库存中四个 SHA-256 不一致项逐文件执行 `git status`、提交前后 `git show` 和换行规范化比较。四份工作区文件均无未提交改动。统一 CRLF／LF 后，每项均同时满足：
+
+```text
+inventory_matches_parent_crlf = true
+worktree_lf_matches_commit_lf = true
+```
+
+| 文档 | 旧库存对应的父提交 | 当前权威提交 | 当前 LF 规范 SHA-256 |
+|---|---|---|---|
+| Kitaev 链与 p+ip 拓扑超导体 | `5077de6aa4b99c50b14eb96e1a425784877af58e` | `600ff8c28c16b3713cf79a6194709dd0d5401e71` | `1acd4fedf0b6f75ea7228dc757d8de65cbd26cc6c014ed0fa9af0e350501071f` |
+| 拓扑超导马约拉纳零能模（投稿物理学报） | 同上 | 同上 | `278825dcc1b24b109e5c4ccaa8d338aa5ed2141d19150797445a72c96a2d12fd` |
+| 拓扑量子物态与量子计算研究综述（投稿物理学报） | 同上 | 同上 | `52021e8c10272ca88fdbd9a7493fe5d528619515e76819183e03b72dd060f360` |
+| `toe-sylva:papers/OPEN_PROBLEMS.md` | `f33104879c5b2af62095fde7f3556e8e618e0733` | `a5ad6513f218d022caa03323a66d1a01f8833074` | `6b2a69763d53184de653b1ffbbdd76351fe88fec148f5dad046603bbd7ee3220` |
+
+拓扑当前提交主题为 `Unify p+ip phase diagrams and Chern conventions`，核心开放问题当前提交主题为 `audit: correct core open problem evidence status`。因此四项均属于库存建立后的合法提交演进，不是来源不明的脏差异。
+
+工程结论：权威版本映射必须分别保存 `raw_sha256`（原始工作区字节）与 `content_sha256`（CRLF 统一为 LF 后的内容），并同时记录提交、父提交和工作区状态。不得只用跨平台原始字节哈希推断正文漂移，也不得用换行规范化掩盖真实内容差异；两种哈希必须成对出现。
