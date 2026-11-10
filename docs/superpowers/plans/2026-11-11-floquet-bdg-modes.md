@@ -56,10 +56,10 @@ bπ  = 4(μ0+γ)/ω + 2μ1/π = 2.127324...
 
 步骤：
 
-- [ ] 创建合同：静态开放链两个解析零空间向量；Floquet 实正交性；端点量严格给出 `p0=pπ=1`；输出含原始本征值、候选距离、边缘权重、尺寸、独立方法与物理边界。
-- [ ] 先运行 `python research/floquet-bdg/test_floquet_bdg.py -v`，保留模块缺失导致的 RED 日志。
-- [ ] 实现 `majorana_k`、`static_null_vectors`、`kicked_floquet`、`endpoint_mode_counts`、`quasienergy_spectrum`、`site_weights`，不写硬编码候选本征值。
-- [ ] 用 `numpy.linalg.eig`／`scipy.linalg.expm` 计算；保存环境版本和完整命令退出码。
+- [x] 创建合同：静态开放链两个解析零空间向量；Floquet 实正交性；端点量严格给出 `p0=pπ=1`；输出含原始本征值、候选距离、边缘权重、尺寸、独立方法与物理边界。
+- [x] 先运行 `python research/floquet-bdg/test_floquet_bdg.py -v`，保留模块缺失导致的 RED 日志。
+- [x] 实现 `majorana_k`、`static_null_vectors`、`kicked_floquet`、`endpoint_mode_counts`、`quasienergy_spectrum`、`site_weights`，不写硬编码候选本征值。
+- [x] 用 `numpy.linalg.eig`／`scipy.linalg.expm` 计算；保存环境版本和完整命令退出码。
 
 ## Task 2：尺寸、控制组与独立谱验证
 
@@ -71,10 +71,10 @@ bπ  = 4(μ0+γ)/ω + 2μ1/π = 2.127324...
 
 步骤：
 
-- [ ] 计算 `N=40,80,160` 全部本征值和候选表；先保存原始值，再按预注册分离比和边缘权重判定，失败不得改阈值“凑过”。
-- [ ] 独立使用 `scipy.sparse.linalg.eigs` 在 `σ=+1/-1` 附近求本征值，与稠密谱比较，记录容差、失败和维度限制。
-- [ ] 运行静态平凡控制组；分离“解析不变量预测”和“开放链有限尺寸数值观察”。
-- [ ] 明确有限尺寸不是热力学极限证明；模型没有相互作用、耗散、自洽配对或材料参数。
+- [x] 计算 `N=40,80,160` 全部本征值和候选表；先保存原始值，再按预注册分离比和边缘权重判定，失败不得改阈值“凑过”。
+- [x] 独立使用 `scipy.sparse.linalg.eigs` 在 `σ=+1/-1` 附近求本征值，与稠密谱比较，记录容差、失败和维度限制。
+- [x] 运行静态平凡控制组；分离“解析不变量预测”和“开放链有限尺寸数值观察”。
+- [x] 明确有限尺寸不是热力学极限证明；模型没有相互作用、耗散、自洽配对或材料参数。
 
 ## Task 3：图表、原生 Word 与交付
 
@@ -88,10 +88,10 @@ bπ  = 4(μ0+γ)/ω + 2μ1/π = 2.127324...
 
 步骤：
 
-- [ ] 图件显示实际准能量相位、候选目标距离随尺寸变化、边缘概率分布；不能用示意点冒充数值结果。
-- [ ] 按 `kimi-word` 生成原生 Word：真实 TOC、中文页眉、PAGE-only 页脚、`cantSplit`、OMML 公式、准确脚注；先联系表后逐页视觉验收。视图退出 4／5／6 不重试、不用 LibreOffice。
-- [ ] `run_verification.py` 重跑合同、独立验证和数值研究，真实记录每项退出码；结果 JSON 哈希一致。
-- [ ] `git diff --check` 后提交并推送当前具名分支；核对本地与远端哈希，保留工作树，不合并主分支。
+- [x] 图件显示实际准能量相位、候选目标距离随尺寸变化、边缘概率分布；不能用示意点冒充数值结果。
+- [x] 按 `kimi-word` 生成原生 Word：真实 TOC、中文页眉、PAGE-only 页脚、`cantSplit`、OMML 公式、准确脚注；先联系表后逐页视觉验收。视图退出 4／5／6 不重试、不用 LibreOffice。
+- [x] `run_verification.py` 重跑合同、独立验证和数值研究，真实记录每项退出码；结果 JSON 哈希一致。
+- [x] `git diff --check` 后提交并推送当前具名分支；核对本地与远端哈希，保留工作树，不合并主分支。
 
 ## 自查
 
