@@ -51,15 +51,18 @@ U_step(T) = K_full exp[-4 K(μ0) T].
 
 洁净开放链已有对称化 `S F S` 版本可用于谱对照，但周期化必须满足 `U_step(0)=I`，不能直接使用会在 `t=0` 引入半 kick 的形式。
 
-对 `U_step(T)` 对角化，以 `U=e^{-iEt}` 的约定取 `E=-arg(λ)/T`，主值 `E∈[-π/T,π/T]`。按 `E<0`（valence）和 `E≥0`（conduction）定义周期化因子：
+对 `U_step(T)` 对角化，写 `λ=e^{-iφ}`，其中无量纲准能相位 `φ=-arg(λ)∈[-π,π]`，能量为 `E=φ/T`。按 `φ<0`（valence）和 `φ≥0`（conduction）选择有效相位：
 
 ```text
-valence:    exp[-i(2ε-|E|)t/T]
-conduction: exp[-i|E|t/T]
-U_ε(t) = U_step(t) [U_step(T)]_ε^{-t/T}.
+φ_eff,valence    = 2ε−|φ|
+φ_eff,conduction = |φ|
+P_ε(t) = V diag[exp(+i φ_eff t/T)] V⁻¹
+U_ε(t) = U_step(t) P_ε(t).
 ```
 
-不得用主对数任意换支而不检查周期结构。`U_ε(0)=U_ε(T)=I`，并应满足 `U_ε(t+T)=U_ε(t)`。
+这里 `P_ε(t)` 就是 `[U_step(T)]_ε^{-t/T}`。直接相乘可得：valence 在 `t=T` 时为 `exp(i|φ|)exp[i(2ε−|φ|)]=exp(2iε)=1`，conduction 为 `exp(−i|φ|)exp(i|φ|)=1`。因此 `U_ε(0)=U_ε(T)=I`，并应满足 `U_ε(t+T)=U_ε(t)`。
+
+原文 Eq. (8) 印出的负指数若与其前述 `U_step|ψ⟩=exp(−iE′T)|ψ⟩` 一起直接代入，不能满足上述端点恒等式。本实现采用由 Eq. (7) 的负分数幂和端点恒等式唯一确定的正指数形式，并用半周期 chiral 结构再次筛选；不把该记号差异静默当成已验证的文献复现。不得用主对数任意换支而不检查周期结构。
 
 在 chiral 基下，半周期结构必须独立验证：
 
