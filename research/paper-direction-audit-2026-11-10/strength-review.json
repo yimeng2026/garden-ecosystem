@@ -232,7 +232,7 @@
       "evidence": "papers/数学基础强化_系列/21_代数K理论_从向量丛到普适不变量.md",
       "source_line_1": "# 代数 K 理论：从向量丛到普适不变量",
       "resolution_2026_11_10": {
-        "status": "K2_stable_similarity_range_equiv_verified_quotient_classification_open",
+        "status": "K2_range_class_map_verified_surjectivity_direct_sum_k0_open",
         "theorem": "SylvaK0Probe.universal_property",
         "upstream": "Algebra.GrothendieckAddGroup.lift（mathlib 已有同态等价）",
         "compile_exit_code": 0,
@@ -576,6 +576,32 @@
           "stable_similarity_classification_completed": false,
           "general_k0_completed": false,
           "scope": "稳定相似保持像模同构类型；商层分类、逆向构造、直和幺半群和 K0(R) 未完成。"
+        },
+        "k2_projective_range_class": {
+          "constructions": [
+            "rangeIsoSetoid",
+            "rangeClassOfIdempotent",
+            "rangeClassOfIdempotent_eq_of_stableSimilar"
+          ],
+          "canonicalization": "Fintype.equivFin",
+          "compile_exit_code": 0,
+          "checks": "12/12",
+          "k2_regression": "60/60",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "proof": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2_projective_range_class_probe_20261110.lean",
+          "log": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2_projective_range_class_compile_log_20261110.txt",
+          "report": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K2_PROJECTIVE_RANGE_CLASS.md",
+          "native_word": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K2_PROJECTIVE_RANGE_CLASS.docx",
+          "word_qa": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2-projective-range-class-word-qa\\report.json",
+          "word_pages": 7,
+          "range_class_map_completed": true,
+          "stable_similarity_classification_completed": false,
+          "general_k0_completed": false,
+          "scope": "规范索引的像模同构类及稳定相似下的商层良定映射；满射性、逆向构造、直和和 K0(R) 未完成。"
         }
       }
     },

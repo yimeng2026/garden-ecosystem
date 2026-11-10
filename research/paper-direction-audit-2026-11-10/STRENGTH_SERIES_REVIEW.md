@@ -245,3 +245,12 @@ $$\psi_{\mathrm{toy}}''(\mu)=1 \quad\Longrightarrow\quad \frac{1}{\psi_{\mathrm{
 - 含报告和 Word 验收的完整 K2 回归实际 56/56 通过，退出码 0。
 - 原生 Word 共 5 页并逐页检查，无空白页或裁切；低风险 `w:lvlOverride` 仅为目录编号兼容提示。
 - 稳定相似保持像模同构类型已经闭合；商层分类、逆向构造、直和幺半群和 K0(R) 仍未完成，矩阵实例使用交换环。
+
+## K2 商层像模同构类复核补记（2026-11-10）
+
+- [商层像模同构类报告](kimi-cite://text?path=C%3A%5CUsers%5C%E4%B8%80%E6%A2%A6%5CDocuments%5Ckimi%5Cworkspace%5C.worktrees%5Ctoe-k0-universal%5Cpapers%5C%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96_%E7%B3%BB%E5%88%97%5C_panel_records%5CK2_PROJECTIVE_RANGE_CLASS.md&text=K2%20%E5%95%86%E5%B1%82%E5%83%8F%E6%A8%A1%E5%90%8C%E6%9E%84%E7%B1%BB%EF%BC%9A%E8%A7%84%E8%8C%83%E7%B4%A2%E5%BC%95%E4%B8%8E%E7%A8%B3%E5%AE%9A%E7%9B%B8%E4%BC%BC%E4%B8%8B%E7%9A%84%E8%89%AF%E5%AE%9A%E6%98%A0%E5%B0%84 "citation")及[原生 Word](C:\Users\一梦\Documents\kimi\workspace\.worktrees\toe-k0-universal\papers\数学基础强化_系列\_panel_records\K2_PROJECTIVE_RANGE_CLASS.docx)。
+- `python verify_k2_projective_range_class_20261110.py` 实际退出码 0，12/12 检查通过；三个受审构造均只依赖 Lean 标准三公理。
+- 以 `Fintype.equivFin` 规范任意有限索引，消除不同索引宇宙造成的商类型不一致。
+- 含报告和 Word 验收的完整 K2 回归实际 60/60 通过，退出码 0。
+- 原生 Word 共 7 页并逐页检查，无近空白页或裁切；低风险 `w:lvlOverride` 仅为目录编号兼容提示。
+- 商层良定映射已经闭合；满射性、逆向构造、直和和 K0(R) 仍未完成，矩阵实例使用交换环。
