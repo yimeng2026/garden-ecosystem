@@ -93,7 +93,7 @@ Expect all admission/sample tests to pass. Run `git diff --check` and commit wit
 
 - [ ] **Step 1: Write failing checkpoint tests**
 
-Require `run_strength(0.05,n=8,seeds=(0,1),nominal_steps=(0.2,0.1))` to return exactly eight rows: four disordered and four uniform-mean, with each `(seed,kind)` unique. Require a partial checkpoint list to raise `ValueError("incomplete preregistered disorder checkpoints")` rather than emitting a complete ensemble.
+Require `run_strength(0.05,n=8,seeds=(0,1),nominal_steps=(0.2,0.1))` to return exactly four rows: two disordered and two uniform-mean, with each `(seed,kind)` unique. The full N=80 checkpoint has four seeds and therefore eight rows. Require a partial checkpoint list to raise `ValueError("incomplete preregistered disorder checkpoints")` rather than emitting a complete ensemble.
 
 - [ ] **Step 2: Implement deterministic checkpointing**
 
