@@ -1,0 +1,8 @@
+$ python research/floquet-bdg-disorder/test_disorder.py -v
+Traceback (most recent call last):
+  File "research/floquet-bdg-disorder/test_disorder.py", line 17, in <module>
+    from disorder_model import beta_sequence, chemical_kick, disordered_floquet  # noqa: E402
+ModuleNotFoundError: No module named 'disorder_model'
+EXIT_CODE=1
+
+# Intentional RED before implementing disorder_model.py.
