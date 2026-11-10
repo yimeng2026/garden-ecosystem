@@ -116,3 +116,25 @@ python scripts/verify_honest_repo.py --ci
 原生 Word 通过 17 部件验证并嵌入 1 幅状态图。首次五列表格出现长句逐字竖排，调整为专用 `core-open` 列宽后重新渲染为 **8 页**，`near-blank pages: none`，已逐页查看总表、外部基线和逐项证据。
 
 科学边界：本轮完成的是证据纠偏，不是任何核心问题的理论或工程解决。O1–O10 的后续完成声明必须另行提供独立推导、最小算例、真实编译或共同似然检验。
+
+## 强化系列审计 Word 同步缺口（2026-11-10）
+
+本次为只读内容审查，未修改原始 `STRENGTH_SERIES_REVIEW.docx`。执行：
+
+```bash
+python "C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\verify\prep.py" "C:\Users\一梦\Documents\kimi\workspace\garden-ecosystem\research\paper-direction-audit-2026-11-10\STRENGTH_SERIES_REVIEW.docx" -o "C:\Users\一梦\Documents\kimi\workspace\garden-ecosystem\research\paper-direction-audit-2026-11-10\strength-review-current-audit"
+```
+
+实际退出码：**0**，生成只读审查用 `view.txt`（53,830 字符）。Word 正文止于“附：机器可读证据”，未包含 Markdown 后续补记。
+
+随后实际比较 Markdown 的 K1a／K1b／K2 二级标题与 Word `view.txt`，命令退出码为 **0**，关键输出为：
+
+```text
+markdown_supplement_headings 17
+present_in_word 0
+missing_from_word 17
+```
+
+缺失范围为 K1a 群完备化泛性质、K1b 单射性与全消去律，以及 15 个 K2 补记（从幂等矩阵表示例到商层像模同构类）。因此当前 Word 是历史版本，不能作为最新 Markdown 总账的同步交付件。此问题登记为 **P1 文档同步缺陷**；结构验证通过的历史记录不能替代内容完整性检查。
+
+`strength-review-current-audit/` 是未提交的只读审查中间目录，不是交付件。后续更新 Word 时必须保留原文件、重新验证 OOXML／OPC、检查全部页面，并复核这 17 节均实际出现；在完成这些步骤前，不宣称 Word 已同步。
