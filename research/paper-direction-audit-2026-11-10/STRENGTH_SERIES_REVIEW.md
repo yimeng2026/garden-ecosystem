@@ -189,3 +189,11 @@ $$\psi_{\mathrm{toy}}''(\mu)=1 \quad\Longrightarrow\quad \frac{1}{\psi_{\mathrm{
 - `python verify_k2_zero_extension_similarity_20261110.py` 实际退出码 0，12/12 检查通过；三条对齐定理均只依赖 Lean 标准三公理。
 - 原生 Word 共 4 页并逐页检查，无空白页或裁切；低风险 `w:lvlOverride` 仅为目录编号兼容提示。
 - 当前只完成零扩展相似与对齐工具；稳定相似传递性、投射模同构类和 K0(R) 仍未完成。
+
+## K2 稳定相似等价律复核补记（2026-11-10）
+
+- [稳定相似等价律报告](kimi-cite://text?path=C%3A%5CUsers%5C%E4%B8%80%E6%A2%A6%5CDocuments%5Ckimi%5Cworkspace%5C.worktrees%5Ctoe-k0-universal%5Cpapers%5C%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96_%E7%B3%BB%E5%88%97%5C_panel_records%5CK2_STABLE_SIMILARITY_TRANS.md&text=K2%20%E7%A8%B3%E5%AE%9A%E7%9B%B8%E4%BC%BC%E7%AD%89%E4%BB%B7%E5%BE%8B%EF%BC%9A%E4%BC%A0%E9%80%92%E6%80%A7%E7%9A%84%E5%85%B1%E5%90%8C%E8%A1%A5%E9%9B%B6%E8%AF%81%E6%98%8E "citation")及[原生 Word](C:\Users\一梦\Documents\kimi\workspace\.worktrees\toe-k0-universal\papers\数学基础强化_系列\_panel_records\K2_STABLE_SIMILARITY_TRANS.docx)。
+- `python verify_k2_stable_similarity_trans_20261110.py` 实际退出码 0，10/10 检查通过；`stableSimilar_trans` 只依赖 Lean 标准三公理，无 `sorryAx`。
+- 完整 K2 回归 `python -m unittest discover -s . -p "test_k2_*.py" -v` 实际 32/32 通过，退出码 0；自反、对称、传递三条等价律闭合。
+- 原生 Word 共 6 页并逐页检查，无空白页、孤字跨页或裁切；低风险 `w:lvlOverride` 仅为目录编号兼容提示。
+- 当前完成的是稳定相似关系层；投射模同构类、分类映射、直和幺半群和 K0(R) 仍未完成，不主张外部数学首创。

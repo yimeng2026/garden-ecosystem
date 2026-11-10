@@ -232,7 +232,7 @@
       "evidence": "papers/数学基础强化_系列/21_代数K理论_从向量丛到普适不变量.md",
       "source_line_1": "# 代数 K 理论：从向量丛到普适不变量",
       "resolution_2026_11_10": {
-        "status": "K2_zero_extension_alignment_verified_transitivity_open",
+        "status": "K2_stable_similarity_equivalence_verified_k0_open",
         "theorem": "SylvaK0Probe.universal_property",
         "upstream": "Algebra.GrothendieckAddGroup.lift（mathlib 已有同态等价）",
         "compile_exit_code": 0,
@@ -405,6 +405,29 @@
           "word_qa": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2-zero-extension-similarity-word-qa\\report.json",
           "word_pages": 4,
           "scope": "零扩展相似、结合律和重索引交换；稳定相似传递性、投射模同构类、K0(R)、K3、K4 未完成。"
+        },
+        "k2_stable_similarity_trans": {
+          "theorems": [
+            "stableSimilar_trans"
+          ],
+          "compile_exit_code": 0,
+          "checks": "10/10",
+          "k2_regression": "32/32",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "proof": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2_stable_similarity_trans_probe_20261110.lean",
+          "log": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2_stable_similarity_trans_compile_log_20261110.txt",
+          "report": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K2_STABLE_SIMILARITY_TRANS.md",
+          "native_word": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K2_STABLE_SIMILARITY_TRANS.docx",
+          "word_qa": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2-stable-similarity-trans-word-qa\\report.json",
+          "word_pages": 6,
+          "stable_similarity_equivalence_completed": true,
+          "stable_similarity_completed": true,
+          "general_k0_completed": false,
+          "scope": "稳定相似自反、对称、传递三条等价律闭合；投射模同构类、分类映射、直和幺半群、K0(R)、K3、K4 未完成。"
         }
       }
     },
