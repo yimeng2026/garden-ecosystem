@@ -38,11 +38,13 @@ def beta_for(seed, n=80):
     return beta_sequence(seed, n)
 
 
-def evaluate_realization(n, seed, strength, kind, nominal_steps):
+def evaluate_realization(n, seed, strength, kind, nominal_steps, targets=("zero", "pi")):
     if kind not in ("disorder", "uniform_mean"):
         raise ValueError("kind must be disorder or uniform_mean")
     if strength not in STRENGTHS:
         raise ValueError("strength is outside the preregistered set")
+    if not targets or len(set(targets)) != len(targets) or any(target not in ("zero", "pi") for target in targets):
+        raise ValueError("targets must be a nonempty unique subset of zero and pi")
     beta = beta_for(seed, n) if kind == "disorder" else np.ones(n)
     case = {
         "n": n,
@@ -56,14 +58,19 @@ def evaluate_realization(n, seed, strength, kind, nominal_steps):
     half_kick_error = float(np.max(np.abs(half_kick - chemical_kick(strength * beta))))
     if half_kick_error > 1e-12:
         raise RuntimeError("TBC and open-chain half-kick conventions disagree")
-    zero = winding_convergence(case, 0.0, nominal_steps, keep_curve=False)
-    pi = winding_convergence(case, np.pi, nominal_steps, keep_curve=False)
+    windings = {}
+    for target in targets:
+        epsilon = 0.0 if target == "zero" else np.pi
+        windings[target] = winding_convergence(case, epsilon, nominal_steps, keep_curve=False)
     u, period = disordered_floquet(n, 2.5, beta, strength, 7.0, 1.0, 1.0)
     spectrum = quasienergy_spectrum(u, period)
-    endpoint = {"zero": observe_candidate(spectrum, n, 1.0), "pi": observe_candidate(spectrum, n, -1.0)}
-    for observation in endpoint.values():
+    endpoint = {}
+    for target in targets:
+        eigen_target = 1.0 if target == "zero" else -1.0
+        observation = observe_candidate(spectrum, n, eigen_target)
         observation.pop("profile")
-    return {
+        endpoint[target] = observation
+    result = {
         "n": n,
         "seed": int(seed),
         "strength": float(strength),
@@ -71,11 +78,11 @@ def evaluate_realization(n, seed, strength, kind, nominal_steps):
         "beta_sha256": sha256_bytes(beta.tobytes()),
         "full_kick_parameter": "K parameter r*beta; full symmetric rotation angle 2*r*beta",
         "half_kick_convention_error": half_kick_error,
-        "zero": zero,
-        "pi": pi,
         "endpoint": endpoint,
         "open_unitarity_error": float(np.max(np.abs(u.T @ u - np.eye(2 * n)))),
     }
+    result.update(windings)
+    return result
 
 
 def run_strength(strength, n=80, seeds=SEEDS, nominal_steps=(0.05, 0.025)):
