@@ -1,0 +1,23 @@
+理论框架与突破详解审计验证记录
+日期：2026-11-10
+分支：audit/room-temp-theory-breakthrough
+基线：fe642b566c28921a7138fa3883290a9a8acc0bd5
+
+[source-freeze]
+theory_framework=c53b9b8fbab8018e3e2948e8ecff71d0232dd47e60c8a86f4281e58200c262fb
+breakthrough_report=7d9711df200880690a82c814380e4392f35a1ca3c6df957cabe6607678ba00ce
+main_claims_review=e9ac6ff0bc88f11b1c2c91ae61ce398a05fc077815803f48669b46536d6f2f45
+methods_review=f30d15d8665644d11957166efaea95d59f7a742037dc697b737704cd15dc9e21
+两份原文和既有审计对象只读，不修改。
+
+[observed-text-and-lineage]
+理论文档：17 处行首 admit、5 处行首 sorry，共 22 处显式证明债务。
+五个 Superconductivity.* 模块和三个核心定理名在本次仓库 Lean 检索中无命中；仅记未解析。
+Song onset 271–298 K；PNAS 316/331 K 为预测；Semenok 七次未成功。
+突破文档生成日期 2025-04-19 早于所引 2025-10 预印本，记元数据矛盾，不判造假。
+
+[RED: missing review.json]
+命令：python research/paper-direction-audit-2026-11-10/theory-breakthrough/test_theory_breakthrough_audit.py -v
+退出码：1
+关键输出：setUpClass ERROR；FileNotFoundError: theory-breakthrough/review.json；Ran 0 tests；FAILED (errors=1)。
+判定：符合预期 RED，唯一证据对象尚未生成；run_all_tests 的零测试发现保护会返回失败。
