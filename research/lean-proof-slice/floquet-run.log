@@ -1,0 +1,14 @@
+Floquet 显式误差界语义切片验证记录
+日期：2026-11-11
+分支：fix/floquet-approximation
+基线：7944cd868d83f2f1c2284c674d39a0faad8cf257
+
+[scope]
+DriveApprox 使用 |ω_drive - 2 * Δ / ℏ| ≤ ε 的显式绝对误差界，不构造 HasEquiv 实例。
+只证明零误差与精确等式的双向关系，不证明 ∃ T_c_F, T_c_F > T_c_eq。
+原文件只读，哈希保持 1971e95d7b375c24778d3adae8a1ab3be4c5abeb1ee8b79a2b1f347b7aa00439。
+
+[contract-syntax-and-red]
+首次主测试：退出码 1；text_of 生成表达式缺少右括号，属测试脚本语法错误，已修正。
+修正后主测试：退出码 1；setUpClass ERROR；FileNotFoundError: floquet-approximation.json；Ran 0 tests；FAILED (errors=1)。
+判定：符合预期 RED，语义证据对象尚未生成；零测试发现保护生效。
