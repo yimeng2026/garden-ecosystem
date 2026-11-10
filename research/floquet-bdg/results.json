@@ -1,0 +1,571 @@
+{
+  "schema": "finite-kicked-kitaev-floquet-v1",
+  "date": "2026-11-11",
+  "model": "Open quadratic Kitaev chain, Majorana basis, symmetric exact free/kick/free evolution",
+  "parameters": {
+    "gamma": 1.0,
+    "delta": 1.0,
+    "mu0": 2.5,
+    "mu1": 0.2,
+    "omega": 7.0
+  },
+  "sizes": [
+    40,
+    80,
+    160
+  ],
+  "endpoint_invariants": {
+    "b0": 0.9844668116163734,
+    "b_pi": 2.1273239544735163,
+    "even_integers": [
+      2
+    ],
+    "odd_integers": [
+      1
+    ],
+    "p0": 1,
+    "p_pi": 1,
+    "domain": "mu0>gamma>0 and 0<mu1<pi/2; integers strictly between b0 and b_pi"
+  },
+  "size_studies": [
+    {
+      "n": 40,
+      "period": 0.8975979010256552,
+      "unitarity_error": 1.3433698597964394e-14,
+      "zero": {
+        "target": 1.0,
+        "indices": [
+          0,
+          79
+        ],
+        "eigenvalues_real": [
+          0.9999939033117653,
+          0.9999939033117653
+        ],
+        "eigenvalues_imag": [
+          0.0034918962324038127,
+          -0.0034918962324038127
+        ],
+        "phase": [
+          0.0034919033287553465,
+          6.279693403850831
+        ],
+        "quasienergy": [
+          -0.0038902757289931995,
+          -6.996109724271007
+        ],
+        "distances": [
+          0.0034919015546666507,
+          0.0034919015546666507
+        ],
+        "bulk_distance": 0.007983374087977765,
+        "separation_ratios": [
+          0.4373967092341491,
+          0.4373967092341491
+        ],
+        "edge_weights": [
+          0.187200980403535,
+          0.187200980403535
+        ],
+        "left_weights": [
+          0.09360049020176948,
+          0.09360049020176948
+        ],
+        "right_weights": [
+          0.0936004902017655,
+          0.0936004902017655
+        ],
+        "edge_sites_per_end": 4,
+        "localized": [
+          false,
+          false
+        ],
+        "separated": [
+          false,
+          false
+        ]
+      },
+      "pi": {
+        "target": -1.0,
+        "indices": [
+          40,
+          39
+        ],
+        "eigenvalues_real": [
+          -0.9999654903485989,
+          -0.9999654903485989
+        ],
+        "eigenvalues_imag": [
+          -0.008307713998069371,
+          0.008307713998069371
+        ],
+        "phase": [
+          3.1499004631546197,
+          3.1332848440249665
+        ],
+        "quasienergy": [
+          -3.509255602709558,
+          -3.490744397290442
+        ],
+        "distances": [
+          0.008307785673075444,
+          0.008307785673075444
+        ],
+        "bulk_distance": 0.3778728394767863,
+        "separation_ratios": [
+          0.021985665031068774,
+          0.021985665031068774
+        ],
+        "edge_weights": [
+          0.5432708553406171,
+          0.5432708553406171
+        ],
+        "left_weights": [
+          0.27163542767033194,
+          0.27163542767033194
+        ],
+        "right_weights": [
+          0.27163542767028515,
+          0.27163542767028515
+        ],
+        "edge_sites_per_end": 4,
+        "localized": [
+          true,
+          true
+        ],
+        "separated": [
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "n": 80,
+      "period": 0.8975979010256552,
+      "unitarity_error": 1.2545520178264269e-14,
+      "zero": {
+        "target": 1.0,
+        "indices": [
+          0,
+          159
+        ],
+        "eigenvalues_real": [
+          0.9999999848276346,
+          0.9999999848276346
+        ],
+        "eigenvalues_imag": [
+          0.00017419739203541895,
+          -0.00017419739203541895
+        ],
+        "phase": [
+          0.0001741973929164144,
+          6.28301110978667
+        ],
+        "quasienergy": [
+          -0.00019407063309457927,
+          -6.9998059293669055
+        ],
+        "distances": [
+          0.00017419739269616553,
+          0.00017419739269616553
+        ],
+        "bulk_distance": 0.0003736933877944911,
+        "separation_ratios": [
+          0.46615058865307946,
+          0.46615058865307946
+        ],
+        "edge_weights": [
+          0.6088287747124052,
+          0.6088287747124052
+        ],
+        "left_weights": [
+          0.3044143873579993,
+          0.3044143873579993
+        ],
+        "right_weights": [
+          0.30441438735440585,
+          0.30441438735440585
+        ],
+        "edge_sites_per_end": 8,
+        "localized": [
+          true,
+          true
+        ],
+        "separated": [
+          false,
+          false
+        ]
+      },
+      "pi": {
+        "target": -1.0,
+        "indices": [
+          80,
+          79
+        ],
+        "eigenvalues_real": [
+          -0.9999999023166662,
+          -0.9999999023166662
+        ],
+        "eigenvalues_imag": [
+          -0.00044200299290012013,
+          0.00044200299290012013
+        ],
+        "phase": [
+          3.1420346565970854,
+          3.141150650582501
+        ],
+        "quasienergy": [
+          -3.5004924287443044,
+          -3.4995075712556956
+        ],
+        "distances": [
+          0.00044200300369420266,
+          0.00044200300369420266
+        ],
+        "bulk_distance": 0.3137385084317037,
+        "separation_ratios": [
+          0.0014088261141536609,
+          0.0014088261141536609
+        ],
+        "edge_weights": [
+          0.7411869312171151,
+          0.7411869312171151
+        ],
+        "left_weights": [
+          0.37059346560844386,
+          0.37059346560844386
+        ],
+        "right_weights": [
+          0.37059346560867124,
+          0.37059346560867124
+        ],
+        "edge_sites_per_end": 8,
+        "localized": [
+          true,
+          true
+        ],
+        "separated": [
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "n": 160,
+      "period": 0.8975979010256552,
+      "unitarity_error": 1.2545520178264269e-14,
+      "zero": {
+        "target": 1.0,
+        "indices": [
+          319,
+          0
+        ],
+        "eigenvalues_real": [
+          0.9999999999999678,
+          0.9999999999999678
+        ],
+        "eigenvalues_imag": [
+          -2.5655585911277257e-07,
+          2.5655585911277257e-07
+        ],
+        "phase": [
+          6.283185050623727,
+          2.565558591127752e-07
+        ],
+        "quasienergy": [
+          -6.999999714175067,
+          -2.858249320989024e-07
+        ],
+        "distances": [
+          2.565558591127746e-07,
+          2.565558591127746e-07
+        ],
+        "bulk_distance": 7.698333022166421e-07,
+        "separation_ratios": [
+          0.3332615754268527,
+          0.3332615754268527
+        ],
+        "edge_weights": [
+          0.9553678988431422,
+          0.9553678988431422
+        ],
+        "left_weights": [
+          0.47768394961859717,
+          0.47768394961859717
+        ],
+        "right_weights": [
+          0.4776839492245451,
+          0.4776839492245451
+        ],
+        "edge_sites_per_end": 16,
+        "localized": [
+          true,
+          true
+        ],
+        "separated": [
+          false,
+          false
+        ]
+      },
+      "pi": {
+        "target": -1.0,
+        "indices": [
+          160,
+          159
+        ],
+        "eigenvalues_real": [
+          -0.9999999999999032,
+          -0.9999999999999032
+        ],
+        "eigenvalues_imag": [
+          -4.2223172946886933e-07,
+          4.2223172946886933e-07
+        ],
+        "phase": [
+          3.1415930758215223,
+          3.141592231358064
+        ],
+        "quasienergy": [
+          -3.5000004704018677,
+          -3.4999995295981323
+        ],
+        "distances": [
+          4.222317294688804e-07,
+          4.222317294688804e-07
+        ],
+        "bulk_distance": 0.2954134652467456,
+        "separation_ratios": [
+          1.4292907370224616e-06,
+          1.4292907370224616e-06
+        ],
+        "edge_weights": [
+          0.9370197407720476,
+          0.9370197407720476
+        ],
+        "left_weights": [
+          0.4685098700289311,
+          0.4685098700289311
+        ],
+        "right_weights": [
+          0.4685098707431167,
+          0.4685098707431167
+        ],
+        "edge_sites_per_end": 16,
+        "localized": [
+          true,
+          true
+        ],
+        "separated": [
+          true,
+          true
+        ]
+      }
+    }
+  ],
+  "convergence": {
+    "zero": {
+      "max_candidate_distances_by_size": [
+        0.0034919015546666507,
+        0.00017419739269616553,
+        2.565558591127746e-07
+      ],
+      "strictly_decreasing": true,
+      "first_to_last_reduction_factor": 13610.68722711069,
+      "all_candidates_separated": false,
+      "all_candidates_localized": false,
+      "finite_size_status": "inconclusive",
+      "thermodynamic_limit_proof": false
+    },
+    "pi": {
+      "max_candidate_distances_by_size": [
+        0.008307785673075444,
+        0.00044200300369420266,
+        4.222317294688804e-07
+      ],
+      "strictly_decreasing": true,
+      "first_to_last_reduction_factor": 19675.89144360538,
+      "all_candidates_separated": true,
+      "all_candidates_localized": true,
+      "finite_size_status": "supported_finite_size",
+      "thermodynamic_limit_proof": false
+    }
+  },
+  "static_trivial_control": {
+    "n": 160,
+    "period": 0.8975979010256552,
+    "unitarity_error": 1.3322676295501878e-14,
+    "zero": {
+      "target": 1.0,
+      "indices": [
+        319,
+        0
+      ],
+      "eigenvalues_real": [
+        0.999999879964875,
+        0.999999879964875
+      ],
+      "eigenvalues_imag": [
+        -0.0004899696268427511,
+        0.0004899696268427511
+      ],
+      "phase": [
+        6.282695337533139,
+        0.0004899696464472739
+      ],
+      "quasienergy": [
+        -6.99945413236162,
+        -0.0005458676383795037
+      ],
+      "distances": [
+        0.0004899696415461432,
+        0.0004899696415461432
+      ],
+      "bulk_distance": 0.001959805264647487,
+      "separation_ratios": [
+        0.250009350614881,
+        0.250009350614881
+      ],
+      "edge_weights": [
+        0.013583864104698171,
+        0.013583864104698171
+      ],
+      "left_weights": [
+        0.006791932052347328,
+        0.006791932052347328
+      ],
+      "right_weights": [
+        0.006791932052350843,
+        0.006791932052350843
+      ],
+      "edge_sites_per_end": 16,
+      "localized": [
+        false,
+        false
+      ],
+      "separated": [
+        false,
+        false
+      ]
+    },
+    "pi": {
+      "target": -1.0,
+      "indices": [
+        160,
+        159
+      ],
+      "eigenvalues_real": [
+        -0.9999913242790784,
+        -0.9999913242790784
+      ],
+      "eigenvalues_imag": [
+        -0.00416549715626649,
+        0.00416549715626649
+      ],
+      "phase": [
+        3.1457581627923314,
+        3.137427144387255
+      ],
+      "quasienergy": [
+        -3.5046407296605513,
+        -3.4953592703394487
+      ],
+      "distances": [
+        0.004165506190968599,
+        0.004165506190968599
+      ],
+      "bulk_distance": 0.06258557788956075,
+      "separation_ratios": [
+        0.06655696618027719,
+        0.06655696618027719
+      ],
+      "edge_weights": [
+        0.20648063868162977,
+        0.20648063868162977
+      ],
+      "left_weights": [
+        0.10324031934081326,
+        0.10324031934081326
+      ],
+      "right_weights": [
+        0.10324031934081651,
+        0.10324031934081651
+      ],
+      "edge_sites_per_end": 16,
+      "localized": [
+        false,
+        false
+      ],
+      "separated": [
+        true,
+        true
+      ]
+    }
+  },
+  "dense_sparse_comparison": {
+    "zero": {
+      "dense_pair_real": [
+        0.9999999999999678,
+        0.9999999999999678
+      ],
+      "dense_pair_imag": [
+        -2.5655585911277257e-07,
+        2.5655585911277257e-07
+      ],
+      "sparse_pair_real": [
+        0.9999999999999662,
+        0.9999999999999662
+      ],
+      "sparse_pair_imag": [
+        -2.5655585891175105e-07,
+        2.5655585891175105e-07
+      ],
+      "max_absolute_difference": 1.5672575316375557e-15,
+      "passed_tolerance_1e-8": true
+    },
+    "pi": {
+      "dense_pair_real": [
+        -0.9999999999999032,
+        -0.9999999999999032
+      ],
+      "dense_pair_imag": [
+        -4.2223172946886933e-07,
+        4.2223172946886933e-07
+      ],
+      "sparse_pair_real": [
+        -0.999999999999905,
+        -0.999999999999905
+      ],
+      "sparse_pair_imag": [
+        -4.222317293662014e-07,
+        4.222317293662014e-07
+      ],
+      "max_absolute_difference": 1.779321309026583e-15,
+      "passed_tolerance_1e-8": true
+    },
+    "method": "scipy.sparse.linalg.eigs shift-invert, k=6, sigma=±1, tol=1e-12, ncv=40",
+    "n": 160
+  },
+  "candidate_rule": {
+    "per_target_count": 2,
+    "separation_threshold": 0.1,
+    "edge_weight_threshold": 0.5,
+    "edge_sites_per_end": "ceil(0.1*N)",
+    "finite_size_reduction_threshold": 2.0,
+    "rule_fixed_before_results": true
+  },
+  "environment": {
+    "python": "3.12.16",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1"
+  },
+  "scope": {
+    "exact_piecewise_matrix_exponential": true,
+    "fourier_truncation_applicable": false,
+    "interactions": false,
+    "dissipation": false,
+    "self_consistent_pairing": false,
+    "material_tc_prediction": false,
+    "experimental_validation": false,
+    "thermodynamic_limit_proof": false
+  }
+}

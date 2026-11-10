@@ -1,0 +1,126 @@
+$ python research/floquet-bdg/run_study.py
+N=40: zero distances=[0.0034919015546666507, 0.0034919015546666507], pi distances=[0.008307785673075444, 0.008307785673075444]
+  zero edge=[0.187200980403535, 0.187200980403535], pi edge=[0.5432708553406171, 0.5432708553406171]
+N=80: zero distances=[0.00017419739269616553, 0.00017419739269616553], pi distances=[0.00044200300369420266, 0.00044200300369420266]
+  zero edge=[0.6088287747124052, 0.6088287747124052], pi edge=[0.7411869312171151, 0.7411869312171151]
+N=160: zero distances=[2.565558591127746e-07, 2.565558591127746e-07], pi distances=[4.222317294688804e-07, 4.222317294688804e-07]
+  zero edge=[0.9553678988431422, 0.9553678988431422], pi edge=[0.9370197407720476, 0.9370197407720476]
+{
+  "convergence": {
+    "zero": {
+      "max_candidate_distances_by_size": [
+        0.0034919015546666507,
+        0.00017419739269616553,
+        2.565558591127746e-07
+      ],
+      "strictly_decreasing": true,
+      "first_to_last_reduction_factor": 13610.68722711069,
+      "all_candidates_separated": false,
+      "all_candidates_localized": false,
+      "finite_size_status": "inconclusive",
+      "thermodynamic_limit_proof": false
+    },
+    "pi": {
+      "max_candidate_distances_by_size": [
+        0.008307785673075444,
+        0.00044200300369420266,
+        4.222317294688804e-07
+      ],
+      "strictly_decreasing": true,
+      "first_to_last_reduction_factor": 19675.89144360538,
+      "all_candidates_separated": true,
+      "all_candidates_localized": true,
+      "finite_size_status": "supported_finite_size",
+      "thermodynamic_limit_proof": false
+    }
+  },
+  "dense_sparse": {
+    "zero": {
+      "dense_pair_real": [
+        0.9999999999999678,
+        0.9999999999999678
+      ],
+      "dense_pair_imag": [
+        -2.5655585911277257e-07,
+        2.5655585911277257e-07
+      ],
+      "sparse_pair_real": [
+        0.9999999999999662,
+        0.9999999999999662
+      ],
+      "sparse_pair_imag": [
+        -2.5655585891175105e-07,
+        2.5655585891175105e-07
+      ],
+      "max_absolute_difference": 1.5672575316375557e-15,
+      "passed_tolerance_1e-8": true
+    },
+    "pi": {
+      "dense_pair_real": [
+        -0.9999999999999032,
+        -0.9999999999999032
+      ],
+      "dense_pair_imag": [
+        -4.2223172946886933e-07,
+        4.2223172946886933e-07
+      ],
+      "sparse_pair_real": [
+        -0.999999999999905,
+        -0.999999999999905
+      ],
+      "sparse_pair_imag": [
+        -4.222317293662014e-07,
+        4.222317293662014e-07
+      ],
+      "max_absolute_difference": 1.779321309026583e-15,
+      "passed_tolerance_1e-8": true
+    },
+    "method": "scipy.sparse.linalg.eigs shift-invert, k=6, sigma=\u00b11, tol=1e-12, ncv=40",
+    "n": 160
+  }
+}
+exit_code=0
+$ python research/floquet-bdg/test_floquet_bdg.py -v
+test_endpoint_invariants_predict_one_zero_and_one_pi_per_edge (__main__.AnalyticFloquetBdGTests.test_endpoint_invariants_predict_one_zero_and_one_pi_per_edge) ... ok
+test_floquet_is_real_orthogonal_and_particle_hole_paired (__main__.AnalyticFloquetBdGTests.test_floquet_is_real_orthogonal_and_particle_hole_paired) ... ok
+test_site_weights_and_candidates_are_derived_not_hardcoded (__main__.AnalyticFloquetBdGTests.test_site_weights_and_candidates_are_derived_not_hardcoded) ... ok
+test_static_open_chain_has_exact_end_null_vectors (__main__.AnalyticFloquetBdGTests.test_static_open_chain_has_exact_end_null_vectors) ... ok
+test_candidates_contain_raw_evidence_and_separate_controls (__main__.StudyArtifactTests.test_candidates_contain_raw_evidence_and_separate_controls) ... ok
+test_no_overclaim_and_reproducibility_metadata (__main__.StudyArtifactTests.test_no_overclaim_and_reproducibility_metadata) ... ok
+test_study_grid_and_analytic_prediction (__main__.StudyArtifactTests.test_study_grid_and_analytic_prediction) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.005s
+
+OK
+exit_code=0
+$ python research/floquet-bdg/verify_floquet_bdg.py -v
+test_dense_sparse_crosscheck_is_real_and_close (__main__.IndependentFloquetBdGTests.test_dense_sparse_crosscheck_is_real_and_close) ... ok
+test_every_recorded_size_reproduces_unitary_spectrum (__main__.IndependentFloquetBdGTests.test_every_recorded_size_reproduces_unitary_spectrum) ... ok
+test_majorana_generator_and_static_null_space (__main__.IndependentFloquetBdGTests.test_majorana_generator_and_static_null_space) ... ok
+test_no_physics_or_completion_overclaim (__main__.IndependentFloquetBdGTests.test_no_physics_or_completion_overclaim) ... ok
+test_pi_mode_passes_preregistered_finite_size_contract (__main__.IndependentFloquetBdGTests.test_pi_mode_passes_preregistered_finite_size_contract) ... ok
+test_raw_npz_and_csv_match_candidate_records (__main__.IndependentFloquetBdGTests.test_raw_npz_and_csv_match_candidate_records) ... ok
+test_static_trivial_control_fails_joint_edge_rule (__main__.IndependentFloquetBdGTests.test_static_trivial_control_fails_joint_edge_rule) ... ok
+test_zero_mode_is_not_promoted_past_failed_separation (__main__.IndependentFloquetBdGTests.test_zero_mode_is_not_promoted_past_failed_separation) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.227s
+
+OK
+exit_code=0
+$ python research/floquet-bdg/build_markdown.py
+C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg\README.md
+exit_code=0
+$ python research/floquet-bdg/build_figure.py
+C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg\quasienergy.png
+exit_code=0
+$ python research/floquet-bdg/test_report_contract.py -v
+test_actual_figure_and_markdown_boundaries (__main__.FloquetBdGReportTests.test_actual_figure_and_markdown_boundaries) ... ok
+test_native_word_package_and_citations (__main__.FloquetBdGReportTests.test_native_word_package_and_citations) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.017s
+
+OK
+exit_code=0
