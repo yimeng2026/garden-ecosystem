@@ -35,6 +35,6 @@
 ### Task 4：回归、交付与全库裁决
 
 - [x] fresh 运行两套测试、JSON、覆盖唯一性、DOCX 哈希、`docx.py validate` 和 `git diff --check`，全部退出 0。
-- [ ] 提交 `docs: complete organized paper direction coverage` 并推送具名分支，核对远端哈希，不合并主分支。
-- [ ] 以 `docs: record organized coverage delivery` 记录交付。
-- [ ] 44 份覆盖、报告和验证闭合后保持目标 active；科学未竟工作保留为后续研究方向，不虚报完成。
+- [x] 提交 `docs: complete organized paper direction coverage` 并推送具名分支，核对远端哈希，不合并主分支。
+- [x] 以 `docs: record organized coverage delivery` 记录交付。
+- [x] 44 份覆盖、报告和验证闭合后保持目标 active；科学未竟工作保留为后续研究方向，不虚报完成。
