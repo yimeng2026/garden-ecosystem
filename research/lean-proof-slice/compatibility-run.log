@@ -1,0 +1,21 @@
+Lean 原文件兼容性勘误验证记录
+日期：2026-11-11
+分支：fix/lean-compatibility-errata
+基线：c9956bc41d4d113d6be191bd11b254db026eccee
+
+[source-evidence]
+original_sha256=1971e95d7b375c24778d3adae8a1ab3be4c5abeb1ee8b79a2b1f347b7aa00439
+original_compile_exit_code=1
+original_compile_log=original-compile.log
+直接证据：eulerMascheroni、unexpected token 'λ'、ω_D、HasEquiv ℝ。
+Mathlib 源码中已定位实际常量名 Real.eulerMascheroniConstant；不是凭记忆猜测。
+
+[scope]
+只登记四类错误及清偿动作，不修改原文件，不新增公理、证明位 sorry 或物理结论。
+每项状态保持 open；兼容性勘误不等于错误已修复或物理命题已证明。
+
+[RED: missing compatibility-issues.json]
+命令：python research/lean-proof-slice/test_compatibility_errata.py -v
+退出码：1
+关键输出：setUpClass ERROR；FileNotFoundError: compatibility-issues.json；Ran 0 tests；FAILED (errors=1)。
+判定：符合预期 RED，勘误对象尚未生成；零测试发现保护生效。
