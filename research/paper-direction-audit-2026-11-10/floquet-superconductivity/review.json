@@ -1,0 +1,80 @@
+{
+  "schema": "paper-direction-review-v1",
+  "paper_id": "toe-sylva:papers/room_temp_sc/floquet_superconductivity_deep.md",
+  "review_date": "2026-11-10",
+  "role": "Floquet 超导综述与研究路线入口，不是独立新物理理论",
+  "priority": "P0",
+  "priority_reason": "中心定量主张需要来源、样品、时间线和证据等级修复；不表示全文皆假。",
+  "verification": {
+    "command": "在临时输出目录调用 verify_rtsc.py 的 main()",
+    "exit_code": 0,
+    "modules_passed": 3,
+    "modules_total": 3,
+    "scope": "BCS 能隙、Allen-Dynes 公式和二能级高频展开；不覆盖材料预测或实验参数。",
+    "log": "run.log"
+  },
+  "external_source_checked": {
+    "work": "Xie et al., LaH10 Floquet-DFPT",
+    "year": 2025,
+    "doi_page": "https://www.nature.com/articles/s41524-025-01725-z",
+    "scope": "潜在 20–30% 提升；低压 DOS 标度不是精确预测，而是相应下界估计。",
+    "covers_yh10": false
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "P0",
+      "kind": "chronology",
+      "claim": "综述写 2023 年提出 Floquet-DFPT，原始出版来源为 2025 年。"
+    },
+    {
+      "id": "F2",
+      "severity": "P0",
+      "kind": "internal_parameter_mismatch",
+      "claim": "LSCO 同时写约 10–100 THz 和约 800 nm（约 375 THz），需回源拆分条件。"
+    },
+    {
+      "id": "F3",
+      "severity": "P0",
+      "kind": "sample_conflation",
+      "claim": "FeSe/STO 单层与 FeSe0.5Te0.5 混写，不能互相替代实验样品。"
+    },
+    {
+      "id": "F4",
+      "severity": "P0",
+      "kind": "unsupported_extrapolation",
+      "claim": "YH10 的 350–400 K 缺少独立计算、条件和原始来源。"
+    },
+    {
+      "id": "F5",
+      "severity": "P1",
+      "kind": "citation_traceability",
+      "claim": "部分条目只有相关预印本或空 arXiv 字段，定量主张缺少精确图表或页码。"
+    },
+    {
+      "id": "F6",
+      "severity": "P1",
+      "kind": "missing_boundary_section",
+      "claim": "缺少独立结论与局限章节，稳态、瞬态、连续波和高压预测未分层。"
+    }
+  ],
+  "directions": [
+    {
+      "id": "A",
+      "role": "驱动超导主张—证据图谱",
+      "status": "近期可执行审计基础，不是新物理理论"
+    },
+    {
+      "id": "B",
+      "role": "有限 Floquet-BdG 的 0／π 模数值验证",
+      "status": "独立研究候选，需另行规格与验证协议"
+    },
+    {
+      "id": "C",
+      "role": "相互作用模型的 Floquet 高频展开收敛基准",
+      "status": "独立研究候选，需另行规格与验证协议"
+    }
+  ],
+  "unverified_remainder": "其余实验数字和引文未经逐项原始来源终审，统一保留为未核实，不据此判假。",
+  "source_file_modified": false
+}

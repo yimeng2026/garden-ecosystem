@@ -172,3 +172,30 @@ worktree_lf_matches_commit_lf = true
 拓扑当前提交主题为 `Unify p+ip phase diagrams and Chern conventions`，核心开放问题当前提交主题为 `audit: correct core open problem evidence status`。因此四项均属于库存建立后的合法提交演进，不是来源不明的脏差异。
 
 工程结论：权威版本映射必须分别保存 `raw_sha256`（原始工作区字节）与 `content_sha256`（CRLF 统一为 LF 后的内容），并同时记录提交、父提交和工作区状态。不得只用跨平台原始字节哈希推断正文漂移，也不得用换行规范化掩盖真实内容差异；两种哈希必须成对出现。
+
+## Floquet 超导单篇方向与证据审计（2026-11-10）
+
+审计对象为 `toe-sylva:papers/room_temp_sc/floquet_superconductivity_deep.md`，全文 735 行已读取。配套 `verify_rtsc.py` 在临时输出目录实际执行 `main()`，退出码 **0**，输出：
+
+```text
+[PASS]: BCS Gap Equation Universal Ratio
+[PASS]: Allen-Dynes T_c Formula
+[PASS]: Floquet High-Frequency Expansion
+3/3 modules passed.
+```
+
+三个模块分别覆盖 BCS 能隙、Allen–Dynes 公式和二能级高频展开；不覆盖 LaH₁₀、YH₁₀、材料实验参数、相互作用 BdG 或 Floquet-DFPT。完整输出保存为 `floquet-superconductivity/run.log`。
+
+Xie／LaH₁₀ 的 2025 年官方 DOI 页面和原文镜像已核。原文给出潜在 20–30% 提升，并明确低压 DOS 标度不是精确预测，而是相应下界估计。其余未逐条回源的实验数字保留为未核实，未据此判假。
+
+单篇裁决为 **P0（中心证据与引用修复）**，不是独立新物理理论。发现六项问题：Xie 年份、LSCO 参数不一致、FeSe 样品混写、YH₁₀ 无来源高温外推、引用可追踪性不足、缺少结论与局限。另登记三个有边界方向：主张—证据图谱、有限 Floquet-BdG 的 0／π 模验证、相互作用模型 HFE 收敛基准；后两者均需独立设计，未在本轮实现。
+
+交付件：
+
+- `floquet-superconductivity/REVIEW.md`
+- `floquet-superconductivity/REVIEW.docx`
+- `floquet-superconductivity/review.json`
+- `floquet-superconductivity/run.log`
+- `floquet-superconductivity/word-qa/report.json`
+
+最终 Word 执行 `docx.py validate`，退出码 **0**，`PASSED (17 parts XSD + semantic checks; gen: 6 checks clean)`。最终视图渲染并逐页检查 **5/5 页**，`nearBlankPages=[]`，所有 `clipped=false`；仅低风险 `w:lvlOverride` 目录编号兼容提示。原论文未修改，`word-work/` 与 QA 页面图片不纳入提交。
