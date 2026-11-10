@@ -140,7 +140,7 @@ Run `docx.py render` once. If successful, read contact sheet first, then every p
 
 Run both test suites, JSON parsing for `review.json` and QA report, `docx.py validate`, and `git diff --check`. Require exit 0 for each and append commands/outputs to `run.log`.
 
-- [ ] **Step 2: Commit and push**
+- [x] **Step 2: Commit and push**
 
 ```bash
 git add research/paper-direction-audit-2026-11-10/validation-materials docs/superpowers/plans/2026-11-10-validation-materials-audit.md
