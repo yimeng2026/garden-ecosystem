@@ -1,0 +1,58 @@
+room_temp_sc 方法与形式化小组审计验证记录
+日期：2026-11-10
+分支：audit/room-temp-methods-batch
+基线：a2e43d8f37230ec6e6fa2eb54753a0148b29df77
+
+[source-freeze]
+命令：sha256sum（五份文档及独立 Lean 文件，工作区 toe-sylva-audit 只读）
+退出码：0
+latest_digest=41aea15ed19c68375f29877f7e22deba22394757df178cb67ca827a458a0aa75
+floquet_notes=37b5436dc39bada84c3a520943ea94515d5d08e75c27e808aba5070059d48ab9
+eliashberg_notes=841c1954c7fea9c41e3179476602c64b47eca936643f383e24215284324d0a20
+lean_markdown=c171f6e5d5e5b6547bddc88d94138b9dc0a87d8c3a6ec59ff696e35746f59141
+si_template=9d54064ba6089c82de39ddef90afeb82e47d511f95b35dd0490ee50aef63d97f
+lean_standalone=1971e95d7b375c24778d3adae8a1ab3be4c5abeb1ee8b79a2b1f347b7aa00439
+
+[worktree-boundary]
+命令：git rev-parse --git-dir --git-common-dir --show-superproject-working-tree && git branch --show-current && git status --short
+退出码：0
+GIT_DIR=C:/Users/一梦/Documents/kimi/workspace/garden-ecosystem/.git/worktrees/room-temp-methods-audit
+GIT_COMMON=C:/Users/一梦/Documents/kimi/workspace/garden-ecosystem/.git
+branch=audit/room-temp-methods-batch
+无子项目输出；只有本批规格、计划和 room-temp-methods 未跟踪文件。
+
+[primary-source-check]
+Xie 本地正式 PDF 提取文本 lines 421-428：220 GPa 为 258→320 K，250 GPa 为 237→322 K。
+Xie lines 556-584：150 GPa 为 249→285 K，200 GPa 为 240→301 K；DOS-scaling 不是准确预测，是 Floquet-DFPT 下界。
+APS 官方 FetchURL：https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.256003
+结果：PRL 133, 256003，2024-12-19；W≤6，T/J≈0.06；最高特征温度约 0.15J；t′/t<0 配对更弱。
+PNAS 官方 FetchURL：https://www.pnas.org/doi/10.1073/pnas.2401840121
+结果：121(26), e2401840121；167 GPa 预测最高 316 K，250 GPa 预测最高 331 K；理论预测。
+Nature HTML FetchURL 受浏览器验证阻挡；使用已下载同一 DOI 的正式 PDF，不据此声称网页检查成功。
+
+[RED: missing review.json]
+命令：python research/paper-direction-audit-2026-11-10/room-temp-methods/test_room_temp_methods_audit.py -v
+退出码：1
+关键输出（完整失败性质保留）：
+setUpClass (__main__.RoomTempMethodsAuditTests) ... ERROR
+
+======================================================================
+ERROR: setUpClass (__main__.RoomTempMethodsAuditTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-methods-audit\research\paper-direction-audit-2026-11-10\room-temp-methods\test_room_temp_methods_audit.py", line 21, in setUpClass
+    cls.data = json.loads((ROOT / "review.json").read_text(encoding="utf-8"))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-bundle\runtime\python\cpython-3.12\Lib\pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-bundle\runtime\python\cpython-3.12\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-methods-audit\\research\\paper-direction-audit-2026-11-10\\room-temp-methods\\review.json'
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.002s
+
+FAILED (errors=1)
+判定：符合预期 RED；失败原因是唯一证据对象尚不存在，不是测试语法错误。
