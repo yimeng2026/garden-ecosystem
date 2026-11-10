@@ -1,0 +1,41 @@
+主论文四版本与手册两章审计验证记录
+日期：2026-11-10
+分支：audit/room-temp-claims-batch
+基线：e496fb1bc63178527d1c35c62972450039b48b0b
+
+[branch-and-source-freeze]
+从已推送的 audit/room-temp-methods-batch 创建 audit/room-temp-claims-batch，不合并主分支。
+六份原文、临界流形 results.json、前批 review.json 只读。
+十项冻结 SHA-256 已写入规格和 test_main_claims_audit.py。
+
+[primary-source-download]
+命令：curl -L --fail --max-time 120 https://arxiv.org/pdf/2510.01273 -o research/paper-direction-audit-2026-11-10/main-claims/sources/song-2510.01273.pdf
+退出码：0
+PDF SHA-256：b820d4dac9162c0f8b914282afbbbe85e7005bce68c7b217abff070a715debdf
+
+命令：curl -L --fail --max-time 120 https://arxiv.org/pdf/2605.29985 -o research/paper-direction-audit-2026-11-10/main-claims/sources/semenok-2605.29985.pdf
+退出码：0
+PDF SHA-256：a1dc4c13ecf800baf422e97aa51ba004b85ec7e6e32ecc7bf9f850df39a09bef
+
+命令：python research/paper-direction-audit-2026-11-10/main-claims/sources/extract_claim_pdfs.py
+退出码：0
+song：41 pages，53484 text chars，4769428 bytes。
+semenok：20 pages，48328 text chars，11129527 bytes。
+pypdf 提示 incorrect startxref pointer(3) 后成功解析；后续以提取文本和原始 PDF 哈希复核。
+
+[primary-source-findings]
+Song arXiv:2510.01273：真实预印本；报告实验合成、271–298 K／195–266 GPa、零电阻、磁场抑制、XRD、13 次可重复实验。直接 Meissner 测量列为未来工作。
+Semenok arXiv:2605.29985：真实预印本；报告 7 次不成功合成、250–280 GPa 下未见 245–300 K 超导，前驱体可能关键；仍讨论理论 Tc>300 K at 300 GPa。
+Crossref API：https://api.crossref.org/works/10.1038/s41586-024-07036-5
+实际题名：Twisted-layer boron nitride ceramic with high deformability and strength；Nature 626, 779–784 (2024)，不是 LaSc₂H₂₄。
+Song 全文未找到 42nd、43rd、success rate、million RMB 等手册叙事支持；标未核实，不判虚构。
+
+[RED: missing review.json]
+命令：python research/paper-direction-audit-2026-11-10/main-claims/test_main_claims_audit.py -v
+退出码：1
+关键输出：
+setUpClass (__main__.MainClaimsAuditTests) ... ERROR
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-methods-audit\\research\\paper-direction-audit-2026-11-10\\main-claims\\review.json'
+Ran 0 tests in 0.002s
+FAILED (errors=1)
+判定：符合预期 RED，原因是唯一证据对象尚不存在。
