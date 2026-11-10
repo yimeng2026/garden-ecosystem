@@ -1,0 +1,1219 @@
+=== PDF PAGE 1 ===
+Data-driven Design of High Pressure Hydride
+Superconductors using DFT and Deep Learning
+Daniel Wines∗and Kamal Choudhary
+Material Measurement Laboratory, National Institute of Standards and Technology,
+Gaithersburg, MD 20899, USA
+E-mail: daniel.wines@nist.gov
+Abstract
+The observation of superconductivity in hydride-based materials under ultrahigh
+pressures (for example, H 3S and LaH 10) has fueled the interest in a more data-driven
+approach to discovering new high-pressure hydride superconductors. In this work, we
+performed density functional theory (DFT) calculations to predict the critical temper-
+ature ( Tc) of over 900 hydride materials under a pressure range of (0 to 500) GPa,
+where we found 122 dynamically stable structures with a Tc above MgB2 (39 K). To
+accelerate screening, we trained a graph neural network (GNN) model to predictTc and
+demonstrated that a universal machine learned force-field can be used to relax hydride
+structures under arbitrary pressures, with significantly reduced cost. By combining
+DFT and GNNs, we can establish a more complete map of hydrides under pressure.
+Keywords: Superconductivity; density functional theory; high-throughput; materials
+discovery; hydrides
+1
+arXiv:2312.12694v4  [cond-mat.mtrl-sci]  31 May 2024
+
+=== PDF PAGE 2 ===
+Introduction
+The discovery of superconductors with a high transition temperature ( Tc) has been a long-
+standing goal in the condensed matter physics community. The highest measured Tc for
+a Bardeen-Cooper-Schrieffer (BCS) 1,2 conventional superconductor (mediated by electron-
+phonon interactions) in ambient conditions has been measured to be 39 K for MgB 2. 3 These
+moderately low Tc values (significantly less than liquid nitrogen) of traditional BCS super-
+conductors can be overcome by applying ultra-high pressures to hydrogen-rich compounds.4,5
+Metallic hydrogen and hydrogen-rich compounds are ideal for high temperature supercon-
+ductivity because hydrogen atoms provide strong electron-phonon coupling (EPC) and high
+frequency phonon modes. 6,7 Recent experimental observation (within the past decade) of
+conventional superconductivity in hydride-based materials under high pressure has reinvigo-
+rated the interest in searching for new hydride superconductors and minimizing the required
+pressure to sustain superconductivity at a high temperature. 4,5
+This renowned interest in high pressure hydrides was reignited in 2015 with the experi-
+mental measurement of superconductivity at 203 K for H 3S under pressure. 8 In addition to
+H3S, aTc above 250 K has been experimentally observed for LaH 10 above 170 GPa, 9–11 with
+several experimental and computational studies confirming these results. 9–14 A Tc of 243 K
+has been observed for YH 9 at 201 GPa 15 and superconductivity has also been measured
+for ThH 10, 16 YH4, 17 LuH3, 18 zirconium polyhydrides, 19 and tin hydrides 20 under pressure.
+More recently, calcium superhydrides such as CaH 6 have been measured to have a Tc of up
+to 210 K at (160 to 190) GPa. 21 It has also been demonstrated that doping can play a role
+in enhancing Tc for hydride materials under pressure. 22–25 Recent claims of room tempera-
+ture superconductivity in Ca-H-S (under 190 GPa) 26 and Lu-H (under 10 GPa) 27 systems
+have been met with scrutiny from the scientific community, with Ref. 26 and Ref. 27 being re-
+tracted. Despite the lack of reproducibility in these recent claims, the search for new hydride
+superconductors with a high Tc continues on the experimental and computational front.
+In contrast to unconventional superconductors, where there is not a well-defined theo-
+2
+
+=== PDF PAGE 3 ===
+retical framework to describe superconductivity, BCS theory can be utilized as a tool to
+screen potential superconducting materials in conjunction with electronic structure methods
+such as density functional theory (DFT). With the advancements in computing power, DFT
+databases, and robust and efficient computational workflows, high-throughput calculations
+(on the order of hundreds to thousands) of superconducting properties are now in the realm
+of possibility. 28–35 In addition, various machine learning and data-driven approaches have
+been used to aid in the discovery of new and novel superconductors. 36–48 In our previous
+works, we expanded the existing JARVIS (Joint Automated Repository for Various Inte-
+grated Simulations) 33,35 DFT database to include calculations for over 1000 bulk 36 and 150
+two-dimensional (2D) superconductors 37 (all at zero pressure). We also developed a deep-
+learning tool (trained on our DFT dataset) to predict the electron-phonon coupling (EPC)
+parameters and Tc of any material 36 at a significantly reduced cost. We went on to utilize
+this deep-learning tool for forward and inverse design of new superconductors. 36,45
+In addition to our own work, there has been a recent high-throughput DFT and machine
+learning study which performed EPC calculations for over 7000 superconducting candidates48
+(all at zero pressure), which makes it one of the largest high-throughput DFT study of con-
+ventional superconductors to date. In contrast to the DFT and machine learning works
+that span several material classes, there have been few high-throughput computational ef-
+forts that have focused on high pressure hydrides. 46 Recently, the Superhydra database was
+created by Saha et al. 49 to map superconductivity in high pressure hydrides, but the DFT
+calculations have so far been limited to binary compounds at a single pressure value of 200
+GPa. In addition, Belli et al. 50 analyzed the electronic and structural properties of more
+than 100 hydride superconductors calculates with DFT (at several pressures ranging from 0
+GPa to 500 GPa) and found a strong correlation betweenTc and electronic bonding network,
+establishing a clear path to engineer the Tc. 50 In a seminal work in 2021, Shipley et al. 46
+surveyed the landscape of binary hydrides up until 500 GPa for the entire periodic table and
+performed high-throughput DFT calculations for the best candidates at pressure values of
+3
+
+=== PDF PAGE 4 ===
+10, 100, 200, 300 and 500 GPa. From these results, they found 36 dynamically stable high
+pressure hydride superconductors with a Tc above 100 K, with 18 of these materials having
+a Tc over 200 K. 46
+Building on our previous efforts within JARVIS and inspired by the recent efforts of other
+researchers focused on hydrogen-based superconductors, we established a high-throughput
+workflow to screen potential hydride superconductors. Specifically, we extended our search
+beyond binary compounds. We ran DFT calculations for over 900 hydrogen-based materials.
+These calculations involved relaxing the hydride structures under various amounts of pres-
+sure and then performing EPC calculations to determine superconducting properties. We
+went on to further analyze dynamically stable structures (containing all positive phonon fre-
+quencies in the phonon density of states) with the highestTc and the structures that were not
+previously known to be superconducting. After running these DFT calculations, we trained
+a deep learning model (using the relaxed high-pressure structures and computed Tc values)
+to predict Tc given a crystal structure, specifically tailored to high pressure hydrides. Such
+deep learning models have shown remarkable potential for superconductor design.36,45,48,51–53
+After testing and benchmarking our newly trained deep learning property prediction model,
+we used a unified machine learning-based force-field to relax the hydride structures under
+pressure, further reducing the number of DFT calculations needed to obtain a complete map
+of superconducting properties under pressure.
+Methodology
+In order to compute the EPC and Tc of hydride materials, we performed non-spin polarized
+density functional perturbation theory (DFPT) 54,55 with the Gaussian broadening (inter-
+polation) method. 56 Similarly to our previous workflows in Ref., 36 Ref., 37 and Ref., 45 we
+used the Quantum Espresso 57 software package, Garrity-Bennett-Rabe-Vanderbilt (GBRV)
+pseudopotentials 58 and the Perdew-Burke-Ernzerhof functional revised for solids PBEsol. 59
+4
+
+=== PDF PAGE 5 ===
+For Lu, a Topsakal-Wentzcovitch60 pseudopotential was used. Due to the high-throughput
+nature of this study, which is primarily focused on screening potential high-pressure hydride
+candidates, we used preconverged k-points from the JARVIS database, 61 a 2x2x2 q-point
+grid and a kinetic energy cutoff of 610 eV (45 Ry). It was demonstrated in Ref. 36 and
+Ref. 37 that these lower q-point grids can still be effective for material screening purposes.
+For structures not already in the JARVIS dataset (materials added from the literature), we
+used the automated k-point convergence scheme in JARVIS. 61
+The Eliashberg spectral function ( α2F (ω)) 62 that determines the EPC can be obtained
+from:
+α2F (ω) = 1
+2πN(ϵF )
+∑
+qj
+γqj
+ωqj
+δ(ω−ωqj)w(q) (1)
+whereN(ϵF ) is the density of states (DOS) at the Fermi level ϵF ,ωqj is the mode frequency,
+δis the Dirac-delta function, w(q) is the weight of the q point, and γqj is the phonon mode
+j linewidth at wave vector q:
+γqj = 2πωqj
+∑
+nm
+∫ d3k
+ΩBZ
+|gj
+kn,k+qm|2δ(ϵkn−ϵF )δ(ϵk+qm−ϵF ) (2)
+The integral is over the first Brillouin zone, gj
+kn,k+qm is the electron-phonon matrix element,
+andϵkn andϵk+qm are the DFT eigenvalues with wavevectork andk +q within the nth and
+mth bands. The relation between γqj and the mode EPC parameter is:
+λqj = γqj
+πhN(ϵF )ω2
+qj
+(3)
+The EPC parameter can now be written as:
+λ= 2
+∫ α2F (ω)
+ω dω=
+∑
+qj
+λqjw(q) (4)
+where w(q) is the weight of a q point. The McMillan-Allen-Dynes 63 formula can be used to
+5
+
+=== PDF PAGE 6 ===
+approximate the superconducting transition temperature (Tc) and is written as:
+Tc = ωlog
+1.2 exp
+[
+− 1.04(1 +λ)
+λ−µ∗(1 + 0.62λ)
+]
+(5)
+where
+ωlog = exp
+[∫
+dωα2F (ω)
+ω lnω
+∫
+dωα2F (ω)
+ω
+]
+(6)
+In Eq. 5, the constant µ∗ is the effective Coulomb potential parameter, which we take to be
+0.1. To generate our DFT dataset, it took roughly 11,500 core hours. Approximately 7 %
+of the computational time was devoted to relaxing the structures under pressure while the
+remaining 93 % of the computational time was devoted to DFPT calculations of the EPC.
+To predict the superconducting properties of each high pressure hydride material, we used
+the atomistic line graph neural network (ALIGNN). 64 Specifically, we trained an ALIGNN
+model on our new high pressure hydride DFT dataset, and trained an ALIGNN model on
+a combination of our high pressure hydride DFT dataset and our bulk superconducting
+DFT dataset from Ref. 36 It is important to note that both of these ALIGNN models were
+trained on DFT relaxed structures under pressure. Within ALIGNN, the crystal structure
+is represented as a graph (elements are nodes, bonds are edges). Each node in the graph has
+nine input features, which include block, electronegativity, valence electrons, group number,
+electron affinity, ionization energy, atomic volume, and covalent radius. The bond distances
+are the edge features and the radial basis function cutoff is 8 ˚A. In addition, a periodic
+graph construction with 12-nearest neighbors is used. The line graph is constructed from
+the atomistic graph, using bond distances as nodes and bond angles as edges. The node and
+edge features are updated with edge-gated graph convolution using a propagation function.
+One layer is composed of an edge-gated graph convolution on the bond graph and an edge-
+gated convolution on the line graph. The line graph convolution produces bond messages that
+propagate to the atomistic graph, where the atom and bond features are updated further.
+For superconducting transition temperature, we used 300 epochs for training, a 80:10:10 split
+6
+
+=== PDF PAGE 7 ===
+and a batch size of 16 (the test set was not used at all during training). The hyperparameters
+were kept the same as the original ALIGNN paper by Choudhary and DeCost. 64 ALIGNN
+was designed to be a flexible framework that could be applied to any material class for an
+incredibly diverse range of material properties. In fact, this formalism has been tested on
+over 52 properties for materials and molecules that range the entire periodic table, with
+great success. 64 Extensive benchmarking and testing of model parameters such as node
+features, optimized hyperparameters, number of epochs and batch size are presented in
+Ref. 64 For consistency and due to the fact that we have a similar dataset size, 36 we used the
+same number of epochs and the same batch size as our previous superconducting work, 36 in
+addition to the same set of hyperparameters. In addition to the several follow-up studies
+which use ALIGNN 35 (including our previous superconducting work 36) which used the same
+nine node features, we used the same nine node features in the current work. It is entirely
+possible that adding an additional descriptor to ALIGNN can improve the model to cater
+to the characteristics of BCS superconductors under pressure, but that is something beyond
+the scope of this work. ALIGNN is implemented in PyTorch 65 and the deep graph library. 66
+To train our ALIGNN models for our newly generated hydride dataset and a combination of
+our hydride dataset and previous dataset, it roughly took 4 and 7 GPU hours, respectively.
+Results and Discussion
+High-throughput DFT Results
+Fig. 1 depicts our full high-throughput workflow used to investigate high pressure hydride su-
+perconductors. The first step involves screening the existing JARVIS-DFT database, which
+contains over 80,000 materials and millions of computed properties. The first task was to
+screen materials that contain hydrogen and have a unit cell of 8 or less atoms (structures
+where the EPC can feasibly be computed, with the exception of certain binary superhydrides
+such as LaH10). After this first round of screening, we screened certain DFT computed prop-
+7
+
+=== PDF PAGE 8 ===
+JARVIS-DFT
+Eform < 0 eV/atom
+EHull < 0.5 eV/atom
+Egap < 0.05 eV
+M < 0.05 μB
+ 
+Contains H?
+Natom < 8
+Tc : McMillan-Allen-
+Dynes (DFPT)
+Literature search for
+H-based SC
+Further Investigation
+Apply pressures
+of 0 - 500 GPa
+(DFT Relaxation)
+ALIGNN
+Training (Tc)
+Search for new
+H-based
+structures
+ALIGNN
+Screening (Tc)DFT Validation
+Figure 1: The full workflow for new high pressure hydride superconductors using JARVIS,
+DFT, and ALIGNN. This workflow involves screening structures from the JARVIS-DFT
+database (filtering structures that contain H, are thermodynamically stable, nonmagnetic
+and metallic) and adding structures from literature, then performing DFT calculations at
+applied pressures of 0 GPa to 500 GPa and computing Tc. The ALIGNN model is then
+trained on DFT data to predictTc with lower cost, enabling enhanced screening of candidate
+superconductors.
+erties from JARVIS-DFT such as the formation energy per atom (Eform), the energy above the
+convex hull (EHull), the electronic band gap (Egap), and the magnetic moment per atom (M).
+To ensure the superconducting candidate materials were the most thermodynamically stable,
+metallic and nonmagnetic, the criteria we established (similar to our previous work 36,37,45)
+was E form < 0 eV/atom, E Hull < 0.5 eV/atom, E gap < 0.05 eV, and M < 0.05 µB. These
+properties in the JARVIS-DFT database are calculated with the Opt-b88-vdW 67 functional,
+which tends to underestimate the band gap. This band gap underestimation is not of concern
+for screening purposes since we only wish to identify metallic structures. We chose such a
+generously high E Hull cutoff due to the possibility of applied pressure stabilizing structures
+(it is possible that a structure at 0 GPa could lie very far above the hull but at higher pres-
+sure could lie on the hull). In addition to pulling candidate structures from JARVIS-DFT,
+we added candidate structures from literature. These included H-based structures from the
+3DSC 47 database. In addition, several binary compounds from the work of Shipley et al. 46
+8
+
+=== PDF PAGE 9 ===
+were included in our calculations. After identifying the potential hydride superconductors,
+we applied pressures of (0, 100, 200, 300 and 500) GPa to each material and relaxed the
+structure. To be consistent with our previous work, 36 we performed our new DFT calcula-
+tions (taking H-based structures from JARVIS, 3DSC 47 and Shipley et al. 46 with the same
+workflow and settings as in Ref. 36 (same PBEsol functional, pseudopotential, etc.). After
+obtaining the final structure under pressure, we performed DFPT calculations to obtain the
+EPC. then used the McMillan-Allen-Dynes equation to estimateTc. In addition to obtaining
+results for over 900 EPC calculations for Tc, we used our DFT data to train an ALIGNN
+model from scratch to predict Tc specifically for hydride structures under pressure. By ob-
+taining a well-trained deep learning model for Tc, we can eliminate the need for expensive
+DFT calculations. Specifically, we can use ALIGNN as a screening tool to identify potential
+candidates outside of the training set, which we can verify with DFT (see Fig 1).
+(a) (b)
+Figure 2: The DFT calculated Tc for the entire dataset at applied pressures of 0 - 500 GPa.
+For reference, experimental values for MgB 2, H 3S and LaH 10 are given. The dotted line
+represents the boiling point of liquid N 2 at ambient pressure. a) Depicts all of the DFT
+results while b) depicts the dynamically stable structures with a Tc above MgB2 (39 K).
+Fig. 2a) depicts a full summary of the over 900 DFT calculations performed in this study.
+These calculations were performed for the same set of materials at (0, 100, 200, 300 and 500)
+GPa (500 GPa was selected as an example of extreme pressure). Fig. 2b) depicts a subset
+of Fig. 2a), which includes the dynamically stable structures with a Tc above MgB 2 (39
+9
+
+=== PDF PAGE 10 ===
+K). Fig. 2 also depicts reference experimental values for MgB 2 (39 K at ambient pressure),
+H3S (203 K at 150 GPa) and LaH 10 (250 K at 170 GPa) and the dotted line represents the
+boiling point of liquid N 2 at ambient pressure (77 K). Table 1 and Table S1 (supplementary)
+display the contents of Fig. 2b) in tabulated form, with additional details of where the
+initial structure originated before external pressure was applied in our DFT calculations. It
+is important to note that a few simulations were performed at intermediate pressures of 50
+GPa and 250 GPa. These are included in the tables but omitted from Fig. 2 for visual
+purposes.
+At this stage, it is important to discuss the successes and limitations of our theoretical
+calculations within the context of this work. The goal of this work is to use high-throughput
+DFT to 1) identify new high pressure hydride superconductors and 2) generate a substantial
+amount of data to train a reliable deep learning model to predict Tc. Due to the high-
+throughput nature of these calculations and limitations to the theoretical framework, ac-
+curacy of the results may be impacted. There are two main sources of variation that can
+arise when calculating Tc. The first type of potential variation stems from the underlying
+DFT calculations, where calculation parameters such as the size of the q-point grid, choice
+of exchange-correlation functional, and choice of pseudopotential can impact the accuracy of
+the result. The second type of variation can occur from the theoretical framework used to es-
+timate theTc. Two types of approaches are normally used to estimateTc from the underlying
+DFT results for EPC, either solving the Migdal-Eliashberg equations directly 68 or plugging
+the DFPT computed λand ωlog into the McMillan-Allen-Dynes equation (as we did in this
+work, Eq. 5). Both of these approaches utilize the empirical constant µ∗, which can intro-
+duce variations in the Tc results. In our previous work, 36,37 we found that varying µ∗ from
+0.03 to 0.18 can change the Tc by up to 40 %, depending on the material, with the variation
+being more apparent for structures with a higher Tc. At larger EPC strengths, the variation
+between results obtained from the Migdal-Eliashberg equation and results obtained with the
+McMillan-Allen-Dynes equation begin to diverge, with the McMillan-Allen-Dynes approach
+10
+
+=== PDF PAGE 11 ===
+underestimating the Tc. 12,46 In fact, it was demonstrated that the variations arising from µ∗
+combined with the variations arising from the Migdal-Eliashberg vs. McMillan-Allen-Dynes
+approach can be up to 100 K for materials with large λ. 46 An example of this includes the
+underestimation of our DFT results vs. experimental values for the Tc of H 3S and LaH 10
+(we computed a max Tc of (160 - 187) K at (200 - 250) GPa for LaH 10 and a Tc of 154 K
+at 200 GPa for H 3S). Nonetheless, important qualitative trends can be identified from these
+calculations and previously unidentified superconductors can be revealed. This can motivate
+future, more in-depth studies of selected superconducting materials, with the goal of achiev-
+ing quantitative experimental accuracy for a smaller, focused subset of materials (rather than
+screening hundreds, or thousands of candidates with a less computationally costly approach).
+In order to achieve even higher accuracy and eliminate empirical biases, methods such as
+Superconducting-DFT and explicit calculations of µ∗ with the random phase approximation
+can be performed. 69–71
+It is clear from Table 1 and Table S1 that the majority of the structures that have a high
+Tc come from the dataset of Shipley et al., 46 which were recalculated with our workflow.
+The main motivation for adding the previously discovered structures from Shipley et al. 46
+was to provide high- Tc data for our deep learning model. All of the structures shown in
+Table 1 and Table S1 are dynamically stable (possess positive phonon frequencies in the
+phonon density of states). In addition to dynamical stability of these hydride compounds,
+we assessed the thermodynamic stability of these structures by computing the formation
+energy of each material (added to Table 1 and Table S1). Each formation energy value is
+computed by subtracting the respective energies of the most energetically favorable elemental
+solids from the total energy of each hydride compound. For an accurate reference point, we
+calculated the total energy of each elemental solid under pressure (i.e., to calculate the
+formation energy of CaH 6 at 100 GPa, we subtracted off the energies of elemental Ca and H
+at 100 GPa). We observe that all of structures in Table 1 and most structures in Table S1
+possess negative formation energy. By obtaining these formation energy results, we can easily
+11
+
+=== PDF PAGE 12 ===
+Table 1: A summary of DFT results, including structure (chemical formula), applied pres-
+sure, superconducting critical temperature ( Tc), formation energy per atom (E form) at each
+respective pressure, and the source of the original strucutre (JARVIS-DFT, 3DSC,47 or Ship-
+ley et al. 46 dataset) for dynamically stable structures with the highest Tc. A continuation of
+this data is in Table S1.
+StructurePressure (GPa)Tc(K) Eform(eV/atom)Source of Structures
+MgH12 500 296 -10.9 Shipley et al.
+NaH6 500 282 -14.4 Shipley et al.
+SrH10 500 270 -13.2 Shipley et al.
+MgH12 300 255 -6.7 Shipley et al.
+NaH6 500 242 -12.0 Shipley et al.
+NaH6 300 234 -4.0 Shipley et al.
+NaH9 500 234 -11.3 Shipley et al.
+MgH6 300 231 -7.5 Shipley et al.
+NaH6 200 225 -5.4 Shipley et al.
+LiH6 300 223 -6.4 Shipley et al.
+LiH3 500 222 -10.9 Shipley et al.
+MgH6 200 221 -3.4 Shipley et al.
+MgH10 500 218 -11.1 Shipley et al.
+MgH6 500 214 -11.8 Shipley et al.
+CaH6 200 210 -5.9 Shipley et al.
+LiH6 500 207 -10.5 Shipley et al.
+LiH2 300 205 -7.2 Shipley et al.
+NaH6 100 204 -1.9 Shipley et al.
+MgH10 300 204 -6.9 Shipley et al.
+LiH2 500 202 -11.2 Shipley et al.
+CaH6 300 198 -8.3 Shipley et al.
+YH9 300 196 -5.7 Shipley et al.
+LiH2 200 190 -3.1 Shipley et al.
+LiH6 200 188 -3.6 Shipley et al.
+LiH3 300 188 -6.9 Shipley et al.
+YH9 500 188 -9.5 Shipley et al.
+LaH10 250 187 -4.7 JVASP-149370
+KH10 500 186 -15.6 Shipley et al.
+LaH10 300 185 -5.7 JVASP-149370
+NaH9 300 185 -7.2 Shipley et al.
+CaH15 500 179 -11.3 Shipley et al.
+CaH6 100 178 -3.5 Shipley et al.
+MgH13 100 173 -1.8 Shipley et al.
+H3S 200 166 -5.7 JVASP-79487
+MgH13 200 164 -3.6 Shipley et al.
+CaH15 300 164 -6.8 Shipley et al.
+LiH3 200 162 -3.4 Shipley et al.
+LaH10 200 160 -3.8 JVASP-149370
+ScH12 500 159 -11.2 Shipley et al.
+Na2H11 500 159 -12.1 Shipley et al.
+H3S 250 154 -3.9 JVASP-79487
+KH10 300 154 -9.3 Shipley et al.
+Na2H11 500 154 -12.1 Shipley et al.
+CaH10 300 148 -7.3 Shipley et al.
+ScH14 500 146 -11.0 Shipley et al.
+ScH6 100 144 -2.0 Shipley et al.
+YH9 200 143 -3.9 Shipley et al.
+MgH13 300 143 -6.7 Shipley et al.
+H3S 300 143 -8.1 JVASP-79487
+MgH14 500 143 -10.8 Shipley et al.
+MgH12 200 142 -3.6 Shipley et al.
+SrH15 500 140 -12.1 Shipley et al.
+H3S 500 138 -12.6 JVASP-79487
+Na2H11 100 137 -1.9 Shipley et al.
+ScH6 200 137 -3.9 Shipley et al.
+KH10 200 137 -6.2 Shipley et al.
+CaH15 200 136 -4.7 Shipley et al.
+12
+
+=== PDF PAGE 13 ===
+(a)
+JVASP-93261
+0 GPa
+KAlH3
+Tc = 52 K
+(b)
+JVASP-125437
+100 GPa
+ScH3
+Tc = 69 K
+JVASP-135656(c)
+300 GPa
+AsHO
+Tc = 62 K
+(d)
+0 2 4 6 80
+0.5
+1
+1.5
+2
+(e)
+0 GPa
+KAlH3
+0 5 10 15 20 0
+0.5
+1
+1.5
+2
+2.5
+3
+100 GPa
+ScH3
+(f)
+α2F(ω) 
+α2F(ω) 
+ω (meV) ω (meV)
+JVASP-36262
+100 GPa
+MgH2
+Tc = 82 K
+Figure 3: a) - d) Selected structures from JARVIS that were revealed to be superconducting.
+e) and f) depict selected Eliashberg spectral functions.
+compute the convex hull 72,73 for selected compounds to observe how thermodynamically
+stable a given phase is with respect to other reported phases (see Fig 4, discussed in the
+next paragraph). Due to a lack of formation energy data for hydride-based structures at
+pressures above 0 GPa in most DFT databases, 28–30,33,35 constructing a convex hull for a
+given hydride superconductor has been a challenging task. We hope that by providing a
+large set of formation energy data for a wide variety of hydride structures under various
+amounts of pressure can allow others to create their own phase diagrams for compounds
+of interest (similar to those reported in Fig. 4). We acknowledge that it is possible for a
+material to exhibit strong electron-phonon coupling and also have a band gap, which would
+destroy the chances of the candidate material to be superconducting. To investigate this,
+13
+
+=== PDF PAGE 14 ===
+we calculated the band gap of all of our materials using the PBEsol functional. We found
+that out of all of the nearly 900 computations we performed, only 41 structures possessed a
+band gap. Out of these 41 structures, 30 have a band gap and a finite Tc (almost all of these
+structures have a Tc less than MgB 2). These structures are listed in Table S2.
+0 0.2 0.4 0.6 0.8 1
+−0.6
+−0.5
+−0.4
+−0.3
+−0.2
+−0.1
+0
+Composition (Fraction H)
+Formation energy (eV/atom) 
+H Mg 
+Mg 2H5
+Mg 2H7
+MgH 6
+MgH 8 MgH 10
+MgH 12
+MgH 13
+(a)
+(c)
+100 GPa
+100 GPa
+ScH3
+ScH12 
+ScH14 
+0 0.2 0.4 0.6 0.8 1
+−3.5
+−3 
+−2.5
+−2 
+−1.5
+−1 
+−0.5
+0
+Composition (Fraction H)
+Formation energy (eV/atom) 
+HMg 
+(b)
+300 GPa
+14MgH 
+MgH 2
+Formation energy (eV/atom) 
+MgH 2
+ScH 2ScH 
+Composition (Fraction H)
+Above Hull Stable
+HSc 
+0 0.2 0.4 0.6 0.8 1
+−0.6
+−0.4
+−0.2
+0
+−0.8
+Figure 4: Phase diagrams for some of the selected compounds reported in this work: Mg-H
+at a) 100 GPa, b) 300 GPa and c) Sc-H at 100 GPa. Formation energy data and code to
+produce these phase diagrams are available with this manuscript for users to construct their
+own phase diagrams and add their own DFT data.
+In addition to adding previously discovered high-Tc to our dataset, our workflow revealed
+some hydride-based structures in JARVIS to be superconducting. These included MgH 2 (82
+K at 100 GPa), AsHO (62 to 78 K at 200 to 300 GPa), ScH 3 (69 K at 100 GPa), and KAlH 3
+(52 K at 0 GPa). Fig. 3 depicts some of the selected materials from JARVIS that were
+revealed to be superconductors, in addition to some of the corresponding Eliashberg spectral
+functions. Along with this manuscript, all relaxed structures and full DFT calculations
+14
+
+=== PDF PAGE 15 ===
+are available for further analysis and future utilization. Fig. 4 depicts the computed phase
+diagrams for a few of the selected materials previously mentioned (using pymatgen72,73), and
+we see that all of these structures lie on the respective convex hulls. Specifically in Fig. 4 a) -
+b), we demonstrate how the phase diagram of Mg-H changes with pressure. Although Fig. 4
+depicts phase diagrams of binary systems, it is possible to construct these phase diagrams for
+ternary systems using pymatgen. Interestingly, when pressure is added to KAlH 3, a metal-
+to-semiconductor transition is induced from (100 - 500) GPa, quenching the superconducting
+properties (see Table S2). To our knowledge, there have been no experimental reports of
+superconductivity in KAlH 3. In addition, we found that the SiH 4 (identified from 3DSC 47)
+structure possesses a Tc of 71 and 72 for 200 GPa and 300 GPa respectively. It is important
+to note a different phase of ScH 3 has experimentally and theoretically been reported to
+be superconducting 74,75 (with a Fm ¯3m space group), but to our knowledge, the phase of
+ScH3 (with a Cm space group) reported in our manuscript is identified as a superconductor
+with DFT for the first time. With regards to MgH 2, the phase reported in our work has a
+space group of Fm−3m, which differs from the more stable reported α-MgH2 with a space
+group of Pnma. 76 α-MgH2 (Pmna) undergoes a semiconductor to metal transition with
+higher pressures above 170 GPa, reaching a Tc up to 23 K. 76 Our reported MgH 2 structure
+(Fm−3m), which has been found to be metastable, 77,78 retains its metallicity from (0 - 500)
+GPa. To our knowledge, previous studies have not explored the superconducting capabilities
+of the metastable MgH2 structure (Fm-3m) in detail (besides our previous work at 0 GPa36).
+SiH4 (Silane) is a material that has been previously studied in great detail experimentally and
+through first-principles, with a variety of phases and pressure-induced phase transitions being
+reported. 79–85 In this work, we obtained a structure for SiH 4 (space group P 21/c) from the
+3DSC 47 database (which maps entries of the experimental Supercon database to Materials
+Project entries). This structure is found in both JARVIS and Materials Project (JVASP-
+5281, mp-23739). Although this P 21/c structure of Silane is insulating at zero pressure,
+our calculations indicate that the application of large pressure results in an insulator-to-
+15
+
+=== PDF PAGE 16 ===
+metal transition, making superconductivity possible. Although it has been demonstrated
+theoretically that the thermodynamic stability of P 21/c can vary with pressure (i.e., the
+C2/c phase is more stable than the P 21/c phase for pressure ranges below 400 GPa 79–82),
+we find that P 21/c Silane possesses strong superconducting properties at (200 - 300) GPa.
+To our knowledge, DFT calculations for Tc at 200 - 300 GPa have not been carried out
+for P 21/c Silane prior to this study and the superconducting properties of P 21/c Silane
+have not been experimentally measured at these pressure values. Although our DFT results
+show dozens of potential high pressure hydride superconductor candidates, very few of our
+predicted structures have been experimentally realized. In fact, only a handful of materials
+from our dataset have been synthesized under pressure including H 3S, 8 LaH10, 9–11 CaH6, 21
+YH9, 15 and polyhydra of Li-H (LiH 2 and LiH 6). 86,87 In addition, polyhydra of Sr-H 88 and
+Na-H 89 with different stoichiometry than our DFT calculations have been synthesized (SrH2,
+NaH3, NaH7).
+Our plethora of DFT data on hydride materials under extreme pressures allows us to
+analyze certain trends in the results. Fig. 5 depicts a thorough analysis of DFT results for
+selected materials at various pressures. Fig. 5a)-b) depicts how the phonon density of states
+changes when pressure is applied. From Fig. 5a)-b), we observe that the phonon DOS is
+blueshifted, and the application of high pressure can cause the first peak in the phonon DOS
+to change from negative to positive (triggering an unstable-to-stable transition), as is the
+case for LaH 10, H3S, MgH12, MgH6, SrH10. Fig. 5c) depicts how Tc changes with respect to
+applied pressure. It is clear from the figure that there is not necessarily a linear relationship
+between applied pressure and an increase in Tc. In fact, for certain materials such as LaH 10
+and H3S,Tc increases up to some critical value of pressure and then decreases. This enforces
+the point that the relationship between superconductivity and applied pressure is entirely
+material dependent and cannot be described by simple models or equations (i.e., linear
+or polynomial fitting). Fig. 5d) depicts the Eliashberg function of LaH 10 under different
+amounts of pressure. As expected, the area under the curve is directly proportional to the
+16
+
+=== PDF PAGE 17 ===
+-1000 0 1000 2000 3000
+0
+0.01
+0.02
+0.03
+0.04
+0.05
+0.06
+0.07
+-1500 -500 0 500 1500 2500
+0 GPa
+100 GPa
+200 GPa
+300 GPa
+500 GPa
+LaH10 Phonon DOS
+Frequency (cm-1)
+Phonon DOS (states/cm-1)
+(a)
+(c)
+(b)
+0 10 20 30/gid01087
+/gid01087/gid01141/gid01092
+/gid01088
+/gid01088/gid01141/gid01092
+/gid01089
+5 15 25
+LaH10 Eliashberg Function
+0 GPa
+100 GPa
+200 GPa
+300 GPa
+500 GPa
+ω (meV)
+α2F(ω)
+Figure 5: An analysis of DFT results for select materials at various pressures: a) the overlap-
+ping phonon density of states for LaH10, b) the shift of the first peak in the phonon density of
+states with respect to applied pressure (points below the red dotted line indicate dynamical
+instability), c) Tc as a function of pressure, and d) the overlapping Eliashberg function for
+LaH10.
+change in Tc at each pressure value (see Eq. 4).
+Machine Learning Results
+The main outputs of this effort are 1) a high quality and diverse set of DFT data for hydride
+materials under pressure and 2) a well-developed deep learning model to predict Tc at a
+lower computational cost. The motivation to train a deep learning model to predict Tc for
+hydrides under various amounts of pressure stems from the fact that 1) each DFT calculation
+(for the structural relaxation under pressure and the DFPT calculation for the EPC) can
+be incredibly computationally expensive and 2) (as previously mentioned) there is no clear
+relationship between superconductivity and applied pressure, where it is entirely material
+dependent and cannot be described by simple models or equations. To address these two
+main concerns, we trained an ALIGNN model on our DFT data to predict Tc. A similar
+17
+
+=== PDF PAGE 18 ===
+KH 10 (200 Gpa)
+NaH9(500 Gpa)
+CaH15 (200 Gpa)
+SrH10 (500 Gpa)
+R2 = 0.76 R2 = 0.81 
+(a) (b)
+Figure 6: The performance of two separate ALIGNN models for Tc on the test set (random
+10 % of each dataset). a) Is the ALIGNN model trained on the hydride dataset and b) is
+the ALIGNN model trained on dataset which contains the hydride dataset and the JARVIS
+superconductor dataset from Ref. 36 The mean absolute error (MAE) and R 2 value are de-
+picted in the inset for each model and the dotted line is shown for reference.
+procedure was carried out in Ref., 36 where an ALIGNN model was trained on 1000 bulk
+materials. The Tc model of Ref. 36 achieved an MAE of 1.84 K, but the maximum Tc in
+this dataset was 33 K. In this work, we trained two separate ALIGNN models on different
+datasets (the datasets consisted of relaxed structures under pressure and Tc value). One
+model was trained on purely the hydride dataset (over 900 structures) and the other model
+was trained on the hydride dataset plus the dataset from Ref. 36 (900+1000 structures). Fig.
+6a) and b) depict the performance of both of these ALIGNN models on a random 10 %
+test set for each dataset (the random test set is different for each model to minimize bias
+that arises from partitioning the data into train:test:validation). The MAE for the ALIGNN
+model trained on the hydride dataset is 12 K and the MAE for the ALIGNN model trained
+on the hydride plus the JARVIS dataset from Ref. 36 is 8 K. We find the mean absolute
+deviation (MAD) of the ALIGNN model trained on the hydride dataset to be 32 K while the
+MAD of the ALIGNN model trained on the hydride plus the JARVIS dataset from Ref. 36
+is 19 K. The MAE values of these models are much larger due in part to the fact that the
+maximumTc in the datasets are much larger (over 280 K). Fig. 6a) and b) also demonstrates
+that the addition of data in these deep learning models can reduce the overall MAE. Ideally,
+18
+
+=== PDF PAGE 19 ===
+if an additional, larger DFT dataset of high-pressure hydride materials was developed (that
+was consistent with our calculation method, in terms of DFT functional and pseudopotential
+for consistency), it could be used to augment the training set and could potentially improve
+performance. Fig. 6 also depict some of the outlying ALIGNN predictions on the test set,
+which can be attributed to random model error. Fig. S1, S2 and S3 depict additional details
+regarding both ALIGNN models. Fig. S1 shows the training and validation MAE for Tc (K)
+as a function of the number of epochs. Fig. S2 shows the performance of both ALIGNN
+models on the training and validation sets. Due to the fact that the MAE values could
+be somewhat inflated because a large portion of the data lies under 50 K, we plotted the
+data separately for Tc above 50 K and below 50 K and computed each MAE separately for
+both ALIGNN models (see Fig. S3). In our previous work in Ref., 36 we computed Tc by
+predictingλandωlog separately with ALIGNN and plugged both quantities into Eq. 5. We
+found that this only resulted in a 4 % increase in accuracy. For this reason, we decided to
+directly predict Tc with ALIGNN. We hope that other researchers can utilize this ALIGNN
+model specifically fine tuned for high-pressure hydrides to screen the broader materials space
+for high-Tc hydride candidates prior to verifying with DFT (as shown in the workflow in Fig.
+1). It is apparent from Fig. 6 and Fig. S3 that the errors in Tc prediction from ALIGNN are
+relatively high. Despite this limitation of the model, we believe that it can be useful for the
+classification of potential high-Tc superconductors. The goal is not to outright replace DFT
+predictions, but to aid in the screening of potential candidates prior to verification by DFT.
+Motivated by this idea, we went on to quantify the classification of superconductors for
+both ALIGNN models. Our first classification metric is whether or not ALIGNN can predict
+if a structure is superconducting or not ( Tc > 0.1 K). We define a false positive as when
+ALIGNN predicts a Tc > 0.1 K while DFT predicts a Tc < 0.1 K, and a false negative as
+when ALIGNN predicts a Tc < 0.1 K while DFT predicts a Tc > 0.1 K. In the few cases
+where ALIGNN erroneously predicts a negative Tc value with magitude larger than 0.1 K
+(unphysical result), these entries are counted as both false positive and false negative. For
+19
+
+=== PDF PAGE 20 ===
+the ALIGNN model trained only on the hydride DFT dataset, the test set contained 95
+materials. Out of these 95 structures, there were 8 false positives and 4 false negatives (with
+3 entries being counted for both categories as unphysical results). For the ALIGNN model
+trained on the hydride+JARVIS-SC DFT dataset, the test set contained 199 materials. Out
+of these 199 structures, there were 31 false positives and 9 false negatives (with 8 entries
+being counted for both categories as unphysical results). Our second classification metric is
+whether or not ALIGNN can predict if a structure is a high temperature superconducting
+or not (Tc > 50 K). We define a false positive as when ALIGNN predicts a Tc > 50 K while
+DFT predicts a Tc < 50 K, and a false negative as when ALIGNN predicts a Tc < 50 K
+while DFT predicts a Tc > 50 K. For the ALIGNN model trained only on the hydride DFT
+dataset, we identified 0 false positives and 5 false negatives (16 materials in the test set
+have a DFT Tc > 50 K). For the ALIGNN model trained on the hydride DFT+JARVIS-SC
+dataset, we identified 2 false positives and 3 false negatives (17 materials in the test set
+have a DFT Tc > 50 K). These metrics demonstrate that although the prediction errors are
+relatively high in Fig. 6, these ALIGNN models can be useful in classification tasks for Tc,
+especially for high-Tc materials. By adding the ALIGNN model to the screening workflow
+for high pressure hydrides, the number of DFT calculations for superconducting properties
+can be significantly reduced.
+In the previous paragraph, we discussed how ALIGNN trained on DFPT calculations for
+Tc can accelerate the prediction ofTc. Although this is an extremely useful tool, the ALIGNN
+model for Tc assumes that the relaxed structure under pressure is provided. In addition, if
+only the relaxed structure with zero applied pressure is provided, it will usually yield a low
+value forTc, which may result in the structure being disregarded as a candidate for a potential
+superconductor. Although the DFPT computation of the EPC is much more computationally
+expensive than the DFT structural relaxation under pressure, this relaxation can still be a
+time consuming endeavor. One way to circumvent this and eliminate the cost of DFT
+structural relaxation is to use a universal machine learned force field (such as JARVIS-Force-
+20
+
+=== PDF PAGE 21 ===
+Figure 7: Tc results from DFT (red) along with Tc results from ALIGNN-SC (green for the
+ALIGNN-SC model from Fig. 6a), blue for the ALIGNN-SC model from Fig. 6b)) that were
+obtained using ALIGNN-FF relaxed structures at various pressures.
+Field, 90 M3GNET/MatGL 91 and GemNet-OC 92) to relax the structure prior to ALIGNN
+prediction ofTc. In this work, we used the pretrained ALIGNN-Force-Field (FF)90 (universal
+machine learning force field) with the Atomic Simulation Environment (ASE) 93 FIRE 94
+optimizer to relax the hydride-based structures under various amounts of pressure. Pressure
+was induced in each structure by compressing the volume and allowing the atoms and bond
+angles to relax under that constant volume value. ALIGNN-FF was developed to handle
+chemically and structurally diverse crystalline systems, where the entirety of the previous
+JARVIS-DFT dataset was used as training, (which contains 4 million energy-force entries
+for 89 elements of the periodic table, 307113 which are used for training). 90 It is important
+to note that none of the high pressure calculations in this work were used to train this
+21
+
+=== PDF PAGE 22 ===
+ALIGNN-FF.
+The ALIGNN-FF+ALIGNN-Superconducting (ALIGNN-SC) results along with DFT are
+depicted in Fig. 7. Specifically, we tested both ALIGNN-SC models (one model trained on
+the hydride dataset, the other trained on the hydride dataset plus the dataset from Ref. 36)
+on the relaxed structures from ALIGNN-FF under pressure. As seen in Fig. 7 there is good
+qualitative agreement between DFT and ALIGNN and meaningful trends can be extracted
+from the purely machine learning results. Regardless if the structures under pressure were in
+the training, validation or test sets during ALIGNN training, there were no DFT calculations
+performed at intermediate pressure values such as (50, 150, 250, and 400) GPa (with the
+exception of DFT calculations for LaH 10 at 50 GPa and 250 GPa). From Fig. 7, we observe
+that ALIGNN-FF+ALIGNN-SC can interpolate reasonably well to intermediate values of
+pressure that were not part of the original dataset, which allows us to reliably compute
+Tc for a larger number of pressure values and obtain a finer map of how superconducting
+properties change with pressure, avoiding unnecessary DFT calculations. This can also give
+us an indication of where the critical pressure value lies (pressure value which results in the
+maximum value ofTc) and is a cheaper alternative to brute-force DFT calculations at several
+values of pressure.
+Conclusion
+In this work, we have computed the superconducting properties of over 900 hydride-based
+materials with DFT under ultrahigh pressures (0 GPa to 500 GPa). In addition to adding
+previously discovered high-Tc materials to our dataset and revealing previously undiscovered
+superconductors from the JARVIS database, we trained an ALIGNN model to predict Tc
+with reasonable accuracy. We took this one step further and coupled our ALIGNN model
+for Tc to the ALIGNN-FF universal force-field to relax the structures with minimal com-
+putational cost prior to ALIGNN Tc prediction. By utilizing these deep learning tools for
+22
+
+=== PDF PAGE 23 ===
+structural relaxation under pressure and property prediction, enhanced materials screening
+can be enabled and the number of DFT calculations (and overall computational cost) can be
+significantly reduced, allowing for a broader search of material space for new high pressure
+hydride superconductors.
+Future Perspectives
+Data-driven discovery and design of novel high pressure hydride superconductors is a rapidly
+changing and exciting field of physics and materials science. Coupling high-throughput first-
+principles (DFT) simulations with machine learning techniques can allow for a more broad
+search of the high pressure superconductor landscape. Most importantly, these machine
+learning models can be used as effective classification tools to screen candidate systems prior
+to more in-depth theoretical calculations and eventual experimental synthesis. In order for
+this field to progress, the amount of publicly available and unique high-throughput DFT
+data must increase, which can be one of the most effective routes to improving the accuracy
+of these machine learning models. Collaborative efforts such as the JARVIS-Leaderboard, 95
+which allows users to view and contribute materials science data and machine learning models
+and assess accuracy/fidelity (while enhancing transparency and reproducibility) and OPTI-
+MADE (Open Databases Integration for Materials Design), 96 which allows for the easy and
+interoperable access to information across different materials databases in a uniform format
+can play an important role in granting access to relevant data and metrics with the goal of
+advancing the field of materials design.
+Data Availability Statement
+Software packages mentioned in the article can be found athttps://github.com/usnistgov/
+jarvis. All code and data specific to this work can be found at https://doi.org/10.6084/
+m9.figshare.25270012 and model benchmarks can be found at https://pages.nist.gov/
+23
+
+=== PDF PAGE 24 ===
+jarvis_leaderboard/.
+Notes
+Please note that the use of commercial software (VASP) does not imply recommendation by
+the National Institute of Standards and Technology.
+Conflicts of Interest
+The authors declare no competing interests.
+Acknowledgments
+All authors thank the National Institute of Standards and Technology for funding, compu-
+tational, and data-management resources.
+References
+(1) Bardeen, J.; Cooper, L. N.; Schrieffer, J. R. Microscopic Theory of Superconductivity.
+Phys. Rev. 1957, 106, 162–164.
+(2) Bardeen, J.; Cooper, L. N.; Schrieffer, J. R. Theory of Superconductivity. Phys. Rev.
+1957, 108, 1175–1204.
+(3) Nagamatsu, J.; Nakagawa, N.; Muranaka, T.; Zenitani, Y.; Akimitsu, J. Superconduc-
+tivity at 39 K in magnesium diboride. Nature 2001, 410, 63–64.
+(4) Eremets, M. I.; Minkov, V. S.; Drozdov, A. P.; Kong, P. P.; Ksenofontov, V.;
+Shylin, S. I.; Bud’ko, S. L.; Prozorov, R.; Balakirev, F. F.; Sun, D.; Mozaffari, S.;
+24
+
+=== PDF PAGE 25 ===
+Balicas, L. High-Temperature Superconductivity in Hydrides: Experimental Evidence
+and Details. Journal of Superconductivity and Novel Magnetism 2022, 35, 965–977.
+(5) Zhang, S.; Zhang, M.; Liu, H. Superconductive hydrogen-rich compounds under high
+pressure. Applied Physics A 2021, 127, 684.
+(6) Ashcroft, N. W. Metallic Hydrogen: A High-Temperature Superconductor? Phys. Rev.
+Lett. 1968, 21, 1748–1749.
+(7) Ashcroft, N. W. Hydrogen Dominant Metallic Alloys: High Temperature Superconduc-
+tors? Phys. Rev. Lett. 2004, 92, 187002.
+(8) Drozdov, A. P.; Eremets, M. I.; Troyan, I. A.; Ksenofontov, V.; Shylin, S. I. Conven-
+tional superconductivity at 203 kelvin at high pressures in the sulfur hydride system.
+Nature 2015, 525, 73–76.
+(9) Drozdov, A. P.; Kong, P. P.; Minkov, V. S.; Besedin, S. P.; Kuzovnikov, M. A.; Mozaf-
+fari, S.; Balicas, L.; Balakirev, F. F.; Graf, D. E.; Prakapenka, V. B.; Greenberg, E.;
+Knyazev, D. A.; Tkacz, M.; Eremets, M. I. Superconductivity at 250 K in lanthanum
+hydride under high pressures. Nature 2019, 569, 528–531.
+(10) Geballe, Z. M.; Liu, H.; Mishra, A. K.; Ahart, M.; Somayazulu, M.; Meng, Y.; Bal-
+dini, M.; Hemley, R. J. Synthesis and Stability of Lanthanum Superhydrides. Ange-
+wandte Chemie International Edition 2018, 57, 688–692.
+(11) Somayazulu, M.; Ahart, M.; Mishra, A. K.; Geballe, Z. M.; Baldini, M.; Meng, Y.;
+Struzhkin, V. V.; Hemley, R. J. Evidence for Superconductivity above 260 K in Lan-
+thanum Superhydride at Megabar Pressures. Phys. Rev. Lett. 2019, 122, 027001.
+(12) Liu, H.; Naumov, I. I.; Hoffmann, R.; Ashcroft, N. W.; Hemley, R. J. Potential high-
+¡i¿T¡sub¿c¡/sub¿¡/i¿ superconducting lanthanum and yttrium hydrides at high pressure.
+Proceedings of the National Academy of Sciences 2017, 114, 6990–6995.
+25
+
+=== PDF PAGE 26 ===
+(13) Liu, H.; Naumov, I. I.; Geballe, Z. M.; Somayazulu, M.; Tse, J. S.; Hemley, R. J.
+Dynamics and superconductivity in compressed lanthanum superhydride. Phys. Rev. B
+2018, 98, 100102.
+(14) Kruglov, I. A.; Semenok, D. V.; Song, H.; Szczesniak, R.; Wrona, I. A.; Akashi, R.;
+Davari Esfahani, M. M.; Duan, D.; Cui, T.; Kvashnin, A. G.; Oganov, A. R. Supercon-
+ductivity of LaH 10 and LaH16 polyhydrides. Phys. Rev. B 2020, 101, 024508.
+(15) Kong, P.; Minkov, V. S.; Kuzovnikov, M. A.; Drozdov, A. P.; Besedin, S. P.; Mozaf-
+fari, S.; Balicas, L.; Balakirev, F. F.; Prakapenka, V. B.; Chariton, S.; Knyazev, D. A.;
+Greenberg, E.; Eremets, M. I. Superconductivity up to 243 K in the yttrium-hydrogen
+system under high pressure. Nature Communications 2021, 12, 5075.
+(16) Semenok, D. V.; Kvashnin, A. G.; Ivanova, A. G.; Svitlyk, V.; Fominski, V. Y.;
+Sadakov, A. V.; Sobolevskiy, O. A.; Pudalov, V. M.; Troyan, I. A.; Oganov, A. R.
+Superconductivity at 161 K in thorium hydride ThH10: Synthesis and properties. Ma-
+terials Today 2020, 33, 36–44.
+(17) Shao, M.; Chen, W.; Zhang, K.; Huang, X.; Cui, T. High-pressure synthesis of super-
+conducting clathratelike YH 4. Phys. Rev. B 2021, 104, 174509.
+(18) Shao, M.; Chen, S.; Chen, W.; Zhang, K.; Huang, X.; Cui, T. Superconducting ScH3
+and LuH3 at Megabar Pressures. Inorganic Chemistry 2021, 60, 15330–15335.
+(19) Zhang, C.; He, X.; Li, Z.; Zhang, S.; Feng, S.; Wang, X.; Yu, R.; Jin, C. Supercon-
+ductivity in zirconium polyhydrides with Tc above 70 K. Science Bulletin 2022, 67,
+907–909.
+(20) Hong, F.; Shan, P.; Yang, L.; Yue, B.; Yang, P.; Liu, Z.; Sun, J.; Dai, J.; Yu, H.;
+Yin, Y.; Yu, X.; Cheng, J.; Zhao, Z. Possible superconductivity at 70 K in tin hydride
+SnHx under high pressure. Materials Today Physics 2022, 22, 100596.
+26
+
+=== PDF PAGE 27 ===
+(21) Li, Z. et al. Superconductivity above 200 K discovered in superhydrides of calcium.
+Nature Communications 2022, 13, 2863.
+(22) Denchfield, A.; Park, H.; Hemley, R. J. Novel Electronic Structure of Nitrogen-Doped
+Lutetium Hydrides. 2023.
+(23) Ge, Y.; Zhang, F.; Hemley, R. J. Room-temperature superconductivity in boron- and
+nitrogen-doped lanthanum superhydride. Phys. Rev. B 2021, 104, 214505.
+(24) Ge, Y.; Zhang, F.; Dias, R. P.; Hemley, R. J.; Yao, Y. Hole-doped room-temperature
+superconductivity in H3S1-xZx (Z=C, Si). Materials Today Physics 2020, 15, 100330.
+(25) Fan, F.; Papaconstantopoulos, D.; Mehl, M.; Klein, B. High-temperature superconduc-
+tivity at high pressures for H3SixP1-x, H3PxS1-x, and H3ClxS1-x. Journal of Physics
+and Chemistry of Solids 2016, 99, 105–110.
+(26) Snider, E.; Dasenbrock-Gammon, N.; McBride, R.; Debessai, M.; Vindana, H.; Ven-
+catasamy, K.; Lawler, K. V.; Salamat, A.; Dias, R. P. RETRACTED ARTICLE: Room-
+temperature superconductivity in a carbonaceous sulfur hydride. Nature 2020, 586,
+373–377.
+(27) Dasenbrock-Gammon, N.; Snider, E.; McBride, R.; Pasan, H.; Durkee, D.; Khalvashi-
+Sutter, N.; Munasinghe, S.; Dissanayake, S. E.; Lawler, K. V.; Salamat, A.; Dias, R. P.
+Evidence of near-ambient superconductivity in a N-doped lutetium hydride. Nature
+2023, 615, 244–250.
+(28) Jain, A.; Ong, S. P.; Hautier, G.; Chen, W.; Richards, W. D.; Dacek, S.; Cholia, S.;
+Gunter, D.; Skinner, D.; Ceder, G.; Persson, K. A. Commentary: The Materials Project:
+A materials genome approach to accelerating materials innovation. APL Materials
+2013, 1, 011002.
+27
+
+=== PDF PAGE 28 ===
+(29) Saal, J. E.; Kirklin, S.; Aykol, M.; Meredig, B.; Wolverton, C. Materials design and dis-
+covery with high-throughput density functional theory: The Open Quantum Materials
+Database (OQMD). JOM 2013, 65, 1501–1509.
+(30) Kirklin, S.; Saal, J. E.; Meredig, B.; Thompson, A.; Doak, J. W.; Aykol, M.; R¨ uhl, S.;
+Wolverton, C. The Open Quantum Materials Database (OQMD): assessing the accuracy
+of DFT formation energies. npj Computational Materials 2015, 1, 15010.
+(31) Haastrup, S.; Strange, M.; Pandey, M.; Deilmann, T.; Schmidt, P. S.; Hinsche, N. F.;
+Gjerding, M. N.; Torelli, D.; Larsen, P. M.; Riis-Jensen, A. C.; Gath, J.; Jacob-
+sen, K. W.; Mortensen, J. J.; Olsen, T.; Thygesen, K. S. The Computational 2D Ma-
+terials Database: high-throughput modeling and discovery of atomically thin crystals.
+2D Materials 2018, 5, 042002.
+(32) Gjerding, M. N. et al. Recent progress of the Computational 2D Materials Database
+(C2DB). 2D Materials 2021, 8, 044002.
+(33) Choudhary, K.; Garrity, K. F.; Reid, A. C.; DeCost, B.; Biacchi, A. J.;
+Hight Walker, A. R.; Trautt, Z.; Hattrick-Simpers, J.; Kusne, A. G.; Centrone, A.,
+et al. The joint automated repository for various integrated simulations (JARVIS) for
+data-driven materials design. npj Computational Materials 2020, 6, 1–13.
+(34) Ong, S. P.; Richards, W. D.; Jain, A.; Hautier, G.; Kocher, M.; Cholia, S.; Gunter, D.;
+Chevrier, V. L.; Persson, K. A.; Ceder, G. Python Materials Genomics (pymatgen):
+A robust, open-source python library for materials analysis. Computational Materials
+Science 2013, 68, 314–319.
+(35) Wines, D.; Gurunathan, R.; Garrity, K. F.; DeCost, B.; Biacchi, A. J.; Tavazza, F.;
+Choudhary, K. Recent progress in the JARVIS infrastructure for next-generation data-
+driven materials design. Applied Physics Reviews 2023, 10, 041302.
+28
+
+=== PDF PAGE 29 ===
+(36) Choudhary, K.; Garrity, K. Designing high-TC superconductors with BCS-inspired
+screening, density functional theory, and deep-learning. npj Computational Materials
+2022, 8, 244.
+(37) Wines, D.; Choudhary, K.; Biacchi, A. J.; Garrity, K. F.; Tavazza, F. High-throughput
+DFT-based discovery of next generation two-dimensional (2D) superconductors. Nano
+Letters 2023, 23, 969–978.
+(38) Garc´ ıa-Nieto, P. J.; Garc´ ıa-Gonzalo, E.; Paredes-S´ anchez, J. Prediction of the critical
+temperature of a superconductor by using the WOA/MARS, Ridge, Lasso and Elastic-
+net machine learning techniques. Neural Computing and Applications 2021, 33, 17131–
+17145.
+(39) Stanev, V.; Oses, C.; Kusne, A. G.; Rodriguez, E.; Paglione, J.; Curtarolo, S.;
+Takeuchi, I. Machine learning modeling of superconducting critical temperature. npj
+Computational Materials 2018, 4, 29.
+(40) Zhang, J.; Zhu, Z.; Xiang, X. D.; Zhang, K.; Huang, S.; Zhong, C.; Qiu, H.-J.; Hu, K.;
+Lin, X. Machine learning prediction of superconducting critical temperature through
+the structural descriptor. The Journal of Physical Chemistry C 2022, 126, 8922–8927.
+(41) Meredig, B.; Antono, E.; Church, C.; Hutchinson, M.; Ling, J.; Paradiso, S.;
+Blaiszik, B.; Foster, I.; Gibbons, B.; Hattrick-Simpers, J.; Mehta, A.; Ward, L. Can
+machine learning identify the next high-temperature superconductor? Examining ex-
+trapolation performance for materials discovery.Mol. Syst. Des. Eng. 2018, 3, 819–825.
+(42) Roter, B.; Dordevic, S. Predicting new superconductors and their critical temperatures
+using machine learning. Physica C: Superconductivity and its Applications 2020, 575,
+1353689.
+(43) Menon, D.; Ranganathan, R. A generative approach to materials discovery, design, and
+optimization. ACS Omega 2022, 7, 25958–25973.
+29
+
+=== PDF PAGE 30 ===
+(44) Seegmiller, C. C.; Baird, S. G.; Sayeed, H. M.; Sparks, T. D. Discovering chemically
+novel, high-temperature superconductors. Computational Materials Science 2023, 228,
+112358.
+(45) Wines, D.; Xie, T.; Choudhary, K. Inverse Design of Next-Generation Superconductors
+Using Data-Driven Deep Generative Models.The Journal of Physical Chemistry Letters
+2023, 14, 6630–6638.
+(46) Shipley, A. M.; Hutcheon, M. J.; Needs, R. J.; Pickard, C. J. High-throughput discovery
+of high-temperature conventional superconductors. Phys. Rev. B 2021, 104, 054501.
+(47) Sommer, T.; Willa, R.; Schmalian, J.; Friederich, P. 3DSC - a dataset of superconduc-
+tors including crystal structures. Scientific Data 2023, 10, 816.
+(48) Cerqueira, T. F.; Sanna, A.; Marques, M. A. Sampling the materials space for conven-
+tional superconducting compounds. Advanced Materials 2024, 36, 2307085.
+(49) Saha, S.; Di Cataldo, S.; Giannessi, F.; Cucciari, A.; von der Linden, W.; Boeri, L.
+Mapping superconductivity in high-pressure hydrides: The Superhydra project. Phys.
+Rev. Mater. 2023, 7, 054806.
+(50) Belli, F.; Novoa, T.; Contreras-Garc´ ıa, J.; Errea, I. Strong correlation between elec-
+tronic bonding network and critical temperature in hydrogen-based superconductors.
+Nature Communications 2021, 12, 5381.
+(51) Choudhary, K.; DeCost, B.; Chen, C.; Jain, A.; Tavazza, F.; Cohn, R.; Park, C. W.;
+Choudhary, A.; Agrawal, A.; Billinge, S. J., et al. Recent advances and applications of
+deep learning methods in materials science. npj Computational Materials 2022, 8, 59.
+(52) Choudhary, K. AtomGPT: Atomistic Generative Pre-trained Transformer for Forward
+and Inverse Materials Design. arXiv preprint arXiv:2405.03680 2024,
+30
+
+=== PDF PAGE 31 ===
+(53) Burdine, C.; Blair, E. Discovery of Novel Superconducting Materials with Deep Learn-
+ing. 2023 IEEE International Conference on Quantum Computing and Engineering
+(QCE). 2023; pp 1335–1341.
+(54) Baroni, S.; Giannozzi, P.; Testa, A. Green’s-function approach to linear response in
+solids. Physical review letters 1987, 58, 1861.
+(55) Gonze, X. Perturbation expansion of variational principles at arbitrary order. Physical
+Review A 1995, 52, 1086.
+(56) Wierzbowska, M.; de Gironcoli, S.; Giannozzi, P. Origins of low-and high-pressure
+discontinuities of T{c}in niobium. arXiv preprint cond-mat/0504077 2005,
+(57) Giannozzi, P.; Baseggio, O.; Bonf` a, P.; Brunato, D.; Car, R.; Carnimeo, I.; Cavaz-
+zoni, C.; De Gironcoli, S.; Delugas, P.; Ferrari Ruffino, F., et al. Quantum ESPRESSO
+toward the exascale. The Journal of Chemical Physics 2020, 152, 154105.
+(58) Garrity, K. F.; Bennett, J. W.; Rabe, K. M.; Vanderbilt, D. Pseudopotentials for high-
+throughput DFT calculations. Computational Materials Science 2014, 81, 446–452.
+(59) Perdew, J. P.; Ruzsinszky, A.; Csonka, G. I.; Vydrov, O. A.; Scuseria, G. E.; Con-
+stantin, L. A.; Zhou, X.; Burke, K. Restoring the density-gradient expansion for ex-
+change in solids and surfaces. Physical review letters 2008, 100, 136406.
+(60) Topsakal, M.; Wentzcovitch, R. Accurate projected augmented wave (PAW) datasets
+for rare-earth elements (RE=La–Lu). Computational Materials Science 2014, 95, 263–
+270.
+(61) Choudhary, K.; Tavazza, F. Convergence and machine learning predictions of
+Monkhorst-Pack k-points and plane-wave cut-off in high-throughput DFT calculations.
+Computational materials science 2019, 161, 300–308.
+31
+
+=== PDF PAGE 32 ===
+(62) Marsiglio, F. Eliashberg theory: A short review. Annals of Physics 2020, 417, 168102,
+Eliashberg theory at 60: Strong-coupling superconductivity and beyond.
+(63) McMillan, W. Transition temperature of strong-coupled superconductors. Physical Re-
+view 1968, 167, 331.
+(64) Choudhary, K.; DeCost, B. Atomistic Line Graph Neural Network for improved mate-
+rials property predictions. npj Computational Materials 2021, 7, 1–8.
+(65) Paszke, A.; Gross, S.; Massa, F.; Lerer, A.; Bradbury, J.; Chanan, G.; Killeen, T.;
+Lin, Z.; Gimelshein, N.; Antiga, L., et al. Pytorch: An imperative style, high-
+performance deep learning library. Advances in neural information processing systems
+2019, 32, 8026–8037.
+(66) Wang, M.; Yu, L.; Zheng, D.; Gan, Q.; Gai, Y.; Ye, Z.; Li, M.; Zhou, J.; Huang, Q.;
+Ma, C., et al. Deep Graph Library: Towards efficient and scalable deep learning on
+graphs. arXiv e-prints 2019,
+(67) Klimeˇ s, J.; Bowler, D. R.; Michaelides, A. Chemical accuracy for the van der Waals
+density functional. Journal of Physics: Condensed Matter 2009, 22, 022201.
+(68) Eliashberg, G. M. Interactions between electrons and lattice vibrations in a supercon-
+ductor. Sov. Phys. - JETP (Engl. Transl.); (United States) 1960, 11:3 .
+(69) Sanna, A.; Pellegrini, C.; Liebhaber, E.; Rossnagel, K.; Franke, K. J.; Gross, E. K. U.
+Real-space anisotropy of the superconducting gap in the charge-density wave material
+2H-NbSe2. npj Quantum Materials 2022, 7, 6.
+(70) Marques, M. A. L.; L¨ uders, M.; Lathiotakis, N. N.; Profeta, G.; Floris, A.; Fast, L.;
+Continenza, A.; Gross, E. K. U.; Massidda, S. Ab initio theory of superconductivity.
+II. Application to elemental metals. Phys. Rev. B 2005, 72, 024546.
+32
+
+=== PDF PAGE 33 ===
+(71) L¨ uders, M.; Marques, M. A. L.; Lathiotakis, N. N.; Floris, A.; Profeta, G.; Fast, L.;
+Continenza, A.; Massidda, S.; Gross, E. K. U. Ab initio theory of superconductivity.
+I. Density functional formalism and approximate functionals. Phys. Rev. B 2005, 72,
+024545.
+(72) Ong, S. P.; Jain, A.; Hautier, G.; Kang, B.; Ceder, G. Thermal stabilities of delithiated
+olivine MPO4 (M=Fe, Mn) cathodes investigated using first principles calculations.
+Electrochemistry Communications 2010, 12, 427–430.
+(73) Ong, S. P.; Wang, L.; Kang, B.; Ceder, G. Li-Fe-P-O2 Phase Diagram from First
+Principles Calculations. Chemistry of Materials 2008, 20, 1798–1807.
+(74) Shao, M.; Chen, S.; Chen, W.; Zhang, K.; Huang, X.; Cui, T. Superconducting ScH3
+and LuH3 at Megabar Pressures. Inorganic Chemistry 2021, 60, 15330–15335.
+(75) Kim, D. Y.; Scheicher, R. H.; kwang Mao, H.; Kang, T. W.; Ahuja, R. General trend
+for pressurized superconducting hydrogen-dense materials. Proceedings of the National
+Academy of Sciences 2010, 107, 2793–2796.
+(76) Lonie, D. C.; Hooper, J.; Altintas, B.; Zurek, E. Metallization of magnesium polyhy-
+drides under pressure. Phys. Rev. B 2013, 87, 054107.
+(77) El-Eskandarany, M. S.; Banyan, M.; Al-Ajmi, F. Discovering a new MgH2 metastable
+phase. RSC Adv. 2018, 8, 32003–32008.
+(78) Boonchot, C.; Tsuppayakorn-Aek, P.; Pinsook, U.; Bovornratanaraks, T. Stability and
+electronic structure of magnesium hydride and magnesium deuteride under high pres-
+sure. Journal of Physics: Conference Series 2021, 2145, 012026.
+(79) Pickard, C. J.; Needs, R. J. High-Pressure Phases of Silane. Phys. Rev. Lett. 2006, 97,
+045504.
+33
+
+=== PDF PAGE 34 ===
+(80) Strobel, T. A.; Goncharov, A. F.; Seagle, C. T.; Liu, Z.; Somayazulu, M.;
+Struzhkin, V. V.; Hemley, R. J. High-pressure study of silane to 150 GPa. Phys. Rev.
+B 2011, 83, 144102.
+(81) Chen, X.-J.; Wang, J.-L.; Struzhkin, V. V.; Mao, H.-k.; Hemley, R. J.; Lin, H.-Q.
+Superconducting Behavior in Compressed Solid SiH 4 with a Layered Structure. Phys.
+Rev. Lett. 2008, 101, 077002.
+(82) Zhang, H.; Jin, X.; Lv, Y.; Zhuang, Q.; Liu, Y.; Lv, Q.; Bao, K.; Li, D.; Liu, B.;
+Cui, T. High-temperature Superconductivity in compressed Solid Silane. Scientific Re-
+ports 2015, 5, 8845.
+(83) Kim, D. Y.; Scheicher, R. H.; Leb` egue, S.; Prasongkit, J.; Arnaud, B.; Alouani, M.;
+Ahuja, R. Crystal structure of the pressure-induced metallic phase of SiH¡sub¿4¡/sub¿
+from ab initio theory. Proceedings of the National Academy of Sciences 2008, 105,
+16454–16459.
+(84) Strobel, T. A.; Somayazulu, M.; Hemley, R. J. Novel Pressure-Induced Interactions in
+Silane-Hydrogen. Phys. Rev. Lett. 2009, 103, 065701.
+(85) Degtyareva, O.; Canales, M. M.; Bergara, A.; Chen, X.-J.; Song, Y.; Struzhkin, V. V.;
+Mao, H.-k.; Hemley, R. J. Crystal structure of SiH 4 at high pressure. Phys. Rev. B
+2007, 76, 064123.
+(86) Howie, R. T.; Narygina, O.; Guillaume, C. L.; Evans, S.; Gregoryanz, E. High-pressure
+synthesis of lithium hydride. Phys. Rev. B 2012, 86, 064108.
+(87) P´ epin, C.; Loubeyre, P.; Occelli, F.; Dumas, P. Synthesis of lithium polyhydrides above
+130 GPa at 300 K. Proceedings of the National Academy of Sciences 2015, 112, 7673–
+7676.
+34
+
+=== PDF PAGE 35 ===
+(88) Smith, J. S.; Desgreniers, S.; Klug, D. D.; Tse, J. S. High-density strontium hydride: An
+experimental and theoretical study. Solid State Communications 2009, 149, 830–834.
+(89) Struzhkin, V. V.; Kim, D. Y.; Stavrou, E.; Muramatsu, T.; Mao, H.-k.; Pickard, C. J.;
+Needs, R. J.; Prakapenka, V. B.; Goncharov, A. F. Synthesis of sodium polyhydrides
+at high pressures. Nature Communications 2016, 7, 12267.
+(90) Choudhary, K.; DeCost, B.; Major, L.; Butler, K.; Thiyagalingam, J.; Tavazza, F.
+Unified graph neural network force-field for the periodic table: solid state applications.
+Digital Discovery 2023, 2, 346–355.
+(91) Chen, C.; Ong, S. P. A universal graph deep learning interatomic potential for the
+periodic table. Nature Computational Science 2022, 2, 718–728.
+(92) Gasteiger, J.; Shuaibi, M.; Sriram, A.; G¨ unnemann, S.; Ulissi, Z.; Zitnick, C. L.; Das, A.
+GemNet-OC: Developing Graph Neural Networks for Large and Diverse Molecular Sim-
+ulation Datasets. 2022.
+(93) Larsen, A. H. et al. The atomic simulation environment—a Python library for working
+with atoms. Journal of Physics: Condensed Matter 2017, 29, 273002.
+(94) Bitzek, E.; Koskinen, P.; G¨ ahler, F.; Moseler, M.; Gumbsch, P. Structural Relaxation
+Made Simple. Phys. Rev. Lett. 2006, 97, 170201.
+(95) Choudhary, K. et al. JARVIS-Leaderboard: a large scale benchmark of materials design
+methods. npj Computational Materials 2024, 10, 93.
+(96) Evans, M. et al. Developments and applications of the OPTIMADE API for materials
+discovery, design, and data exchange. Digital Discovery 2024, –.
+35
+
+=== PDF PAGE 36 ===
+Supporting Information: Data-driven Design of
+High Pressure Hydride Superconductors using
+DFT and Deep Learning
+Daniel Wines ∗ and Kamal Choudhary
+Material Measurement Laboratory, National Institute of Standards and Technology,
+Gaithersburg, MD 20899, USA
+E-mail: daniel.wines@nist.gov
+Figure S1: The training and validation MAE for Tc (K) as a function of the number of epochs
+for both ALIGNN models displayed in Fig. 6.
+S1
+arXiv:2312.12694v4  [cond-mat.mtrl-sci]  31 May 2024
+
+=== PDF PAGE 37 ===
+Table S1: A continuation of DFT results from Table 1, including structure (chemical for-
+mula), applied pressure, superconducting critical temperature ( Tc), formation energy per
+atom (E form) at each respective pressure, and the source of the original strucutre (JAR VIS-
+DFT, 3DSC, 1 or Shipley et al. 2 dataset) for dynamically stable structures with the highest
+Tc.
+StructurePressure (GPa)Tc(K)EformSource of StructuresNa2H11 200 136 -5.5 Shipley et al.Na2H11 200 133 -5.5 Shipley et al.Na2H11 300 133 -8.1 Shipley et al.Na2H11 100 132 -1.9 Shipley et al.ScH6 300 132 -5.7 Shipley et al.ScH12 300 129 -5.8 Shipley et al.KH10 100 127 -2.9 Shipley et al.Na2H11 300 127 -8.1 Shipley et al.ScH6 500 127 -12.4Shipley et al.MgH10 200 124 -3.6 Shipley et al.LaH10 500 123 -9.4 JV ASP-149370ScH12 200 119 -3.9 Shipley et al.CaH6 500 119 -13.1Shipley et al.H 50 117 0.2 JV ASP-21216H 50 115 0.2 JV ASP-25330Na2H11 0 113 0.3 Shipley et al.MgH14 100 113 -1.8 Shipley et al.MgH8 500 108 -11.4Shipley et al.SrH15 300 107 -5.7 Shipley et al.ScH12 100 102 -2.0 Shipley et al.MgH8 300 100 -7.1 Shipley et al.LiH3 100 97 -1.8 Shipley et al.NaH5 500 94 -12.3Shipley et al.NaH5 200 87 -5.7 Shipley et al.CaH10 200 84 -5.1 Shipley et al.MgH8 200 84 -3.5 Shipley et al.MgH2 100 82 -1.7 JV ASP-36262SrH10 300 79 -5.7 Shipley et al.AsHO 300 78 -2.4 JV ASP-135656NaH5 300 77 -8.3 Shipley et al.ScH14 300 76 -5.8 Shipley et al.SrH15 200 74 -3.9 Shipley et al.Mg2H7 100 73 -1.7 Shipley et al.SiH4 200 72 -3.2 3DSC (JV ASP-5281, mp-23739)LiH6 100 71 -1.9 Shipley et al.SiH4 300 71 -4.9 3DSC (JV ASP-5281, mp-23739)Mg2H7 500 71 -13.0Shipley et al.ScH3 100 69 -2.6 JV ASP-125437NaH5 100 67 -1.9 Shipley et al.Mg2H5 100 67 -1.6 Shipley et al.CaH15 100 66 -2.6 Shipley et al.LaH7 200 66 -3.8 Shipley et al.AsHO 200 62 -1.6 JV ASP-135656MgH14 0 61 0.2 Shipley et al.MgH14 200 60 -3.6 Shipley et al.Mg2H7 200 55 -3.4 Shipley et al.MgH12 100 54 -1.7 Shipley et al.H3S 100 54 -1.5 JV ASP-79487NaH6 0 53 0.2 Shipley et al.KAlH3 0 52 -0.1 JV ASP-93261NaH6 0 50 0.2 Shipley et al.ScH14 100 48 -2.0 Shipley et al.Mg2H7 300 46 -8.7 Shipley et al.MgH8 100 43 -1.7 Shipley et al.Mg2H5 200 43 -3.2 Shipley et al.SrH15 100 41 -2.1 Shipley et al.LiH2 100 40 -1.7 Shipley et al.
+S2
+
+=== PDF PAGE 38 ===
+Table S2: A list of structures that possess strong electron-phonon coupling and a band gap,
+including structure (chemical formula), applied pressure, superconducting critical tempera-
+ture ( Tc), and the source of the original strucutre (JAR VIS-DFT or Shipley et al. 2 dataset).
+Structure Pressure (GPa) Tc (K) E gap (eV) Source of Structures
+HIO 0 2 0.2 JV ASP-118424
+BaH3 0 11 1.3 JV ASP-125376
+CaH3 0 8 0.5 JV ASP-125381
+SrH3 0 9 1.2 JV ASP-125442
+NaHS 0 1 0.1 JV ASP-135011
+BaH3 0 10 1.3 JV ASP-135869
+RbMgH2 0 5 2.0 JV ASP-139042
+KH10 0 10 4.5 Shipley et al.
+LiH3 0 5 1.8 Shipley et al.
+MgH10 0 2 1.4 Shipley et al.
+MgH13 0 27 0.4 Shipley et al.
+NaH6 0 53 0.5 Shipley et al.
+GeHO2 100 19 1.2 JV ASP-114288
+Li2H 100 12 0.8 JV ASP-116261
+BH2O2 100 7 0.8 JV ASP-119915
+KAlH3 100 34 2.2 JV ASP-93261
+GeHO2 200 22 1.9 JV ASP-114288
+BH2O2 200 1 0.9 JV ASP-119915
+CaB2H2 200 28 0.4 JV ASP-36669
+ZrH3 200 1 0.3 JV ASP-39635
+KAlH3 200 10 3.8 JV ASP-93261
+BH2O2 250 2 1.2 JV ASP-119915
+Zr2HN2Cl2 300 16 0.1 JV ASP-104666
+GeHO2 300 29 2.3 JV ASP-114288
+BH2O2 300 4 1.7 JV ASP-119915
+KAlH3 300 20 4.9 JV ASP-93261
+GeHO2 500 20 2.8 JV ASP-114288
+Li2H 500 28 1.1 JV ASP-116261
+BH2O2 500 63 4.9 JV ASP-119915
+KAlH3 500 19 4.2 JV ASP-93261
+S3
+
+=== PDF PAGE 39 ===
+(a) (b)
+(c) (d)
+Figure S2: The performance of two separate ALIGNN models for Tc on the training set
+(random 80 % of each dataset) and validation set (random 10 % of each dataset). a) and c) are
+the ALIGNN models trained on the hydride dataset and b) and d) are the ALIGNN models
+trained on dataset which contains the hydride dataset and the JAR VIS superconductor
+dataset from Ref. 3 The mean absolute error (MAE) and R 2 value are depicted in the inset
+for each model and the dotted line is shown for reference.
+S4
+
+=== PDF PAGE 40 ===
+(a) (b)
+(c) (d)
+Figure S3: The results of the ALIGNN predictions on the test set (in Fig. 6) plotted in two
+separate ranges, above and below 50 K. The separate MAE for each range of data is depicted
+in the inset.
+S5
+
+=== PDF PAGE 41 ===
+References
+(1) Sommer, T.; Willa, R.; Schmalian, J.; Friederich, P. 3DSC - a dataset of superconductors
+including crystal structures. Scientific Data 2023, 10, 816.
+(2) Shipley, A. M.; Hutcheon, M. J.; Needs, R. J.; Pickard, C. J. High-throughput discovery
+of high-temperature conventional superconductors. Phys. Rev. B 2021, 104, 054501.
+(3) Choudhary, K.; Garrity, K. Designing high-TC superconductors with BCS-inspired
+screening, density functional theory, and deep-learning. npj Computational Materials
+2022, 8, 244.
+S6

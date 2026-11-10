@@ -1,0 +1,1224 @@
+=== PDF PAGE 1 ===
+1 
+ 
+Superconductivity of LaH10 and LaH16 polyhydrides 
+ 
+Ivan A. Kruglov,1,2,* Dmitrii V. Semenok,1,3,* Hao Song,9 Radosław Szczęśniak,4,5 
+Izabela A. Wrona,4 Ryosuke Akashi,6 M. Mahdi Davari Esfahani,7 Defang Duan,9 Tian Cui,9 
+Alexander G. Kvashnin,3,1 and Artem R. Oganov 3,2,8,* 
+1 Moscow Institute of Physics and Technology, 9 Institutsky Lane, Dolgoprudny 141700, Russia 
+2 Dukhov Research Institute of Automatics (VNIIA), Moscow 127055, Russia 
+3 Skolkovo Institute of Science and Technology, Skolkovo Innovation Center, 3 Nobel Street, Moscow 121205, 
+Russia 
+4 Institute of Physics, Jan Dlugosz University in Częstochowa, Ave. Armii Krajowej 13/15, 42-200 Częstochowa, 
+Poland 
+5 Institute of Physics, Częstochowa University of Technology, Ave. Armii Krajowej 19, 42-200 Częstochowa, 
+Poland 
+6 University of Tokyo, 7-3-1 Hongo, Bunkyo, Tokyo 113-8654, Japan 
+7 Department of Geosciences and Center for Materials by Design, Institute for Advanced Computational Science, 
+State University of New York, Stony Brook, NY 11794-2100, USA 
+8 International Center for Materials Discovery, Northwestern Polytechnical University, Xi’an 710072, China 
+9 Key State Laboratory of Superhard Materials, Jilin University, Changchun, China 
+Corresponding authors *Ivan A. Kruglov, e-mail: ivan.kruglov@phystech.edu 
+*Dmitrii V. Semenok, e-mail: dmitrii.semenok@skoltech.ru 
+*Artem. R. Oganov, e-mail: a.oganov@skoltech.ru 
+ABSTRACT. Recent experiments have established previously predicted LaH 10 as the highest-
+temperature superconductor, with TC up to 250–260 K [1]. In this work we explore the high-
+pressure phase stability and superconductivity of lanthanum hyd rides LaH m. We predict the 
+stability of the hitherto unreported polyhydride ⁄݉݉݉LaH16 at pressures above 150 GPa; at 
+200 GPa, its predicted superconducting TC is 156 K, the critical field μ 0HC(0) is approximately 
+35 T, and the superconducting gap is up to 35 meV. We revisit the superconductivity of LaH10 and 
+find its TC to be up to 259 K at 170 GPa from solving the Eliashberg equat ion and 271 K from 
+solving the gap equation in the density functional theory for superconductors (SCDFT), which also 
+allows us to compute the Coulomb pseudopotential μ * f o r  L a H10 and LaH 16. The presence of 
+several polymorphic modifications of LaH 10 may explain the variety in its measured TC 
+values [1, 2].  Introduction 
+Recently, superhydrides of various elements attracted a great attention: they were first predicted 
+and then experimentally proven to exhibit a record high-tempera ture superconductivity under a 
+high pressure. According to the Bardeen–Cooper–Schrieffer (BCS) theory, the metallic hydrogen 
+is expected to be a high-TC superconductor [3–6], yet the pressure needed for its formatio n is too 
+high (~ 500 GPa) [7]. Ashcroft proposed to stabilize states sim ilar to metallic hydrogen at lower 
+pressures by creating hydrogen-rich hydrides, where the hydrogen atoms experience an additional 
+“chemical” pressure [8]. Following this, many theoretical predi ctions of remarkable high-
+temperature superconductors (HTSC) were made, e.g., in the Ca-H  [9], Y-H [10], H-S [11], Th-
+H [12], Ac-H [13], and La-H [10] systems. In all these systems, the high-TC superconductors have 
+unusual chemical compositions, like H 3S, LaH10, or CaH 6. The formation of such compounds, 
+violating the rules of classical chemistry, commonly takes place under pressure [15]. 
+The first experimental proof was obtained for H 3S with measured TC = 203 K at 155 GPa [16] 
+(the predicted value was 191–204 K at 200 GPa [11]). The confid ence in such predictions has 
+greatly increased because of their agreement with the observati ons, stimulating a wave of 
+theoretical studies of superconductivity in hydrides [10, 12, 1 3, 16–29]. The recent theoretical 
+work on the La-H and Y-H systems [10] under pressure showed that at 300 GPa LaH10 and YH10 
+may display room-temperature superconductivity (at 286–326 K). According to that theoretical 
+study, at pressures below 200 GPa LaH 10 h a s  t h e  ݉symmetry, which changes to ݉at 
+higher pressures. In the experiments by Geballe et al. [20], ݉LaH10 was found at ≤ 160 to 
+
+=== PDF PAGE 2 ===
+2 
+ 
+170 GPa, while ݉LaH10 was seen at higher pressures. The experimentally observed shar p 
+drop in resistivity in the LaH 10 samples was the first evidence of superconductivity in this 
+system [1, 2]. Different studies showed a series of superconduc ting-like transitions with TC of 70 
+and 112 K [1], 210–215 K [1], 244–250 K [1, 2], and 260–280 K [ 1]. This discrepancy in the TC 
+values may be caused by the coexistence of lanthanum hydrides having different compositions and 
+crystal structures in the studied samples. To address these que stions, we predicted the stable 
+compounds in the La-H system using the variable-composition evo lutionary algorithm 
+USPEX [30–32]. While most studies report only TC and assume μ* = 0.1–0.15 for the calculations, 
+here we obtain TC using various approaches including the superconducting DFT, wh ich requires 
+no assumption of μ*, and also compute other properties, such as the critical magnetic field [1].  
+ 
+Computational Details 
+The evolutionary algorithm USPEX [30–32] is a powerful tool for  predicting 
+thermodynamically stable compounds of given elements. To predic t thermodynamically stable 
+phases in the La-H system, we performed variable-composition cr ystal structure searches at 
+pressures from 50 to 200 GPa. The first generation of 100 struc tures was created using a random 
+symmetric [32] and topological structure generators [33] with the number of atoms in the primitive 
+unit cell ranging from 8 to 16, while the subsequent generation s contained 20% of random 
+structures, and the rest 80% of structures were created using t he heredity, softmutation, and 
+transmutation operators. Here, the evolutionary searches were combined with structure relaxations 
+using the density functional theory (DFT) [34, 35] within the generalized gradient approximation 
+(the Perdew–Burke–Ernzerhof functional) [36], and the projector -augmented wave 
+method [37, 38] as implemented in the VASP package [39–41]. The  plane wave kinetic energy 
+cutoff was set to 500 eV and the Brillouin zone was sampled by Γ-centered k-points meshes with 
+a resolution of 2π × 0.05 Å−1. This methodology was used and proved to be very effective in our 
+previous works (e.g., [12–14]).  
+The calculations of the critical temperature and electron-phono n coupling (EPC) parameters 
+were carried out using Quantum ESPRESSO (QE) package [42] withi n the density functional 
+perturbation theory  [43], employing the plane-wave pseudopotential method and Perdew–Burke–
+Ernzerhof exchange-correlation f unctional [36]. The convergence  tests showed that 90 Ry is a 
+suitable kinetic energy cutoff for the plane wave basis set. Th e electronic band structures and 
+phonon densities of states were calculated using both VASP (the finite displacement method using 
+PHONOPY [44, 45]) and QE (the density functional perturbation t heory  [43]), which 
+demonstrated a good consistency. 
+In our calculations of the EPC parameter λ, the first Brillouin zone was sampled using a 4×4×4 
+q-points mesh and a denser 16×16×16 k-points mesh (with the Gaussian smearing and σ = 0.02 Ry, 
+which approximates the zero-width limits).  
+For LaH10 and LaH 16, we also estimated TC by solving the gap equation within the density 
+functional theory for superconductors (SCDFT) [46, 47]: 
+ሻെ
+ଵ
+ଶ௡௞௡′௞′ሻ
+௧௔௡௛ஒா೙′ೖ′
+ா೙′ೖ′
+Δ௡′௞′ሻ. (1) 
+Here, ሻሿଶ൅ሾ ξ௡௞ሿଶ, with ξ௡௞ being the normal-state energy eigenvalue of ෡௘ 
+labeled by the band index n and wave vector k measured from the Fermi level. The “order 
+parameter” ሻ depends on n and k, not on the frequency ω; it is defined in a way different 
+from that in the Eliashberg equation and is proportional to the  thermal average ۧwith 
+௡௞஢ being the annihilation operator of the spin state nkσ [46]. The interaction effects treated in 
+the Eliashberg equation are included with the kernels entering this gap equation; ௡௞
+௣௛; 
+௡௞௡′௞′௡௞௡′௞′
+௡௞௡′௞′
+௘௟ . Here we included the mass-renormalization by the phonon exchange 
+with ௡௞
+௣௛ሺξ௡௞ሻ (see Eq. (40) in [48] and an improved form of Eq. (24) in [47]  to consider 
+the nonconstant electronic density of states), the phonon-mediated electron-electron attraction with 
+
+=== PDF PAGE 3 ===
+3 
+ 
+௡௞௡′௞′
+௉ு൫ξ௡௞,ξ ௡′௞′ ൯ (Eq. (23) in [47]), and the screened Coulomb repulsion ௡௞௡′௞′
+௘௟  (Eq. (3) 
+in [53]). Unlike the Eliashberg equation, the SCDFT gap equation does not contain the frequency 
+ω. Nevertheless, the retardation effect [50] is approximately i ncorporated [47]. The absence of ω 
+enables us to treat all electronic states in a wide energy rang e of ±30 eV at an affordable 
+computational cost, and therefore estimate TC without the empirical Coulomb pseudopotential µ∗. 
+We estimated TC as the temperature where the nontrivial solution of this gap e quation vanishes 
+(see Supporting Information [51]).  
+The Coulomb pseudopotential µ ∗, included in the Eliashberg equation and its approximate 
+solutions such as the Allen–Dynes (A-D) equation, quantifies th e impact of the renormalized 
+Coulomb repulsion. Its value can in principle be estimated with the matrix element of the screened 
+Coulomb interaction and energy scales of the electrons and phon ons [50, 51], but practically it is 
+determined by fitting the calculated observables with the experimental data or simply by accepting 
+the typical values (e.g., ~ 0.10–0.13) from such previous fitti ng results [53]. On the other hand, 
+while the SCDFT gives us the framework free from empirical parameters such as µ∗, deriving from 
+it some interesting observables is difficult compared with the Eliashberg theory. Especially, the 
+spectral gap at absolute zero, being defined within the Green’s function framework, is not directly 
+accessible within the SCDFT. To estimate several observable qua ntities, we took a hybrid 
+approach reconciling these frameworks: Determining the value of  µ∗ so that the Eliashberg (or 
+Allen–Dynes) equation reproduces TC derived from the SCDFT gap equation [54] and then 
+employing it in later calculations within the Eliashberg theory. In this approach, we presume that 
+the retardation effect [50] can be expressed by a single parame ter, µ∗; possible drawbacks of this 
+method are discussed later. 
+In this work we did not consider the effect of anharmonicity on  t h e  d y n a m i c  a n d  
+superconducting properties of lanthanum hydrides. While this ef fect can be important, previous 
+studies showed that the superconducting properties predicted within the “conventional” approach 
+are in relatively good agreement with the experimental data. 
+Results and Discussion 
+I. Stability of La-H phases 
+We performed the variable-composition evolutionary searches for stable compounds and crystal 
+structures at 50, 100, 150, and 200 GPa. The thermodynamic convex hulls are shown in Fig. 1. By 
+composition, stable phases are those that appear on the convex hull. Thus, at 50 GPa we found 
+݉LaH, ܽ݉݊ܲLaH3, Cmc21-LaH7, and Cc-LaH9 to be stable (Fig. 1a). At 100 GPa, LaH 7 
+and LaH 9 disappear from the convex hull, while four new hydrides become  s t a b l e :  Cm-LaH2, 
+Cmcm-LaH3, 1ത-LaH5, and ⁄݉݉݊ LaH11 (Fig. 1b). At 150 GPa, the chemistry of lanthanum 
+hydrides is much richer: ⁄݉݉݉ LaH2, ݉ܿ݉ܥLaH3, ⁄݉݉݉LaH4, 1ത-LaH5, ݉-
+LaH10, and ⁄݉݉݉LaH16 phases become stable (Fig. 1c). At 200 GPa, only five stable 
+lanthanum hydrides remain on the convex hull: ⁄݉݉݉LaH2, ݉݉݉ܥLa3H10, ⁄݉݉݉- 
+LaH4, ݉LaH10, and ⁄݉݉݉LaH16. Our results are similar to those from [55], the main 
+difference being that we predict the new LaH, La 3H10, and LaH16 compounds and also find that 
+LaH10 is stable at pressures above 135 GPa, which is consistent with the experimental data [1, 2]. 
+Yet, we found ݉LaH10 to be more stable than ݉LaH10 at pressures above 150 GPa. The 
+݉phase transition occurs at 128 GPa (Supporting Information Fig . S19 [51]). 
+Taking into account the zero-point energy correction, the pressure of this phase transition shifts to 
+135 GPa, which is consistent with the experimental phase transi tion pressure of 160 GPa [20]. 
+Below we discuss the superconducting properties of the previous ly known lanthanum hydrides 
+and explore the crystal structure and SC properties of the newly found LaH16. The crystal structure 
+data are summarized in Supporting Information Table S1 [51]. 
+Stoichiometry 1:1 is common for various hydrides (e.g., U-H [14 ], Fe-H [23], and many 
+others [56]). ݉LaH has a structure of a rock salt type, with La–H distance of  2 . 2 6  Å  a t  
+
+=== PDF PAGE 4 ===
+4 
+ 
+50 GPa. In the ܽ݉݊ܲLaH3 structure, the La atoms have a 10-fold coordination and H–H distances 
+are too long to be considered bonding (2.28 Å at 50 GPa). In Cmc21-LaH7, the lanthanum atoms 
+have a 13-fold coordination, while the shortest H–H distances ( 0.81 Å at 50 GPa) are clearly 
+bonding and quite close to the H–H bond length in the molecular hydrogen (0.74 Å). 
+ 
+Fig. 1. Convex hull diagrams for the La-H system at a) 50, b) 100, c)  150, and d) 200 GPa. The 
+metastable and stable phases are marked by blue squares and black circles, respectively.  
+Our results at 150 GPa are consistent with those in [10]: ݉݉݉LaH2, ݉ܿ݉ܥLaH3, 
+݉݉݉ܫLaH4, and 1ത-LaH5 phases are thermodynamically stable. Previous studies explored only 
+simple fixed stoichiometries, whereas the USPEX method used here can automatically detect even 
+nontrivial stoichiometries, which helped us find a new phase, ݉݉݉ܥLa3H10, at 200 GPa. This 
+phase is structurally related to ݉ܿ݉ܥLaH3, has an additional hydrogen atom in the tripled unit 
+cell, and its lattice parameter c is 3 times larger.  
+Superconducting properties for the most promising LaH 10 and LaH 16 phases were calculated 
+using the SCDFT method, then the μ* value was determined by adjusting TC obtained through the 
+numerical solution of the Eliashberg equation to that from the SCDFT. For comparison, the μ * 
+values determined using the A-D formula are presented in Supporting Information Table S2 [51]. 
+We find a significant difference in the μ* values obtained, depending on whether the Eliashberg or 
+A - D  e q u a t i o n  w e r e  u s e d ,  b e c a u s e  t h e  L a Hx systems are classified as the strong-coupling case 
+where these equations give substantially different values of TC [1].  
+II. Superconductivity of LaH10 phases 
+Superconductivity of LaH10 has been confirmed in experiments [1, 2]. Our analysis is based on 
+the TC calculation using the SCDFT, Eliashberg function α 2F(ω), and the electronic density of 
+states for ݉and ݉LaH10 phases. The experimental observations found the maximum 
+TC ~ 251 K at 168 GPa [2] or TC ~ 260 K at 180 GPa [1], which is close to the ݉–݉phase 
+transition (but in the cubic phase). The value of the Coulomb p seudopotential μ* for the LaH 10 
+phases determined using the SCDFT equals 0.2 at 200 GPa (see Supporting Information [51]).  
+ 
+
+
+=== PDF PAGE 5 ===
+5 
+ 
+ 
+Fig. 2. Crystal structures of a) ⁄݉- LaH10, b) ݉-LaH10, c) ݉LaH10, and d) hydrogen 
+H32 c a g e  c o m m o n  f o r  t h e s e  p h a s e s ;  e )  t h e  E l i a s h b e r g  α2F(ω) function (black curve), phonon 
+density of states (orange), cumulative ω log (red), EPC coefficient λ (blue), and critical transition 
+temperature TC (green) of ݉LaH10 at 170 GPa. The crystal structures were generated using 
+VESTA software [57]; the atoms of La and hydrogen are shown as large orange and sm all black 
+balls, respectively; blue arrows show displacements of the hydrogen atoms in comparison with the 
+cubic H8 cluster. 
+For ݉LaH10, the calculations within the DFPT give a very high EPC coefficient λ = 3.75, 
+which leads to TC = 271 K at 200 GPa (see Table 1 and Supporting Information for  details [51]). 
+At 200 and 250 GPa, the calculated volumes (30.4 and 28.5 Å 3, respectively) and the electronic 
+density of states, N(EF) = N(0) = 10.6 and 10.0 states/f.u./Ry, allowed us to estimate the 
+Sommerfeld constant (Table 1) at 0.016 and 0.011 J/mol·K2, which is very close to that of ݉-
+ThH10 (0.011 J/mol·K 2 [12]) at 100 GPa. These constants were used to calculate the c ritical 
+magnetic field (μ0HC(0)) and the jump in specific heat ΔC/TC (Table 1). The calculation details are 
+presented in Supporting Information [51].  
+The Eliashberg function for the cubic ݉LaH10 at 200 GPa is shown in Fig. 2e (for other 
+pressure values and phases, see Supporting Information [51]). T he numerical solution of the 
+Eliashberg equation for the cubic LaH 10 at the experimental pressure of 170 GPa results in 
+TC = 259 K (Table 1), which is in close agreement with the theore tical results  [10] and 
+experiments [1, 2]. 
+The calculated critical temperature for ݉LaH10 at 150 GPa is 203 K (Table 1), much lower 
+than that of the ݉modification, which can explain the experimental results of Dr ozdov et 
+al. [1]. 
+ 
+ 
+
+
+=== PDF PAGE 6 ===
+6 
+ 
+Table 1. Parameters of the superconducting state of ݉LaH10 and ݉LaH10 from the 
+Eliashberg equation (with μ* = 0.2).  
+Parameter 3ത݉LaH10 ݉LaH10 
+170 GPa 200 GPa 210 GPa 250 GPa 150 GPa 165 GPa 
+Nf, states/f.u./Ry 11.2 10.6 10.3 10.0 12.2 11.0 
+λ 3.94 3.75 3.42 2.29 2.77 2.63 
+ωlog, K 801 906 851 1253 833 840 
+TC, K 259 271 * 249 246 203 197 
+Δ(0), meV 62.0 63.7 59.6 48.0 48.5 43.7 
+μ0HC(0), T** 89.0 95.0 81.0 66.7 72.7 71.0 
+ΔC/TC, 
+mJ/mol·K2 31.5 44.7 34.5 33.4 42.8 25.7 
+γ, J/mol·K2 0.019 0.016 0.015 0.011 0.018 0.018 
+RΔ = 2Δ(0)/kBTC 5.54 5.46 5.55 5.00 5.55 5.54
+* SCDFT (see Supporting Information [51]) 
+** The experimentally measured critical magnetic field is 95–136 T [1] 
+ 
+The isotope coefficient β was calculated using the A-D formula (see Supporting 
+Information [51]). With µ* = 0.11 used for the A-D equation, the calculated value was the  same, 
+β = 0.48, for both ݉LaH10 and ݉LaH10 at 200 GPa. Using the isotope coefficient β, the 
+critical temperature of lanthanum decadeuteride can be determin ed as TD = 2-β·TH, resulting in 
+181 K for ݉LaD10 and 154 K for ݉LaD10. The experimentally measured TC for ݉-
+LaD10 is 168 K [1], corresponding with our prediction. 
+III. Prediction of high-TC LaH16 
+Perhaps the most intriguing finding of our work is the prediction of the thermodynamic stability 
+of ݉݉݉LaH16 at pressures above 150 GPa (Fig. 1с). This phase has a crystal  structure 
+different from the previously predicted AcH 16 [13]. The lanthanum atoms form an hcp sublattice 
+and are coordinated by 12 hydrogen atoms (Fig. 3a). These H-units consist of three parallel layers 
+of hydrogen atoms. The distances between the hydrogen atoms in the first, second, and third layers 
+at 150 GPa are 1.07, 1.02, and 1.07 Å, respectively. The distan ce between the closest hydrogen 
+atoms from different layers is 1.25 Å, so these layers form inf inite 2D networks. The crystal 
+structures of all predicted phases are summarized in Supporting Information Table S1 [51]. 
+
+=== PDF PAGE 7 ===
+7 
+ 
+ 
+Fig. 3. a) Crystal structure of ⁄݉݉݉- LaH16 at 150 GPa; b) band structure and DOS of LaH 16 
+(red lines are for La, blue — for H) at 250 GPa; c) the Eliashb erg function α 2F(ω) (black), 
+cumulative ωlog (red), and the EPC coefficient λ (blue) of P6/mmm-LaH16 at 200 GPa. 
+⁄݉݉݉ LaH16 shows very little dependence of  the electronic density of stat es on the 
+pressure at 200-300 GPa. The Eliashberg function of ⁄݉݉݉LaH16 computed at 200 GPa is 
+shown in Fig. 3c (for other pressure values, see Supporting Information [51]). The EPC coefficient 
+of LaH16 (Table 2) is approximately two times lower than that of LaH10. The SCDFT calculations 
+for LaH16 at 200 GPa yield TC = 156 K, which leads to the calculated μ * = 0.41, an anomalously 
+large value compared to the commonly accepted 0.1–0.15 interval . This abnormal value of μ* for 
+LaH16 is caused by the complex behavior of DOS( E) in the vicinity of EF ± 1 eV (see Supporting 
+Information [51]). We used μ * = 0.41 in the numerical solution of the Eliashberg equation to  
+calculate the superconducting properties of ⁄݉݉݉ LaH16 (Table 2). TC of this phase shows a 
+weak pressure dependence (dTC/dP = –0.3 K/GPa).  
+ 
+Table 2. Parameters of the superconducting state of ⁄݉݉݉LaH16 at 200–300 GPa calculated 
+using the Eliashberg equation with μ* = 0.41. Here γ is the Sommerfeld constant calculated using 
+Eq. Ошибка! Источник ссылки не найден.. 
+Parameter 200 GPa 250 GPa 300 GPa 
+Nf, states/f.u./Ry 7.21 6.94 7.07 
+λ 1.82 1.63 1.44 
+ωlog, K 1362 1511 1675 
+TC, K 156 141 118 
+Δ(0), meV 29.6 25.7 20.2 
+μ0HC(0), T 35.0 29.9 23.6 
+ΔC/TC, mJ/mol·K2 18.6 15.1 12.4 
+γ, mJ/mol·K2 7.3 6.5 6.1 
+RΔ = 2Δ(0)/kBTC 4.5 4.2 4.0 
+ 
+
+
+=== PDF PAGE 8 ===
+8 
+ 
+Table 3 shows the critical temperatures for LaH 10 and LaH16 calculated using the SCDFT and 
+the values of μ* adjusted so that the Eliashberg and A-D equations give the same values of TC. 
+ 
+Table 3. Superconducting parameters of LaH10 and LaH16 phases 
+Parameter LaH 10 at 200 GPa LaH 16 at 200 GPa 
+Critical temperature (TC), K 271 156 
+μ* (Eliashberg eq.) 
+μ* (Allen–Dynes eq.) 
+0.20 
+0.11 
+0.41 
+0.198 
+IV. Superconductivity of LaHm (m = 4, …, 9, 11) 
+It was shown before that different lanthanum hydrides can undergo a series of superconducting 
+transitions at different pressures with different TC [1], so we checked other lanthanum hydrides to 
+explore this possibility. In this work, we found a number of La Hm phases ( m = 4, …, 9, 11) at 
+different pressures, and calculating their TC using the SCDFT method or the numerical solution of 
+the Eliashberg equation would have been very computationally ex pensive. Therefore, we 
+calculated TC of LaHm phases (m = 4, …, 9, 11) using the Allen–Dynes (A-D) formula [52, 57] in 
+the pressure range of 150–180 GPa, which is the experimentally studied pressure region  [1], with 
+the commonly accepted μ * values (0.1–0.15). We consider this interval of μ * reasonable because 
+for LaH10 and LaH16 the A-D formula yielded μ * equal to 0.11 and 0.2, respectively (Supporting 
+Information Table S2 [51]). The calculated TC values are shown in Fig. 4. The results point to 
+LaH4, LaH 6, and LaH 7 as the compounds that could undergo the experimentally observe d 
+transition at ~ 215 K with the critical magnetic field μ 0HC(0) = 60–70 T; the other transition at 
+~ 112 K with the critical magnetic field μ0HC(0) = 20–25 T could occur in LaH5, LaH8, and LaH11. 
+More details about the calculation of TC in these phases can be found in Supporting 
+Information [51].  
+V. Possible departure from the standard Eliashberg picture 
+In the present analysis, we estimated the superconducting parameters with the A-D formula and 
+isotropic (constant-DOS) Eliashbe rg equation. They are based on  a simple standard view of the 
+detailed electronic structure su ch as the constant electronic D OS and screened Coulomb matrix 
+elements. The degree of departure of the target system from this simple view can be estimated by 
+analyzing the Coulomb pseudopotential μ* [54]. We evaluated the nonrenormalized μ as the Fermi 
+surface average of the screened Coulomb interaction [50, 51], which was 0.18 and 0.11 for LaH10 
+and LaH16, respectively. The straightforward use of the renormalization formula 
+μ∗ ൌμ /ሾୣ୪/ωୈሻሿ, (2) 
+where ୣ୪ is the Fermi level calculated from the band bottom and ωୈ is the Debye frequency, 
+yields μ* = 0.10 and 0.07, which is far smaller than our estimate from the SCDFT results (0.20 and 
+0.41, respectively). The deviation of μ* estimated using the SCDFT approach from the empirically 
+accepted range 0.10–0.13 [50, 52] has been pointed out in the previous SCDFT studies [53, 58]. It 
+is thought to indicate the substantial effects ignored in Eq. ( 2), such as the energy dependence of 
+the electronic DOS and the Kohn–Sham state dependence of the Coulomb matrix element, which 
+are incorporated in the SCDFT framework. Notably, we found a pa radoxical relation, μ < μ *, 
+derived from the SCDFT, which has also been observed in H 3S [60]. The DOS effect would be 
+accounted for more properly by t he DOS-dependent Eliashberg equ ation [61]. However, the 
+single-parameter approximation of the Coulomb effect is likely less reliable in hydrides because 
+of the large phonon energy scale comparable to the electronic one. The ab initio treatment of the 
+Coulomb matrix element in the Eliashberg equation [62] would re veal such effects on the 
+superconducting parameters evaluated above, which is out of the scope of the present study.  
+ 
+ 
+
+=== PDF PAGE 9 ===
+9 
+ 
+ 
+Fig. 4. Superconducting temperatures TC, obtained using the A-D formula with µ * = 0.1, and 
+critical magnetic fields for a series of lanthanum hydrides at 150 and 180 GPa. 
+Conclusions 
+Using the ab initio evolutionary algorithm USPEX, we predicted stable superconducting 
+compounds in the La-H system at 50, 100, 150, and 200 GPa, incl uding the previously unknown 
+polyhydride ⁄݉݉݉- LaH16. The electronic, phonon, and superconducting properties of LaH m 
+with m = 4, …, 11 were studied within the harmonic approximation, whi ch gives possible 
+explanations of the observed superconducting transitions at 70,  112, and 215 K [1]. The SCDFT 
+calculations for LaH10 and LaH16 led to unusually high values of μ * (0.2–0.41) for the numerical 
+solution of the Eliashberg equation, lying far outside the conv entionally accepted interval, 0.1–
+0.15. The Eliashberg function calculated for ݉LaH10 at 170 GPa yields TC = 259 K, 
+according to the numerical solution of the Eliashberg equation with μ* = 0.2. The critical magnetic 
+field of ݉LaH10 was found to be 89–95 T (73 T for the ݉phase), the harmonic isotope 
+coefficient β = 0.48. The values of all the superconducting parameters for lanthanum hydrides are 
+in close agreement with the available experimental data [1]. We found that ⁄݉݉݉- LaH16 is a 
+high-temperature superconductor with TC of up to 156 K, the critical magnetic field of ~ 35 T, and 
+the superconducting gap of 30 meV at 200 GPa. The main conclusi on of this investigation is that 
+even in one system the µ* value, especially for the numerical solution of the Eliashberg equation, 
+may significantly vary and go beyond the commonly accepted inte rval, 0.1–0.15, which lends a 
+special importance to the SCDFT calculations. 
+ 
+Acknowledgments 
+A.R.O. acknowledges the support by the Russian Science Foundati on (grant 19-72-30043). 
+A.G.K. thanks the RFBR project № 19-03-00100 and FASIE for the financial support within the 
+UMNIK grant № 13408GU/2018. The calculations were performed on Rurik supercomputer at 
+MIPT and Arkuda supercomputer of the Skolkovo Foundation.  
+References 
+[1] A. P. Drozdov, P. P. Kong, V. S. Minkov, S. P. Besedin, M. A. Kuzovnikov, S. Mozaffari, 
+
+
+=== PDF PAGE 10 ===
+10 
+ 
+L. Balicas, F. F. Balakirev, D. E. Graf, V. B. Prakapenka, E. Greenberg, D. A. Knyazev, M. 
+Tkacz, and M. I. Eremets, Nature 569, 528 (2019). 
+[2] M. Somayazulu, M. Ahart, A. K . Mishra, Z. M. Geballe, M. Baldini, Y. Meng, V. V. 
+Struzhkin, and R. J. Hemley, Phys. Rev. Lett. 122, 027001 (2019). 
+[3] N. W. Ashcroft, Phys. Rev. Lett. 21, 1748 (1968). 
+[4] P. Cudazzo, G. Profeta, A. Sanna, A. Floris, A. Continenza,  S. Massidda, and E. K. U. 
+Gross, Phys. Rev. Lett. 100, 257001 (2008). 
+[5] P. Cudazzo, G. Profeta, A. Sanna, A. Floris, A. Continenza,  S. Massidda, and E. K. U. 
+Gross, Phys. Rev. B 81, 134505 (2010). 
+[6] P. Cudazzo, G. Profeta, A. Sanna, A. Floris, A. Continenza,  S. Massidda, and E. K. U. 
+Gross, Phys. Rev. B 81, 134506 (2010). 
+[7] R. P. Dias and I. F. Silvera, Science 355, 715 (2017). 
+[8] N. W. Ashcroft, Phys. Rev. Lett. 92, 187002 (2004). 
+[9] H. Wang, J. S. Tse, K. Tanaka, T. Iitaka, and Y. Ma, Proc. Natl. Acad. Sci. 109, 6463 
+(2012). 
+[10] H. Liu, I. I. Naumov, R. Hoffmann, N. W. Ashcroft, and R. J. Hemley, Proc. Natl. Acad. 
+Sci. 114, 6990 (2017). 
+[11] D. Duan, Y. Liu, F. Tian, D. Li, X. Huang, Z. Zhao, H. Yu,  B. Liu, W. Tian, and T. Cui, 
+Sci. Rep. 4, 6968 (2014). 
+[12] A. G. Kvashnin, D. V. Semenok, I. A. Kruglov, I. A. Wrona,  and A. R. Oganov, ACS Appl. 
+Mater. Interfaces 10, 43809 (2018). 
+[13] D. V. Semenok, A. G. Kvashnin, I. A. Kruglov, and A. R. Og anov, J. Phys. Chem. Lett. 9, 
+1920 (2018). 
+[14] W. Zhang, A. R. Oganov, A. F. Goncharov, Q. Zhu, S. E. Bou lfelfel, A. O. Lyakhov, M. 
+Somayazulu, and V. B. Prakapenka, Science 342, 1502 (2013). 
+[15] A. P. Drozdov, M. I. Eremets, I. A. Troyan, V. Ksenofontov , and S. I. Shylin, Nature 525, 
+73 (2015). 
+[16] I. A. Kruglov, A. G. Kvashnin, A. F. Goncharov, A. R. Ogan ov, S. S. Lobanov, N. 
+Holtgrewe, Sh. Jiang, V. B. Prakapenka, E. Greenberg, and A. V. Yanilkin, Sci Adv 4, 
+eaat9776 (2018). 
+[17] D. Duan, Y. Liu, Y. Ma, Z. Shao, B. Liu, and T. Cui, Natl.  Sci. Rev. 4, 121 (2017). 
+[18] A. K. Mishra, M. Somayazulu, M. Ahart, A. Karandikar, R. J . Hemley, and V. V. 
+Struzhkin, in Bull. Am. Phys. Soc. (2018). 
+[19] P. P. Kong, A. P. Drozdov, E. Eroke, and M. I. Eremets, in  Book Abstr. AIRAPT 26 Jt. 
+ACHPR 8 CHPC 19 (Biijing, China, 2017), p. 347. 
+[20] Z. M. Geballe, H. Liu, A. K . Mishra, M. Ahart, M. Somayazulu, Y. Meng, M. Baldini, and 
+R. J. Hemley, Angew. Chem. Int. Ed. 57, 688 (2017). 
+[21] C. M. Pépin, G. Geneste, A. Dewaele, M. Mezouar, and P. Lo ubeyre, Science 357, 382 
+(2017). 
+[22] A. Majumdar, J. S. Tse, M. Wu, and Y. Yao, Phys. Rev. B 96, 201107 (2017). 
+[23] A. G. Kvashnin, I. A. Kruglov, D. V. Semenok, and A. R. Og anov, J. Phys. Chem. C 122, 
+4731 (2018). 
+[24] N. P. Salke, M. M. D. Esfahani, Y. Zhang, I. A. Kruglov, J . Zhou, Y. Wang, E. Greenberg, 
+V. B. Prakapenka, A. R. Oganov, and J.-F. Lin, ArXiv:1805.02060 
+https://arxiv.org/ftp/arxiv/papers/1805/1805.02060.pdf (2018). 
+[25] H. Wang, J. S. Tse, K. Tanak a, T. Iitaka, and Y. Ma, Proc. Natl. Acad. Sci. 109, 6463 
+(2012). 
+[26] K. Tanaka, J. S. Tse, and H. Liu, Phys. Rev. B 96, 100502 (2017). 
+[27] G. Gao, R. Hoffmann, N. W. Ashcroft, H. Liu, A. Bergara, a nd Y. Ma, Phys. Rev. B 88, 
+184104 (2013). 
+[28] K. Abe, Phys. Rev. B 96, 144108 (2017). 
+[29] X. Li and F. Peng, Inorg. Chem. 56, 13759 (2017). 
+
+=== PDF PAGE 11 ===
+11 
+ 
+[30] A. R. Oganov and C. W. Glass, J Chem Phys 124, 244704 (2006). 
+[31] A. R. Oganov, A. O. Lyakhov, and M. Valle, Acc. Chem. Res.  44, 227 (2011). 
+[32] A. O. Lyakhov, A. R. Oganov, H. T. Stokes, and Q. Zhu, Com put. Phys. Commun. 184, 
+1172 (2013). 
+[33] P. V. Bushlanov, V. A. Blatov, and A. R. Oganov, Comput. P hys. Commun. 236, 1 (2019). 
+[34] P. Hohenberg and W. Kohn, Phys Rev 136, B864 (1964). 
+[35] W. Kohn and L. J. Sham, Phys Rev 140, A1133 (1965). 
+[36] J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett.  77, 3865 (1996). 
+[37] P. E. Blöchl, Phys. Rev. B 50, 17953 (1994). 
+[38] G. Kresse and D. Joubert, Phys. Rev. B 59, 1758 (1999). 
+[39] G. Kresse and J. Furthmüller, Phys. Rev. B 54, 11169 (1996). 
+[40] G. Kresse and J. Hafner, Phys. Rev. B 47, 558 (1993). 
+[41] G. Kresse and J. Hafner, Phys. Rev. B 49, 14251 (1994). 
+[42] P. Giannozzi, S. Baroni, N. Bonini, M. Calandra, R. Car, C . Cavazzoni, D. Ceresoli, G. L. 
+Chiarotti, M. Cococcioni, I. Dabo, A. D. Corso, S. de Gironcoli, S. Fabris, G. Fratesi, R. 
+Gebauer, U. Gerstmann, C. Gougoussis, A. Kokalj, M. Lazzeri, L. Martin-Samos, N. 
+Marzari, F. Mauri, R. Mazzarello, S. Paolini, A. Pasquarello, L. Paulatto, C. Sbraccia, S. 
+Scandolo, G. Sclauzero, A. P. Seitsonen, A. Smogunov, P. Umari, and R. M. Wentzcovitch, 
+J. Phys. Condens. Matter 21, 395502 (2009). 
+[43] S. Baroni, S. de Gironcoli, A. Dal Corso, and P. Giannozzi , Rev. Mod. Phys. 73, 515 
+(2001). 
+[44] A. Togo and I. Tanaka, Scr. Mater. 108, 1 (2015). 
+[45] A. Togo, F. Oba, and I. Tanaka, Phys. Rev. B 78, 134106 (2008). 
+[46] M. Lüders, M. A. L. Marques, N. N. Lathiotakis, A. Floris,  G. Profeta, L. Fast, A. 
+Continenza, S. Massidda, and E. K. U. Gross, Phys. Rev. B 72, 024545 (2005). 
+[47] M. A. L. Marques, M. Lüders, N. N. Lathiotakis, G. Profeta , A. Floris, L. Fast, A. 
+Continenza, E. K. U. Gross, and S. Massidda, Phys. Rev. B 72, 024546 (2005). 
+[48] R. Akashi and R. Arita, Phys. Rev. B 88, 014514 (2013). 
+[49] R. Akashi, M. Kawamura, S. Tsuneyuki, Y. Nomura, and R. Ar ita, Phys. Rev. B 91, 
+224513 (2015). 
+[50] P. Morel and P. W. Anderson, Phys. Rev. 125, 1263 (1962). 
+[51] See Supplemental Material at [URL will be inserted by the production group] for crystal 
+data of La-H phases, electronic, phonon and superconducting properties including 
+Eliashberg spectral functions, (n.d.). 
+[52] K.-H. Lee, K. J. Chang, and M. L. Cohen, Phys. Rev. B 52, 1425 (1995). 
+[53] J. P. Carbotte, Rev. Mod. Phys. 62, 1027 (1990). 
+[54] G. Profeta, C. Franchini, N . N. Lathiotakis, A. Floris, A. Sanna, M. A. L. Marques, M. 
+Lüders, S. Massidda, E. K. U. Gross, and A. Continenza, Phys. Rev. Lett. 96, 047003 
+(2006). 
+[55] F. Peng, Y. Sun, C. J. Pickard, R. J. Needs, Q. Wu, and Y.  Ma, Phys. Rev. Lett. 119, 
+107001 (2017). 
+[56] D. V. Semenok, I. A. Kruglov, A. G. Kvashnin, and A. R. Og anov, ArXiv (2018). 
+[57] K. Momma and F. Izumi, J. Appl. Crystallogr. 44, 1272 (2011). 
+[58] P. B. Allen and R. C. Dynes, Phys. Rev. B 12, 905 (1975). 
+[59] R. Akashi, K. Nakamura, R. Arita, and M. Imada, Phys. Rev.  B 86, 054513 (2012). 
+[60] J. Flores-Livas, A. Sanna , and E. K. U. Gross, Eur. Phys. J. B 89, 63 (2016). 
+[61] W. E. Pickett, Phys. Rev. B 26, 1186 (1982). 
+[62] A. Sanna, J. A. Flores-Liva s, A. Davydov, G. Profeta, K. Dewhurst, S. Sharma, and E. K. 
+U. Gross, J. Phys. Soc. Jpn. 87, 041012 (2018). 
+ 
+
+=== PDF PAGE 12 ===
+S1 
+ 
+Supporting Information 
+Superconductivity in LaH10 and LaH16 polyhydrides 
+Ivan A. Kruglov, 1,2,* Dmitrii V. Semenok, 1,3 Hao Song 9, Radosław Szczęśniak, 4,5 Izabela A. 
+Wrona, 4 Ryosuke Akashi, 6 M. Mahdi Davari Esfahani, 7 Defang Duan, 9 Tian Cui, 9, Alexander 
+G. Kvashnin 3,1 and Artem R. Oganov 3,2,8 
+1 Moscow Institute of Physics and Technology, 141700, 9 Institutsky lane, Dolgoprudny, Russia 
+2 Dukhov Research Institute of Automatics (VNIIA), Moscow 127055, Russia 
+3 Skolkovo Institute of Science and Technology, Skolkovo Innovation Center 143026, 3 Nobel 
+Street, Moscow, Russia 
+4 Institute of Physics, Jan Dlugosz University in Czestochowa, Ave. Armii Krajowej 13/15, 42-
+200 Częstochowa, Poland 
+5 Institute of Physics, Częstochowa University of Technology, Ave. Armii Krajowej 19, 42-200 
+Częstochowa, Poland 
+6University of Tokyo, 7-3-1 Hongo, Bunkyo, Tokyo 113-8654, Japan 
+7 Department of Geosciences and Center for Materials by Design, Institute for Advanced 
+Computational Science, State University of New York, Stony Brook, NY 11794-2100, USA 
+8 International Center for Materials Discovery, Northwestern Polytechnical University, Xi'an, 710072, 
+China 
+9Key State Laboratory of Superhard Materials, Jilin University, Changchun, China  
+Corresponding Author 
+*Ivan A. Kruglov, E-mail: ivan.kruglov@phystech.edu 
+*Dmitrii V. Semenok, E-mail: Dmitrii.Semenok@skoltech.ru 
+*Artem. R. Oganov, E-mail: A.Oganov@skoltech.ru 
+ 
+Content 
+Content 
+Crystal data of La-H phases .................................................................................................................... S2 
+Equations for calculating TC and related parameters ............................................................................... S3 
+Calculation of critical magnetic field for LaH10 phases .......................................................................... S9 
+Superconductivity of lanthanum hydrides LaHm (m = 4-9, 11) ............................................................. S10 
+Electronic and phonon properties of La-H phases ................................................................................ S12 
+Eliashberg spectral functions ................................................................................................................. S17 
+Stability of LaH10 polymorphs .............................................................................................................. S20 
+References ............................................................................................................................................. S21 
+ 
+
+=== PDF PAGE 13 ===
+S2 
+ 
+Crystal data of La-H phases  
+Table S1. Crystal structures of predicted La-H phases.  
+Phase Pressure, GPa Lattice parameters Coordinates 
+݉LaH 50 a = 4.53 Å La 0.5 0.5 0.5 
+H 0.0 0.0 0.0 
+ܽ݉݊ܲLaH3 50 
+a = 7.20 Å, 
+b = 4.57 Å, 
+c = 3.67 Å 
+La -0.365 0.25 -0.320 
+H 0.394 -0.001 -0.171 
+H 0.356 0.25 0.332 
+2ଵ-LaH7 50 
+a = 7.20 Å, 
+b = 4.57 Å, 
+c = 3.67 Å 
+La 0.0 -0.159 -0.452 
+H 0.0 0.466 0.408 
+H 0.0 0.245 -0.300 
+H 0.0 -0.365 0.241 
+H 0.0 0.174 0.420 
+H 0.25 0.417 0.237 
+H 0.0 -0.497 -0.465 
+݉݉݉LaH2 150 a = 2.80 Å, 
+c = 2.72 Å 
+La 0.0 0.0 0.0 
+H 0.333 0.667 0.5 
+݉ܿ݉ܥLaH3 150 
+a = 2.76 Å, 
+b = 10.69 Å, 
+c = 2.80 Å 
+La 0.0 0.118 0.25 
+H 0.0 0.467 0.25 
+H 0.0 0.313 0.25 
+H 0.0 -0.25 0.25 
+݉݉݉ܥLa3H10 150 a = 16.70 Å, b = 2.77 
+Å, c = 2.75 Å 
+La -0.326 0.0 0.5 
+La 0.0 0.0 0.0 
+H -0.089 0.0 0.5 
+H 0.128 0.0 0.0 
+H -0.228 0.0 0.0 
+H -0.449 0.0 0.5 
+H 0.411 0.0 0.0 
+݉݉݉LaH4 150 a = 2.74 Å,  
+c = 6.03 Å 
+La 0.0 0.0 0.5 
+H 0.0 0.5 0.25 
+H 0.0 0.0 -0.153 
+1ത-LaH5 150 
+a = 2.91Å,  
+b = 5.26 Å,  
+c = 3.47 Å, 
+ = 93.34, 
+ = 110.24, 
+ = 98.71 
+La -0.327 -0.266 -0.273 
+H 0.263 0.036 -0.255 
+H 0.073 0.431 -0.280 
+H -0.067 0.122 -0.349 
+H -0.304 0.375 -0.108 
+H -0.376 0.112 -0.151 
+݉LaH10 150 a = 3.66 Å,  
+c = 8.53 Å 
+La 0.0 0.0 0.5 
+H 0.0 0.0 0.097 
+H -0.168 0.168 0.276 
+H 0.0 0.0 -0.259 
+݉LaH10 150 a = 5.08 Å  
+La 0.0 0.0 0.0 
+H -0.378 -0.378 -0.378 
+H 0.25 0.25 0.25 
+݉݉݉LaH16 150 a = 3.68 Å, 
+c = 3.70 Å  
+La 0.0 0.0 0.0 
+H -0.276 0.0 0.5 
+H 0.5 0.0 0.245 
+H 0.333 0.667 -0.203 
+ 
+ 
+
+=== PDF PAGE 14 ===
+S3 
+ 
+Equations for calculating TC and related parameters 
+The superconducting transition temperature was calculated by solving the gap equation derived from the 
+density functional theory for superconductors (SCDFT) [1,2], where no empirical parameter such as μ* was 
+used. The nk-averaged formula for ୮୦ [Eq.(23) in Ref. [2]] and ୮୦ [Eq.(40) in Ref. [3]] were employed 
+to use the calculated α 2F(ω). The nk-dependent formula for ୮୦ [Eq.(3) in Ref. [4]] was used, which 
+includes the dynamical as well as static screening effect on the Coulomb repulsion. The dielectric matrices 
+ε(iω) were represented with the aux iliary plane-wave energy cutoff of 12.8 Ry and were calculated within 
+the random-phase approximation [5] and electron-electron Coulomb matrix elements were evaluated as 
+1
+,'' '' ' '() | () |nk n k nk n k n k n kWi i V      
+   (S1)
+where V is being the bare Coulomb interaction. Low-energy Kohn-Sham states were accurately treated with 
+the weighted random sampling scheme in solving the gap equation , as described in Ref. [2]. The Kohn-
+Sham energy eigenvalues and matrix elements for the sampled sta tes were evaluated by the linear 
+interpolation from the data on equal meshes. The detailed conditions are summarized in Table S2. 
+Table S2. Summary of the detailed conditions for the Tc calculation with the SCDFT scheme. 
+Class Parameter LaH 10 200GPa LaH 16 200GPa 
+charge density k 16x16x16 equal mesh 16x16x16 equal mesh 
+interpolation 1st order Hermite  Gaussian  [5] with width 0.050Ry 
+dielectric matrix k for bands crossing EF 15x15x15 equal mesh 15x15x15 equal mesh 
+k for other bands 5x5x5 equal mesh 5x5x5 equal mesh 
+number of unoccupied bands a 5 7  7 5  
+interpolation Tetrahedron with t he Rath-Freeman treatment [6] 
+DOS for 
+phononic kernels 
+k 21x21x21 equal mesh 21x21x21 equal mesh 
+interpolation Tetrahedron w ith the Blöchl correction [7] 
+SCDFT gap 
+function 
+number of unoccupied bands b 2 4  3 6  
+k for the electronic kernel 5x5x5 equal mesh 5x5x5 equal mesh 
+k for the KS energies 21x21x21 equal mesh 21x21x21 equal mesh 
+Sampling points for bands 
+crossing EF 
+6000 6000 
+Sampling points for the other 
+bands 
+200 200 
+Sampling error in Tc (%) ~2.6 ~1.9 
+SC parameters Critical temperature (T C) 271 156 
+Coloumb pseudopotential μ* (E)
+μ* (Allen-Dynes) 
+0.20 
+0.11 
+0.41 
+0.198 
+a States up to EF+70eV are taken into account. 
+b States up to EF+40eV are taken into account. 
+Isotopic coefficient βAD was calculated using the Allen-Dynes interpolation formulas: 
+
+=== PDF PAGE 15 ===
+S4 
+ 
+*2
+*2
+ln 1 1.04(1 )(1 0.62 )1ln 2 [ (1 0.62 )]
+C
+McM
+dT
+dM
+  
+      
+ (S2) 
+ 
+*2 3/2
+** 3 / 2 3 / 2
+log log*2 2 *
+22
+2
+log log** 2 2 ** 2 2
+22
+2.34
+(2.46 9.25 ) ((2.46 9.25 ) )
+130.4 (1 6.3 ) 1
+8.28 104 329 2.5 8.28 104 329 2.5
+AD McM
+  
+  
+    
+    
+                  
+(S3
+) 
+where the last two correction terms are usually small (~0.01).  
+The critical temperature of s uperconducting transition was calc ulated using Matsubara-type 
+linearized Eliashberg equations: [8] 
+( 2 1 ) , 0 ,1 ,2 , . . .jB jk T j       (S4)
+2
+22
+0
+()() 2 ()
+ij
+ij
+F d     
+
+ 
+ 
+(S5)
+() *
+(, ) ( ) ( )
+() ()
+ij
+ii B j
+j
+jB k j k
+k
+TT k T T
+kT s i g n
+   
+     
+      
+  
+
+
+, 
+(S6)
+where T is temperature in Kelvins, μ* is Coloumb pseudopotential, ω is frequency in Hz, ρ(T) is a 
+pair-breaking parameter, function ௝൯ relates to effective electron-electron interaction via 
+exchange of phonons.  [9] Transition temperature can be found as a solution of equation ρ(TC) = 0 
+where ρ(T) is defined as max(ρ) providing that Δ(ω) is not a zero function of ω at fixed temperature.  
+These equations can be rewritten in a matrix form as  [10] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+NNNN
+ii
+N
+N
+N
+n
+nmnm
+KK
+K
+KK
+TKT
+
+
+
+
+ ...
+...
+......
+...
+...)()(
+1
+1
+1111
+0
+, (S7)
+where ψn relates to Δ(ω, T), and  
+
+
+
+  
+
+m
+l
+mnmn lFFmnmFnmFK
+1
+)(2)0(12*2)1()(   
+
+
+
+dxkT
+FTxFxF 2
+max
+0
+22
+2
+)2()(
+)(2),()(   , 
+(S8)
+(S9)
+where δnn = 1 and δnm = 0 (n ≠ m) – is a unit matrix. Now one can replace criterion of ρ(TC) = 0 by 
+the vanishing of the maximum eigenvalue of the matrix Knm:{ρ = max_eigenvalue(Knm) = f(T), 
+f(TC) = 0}.  
+
+=== PDF PAGE 16 ===
+S5 
+ 
+We have implemented this simple approach, proposed by Philip Al len in 1974, as Matlab 
+functions, shown at the last page of Supporting Information, wh ich read files with α 2F functions 
+and carry out the calculations of TC.  
+Exact calculations for P6/mmm-LaH16 at 250 GPa were also made using the Eliashberg 
+equations in the following form (on the imaginary axis) [8]: 
+*
+22
+() ( )
+()
+M
+nm c m
+n m
+mM mm m
+ii
+Z
+       
+ 
+ 
+ 
+ 
+22
+()11
+()
+M
+nm
+nm m
+mMn mm m
+iiZ Z
+Z
+   
+
+ 
+ 
+(S10)
+(S11)
+where: ϕn is the order parameter function, Zn is the wave function renormalization factor, θ(x) is 
+Heaviside function, ԰ωn = π·kBT·(2n-1) is the n-th Matsubara frequency, β = 1/kBT, μ* is Coulomb 
+pseudopotential, ωc is the cut-oﬀ energy (ωc = 3Ωmax, Ωmax is the maximum frequency in α2F(ω)). 
+The electron-phonon pairing kernel is defined as: 
+max 2
+22
+0
+()() 2 Fzd z
+
+
+  . (S12)
+The Eliashberg equations were solved for 2201 Matsubara frequencies, starting from T0 = 10 K 
+(below this temperature, the solutions are not stable). The met hods discussed in the papers  [11–
+13] were used during the calculations. 
+The full form of the order parameter and the wave function reno rmalization factor on the real 
+axis was obtained through analytical extension of the Eliashber g equations solutions from the 
+imaginary axis, using the formula: 
+1
+12
+1
+12
+...() ...
+r
+r
+rr
+r
+pp pX qq q
+  
+
+
+     , (S13)
+where X{∆; Z}, r = 50. The values of pj and qj parameters were selected in accordance with the 
+principles presented in work  [14]. Obtained results allow one to calculate dimensionless parameter 
+RC (relative jump of the specific heat), using the formula below: 
+)(
+)()(
+C
+N
+C
+N
+C
+S
+C
+TC
+TCTCR   (S14)
+Because of strong-coupling and retardation effects in LaH 10 and LaH 16, parameter RC diﬀers 
+significantly from BCS theory prediction, in which the constant value is equal to 1.43. [15]  
+
+=== PDF PAGE 17 ===
+S6 
+ 
+ 
+Fig. S1. The wave function renormalization factor for P6/mmm-LaH16 at 250 GPa on the imaginary 
+axis for the selected values of temperature (the first 100 values).  
+ 
+Fig. S2. The order parameter (in meV) for P6/mmm-LaH16 at 250 GPa on the imaginary axis for 
+the selected values of temperature (the first 100 values) and Coloumb pseudopotential. 
+
+
+=== PDF PAGE 18 ===
+S7 
+ 
+ 
+Fig. S3. The order parameter Δ(ω) in meV for P6/mmm-LaH16 at 250 GPa on the real axis for the 
+selected values of temperature (µ∗ = 0.1). In addition, the Eliashberg function (grey) was added as 
+the background (multiplied by 50 for easier comparison). 
+ 
+Fig. S4. a) The dependence of the thermodynamic critical field on the temperature (in meV, solid 
+circles) and free energy difference between the superconducting  state and the normal state as a 
+function of the temperature (in meV 2, open circles); b) The specific heat of the superconducting 
+state (CS) and the normal state (CN) as a function of temperature. Here ρ(0) is the density of sta tes 
+at the Fermi level.  
+
+
+=== PDF PAGE 19 ===
+S8 
+ 
+Table S3. Parameters of superconductive state of ݉݉݉LaH16 at 250 GPa calculated by the 
+Eliashberg equations at different μ* 
+Parameter ݉݉݉LaH16 (250 GPa) 
+μ*=0.1 μ*=0.15 μ*=0.36 
+TC, K 241 213 135 
+Δ(0), meV 46.4 40.1 23.9 
+μ0HC(0), T 52.3 45.8 28.4 
+ΔC/TC, mJ/mol·K2 17.3 17.2 15.4 
+γ, mJ/mol·K2 6.3 6.3 6.3 
+RΔ = 2Δ(0)/kBTC 4.47 4.38 4.09 
+ 
+The Sommerfeld constant was calculated using the following formula: 
+222 (0)(1 ),3
+BkN   (S15) 
+where λ is the EPC parameter, N(0) – the electronic density of states at the Fermi level, k B – the 
+Boltzmann constant. 
+ 
+  
+
+=== PDF PAGE 20 ===
+S9 
+ 
+Calculation of critical magnetic field for LaH10 phases  
+Using semi-empirical formulas of BCS theory (see Ref. [16], eq. 5.11 and 5.9):  
+22
+log
+2
+log
+0.168 1 12.2 ln(0) 3
+С C
+CC
+Т T
+HT
+
+
+       
+ (S16) 
+and 
+2
+log
+log
+() 1.43 1 53 ln 3
+CC
+CC
+CT T
+TT
+
+
+        
+, (S17) 
+we estimated the critical magnetic field and the jump in specific heat for ݉LaH10 in harmonic 
+approximation (see Table 2). The superconducting gap was estima ted by well-known semi-
+empirical equation, working satisfactorily for TC/ωlog < 0.25 (see equation 4.1 in Ref. [16]): 
+2
+log
+log
+2( 0 ) 3.53 1 12.5 ln 2
+C
+BC C
+T
+kT T
+
+
+        
+(S18) 
+Estimation of the critical magnetic field for ݉LaH10 g i v e s  μ0HC(0) ~ 89-95 T at 170-
+200 GPa, which is greater than 70 T for H 3S [17] and agrees with l ower bound of recent 
+experimental results of 95-136 T [18]. 
+  
+
+=== PDF PAGE 21 ===
+S10 
+ 
+Superconductivity of lanthanum hydrides LaHm (m = 4-9, 11)  
+According to Ref. [18], pure LaH 3 is not a superconductor at all  investigated pressures (0-
+200 GPa), but higher hydrides of La are metallic and superconducting. Superconducting properties 
+of all predicted hydrid es were computed by Allen-Dynes (A-D) fo rmula [19,16] at the pressure 
+range 150-180 GPa, which is the experimentally studied pressure region [18].  
+Surprisingly, ݉݉݉-LaH4 demonstrates very relatively  strong electron-phonon coupling 
+(see Table S4). At 150 GPa the TC(A-D) is found to be 87 K and it decreases to 67 K at 180 GPa 
+with dTC/dP ≈ -0.67 K/GPa. Thus, ݉݉݉-LaH4 could explain superconducting transitions with 
+TC = 70-112 K observed in Ref. [18].  
+1ത-LaH5 is stable at pressures above 150 GPa (Fig. 1c) and has TC of 104-130 K at 150 GPa 
+(see Table S4), almost insensitive to pressure ( dTC/dP ≈ -0.033 K/GPa). This could explain the 
+superconducting transition observed at ТС ~ 112 K [18].  
+݉LaH6 is metastable, but at 150 GPa it is very close to the convex h ull (only 6 meV/atom 
+above it, see Fig. 1c). Its electronic density of states is approximately pressure-independent, and its 
+TC increases with pressure ( dTC/dP ≈ +0.73 K/GPa), because of the in crease of the characteristic 
+phonon frequency with pressure. According to our calculations,  TC of this phase can reach 211 K 
+at 180 GPa (see Table S4).  
+Table S4.  Predicted superconducting properties of slightly metastable an d stable lanthanum 
+hydrides. μ* was taken as 0.1 (0.15).  
+Phase P, GPa λ Nf, 
+states/f.u./Ry ωlog, K TC 
+(A-D), K μ0HC(0), T 
+I4/mmm-LaH4 b) 
+150 1.28 8.43 796 87 (69) 25 (22) 
+180 0.84 7.62 1255 69 (48) 16 (13) 
+1ത-LaH5 b) 150 1.21 5.57 a) 1307 130 (104) 22 (17) 180 1.15 1389 129 (102) 
+݉LaH6 150 2.89 9.04 a) 765 189 (163) 58 (51) 
+180 2.60 956 211 (183) 63 (55) 
+C2/m-LaH7 150 2.94 7.21 894 223 (193) 61 (54) 
+180 1.92 7.55 1102 185 (158) 45 (38) 
+C2/m-LaH8 c) 150 1.56 6.32 a) 944 128 (107) 26 (21) 
+180 1.53 950 127 (106) 
+P63/mmc-LaH9 
+150 2.75 
+11.6 a) 
+702 166 (144) 57 (50) 
+180 2.98 708 180 (156) 62 (55) 
+݉LaH9 150 2.92 7.72 802 199 (172) 56 (49) 
+P4/nmm-LaH11 150 1.54 3.94 986 133 (111) 21 (17) 
+a) no changes with pressure; b) stable phase; c) from Ref. [20]. 
+C2/m-LaH7 is also metastable (17 meV/atom above the convex hull at 150 G Pa, Fig. 1c) and 
+displays TC up to 223 K (with dTC/dP ≈ -1.26 K/GPa), see Table 3. This phase may be responsible 
+for observed transition at ~ 215 K [18]. Metastable C2/m-LaH8, proposed in Ref. [20], has 
+TC = 106-127 K (Table S4), which is almost insensitive to pressure.  
+For metastable LaH9 we considered two polymorphs: isostructural to recently found P63/mmc-
+CeH9 [21] and ݉UH9 [22]. We predict TC = 144-166 K (150 GPa, Table S4) for hexagonal 
+
+=== PDF PAGE 22 ===
+S11 
+ 
+modification with dTC/dP = +0.46 K/GPa. Obtained value is higher than that for CeH9 [21,23]. For 
+cubic LaH9 TC is higher: up to 199 K at 150 GPa (Table S4).  
+Metastable P4/nmm-LaH11 at 150-180 GPa shows relatively low TC = 111-133 K (due to low 
+density of states at Fermi level). 
+  
+
+=== PDF PAGE 23 ===
+S12 
+ 
+Electronic and phonon properties of La-H phases  
+ 
+Fig. S5. Phonon density of states (DOS) of P6/mmm-LaH16 phase at 150, 170 and 200 GPa. 
+ 
+Fig. S6. Phonon density of states (smoothed) of ݉LaH10 at 150 GPa. 
+
+
+=== PDF PAGE 24 ===
+S13 
+ 
+ 
+Fig. S7. Phonon density of states (smoothed) of ݉LaH10 at 100, 150 and 200 GPa. 
+ 
+
+
+=== PDF PAGE 25 ===
+S14 
+ 
+ 
+Fig. S8. Electronic density of states of ݉LaH10 at 200 GPa. 
+ 
+Fig. S9. Electronic density of states of ݉LaH10 at 165 GPa.  
+
+
+=== PDF PAGE 26 ===
+S15 
+ 
+ 
+Fig. S10. Electronic density of states around the Fermi level in ݉LaH10 and P6/mmm-LaH16 
+at 200 GPa. 
+ 
+Fig. S11. Electronic density of states of ݉ܿ݉ܥLaH3 at 150 GPa. 
+ 
+
+
+=== PDF PAGE 27 ===
+S16 
+ 
+ 
+Fig. S12. Electronic density of states of ݉݉݉ܥLa3H10 at 150 GPa. 
+ 
+Fig. S13. Electronic density of states of ݉݉݉LaH4 and 1ത-LaH5 at 150 GPa. 
+  
+
+
+=== PDF PAGE 28 ===
+S17 
+ 
+Eliashberg spectral functions 
+ 
+Fig. S14. Eliashberg function α2F(ω) (black), ωlog (red), EPC coefficient λ (blue), critical transition 
+temperature TC (green) of P6/mmm-LaH16 at 250 GPa.  
+ 
+Fig. S15. Eliashberg function α2F(ω) (black), ωlog (red), EPC coefficient λ (blue), critical transition 
+temperature TC (green) of P6/mmm-LaH16 at 300 GPa. 
+ 
+Fig. S16. Eliashberg function α2F(ω) (black), ωlog (red), EPC coefficient λ (blue), critical transition 
+temperature TC (green) of ݉LaH10 at 150 GPa. 
+
+
+=== PDF PAGE 29 ===
+S18 
+ 
+ 
+Fig. S17. Eliashberg α2F(ω) function (black curve), and cumulative ω log (red), EPC coefficient λ 
+(blue), critical transition temperature TC (green) of ݉LaH10 at 200 GPa. 
+ 
+Fig. S18. Eliashberg functions α2F(ω) of ݉LaH10 at 150 GPa (blue) and ݉LaH10 at 
+200 GPa (yellow). 
+ 
+
+
+=== PDF PAGE 30 ===
+S19 
+ 
+ 
+Fig. S19. Dependence of EPC coefficient and ωlog on pressure for LaH16. 
+  
+
+
+=== PDF PAGE 31 ===
+S20 
+ 
+Stability of LaH10 polymorphs 
+ 
+Fig. S20. Enthalpy difference between ݉LaH10 and ݉LaH10. Undoubtedly, the transition 
+݉plays an important role in the measured record superconductivi ty of LaH10. Such 
+structural transitions accompany superconductivity in H 3S (݉[24], in 
+Nb3Al, V3Ga [25] and in other well-known superconductors.  
+ 
+   
+
+
+=== PDF PAGE 32 ===
+S21 
+ 
+References 
+[1] M. Lüders, M. A. L. Marques, N . N. Lathiotakis, A. Floris, G. Profeta, L. Fast, A. 
+Continenza, S. Massidda, and E. K. U. Gross, Phys. Rev. B 72, 024545 (2005). 
+[2] M. A. L. Marques, M. Lüders, N . N. Lathiotakis, G. Profeta, A. Floris, L. Fast, A. 
+Continenza, E. K. U. Gross, and S. Massidda, Phys. Rev. B 72, 024546 (2005). 
+[3] R. Akashi and R. Arita, Phys. Rev. B 88, 014514 (2013). 
+[4] R. Akashi, M. Kawamura, S . Tsuneyuki, Y. Nomura, and R. Arita, Phys. Rev. B 91, 224513 
+(2015). 
+[5] D. Pines, Elementary Excitations in Solids : Lectures on Phonons, Electrons, and Plasmons 
+(Perseus, Reading, Mass, 1999). 
+[6] J. Rath and A. J. Freeman, Phys. Rev. B 11, 2109 (1975). 
+[7] P. E. Blöchl, Phys. Rev. B 50, 17953 (1994). 
+[8] G. M. Eliashberg, JETP 11, 696 (1959). 
+[9] G. Bergmann and D. Rainer, Z. Für Phys. 263, 59 (1973). 
+[10] P. B. Allen and R. C. Dynes, Tech. Rep. 7 TCM41974 (1974).  
+[11] R. Szczęśniak, Acta Phys. Pol. A 109, 179 (2006). 
+[12] R. Szczȩśniak, Solid State Commun. 138, 347 (2006). 
+[13] A. P. Durajski, D. Szczȩśn iak, and R. Szczȩśniak, Solid State Commun. 200, 17 (2014). 
+[14] K. S. D. Beach, R. J. Goodi ng, and F. Marsiglio, Phys. Rev. B 61, 5147 (2000). 
+[15] J. Bardeen, L. N. Cooper, a nd J. R. Schrieffer, Phys. Rev. 108, 1175 (1957). 
+[16] J. P. Carbotte, Rev. Mod. Phys. 62, 1027 (1990). 
+[17] A. P. Drozdov, M. I. Ereme ts, I. A. Troyan, V. Ksenofontov, and S. I. Shylin, Nature 525, 
+73 (2015). 
+[18] A. P. Drozdov, P. P. Kong, V. S. Minkov, S. P. Besedin, M.  A. Kuzovnikov, S. Mozaffari, 
+L. Balicas, F. Balakirev, D. Graf, V. B. Prakapenka, E. Greenberg, D. A. Knyazev, M. 
+Tkacz, and M. I. Eremets, ArXiv181201561 Cond-Mat (2018). 
+[19] P. B. Allen and R. C. Dynes, Phys. Rev. B 12, 905 (1975). 
+[20] H. Liu, I. I. Naumov, R. Ho ffmann, N. W. Ashcroft, and R. J. Hemley, Proc. Natl. Acad. 
+Sci. 114, 6990 (2017). 
+[21] N. P. Salke, M. M. D. Esfahani, Y. Zhang, I. A. Kruglov, J . Zhou, Y. Wang, E. Greenberg, 
+V. B. Prakapenka, A. R. Oganov, and J.-F. Lin, ArXiv:1805.02060 
+https://arxiv.org/ftp/arxiv/papers/1805/1805.02060.pdf (2018). 
+[22] I. A. Kruglov, A. G. Kvas hnin, A. F. Goncharov, A. R. Oganov, S. S. Lobanov, N. 
+Holtgrewe, Sh. Jiang, V. B. Prakapenka, E. Greenberg, and A. V. Yanilkin, Sci Adv 4, 
+eaat9776 (2018). 
+[23] D. V. Semenok, I. A. Krugl ov, A. G. Kvashnin, and A. R. Oganov, ArXiv180600865 Cond-
+Mat (2018). 
+[24] I. Kruglov, R. Akashi, S . Yoshikawa, A. R. Oganov, and M. M. D. Esfahani, Phys. Rev. B 
+96, 220101 (2017). 
+[25] R. Viswanathan, Mater. Res. Bull. 9, 277 (1974). 
+ 

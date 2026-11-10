@@ -1,0 +1,5 @@
+# Preserve generated SVG path data and binary source evidence verbatim.
+isotope-pressure-evidence.svg whitespace=-trailing-space
+sources/*.pdf binary
+sources/*.txt whitespace=-trailing-space
+sources/*.csv whitespace=-trailing-space

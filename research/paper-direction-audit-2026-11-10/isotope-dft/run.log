@@ -27,3 +27,47 @@ JARVIS：1000+/150+ 是既有零压数据，over 900、0–500 GPa、122 个候�
 退出码：1
 关键输出：setUpClass ERROR；FileNotFoundError: isotope-dft/review.json；Ran 0 tests；FAILED (errors=1)。
 判定：符合预期 RED，唯一证据对象尚未生成；零测试发现保护生效。
+
+[source-test-fixture-red-and-correction]
+首次 verify_primary_sources.py：退出码 1；7 项中 5 项通过。
+夹具问题 1：arXiv PDF 不含正式文章号 024508，改由 APS Scholar CSV URL 核对。
+夹具问题 2：150 GPa 在 PDF 提取文本中被换行拆开，改用未断行摘要“measured at around 150 GPa”。
+未改变证据对象或科学结论。修正后来源复核：退出码 0；Ran 7 tests；OK。
+
+[evidence-build-and-contract-status]
+build_review.py：退出码 0；sources=6；directions=4；corrections=8。
+numeric_checks.py：退出码 0；α=0.5145731728297583、0.4681488357384058、0.3892115119109382；斜率=0.4、-2.2、-0.075。
+主合同：退出码 1；Ran 8 tests；7 项通过，仅 REVIEW.docx 缺失。
+初版图中 α 标签位于柱内、对比度不足；仅将标签移到柱顶上方并重绘，数值未改。最终 PNG 已读取检查，标签与方法分轨清晰。
+
+[native-word-build]
+check-docx：退出码 0；Materializing vendored docx 9.7.1；FOUND docx。
+docx.py build：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+主合同：退出码 0；Ran 8 tests；OK。
+来源复核：退出码 0；Ran 7 tests；OK。
+
+[visual-qa-initial-and-layout-correction]
+初次 doc-k render：退出码 0；5 pages，5 rendered；near-blank pages: none。
+第 5 页只有开放边界表后三行和两段说明，不记为理想分页。
+调整：表格字号 17→16、行距 220→210、上下边距 60→40；缓存目录同步改为 2、2、3、3、4、4；未删减内容。
+
+[visual-qa-final]
+最终 doc-k render：退出码 0；4 pages，4 rendered；near-blank pages: none。
+contact-sheet.png 已先读，page-01.png 至 page-04.png 已全部逐页读取。
+第 1 页：六条目录与实际分页一致。
+第 2 页：六来源、四方向、原生分式、三组 α 长小数和脚注 1–2 完整。
+第 3 页：压力表→图 1→结果解释顺序正确；方法分轨清晰；DFT 表和脚注 3–4 完整。
+第 4 页：DFT 表末行、八项勘误、六项开放边界、范围说明和脚注 5–6 完整。
+renderer clipped=false（4/4）；w:lvlOverride×1 未被本文编号使用，未观察到对应内容丢失。
+结论限于 doc-k 最终视图，不声称与 Microsoft Word 像素一致。
+
+[final-validation-and-fresh-regression]
+docx.py validate REVIEW.docx：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+最终 DOCX SHA-256：0e8e78af189ff69c0dc647d09a8df3195d1239088ad710f3bfb824e67f79820c。
+主合同：退出码 0；Ran 8 tests；OK。
+来源复核：退出码 0；Ran 7 tests；OK。
+JSON 解析与哈希：退出码 0；JSON OK: 4 directions, 4 reviewed pages。
+git diff --check：退出码 0；仅 LF/CRLF 提示，无空白错误。
+
+[scope-guard]
+两份原文未修改；未重跑 DFT/DFPT/SCDFT/ALIGNN，未新做实验；全库审计继续。

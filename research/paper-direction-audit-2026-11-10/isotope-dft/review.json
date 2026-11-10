@@ -1,0 +1,301 @@
+{
+  "schema": "isotope-dft-audit-v1",
+  "date": "2026-11-10",
+  "scope": "同位素压力与多层 DFT 两份资料文档；只审计，不重跑计算或实验。",
+  "sources": [
+    {
+      "id": "isotope_pressure",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/17-资料收集-同位素效应与压力导数.md",
+      "sha256": "6199a3f71c53ffe6dfe9505f942d713cdb8b8c8da87d35913898163c04366c07",
+      "read_only": true
+    },
+    {
+      "id": "multilayer_dft",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/19-资料收集-多层结构DFT参数.md",
+      "sha256": "ef31a1048fe415dfff433effc7fd7caefc4b124b320b104eb5e595e6d0752c5c",
+      "read_only": true
+    },
+    {
+      "id": "kruglov_pdf",
+      "path": "sources/kruglov-1810.01113.pdf",
+      "sha256": "25632b30de626a14d2607f9c4ae1c0c57e78b4af2e0723985a6558e00c1555a4",
+      "read_only": true
+    },
+    {
+      "id": "isotope_pdf",
+      "path": "sources/isotope-1912.09663.pdf",
+      "sha256": "b5c69550005f7b4e926b12a60078a649d9939cbf6af51e07f42eec4063cfb6a6",
+      "read_only": true
+    },
+    {
+      "id": "jarvis_pdf",
+      "path": "sources/jarvis-2312.12694.pdf",
+      "sha256": "de1d282d5924f1a695e47a52f4e6bb8d696aea3e423ae894ca165452b47a03ab",
+      "read_only": true
+    },
+    {
+      "id": "nickelate_search",
+      "path": "sources/nickelate-dome-scholar.csv",
+      "sha256": "c82c8d735270ac6a154682dfcac6507e3d59224520fd15c5478be93b9e371fa4",
+      "read_only": true
+    }
+  ],
+  "source_lineage": {
+    "research_program_count": 1,
+    "decision": "两份文档属于同一研究纲领的实验参数与计算方法资料层，不是两个独立新理论。"
+  },
+  "directions": [
+    {
+      "id": "isotope_lineage",
+      "role": "同位素公式、温度对、压力、样品与来源的一一绑定",
+      "closed": "标准分式和三组表内复算已完成，LaH10 的温度对错配已定位。",
+      "unfinished": "不同样品、非谐修正、结构相和原始测量点仍需统一血缘。",
+      "next": "每个 α 绑定同压力 H/D 温度、结构、样品和原始图号，禁止跨来源拼接。"
+    },
+    {
+      "id": "method_aware_pressure",
+      "role": "Eliashberg、SCDFT 与实验曲线分轨",
+      "closed": "三段斜率算术正确，前两段跨方法及整组非纯实验角色已分清。",
+      "unfinished": "同一方法的完整压力曲线、实验点、相边界和不确定度未闭合。",
+      "next": "分别输出 Eliashberg、SCDFT 和实验 Tc(P)，仅在方法一致时求导。"
+    },
+    {
+      "id": "reproducible_dft",
+      "role": "以倒空间间距、赝势和收敛日志为核心的多层计算输入契约",
+      "closed": "大超胞 k 点规则和通用参数保证的边界已定位。",
+      "unfinished": "六层结构、化学式、界面、赝势、k/q、截断能、声子和收敛日志均缺失。",
+      "next": "先定义最小结构并做收敛切片，再讨论多层材料预测。"
+    },
+    {
+      "id": "ml_benchmark_governance",
+      "role": "既有／新增数据集、训练／推理成本、误差和外部测试的基准治理",
+      "closed": "JARVIS 两类数据角色已确认，1000 倍加速缺乏同口径基准。",
+      "unfinished": "推理成本、硬件、任务定义、误差分布、外部压力和材料测试未建立。",
+      "next": "发布固定划分和端到端成本表，比较 DFT、训练、推理与失败案例。"
+    }
+  ],
+  "evidence": {
+    "isotope": {
+      "printed_lah10": {
+        "tc_h": 240,
+        "tc_d": 168,
+        "pressure_gpa": 170,
+        "alpha": 0.5145731728297583,
+        "claimed_alpha": 0.46
+      },
+      "durajski_lah10": {
+        "tc_h": 249,
+        "tc_d": 180,
+        "pressure_gpa": 150,
+        "alpha": 0.4681488357384058,
+        "reported_alpha": 0.46
+      },
+      "h3s": {
+        "tc_h": 203,
+        "tc_d": 155,
+        "pressure_gpa": 155,
+        "alpha": 0.3892115119109382,
+        "claimed_range": [
+          0.3,
+          0.6
+        ]
+      },
+      "mechanism_uniquely_proven": false,
+      "formula": "α = -(ln(TcD)-ln(TcH))/(ln(MD)-ln(MH))"
+    },
+    "pressure": {
+      "rows": [
+        {
+          "pressure_interval_gpa": [
+            170,
+            200
+          ],
+          "tc_interval_k": [
+            259,
+            271
+          ],
+          "methods": [
+            "Eliashberg",
+            "SCDFT"
+          ],
+          "slope": 0.4,
+          "arithmetic_matches": true,
+          "crosses_method_boundary": true
+        },
+        {
+          "pressure_interval_gpa": [
+            200,
+            210
+          ],
+          "tc_interval_k": [
+            271,
+            249
+          ],
+          "methods": [
+            "SCDFT",
+            "Eliashberg"
+          ],
+          "slope": -2.2,
+          "arithmetic_matches": true,
+          "crosses_method_boundary": true
+        },
+        {
+          "pressure_interval_gpa": [
+            210,
+            250
+          ],
+          "tc_interval_k": [
+            249,
+            246
+          ],
+          "methods": [
+            "Eliashberg",
+            "Eliashberg"
+          ],
+          "slope": -0.075,
+          "arithmetic_matches": true,
+          "crosses_method_boundary": false
+        }
+      ],
+      "mixed_method_curve": true,
+      "experimental_curve_established": false,
+      "source": "Kruglov Table 1; 271 K starred as SCDFT, other tabulated points Eliashberg"
+    },
+    "bibliography": {
+      "kruglov_article": "024508",
+      "printed_article": "224508",
+      "doi": "10.1103/PhysRevB.101.024508",
+      "url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.101.024508"
+    },
+    "jarvis": {
+      "arxiv": "2312.12694",
+      "url": "https://arxiv.org/abs/2312.12694",
+      "previous_zero_pressure_bulk": 1000,
+      "previous_zero_pressure_2d": 150,
+      "new_hydride_count_label": "over 900",
+      "new_pressure_range_gpa": [
+        0,
+        500
+      ],
+      "stable_candidates": 122,
+      "dft_core_hours": 11500,
+      "training_gpu_hours": [
+        4,
+        7
+      ],
+      "previous_datasets_confirmed": true,
+      "speedup_1000_directly_supported": false,
+      "prediction_examples": {
+        "H3S_tc_k_at_200_gpa": 154,
+        "LaH10_range_k": [
+          160,
+          187
+        ],
+        "LaH10_pressure_range_gpa": [
+          200,
+          250
+        ]
+      }
+    },
+    "dft": {
+      "large_supercell_always_requires_denser_k": false,
+      "r2scan_error_universal": false,
+      "six_layer_ring_ready_for_input": false,
+      "required_convergence_dimensions": [
+        "reciprocal_space_spacing",
+        "pseudopotential",
+        "cutoff",
+        "k_grid",
+        "q_grid",
+        "phonon",
+        "interface"
+      ]
+    },
+    "nickelate": {
+      "query": "NdNiO2 KTaO3 dome shaped",
+      "search_result_count": 10,
+      "exact_dome_source_found": false,
+      "negative_result_scope_limited": true
+    }
+  },
+  "corrections": [
+    {
+      "id": "isotope_formula_pair",
+      "severity": "P0",
+      "finding": "同位素公式缺少比值，240/168 K 与 α=0.46 不相容。",
+      "action": "使用标准分式；原文表内复算约 0.514573，249/180 K 来源对约 0.468149，禁止跨来源拼接。"
+    },
+    {
+      "id": "pressure_method_mix",
+      "severity": "P0",
+      "finding": "压力斜率跨 Eliashberg 与 SCDFT，且被叙述为实验 dome。",
+      "action": "保留斜率算术，按方法分轨重画曲线并附实验点和不确定度。"
+    },
+    {
+      "id": "kruglov_article",
+      "severity": "P0",
+      "finding": "Kruglov 文章号写成 224508。",
+      "action": "更正为 Phys. Rev. B 101, 024508，DOI 10.1103/PhysRevB.101.024508。"
+    },
+    {
+      "id": "supercell_k_rule",
+      "severity": "P1",
+      "finding": "大超胞被一概写成需要更密集 k 点。",
+      "action": "改为固定倒空间间距与收敛规则；大超胞通常减少相应方向 k 点数量。"
+    },
+    {
+      "id": "ml_speedup",
+      "severity": "P1",
+      "finding": "1000 倍加速没有同口径端到端基准。",
+      "action": "分开 11500 core hours DFT、4/7 GPU hours 训练与推理成本，禁止自行换算加速比。"
+    },
+    {
+      "id": "nickelate_source",
+      "severity": "P1",
+      "finding": "NdNiO₂/KTaO₃ 4–8 层超导穹顶缺精确出处。",
+      "action": "本次 10 条检索未闭合来源；标未解析并补 DOI／原始图号，不判其为假。"
+    },
+    {
+      "id": "mechanism_exclusive",
+      "severity": "P1",
+      "finding": "α≈0.5 被写成电子-声子机制的排他性最强证明。",
+      "action": "改为支持性证据，联合同位素、谱函数、结构和替代机制对照。"
+    },
+    {
+      "id": "universal_parameters",
+      "severity": "P2",
+      "finding": "截断能、r2SCAN<1% 和收敛阈值被通用化。",
+      "action": "降为初始设置，逐材料提供赝势、k/q、能量、力和声子收敛证据。"
+    }
+  ],
+  "open_boundaries": {
+    "dft_rerun": false,
+    "phonon_convergence": false,
+    "ml_speed_benchmark": false,
+    "nickelate_dome_verified": false,
+    "six_layer_ring_defined": false,
+    "full_repository_audit": false
+  },
+  "figure": {
+    "svg": "isotope-pressure-evidence.svg",
+    "png": "isotope-pressure-evidence.png",
+    "labels": [
+      "Eliashberg",
+      "SCDFT",
+      "0.514573",
+      "0.468149",
+      "跨方法"
+    ],
+    "caption": "图 1　同位素与压力斜率：算术正确不等于证据同轨",
+    "insert_after": "压力斜率表",
+    "insert_before": "结果解释",
+    "experimental_percentage_plotted": false
+  },
+  "verification_scope": {
+    "source_documents_modified": false,
+    "dft_dfpt_scdft_rerun": false,
+    "alignn_training_or_inference_rerun": false,
+    "new_experiment_or_independent_replication": false,
+    "full_repository_audit": false
+  }
+}

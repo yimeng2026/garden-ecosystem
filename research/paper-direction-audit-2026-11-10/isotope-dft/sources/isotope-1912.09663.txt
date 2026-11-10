@@ -1,0 +1,605 @@
+=== PDF PAGE 1 ===
+Isotope eﬀect in superconducting lanthanum hydride under high compression
+Artur P. Durajski, 1,∗ Rados law Szcz¸ e´ sniak,1 Yinwei Li,2 Chongze Wang,3 and Jun-Hyung Cho 3,†
+1Institute of Physics, Cz¸ estochowa University of Technology,
+Ave. Armii Krajowej 19, 42-200 Cz¸ estochowa, Poland
+2Laboratory of Quantum Materials Design and Application,
+School of Physics and Electronic Engineering, Jiangsu Normal University, Xuzhou 221116, China
+3Department of Physics, Research Institute for Natural Science,
+and HYU-HPSTAR-CIS High Pressure Research Center, Hanyang University,
+222 Wangsimni-ro, Seongdong-Ku, Seoul 04763, Republic of Korea
+(Dated: May 18, 2020)
+Recently, the discovery of room-temperature superconductivity (SC) was experimentally realized
+in the fcc phase of LaH10 under megabar pressure. Speciﬁcally, the isotope eﬀect of Tc was measured
+by the replacement of hydrogen (H) with deuterium (D), demonstrating a driving role of phonons
+in the observed room-temperature SC. Herein, based on the ﬁrst-principles calculations within the
+harmonic approximation, we reveal that (i) the identical electron-phonon coupling constants of fcc
+LaH10 and LaD 10 decrease monotonously with increasing pressure and (ii) the isotope eﬀect of
+Tc is nearly proportional to M−α (M: ionic mass) with α ≈ 0.465, irrespective of pressure. The
+predicted value ofα agrees well with the experimental one (α = 0.46) measured at around 150 GPa.
+Thus, our ﬁndings provide a theoretical conﬁrmation of the conventional electron-phonon coupling
+mechanism in a newly discovered room-temperature superconductor of compressed LaH 10.
+Keywords: Superconductivity, lanthanum hydride, isotope eﬀect, ﬁrst-principles calculations
+PACS numbers: 74.20.Fg, 74.25.Bt, 74.62.Fj
+I. Introduction
+Ever since the ﬁrst discovery of superconductivity (SC)
+in 1911 [1], the realization of room-temperature SC has
+been the holy grail of physics. Based on the Bardeen-
+Cooper-Schrieﬀer (BCS) theory [2], Neil Ashcroft [3] pro-
+posed that the metallic hydrogen formed under high pres-
+sures over∼400 GPa [4, 5] would be an ideal candidate
+for room-temperature SC. In order to achieve the met-
+allization of hydrogen lattices at relatively lower pres-
+sures attainable in the diamond anvil cells [6, 7], many
+binary hydrides have been theoretically searched [8–18].
+Due to the chemical pre-compression, such hydrides can
+have high superconducting transition temperatures Tc
+at relatively lower pressures. For instance, theoretically
+predicted [9, 19] and then experimentally realized cubic
+structure of hydrogen sulﬁde H3S with a crystalline sym-
+metry of the space group Im 3m exhibits SC with a Tc
+of∼203 K at a pressure of 155 GPa [20, 21]. Further-
+more, the pairing mechanism of SC in H 3S is associ-
+ated with conventional electron-phonon interaction be-
+cause the measurements of Tc for H3S and its deuterium
+counterpart D 3S showed a strong isotope eﬀect: i.e., Tc
+of D3S shifts towards a lower temperature [20].
+Recently, two experimental groups synthesized a lan-
+thanum hydride LaH 10 with a clathratelike structure at
+∗Electronic address: adurajski@wip.pcz.pl
+†Electronic address: chojh@hanyang.ac.kr
+megabar pressures and measured a Tc between 250 and
+260 K at a pressure of∼170 GPa [22, 23]. This record of
+Tc is the highest among so far experimentally available
+superconducting materials [20, 24–26], which will bring a
+new era of high-Tc SC. The x-ray diﬀraction and optical
+studies of lanthanum hydrides showed the existence of
+fcc lattice at ∼170 GPa upon heating to ∼1000 K [27],
+consistent with the earlier predicted metallic fcc phase
+of LaH 10 having cages of 32 H atoms surrounding a La
+atom [11, 12, 28, 29]. To reveal the underlying mecha-
+nism of the observed room-temperature SC in fcc LaH 10,
+a pronounced isotope shift was measured by the sub-
+stitution of deuterium for hydrogen, thereby providing
+a direct evidence of the conventional phonon-mediated
+pairing mechanism [23]. Based on the relation of Tc∝
+M−α [30], where M is ionic mass, the isotope coeﬃcient
+α can be estimated. According to the experimental data
+of Tc = 249 (180) K for fcc LaH 10 (fcc LaD10) at a pres-
+sure of∼150 GPa [23], the estimated value of α amounts
+to 0.46, close to that ( α≈ 0.5) obtained from the BCS
+theory [2].
+In this paper, using ﬁrst-principles density-functional
+theory (DFT) calculations within the harmonic approx-
+imation, we investigate the isotope eﬀect of fcc LaH 10
+and fcc LaD 10 as a function of pressure. We ﬁnd that
+the electron-phonon coupling (EPC) constant λ, which
+is invariant with respect to the H isotope substitution,
+decreases with increasing pressure as 2.38, 1.82, and 1.54
+at 250, 300, and 350 GPa, respectively. By solving the
+Eliashberg equations, Tc of LaH 10 (LaD10) decreases al-
+most linearly as 234 (169), 214 (155), 195 (142) K at
+arXiv:1912.09663v2  [cond-mat.supr-con]  15 May 2020
+
+=== PDF PAGE 2 ===
+2
+250, 300, and 350 GPa, respectively. As a result, the
+isotope coeﬃcient is estimated to be∼0.465, irrespective
+of pressure. This estimated value is in good agreement
+with the experimental measurement [23] of α = 0.46 at
+around 150 GPa. Therefore, our ﬁrst-principles calcu-
+lations strongly support a conventional electron-phonon
+coupling mechanism in the observed room-temperature
+SC of fcc LaH 10.
+II. Theoretical model and computational methods
+All the numerical calculations were performed using
+the DFT as implemented in the Quantum Espresso soft-
+ware package [31, 32]. The ultrasoft pseudopotentials
+were used for all atoms and the exchange-correlation en-
+ergy was described by the Perde-Burke-Ernzerhof (PBE)
+functional based on the generalized gradient approxima-
+tion (GGA). To obtain the optimized geometry of lan-
+thanum hydride systems at high pressure, the atomic
+positions and cell vectors were fully relaxed by using
+the Broyden-Fletcher-Goldfarb-Shanno (BFGS) quasi-
+Newton algorithm [33] up to the convergence criteria
+of less than 10 −10 Ry and 10 −8 kbar for total energy
+and pressure, respectively. On the basis of convergence
+tests, the kinetic energy cutoﬀ for the wave functions and
+charge density were taken as 80 Ry and 1000 Ry, respec-
+tively. For self-consistent calculations, the 24 × 24× 24
+k-points meshes were used. Phonon spectra and electron-
+phonon interactions were calculated using the density
+functional perturbation theory [34]. Here, the ﬁrst Bril-
+louin zone was sampled using the 6×6×6 q-point meshes
+and the denser 36× 36× 36 k-point meshes, respectively.
+The thermodynamic properties of superconducting
+states in compressed LaH 10 and LaD 10 are obtained by
+solving the isotropic Eliashberg equations with the super-
+conducting order parameter function ϕn = ϕ (iωn) and
+the electron mass renormalization functionZn =Z (iωn).
+The set of isotropic Eliashberg equations deﬁned on
+the imaginary-frequency axis gives the following forms
+[35, 36]:
+ϕn = π
+β
+Mf∑
+m=−Mf
+λn,m−µ⋆θ (ωc−|ωm|)√
+ω2mZ 2m +ϕ2m
+ϕm, (1)
+Zn = 1 + 1
+ωn
+π
+β
+Mf∑
+m=−Mf
+λn,m√
+ω2mZ 2m +ϕ2m
+ωmZm, (2)
+where the electron-phonon interaction pairing kernel is
+given by:
+λn,m = 2
+∫ ∞
+0
+dω ω
+(ωn−ωm)2 +ω2α2F (ω). (3)
+Hence, the superconducting order parameter is deﬁned
+by the ratio ∆ n = ϕn/Zn. The eﬀective screened
+Coulomb repulsion constant µ⋆ was chosen in the range
+of 0.1− 0.2, which can be adjusted with the comparison
+of the measured Tc [37, 38]. The Heaviside step function
+θ is determined by a frequency cutoﬀ ωc = 3 eV , which
+is typically ten times larger than the maximum phonon
+frequency. The value of β is given by β = 1/kBT , where
+kB is the Boltzmann constant. The Eliashberg spectral
+functionα2F (ω), which is the main input element to the
+Eliashberg equations, is deﬁned as:
+α2F (ω) = 1
+2πN (εF )
+∑
+qν
+δ(ω−ωqν) γqν
+¯hωqν
+(4)
+with
+γqν = 2πωqν
+∑
+ij
+∫ d3k
+ΩBZ
+|gqν(k,i,j )|2δ(ϵq,i−ϵF )(5)
+× δ(ϵk+q,j−ϵF ),
+where N(εF ), γqν, and gqν(k,i,j ) are the density of
+states at the Fermi energyεF , the phonon linewidth, and
+the electron-phonon matrix element, respectively. The
+integrated EPC constant λ(ω) is obtained by the inte-
+gration of α2F (ω):
+λ(ω) = 2
+∫ ω
+0
+dω′α2F (ω′)/ω′, (6)
+where the total EPC constant is calculated asλ(ω→∞ ).
+The Eliashberg equations are solved iteratively in a
+self-consistent way with a maximal error of 10 −10 be-
+tween two successive iterations. The convergence and
+precision are controlled by using the suﬃciently high
+number (Mf = 1100) of Matsubara frequencies: ωn =
+(π/β) (2n− 1), where n = 0,±1,±2,..., ±Mf. For fur-
+ther details about the implementation and derivation of
+the methods adopted herein, see the references [39–42].
+III. Results and discussion
+We ﬁrst determine the geometry of Fm3m LaH10 phase
+in the pressure range of 250 − 350 GPa using the ﬁrst-
+principles DFT calculations. Here, we consider three dif-
+ferent pressures 250, 300, and 350 GPa, because the ex-
+perimentally observed fcc LaH10 phase becomes unstable
+at lower pressures below 220 GPa (see Fig. S1 in the
+Supplemental Material [43]). The calculated pressure-
+volume data show the nearly linear reduction of volume
+with a slope of dV /dp =−0.029 ˚A
+3
+/GPa, where we ob-
+tain 28.484, 26.891, and 25.564 ˚A
+3
+at 250, 300, and 350
+GPa, respectively. Figure 1(a) compares the calculated
+electronic band structures of fcc LaH 10 at 250, 300, and
+350 GPa, whereas their corresponding densities of states
+around εF are displayed in Fig. 1(b). It is seen that
+the dispersions of the bands around εF change very little
+
+=== PDF PAGE 3 ===
+3
+with respect to pressure. Consequently, the pressure de-
+pendence of the density of states (DOS) at εF is minor,
+compared to those at the energy regions away from the
+εF . The present results of electronic band structure and
+DOS with respect to pressure agree well with those ob-
+tained using the Viennaabinitio simulation package with
+the projector augmented-wave method [44]. As shown in
+Fig. 1(b), the DOS at εF reaches 0.83−0.86 states/eV in
+the range of 250− 350 GPa, which are comparable with
+that (0.63− 0.90 states/eV) of compressed H 3S having
+a Tc of∼203 K at 155 GPa [45, 46]. It is thus likely
+that both compressed LaH 10 and H 3S with high DOS
+at εF would be equally expected to have high- Tc SC, as
+observed by experiments [20–23]. We note that the elec-
+tronic band structure of fcc LaD 10 is identical to that
+of fcc LaH 10 because of the same Kohn-Sham eﬀective
+potentials in both systems.
+FIG. 1: Calculated electronic band structures of fcc LaH 10 at
+250, 300, and 350 GPa: (a) The electronic dispersion along
+the high-symmetry lines in the Brillouin zone and (b) the
+total DOS per formula unit. The Fermi level ϵF is set to
+zero. The inset of (b) shows the Brillouin zone for cubic (fcc)
+clathrate-type structure with special k-point paths.
+Figures 2(a), 2(b), and 2(c) display the calculated
+phonon dispersions of fcc LaH 10 at 250, 300, and 350
+GPa, respectively, together with the overlap of the corre-
+sponding results for fcc LaD 10. For each structure, there
+are no imaginary phonon frequencies, indicating that fcc
+LaH10 and LaD10 are dynamically stable in the pressure
+range between 250 and 350 GPa. In Fig. 2(d), we plot
+the phonon DOS projected onto La and H atoms at 250
+and 350 GPa. We ﬁnd that the acoustic phonon modes
+FIG. 2: Calculated phonon dispersions of fcc LaH 10 and fcc
+LaD10 at (a) 250 GPa, (b) 300 GPa, and (c) 350 GPa. (d)
+Projected phonon density of states (PhDOS) onto La (red-
+color region) and H/D (gray-color region) atoms at 250 and
+350 GPa.
+with lower frequencies below ∼45 meV arise from La
+atoms, which are well separated from the optical phonon
+modes of H or D atoms. It is noticeable that the D-
+derived optical phonon modes shift towards lower fre-
+quencies, relative to the corresponding H-derived modes.
+For instances, at 250, 300, and 350 GPa, the lowest op-
+tical modes at the Γ point shift from 109.44, 118.36, and
+123.12 meV in LaH 10 to 77.52, 83.44, and 86.93 meV in
+LaD10, respectively. Thus, we can say that the frequen-
+cies of the H- and D-derived optical phonon modes are
+nearly inversely proportional to the square root of ionic
+mass, as discussed below.
+Figure 3 shows the results of Eliashberg function
+α2F (ω) and integrated EPC constant λ(ω) as a func-
+tion of phonon frequency, calculated at 250, 300, and
+350 GPa. We ﬁnd that the La-derived acoustical phonon
+modes contribute to only about 11% of the total λ. This
+result indicates that H atoms play a dominant role in
+contributing to electron-phonon coupling, which in turn
+gives rise to a room-temperature SC in fcc LaH 10. The
+calculated totalλ values of LaH10 and LaD10 are equally
+as 2.38, 1.82, and 1.54 at 250, 300, and 350 GPa, re-
+spectively. Interestingly, as pressure increases, the total
+λ decreases monotonously, consistent with the decrease
+ofTc measured by a recent experiment of fcc LaH 10 [23].
+Because of such large EPC constants larger than 1, we
+adopt the Eliashberg theory to understand the proper-
+ties of superconducting state through conventional EPC
+mechanism.
+We calculate the temperature dependence of the su-
+perconducting energy gap ∆ by solving the Eliashberg
+
+=== PDF PAGE 4 ===
+4
+FIG. 3: Calculated Eliashberg spectral functions α2F (ω) of
+fcc LaH10 and LaD10 at 250, 300, and 350 GPa, together with
+the corresponding integrated EPC constant λ(ω).
+equations on the imaginary- and real-frequency axes [36].
+Figure 4 shows the calculated ∆vs temperature curves at
+250, 300, and 350 GPa, together with the real and imag-
+inary parts of ∆ ( ω,T = 0) as a function of frequency.
+Based on these data, we estimate Tc, ∆ (0), and the uni-
+versal dimensionless ratio 2∆ (0)/kBTc, all of which are
+inﬂuenced by pressure and Coulomb pseudopotential µ⋆
+[47]. The results are listed in Table I. We ﬁnd that at
+250 GPa, Tc is estimated as high as 269 and 191 K for
+LaH10 and LaD 10, respectively. Further, Tc is found to
+decrease almost linearly with increasing pressure, reach-
+ing 237 K for LaH 10 and 170 K for LaD 10 at 350 GPa.
+As shown in Table I, the larger value of λ, the higher is
+the 2∆ (0)/kBTC ratio. Moreover, 2∆ (0)/kBTC consid-
+erably exceeds the universal value of 3 .53 predicted by
+the BCS theory [2], which reﬂects the strong EPC and
+retardation eﬀects in fcc LaH 10 and LaD10.
+In Fig. 5, we compare the calculated Tc vs pressure
+results with the experimental data. In the case of LaH 10,
+the open black circles represent the experimentally ob-
+served Tc [23]. Due to the diﬃculty in the synthesis of
+fcc LaD 10, there was only one experimental data of Tc
+measured at 150 GPa (see a red open circle in Fig. 5)
+[23]. It is noteworthy that for LaH 10, the estimated Tc
+decreases almost linearly with increasing pressure, irre-
+spective of the chosenµ⋆ values of 0.1, 0.15, and 0.2. This
+linear variation ofTc with respect to pressure seems to be
+consistent with the experimental data. Interestingly, we
+emphasize that H 3S and H 3S1−xPx mixture [48, 49] also
+exhibited similar behavior of Tc decrease with increasing
+FIG. 4: Real and imaginary part of the superconducting en-
+ergy gap as a function of frequency at zero temperature and
+µ⋆ = 0.15 (left panel), and the corresponding superconduct-
+ing energy gap as a function of temperature and Coulomb
+pseudopotential (right panel) determined from the relation
+∆ (T ) = Re [∆ (ω = ∆ (T ),T )].
+FIG. 5: Estimated Tc as a function of pressure using the
+Eliashberg theory with µ⋆ = 0.1, 0.15, 0.2. The experimental
+data [23] are also given for comparison.
+pressure between 150 and 350 GPa. As shown in Fig. 5,
+the calculated Tc vs pressure relation with µ⋆ = 0.2 is in
+better agreement with the measurements (see the black
+dashed line). For LaD10, there was only one experimental
+data at 150 GPa, which can be well extrapolated by our
+results obtained usingµ⋆ = 0.2 (see the red dashed line in
+
+=== PDF PAGE 5 ===
+5
+TABLE I: Calculated EPC constant λ, Tc, ∆(0), and dimensionless ratio 2∆ (0) /kBTC of fcc LaH 10 and LaD 10 at 250, 300,
+and 350 GPa.
+p (GPa) µ⋆ λ Tc (K) ∆(0) (meV) 2∆ (0)/kBTC
+LaH10 LaD10 LaH10 LaD10 LaH10 LaD10
+0.10 269 191 59.74 42.80 5.15 5.20
+250 0.15 2.38 249 179 54.71 39.44 5.10 5.11
+0.20 234 169 50.79 36.85 5.04 5.06
+0.10 252 180 51.42 36.94 4.74 4.76
+300 0.15 1.82 231 166 46.30 33.52 4.65 4.69
+0.20 214 155 42.33 30.90 4.59 4.63
+0.10 237 170 45.71 32.95 4.48 4.50
+350 0.15 1.54 214 154 40.55 29.49 4.40 4.44
+0.20 195 142 36.56 26.85 4.35 4.39
+Fig. 5). It is noted that the experimental values of Tc are
+well reproduced by the present harmonic approximation
+with µ⋆ = 0.2, larger than that ( µ⋆ = 0.1) of a recent
+anharmonic calculation [50]. It is thus likely that the
+proper µ⋆ value for LaH 10 would change with including
+anharmonic phonons. The present theory and previous
+experimental data showing that Tc varies with the iso-
+topic mass provide a strong evidence for the interaction
+between the electrons and lattice vibrations [51–53]. In-
+deed, this conventional electron-phonon coupling mecha-
+nism contrasts with the recent proposal that LaH 10 is an
+unconventional superconductor [54]. We further analyze
+the isotope eﬀect of Tc in terms of the isotope coeﬃcient
+(α), which is given by the following relation:
+α =−ln[TC]LaD10− ln[TC]LaH10
+ln[M]D− ln[M]H
+. (7)
+Here [M]H and [M]D are the atomic mass of hydrogen
+and deuterium, respectively. It is noteworthy that the
+BCS theory for weak-coupling superconductors gives a α
+value of 0.5, while the McMillan-Allen-Dynes or Migdal-
+Eliashberg equations with harmonic phonons have pre-
+dictedα values lower than 0.5 for strong-coupling super-
+conductors: e.g., 0.23− 0.31 (0.38− 0.42) for H 2S (H3S)
+from McMillan-Allen-Dyne formula [51] and 0.31 for H3S
+from Migdal-Eliashberg equations [55].
+As shown in Table II, theα value ranges between 0.458
+and 0.470, which are smaller than the BCS value which
+indicate the correction due to the strong coupling and
+retardation eﬀects. Moreover, on the basis of only one
+available experimental data of Tc for LaH10 (249 K) and
+LaD10 (180 K) at a pressure of ∼150 GPa, the α value
+can be estimated as 0 .46, in good agreement with our
+estimated average isotope eﬀect coeﬃcient α = 0.465.
+We note that the present value of α estimated at higher
+pressures between 250 and 350 GPa agrees well with the
+previous theoretical value (0.43 at∼160 GPa) obtained
+using anharmonic phonons [50]. It is thus likely that
+LaH10 exhibits insigniﬁcant anharmonic eﬀects for α.
+It is noteworthy that a recent anisotropic Migdal-
+Eliashberg theory with including anharmonic eﬀect pre-
+dicted Tc at pressures lower than 260 GPa in the Fm 3m
+structure [50]. As shown in Fig. S2(a) of the Supple-
+mental Material [43], the predicted Tc vs pressure results
+[50] agree well with the experimental data [23] measured
+between 150 and 210 GPa. Here, the theoretical values of
+Tc decrease by∼21 K between 214 and 264 GPa, close to
+a slope of ∼15 K per 50 GPa between 250 and 350 GPa
+(see Fig. 5 or Fig. S2(b) in the Supplemental Material
+[43]) which is obtained using isotropic Migdal-Eliashberg
+equations with µ⋆ = 0.2 and harmonic phonons. It is
+thus likely that the pressure dependence of Tc at high
+pressures above 220 GPa shows good agreement between
+the previous anharmonic [50] and the present harmonic
+calculations. We note that the present isotope coeﬃcient
+of 0.465 estimated at higher pressures between 250 and
+350 GPa agree well with the previous theoretical value
+(0.43 at∼160 GPa) obtained using anharmonic phonons
+[50] as well as the existing experimental data ( α = 0.46)
+measured only at a pressure of ∼150 GPa [23]. This
+agreement ofα between the previous anharmonic [50] and
+the present harmonic calculations is due to the fact that
+the two calculations predict similarTcvs pressure results
+for LaH10 and LaD10, as shown in Fig. S2(a) and S2(b)
+of the Supplemental Material [43]. Our ﬁndings not only
+support a conventional electron-phonon coupling mech-
+anism in the superconductivity of fcc LaH 10, but also
+will stimulate further experiments to explore the isotope
+eﬀect of Tc at higher pressures.
+IV. Conclusions
+We have performed the comprehensive ﬁrst-principles
+DFT calculations of the electronic and phonon proper-
+ties of lanthanum hydride and deuteride at high pres-
+sures. We found that fcc LaH 10 and LaD 10 phases not
+
+=== PDF PAGE 6 ===
+6
+TABLE II: Estimated Tc with µ⋆ = 0.2, the isotope eﬀect
+coeﬃcient α, and the average isotope eﬀect coeﬃcient α of
+fcc LaH10 and LaD10 at 250, 300, and 350 GPa.
+pressure (GPa) Tc (K) α α
+LaH10 LaD10
+250 234 169 0.470
+300 214 155 0.466 0.465
+350 195 142 0.458
+only dynamically stabilize in the range of 250−350 GPa,
+but also have the strong EPC and the high DOS at the
+Fermi level which are favorable for high-Tc SC. By solving
+the Eliashberg equations, Tc of LaH10 (LaD10) decreases
+almost linearly as 234 (169), 214 (155), 195 (142) K at
+250, 300, and 350 GPa, respectively. As a result, the
+isotope coeﬃcient is estimated to be ∼0.465, irrespec-
+tive of pressure. Therefore, our ﬁndings strongly support
+a conventional electron-phonon coupling mechanism in
+the observed room-temperature superconductivity of fcc
+LaH10. We believe that these results are of importance
+for understanding the phenomenon of superconducting
+state in fcc LaH 10, which will be useful for future more
+experimental measurements of isotope eﬀect.
+Acknowledgements
+Artur P. Durajski acknowledges the ﬁnancial sup-
+port from the Polish National Science Centre (NCN)
+under grant No. 2016/23/D/ST3/02109 and from the
+Polish Ministry of Science and Higher Education un-
+der the scholarship for young outstanding scientists
+No. 406/STYP/13/2018. Jun-Hyung Cho acknowl-
+edges the National Research Foundation of Korea (NRF)
+grant funded by the Korean Government (Grants No.
+2019R1A2C1002975, No. 2016K1A4A3914691, and No.
+2015M3D1A1070609). Yinwei Li acknowledges funding
+from the National Natural Science Foundation of China
+under Grant No. 11722433, the Six Talent Peaks Project
+of Jiangsu Province.
+[1] H. K. Onnes, Comm. Phys. Lab. Univ. Leiden 122, 124
+(1911).
+[2] J. Bardeen, L. N. Cooper, and J. R. Schrieﬀer, Phys.
+Rev. 106, 162 (1957).
+[3] N. W. Ashcroft, Phys. Rev. Lett. 21, 1748 (1968).
+[4] J. McMinis, R. C. Clay, D. Lee, and M. A. Morales,
+Phys. Rev. Lett. 114, 105305 (2015).
+[5] J. M. McMahon, M. A. Morales, C. Pierleoni, and D. M.
+Ceperley, Rev. Mod. Phys. 84, 1607 (2012).
+[6] W. A. Bassett, High Press. Res. 29, 163 (2009).
+[7] H.-K. Mao, X.-J. Chen, Y. Ding, B. Li, and L. Wang,
+Rev. Mod. Phys. 90, 015007 (2018).
+[8] H. Wang, J. S. Tse, K. Tanaka, T. Iitaka, and Y. Ma,
+Proc. Natl. Acad. Sci. USA 109, 6463 (2012).
+[9] D. Duan, Y. Liu, F. Tian, D. Li, X. Huang, Z. Zhao,
+H. Yu, B. Liu, W. Tian, and T. Cui, Sci. Rep. 4, 6968
+(2014).
+[10] X. Feng, J. Zhang, G. Gao, H. Liu, and H. Wang, RSC
+Adv. 5, 59292 (2015).
+[11] F. Peng, Y. Sun, C. J. Pickard, R. J. Needs, Q. Wu, and
+Y. Ma, Phys. Rev. Lett. 119, 107001 (2017).
+[12] H. Liu, I. I. Naumov, R. Hoﬀmann, N. W. Ashcroft,
+and R. J. Hemley, Proc. Natl. Acad. Sci. USA 114, 6990
+(2017).
+[13] E. Zurek and T. Bi, J. Chem. Phys. 150, 050901 (2019).
+[14] J. A. Flores-Livas, L. Boeri, A. Sanna, G. Profeta,
+R. Arita, and M. Eremets, Phys. Rep. 856, 1 (2020).
+[15] Y. Li, J. Hao, H. Liu, J. S. Tse, Y. Wang, and Y. Ma,
+Sci. Rep. 5, 9948 (2015).
+[16] Y. Li, L. Wang, H. Liu, Y. Zhang, J. Hao, C. J. Pickard,
+J. R. Nelson, R. J. Needs, W. Li, Y. Huang, I. Errea,
+M. Calandra, F. Mauri, and Y. Ma, Phys. Rev. B 93,
+020103(R) (2016).
+[17] Y. Quan, S. S. Ghosh, and W. E. Pickett, Phys. Rev. B
+100, 184505 (2019).
+[18] H. Liu, I. I. Naumov, Z. M. Geballe, M. Somayazulu,
+J. S. Tse, and R. J. Hemley, Phys. Rev. B 98, 100102(R)
+(2018).
+[19] Y. Li, J. Hao, H. Liu, Y. Li, and Y. Ma, J. Chem. Phys.
+140, 174712 (2014).
+[20] A. P. Drozdov, M. I. Eremets, I. A. Troyan, V. Kseno-
+fontov, and S. I. Shylin, Nature 525, 73 (2015).
+[21] M. Einaga, M. Sakata, T. Ishikawa, K. Shimizu, M. I.
+Eremets, A. P. Drozdov, I. A. Troyan, N. Hirao, and
+Y. Ohishi, Nat. Phys. 12, 835 (2016).
+[22] M. Somayazulu, M. Ahart, A. K. Mishra, Z. M. Geballe,
+M. Baldini, Y. Meng, V. V. Struzhkin, and R. J. Hemley,
+Phys. Rev. Lett. 122, 027001 (2019).
+[23] A. P. Drozdov, P. P. Kong, V. S. Minkov, S. P. Besedin,
+M. A. Kuzovnikov, S. Mozaﬀari, L. Balicas, F. F. Bal-
+akirev, D. E. Graf, V. B. Prakapenka, E. Greenberg,
+D. A. Knyazev, M. Tkacz, and M. I. Eremets, Nature
+569, 528 (2019).
+[24] C. M. Pepin, G. Geneste, A. Dewaele, M. Mezouar, and
+P. Loubeyre, Science 357, 382 (2017).
+[25] X. Li, X. Huang, D. Duan, C. J. Pickard, D. Zhou, H. Xie,
+Q. Zhuang, Y. Huang, Q. Zhou, B. Liu, and T. Cui, Nat.
+Commun. 10, 3461 (2019).
+[26] I. Troyan, D. Semenok, A. Kvashnin, A. Ivanova,
+V. Prakapenka, E. Greenberg, A. Gavriliuk,
+I. Lyubutin, V. Struzhkin, and A. Oganov, (2019),
+arxiv.org/abs/1908.01534.
+[27] Z. M. Geballe, H. Liu, A. K. Mishra, M. Ahart, M. So-
+mayazulu, Y. Meng, M. Baldini, and R. J. Hemley,
+Angew. Chem. Int. Ed. 57, 688 (2018).
+[28] I. A. Kruglov, D. V. Semenok, H. Song, R. Szczesniak,
+I. A. Wrona, R. Akashi, M. M. Davari Esfahani, D. Duan,
+T. Cui, A. G. Kvashnin, and A. R. Oganov, Phys. Rev.
+B 101, 024508 (2020).
+[29] L. Liu, C. Wang, S. Yi, K. W. Kim, J. Kim, and J.-H.
+Cho, Phys. Rev. B 99, 140501(R) (2019).
+[30] B. Serin, C. A. Reynolds, and L. B. Nesbitt, Phys. Rev.
+78, 813 (1950).
+[31] P. Giannozzi, S. Baroni, N. Bonini, M. Calandra, R. Car,
+C. Cavazzoni, D. Ceresoli, G. L. Chiarotti, M. Cococ-
+
+=== PDF PAGE 7 ===
+7
+cioni, I. Dabo, A. D. Corso, S. de Gironcoli, S. Fabris,
+G. Fratesi, R. Gebauer, U. Gerstmann, C. Gougoussis,
+A. Kokalj, M. Lazzeri, L. Martin-Samos, N. Marzari,
+F. Mauri, R. Mazzarello, S. Paolini, A. Pasquarello,
+L. Paulatto, C. Sbraccia, S. Scandolo, G. Sclauzero, A. P.
+Seitsonen, A. Smogunov, P. Umari, and R. M. Wentz-
+covitch, J. Phys. Condens. Matter 21, 395502 (2009).
+[32] P. Giannozzi, O. Andreussi, T. Brumme, O. Bunau,
+M. B. Nardelli, M. Calandra, R. Car, C. Cavazzoni,
+D. Ceresoli, M. Cococcioni, N. Colonna, I. Carnimeo,
+A. D. Corso, S. de Gironcoli, P. Delugas, R. A. D. Jr,
+A. Ferretti, A. Floris, G. Fratesi, G. Fugallo, R. Gebauer,
+U. Gerstmann, F. Giustino, T. Gorni, J. Jia, M. Kawa-
+mura, H.-Y. Ko, A. Kokalj, E. Kkbenli, M. Lazzeri,
+M. Marsili, N. Marzari, F. Mauri, N. L. Nguyen, H.-
+V. Nguyen, A. O. de-la Roza, L. Paulatto, S. Ponc,
+D. Rocca, R. Sabatini, B. Santra, M. Schlipf, A. P. Seitso-
+nen, A. Smogunov, I. Timrov, T. Thonhauser, P. Umari,
+N. Vast, X. Wu, and S. Baroni, J. Phys. Condens. Matter
+29, 465901 (2017).
+[33] S. R. Billeter, A. Curioni, and W. Andreoni, Comput.
+Mater. Sci. 27, 437 (2003).
+[34] S. Baroni, S. de Gironcoli, A. Dal Corso, and P. Gian-
+nozzi, Rev. Mod. Phys. 73, 515 (2001).
+[35] G. M. Eliashberg, J. Exp. Theor. Phys. 11, 696 (1960).
+[36] F. Marsiglio, M. Schossmann, and J. P. Carbotte, Phys.
+Rev. B 37, 4965 (1988).
+[37] A. P. Durajski, Sci. Rep. 6, 38570 (2016).
+[38] D. Szczesniak and T. P. Zemla, Supercond. Sci. Technol.
+28, 085018 (2015).
+[39] R. Szczesniak, Acta Phys. Pol. A 109, 179 (2006).
+[40] A. P. Durajski and R. Szczesniak, J. Chem. Phys. 149,
+074101 (2018).
+[41] B. Wiendlocha, R. Szczesniak, A. P. Durajski, and
+M. Muras, Phys. Rev. B 94, 134517 (2016).
+[42] J. P. Carbotte, E. J. Nicol, and T. Timusk, Phys. Rev.
+B 100, 094505 (2019).
+[43] See Supplemental Material at http://link.aps.org/
+supplemental/XXXXXXXX for further plots of calculated
+phonon spectrum of the fcc LaH 10 phase at 210 GPa and
+superconducting critical temperatures calculated using
+Migdal-Eliashberg equations with anharmonic phonons.
+[44] C. Wang, S. Yi, and J.-H. Cho, Phys. Rev. B 100,
+060502(R) (2019).
+[45] T. Jarlborg and A. Bianconi, Sci. Rep. 6, 24816 (2016).
+[46] Y. Quan and W. E. Pickett, Phys. Rev. B 93, 104526
+(2016).
+[47] M. Krzyzosiak, R. Gonczarek, A. Gonczarek, and J. L.,
+Sci. Rep. 9, 2181 (2019).
+[48] A. P. Durajski and R. Szczesniak, Sci. Rep. 7, 4473
+(2017).
+[49] A. P. Durajski and R. Szczesniak, Physica C 554, 38
+(2018).
+[50] I. Errea, F. Belli, L. Monacelli, A. Sanna, T. Koretsune,
+T. Tadano, R. Bianco, M. Calandra, R. Arita, F. Mauri,
+and J. A. Flores-Livas, Nature 578, 66 (2020).
+[51] R. Akashi, M. Kawamura, S. Tsuneyuki, Y. Nomura, and
+R. Arita, Phys. Rev. B 91, 224513 (2015).
+[52] I. Errea, M. Calandra, C. J. Pickard, J. Nelson, R. J.
+Needs, Y. Li, H. Liu, Y. Zhang, Y. Ma, and F. Mauri,
+Phys. Rev. Lett. 114, 157004 (2015).
+[53] R. M. Mendez-Moreno, Adv. Cond. Matter Phys. 2019,
+6795250 (2019).
+[54] E. F. Talantsev, Mater. Res. Express 6, 106002 (2019).
+[55] R. Szczesniak and A. Durajski, Solid State Commun.
+249, 30 (2017).
