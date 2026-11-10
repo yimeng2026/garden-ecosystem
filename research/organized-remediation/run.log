@@ -60,3 +60,9 @@ git diff --check：退出码 0；只有 LF/CRLF 提示，无空白错误。
 首次 git diff --cached --check：退出码 2；references_repaired.bib 第 295 行有旧条目行尾空格，文件末尾有新增空行。
 处理：删除拼接时额外添加的末尾空行；旧 24 条前缀不做清洗，按 references_repaired.bib whitespace=-trailing-space 保留证据原样。
 重建后两套测试均退出 0；再次 git diff --cached --check 退出 0，18 个暂存文件范围正确。
+
+[named-branch-delivery]
+修复提交：af5a9cf19189670f5127a680b189984561b4dee7。
+git push -u origin fix/organized-navigation-references：退出码 0，新远端分支已建立并设置跟踪。
+git rev-parse HEAD 与 git ls-remote origin refs/heads/fix/organized-navigation-references：退出码 0；本地与远端均为 af5a9cf19189670f5127a680b189984561b4dee7。
+未合并主分支。导航与引用局部整改已交付；全库目标保持 active，继续推进 Lean 与实验复现未竟工作。

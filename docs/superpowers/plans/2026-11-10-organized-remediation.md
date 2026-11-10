@@ -36,6 +36,6 @@
 ### Task 4：fresh 回归与交付
 
 - [x] 两套测试、JSON／CSV／BibTeX 解析、原输入哈希、DOCX 哈希、`docx.py validate` 和 `git diff --check` 全部退出 0。
-- [ ] 仅暂存修复包与计划，提交 `feat: add organized navigation and reference remediation`。
-- [ ] 推送 `fix/organized-navigation-references`，核对远端哈希，不合并主分支。
-- [ ] 以 `docs: record organized remediation delivery` 记录交付；随后推进 Lean 与实验复现未竟工作，保持全库目标 active。
+- [x] 仅暂存修复包与计划，提交 `feat: add organized navigation and reference remediation`。
+- [x] 推送 `fix/organized-navigation-references`，核对远端哈希，不合并主分支。
+- [x] 以 `docs: record organized remediation delivery` 记录交付；随后推进 Lean 与实验复现未竟工作，保持全库目标 active。
