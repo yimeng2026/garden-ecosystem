@@ -54,9 +54,9 @@
 
 - [x] 重跑两个测试套件、JSON 解析、DOCX 哈希、`docx.py validate` 和 `git diff --check`，全部退出 0。
 - [x] SVG 原始行尾空格仅用 `.gitattributes` 豁免，不改写证据。
-- [ ] 仅暂存本批文件与计划，提交 `docs: audit isotope pressure and multilayer DFT evidence`。
-- [ ] 推送 `audit/room-temp-isotope-dft`，核对本地和远端哈希，不合并主分支。
-- [ ] 记录最终交付；继续其余 room_temp_sc 文档，保持全库目标 active。
+- [x] 仅暂存本批文件与计划，提交 `docs: audit isotope pressure and multilayer DFT evidence`。
+- [x] 推送 `audit/room-temp-isotope-dft`，核对本地和远端哈希，不合并主分支。
+- [x] 记录最终交付；继续其余 room_temp_sc 文档，保持全库目标 active。
 
 ## 计划自审
 
