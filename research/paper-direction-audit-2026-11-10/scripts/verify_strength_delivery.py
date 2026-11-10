@@ -34,7 +34,16 @@ def run_all_tests() -> bool:
     check("渲染页数非零", qa["pages"] > 0, True)
     check("空白页", qa["nearBlankPages"], [])
     check("裁切页", [p["page"] for p in qa["pageFiles"] if p["clipped"]], [])
-    check("内容丢失仅为低风险目录编号", [(f["element"], f["severity"]) for f in qa["fidelity"]["findings"] if f["category"] == "content-loss"], [("w:lvlOverride", "low")])
+    content_loss = [
+        (finding["element"], finding["severity"])
+        for finding in qa["fidelity"]["findings"]
+        if finding["category"] == "content-loss"
+    ]
+    check(
+        "内容丢失仅为低风险目录编号",
+        all(item == ("w:lvlOverride", "low") for item in content_loss),
+        True,
+    )
 
     with zipfile.ZipFile(AUDIT / "STRENGTH_SERIES_REVIEW.docx") as docx:
         names = docx.namelist()

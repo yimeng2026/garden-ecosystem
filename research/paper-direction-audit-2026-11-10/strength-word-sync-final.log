@@ -1,0 +1,55 @@
+
+$ python test_strength_word_content.py -v
+test_docx_contains_every_supplement_in_order_without_duplicates (__main__.WordContentTests.test_docx_contains_every_supplement_in_order_without_duplicates) ... ok
+test_final_range_class_and_60_regression_are_present (__main__.WordContentTests.test_final_range_class_and_60_regression_are_present) ... ok
+test_markdown_has_exactly_17_supplements (__main__.WordContentTests.test_markdown_has_exactly_17_supplements) ... ok
+test_native_ooxml_structure (__main__.WordContentTests.test_native_ooxml_structure) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.019s
+
+OK
+EXIT=0
+
+$ python test_strength_regeneration_preserves.py -v
+test_resolution_fields_preserved_by_id (__main__.RegenerationTests.test_resolution_fields_preserved_by_id) ... ok
+test_summary_resolution_fields_preserved (__main__.RegenerationTests.test_summary_resolution_fields_preserved) ... ok
+test_supplements_preserved_in_order_without_duplicates (__main__.RegenerationTests.test_supplements_preserved_in_order_without_duplicates) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.385s
+
+OK
+EXIT=0
+
+$ python scripts/verify_strength_delivery.py
+{"status": "pass", "passed": 21, "total": 21}
+EXIT=0
+
+$ python -c import json; qa=json.load(open('strength-word-sync-qa/report.json',encoding='utf-8')); assert qa['pages']==qa['rendered']==11; assert qa['manualReview']['reviewedPages']==list(range(1,12)); print('qa_json_valid=11_pages_manual_review_complete')
+qa_json_valid=11_pages_manual_review_complete
+EXIT=0
+
+$ python C:/Users/一梦/AppData/Roaming/kimi-desktop/daimon-share/daimon/runtime/kimi-code/home/plugins/managed/kimi-word/skills/kimi-word/scripts/docx.py validate C:/Users/一梦/Documents/kimi/workspace/.worktrees/strength-word-sync/research/paper-direction-audit-2026-11-10/STRENGTH_SERIES_REVIEW.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+EXIT=0
+
+$ sha256sum STRENGTH_SERIES_REVIEW.docx
+e57d57bc1f56d4b668648e3dd8df56f14181c785d3d811798c936bba5918e49a *STRENGTH_SERIES_REVIEW.docx
+EXIT=0
+
+$ git diff --check
+warning: in the working copy of 'docs/superpowers/plans/2026-11-10-strength-review-word-sync.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'research/paper-direction-audit-2026-11-10/strength-delivery-validation.json', LF will be replaced by CRLF the next time Git touches it
+EXIT=0
+
+$ git status --short --branch
+## fix/strength-word-sync
+ M ../../docs/superpowers/plans/2026-11-10-strength-review-word-sync.md
+ M scripts/verify_strength_delivery.py
+ M strength-delivery-validation.json
+?? strength-word-sync-final.log
+?? strength-word-sync-qa/
+EXIT=0

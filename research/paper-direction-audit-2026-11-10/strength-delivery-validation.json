@@ -29,8 +29,8 @@
     {
       "label": "渲染页数等于总页数",
       "pass": true,
-      "expected": 16,
-      "actual": 16
+      "expected": 11,
+      "actual": 11
     },
     {
       "label": "渲染页数非零",
@@ -53,18 +53,8 @@
     {
       "label": "内容丢失仅为低风险目录编号",
       "pass": true,
-      "expected": [
-        [
-          "w:lvlOverride",
-          "low"
-        ]
-      ],
-      "actual": [
-        [
-          "w:lvlOverride",
-          "low"
-        ]
-      ]
+      "expected": true,
+      "actual": true
     },
     {
       "label": "DOCX内嵌PNG数",
@@ -107,10 +97,64 @@
       "pass": true,
       "expected": true,
       "actual": true
+    },
+    {
+      "label": "Markdown补记数",
+      "pass": true,
+      "expected": 17,
+      "actual": 17
+    },
+    {
+      "label": "DOCX缺失补记",
+      "pass": true,
+      "expected": [],
+      "actual": []
+    },
+    {
+      "label": "补记重复项",
+      "pass": true,
+      "expected": [],
+      "actual": []
+    },
+    {
+      "label": "商层与60项回归",
+      "pass": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "label": "逐页人工复核记录",
+      "pass": true,
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "actual": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
     }
   ],
-  "passed": 16,
-  "total": 16,
-  "manual_visual_review": "contact-sheet全部16页已查看，并抽查重点图表页；无空白页、裁切或逐字竖排。",
-  "ooxml_gate_observed": "docx.py validate：PASSED（17 parts XSD + semantic checks; gen: 6 checks clean）"
+  "passed": 21,
+  "total": 21,
+  "manual_visual_review": "contact-sheet全部11页已逐页查看；无未解释空白页、裁切或逐字竖排。",
+  "ooxml_gate_observed": "docx.py validate：PASSED（21 parts XSD + semantic checks; gen: 6 checks clean）"
 }

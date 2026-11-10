@@ -448,3 +448,13 @@ Confirm `git rev-parse HEAD` and `git ls-remote origin refs/heads/fix/strength-w
 - Supplement suffix preservation is exact and duplicate-rejecting, with no scientific rewriting.
 - The old validator cannot report success without all 17 headings and current manual QA.
 - Final Word validation and visual review apply to the rebuilt file, not the historical 16-page artifact.
+
+## Execution Record — 2026-11-10
+
+- Plan committed in `7e55630`. Two independent RED suites and their logs were committed in `e961676`: all 17 headings were absent from the old DOCX, and isolated regeneration removed one record resolution, 17 summary extension fields, and all supplements.
+- Regeneration preservation completed in `bb70b13`: baseline fields refresh by paper ID, all extra record/summary fields survive, and the exact supplement suffix is preserved. Three regeneration tests pass with explicit UTF-8 subprocess decoding.
+- Word synchronization completed in `10900fc` using the offline docx-js Math API because Pandoc was unavailable. The candidate passed 21-part OOXML validation before replacing the old file. All 17 headings now occur once in body order, with the final range-class title and `60/60` present.
+- Visible TOC entries repeat headings only for navigation. `docx_text()` removes top-level TOC content controls before counting body duplicates; native TOC checks still inspect the original XML, so this is not a relaxation of the content contract.
+- Final doc-k render contains 11 pages. Every page was inspected, including both 55-row tables, the native formula, and all supplements. No near-blank or clipped pages occurred. Three `content-loss` findings are all low-risk `w:lvlOverride` entries marked behavior-neutral by the renderer.
+- The delivery validator was upgraded to 21 checks and returned `21/21 pass`. Its content-loss rule now accepts only low-risk `w:lvlOverride`, independent of count, rather than hardcoding one occurrence.
+- Final evidence includes `strength-word-sync-qa/report.json`, `strength-delivery-validation.json`, and `strength-word-sync-final.log`. This closes only Word synchronization and regeneration preservation; whole-repository review and K0(R) remain open.
