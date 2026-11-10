@@ -1,0 +1,42 @@
+目录、项目介绍与 44 份覆盖图审计验证记录
+日期：2026-11-10
+分支：audit/room-temp-project-intro
+基线：cd14ead1754eb82a9a92408e2e8d5b12722046a8
+工作树：复用 room-temp-isotope-dft-audit，未嵌套创建，未使用子代理。
+
+[source-freeze]
+directory_index=633844466f9c1fad0929a5250380a7e0467b7a458c24dc9006d820071dcad317
+project_intro=ddab8da04e8373fccedacc4634dfee09c7fc4be8eee5064e050f162f6bee4164
+handbook_intro=dd6721843deed0ad442b5ec3fc53303d4c895b6638d5d3dd5eb8b207b166161a
+magazine_plan=7f691b8f56f4d7ff04d4a3b3090cc4b48974fd7da89922ddeb8597bd046c34aa
+base_bib=ca014a4bae5023081149a1c4d051917e7f0540df18241400992c2b2276d43698
+enhanced_bib=d4a7d80243bc2fec0b05af4b0c9519d1be86edd0a62cd0d3d82b94a912ab870f
+original_readme=8eca2b541eb2412517af4ed28feafb301a29caeac960b6dede08be3717e1b9ff
+handbook_task=e520e11faa500339ceac76c324bddbcae9c6de16908d299fa832cfd7f85edec7
+handbook_docx=c2b77fa2b705b634a19f9959015acc990f663ba41d0b116bc6b48a37aa451b50
+main_claims_review=e9ac6ff0bc88f11b1c2c91ae61ce398a05fc077815803f48669b46536d6f2f45
+theory_review=e6acb59a95f4dc159db2692e5db0a6ae40d640f8a8aef04ca1b69da80e3ed8c8
+validation_review=17eaa27d30df6849f752e3712d563ebe492ae394ea9c74b1b072ac0755acb491
+isotope_review=e04428ca5980171619ca97bd2cc450fa772074cd9edd73f980905a72b1c2d4b4
+dmrg_review=367fada5ec9f68011ea50bb437922d140aa7fcb77bbab7517d8548196332a68d
+data_review=e09aeb77dd254d061d980c306e6762c1ef21ad8a5e826be6a08226d581680aa8
+handbook_review=0394b996c271a6ca24b4692d7bd078b4c0fa8925eefde6df0347a478f298ac48
+methods_review=f30d15d8665644d11957166efaea95d59f7a742037dc697b737704cd15dc9e21
+technical_review=d27fca5597387c24e9d0038e971055566522441a1f1f1dd8a0dd7dfe662e305f
+magazine_review=f025cef1935a604b67fe1c0504d6cdfc377ab2c69db450d3fd2da6034364b3bb
+
+[read-through-and-initial-assets]
+00-目录索引与 01-封面与介绍下 3 份文档已完整读取；前十批来源路径覆盖 40 份，本批 4 份，合计 44 份。
+目录遗漏 12–21，写入不存在的 PRL 版本。
+01-参考文献.bib：24 条 BibTeX、5 处 TO_BE_COMPLETED；未找到 2510.01273、2605.29985、2401840121。
+02-增强参考文献.bib：存在但 22 字节，仅 : true # [source skip]，0 条 BibTeX，不可作为增强库使用。
+项目说明含 admit/sorry，M1–M5 待实现且写“不会报错”；理论文档与所称 Lean 精确路径未找到。
+原 README 为 v7.33，组织后项目说明为 0.1-alpha；LF 归一化后仍不同，不能混作同一版本。
+手册说明写 2025年4月更新，却含 2025年10月突破；只标版本时间矛盾，不判造假。
+handbook/room_temp_sc_handbook.docx 存在，44510 字节；app 元数据 Pages=1、Words=0，media=0，OMML=false，约 50 页未据此验证。
+
+[RED: missing review.json]
+命令：python research/paper-direction-audit-2026-11-10/project-intro/test_project_intro_audit.py -v
+退出码：1
+关键输出：setUpClass ERROR；FileNotFoundError: project-intro/review.json；Ran 0 tests；FAILED (errors=1)。
+判定：符合预期 RED，唯一证据对象尚未生成；零测试发现保护生效。
