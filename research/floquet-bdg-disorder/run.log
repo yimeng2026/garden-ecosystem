@@ -1,0 +1,669 @@
+$ python research/floquet-bdg-disorder/run_disorder.py
+N=80 seed=0 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=0 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=0 r=0.2: zero_pass=False, pi_pass=False
+N=80 seed=1 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=1 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=1 r=0.2: zero_pass=False, pi_pass=False
+N=80 seed=2 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=2 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=2 r=0.2: zero_pass=False, pi_pass=True
+N=80 seed=3 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=3 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=3 r=0.2: zero_pass=False, pi_pass=True
+N=80 seed=4 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=4 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=4 r=0.2: zero_pass=False, pi_pass=False
+N=80 seed=5 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=5 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=5 r=0.2: zero_pass=False, pi_pass=False
+N=80 seed=6 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=6 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=6 r=0.2: zero_pass=False, pi_pass=False
+N=80 seed=7 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=7 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=7 r=0.2: zero_pass=False, pi_pass=False
+N=80 seed=8 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=8 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=8 r=0.2: zero_pass=False, pi_pass=False
+N=80 seed=9 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=9 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=9 r=0.2: zero_pass=True, pi_pass=True
+N=80 seed=10 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=10 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=10 r=0.2: zero_pass=False, pi_pass=False
+N=80 seed=11 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=11 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=11 r=0.2: zero_pass=False, pi_pass=False
+N=80 seed=12 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=12 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=12 r=0.2: zero_pass=False, pi_pass=True
+N=80 seed=13 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=13 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=13 r=0.2: zero_pass=False, pi_pass=False
+N=80 seed=14 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=14 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=14 r=0.2: zero_pass=True, pi_pass=False
+N=80 seed=15 r=0.05: zero_pass=False, pi_pass=False
+N=80 seed=15 r=0.1: zero_pass=False, pi_pass=False
+N=80 seed=15 r=0.2: zero_pass=True, pi_pass=False
+N=160 seed=0 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=0 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=0 r=0.2: zero_pass=True, pi_pass=True
+N=160 seed=1 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=1 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=1 r=0.2: zero_pass=True, pi_pass=False
+N=160 seed=2 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=2 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=2 r=0.2: zero_pass=True, pi_pass=True
+N=160 seed=3 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=3 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=3 r=0.2: zero_pass=True, pi_pass=True
+N=160 seed=4 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=4 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=4 r=0.2: zero_pass=True, pi_pass=True
+N=160 seed=5 r=0.05: zero_pass=True, pi_pass=False
+N=160 seed=5 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=5 r=0.2: zero_pass=True, pi_pass=True
+N=160 seed=6 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=6 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=6 r=0.2: zero_pass=True, pi_pass=True
+N=160 seed=7 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=7 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=7 r=0.2: zero_pass=True, pi_pass=True
+N=160 seed=8 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=8 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=8 r=0.2: zero_pass=True, pi_pass=True
+N=160 seed=9 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=9 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=9 r=0.2: zero_pass=True, pi_pass=True
+N=160 seed=10 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=10 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=10 r=0.2: zero_pass=True, pi_pass=True
+N=160 seed=11 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=11 r=0.1: zero_pass=True, pi_pass=True
+N=160 seed=11 r=0.2: zero_pass=True, pi_pass=True
+N=160 seed=12 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=12 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=12 r=0.2: zero_pass=False, pi_pass=True
+N=160 seed=13 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=13 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=13 r=0.2: zero_pass=True, pi_pass=True
+N=160 seed=14 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=14 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=14 r=0.2: zero_pass=True, pi_pass=True
+N=160 seed=15 r=0.05: zero_pass=False, pi_pass=False
+N=160 seed=15 r=0.1: zero_pass=False, pi_pass=True
+N=160 seed=15 r=0.2: zero_pass=True, pi_pass=True
+N=320 seed=0 r=0.05: zero_pass=False, pi_pass=True
+N=320 seed=0 r=0.1: zero_pass=False, pi_pass=True
+N=320 seed=0 r=0.2: zero_pass=True, pi_pass=True
+N=320 seed=1 r=0.05: zero_pass=False, pi_pass=False
+N=320 seed=1 r=0.1: zero_pass=False, pi_pass=True
+N=320 seed=1 r=0.2: zero_pass=True, pi_pass=True
+N=320 seed=2 r=0.05: zero_pass=True, pi_pass=True
+N=320 seed=2 r=0.1: zero_pass=True, pi_pass=True
+N=320 seed=2 r=0.2: zero_pass=True, pi_pass=True
+N=320 seed=3 r=0.05: zero_pass=True, pi_pass=False
+N=320 seed=3 r=0.1: zero_pass=False, pi_pass=True
+N=320 seed=3 r=0.2: zero_pass=True, pi_pass=True
+{
+  "assessment": {
+    "status": "not_supported",
+    "main_strengths": [
+      0.05,
+      0.1
+    ],
+    "stress_strength": 0.2,
+    "rule": "supported: all main realizations pass; partial: at least 15/16 or 3/4 in each main combination; otherwise not_supported",
+    "full_size_rule_status": "inconclusive_preserved"
+  },
+  "summary": [
+    {
+      "n": 80,
+      "strength": 0.05,
+      "target": "zero",
+      "pass_count": 0,
+      "total": 16,
+      "status": "not_supported",
+      "median_max_distance": 0.0018582709113785058,
+      "worst_max_distance": 0.006801528712259321,
+      "median_edge_weight": 0.2770743045539998,
+      "minimum_edge_weight": 0.19252217015001102,
+      "median_subspace_ipr": 0.04985295607669448,
+      "median_second_pair_subspace_ipr": 0.048171909688459455
+    },
+    {
+      "n": 80,
+      "strength": 0.05,
+      "target": "pi",
+      "pass_count": 0,
+      "total": 16,
+      "status": "not_supported",
+      "median_max_distance": 0.005098570825319681,
+      "worst_max_distance": 0.00940883909731037,
+      "median_edge_weight": 0.2424291599401287,
+      "minimum_edge_weight": 0.21182562004746097,
+      "median_subspace_ipr": 0.04720233348377702,
+      "median_second_pair_subspace_ipr": 0.04051757640682727
+    },
+    {
+      "n": 80,
+      "strength": 0.1,
+      "target": "zero",
+      "pass_count": 0,
+      "total": 16,
+      "status": "not_supported",
+      "median_max_distance": 0.0032544835976590376,
+      "worst_max_distance": 0.008553732788814123,
+      "median_edge_weight": 0.28733838374606796,
+      "minimum_edge_weight": 0.18782714013985555,
+      "median_subspace_ipr": 0.06777200595357095,
+      "median_second_pair_subspace_ipr": 0.05999248282116162
+    },
+    {
+      "n": 80,
+      "strength": 0.1,
+      "target": "pi",
+      "pass_count": 0,
+      "total": 16,
+      "status": "not_supported",
+      "median_max_distance": 0.004314263855721272,
+      "worst_max_distance": 0.012653582449819852,
+      "median_edge_weight": 0.3182248005566565,
+      "minimum_edge_weight": 0.2619039010516086,
+      "median_subspace_ipr": 0.07458737361258114,
+      "median_second_pair_subspace_ipr": 0.047254111923027656
+    },
+    {
+      "n": 80,
+      "strength": 0.2,
+      "target": "zero",
+      "pass_count": 3,
+      "total": 16,
+      "status": "not_supported",
+      "median_max_distance": 0.0018693575210476888,
+      "worst_max_distance": 0.008573158757194865,
+      "median_edge_weight": 0.395155069505319,
+      "minimum_edge_weight": 0.2602594861338323,
+      "median_subspace_ipr": 0.09979391452960165,
+      "median_second_pair_subspace_ipr": 0.06559562215350004
+    },
+    {
+      "n": 80,
+      "strength": 0.2,
+      "target": "pi",
+      "pass_count": 4,
+      "total": 16,
+      "status": "not_supported",
+      "median_max_distance": 0.001987687516344396,
+      "worst_max_distance": 0.011153132612374446,
+      "median_edge_weight": 0.449124201503467,
+      "minimum_edge_weight": 0.30558682434990236,
+      "median_subspace_ipr": 0.11796559240840708,
+      "median_second_pair_subspace_ipr": 0.0599732820351976
+    },
+    {
+      "n": 160,
+      "strength": 0.05,
+      "target": "zero",
+      "pass_count": 1,
+      "total": 16,
+      "status": "not_supported",
+      "median_max_distance": 0.0009052205819044809,
+      "worst_max_distance": 0.0024149625633861516,
+      "median_edge_weight": 0.27891381202911286,
+      "minimum_edge_weight": 0.2172712773339338,
+      "median_subspace_ipr": 0.03618726492668861,
+      "median_second_pair_subspace_ipr": 0.02895167114827118
+    },
+    {
+      "n": 160,
+      "strength": 0.05,
+      "target": "pi",
+      "pass_count": 0,
+      "total": 16,
+      "status": "not_supported",
+      "median_max_distance": 0.0014453323977441218,
+      "worst_max_distance": 0.004074315140521156,
+      "median_edge_weight": 0.34118230495318386,
+      "minimum_edge_weight": 0.2925707656440581,
+      "median_subspace_ipr": 0.03520809331852136,
+      "median_second_pair_subspace_ipr": 0.02345805206895931
+    },
+    {
+      "n": 160,
+      "strength": 0.1,
+      "target": "zero",
+      "pass_count": 1,
+      "total": 16,
+      "status": "not_supported",
+      "median_max_distance": 0.0009261950171758484,
+      "worst_max_distance": 0.003175138487406261,
+      "median_edge_weight": 0.386176293275849,
+      "minimum_edge_weight": 0.15752380552201395,
+      "median_subspace_ipr": 0.051823626313017734,
+      "median_second_pair_subspace_ipr": 0.030964607798580436
+    },
+    {
+      "n": 160,
+      "strength": 0.1,
+      "target": "pi",
+      "pass_count": 16,
+      "total": 16,
+      "status": "full",
+      "median_max_distance": 0.0008392913404923371,
+      "worst_max_distance": 0.0019208019609181339,
+      "median_edge_weight": 0.5533978871315045,
+      "minimum_edge_weight": 0.5056830892320745,
+      "median_subspace_ipr": 0.06874429086394823,
+      "median_second_pair_subspace_ipr": 0.02664889207454959
+    },
+    {
+      "n": 160,
+      "strength": 0.2,
+      "target": "zero",
+      "pass_count": 15,
+      "total": 16,
+      "status": "majority",
+      "median_max_distance": 0.00012522407434580073,
+      "worst_max_distance": 0.0009537123054915604,
+      "median_edge_weight": 0.6221371042657392,
+      "minimum_edge_weight": 0.2901310100231411,
+      "median_subspace_ipr": 0.09964624474299306,
+      "median_second_pair_subspace_ipr": 0.044779896660418594
+    },
+    {
+      "n": 160,
+      "strength": 0.2,
+      "target": "pi",
+      "pass_count": 15,
+      "total": 16,
+      "status": "majority",
+      "median_max_distance": 8.786636064922605e-05,
+      "worst_max_distance": 0.0002749995586244324,
+      "median_edge_weight": 0.6988703877881924,
+      "minimum_edge_weight": 0.3871867853784425,
+      "median_subspace_ipr": 0.11757812991124753,
+      "median_second_pair_subspace_ipr": 0.03804226416981338
+    },
+    {
+      "n": 320,
+      "strength": 0.05,
+      "target": "zero",
+      "pass_count": 2,
+      "total": 4,
+      "status": "not_supported",
+      "median_max_distance": 6.82423925801756e-05,
+      "worst_max_distance": 7.295740804734202e-05,
+      "median_edge_weight": 0.42486715367140815,
+      "minimum_edge_weight": 0.24491672131828768,
+      "median_subspace_ipr": 0.030106588885355383,
+      "median_second_pair_subspace_ipr": 0.019683551264010418
+    },
+    {
+      "n": 320,
+      "strength": 0.05,
+      "target": "pi",
+      "pass_count": 2,
+      "total": 4,
+      "status": "not_supported",
+      "median_max_distance": 0.0007202560263629553,
+      "worst_max_distance": 0.0012445170373963062,
+      "median_edge_weight": 0.5138791933811595,
+      "minimum_edge_weight": 0.49620304873536214,
+      "median_subspace_ipr": 0.03242706127012529,
+      "median_second_pair_subspace_ipr": 0.01272103614293997
+    },
+    {
+      "n": 320,
+      "strength": 0.1,
+      "target": "zero",
+      "pass_count": 1,
+      "total": 4,
+      "status": "not_supported",
+      "median_max_distance": 0.0001294590039627397,
+      "worst_max_distance": 0.00025251935601901493,
+      "median_edge_weight": 0.47303299774951846,
+      "minimum_edge_weight": 0.4277868298981393,
+      "median_subspace_ipr": 0.03995934120127797,
+      "median_second_pair_subspace_ipr": 0.021672820183857473
+    },
+    {
+      "n": 320,
+      "strength": 0.1,
+      "target": "pi",
+      "pass_count": 4,
+      "total": 4,
+      "status": "full",
+      "median_max_distance": 2.3213605102495457e-05,
+      "worst_max_distance": 6.074640042229329e-05,
+      "median_edge_weight": 0.6936878209316467,
+      "minimum_edge_weight": 0.6121561536563117,
+      "median_subspace_ipr": 0.056735228023884296,
+      "median_second_pair_subspace_ipr": 0.017530992731891584
+    },
+    {
+      "n": 320,
+      "strength": 0.2,
+      "target": "zero",
+      "pass_count": 4,
+      "total": 4,
+      "status": "full",
+      "median_max_distance": 8.541597229101109e-07,
+      "worst_max_distance": 1.403238402570958e-05,
+      "median_edge_weight": 0.8572879734936169,
+      "minimum_edge_weight": 0.6130028949131492,
+      "median_subspace_ipr": 0.09862926479392137,
+      "median_second_pair_subspace_ipr": 0.0494191354735487
+    },
+    {
+      "n": 320,
+      "strength": 0.2,
+      "target": "pi",
+      "pass_count": 4,
+      "total": 4,
+      "status": "full",
+      "median_max_distance": 4.2130353594694564e-08,
+      "worst_max_distance": 3.0062331260460973e-07,
+      "median_edge_weight": 0.8883094641741217,
+      "minimum_edge_weight": 0.7737541060542381,
+      "median_subspace_ipr": 0.11991705903847115,
+      "median_second_pair_subspace_ipr": 0.025874937904059463
+    }
+  ]
+}
+exit_code=0
+$ python research/floquet-bdg-disorder/run_mean_controls.py
+mean-matched controls completed: N=80
+mean-matched controls completed: N=160
+mean-matched controls completed: N=320
+{
+  "assessment": {
+    "status": "not_supported",
+    "main_strengths": [
+      0.05,
+      0.1
+    ],
+    "stress_strength": 0.2,
+    "rule": "supported: all main realizations pass; partial: at least 15/16 or 3/4 in each main combination; otherwise not_supported",
+    "full_size_rule_status": "inconclusive_preserved"
+  },
+  "comparisons": [
+    {
+      "n": 80,
+      "strength": 0.05,
+      "target": "zero",
+      "disorder_pass_count": 0,
+      "uniform_mean_pass_count": 0,
+      "outcome_agreement_count": 16,
+      "total": 16,
+      "median_disorder_edge_weight": 0.2770743045539998,
+      "median_uniform_edge_weight": 0.2956487024253296,
+      "median_disorder_subspace_ipr": 0.04985295607669448,
+      "median_uniform_subspace_ipr": 0.04759805488225436
+    },
+    {
+      "n": 80,
+      "strength": 0.05,
+      "target": "pi",
+      "disorder_pass_count": 0,
+      "uniform_mean_pass_count": 0,
+      "outcome_agreement_count": 16,
+      "total": 16,
+      "median_disorder_edge_weight": 0.2424291599401287,
+      "median_uniform_edge_weight": 0.24525565169547187,
+      "median_disorder_subspace_ipr": 0.04720233348377702,
+      "median_uniform_subspace_ipr": 0.04685729687375577
+    },
+    {
+      "n": 80,
+      "strength": 0.1,
+      "target": "zero",
+      "disorder_pass_count": 0,
+      "uniform_mean_pass_count": 0,
+      "outcome_agreement_count": 16,
+      "total": 16,
+      "median_disorder_edge_weight": 0.28733838374606796,
+      "median_uniform_edge_weight": 0.32508807027275766,
+      "median_disorder_subspace_ipr": 0.06777200595357095,
+      "median_uniform_subspace_ipr": 0.07249636717814607
+    },
+    {
+      "n": 80,
+      "strength": 0.1,
+      "target": "pi",
+      "disorder_pass_count": 0,
+      "uniform_mean_pass_count": 0,
+      "outcome_agreement_count": 16,
+      "total": 16,
+      "median_disorder_edge_weight": 0.3182248005566565,
+      "median_uniform_edge_weight": 0.3124643203123232,
+      "median_disorder_subspace_ipr": 0.07458737361258114,
+      "median_uniform_subspace_ipr": 0.07259226076450509
+    },
+    {
+      "n": 80,
+      "strength": 0.2,
+      "target": "zero",
+      "disorder_pass_count": 3,
+      "uniform_mean_pass_count": 11,
+      "outcome_agreement_count": 8,
+      "total": 16,
+      "median_disorder_edge_weight": 0.395155069505319,
+      "median_uniform_edge_weight": 0.5118065210662083,
+      "median_disorder_subspace_ipr": 0.09979391452960165,
+      "median_uniform_subspace_ipr": 0.12709049271924872
+    },
+    {
+      "n": 80,
+      "strength": 0.2,
+      "target": "pi",
+      "disorder_pass_count": 4,
+      "uniform_mean_pass_count": 7,
+      "outcome_agreement_count": 9,
+      "total": 16,
+      "median_disorder_edge_weight": 0.449124201503467,
+      "median_uniform_edge_weight": 0.48666525084183776,
+      "median_disorder_subspace_ipr": 0.11796559240840708,
+      "median_uniform_subspace_ipr": 0.12935182450814525
+    },
+    {
+      "n": 160,
+      "strength": 0.05,
+      "target": "zero",
+      "disorder_pass_count": 1,
+      "uniform_mean_pass_count": 0,
+      "outcome_agreement_count": 15,
+      "total": 16,
+      "median_disorder_edge_weight": 0.27891381202911286,
+      "median_uniform_edge_weight": 0.32351518418473646,
+      "median_disorder_subspace_ipr": 0.03618726492668861,
+      "median_uniform_subspace_ipr": 0.03678609880465238
+    },
+    {
+      "n": 160,
+      "strength": 0.05,
+      "target": "pi",
+      "disorder_pass_count": 0,
+      "uniform_mean_pass_count": 0,
+      "outcome_agreement_count": 16,
+      "total": 16,
+      "median_disorder_edge_weight": 0.34118230495318386,
+      "median_uniform_edge_weight": 0.3414556327317755,
+      "median_disorder_subspace_ipr": 0.03520809331852136,
+      "median_uniform_subspace_ipr": 0.035330154880538055
+    },
+    {
+      "n": 160,
+      "strength": 0.1,
+      "target": "zero",
+      "disorder_pass_count": 1,
+      "uniform_mean_pass_count": 16,
+      "outcome_agreement_count": 1,
+      "total": 16,
+      "median_disorder_edge_weight": 0.386176293275849,
+      "median_uniform_edge_weight": 0.5065197794796041,
+      "median_disorder_subspace_ipr": 0.051823626313017734,
+      "median_uniform_subspace_ipr": 0.06553315716089432
+    },
+    {
+      "n": 160,
+      "strength": 0.1,
+      "target": "pi",
+      "disorder_pass_count": 16,
+      "uniform_mean_pass_count": 16,
+      "outcome_agreement_count": 16,
+      "total": 16,
+      "median_disorder_edge_weight": 0.5533978871315045,
+      "median_uniform_edge_weight": 0.5400175232701359,
+      "median_disorder_subspace_ipr": 0.06874429086394823,
+      "median_uniform_subspace_ipr": 0.06674598511043459
+    },
+    {
+      "n": 160,
+      "strength": 0.2,
+      "target": "zero",
+      "disorder_pass_count": 15,
+      "uniform_mean_pass_count": 16,
+      "outcome_agreement_count": 15,
+      "total": 16,
+      "median_disorder_edge_weight": 0.6221371042657392,
+      "median_uniform_edge_weight": 0.7721200110623327,
+      "median_disorder_subspace_ipr": 0.09964624474299306,
+      "median_uniform_subspace_ipr": 0.12831642842362112
+    },
+    {
+      "n": 160,
+      "strength": 0.2,
+      "target": "pi",
+      "disorder_pass_count": 15,
+      "uniform_mean_pass_count": 16,
+      "outcome_agreement_count": 15,
+      "total": 16,
+      "median_disorder_edge_weight": 0.6988703877881924,
+      "median_uniform_edge_weight": 0.7469731633253122,
+      "median_disorder_subspace_ipr": 0.11757812991124753,
+      "median_uniform_subspace_ipr": 0.13083914290708898
+    },
+    {
+      "n": 320,
+      "strength": 0.05,
+      "target": "zero",
+      "disorder_pass_count": 2,
+      "uniform_mean_pass_count": 4,
+      "outcome_agreement_count": 2,
+      "total": 4,
+      "median_disorder_edge_weight": 0.42486715367140815,
+      "median_uniform_edge_weight": 0.5226540776130592,
+      "median_disorder_subspace_ipr": 0.030106588885355383,
+      "median_uniform_subspace_ipr": 0.03242065916593169
+    },
+    {
+      "n": 320,
+      "strength": 0.05,
+      "target": "pi",
+      "disorder_pass_count": 2,
+      "uniform_mean_pass_count": 4,
+      "outcome_agreement_count": 2,
+      "total": 4,
+      "median_disorder_edge_weight": 0.5138791933811595,
+      "median_uniform_edge_weight": 0.5183749686982435,
+      "median_disorder_subspace_ipr": 0.03242706127012529,
+      "median_uniform_subspace_ipr": 0.0330326203333982
+    },
+    {
+      "n": 320,
+      "strength": 0.1,
+      "target": "zero",
+      "disorder_pass_count": 1,
+      "uniform_mean_pass_count": 4,
+      "outcome_agreement_count": 1,
+      "total": 4,
+      "median_disorder_edge_weight": 0.47303299774951846,
+      "median_uniform_edge_weight": 0.7514148674946329,
+      "median_disorder_subspace_ipr": 0.03995934120127797,
+      "median_uniform_subspace_ipr": 0.06406749763925543
+    },
+    {
+      "n": 320,
+      "strength": 0.1,
+      "target": "pi",
+      "disorder_pass_count": 4,
+      "uniform_mean_pass_count": 4,
+      "outcome_agreement_count": 4,
+      "total": 4,
+      "median_disorder_edge_weight": 0.6936878209316467,
+      "median_uniform_edge_weight": 0.7475526940712006,
+      "median_disorder_subspace_ipr": 0.056735228023884296,
+      "median_uniform_subspace_ipr": 0.06529562031996988
+    },
+    {
+      "n": 320,
+      "strength": 0.2,
+      "target": "zero",
+      "disorder_pass_count": 4,
+      "uniform_mean_pass_count": 4,
+      "outcome_agreement_count": 4,
+      "total": 4,
+      "median_disorder_edge_weight": 0.8572879734936169,
+      "median_uniform_edge_weight": 0.9417344773836178,
+      "median_disorder_subspace_ipr": 0.09862926479392137,
+      "median_uniform_subspace_ipr": 0.1258481677055454
+    },
+    {
+      "n": 320,
+      "strength": 0.2,
+      "target": "pi",
+      "disorder_pass_count": 4,
+      "uniform_mean_pass_count": 4,
+      "outcome_agreement_count": 4,
+      "total": 4,
+      "median_disorder_edge_weight": 0.8883094641741217,
+      "median_uniform_edge_weight": 0.9395723864571568,
+      "median_disorder_subspace_ipr": 0.11991705903847115,
+      "median_uniform_subspace_ipr": 0.12841202424038073
+    }
+  ]
+}
+exit_code=0
+$ python research/floquet-bdg-disorder/test_disorder.py -v
+test_assessment_scope_and_preserved_boundaries (__main__.DisorderArtifactTests.test_assessment_scope_and_preserved_boundaries) ... ok
+test_full_factorial_realizations_and_raw_csv (__main__.DisorderArtifactTests.test_full_factorial_realizations_and_raw_csv) ... ok
+test_analytic_kick_matches_clean_matrix_exponential (__main__.DisorderModelTests.test_analytic_kick_matches_clean_matrix_exponential) ... ok
+test_sequences_are_reproducible_nested_and_seed_specific (__main__.DisorderModelTests.test_sequences_are_reproducible_nested_and_seed_specific) ... ok
+test_zero_and_uniform_disorder_match_correct_clean_model (__main__.DisorderModelTests.test_zero_and_uniform_disorder_match_correct_clean_model) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.005s
+
+OK
+exit_code=0
+$ python research/floquet-bdg-disorder/verify_disorder.py -v
+test_all_unitarity_profiles_and_csvs (__main__.IndependentDisorderTests.test_all_unitarity_profiles_and_csvs) ... ok
+test_mean_control_is_exactly_mean_matched_for_selected_case (__main__.IndependentDisorderTests.test_mean_control_is_exactly_mean_matched_for_selected_case) ... ok
+test_mode_and_parameter_specific_mean_comparison (__main__.IndependentDisorderTests.test_mode_and_parameter_specific_mean_comparison) ... ok
+test_no_disorder_topology_or_material_overclaim (__main__.IndependentDisorderTests.test_no_disorder_topology_or_material_overclaim) ... ok
+test_raw_pass_counts_reproduce_negative_main_verdict (__main__.IndependentDisorderTests.test_raw_pass_counts_reproduce_negative_main_verdict) ... ok
+test_selected_realization_rebuilt_independently (__main__.IndependentDisorderTests.test_selected_realization_rebuilt_independently) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.613s
+
+OK
+exit_code=0
+$ python research/floquet-bdg-disorder/build_markdown.py
+C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-disorder\README.md
+exit_code=0
+$ python research/floquet-bdg-disorder/build_figure.py
+C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-disorder\disorder.png
+exit_code=0
+$ python research/floquet-bdg-disorder/test_report.py -v
+test_markdown_and_figure_preserve_negative_and_mean_controls (__main__.DisorderReportTests.test_markdown_and_figure_preserve_negative_and_mean_controls) ... ok
+test_word_has_native_structure_current_counts_and_sources (__main__.DisorderReportTests.test_word_has_native_structure_current_counts_and_sources) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+OK
+exit_code=0

@@ -1,0 +1,79 @@
+{
+  "schema": "floquet-bdg-disorder-verification-v1",
+  "recorded_utc": "2026-11-10T20:09:28.035102+00:00",
+  "all_passed": true,
+  "results": [
+    {
+      "script": "run_disorder.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-disorder\\run_disorder.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "run_mean_controls.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-disorder\\run_mean_controls.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "test_disorder.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-disorder\\test_disorder.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "verify_disorder.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-disorder\\verify_disorder.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "build_markdown.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-disorder\\build_markdown.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "build_figure.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-disorder\\build_figure.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "test_report.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-disorder\\test_report.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "model_tests": 5,
+  "independent_tests": 6,
+  "report_tests": 2,
+  "disorder_realizations": 108,
+  "mean_matched_controls": 108,
+  "main_assessment": "not_supported",
+  "results_sha256": "4aa9016eb2864bcdb3a986d6761408ccbac3ac41d3d6425e4d20260f19e9d365",
+  "docx_sha256": "a34193e9083faedc80e20dbe4ec2aca4624fc1db95f1008c510f7b9f518236a0",
+  "disorder_winding_computed": false,
+  "thermodynamic_limit_proof": false,
+  "material_tc_prediction": false,
+  "experimental_validation": false,
+  "log": "run.log"
+}
