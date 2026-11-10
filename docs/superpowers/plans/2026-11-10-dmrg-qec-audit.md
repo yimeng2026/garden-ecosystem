@@ -54,9 +54,9 @@
 
 - [x] 两个测试套件、JSON、DOCX 哈希、`docx.py validate` 和 `git diff --check` 全部退出 0。
 - [x] SVG 与提取文本只通过 `.gitattributes` 保留原始空白，PDF 标 binary；失败或残缺的下载不得入库。
-- [ ] 仅暂存本批文件，提交 `docs: audit DMRG and quantum error correction evidence`。
-- [ ] 推送 `audit/room-temp-dmrg-qec`，核对远端哈希，不合并主分支。
-- [ ] 记录最终交付并继续其余 room_temp_sc 文档，保持全库目标 active。
+- [x] 仅暂存本批文件，提交 `docs: audit DMRG and quantum error correction evidence`。
+- [x] 推送 `audit/room-temp-dmrg-qec`，核对远端哈希，不合并主分支。
+- [x] 记录最终交付并继续其余 room_temp_sc 文档，保持全库目标 active。
 
 ## 计划自审
 
