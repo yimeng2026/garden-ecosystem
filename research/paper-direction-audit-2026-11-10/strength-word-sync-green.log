@@ -21,3 +21,25 @@ AFTER HASHES
 367a133178297b4ca1b2faf5eb488520c2408fb3c6bb86bedb8b82344d8a3e84 *strength-review.json
 bbdc865cea70a1c591ce2dff8951831c4d41d5d9f919f211461e54419dff403d *strength-review-summary.json
 dd918fd61beed11c56d83706585ef2fde413296a95087dc6f2e8102844708a4b *STRENGTH_SERIES_REVIEW.md
+
+GREEN: synchronized DOCX content
+COMMAND: python test_strength_word_content.py -v
+test_docx_contains_every_supplement_in_order_without_duplicates (__main__.WordContentTests.test_docx_contains_every_supplement_in_order_without_duplicates) ... ok
+test_final_range_class_and_60_regression_are_present (__main__.WordContentTests.test_final_range_class_and_60_regression_are_present) ... ok
+test_markdown_has_exactly_17_supplements (__main__.WordContentTests.test_markdown_has_exactly_17_supplements) ... ok
+test_native_ooxml_structure (__main__.WordContentTests.test_native_ooxml_structure) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.020s
+
+OK
+
+EXIT=0
+
+COMMAND: docx.py validate STRENGTH_SERIES_REVIEW.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+
+EXIT=0
+e57d57bc1f56d4b668648e3dd8df56f14181c785d3d811798c936bba5918e49a *STRENGTH_SERIES_REVIEW.docx

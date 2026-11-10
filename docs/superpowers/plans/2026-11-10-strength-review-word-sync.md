@@ -58,6 +58,10 @@ def supplement_headings():
 def docx_text():
     with zipfile.ZipFile(DOCX) as package:
         root = ET.fromstring(package.read("word/document.xml"))
+        body = root.find(W + "body")
+        if body is not None:
+            for content_control in list(body.findall(W + "sdt")):
+                body.remove(content_control)
         paragraphs = []
         for paragraph in root.iter(W + "p"):
             paragraphs.append("".join(node.text or "" for node in paragraph.iter(W + "t")))

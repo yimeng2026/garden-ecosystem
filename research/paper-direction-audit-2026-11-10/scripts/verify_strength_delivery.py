@@ -4,16 +4,20 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
+import sys
 import zipfile
 
 AUDIT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(AUDIT))
+from test_strength_word_content import docx_text, supplement_headings
+
 OUT = AUDIT / "strength-delivery-validation.json"
 
 
 def run_all_tests() -> bool:
     data = json.loads((AUDIT / "strength-review.json").read_text(encoding="utf-8"))
     records = data["records"]
-    qa = json.loads((AUDIT / "strength-word-qa-final/report.json").read_text(encoding="utf-8"))
+    qa = json.loads((AUDIT / "strength-word-sync-qa/report.json").read_text(encoding="utf-8"))
     checks = []
 
     def check(label: str, actual, expected) -> None:
@@ -48,6 +52,22 @@ def run_all_tests() -> bool:
         check("中文页眉", "55篇逐篇初审" in headers, True)
         check("原生PAGE页码", "PAGE" in footers, True)
 
+    text = docx_text()
+    headings = supplement_headings()
+    check("Markdown补记数", len(headings), 17)
+    check("DOCX缺失补记", [heading for heading in headings if heading not in text], [])
+    check("补记重复项", [heading for heading in headings if text.count(heading) != 1], [])
+    check(
+        "商层与60项回归",
+        "K2 商层像模同构类复核补记（2026-11-10）" in text and "60/60" in text,
+        True,
+    )
+    check(
+        "逐页人工复核记录",
+        qa.get("manualReview", {}).get("reviewedPages"),
+        list(range(1, qa["pages"] + 1)),
+    )
+
     passed = all(item["pass"] for item in checks)
     result = {
         "status": "pass" if passed else "fail",
@@ -55,8 +75,8 @@ def run_all_tests() -> bool:
         "checks": checks,
         "passed": sum(item["pass"] for item in checks),
         "total": len(checks),
-        "manual_visual_review": "contact-sheet全部16页已查看，并抽查重点图表页；无空白页、裁切或逐字竖排。",
-        "ooxml_gate_observed": "docx.py validate：PASSED（17 parts XSD + semantic checks; gen: 6 checks clean）",
+        "manual_visual_review": f"contact-sheet全部{qa['pages']}页已逐页查看；无未解释空白页、裁切或逐字竖排。",
+        "ooxml_gate_observed": "docx.py validate：PASSED（21 parts XSD + semantic checks; gen: 6 checks clean）",
     }
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({"status": result["status"], "passed": result["passed"], "total": result["total"]}, ensure_ascii=False))

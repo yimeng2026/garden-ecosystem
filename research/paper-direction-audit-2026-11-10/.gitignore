@@ -1,2 +1,6 @@
-review-packets/
-review-packets.json
+/strength-word-sync-work/
+/strength-word-sync-qa/*.png
+node_modules/
+__pycache__/
+*.pyc
+STRENGTH_SERIES_REVIEW.candidate.docx
