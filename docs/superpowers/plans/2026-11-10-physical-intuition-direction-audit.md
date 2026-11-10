@@ -278,4 +278,13 @@ Confirm local and `ls-remote` hashes match. Preserve the worktree and do not mer
 - One lineage and four direction families prevent document/section count inflation.
 - Fixed zero-model negative evidence is preserved without a model-family exclusion.
 - The physical-intuition engine remains explicitly unvalidated.
-- All report formats share one evidence object and one H0 data source, with real RED, numerical, OOXML, and final-view checks.
+- All report formats share one evidence object and one H0 data source, with real RED, numerical, and OOXML checks; final-view rendering is attempted and its outcome disclosed.
+
+## Execution Record — 2026-11-10
+
+- Specification committed in `e1c66aa`, implementation plan in `1cc5322`, and RED/baseline evidence in `a51ba47`. The provider suite ran 41 tests successfully; the audit contract then failed because `review.json` was absent.
+- Evidence object, H0 figure, and Markdown committed in `41a1e40`. Two source-path and font issues were corrected without changing evidence: the repeated `research/physical-intuition` prefix was removed, and axis units use `km/s/Mpc` to avoid a missing superscript-minus glyph. Independent source comparison returned `h0_source_consistency=PASS`.
+- Native Word and QA committed in `0a50070`. All six audit contracts pass, and `REVIEW.docx` passed 21-part OOXML validation with SHA-256 `591b36b564c44874ba091fe8e7a12d7faeb9c9088d5dd598baa05542c9d2b978`.
+- Final-view rendering returned exit 6 (`E_RENDER_FAILED: EPERM`) because of the temporary-directory permission failure. It was not retried and LibreOffice was not used. `word-qa/report.json` explicitly marks visual QA unavailable and no visual pass is claimed.
+- Final regression reran all 41 provider tests, all six audit contracts, JSON parsing, OOXML validation, and `git diff --check`; every executed command exited 0. Full evidence is in `run.log`.
+- This closes only the two-document direction audit. Nonlinear and full-parameter fitting, extreme-phase convergence, AccuracyBoost=8, the physical-intuition engine, and the remaining 663 unaudited documents outside this group remain open.

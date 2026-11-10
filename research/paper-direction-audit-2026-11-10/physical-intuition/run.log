@@ -74,3 +74,262 @@ EXIT=0
 
 VISUAL_QA_UNAVAILABLE: docx.py render EXIT=6 (EPERM temporary directory; no retry and no LibreOffice fallback)
 591b36b564c44874ba091fe8e7a12d7faeb9c9088d5dd598baa05542c9d2b978 *REVIEW.docx
+
+$ python -m unittest discover -s C:/Users/一梦/Documents/kimi/workspace/.worktrees/provider-main-integration/research/physical-intuition/zero-cdm/tests -p test*.py -v
+test_joint_helium_deuterium_chi_squared (test_bbn_likelihood.BBNLikelihoodTests.test_joint_helium_deuterium_chi_squared) ... ok
+test_rejects_nonpositive_uncertainty (test_bbn_likelihood.BBNLikelihoodTests.test_rejects_nonpositive_uncertainty) ... ok
+test_baseline_preserves_density_and_velocity_weights (test_gauge_transform.GaugeTransformTests.test_baseline_preserves_density_and_velocity_weights) ... ok
+test_rejects_nonpositive_total_matter_and_wavenumber (test_gauge_transform.GaugeTransformTests.test_rejects_nonpositive_total_matter_and_wavenumber) ... ok
+test_zero_cdm_uses_only_baryons_and_class_positive_velocity_term (test_gauge_transform.GaugeTransformTests.test_zero_cdm_uses_only_baryons_and_class_positive_velocity_term) ... ok
+test_comparison_preserves_deep_valley_outliers_and_negative_overshoot (test_interpolator_construction.InterpolatorConstructionTests.test_comparison_preserves_deep_valley_outliers_and_negative_overshoot) ... ok
+test_comparison_rejects_nonpositive_reference_and_invalid_k (test_interpolator_construction.InterpolatorConstructionTests.test_comparison_rejects_nonpositive_reference_and_invalid_k) ... ok
+test_recovers_synchronous_baryon_velocity_by_subtracting_metric_shear (test_native_gauge_velocities.NativeGaugeVelocityTests.test_recovers_synchronous_baryon_velocity_by_subtracting_metric_shear) ... ok
+test_vectorization_and_zero_metric_difference (test_native_gauge_velocities.NativeGaugeVelocityTests.test_vectorization_and_zero_metric_difference) ... ok
+test_bandpower_ratio_integrates_before_dividing (test_pk_band_statistics.PkBandStatisticsTests.test_bandpower_ratio_integrates_before_dividing) ... ok
+test_gaussian_smoothing_preserves_constant_and_linear_log_spectra (test_pk_band_statistics.PkBandStatisticsTests.test_gaussian_smoothing_preserves_constant_and_linear_log_spectra) ... ok
+test_log_bandpower_interpolates_exact_band_edges (test_pk_band_statistics.PkBandStatisticsTests.test_log_bandpower_interpolates_exact_band_edges) ... ok
+test_log_bandpower_recovers_constant_dimensionless_power (test_pk_band_statistics.PkBandStatisticsTests.test_log_bandpower_recovers_constant_dimensionless_power) ... ok
+test_resampling_rejects_extrapolation_and_nonpositive_power (test_pk_band_statistics.PkBandStatisticsTests.test_resampling_rejects_extrapolation_and_nonpositive_power) ... ok
+test_signed_log_ratio_preserves_direction (test_pk_band_statistics.PkBandStatisticsTests.test_signed_log_ratio_preserves_direction) ... ok
+test_assembles_all_six_blocks_with_the_official_calibration_convention (test_planck_cmb_likelihood.CamSpecResidualTests.test_assembles_all_six_blocks_with_the_official_calibration_convention) ... ok
+test_rejects_a_block_layout_that_does_not_cover_the_data (test_planck_cmb_likelihood.CamSpecResidualTests.test_rejects_a_block_layout_that_does_not_cover_the_data) ... ok
+test_converts_class_phi_potential_to_cobaya_deflection_convention (test_planck_cmb_likelihood.ClassLensedLoaderTests.test_converts_class_phi_potential_to_cobaya_deflection_convention) ... ok
+test_loads_dimensionless_d_ell_as_zero_based_microkelvin_squared (test_planck_cmb_likelihood.ClassLensedLoaderTests.test_loads_dimensionless_d_ell_as_zero_based_microkelvin_squared) ... ok
+test_rejects_incomplete_or_nonfinite_multipoles (test_planck_cmb_likelihood.ClassLensedLoaderTests.test_rejects_incomplete_or_nonfinite_multipoles) ... ok
+test_comparison_is_zero_minus_baseline_at_the_same_h0 (test_planck_h0_scan.H0ComparisonTests.test_comparison_is_zero_minus_baseline_at_the_same_h0) ... ok
+test_decision_rejects_missing_or_nonfinite_pairs (test_planck_h0_scan.H0ComparisonTests.test_decision_rejects_missing_or_nonfinite_pairs) ... ok
+test_decision_uses_minimum_finite_delta_without_sigma_claim (test_planck_h0_scan.H0ComparisonTests.test_decision_uses_minimum_finite_delta_without_sigma_claim) ... ok
+test_grid_rejects_duplicates_and_missing_anchor (test_planck_h0_scan.H0GridTests.test_grid_rejects_duplicates_and_missing_anchor) ... ok
+test_grid_reuses_only_the_exact_anchor (test_planck_h0_scan.H0GridTests.test_grid_reuses_only_the_exact_anchor) ... ok
+test_case_name_is_stable_and_filesystem_safe (test_planck_h0_scan.H0InputTests.test_case_name_is_stable_and_filesystem_safe) ... ok
+test_render_changes_only_h0_and_adds_one_root (test_planck_h0_scan.H0InputTests.test_render_changes_only_h0_and_adds_one_root) ... ok
+test_render_rejects_ambiguous_or_prefilled_input (test_planck_h0_scan.H0InputTests.test_render_rejects_ambiguous_or_prefilled_input) ... ok
+test_correction_and_chi_squared_follow_cosmomc_order (test_planck_likelihood.PlanckLikelihoodTests.test_correction_and_chi_squared_follow_cosmomc_order) ... ok
+test_invalid_covariance_is_rejected (test_planck_likelihood.PlanckLikelihoodTests.test_invalid_covariance_is_rejected) ... ok
+test_alignment_rejects_nonpositive_reference_and_empty_ranges (test_same_run_power.SameRunPowerTests.test_alignment_rejects_nonpositive_reference_and_empty_ranges) ... ok
+test_alignment_uses_common_range_and_preserves_direction (test_same_run_power.SameRunPowerTests.test_alignment_uses_common_range_and_preserves_direction) ... ok
+test_error_summary_reports_median_p95_and_max (test_same_run_power.SameRunPowerTests.test_error_summary_reports_median_p95_and_max) ... ok
+test_all_zero_reference_has_no_fractional_metric (test_signed_gauge_diagnostics.SignedGaugeDiagnosticsTests.test_all_zero_reference_has_no_fractional_metric) ... ok
+test_negative_reference_and_zero_reference_are_not_hidden (test_signed_gauge_diagnostics.SignedGaugeDiagnosticsTests.test_negative_reference_and_zero_reference_are_not_hidden) ... ok
+test_rejects_nonfinite_inputs (test_signed_gauge_diagnostics.SignedGaugeDiagnosticsTests.test_rejects_nonfinite_inputs) ... ok
+test_directed_nearest_log_distances_preserve_direction_and_empty_sets (test_signed_transfer_statistics.SignedTransferStatisticsTests.test_directed_nearest_log_distances_preserve_direction_and_empty_sets) ... ok
+test_exact_zero_is_counted_once (test_signed_transfer_statistics.SignedTransferStatisticsTests.test_exact_zero_is_counted_once) ... ok
+test_power_reconstruction_includes_primordial_tilt_and_h_units (test_signed_transfer_statistics.SignedTransferStatisticsTests.test_power_reconstruction_includes_primordial_tilt_and_h_units) ... ok
+test_signed_resampling_preserves_values_and_rejects_extrapolation (test_signed_transfer_statistics.SignedTransferStatisticsTests.test_signed_resampling_preserves_values_and_rejects_extrapolation) ... ok
+test_zero_crossings_are_linear_in_log_k (test_signed_transfer_statistics.SignedTransferStatisticsTests.test_zero_crossings_are_linear_in_log_k) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.225s
+
+OK
+EXIT=0
+
+$ python test_physical_intuition_audit.py -v
+test_actual_test_count_and_other_observations (__main__.PhysicalIntuitionAuditTests.test_actual_test_count_and_other_observations) ... ok
+test_frozen_source_hashes (__main__.PhysicalIntuitionAuditTests.test_frozen_source_hashes) ... ok
+test_h0_slice_is_not_global_fit_and_does_not_trigger_expansion (__main__.PhysicalIntuitionAuditTests.test_h0_slice_is_not_global_fit_and_does_not_trigger_expansion) ... ok
+test_markdown_and_native_word_contract (__main__.PhysicalIntuitionAuditTests.test_markdown_and_native_word_contract) ... ok
+test_open_boundaries_are_explicit (__main__.PhysicalIntuitionAuditTests.test_open_boundaries_are_explicit) ... ok
+test_source_lineage_and_direction_count (__main__.PhysicalIntuitionAuditTests.test_source_lineage_and_direction_count) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.003s
+
+OK
+EXIT=0
+
+$ python -m json.tool review.json
+{
+    "schema": "physical-intuition-direction-audit-v1",
+    "sources": [
+        {
+            "id": "physical-intuition:research/physical-intuition/MATH_PHYSICS_WORLDVIEW_2026.md",
+            "sha256": "89fc5499acd3f5afd05ffd0b4eacae3f40d33822802679a3c105d34acc0f9eb4",
+            "read_only": true
+        },
+        {
+            "id": "physical-intuition:research/physical-intuition/TOTAL_PROJECT_2026-11-08/TOTAL_REPORT.md",
+            "sha256": "91f6653c273c3783e9fc71ef8b9b64463a038fecd5763633038e601d93ae862d",
+            "read_only": true
+        }
+    ],
+    "source_lineage": {
+        "research_program_count": 1,
+        "decision": "\u4e24\u4efd\u6587\u6863\u5c5e\u4e8e\u540c\u4e00\u7814\u7a76\u7eb2\u9886\uff0c\u5408\u8ba2\u672c\u4e0d\u662f\u72ec\u7acb\u65b0\u7406\u8bba\u3002"
+    },
+    "directions": [
+        {
+            "id": "math_physics_methodology",
+            "role": "\u9879\u76ee\u5185\u72ec\u7acb\u7684\u65b9\u6cd5\u8bba\u65b9\u5411\uff0c\u4e0d\u662f\u5916\u90e8\u65b0\u7684\u7edf\u4e00\u7269\u7406\u7406\u8bba",
+            "status": "active_methodology_not_external_toe",
+            "closed": "\u771f\u7406\u3001\u6a21\u578b\u4e0e\u6570\u636e\u5206\u8f68\uff1b\u7c7b\u578b\u5316\u5c42\u7ea7\u3001\u7ed3\u6784\u5361\u548c\u53ef\u5426\u8bc1\u6d41\u7a0b\u5df2\u6709\u4e66\u9762\u6846\u67b6\u3002",
+            "unfinished": "\u7ed3\u6784\u5361\u8986\u76d6\u3001\u51bb\u7ed3\u540e\u8bc4\u4f30\u3001\u8de8\u95ee\u9898\u65cf\u8fc1\u79fb\u3001\u5e38\u89c4\u57fa\u7ebf\u5bf9\u7167\u4e0e\u6210\u672c\u5ba1\u8ba1\u3002",
+            "next": "\u4ee5\u672a\u89c1\u4efb\u52a1\u548c\u7edf\u4e00\u6210\u672c\u9762\u677f\u68c0\u9a8c\u7ed3\u6784\u5361\u7684\u5b9e\u9645\u589e\u76ca\u3002"
+        },
+        {
+            "id": "zero_cdm_observation",
+            "role": "\u660e\u786e\u8054\u5408\u6a21\u578b\u7684\u53ef\u8bc1\u4f2a\u7814\u7a76\u65b9\u5411\uff0c\u4e0e\u603b\u62a5\u544a\u540c\u4e00\u8840\u7f18",
+            "status": "fixed_model_strongly_disfavored_broader_open",
+            "closed": "\u56fa\u5b9a\u8f93\u5165\u96f6\u6a21\u578b\u88ab Planck \u900f\u955c\u548c\u5b8c\u6574 CMB \u5f3a\u70c8\u6392\u9664\uff1b\u4e94\u70b9 H0 \u5207\u7247\u6ca1\u6709\u633d\u6551\uff1bBBN \u4e0d\u80fd\u62b5\u6d88 CMB \u6392\u9664\u3002",
+            "unfinished": "\u975e\u7ebf\u6027\u3001\u5b8c\u6574\u53c2\u6570\u7a7a\u95f4\u3001\u72ec\u7acb Boltzmann \u5b9e\u73b0\u3001\u66f4\u591a\u6570\u636e\u8054\u5408\u3001\u771f\u5b9e\u7269\u8d28\u90e8\u95e8\u4e0e\u66ff\u4ee3\u6a21\u578b\u3002",
+            "next": "\u628a\u56fa\u5b9a\u70b9\u8d1f\u5411\u7ed3\u679c\u4e0e\u5168\u53c2\u6570\u540e\u9a8c\u3001\u975e\u7ebf\u6027\u548c\u5176\u4ed6\u65e0 CDM \u673a\u5236\u5206\u5f00\u63a8\u8fdb\u3002"
+        },
+        {
+            "id": "crosscode_systematics",
+            "role": "\u53ef\u72ec\u7acb\u53d1\u5c55\u7684\u8de8\u4ee3\u7801\u4e0e\u6570\u503c\u9a8c\u8bc1\u57fa\u7840\u8bbe\u65bd\u65b9\u5411",
+            "status": "partially_closed_open_convergence",
+            "closed": "TT \u900f\u955c\u53e3\u5f84\u3001\u82e5\u5e72\u63d2\u503c\u4e0e\u5171\u52a8\u6620\u5c04\u9519\u8bef\u5df2\u7ea0\u6b63\uff1bk800 \u8f93\u51fa\u52a0\u5bc6\u88ab\u8bc1\u660e\u65e0\u6536\u76ca\u3002",
+            "unfinished": "\u6781\u7aef\u76f8\u4f4d\u4e0e\u6df1\u8c37\u672a\u6536\u655b\uff0c\u590d\u5408\u5b9e\u73b0\u5dee\u5f02\u4ecd\u5728\uff1bAccuracyBoost=8 \u591a\u6b21\u89e6\u53ca 300 \u79d2\u524d\u53f0\u65f6\u9650\u4e14\u65e0\u7ed3\u679c\u3002",
+            "next": "\u4ee5\u5355\u53d8\u91cf\u7cbe\u5ea6\u548c\u72ec\u7acb\u5b9e\u73b0\u7814\u7a76\u5269\u4f59\u7cfb\u7edf\u8bef\u5dee\uff0c\u4e0d\u628a ultra \u5f53\u6700\u4f73\u4f30\u8ba1\u3002"
+        },
+        {
+            "id": "physical_intuition_engine",
+            "role": "\u5019\u9009\u5de5\u7a0b\u4e0e\u8bc4\u4ef7\u65b9\u5411\uff0c\u4e0d\u662f\u5df2\u7ecf\u9a8c\u8bc1\u6709\u6548\u7684\u7cfb\u7edf",
+            "status": "design_only_unvalidated",
+            "closed": "\u6df7\u5408\u5de5\u4f5c\u6d41\u3001\u53cc\u65b9\u6cd5\u8bc4\u59d4\u3001\u4efb\u52a1\u5305\u548c\u8bc1\u636e\u5361\u5df2\u6709\u8bbe\u8ba1\u3002",
+            "unfinished": "\u771f\u5b9e\u5f15\u64ce\u5b9e\u73b0\u3001\u672a\u89c1\u4efb\u52a1\u76f2\u6d4b\u3001\u5e38\u89c4\u6a21\u578b\u5bf9\u7167\u3001\u6d88\u878d\u3001\u8bb8\u53ef\u6e05\u5355\u3001\u5931\u8d25\u5206\u5e03\u548c\u6559\u5e08\u4f9d\u8d56\u8bc4\u4f30\u3002",
+            "next": "\u5148\u5b9e\u73b0\u6700\u5c0f\u5f15\u64ce\uff0c\u518d\u7528\u9694\u79bb\u6570\u636e\u3001\u6d88\u878d\u548c\u5e38\u89c4\u57fa\u7ebf\u68c0\u9a8c\u76f8\u5bf9\u589e\u76ca\u3002"
+        }
+    ],
+    "evidence": {
+        "unit_tests": {
+            "passed": 41,
+            "total": 41,
+            "command": "python -m unittest discover -s \"C:/Users/\u4e00\u68a6/Documents/kimi/workspace/.worktrees/provider-main-integration/research/physical-intuition/zero-cdm/tests\" -p \"test*.py\" -v"
+        },
+        "h0_scan": {
+            "case_count": 10,
+            "rows": [
+                {
+                    "h0": 55.0,
+                    "zero_case": "h0_55_zero",
+                    "baseline_case": "h0_55_baseline",
+                    "zero_chi_squared_total": 199206.36861538913,
+                    "baseline_chi_squared_total": 32188.306111318023,
+                    "delta_definition": "zero minus baseline at identical H0",
+                    "delta_chi_squared_total": 167018.0625040711,
+                    "delta_chi_squared_by_likelihood": {
+                        "planck_2018_lowl.EE": 7.170986549371776,
+                        "planck_2018_highl_CamSpec2021.TTTEEE": 159998.208044651,
+                        "planck_2018_lensing.native": 6839.837988917575,
+                        "planck_2018_lowl.TT": 172.84548395315903
+                    }
+                },
+                {
+                    "h0": 60.0,
+                    "zero_case": "h0_60_zero",
+                    "baseline_case": "h0_60_baseline",
+                    "zero_chi_squared_total": 190973.30175276202,
+                    "baseline_chi_squared_total": 18632.529783444446,
+                    "delta_definition": "zero minus baseline at identical H0",
+                    "delta_chi_squared_total": 172340.77196931757,
+                    "delta_chi_squared_by_likelihood": {
+                        "planck_2018_lowl.EE": 7.265558683800975,
+                        "planck_2018_highl_CamSpec2021.TTTEEE": 164793.5737403354,
+                        "planck_2018_lensing.native": 7374.413739295681,
+                        "planck_2018_lowl.TT": 165.51893100268245
+                    }
+                },
+                {
+                    "h0": 67.66,
+                    "zero_case": "h0_67p66_zero",
+                    "baseline_case": "h0_67p66_baseline",
+                    "zero_chi_squared_total": 189668.60418098595,
+                    "baseline_chi_squared_total": 10543.642920684408,
+                    "delta_definition": "zero minus baseline at identical H0",
+                    "delta_chi_squared_total": 179124.9612603015,
+                    "delta_chi_squared_by_likelihood": {
+                        "planck_2018_lowl.EE": 7.068690104485029,
+                        "planck_2018_highl_CamSpec2021.TTTEEE": 171225.95879819657,
+                        "planck_2018_lensing.native": 7768.092083309375,
+                        "planck_2018_lowl.TT": 123.84168869110255
+                    }
+                },
+                {
+                    "h0": 75.0,
+                    "zero_case": "h0_75_zero",
+                    "baseline_case": "h0_75_baseline",
+                    "zero_chi_squared_total": 187206.69090376465,
+                    "baseline_chi_squared_total": 17017.391810934427,
+                    "delta_definition": "zero minus baseline at identical H0",
+                    "delta_chi_squared_total": 170189.29909283022,
+                    "delta_chi_squared_by_likelihood": {
+                        "planck_2018_lowl.EE": 6.870530000677832,
+                        "planck_2018_highl_CamSpec2021.TTTEEE": 162107.2927333676,
+                        "planck_2018_lensing.native": 7981.455979191397,
+                        "planck_2018_lowl.TT": 93.67985027057404
+                    }
+                },
+                {
+                    "h0": 85.0,
+                    "zero_case": "h0_85_zero",
+                    "baseline_case": "h0_85_baseline",
+                    "zero_chi_squared_total": 182476.36464124665,
+                    "baseline_chi_squared_total": 41184.6191504119,
+                    "delta_definition": "zero minus baseline at identical H0",
+                    "delta_chi_squared_total": 141291.74549083476,
+                    "delta_chi_squared_by_likelihood": {
+                        "planck_2018_lowl.EE": 6.620953901818211,
+                        "planck_2018_highl_CamSpec2021.TTTEEE": 133959.42141854763,
+                        "planck_2018_lensing.native": 7266.5850058096585,
+                        "planck_2018_lowl.TT": 59.11811257565989
+                    }
+                }
+            ],
+            "minimum_h0": 85.0,
+            "minimum_delta_chi_squared": 141291.74549083476,
+            "expanded_scan_triggered": false,
+            "follow_up_threshold": 10,
+            "posterior_sampling_performed": false
+        },
+        "planck_lensing": {
+            "minimum_delta_chi_squared": 1238.7052914170808,
+            "maximum_delta_chi_squared": 1238.773761924766,
+            "scope": "\u56fa\u5b9a\u8f93\u5165\u7684 Planck 2018 \u8fb9\u7f18\u5316\u900f\u955c\u8bca\u65ad\uff0c\u4e0d\u662f\u5168\u53c2\u6570\u62df\u5408\u3002"
+        },
+        "full_cmb_hyrec": {
+            "delta_chi_squared_total": 179124.96703804415,
+            "posterior_sampling_performed": false,
+            "scope": "\u5c40\u90e8 nuisance profile\uff0c\u4e0d\u662f\u5168\u53c2\u6570\u540e\u9a8c\u6216\u5168\u5c40\u6700\u4f18\u8bc1\u660e\u3002"
+        },
+        "bbn": {
+            "maximum_absolute_delta_chi_squared": 0.004415687278122249,
+            "scope": "BBN \u8fd1\u4f3c\u4e00\u81f4\uff0c\u4e0d\u80fd\u62b5\u6d88 CMB \u6392\u9664\uff1b\u4e0d\u662f\u8054\u5408\u540e\u9a8c\u3002"
+        },
+        "crosscode_systematics": {
+            "k800_shared_nodes": 5878,
+            "k800_bandpower_log_change": 0.0,
+            "accuracy_boost_8": "\u591a\u6b21\u89e6\u53ca 300 \u79d2\u524d\u53f0\u65f6\u9650\uff0c\u6ca1\u6709\u6570\u503c\u7ed3\u679c\u3002",
+            "phase_sequence": "\u96f6\u4ea4\u53c9\u6570\u548c\u5b8c\u6574\u76f8\u4f4d\u5e8f\u5217\u672a\u6536\u655b\u3002"
+        }
+    },
+    "open_boundaries": {
+        "global_cosmological_fit_completed": false,
+        "nonlinear_matter_spectrum_completed": false,
+        "extreme_phase_sequence_converged": false,
+        "accuracy_boost_8_completed": false,
+        "physical_intuition_engine_validated": false
+    },
+    "figure": {
+        "svg": "h0-scan-comparison.svg",
+        "png": "h0-scan-comparison.png",
+        "scope": "\u4e94\u70b9 H0 \u5355\u53d8\u91cf\u5207\u7247\uff0c\u4e0d\u662f\u5168\u53c2\u6570\u62df\u5408\u3002"
+    }
+}
+EXIT=0
+
+$ python C:/Users/一梦/AppData/Roaming/kimi-desktop/daimon-share/daimon/runtime/kimi-code/home/plugins/managed/kimi-word/skills/kimi-word/scripts/docx.py validate C:/Users/一梦/Documents/kimi/workspace/.worktrees/physical-intuition-audit/research/paper-direction-audit-2026-11-10/physical-intuition/REVIEW.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+EXIT=0
+
+$ git diff --check
+warning: in the working copy of 'research/paper-direction-audit-2026-11-10/physical-intuition/run.log', LF will be replaced by CRLF the next time Git touches it
+EXIT=0
+
+$ git status --short --branch
+## audit/physical-intuition-directions
+ M run.log
+?? ../../../run.log
+EXIT=0
