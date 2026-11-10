@@ -1,0 +1,286 @@
+$ python research/floquet-bdg-localization/run_localization.py
+N=40: zero edge=0.49597247, pi edge=0.19099498, IPR=(0.06235141,0.04016428)
+N=80: zero edge=0.74409019, pi edge=0.61964705, IPR=(0.06200374,0.04016455)
+N=160: zero edge=0.93464141, pi edge=0.96800708, IPR=(0.06200293,0.04016442)
+N=320: zero edge=0.99573710, pi edge=0.99777021, IPR=(0.06200300,0.04016445)
+N=640: zero edge=0.99998187, pi edge=0.99998711, IPR=(0.12400576,0.08032608)
+{
+  "tail_estimates": {
+    "zero": [
+      {
+        "n1": 40,
+        "n2": 80,
+        "deficit1": 0.504027531414686,
+        "deficit2": 0.25590981375877586,
+        "status": "ok",
+        "xi_tail": 11.802790710916785,
+        "reason": null
+      },
+      {
+        "n1": 80,
+        "n2": 160,
+        "deficit1": 0.25590981375877586,
+        "deficit2": 0.06535859253633625,
+        "status": "ok",
+        "xi_tail": 11.72215981967958,
+        "reason": null
+      },
+      {
+        "n1": 160,
+        "n2": 320,
+        "deficit1": 0.06535859253633625,
+        "deficit2": 0.0042629014896460315,
+        "status": "ok",
+        "xi_tail": 11.721874124115848,
+        "reason": null
+      },
+      {
+        "n1": 320,
+        "n2": 640,
+        "deficit1": 0.0042629014896460315,
+        "deficit2": 1.8134531537317145e-05,
+        "status": "ok",
+        "xi_tail": 11.721853527050074,
+        "reason": null
+      }
+    ],
+    "pi": [
+      {
+        "n1": 40,
+        "n2": 80,
+        "deficit1": 0.8090050223382148,
+        "deficit2": 0.380352950096462,
+        "status": "ok",
+        "xi_tail": 10.600161431363272,
+        "reason": null
+      },
+      {
+        "n1": 80,
+        "n2": 160,
+        "deficit1": 0.380352950096462,
+        "deficit2": 0.031992918909861556,
+        "status": "ok",
+        "xi_tail": 6.4631187049824455,
+        "reason": null
+      },
+      {
+        "n1": 160,
+        "n2": 320,
+        "deficit1": 0.031992918909861556,
+        "deficit2": 0.002229788280912137,
+        "status": "ok",
+        "xi_tail": 12.013780010313852,
+        "reason": null
+      },
+      {
+        "n1": 320,
+        "n2": 640,
+        "deficit1": 0.002229788280912137,
+        "deficit2": 1.289134301885042e-05,
+        "status": "ok",
+        "xi_tail": 12.419694265678883,
+        "reason": null
+      }
+    ]
+  },
+  "envelope_fits": {
+    "zero": [
+      {
+        "amplitude": 0.08759983122316911,
+        "background": 0.004587526645774815,
+        "xi_env": 8.281163404818674,
+        "r_squared": 0.6181128121740529,
+        "sse": 0.014485514464469823,
+        "optimizer_success": true,
+        "optimality": 9.865125826232038e-10,
+        "nfev": 8
+      },
+      {
+        "amplitude": 0.08934947100115644,
+        "background": 0.0009111112518388556,
+        "xi_env": 9.340575929480098,
+        "r_squared": 0.7088520289248232,
+        "sse": 0.014413272303523562,
+        "optimizer_success": true,
+        "optimality": 7.1389127628205895e-09,
+        "nfev": 10
+      },
+      {
+        "amplitude": 0.08949613425176196,
+        "background": 0.0003073865522329407,
+        "xi_env": 9.58938991812305,
+        "r_squared": 0.7410879617516541,
+        "sse": 0.01443510553503597,
+        "optimizer_success": true,
+        "optimality": 3.362260333084733e-10,
+        "nfev": 7
+      },
+      {
+        "amplitude": 0.08953263137487606,
+        "background": 0.00013149527003474806,
+        "xi_env": 9.664667506416126,
+        "r_squared": 0.7547200725068582,
+        "sse": 0.014441575148965023,
+        "optimizer_success": true,
+        "optimality": 5.355690135959256e-10,
+        "nfev": 7
+      },
+      {
+        "amplitude": 0.08954648727392935,
+        "background": 6.128061441418126e-05,
+        "xi_env": 9.695046184110538,
+        "r_squared": 0.7610183585016439,
+        "sse": 0.014444153902687922,
+        "optimizer_success": true,
+        "optimality": 4.5303665211103866e-08,
+        "nfev": 10
+      }
+    ],
+    "pi": [
+      {
+        "amplitude": 0.03910571203952568,
+        "background": 1.4649849514908863e-29,
+        "xi_env": 26.10669656713926,
+        "r_squared": 0.16522771613955922,
+        "sse": 0.013385474355222058,
+        "optimizer_success": true,
+        "optimality": 1.4128297961201264e-08,
+        "nfev": 18
+      },
+      {
+        "amplitude": 0.04480292054403071,
+        "background": 1.48875137247929e-48,
+        "xi_env": 23.900232128695933,
+        "r_squared": 0.5054300394382367,
+        "sse": 0.013682474164525567,
+        "optimizer_success": true,
+        "optimality": 1.4794801318299317e-07,
+        "nfev": 38
+      },
+      {
+        "amplitude": 0.044310564794006656,
+        "background": 9.64836406451332e-46,
+        "xi_env": 25.14560184043043,
+        "r_squared": 0.6030841018986957,
+        "sse": 0.013461172704078397,
+        "optimizer_success": true,
+        "optimality": 2.749752735979857e-07,
+        "nfev": 33
+      },
+      {
+        "amplitude": 0.044297695784072486,
+        "background": 1.024181759509349e-46,
+        "xi_env": 25.16501348000653,
+        "r_squared": 0.6366115633439948,
+        "sse": 0.01345969713982793,
+        "optimizer_success": true,
+        "optimality": 1.1965282523839273e-08,
+        "nfev": 34
+      },
+      {
+        "amplitude": 0.04429773224383196,
+        "background": 5.89687110167693e-47,
+        "xi_env": 25.164968604694884,
+        "r_squared": 0.6513205320767641,
+        "sse": 0.013459697129241933,
+        "optimizer_success": true,
+        "optimality": 8.447362123969634e-07,
+        "nfev": 32
+      }
+    ]
+  },
+  "assessment": {
+    "status": "short_chain_regime_supported",
+    "criteria": {
+      "zero": {
+        "checks": {
+          "first_pair_subspace_ipr_plateau": true,
+          "second_pair_extended_ipr_decays": true,
+          "second_pair_n_ipr_bounded": true,
+          "tail_lengths_stable_within_factor_2": true,
+          "envelope_lengths_stable_within_25_percent": true,
+          "envelope_r_squared_above_0_5": true,
+          "largest_size_original_candidate_rule": true
+        },
+        "metrics": {
+          "first_pair_subspace_ipr_relative_change": 1.1191234934858504e-16,
+          "second_pair_subspace_ipr_decay_factor": 1.9690779108287177,
+          "second_pair_n_subspace_ipr_ratio": 1.015703842393046,
+          "tail_length_ratio": 1.0000017571509254,
+          "envelope_relative_change": 0.003143271889513412,
+          "last_two_envelope_r_squared": [
+            0.7547200725068582,
+            0.7610183585016439
+          ]
+        }
+      },
+      "pi": {
+        "checks": {
+          "first_pair_subspace_ipr_plateau": true,
+          "second_pair_extended_ipr_decays": true,
+          "second_pair_n_ipr_bounded": true,
+          "tail_lengths_stable_within_factor_2": true,
+          "envelope_lengths_stable_within_25_percent": true,
+          "envelope_r_squared_above_0_5": true,
+          "largest_size_original_candidate_rule": true
+        },
+        "metrics": {
+          "first_pair_subspace_ipr_relative_change": 3.6280063267848375e-15,
+          "second_pair_subspace_ipr_decay_factor": 1.975916236418831,
+          "second_pair_n_subspace_ipr_ratio": 1.012188656147094,
+          "tail_length_ratio": 1.0337873887333173,
+          "envelope_relative_change": 1.7832421063507659e-06,
+          "last_two_envelope_r_squared": [
+            0.6366115633439948,
+            0.6513205320767641
+          ]
+        }
+      }
+    },
+    "full_size_rule_status": "inconclusive_preserved",
+    "thermodynamic_limit_proof": false,
+    "interpretation": "Evidence concerns the current finite quadratic model only; it is not a material or experimental result."
+  }
+}
+exit_code=0
+$ python research/floquet-bdg-localization/test_localization.py -v
+test_grid_and_three_independent_evidence_channels (__main__.LocalizationArtifactTests.test_grid_and_three_independent_evidence_channels) ... ok
+test_raw_profiles_and_previous_convention_evidence_preserved (__main__.LocalizationArtifactTests.test_raw_profiles_and_previous_convention_evidence_preserved) ... ok
+test_envelope_fit_recovers_synthetic_localization (__main__.LocalizationEstimatorTests.test_envelope_fit_recovers_synthetic_localization) ... ok
+test_subspace_metrics_are_invariant_under_basis_rotation (__main__.LocalizationEstimatorTests.test_subspace_metrics_are_invariant_under_basis_rotation) ... ok
+test_tail_estimator_recovers_synthetic_length (__main__.LocalizationEstimatorTests.test_tail_estimator_recovers_synthetic_length) ... ok
+test_tail_estimator_rejects_nonphysical_sign (__main__.LocalizationEstimatorTests.test_tail_estimator_rejects_nonphysical_sign) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.005s
+
+OK
+exit_code=0
+$ python research/floquet-bdg-localization/verify_localization.py -v
+test_all_preregistered_checks_pass_for_physical_reasons (__main__.IndependentLocalizationTests.test_all_preregistered_checks_pass_for_physical_reasons) ... ok
+test_envelope_and_tail_scales_have_numerical_support (__main__.IndependentLocalizationTests.test_envelope_and_tail_scales_have_numerical_support) ... ok
+test_profiles_csv_and_convention_hashes (__main__.IndependentLocalizationTests.test_profiles_csv_and_convention_hashes) ... ok
+test_scipy_solver_n640_subspace_is_basis_invariant (__main__.IndependentLocalizationTests.test_scipy_solver_n640_subspace_is_basis_invariant) ... ok
+test_short_chain_support_does_not_change_old_full_size_boundary (__main__.IndependentLocalizationTests.test_short_chain_support_does_not_change_old_full_size_boundary) ... ok
+test_tail_lengths_are_recomputed_from_raw_weights (__main__.IndependentLocalizationTests.test_tail_lengths_are_recomputed_from_raw_weights) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 30.558s
+
+OK
+exit_code=0
+$ python research/floquet-bdg-localization/build_markdown.py
+C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-localization\README.md
+exit_code=0
+$ python research/floquet-bdg-localization/build_figure.py
+C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-localization\localization.png
+exit_code=0
+$ python research/floquet-bdg-localization/test_report.py -v
+test_method_markdown_and_figure (__main__.LocalizationReportTests.test_method_markdown_and_figure) ... ok
+test_word_has_current_metrics_and_native_structure (__main__.LocalizationReportTests.test_word_has_current_metrics_and_native_structure) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.004s
+
+OK
+exit_code=0

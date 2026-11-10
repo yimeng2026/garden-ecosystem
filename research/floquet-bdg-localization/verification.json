@@ -1,0 +1,69 @@
+{
+  "schema": "floquet-bdg-localization-verification-v1",
+  "recorded_utc": "2026-11-10T19:43:46.973932+00:00",
+  "all_passed": true,
+  "results": [
+    {
+      "script": "run_localization.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-localization\\run_localization.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "test_localization.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-localization\\test_localization.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "verify_localization.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-localization\\verify_localization.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "build_markdown.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-localization\\build_markdown.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "build_figure.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-localization\\build_figure.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "test_report.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-localization\\test_report.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "localization_tests": 6,
+  "independent_solver_tests": 6,
+  "report_tests": 2,
+  "results_sha256": "83a9c99085a8b10148f890e9ba3bea2890a427ecf13fb6b879f7abbe90591c2d",
+  "docx_sha256": "b366a345c22cec7fa3074eb810c735b0332633582243a623cab61b1b9cc43ec9",
+  "short_chain_regime_supported": true,
+  "full_size_rule_status": "inconclusive_preserved",
+  "thermodynamic_limit_proof": false,
+  "material_tc_prediction": false,
+  "experimental_validation": false,
+  "log": "run.log"
+}
