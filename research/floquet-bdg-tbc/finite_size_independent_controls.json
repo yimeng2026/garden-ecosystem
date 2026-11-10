@@ -1,0 +1,109 @@
+{
+  "schema": "floquet-bdg-tbc-finite-size-independent-part-v1",
+  "group": "controls",
+  "nominal_step": 0.05,
+  "selected_count": 4,
+  "checks": [
+    {
+      "n": 160,
+      "strength": 0.05,
+      "seed": 0,
+      "kind": "uniform_mean",
+      "target": "zero",
+      "production_status": "ok",
+      "production_nearest_integer": 1,
+      "independent": {
+        "status": "ok",
+        "method": "independent Schur reconstruction and unwrapped det(block) phase",
+        "nominal_step": 0.05,
+        "actual_step": 0.049866550056980846,
+        "points": 126,
+        "raw_signed": 1.0,
+        "value": 1.0,
+        "nearest_integer": 1,
+        "integer_residual": 0.0,
+        "min_bulk_gap": 0.011128255506593644,
+        "max_symmetry_error": 1.5896480408600184e-14,
+        "max_block_condition": 1.0000000000000064,
+        "passed": true
+      },
+      "integer_agreement": true
+    },
+    {
+      "n": 160,
+      "strength": 0.1,
+      "seed": 0,
+      "kind": "uniform_mean",
+      "target": "zero",
+      "production_status": "ok",
+      "production_nearest_integer": 1,
+      "independent": {
+        "status": "ok",
+        "method": "independent Schur reconstruction and unwrapped det(block) phase",
+        "nominal_step": 0.05,
+        "actual_step": 0.049866550056980846,
+        "points": 126,
+        "raw_signed": 1.0,
+        "value": 1.0,
+        "nearest_integer": 1,
+        "integer_residual": 0.0,
+        "min_bulk_gap": 0.0309470898458281,
+        "max_symmetry_error": 1.0902300024758895e-14,
+        "max_block_condition": 1.000000000000006,
+        "passed": true
+      },
+      "integer_agreement": true
+    },
+    {
+      "n": 160,
+      "strength": 0.2,
+      "seed": 0,
+      "kind": "uniform_mean",
+      "target": "zero",
+      "production_status": "ok",
+      "production_nearest_integer": 1,
+      "independent": {
+        "status": "ok",
+        "method": "independent Schur reconstruction and unwrapped det(block) phase",
+        "nominal_step": 0.05,
+        "actual_step": 0.049866550056980846,
+        "points": 126,
+        "raw_signed": 1.0000000000000002,
+        "value": 1.0000000000000002,
+        "nearest_integer": 1,
+        "integer_residual": 2.220446049250313e-16,
+        "min_bulk_gap": 0.08390514763034461,
+        "max_symmetry_error": 6.687904128397727e-15,
+        "max_block_condition": 1.0000000000000089,
+        "passed": true
+      },
+      "integer_agreement": true
+    },
+    {
+      "n": 160,
+      "strength": 0.05,
+      "seed": 0,
+      "kind": "disorder",
+      "target": "zero",
+      "production_status": "ok",
+      "production_nearest_integer": 1,
+      "independent": {
+        "status": "ok",
+        "method": "independent Schur reconstruction and unwrapped det(block) phase",
+        "nominal_step": 0.05,
+        "actual_step": 0.049866550056980846,
+        "points": 126,
+        "raw_signed": 1.0,
+        "value": 1.0,
+        "nearest_integer": 1,
+        "integer_residual": 0.0,
+        "min_bulk_gap": 0.0025409385017753808,
+        "max_symmetry_error": 6.85656410183496e-14,
+        "max_block_condition": 1.000000000000007,
+        "passed": true
+      },
+      "integer_agreement": true
+    }
+  ],
+  "passed": true
+}
