@@ -1,6 +1,6 @@
 # Uniform Kick Parameter Map and Disorder Decomposition Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Build a Fock-checked homogeneous-kick amplitude/size map and decompose the existing disorder ensemble into mean-drive and fluctuation contributions without changing any prior verdict.
 
@@ -31,7 +31,7 @@
 - Consumes: `disordered_floquet`, `observe_candidate`, `quasienergy_spectrum` from the two validated research packages.
 - Produces: `uniform_floquet(n, a, omega=7.0, gamma=1.0, delta=1.0, mu0=2.5)`, `safe_endpoint_counts(a, mu0=2.5, gamma=1.0, omega=7.0)`, `evaluate_uniform(n, a)`.
 
-- [ ] **Step 1: Write failing analytic and model contracts**
+- [x] **Step 1: Write failing analytic and model contracts**
 
 ```python
 def test_two_gapless_amplitudes_are_rejected():
@@ -48,12 +48,12 @@ def test_uniform_model_matches_validated_clean_model():
 
 Also assert `safe_endpoint_counts(0.1)["p0"] == 1`, `p_pi == 1`, `safe_endpoint_counts(0.25)["p_pi"] == 0`, and that the returned negative-hopping map is `k=0 → b_pi`, `k=π → b0`.
 
-- [ ] **Step 2: Run RED and retain the real failure**
+- [x] **Step 2: Run RED and retain the real failure**
 
 Run: `python research/floquet-kick-map/test_kick_map.py -v`
 Expected: exit code 1 with `ModuleNotFoundError: No module named 'kick_map'`; save the command, key traceback and exit code to `test-red.log`.
 
-- [ ] **Step 3: Implement the minimal uniform model and singularity gate**
+- [x] **Step 3: Implement the minimal uniform model and singularity gate**
 
 ```python
 def uniform_floquet(n, a, omega=7.0, gamma=1.0, delta=1.0, mu0=2.5):
@@ -76,7 +76,7 @@ def safe_endpoint_counts(a, mu0=2.5, gamma=1.0, omega=7.0):
 
 Check `U(0)` and `U(π)` against `diag(exp(±iπb_pi))` and `diag(exp(±iπb0))` respectively. Add `evaluate_uniform` returning the two `observe_candidate` records and unitarity error.
 
-- [ ] **Step 4: Run analytic contracts and commit**
+- [x] **Step 4: Run analytic contracts and commit**
 
 Run: `python research/floquet-kick-map/test_kick_map.py -v`
 Expected: analytic tests PASS; artifact test still reports missing `results.json`.
@@ -100,7 +100,7 @@ git commit -m "test: add gapless-safe uniform kick model"
 - Consumes: Task 1 functions.
 - Produces: 45 grid records and `pass_islands` grouped by `N` and target.
 
-- [ ] **Step 1: Add artifact contracts before running the grid**
+- [x] **Step 1: Add artifact contracts before running the grid**
 
 ```python
 def test_grid_has_45_records_and_two_unique_singular_amplitudes():
@@ -113,7 +113,7 @@ def test_grid_has_45_records_and_two_unique_singular_amplitudes():
 
 Require 14 amplitudes for each of `N=80,160,320`, plus only `a=0.05,0.1,0.2` for `N=640`. Check that all grid records contain both target observations and normalized profiles in NPZ.
 
-- [ ] **Step 2: Implement the fixed grid without dropping singular points**
+- [x] **Step 2: Implement the fixed grid without dropping singular points**
 
 ```python
 AMPLITUDES = [0.0, 0.025, 0.05, 0.075, 0.1, 0.125, 0.15,
@@ -128,11 +128,11 @@ for a in LONG_CHAIN_AMPLITUDES:
 
 `evaluate_and_append` must call `evaluate_uniform` and `safe_endpoint_counts`, store profiles by `n{n}_a{a}_{target}`, and preserve each observation even when the analytic endpoint is singular.
 
-- [ ] **Step 3: Record contiguous finite-size pass islands**
+- [x] **Step 3: Record contiguous finite-size pass islands**
 
 For each `N<640` and target, sort by amplitude and emit each contiguous run with `start`, `end`, `rows`, `endpoint_p0`, `endpoint_p_pi`, and `interval_semantics="grid_samples_not_a_precision_boundary"`. For `N=640`, emit `selected_amplitudes_only=true`, not an inferred interval. Record exact analytic singularities separately from grid-derived runs.
 
-- [ ] **Step 4: Run the 45-point study and commit**
+- [x] **Step 4: Run the 45-point study and commit**
 
 Run: `python research/floquet-kick-map/run_kick_map.py`
 Expected: 45 records, six singular grid rows at two unique amplitudes (`a=0` and `a=π/14`, each at N=80,160,320), normalized profiles, both target observations per point. Run `test_kick_map.py -v` and require all grid contracts to pass.
@@ -155,7 +155,7 @@ git commit -m "feat: compute uniform kick parameter map"
 - Consumes: read-only `research/floquet-bdg-disorder/results.json`, `disorder_sequences.npz`, `realizations` and `mean_matched`.
 - Produces: 216 per-target decomposition rows and grouped summaries.
 
-- [ ] **Step 1: Write identity and category contracts**
+- [x] **Step 1: Write identity and category contracts**
 
 ```python
 def test_amplitude_decomposition_is_exact():
@@ -170,7 +170,7 @@ def test_amplitude_decomposition_is_exact():
 
 Define categories mechanically: `both_pass` (uniform and disorder pass), `fluctuation_sensitive` (uniform passes, disorder fails), `uniform_fails` (uniform fails, disorder fails), `fluctuation_assisted` (uniform fails, disorder passes). These are outcome labels, not claims of topological creation or destruction.
 
-- [ ] **Step 2: Compute per-realization fluctuation metrics**
+- [x] **Step 2: Compute per-realization fluctuation metrics**
 
 ```python
 fluctuation = r * (beta - beta.mean())
@@ -185,7 +185,7 @@ row = {
 
 Store all 216 rows and group by `N`, `r`, target and category. Report median absolute deltas and outcome-change counts without rounding the underlying records.
 
-- [ ] **Step 3: Verify the decomposition and commit**
+- [x] **Step 3: Verify the decomposition and commit**
 
 Run: `python research/floquet-kick-map/decompose_disorder.py`
 Expected: 216 rows, exact amplitude identity, 108 original realizations and 108 uniform controls unchanged. Add a test that `N=160,r=0.1,zero` has `fluctuation_sensitive=15`, `both_pass=1`, while `pi` has `both_pass=16`.
@@ -212,21 +212,21 @@ git commit -m "feat: decompose disorder sensitivity by mean drive"
 - Consumes: all Task 1–3 artifacts.
 - Produces: independently checked report, four-page visual review, verification log and pushed branch.
 
-- [ ] **Step 1: Independently reconstruct the model and raw outcomes**
+- [x] **Step 1: Independently reconstruct the model and raw outcomes**
 
 `verify_kick_map.py` must rebuild `U=K(a)FK(a)` for `N=160,a=0.1`, check unitarity and candidate metrics, confirm `U(k=π)` is `−I` within `1e-10` at `a=π/14` (negative-hopping map `k=π → b0`, odd integer 1) and `U(k=0)` is `+I` at `a=0` (`k=0 → bπ`, even integer 2), recompute pass counts and test subspace rotation invariance. Assert the original disorder verdict remains `not_supported` and no disorder winding was computed.
 
-- [ ] **Step 2: Generate four data-driven panels**
+- [x] **Step 2: Generate four data-driven panels**
 
 Panel A/B: homogeneous 0/π pass maps across all 14 amplitudes and `N=80,160,320`, with singular points explicitly marked. Panel C: `N=160,r=0.1` per-seed disorder and uniform edge weights. Panel D: mechanical category counts from Task 3. Do not select the best seed or hide `a=0` and `a=π/14`.
 
-- [ ] **Step 3: Generate Markdown and native Word with current values**
+- [x] **Step 3: Generate Markdown and native Word with current values**
 
 Use a real TOC, Chinese header, PAGE-only footer, `cantSplit`, native OMML and footnotes for `arXiv:1303.2300`, `arXiv:2203.16353`, `results.json`, `sensitivity.json` and `verify_kick_map.py`. Distinguish analytic boundaries, finite grid samples and mechanical fluctuation categories. Preserve `not_supported` and `inconclusive_preserved`.
 
 Run the docx-js build gate, then render once. Read the contact sheet and every page. Exit 4/5/6 means unavailable: no retry or LibreOffice, and no visual-pass claim.
 
-- [ ] **Step 4: Run complete regression and verify artifact identity**
+- [x] **Step 4: Run complete regression and verify artifact identity**
 
 `run_verification.py` must execute the map, decomposition, analytic tests, independent tests, figure/Markdown builders and report contracts with real exit codes. Record JSON and DOCX SHA-256 values and compare them with `word-qa/report.json`.
 
@@ -238,7 +238,7 @@ git diff --check
 
 Expected: all commands exit 0; raw 45-point grid and 216 decomposition rows agree with the report.
 
-- [ ] **Step 5: Commit, push and retain the worktree**
+- [x] **Step 5: Commit, push and retain the worktree**
 
 ```bash
 git add research/floquet-kick-map docs/superpowers/plans/2026-11-11-floquet-kick-map.md
