@@ -29,3 +29,45 @@ SI 替代路径 organized/10-技术文档/06-补充信息.md 存在，但为模�
 退出码：1
 关键输出：setUpClass ERROR；FileNotFoundError: technical-docs/review.json；Ran 0 tests；FAILED (errors=1)。
 判定：符合预期 RED，唯一证据对象尚未生成；零测试发现保护生效。
+
+[cache-migration]
+原因：C 盘可用空间曾降至 0，渲染缓存迁移到 D 盘，原工作区路径以目录联接保留。
+目标：D:/migration/research-assets/paper-direction-audit-2026-11-10/technical-docs/word-qa
+首次 cmd //c mklink /J：退出码 1，中文路径在 cmd 参数中乱码；此时目录已移动但联接未建立。
+修正：PowerShell New-Item -ItemType Junction 使用 Unicode 环境变量，退出码 0；word-qa/report.json 可从原路径读取。
+未删除原始研究证据，未改动五份原文。
+
+[native-word-build-and-parameter-correction]
+docx.py build：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+首次渲染命令误用 --out/--final/--annotate/--qa：退出码 2；当前 docx.py 只接受两个位置参数，未进入渲染。
+改用位置参数但未加入 Node PATH：退出码 1，WinError 2，未进入渲染。
+加入 Node PATH 后 docx.py render REVIEW.docx word-qa：退出码 0；dock final view，4 页、4 页渲染、无近空白页。
+以上失败均不是渲染器 4/5/6 退出码；未使用 LibreOffice。
+
+[visual-citation-regression-red]
+逐页检查发现：目录缓存应为 [2,2,3,4,4]；H3S、Lean/SI、Song/PNAS 的脚注与来源错配；Markdown 把十项来源误写为九项。
+新增来源计数、目录缓存和论断—脚注 ID 回归合同后运行主测试：退出码 1；Ran 9 tests；2 项失败，分别对应来源计数和脚注错配。
+修正生成器后首次回归：退出码 1；仅日期标记同时匹配正文与勘误表，属于测试定位歧义。
+仅把测试标记扩展为“构成元数据时间矛盾”以区分正文，不改证据；随后主测试退出码 0，Ran 9 tests，OK。
+
+[layout-and-final-visual-qa]
+引用修复后的首次排版：退出码 0；5 页、5 页渲染、无近空白页，但第 5 页只有一行表格和两段正文，不通过人工版式验收。
+修正：只压缩十条脚注的冗余英文和脚注间距，保留全部来源、路径、arXiv 与文章号，不删减审计结论。
+最终 docx.py build：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+最终 docx.py render：退出码 0；4 页、4 页渲染、无近空白页。
+逐页观察：第 1 页目录页码 2、2、3、4、4 正确；第 2 页来源、方向和资产表完整；第 3 页图件、原生公式和科学边界表完整；第 4 页勘误、开放边界、结尾与全部脚注完整，无裁切或孤立末页。
+渲染器仍报告 content-loss/low w:lvlOverride x1；逐页未见编号导致的内容缺失。未使用 LibreOffice。
+word-qa/report.json：manualReview.status=passed，reviewedPages=[1,2,3,4]，visualPassClaimed=true。
+
+[final-validation-and-fresh-regression]
+build_review.py：退出码 0；sources=10，directions=4，corrections=8，tar_exists=false，figures_found=0，tex_variants_present=4，h3s_computed=161.08184379177882。
+主合同：退出码 0；Ran 9 tests；OK。
+独立来源复核：退出码 0；Ran 6 tests；OK。
+docx.py validate REVIEW.docx：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+最终 DOCX SHA-256：19d1b0cbf8e32224e80fb02b6a6449f8683cf60653354c912a2d2ee4eeab8c9d。
+JSON 解析、四页人工验收状态与 DOCX 哈希一致性：退出码 0。
+git diff --check：退出码 0；只有 LF/CRLF 提示，无空白错误。
+
+[scope-guard]
+五份原文未修改；未重跑计算或实验；压缩包、图件、引用库、Lean 构建、DFT 证据和独立实验仍未闭合。
+文件存在不等于科学验证；本批完成只表示审计交付完成，不表示室温超导理论或材料预测已验证。全库审计继续。

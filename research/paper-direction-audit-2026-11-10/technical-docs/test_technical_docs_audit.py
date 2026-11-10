@@ -88,7 +88,13 @@ class TechnicalDocsAuditTests(unittest.TestCase):
             self.assertIn(label, self.data["figure"]["labels"])
         self.assertFalse(self.data["figure"]["completion_percentage_plotted"])
 
-    def test_markdown_and_native_word_contract(self):
+    def test_markdown_source_count(self):
+        markdown = (ROOT / "REVIEW.md").read_text(encoding="utf-8")
+        self.assertEqual(len(self.data["sources"]), 10)
+        self.assertIn("本批使用十项冻结来源", markdown)
+        self.assertNotIn("本批使用九项冻结来源", markdown)
+
+    def test_native_word_contract(self):
         markdown = (ROOT / "REVIEW.md").read_text(encoding="utf-8")
         for text in ("完成状态 100%", "未找到", "161.081844", "图 1", "全库审计尚未完成"):
             self.assertIn(text, markdown)
@@ -115,6 +121,54 @@ class TechnicalDocsAuditTests(unittest.TestCase):
             "05-整合检查清单.md",
         ):
             self.assertIn(source_id, footnotes)
+
+    def test_footnote_claim_mapping_and_toc_cache(self):
+        import xml.etree.ElementTree as ET
+
+        namespace = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+        ns = {"w": namespace}
+        with zipfile.ZipFile(ROOT / "REVIEW.docx") as package:
+            root = ET.fromstring(package.read("word/document.xml"))
+
+        def text_of(element):
+            return "".join(node.text or "" for node in element.findall(".//w:t", ns))
+
+        paragraphs = root.findall(".//w:p", ns)
+        expected_references = {
+            "最终报告写完成状态 100%": {"4"},
+            "最终报告还声称 99 条引用": {"2"},
+            "进度报告中的 A／D 运行中": {"3"},
+            "整合检查清单明确保留": {"5"},
+            "实际资产清单同时保留": {"6"},
+            "H₃S 的文内参数": {"8", "10"},
+            "Lean 未编译且存在证明债务": {"9"},
+            "Song 的直接 Meissner": {"7"},
+            "交付日期 2025-04-19 早于所引 2025-10 突破，构成元数据时间矛盾": {"1"},
+        }
+        referenced = set()
+        for marker, expected in expected_references.items():
+            matches = [p for p in paragraphs if marker in text_of(p)]
+            self.assertEqual(len(matches), 1, marker)
+            actual = {
+                node.attrib[f"{{{namespace}}}id"]
+                for node in matches[0].findall(".//w:footnoteReference", ns)
+            }
+            self.assertEqual(actual, expected, marker)
+            referenced.update(actual)
+        self.assertEqual(referenced, {str(index) for index in range(1, 11)})
+
+        toc = root.find(".//w:sdt", ns)
+        self.assertIsNotNone(toc)
+        cached = [text_of(p) for p in toc.findall(".//w:p", ns)]
+        expected_toc = [
+            ("一、血缘裁决与四个发展方向", "2"),
+            ("二、状态矛盾与实际资产", "2"),
+            ("三、科学验证仍不闭合", "3"),
+            ("四、分档勘误与验收任务", "4"),
+            ("五、验证范围与开放边界", "4"),
+        ]
+        for title, page in expected_toc:
+            self.assertIn(f"{title}{page}", cached)
 
 
 def run_all_tests():

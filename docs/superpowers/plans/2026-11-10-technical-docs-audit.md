@@ -4,7 +4,7 @@
 
 **目标：** 建立资产存在性、状态一致性、科学验证和交付治理四层证据，纠正最终 100% 与实际资产及科学状态不符的问题。
 
-**架构：** 先以只读资产清单固定实际存在与缺失，再由九项来源驱动 `review.json`；独立测试验证状态矛盾、科学边界和清单；统一生成图件、Markdown 和原生 Word。
+**架构：** 先以只读资产清单固定实际存在与缺失，再由十项来源驱动 `review.json`；独立测试验证状态矛盾、科学边界和清单；统一生成图件、Markdown 和原生 Word。
 
 ## Assumptions
 
@@ -26,33 +26,33 @@
 
 ### Task 1：规格、计划与失败合同
 
-- [ ] 创建 `test_technical_docs_audit.py` 与 `run.log`，固定九项哈希、四个方向和八项勘误。
-- [ ] 检查最终 100% 与运行中／模板矛盾、压缩包与 MD5 不可验证、图与引用缺失、版本部分存在、公式与评分、Lean／SI、实验与日期，以及六个 false 边界。
-- [ ] Word 合同：OMML、TOC、至少五个表格、PAGE、中文页眉、图片和九条脚注，含 `2510.01273`、`024508`、五份原文文件名。
-- [ ] 两套测试均含零测试保护；运行主合同确认 `review.json` 缺失 RED。
-- [ ] 提交 `test: define technical documents audit contracts`。
+- [x] 创建 `test_technical_docs_audit.py` 与 `run.log`，固定十项哈希、四个方向和八项勘误。
+- [x] 检查最终 100% 与运行中／模板矛盾、压缩包与 MD5 不可验证、图与引用缺失、版本部分存在、公式与评分、Lean／SI、实验与日期，以及六个 false 边界。
+- [x] Word 合同：OMML、TOC、至少五个表格、PAGE、中文页眉、图片和九条脚注，含 `2510.01273`、`024508`、五份原文文件名。
+- [x] 两套测试均含零测试保护；运行主合同确认 `review.json` 缺失 RED。
+- [x] 提交 `test: define technical documents audit contracts`。
 
 ### Task 2：实际资产清单、独立检查与图件
 
-- [ ] 创建 `artifact_inventory.py`，只读检查压缩包、MD5 可验证性、六张图、引用库、各版本、Lean 和 SI 替代路径，生成 `sources/artifact-inventory.json` 并记录其 SHA-256。
-- [ ] 创建 `verify_primary_sources.py`，直接核对五份文档状态、实际资产、H₃S 复算、评分规则、Lean／SI、Song／PNAS 角色和日期。
-- [ ] 创建 `build_review.py`，生成 `review.json`、`technical-status-evidence.svg/.png` 和 `REVIEW.md`。图左为最终 100% 与运行中／模板矛盾，图右为缺失资产与部分存在文件。
-- [ ] Markdown 含“完成状态 100%”“未找到”“161.081844”“图 1”“全库审计尚未完成”，并明确图件位于资产表后、解释前。
-- [ ] 主合同此阶段只能剩余 DOCX 缺失；独立来源测试通过。
+- [x] 创建 `artifact_inventory.py`，只读检查压缩包、MD5 可验证性、六张图、引用库、各版本、Lean 和 SI 替代路径，生成 `sources/artifact-inventory.json` 并记录其 SHA-256。
+- [x] 创建 `verify_primary_sources.py`，直接核对五份文档状态、实际资产、H₃S 复算、评分规则、Lean／SI、Song／PNAS 角色和日期。
+- [x] 创建 `build_review.py`，生成 `review.json`、`technical-status-evidence.svg/.png` 和 `REVIEW.md`。图左为最终 100% 与运行中／模板矛盾，图右为缺失资产与部分存在文件。
+- [x] Markdown 含“完成状态 100%”“未找到”“161.081844”“图 1”“全库审计尚未完成”，并明确图件位于资产表后、解释前。
+- [x] 主合同此阶段只能剩余 DOCX 缺失；独立来源测试通过。
 
 ### Task 3：原生 Word 与逐页验收
 
-- [ ] 创建 `build_report.js`、`.gitignore`、`.gitattributes`；A4、CJK 字体、中文页眉、PAGE-only 页脚、真实 TOC 域和可见缓存目录。
-- [ ] 用 MathFraction／MathSubScript 创建原生 Tc 公式，展示 H₃S 复算而非 203 K，不以图片替代公式。
-- [ ] 至少五个表格：方向、资产清单、状态时间线、科学边界、勘误与开放边界；图件在资产表后、解释前。
-- [ ] 九条原生脚注覆盖九项来源。
-- [ ] `check-docx` 后构建并运行两个测试套件；最终视图逐页检查，退出 4/5/6 不重试，不使用 LibreOffice。
-- [ ] 记录页数、逐页观察或渲染不可用状态、版式修正、渲染器限制和 DOCX SHA-256。
+- [x] 创建 `build_report.js`、`.gitignore`、`.gitattributes`；A4、CJK 字体、中文页眉、PAGE-only 页脚、真实 TOC 域和可见缓存目录。
+- [x] 用 MathFraction／MathSubScript 创建原生 Tc 公式，展示 H₃S 复算而非 203 K，不以图片替代公式。
+- [x] 至少五个表格：方向、资产清单、状态时间线、科学边界、勘误与开放边界；图件在资产表后、解释前。
+- [x] 十条原生脚注覆盖十项来源，并用回归测试核对每个关键论断与来源 ID。
+- [x] `check-docx` 后构建并运行两个测试套件；最终视图逐页检查，退出 4/5/6 不重试，不使用 LibreOffice。
+- [x] 记录页数、逐页观察、版式修正、渲染器限制和 DOCX SHA-256。
 
 ### Task 4：fresh 回归与交付
 
-- [ ] 两套测试、JSON、DOCX 哈希、`docx.py validate` 和 `git diff --check` 全部退出 0。
-- [ ] SVG 和提取文本只通过 `.gitattributes` 保留原始空白，PDF 标 binary。
+- [x] 两套测试、JSON、DOCX 哈希、`docx.py validate` 和 `git diff --check` 全部退出 0。
+- [x] SVG 和提取文本只通过 `.gitattributes` 保留原始空白，PDF 标 binary。
 - [ ] 仅暂存本批文件，提交 `docs: audit technical delivery and validation evidence`。
 - [ ] 推送 `audit/room-temp-technical-docs`，核对远端哈希，不合并主分支。
 - [ ] 记录最终交付并继续杂志设计和项目介绍，保持全库目标 active。

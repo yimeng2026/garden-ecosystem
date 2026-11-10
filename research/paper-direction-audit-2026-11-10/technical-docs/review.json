@@ -1,0 +1,226 @@
+{
+  "schema": "technical-docs-audit-v1",
+  "date": "2026-11-10",
+  "scope": "五份技术文档及当前资产；只审计，不修改原文，不重跑计算或实验。",
+  "sources": [
+    {
+      "id": "delivery_summary",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/10-技术文档/01-交付摘要.md",
+      "sha256": "957e71d98c74e813bed8780614552b20b0802f0ec6c4c598e2f3a39d2c49cdfc",
+      "read_only": true
+    },
+    {
+      "id": "final_report",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/10-技术文档/02-最终报告.md",
+      "sha256": "563b2fae7222a9ac9ccec3fac849b467e9ae46d571e99def0ef423a9f878e667",
+      "read_only": true
+    },
+    {
+      "id": "progress_report",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/10-技术文档/03-进度报告.md",
+      "sha256": "a4ffcdc575a2d9f0ae21108b5679856ed022c827bdd549020dc1f3be59d524bb",
+      "read_only": true
+    },
+    {
+      "id": "quality_progress",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/10-技术文档/04-质量进展.md",
+      "sha256": "0da15ed8122b1908bb8ce155956aebd55166330ca094982f81c6637624354d64",
+      "read_only": true
+    },
+    {
+      "id": "integration_checklist",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/10-技术文档/05-整合检查清单.md",
+      "sha256": "1510c3bc360560a1b131c9352616cd28717691abee41ff3951231a65d26d2909",
+      "read_only": true
+    },
+    {
+      "id": "artifact_inventory",
+      "path": "sources/artifact-inventory.json",
+      "sha256": "9f2feddf7049e236a507f3e4eae62f0e441ecd21644d03c25933a73ce0f52c81",
+      "read_only": true
+    },
+    {
+      "id": "main_claims_review",
+      "path": "main-claims/review.json",
+      "sha256": "e9ac6ff0bc88f11b1c2c91ae61ce398a05fc077815803f48669b46536d6f2f45",
+      "read_only": true
+    },
+    {
+      "id": "validation_review",
+      "path": "validation-materials/review.json",
+      "sha256": "17eaa27d30df6849f752e3712d563ebe492ae394ea9c74b1b072ac0755acb491",
+      "read_only": true
+    },
+    {
+      "id": "methods_review",
+      "path": "room-temp-methods/review.json",
+      "sha256": "f30d15d8665644d11957166efaea95d59f7a742037dc697b737704cd15dc9e21",
+      "read_only": true
+    },
+    {
+      "id": "handbook_review",
+      "path": "handbook-chapters/review.json",
+      "sha256": "0394b996c271a6ca24b4692d7bd078b4c0fa8925eefde6df0347a478f298ac48",
+      "read_only": true
+    }
+  ],
+  "source_lineage": {
+    "research_program_count": 1,
+    "decision": "五份文档属于同一研究纲领的进度、质量与交付叙事，不是五个独立新理论。"
+  },
+  "directions": [
+    {
+      "id": "artifact_existence",
+      "role": "压缩包、哈希、图件、引用库、版本和实际路径的可验证资产清单",
+      "closed": "压缩包、图、引用库缺失与四个 LaTeX、替代 Lean／SI 的存在状态已固定。",
+      "unfinished": "最终压缩包、全部图件、完整引用库、全格式版本和 MD5 验证未闭合。",
+      "next": "以实际路径和哈希生成资产清单，交付前逐项验收，不接受口头完成。"
+    },
+    {
+      "id": "status_evidence",
+      "role": "最终 100%、运行中、模板和占位状态的时间线与一致性治理",
+      "closed": "最终 100% 与 A／D 运行中、质量深化中和模板清单的矛盾已定位。",
+      "unfinished": "历史状态、当前状态和交付状态没有统一证据源。",
+      "next": "以任务状态机和实际验收记录替代静态完成叙事，保留时间戳。"
+    },
+    {
+      "id": "scientific_validation",
+      "role": "公式、评分、Lean、SI、实验角色和证据等级验证",
+      "closed": "H₃S 复算、评分缺口、Lean 未编译、SI 模板和实验角色已核清。",
+      "unfinished": "公式链、评分卡、Lean 构建、DFT 输入、声子谱和独立实验未闭合。",
+      "next": "先完成最小科学垂直切片，再恢复验证通过与可发表措辞。"
+    },
+    {
+      "id": "delivery_governance",
+      "role": "把整合清单转化为带资产、命令、退出码和责任边界的验收任务",
+      "closed": "TEMPLATE／PARTIAL／PLACEHOLDERS 与实际交付缺口已对应。",
+      "unfinished": "最终资产、全部质量检查、作者信息和投稿前审查未完成。",
+      "next": "按资产、脚本、验证、复核四列验收，失败项保持未完成。"
+    }
+  ],
+  "evidence": {
+    "status": {
+      "final_100_claimed": true,
+      "a_and_d_running": true,
+      "quality_deepening_ongoing": true,
+      "checklist_template": true,
+      "contradiction": true
+    },
+    "assets": {
+      "scope": "current papers/room_temp_sc workspace; absence means not verified here, not proof of historical nonexistence",
+      "tar_exists": false,
+      "md5_verifiable": false,
+      "claimed_md5": "6147303abc3ec02cfea5f75ee1fe4b45",
+      "figures_found": 0,
+      "references_enhanced_found": 0,
+      "prl_tex_exists": false,
+      "claimed_markdown_missing": true,
+      "tex_variants_present": 4,
+      "tex_variant_paths": {
+        "manuscript.tex": true,
+        "versions/manuscript_nature.tex": true,
+        "versions/manuscript_science.tex": true,
+        "versions/manuscript_arxiv.tex": true
+      },
+      "expected_lean_exists": false,
+      "alternate_lean_exists": true,
+      "expected_si_exists": false,
+      "alternate_si_exists": true,
+      "si_placeholder_count": 31,
+      "negative_result_scope_limited": true
+    },
+    "science": {
+      "h3s_computed_tc_k": 161.08184379177882,
+      "h3s_claimed_tc_k": 203.0,
+      "scoring_rubric_available": false,
+      "lean_build_passed": false,
+      "direct_meissner_completed": false,
+      "independent_positive_replication": false,
+      "pnas_is_prediction": true
+    },
+    "metadata": {
+      "delivery_date": "2025-04-19",
+      "cited_breakthrough_month": "2025-10",
+      "date_precedes_cited_breakthrough": true
+    }
+  },
+  "corrections": [
+    {
+      "id": "status_contradiction",
+      "severity": "P0",
+      "finding": "最终 100% 与 A／D 运行中、质量深化中和模板清单并存。",
+      "action": "改为状态矛盾未解决，按实际验收记录更新，不宣称完成。"
+    },
+    {
+      "id": "tar_md5",
+      "severity": "P0",
+      "finding": "声称的 63KB 压缩包当前未找到，MD5 不可验证。",
+      "action": "标为资产未验证；重新生成后记录路径、大小和实际哈希，不沿用旧 MD5。"
+    },
+    {
+      "id": "figures_references",
+      "severity": "P0",
+      "finding": "99 条引用库和六张图当前未找到。",
+      "action": "标为缺失资产，补齐前不写引用和可视化已完成。"
+    },
+    {
+      "id": "versions",
+      "severity": "P1",
+      "finding": "PRL 和所称 Markdown 对应文件未找到，多版本只部分存在。",
+      "action": "保留四个已存在 LaTeX 文件，其余版本列为未竟，不写全格式完成。"
+    },
+    {
+      "id": "metadata_time",
+      "severity": "P1",
+      "finding": "交付日期 2025-04-19 早于所引 2025-10 突破。",
+      "action": "核对版本血缘和实际生成时间，只标元数据矛盾，不判造假。"
+    },
+    {
+      "id": "formula_scoring",
+      "severity": "P0",
+      "finding": "H₃S 公式复算约 161.081844 K 且评分无规则，B／C 路仍写完成。",
+      "action": "科学验证保持未闭合，先修公式链和公开评分卡，再讨论完成度。"
+    },
+    {
+      "id": "lean_si",
+      "severity": "P0",
+      "finding": "Lean 未编译且 SI 有 31 处占位，仍写不会报错和验证完成。",
+      "action": "保持草案与模板状态，清偿证明债务并补齐 DFT 输入、声子谱和日志。"
+    },
+    {
+      "id": "experimental_roles",
+      "severity": "P0",
+      "finding": "Song 与 PNAS 被写成完美实验验证，直接 Meissner 和独立复现未确立。",
+      "action": "分开作者预印本、理论预测和独立复现，不写完美验证或可发表保证。"
+    }
+  ],
+  "open_boundaries": {
+    "tar_verified": false,
+    "figures_verified": false,
+    "references99_verified": false,
+    "scientific_validation": false,
+    "delivery_ready": false,
+    "full_repository_audit": false
+  },
+  "figure": {
+    "svg": "technical-status-evidence.svg",
+    "png": "technical-status-evidence.png",
+    "labels": [
+      "完成状态 100%",
+      "TEMPLATE",
+      "room_temp_sc_paper_FINAL_v2.tar.gz",
+      "references_enhanced.bib",
+      "manuscript_prl.tex"
+    ],
+    "caption": "图 1　交付状态与实际资产不能互相替代",
+    "insert_after": "资产清单表",
+    "insert_before": "结果解释",
+    "completion_percentage_plotted": false
+  },
+  "verification_scope": {
+    "source_documents_modified": false,
+    "new_dft_lean_or_experiment": false,
+    "tar_or_figures_rebuilt": false,
+    "full_repository_audit": false
+  }
+}

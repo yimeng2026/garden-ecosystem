@@ -1,0 +1,5 @@
+# Preserve generated evidence verbatim.
+technical-status-evidence.svg whitespace=-trailing-space
+sources/*.pdf binary
+sources/*.txt whitespace=-trailing-space
+sources/*.csv whitespace=-trailing-space

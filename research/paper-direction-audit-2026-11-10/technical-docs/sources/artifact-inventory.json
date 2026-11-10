@@ -1,0 +1,23 @@
+{
+  "scope": "current papers/room_temp_sc workspace; absence means not verified here, not proof of historical nonexistence",
+  "tar_exists": false,
+  "md5_verifiable": false,
+  "claimed_md5": "6147303abc3ec02cfea5f75ee1fe4b45",
+  "figures_found": 0,
+  "references_enhanced_found": 0,
+  "prl_tex_exists": false,
+  "claimed_markdown_missing": true,
+  "tex_variants_present": 4,
+  "tex_variant_paths": {
+    "manuscript.tex": true,
+    "versions/manuscript_nature.tex": true,
+    "versions/manuscript_science.tex": true,
+    "versions/manuscript_arxiv.tex": true
+  },
+  "expected_lean_exists": false,
+  "alternate_lean_exists": true,
+  "expected_si_exists": false,
+  "alternate_si_exists": true,
+  "si_placeholder_count": 31,
+  "negative_result_scope_limited": true
+}
