@@ -138,3 +138,17 @@ missing_from_word 17
 缺失范围为 K1a 群完备化泛性质、K1b 单射性与全消去律，以及 15 个 K2 补记（从幂等矩阵表示例到商层像模同构类）。因此当前 Word 是历史版本，不能作为最新 Markdown 总账的同步交付件。此问题登记为 **P1 文档同步缺陷**；结构验证通过的历史记录不能替代内容完整性检查。
 
 `strength-review-current-audit/` 是未提交的只读审查中间目录，不是交付件。后续更新 Word 时必须保留原文件、重新验证 OOXML／OPC、检查全部页面，并复核这 17 节均实际出现；在完成这些步骤前，不宣称 Word 已同步。
+
+### 验证覆盖与再生成风险补记
+
+在同一缺节状态下执行：
+
+```bash
+python "research\paper-direction-audit-2026-11-10\scripts\verify_strength_delivery.py"
+```
+
+实际退出码为 **0**，输出 `{"status": "pass", "passed": 16, "total": 16}`；随后独立内容比较仍输出 `missing_from_word 17`。这证明旧验证只覆盖 55 条记录、两张表、目录域、公式、页眉页码、图像资产和历史渲染证据，**没有覆盖后续 17 节正文是否存在**，不能用于否定本次同步缺陷。
+
+只读审查还发现 `scripts/render_strength_review.py` 会分别重写 `strength-review.json`、`strength-review-summary.json` 和 `STRENGTH_SERIES_REVIEW.md`。该脚本生成的是早期基线，不包含后续 resolution 字段和 17 节补记；在 preservation 测试与增量生成设计落地前，直接重跑可能覆盖后续成果。此项登记为 **P1 再生成覆盖风险**。
+
+后续修复必须先添加两类失败测试：其一，Word 缺少任一补记标题时失败；其二，基础再生成不得删除既有 resolution 与补记。测试确认能捕获当前缺陷后，才能修改生成或同步流程；最终仍需独立执行 OOXML 验证和逐页视觉检查。
