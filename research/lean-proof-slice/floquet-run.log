@@ -12,3 +12,32 @@ DriveApprox 使用 |ω_drive - 2 * Δ / ℏ| ≤ ε 的显式绝对误差界，�
 首次主测试：退出码 1；text_of 生成表达式缺少右括号，属测试脚本语法错误，已修正。
 修正后主测试：退出码 1；setUpClass ERROR；FileNotFoundError: floquet-approximation.json；Ran 0 tests；FAILED (errors=1)。
 判定：符合预期 RED，语义证据对象尚未生成；零测试发现保护生效。
+
+[definition-and-zero-error-proofs]
+FloquetApproximation.lean 已创建：DriveApprox 使用显式绝对误差界，未引入 HasEquiv。
+真实编译：退出码 0；driveApprox_unfold、driveApprox_zero_exact、driveApprox_of_exact 均只依赖 [propext, Classical.choice, Quot.sound]，无 sorryAx。
+audit_floquet_approximation.py：退出码 0；floquet-approximation.json SHA-256=cbb0a2a7e293f98374b2b393ab627b2210b1d644ba0d2ba7f72cad8f76a62ee0。
+verify_floquet_approximation.py：退出码 0；Ran 4 tests；OK。
+主合同此阶段退出码 1；Ran 6 tests；4 项通过，仅 FLOQUET_APPROXIMATION.docx 和目录映射缺失，符合阶段预期。
+
+[word-and-visual-qa]
+对照图使用 ASCII DriveApprox 和 HasEquiv Real，无下标或 ℝ 缺字。
+docx.py build：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+主合同：退出码 0；Ran 6 tests；OK。
+独立复核：退出码 0；Ran 4 tests；OK。
+最终渲染：退出码 0；3 页、3 页渲染、无近空白页；目录 [2,3,3]。
+逐页观察：零误差公式、三个定理、对照图、原文件边界、工具链和三条脚注完整，无裁切或孤立末页。
+渲染器仍报告 content-loss/low w:lvlOverride x1；逐页未见编号导致的内容缺失。未使用 LibreOffice。
+
+[final-validation-and-fresh-regression]
+docx.py validate FLOQUET_APPROXIMATION.docx：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+最终 DOCX SHA-256：4564c1d088989b0a743e159bd40cee6f3d74ecc078bf1ea1c22c4c1338bcbf28。
+主合同：退出码 0；Ran 6 tests；OK。
+独立复核：退出码 0；Ran 4 tests；OK。
+audit_floquet_approximation.py 再次真实编译：退出码 0，三个定理仅有标准三公理。
+JSON 解析、原文件哈希、编译退出码、三页人工验收和 DOCX 哈希一致性：退出码 0。
+git diff --check：退出码 0，无空白错误。
+
+[scope-guard]
+本次只清偿误差语义与零误差双向关系，不证明 Floquet 增强，不验证物理有效性、材料预测、数值模型或实验复现。
+原文件未修改，原文件直译仍不兼容，原三条定理的 sorryAx 审计仍不可用；全库目标保持 active。

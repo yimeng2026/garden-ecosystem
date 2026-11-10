@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:/migration/toolchains/elan/home/bin/lake.exe",
+    "env",
+    "lean",
+    "-o",
+    ".lake/build/lib/lean/FloquetApproximation.olean",
+    "FloquetApproximation.lean"
+  ],
+  "cwd": "D:\\migration\\lean-proof-slice-build",
+  "exit_code": 0,
+  "stdout": "'Sylva.RoomTempSuperconductivity.driveApprox_unfold' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Sylva.RoomTempSuperconductivity.driveApprox_zero_exact' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Sylva.RoomTempSuperconductivity.driveApprox_of_exact' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "stderr": ""
+}
