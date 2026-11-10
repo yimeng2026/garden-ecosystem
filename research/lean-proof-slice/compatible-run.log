@@ -1,0 +1,16 @@
+Lean 兼容性清偿切片验证记录
+日期：2026-11-11
+分支：fix/lean-compatible-definitions
+基线：cc6a1b5532c19232bc530340ec7dac66d4861cd9
+
+[scope]
+只新增 bcsCriticalTemp 与 debyeModel 两个定义及两个 rfl 展开。
+使用 Real.eulerMascheroniConstant 和显式 ω₀ : ℝ／debyeModel 类型。
+不处理 HasEquiv，不证明同位素比值、弱耦合极限或 Floquet 增强，不宣称物理有效性。
+原文件只读，哈希保持 1971e95d7b375c24778d3adae8a1ab3be4c5abeb1ee8b79a2b1f347b7aa00439。
+
+[RED: missing compatible-definitions.json]
+命令：python research/lean-proof-slice/test_compatible_definitions.py -v
+退出码：1
+关键输出：setUpClass ERROR；FileNotFoundError: compatible-definitions.json；Ran 0 tests；FAILED (errors=1)。
+判定：符合预期 RED，兼容定义证据对象尚未生成；零测试发现保护生效。
