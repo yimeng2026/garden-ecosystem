@@ -46,3 +46,40 @@ WCAG 相对亮度复算：#B829DD/#0A0A0F=4.137746343925；#606070/#0A0A0F=3.202
 [contract-commit-whitespace-gate]
 首次 git diff --cached --check：退出码 2；规格第 3–4 行两处 trailing whitespace。
 只删除这两处行尾空格，不改证据；随后重新暂存并检查。
+
+[source-inventory-and-independent-checks]
+inspect_sources.py：退出码 0；sources=17，LF-MD5=7/7，原路径缺失=7，PDF=6，InDesign=0，压缩包未找到，生成器未执行。
+PDF 页数：Complete=108，Full=22，RoomTempSC=15，Volume1=118，Volume2=21，Volume3=7；首页均 A4。
+六份 PDF 均为 ReportLab 生产者，未检出 Output Intent 或 PDF/X 标记；解析时出现 incorrect startxref pointer(1) 警告，故只做元数据记录，不声称 PDF 完整性或印前验证。
+sources/source-inventory.json SHA-256：ad24553eeffdf5753306c19ecf265025e27d48d4cbf9ae4260822934e21420d5。
+verify_primary_sources.py：退出码 0；Ran 7 tests；OK。
+build_review.py：退出码 0；documents=11，directions=4，corrections=12；review.json SHA-256=f025cef1935a604b67fe1c0504d6cdfc377ab2c69db450d3fd2da6034364b3bb。
+主合同此时退出码 1；Ran 8 tests；7 项通过，仅 REVIEW.docx 缺失，符合阶段预期。
+
+[figure-review]
+首版证据图：网格图例与底部说明重叠，两个低对比度数值靠近门槛线。
+修正为条内直接标注“标称／复算”，低对比度数值放入条内；重新读取图件后未见文字裁切或重叠。
+
+[native-word-and-layout]
+check-docx：退出码 0；Materializing vendored docx 9.7.1；FOUND docx。
+docx.py build：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+首次最终视图：退出码 0；7 页、7 页渲染、无近空白页；后三节强制分页留白过多。
+取消后三节强制分页，保留封面、来源和资产分页；第二次最终视图为 5 页。
+新增目录与 11 条脚注映射合同后，主测试退出码 1；Ran 9 tests；仅目录缓存错误，旧值 [2,4,5,7,8,9]。
+按实际页面修正目录为 [2,3,4,4,4,5]，重新构建后主合同退出码 0，Ran 9 tests，OK；独立来源复核退出码 0，Ran 7 tests，OK。
+最终渲染：退出码 0；5 页、5 页渲染、无近空白页。
+逐页观察：第 1 页目录正确；第 2 页四方向和 17 项来源完整；第 3 页资产、PDF 和图件完整；第 4 页 11 篇裁决、原生公式、科学边界和勘误表头完整；第 5 页跨页表头、开放边界和结尾完整。
+渲染器仍报告 content-loss/low w:lvlOverride x1；逐页未见编号导致的内容缺失。未使用 LibreOffice。
+本视觉验收只针对 REVIEW.docx，不针对六份杂志 PDF。
+
+[final-validation-and-fresh-regression]
+docx.py validate REVIEW.docx：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+最终 DOCX SHA-256：c1a8dfa453c5858fd0c4b1915990ee7af4e5fd5c3787a9397dfdb096493b0977。
+主合同：退出码 0；Ran 9 tests；OK。
+独立来源复核：退出码 0；Ran 7 tests；OK。
+JSON 解析、17 来源、11 文档、12 勘误、5 页人工验收和 DOCX 哈希一致性：退出码 0。
+git diff --check：退出码 0；只有 LF/CRLF 提示，无空白错误。
+
+[scope-guard]
+11 份原文未修改；原生成器未运行；未生成新印刷 PDF；未进行 PDF/X 认证、实验验证或外部事实逐项回源。
+本批完成只表示审计交付完成，不表示杂志科学生产、网页无障碍或印前交付已经通过。全库审计继续。

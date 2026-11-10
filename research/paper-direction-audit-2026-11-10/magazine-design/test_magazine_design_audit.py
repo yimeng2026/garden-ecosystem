@@ -59,6 +59,20 @@ class MagazineDesignAuditTests(unittest.TestCase):
     def test_generator_and_assets(self):
         row = self.data["evidence"]["assets"]
         self.assertEqual(row["pdf_count"], 6)
+        self.assertEqual(
+            row["pdf_pages"],
+            {
+                "Sylva_Magazine_Complete.pdf": 108,
+                "Sylva_Magazine_Full.pdf": 22,
+                "Sylva_Magazine_RoomTempSC.pdf": 15,
+                "Sylva_Magazine_Volume1.pdf": 118,
+                "Sylva_Magazine_Volume2.pdf": 21,
+                "Sylva_Magazine_Volume3.pdf": 7,
+            },
+        )
+        self.assertTrue(row["all_first_pages_a4"])
+        self.assertFalse(row["any_pdf_x_marker"])
+        self.assertFalse(row["any_output_intent"])
         self.assertEqual(row["indd_templates_found"], 0)
         self.assertFalse(row["vi_asset_pack_found"])
         self.assertFalse(row["claimed_archive_found"])
@@ -138,6 +152,57 @@ class MagazineDesignAuditTests(unittest.TestCase):
         self.assertIn(b"PAGE", footer)
         self.assertIn("杂志设计", header.decode("utf-8"))
         self.assertTrue(any(name.startswith("word/media/") for name in names))
+
+    def test_toc_cache_and_footnote_claim_mapping(self):
+        import xml.etree.ElementTree as ET
+
+        namespace = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+        ns = {"w": namespace}
+        with zipfile.ZipFile(ROOT / "REVIEW.docx") as package:
+            root = ET.fromstring(package.read("word/document.xml"))
+
+        def text_of(element):
+            return "".join(node.text or "" for node in element.findall(".//w:t", ns))
+
+        toc = root.find(".//w:sdt", ns)
+        self.assertIsNotNone(toc)
+        cached = [text_of(p) for p in toc.findall(".//w:p", ns)]
+        titles = [
+            "一、方向与来源血缘",
+            "二、资产与生成链",
+            "三、11 份文档逐篇裁决",
+            "四、计算、科学与无障碍",
+            "五、十二项分级勘误",
+            "六、开放边界与后续",
+        ]
+        for title, page in zip(titles, [2, 3, 4, 4, 4, 5]):
+            self.assertIn(f"{title}{page}", cached)
+
+        expected_references = {
+            "七份组织后设计文档在 CRLF": {"1"},
+            "历史 file_index.json": {"2"},
+            "交付报告声称 67 KB": {"4"},
+            "generate_pdf.py 对每份设计文档": {"3"},
+            "杂志简介把 McMillan": {"5"},
+            "既有手册审计明确保留": {"6"},
+            "页面设计的数据表把 H₂S": {"7"},
+            "网页手册自己要求普通文本": {"8"},
+            "网聊手册包含量子通信": {"9"},
+            "内容架构标记 READY_FOR_PRODUCTION": {"10"},
+            "前批技术文档审计同样要求": {"11"},
+        }
+        referenced = set()
+        paragraphs = root.findall(".//w:p", ns)
+        for marker, expected in expected_references.items():
+            matches = [p for p in paragraphs if marker in text_of(p)]
+            self.assertEqual(len(matches), 1, marker)
+            actual = {
+                node.attrib[f"{{{namespace}}}id"]
+                for node in matches[0].findall(".//w:footnoteReference", ns)
+            }
+            self.assertEqual(actual, expected, marker)
+            referenced.update(actual)
+        self.assertEqual(referenced, {str(index) for index in range(1, 12)})
 
 
 def run_all_tests():

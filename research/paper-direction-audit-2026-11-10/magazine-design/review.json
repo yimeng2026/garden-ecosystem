@@ -1,0 +1,479 @@
+{
+  "schema": "magazine-design-audit-v1",
+  "date": "2026-11-10",
+  "scope": "11 份杂志设计文档及当前生产资产；只审计，不修改原文，不运行危险生成器。",
+  "sources": [
+    {
+      "id": "magazine_readme",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/11-杂志设计/01-杂志说明.md",
+      "sha256": "8462664575ea8c2be26f87edb185bd92ad5bd79ed05edc4d9b83a86508f46920",
+      "read_only": true
+    },
+    {
+      "id": "magazine_intro",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/11-杂志设计/02-杂志简介.md",
+      "sha256": "7137a7552f2eefd97eee3681da904a35d4bffcb68af12c0e063620f6106f2b3d",
+      "read_only": true
+    },
+    {
+      "id": "pixel_system",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/11-杂志设计/03-黑白像素系统.md",
+      "sha256": "2b05baac70fe8d8760df027d2d625f2801c5c0e947ece6beb3de93a4defe31b2",
+      "read_only": true
+    },
+    {
+      "id": "vi_design",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/11-杂志设计/04-VI设计.md",
+      "sha256": "a7508aeda44598c028c200c0b3bdd1f30807f652c9cc26c88b9171dbefe52826",
+      "read_only": true
+    },
+    {
+      "id": "layout_system",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/11-杂志设计/05-排版系统.md",
+      "sha256": "4602f8893cf31707858ff373c76068d2f080283599cc5894f2ee741d332089f8",
+      "read_only": true
+    },
+    {
+      "id": "content_architecture",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/11-杂志设计/06-内容架构.md",
+      "sha256": "97cfb31cdb3269f3645f5f953b418d001139137eadfae2f562aa37d61db3670a",
+      "read_only": true
+    },
+    {
+      "id": "web_layout",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/11-杂志设计/07-网页风格排版.md",
+      "sha256": "6c1d2e6d183b63d62a8a7355180f3c6fcbf6711da81a189ae959fe8430c943c4",
+      "read_only": true
+    },
+    {
+      "id": "chat_culture",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/11-杂志设计/08-网聊文化融入.md",
+      "sha256": "fe0dbae3b98307a02b32a286055657e7ecb604f31d621e579789880fe6746a7b",
+      "read_only": true
+    },
+    {
+      "id": "page_designs",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/11-杂志设计/09-页面设计.md",
+      "sha256": "740e6d85ceb025e263f62d1772c8c60270836a39d595c07bf7e696ac71400036",
+      "read_only": true
+    },
+    {
+      "id": "print_guide",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/11-杂志设计/10-印刷指南.md",
+      "sha256": "d7ea6c943ea3c33ed16c4d41cbda3e8e5caed48573a3f4104aa8d0a09571ef72",
+      "read_only": true
+    },
+    {
+      "id": "design_notes",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/11-杂志设计/11-设计笔记.md",
+      "sha256": "71780e9bce7b365779a7b462091d405100f17508da378d3cb020dc0cc8cc2221",
+      "read_only": true
+    },
+    {
+      "id": "generator",
+      "path": "toe-sylva-audit/papers/room_temp_sc/magazine/generate_pdf.py",
+      "sha256": "0d1a07296af61de49ed651f6210e237e561da6e77f9859c5795d3d56a778460c",
+      "read_only": true
+    },
+    {
+      "id": "delivery_report",
+      "path": "toe-sylva-audit/papers/room_temp_sc/magazine/DELIVERY_REPORT.md",
+      "sha256": "95bb50a5188edc8ac904bf5e7c057212d8606a711592222103ccd904ca82c10f",
+      "read_only": true
+    },
+    {
+      "id": "file_index",
+      "path": "toe-sylva-audit/papers/room_temp_sc/magazine/file_index.json",
+      "sha256": "8dab54d9cb830f649eed67574fba3fc7c22d85b309f274cfa852d46e8d43d3da",
+      "read_only": true
+    },
+    {
+      "id": "checksums",
+      "path": "toe-sylva-audit/papers/room_temp_sc/magazine/checksums.md5",
+      "sha256": "b5e402be6adc80031d48994d4b80b6e81ea9b26d73435e791c257517e72e0b69",
+      "read_only": true
+    },
+    {
+      "id": "handbook_review",
+      "path": "handbook-chapters/review.json",
+      "sha256": "0394b996c271a6ca24b4692d7bd078b4c0fa8925eefde6df0347a478f298ac48",
+      "read_only": true
+    },
+    {
+      "id": "technical_review",
+      "path": "technical-docs/review.json",
+      "sha256": "d27fca5597387c24e9d0038e971055566522441a1f1f1dd8a0dd7dfe662e305f",
+      "read_only": true
+    }
+  ],
+  "source_lineage": {
+    "research_program_count": 1,
+    "new_theory_count": 0,
+    "development_direction_count": 4,
+    "decision": "11 份文档共同构成科学传播与制作纲领，不是 11 个新理论；新增的是公众传播与证据治理方向。"
+  },
+  "directions": [
+    {
+      "id": "editorial_evidence",
+      "role": "面向公众的科学传播、引文与证据等级治理",
+      "closed": "必然性、实验、H₂S 单位、99% 能效、绝对安全和引文风险已定位。",
+      "unfinished": "其余历史、价格、引文和案例未逐项回源，编辑证据卡尚未形成。",
+      "next": "建立逐句来源—证据等级—允许措辞表，模拟内容明确标记，校验图标不得替代验证。"
+    },
+    {
+      "id": "computational_design",
+      "role": "把网格、开本、页数、色彩和版本变成可复算设计合同",
+      "closed": "两套网格、页数冲突和两项对比度失败已复算。",
+      "unfinished": "DPI、色彩转换、版本页数和唯一设计令牌尚未统一。",
+      "next": "先确定版本清单与物理单位，再由脚本生成和检查设计令牌，禁止手工互相照抄。"
+    },
+    {
+      "id": "accessible_media",
+      "role": "网页、AR、音频和网聊互动的可访问性与真实数据边界",
+      "closed": "普通文本对比度、减弱动效和长按键盘替代缺口已识别。",
+      "unfinished": "组件未实现，键盘／读屏／减弱动效和真实互动数据未验收。",
+      "next": "以最小网页切片验证键盘等效操作、减弱动效、焦点、对比度和模拟数据标签。"
+    },
+    {
+      "id": "production_provenance",
+      "role": "迁移、生成器、PDF、模板、权利和印前交付溯源",
+      "closed": "七项 LF-MD5 血缘、六份 PDF、模板／资源包／压缩包缺口和生成器风险已核清。",
+      "unfinished": "完整生成链、PDF/X、字体与图像权利、压缩包和印前签字未闭合。",
+      "next": "改为只读输入、明确输出目录和失败非零退出，再建立资产哈希与印前验收清单。"
+    }
+  ],
+  "document_assessments": [
+    {
+      "id": "magazine_readme",
+      "title": "01-杂志说明",
+      "represents_new_theory": false,
+      "direction_ids": [
+        "computational_design",
+        "production_provenance"
+      ],
+      "role": "设计系统入口与快速开始",
+      "unfinished": "七项原路径缺失，规格与其他文档不一致。",
+      "next": "让入口指向真实资产，区分设计手册、预览 PDF 和完整杂志。"
+    },
+    {
+      "id": "magazine_intro",
+      "title": "02-杂志简介",
+      "represents_new_theory": false,
+      "direction_ids": [
+        "editorial_evidence",
+        "computational_design"
+      ],
+      "role": "首刊公众叙事与规格摘要",
+      "unfinished": "数学必然、13 次实验、6% 和 106 页缺乏当前验收。",
+      "next": "按既有科学审计降级措辞，并建立期号—版本—页数清单。"
+    },
+    {
+      "id": "pixel_system",
+      "title": "03-黑白像素系统",
+      "represents_new_theory": false,
+      "direction_ids": [
+        "computational_design",
+        "production_provenance"
+      ],
+      "role": "黑白像素与印刷工艺方案",
+      "unfinished": "8px／8mm、A4／256×192mm 和字体／互动资产未统一。",
+      "next": "定义 DPI 与物理尺寸，提供可验证字体、图像和交互资源。"
+    },
+    {
+      "id": "vi_design",
+      "title": "04-VI设计",
+      "represents_new_theory": false,
+      "direction_ids": [
+        "computational_design",
+        "accessible_media",
+        "production_provenance"
+      ],
+      "role": "品牌视觉识别与跨媒介令牌",
+      "unfinished": "色值、Pantone、断点、资源链接和联系方式未统一或核实。",
+      "next": "冻结唯一令牌来源，核验资源包、域名与使用授权。"
+    },
+    {
+      "id": "layout_system",
+      "title": "05-排版系统",
+      "represents_new_theory": false,
+      "direction_ids": [
+        "editorial_evidence",
+        "computational_design",
+        "production_provenance"
+      ],
+      "role": "印刷级网格、图表与工艺规范",
+      "unfinished": "12 栏网格算不通，99% 能效和完成标记越界。",
+      "next": "修正几何和示例，完成印前检查前删除生产完成语义。"
+    },
+    {
+      "id": "content_architecture",
+      "title": "06-内容架构",
+      "represents_new_theory": false,
+      "direction_ids": [
+        "editorial_evidence",
+        "computational_design",
+        "production_provenance"
+      ],
+      "role": "栏目、内容分配与编辑流程",
+      "unfinished": "READY_FOR_PRODUCTION 与未核实新闻、案例、页数矛盾并存。",
+      "next": "完成事实核查和真实采访，统一页数后再审议生产状态。"
+    },
+    {
+      "id": "web_layout",
+      "title": "07-网页风格排版",
+      "represents_new_theory": false,
+      "direction_ids": [
+        "accessible_media",
+        "computational_design"
+      ],
+      "role": "响应式网页与数字阅读增强",
+      "unfinished": "两项色值不满足普通文本对比度，动效和组件未做可访问验收。",
+      "next": "加入减弱动效、键盘路径和自动对比度测试，再实现组件。"
+    },
+    {
+      "id": "chat_culture",
+      "title": "08-网聊文化融入",
+      "represents_new_theory": false,
+      "direction_ids": [
+        "editorial_evidence",
+        "accessible_media"
+      ],
+      "role": "网聊语言、引用与互动编辑规范",
+      "unfinished": "引文、绝对安全、坍缩解释和模拟互动数据缺少边界。",
+      "next": "区分直接引语／释义／虚构示例，提供非手势等效操作。"
+    },
+    {
+      "id": "page_designs",
+      "title": "09-页面设计",
+      "represents_new_theory": false,
+      "direction_ids": [
+        "editorial_evidence",
+        "computational_design",
+        "production_provenance"
+      ],
+      "role": "页面模板、数据表和输出规范",
+      "unfinished": "H₂S 单位归类、栏宽、引文、图片权利和占位 ISBN 未闭合。",
+      "next": "先修科学表格和网格，再核验模板、引文与出版信息。"
+    },
+    {
+      "id": "print_guide",
+      "title": "10-印刷指南",
+      "represents_new_theory": false,
+      "direction_ids": [
+        "production_provenance",
+        "computational_design"
+      ],
+      "role": "纸张、成本、供应商和验收建议",
+      "unfinished": "价格、供应商、PDF/X 与实际 PDF 未形成当前验收链。",
+      "next": "保留为询价与打样指南，标注日期并获取真实报价和印前报告。"
+    },
+    {
+      "id": "design_notes",
+      "title": "11-设计笔记",
+      "represents_new_theory": false,
+      "direction_ids": [
+        "editorial_evidence",
+        "accessible_media"
+      ],
+      "role": "品牌理念与跨媒介设计哲学",
+      "unfinished": "SEO、深色护眼和社群设想仍是主张或愿景。",
+      "next": "把价值主张与可测假设分开，以读者研究验证可读性。"
+    }
+  ],
+  "evidence": {
+    "lineage": {
+      "normalized_lf_md5_matches": 7,
+      "original_markdown_paths_missing": 7,
+      "organized_documents_present": 11,
+      "content_loss_inferred_from_raw_md5": false
+    },
+    "assets": {
+      "pdf_count": 6,
+      "pdf_pages": {
+        "Sylva_Magazine_Complete.pdf": 108,
+        "Sylva_Magazine_Full.pdf": 22,
+        "Sylva_Magazine_RoomTempSC.pdf": 15,
+        "Sylva_Magazine_Volume1.pdf": 118,
+        "Sylva_Magazine_Volume2.pdf": 21,
+        "Sylva_Magazine_Volume3.pdf": 7
+      },
+      "all_first_pages_a4": true,
+      "any_pdf_x_marker": false,
+      "any_output_intent": false,
+      "indd_templates_found": 0,
+      "vi_asset_pack_found": false,
+      "claimed_archive_found": false
+    },
+    "generator": {
+      "missing_design_docs": 7,
+      "preview_characters": 500,
+      "overwrites_three_source_docs": true,
+      "complete_magazine_generator": false,
+      "executed": false,
+      "execution_reason": "run() overwrites README.md, DESIGN_NOTES.md and PRINT_GUIDE.md in the read-only source directory"
+    },
+    "layout": {
+      "layout_grid_width_mm": 212,
+      "layout_claimed_text_width_mm": 174,
+      "layout_correct_column_mm": 10.833333333333334,
+      "page_grid_width_mm": 176,
+      "page_claimed_text_width_mm": 165,
+      "page_correct_column_mm": 10.083333333333334,
+      "intro_pages": 106,
+      "architecture_pages": 60,
+      "cover_story_allocated_pages": 14,
+      "cover_story_detailed_pages": 16
+    },
+    "editorial": {
+      "mcmillan_strict_proof_claim": true,
+      "experimental_13_and_6pct_claim": true,
+      "h2s_pressure_under_magnetic_field_column": true,
+      "energy_99pct_unverified": true,
+      "direct_quotes_unverified": true,
+      "absolute_quantum_security_claim": true,
+      "production_ready_claim": true,
+      "production_ready_supported": false
+    },
+    "accessibility": {
+      "contrast": [
+        {
+          "foreground": "#B829DD",
+          "background": "#0A0A0F",
+          "ratio_on_dark": 4.1377463439250315,
+          "passes_normal_text": false
+        },
+        {
+          "foreground": "#606070",
+          "background": "#0A0A0F",
+          "ratio_on_dark": 3.202043685500697,
+          "passes_normal_text": false
+        },
+        {
+          "foreground": "#A0A0B0",
+          "background": "#0A0A0F",
+          "ratio_on_dark": 7.665350344827359,
+          "passes_normal_text": true
+        },
+        {
+          "foreground": "#00D9FF",
+          "background": "#0A0A0F",
+          "ratio_on_dark": 11.63365734363651,
+          "passes_normal_text": true
+        },
+        {
+          "foreground": "#FF2A6D",
+          "background": "#0A0A0F",
+          "ratio_on_dark": 5.458897496118942,
+          "passes_normal_text": true
+        }
+      ],
+      "reduced_motion_specified": false,
+      "keyboard_long_press_alternative": false
+    }
+  },
+  "corrections": [
+    {
+      "id": "necessity",
+      "severity": "P0",
+      "finding": "02 将简化 McMillan 公式写成严格证明和数学必然。",
+      "action": "按手册审计改为指定模型与参数域内的条件性估算，删除普遍必然性。"
+    },
+    {
+      "id": "experimental_roles",
+      "severity": "P0",
+      "finding": "02 复述 13 次实验和仅 6% 误差，容易升级为独立验证。",
+      "action": "并列作者预印本、理论预测和独立复现状态，不写完美实验验证。"
+    },
+    {
+      "id": "h2s_units",
+      "severity": "P0",
+      "finding": "09 把 H₂S 的 155 GPa 放在临界磁场列。",
+      "action": "将 155 GPa 移至压力列并补充来源；磁场另列、注明温度条件，不混用单位。"
+    },
+    {
+      "id": "production_gate",
+      "severity": "P0",
+      "finding": "06 标 READY_FOR_PRODUCTION，但科学、资产和版本验收未闭合。",
+      "action": "状态退回草案，设置科学、设计、无障碍和印前四道独立验收门。"
+    },
+    {
+      "id": "grid_math",
+      "severity": "P1",
+      "finding": "05／09 两套 12 栏计算分别为 212／176mm，与标称 174／165mm 不符。",
+      "action": "采用由文本宽反算的 10.833333／10.083333mm 栏宽，或重定文本宽并统一全库。"
+    },
+    {
+      "id": "version_manifest",
+      "severity": "P1",
+      "finding": "106／60／96／48–64 页和多种开本并存，现有 PDF 又为 7–118 页。",
+      "action": "建立期号、媒介、版本、页数、生成器和哈希的唯一清单，禁止相互冒充。"
+    },
+    {
+      "id": "generator_contract",
+      "severity": "P1",
+      "finding": "生成器原路径七项缺失，只生成 500 字预览且覆写三份源文档。",
+      "action": "不运行原脚本；重构为只读输入、独立输出、完整内容和失败非零退出。"
+    },
+    {
+      "id": "accessibility",
+      "severity": "P1",
+      "finding": "霓虹紫／弱化灰对比度低于 4.5，未指定减弱动效和长按键盘替代。",
+      "action": "调整普通文本色并验证键盘、焦点、读屏和 prefers-reduced-motion。"
+    },
+    {
+      "id": "quotes_examples",
+      "severity": "P1",
+      "finding": "直接引语、99% 能效、MRI 比例、无限续航和绝对安全等缺少来源或限定。",
+      "action": "逐项回源并标注释义／示例；不能回源则删除或降级，不凭风格保留科学断言。"
+    },
+    {
+      "id": "rights_placeholders",
+      "severity": "P1",
+      "finding": "模板、图像权利、字体授权、占位 ISBN、域名和联系方式未核实。",
+      "action": "发布前建立授权与占位清除清单，示例 ISBN 不得进入正式版权页。"
+    },
+    {
+      "id": "simulated_metrics",
+      "severity": "P2",
+      "finding": "点赞、阅读、访谈和田野调查模板可能被误读为真实数据。",
+      "action": "显著标注模拟数据；真实报道需采访记录、同意与可追溯材料。"
+    },
+    {
+      "id": "color_tokens",
+      "severity": "P2",
+      "finding": "CMYK、Pantone、灰阶和断点在不同文档中不一致。",
+      "action": "以 ICC／打样和统一令牌为准，不把多套屏幕近似值当作已校准印刷色。"
+    }
+  ],
+  "open_boundaries": {
+    "scientific_claims_verified": false,
+    "production_ready": false,
+    "pdf_print_verified": false,
+    "web_accessibility_verified": false,
+    "archive_verified": false,
+    "full_repository_audit": false
+  },
+  "figure": {
+    "svg": "magazine-design-evidence.svg",
+    "png": "magazine-design-evidence.png",
+    "labels": [
+      "LF-MD5 7/7",
+      "500 字预览",
+      "212 mm",
+      "176 mm",
+      "4.137746",
+      "3.202044"
+    ],
+    "caption": "图 1　设计系统的内容血缘、几何复算与对比度门槛",
+    "insert_after": "资产与血缘表",
+    "insert_before": "逐文档裁决",
+    "completion_percentage_plotted": false
+  },
+  "verification_scope": {
+    "source_documents_modified": false,
+    "generator_executed": false,
+    "pdf_x_certified": false,
+    "external_fact_check_complete": false,
+    "full_repository_audit": false
+  }
+}
