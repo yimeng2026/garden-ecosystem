@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:/migration/toolchains/elan/home/bin/lake.exe",
+    "env",
+    "lean",
+    "-o",
+    ".lake/build/lib/lean/ProofSlice.olean",
+    "ProofSlice.lean"
+  ],
+  "cwd": "D:\\migration\\lean-proof-slice-build",
+  "exit_code": 0,
+  "stdout": "'Sylva.RoomTempSuperconductivity.allenDynesTc_unfold' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Sylva.RoomTempSuperconductivity.h3s_tc_prediction_unfold' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Sylva.RoomTempSuperconductivity.lah10_tc_prediction_unfold' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "stderr": ""
+}

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:/migration/toolchains/elan/home/bin/lake.exe",
+    "env",
+    "lean",
+    "-o",
+    ".lake/build/lib/lean/RoomTempSC_Formalization.olean",
+    "RoomTempSC_Formalization.lean"
+  ],
+  "cwd": "D:\\migration\\lean-proof-slice-build",
+  "exit_code": 1,
+  "stdout": "RoomTempSC_Formalization.lean:24:0: warning: \n'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by\n\nimport Mathlib.Basic.Real.Basic\nRoomTempSC_Formalization.lean:25:0: warning: \n'Mathlib.Data.Real.Sqrt' has been deprecated: please replace this import by\n\nimport Mathlib.Analysis.Real.Sqrt\nRoomTempSC_Formalization.lean:60:16: error(lean.unknownIdentifier): Unknown identifier `eulerMascheroni`\nRoomTempSC_Formalization.lean:79:10: error: unexpected token 'λ'; expected ')'\nRoomTempSC_Formalization.lean:87:10: error: unexpected token 'λ'; expected ')'\nRoomTempSC_Formalization.lean:105:15: error: Function expected at\n  ω_D\nbut this term has type\n  ?m.1\n\nNote: Expected a function because this term is being applied to the argument\n  M\n\nHint: The identifier `ω_D` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.\nRoomTempSC_Formalization.lean:106:26: error: Function expected at\n  ω_D\nbut this term has type\n  ?m.1\n\nNote: Expected a function because this term is being applied to the argument\n  M₁\n\nHint: The identifier `ω_D` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.\nRoomTempSC_Formalization.lean:107:28: error: Function expected at\n  ω_D\nbut this term has type\n  ?m.1\n\nNote: Expected a function because this term is being applied to the argument\n  M₂\n\nHint: The identifier `ω_D` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.\nRoomTempSC_Formalization.lean:126:10: error: unexpected token 'λ'; expected ')'\nRoomTempSC_Formalization.lean:137:10: error: unexpected token 'λ'; expected ')'\nRoomTempSC_Formalization.lean:172:41: error(lean.synthInstanceFailed): failed to synthesize instance of type class\n  HasEquiv ℝ\n\nHint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.\n",
+  "stderr": ""
+}

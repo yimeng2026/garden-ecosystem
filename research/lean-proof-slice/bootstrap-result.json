@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "archive": "D:\\migration\\toolchains\\elan\\downloads\\elan-x86_64-pc-windows-msvc.zip",
+  "archive_bytes": 2508099,
+  "archive_sha256": "fad2e980a191c15884cc1d80d170ffc5fa84f3774541020145b66d1a644c6111",
+  "extracted_files": [
+    "elan-init.exe"
+  ],
+  "elan_home": "D:\\migration\\toolchains\\elan\\home",
+  "lean_home": "D:\\migration\\toolchains\\elan\\home",
+  "lean_executable": "D:\\migration\\toolchains\\elan\\home\\bin\\lean.exe",
+  "lake_executable": "D:\\migration\\toolchains\\elan\\home\\bin\\lake.exe",
+  "path_modified": false,
+  "elan_version": {
+    "command": [
+      "D:\\migration\\toolchains\\elan\\bootstrap\\elan-init.exe",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "elan-init 4.2.4 (227caca13 2026-08-25)\n",
+    "stderr": ""
+  },
+  "install": {
+    "command": [
+      "D:\\migration\\toolchains\\elan\\bootstrap\\elan-init.exe",
+      "-y",
+      "--no-modify-path",
+      "--default-toolchain",
+      "leanprover/lean4:v4.35.0"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "info: default toolchain set to 'leanprover/lean4:v4.35.0'\n"
+  },
+  "lean_version": {
+    "command": [
+      "D:\\migration\\toolchains\\elan\\home\\bin\\lean.exe",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)\n",
+    "stderr": "warning: could not canonicalize path: 'D:\\migration\\toolchains\\elan\\home\\toolchains'\nwarning: could not canonicalize path: 'D:\\migration\\toolchains\\elan\\home\\toolchains'\nwarning: could not canonicalize path: 'D:\\migration\\toolchains\\elan\\home\\toolchains'\nwarning: could not canonicalize path: 'D:\\migration\\toolchains\\elan\\home\\toolchains'\nwarning: could not canonicalize path: 'D:\\migration\\toolchains\\elan\\home\\toolchains'\nwarning: could not canonicalize path: 'D:\\migration\\toolchains\\elan\\home\\toolchains'\nwarning: could not canonicalize path: 'D:\\migration\\toolchains\\elan\\home\\toolchains'\nwarning: could not canonicalize path: 'D:\\migration\\toolchains\\elan\\home\\toolchains'\ninfo: downloading https://releases.lean-lang.org/lean4/v4.35.0/lean-4.35.0-windows.tar.zst\ninfo: installing D:\\migration\\toolchains\\elan\\home\\toolchains\\leanprover--lean4---v4.35.0\n"
+  },
+  "lake_version": {
+    "command": [
+      "D:\\migration\\toolchains\\elan\\home\\bin\\lake.exe",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)\n",
+    "stderr": ""
+  }
+}

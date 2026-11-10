@@ -35,8 +35,7 @@ class LeanSliceTests(unittest.TestCase):
         for theorem in THEOREMS:
             self.assertIn(f"theorem {theorem}", text)
             self.assertIn(f"#print axioms {theorem}", text)
-        for theorem in DEBT_THEOREMS:
-            self.assertIn(f"#print axioms {theorem}", text)
+        self.assertNotIn("import RoomTempSC_Formalization", text)
 
     def test_toolchain_pins(self):
         toolchain = self.data["toolchain"]
@@ -50,14 +49,25 @@ class LeanSliceTests(unittest.TestCase):
         self.assertEqual(compile_result["status"], "passed")
         self.assertEqual(compile_result["exit_code"], 0)
         self.assertTrue(compile_result["machine_checked"])
+        self.assertEqual(compile_result["scope"], "clean_definition_slice")
+        original = self.data["original_compile"]
+        self.assertEqual(original["status"], "source_incompatible")
+        self.assertNotEqual(original["exit_code"], 0)
+        self.assertFalse(original["original_theorem_axiom_audit_available"])
 
     def test_dependency_separation(self):
         dependencies = self.data["dependencies"]
         for theorem in THEOREMS:
-            self.assertFalse(dependencies["new_theorems"][theorem]["sorryAx"])
-            self.assertFalse(dependencies["new_theorems"][theorem]["depends_on_axioms"])
+            row = dependencies["new_theorems"][theorem]
+            self.assertFalse(row["sorryAx"])
+            self.assertTrue(row["depends_on_axioms"])
+            self.assertEqual(row["nonstandard_axioms"], [])
+            self.assertEqual(row["axioms"], ["propext", "Classical.choice", "Quot.sound"])
         for theorem in DEBT_THEOREMS:
-            self.assertTrue(dependencies["original_theorems"][theorem]["sorryAx"])
+            row = dependencies["original_theorems"][theorem]
+            self.assertFalse(row["audit_available"])
+            self.assertTrue(row["static_debt"])
+            self.assertIsNone(row["sorryAx"])
         self.assertTrue(dependencies["debt_preserved"])
         self.assertFalse(dependencies["physical_theorems_proven"])
 
@@ -74,6 +84,46 @@ class LeanSliceTests(unittest.TestCase):
         self.assertGreaterEqual(document.count(b"<w:tbl>"), 3)
         self.assertIn(b"PAGE", footer)
         self.assertIn("Lean 定义切片", header.decode("utf-8"))
+
+    def test_toc_cache_and_footnote_claim_mapping(self):
+        import xml.etree.ElementTree as ET
+
+        namespace = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+        ns = {"w": namespace}
+        with zipfile.ZipFile(ROOT / "PROOF_SLICE.docx") as package:
+            root = ET.fromstring(package.read("word/document.xml"))
+
+        def text_of(element):
+            return "".join(node.text or "" for node in element.findall(".//w:t", ns))
+
+        toc = root.find(".//w:sdt", ns)
+        self.assertIsNotNone(toc)
+        cached = [text_of(p) for p in toc.findall(".//w:p", ns)]
+        titles = ["一、定义切片与真实结果", "二、原文件不兼容与既有债务", "三、工具链与剩余边界"]
+        for title, page in zip(titles, [2, 3, 3]):
+            self.assertIn(f"{title}{page}", cached)
+
+        expected_references = {
+            "清洁定义切片在真实 Lean": {"2"},
+            "原文件复制件与原文件的 SHA-256": {"1"},
+            "原文件直接编译失败": {"3"},
+            "官方 elan 资产先核对": {"4"},
+        }
+        referenced = set()
+        paragraphs = root.findall(".//w:p", ns)
+        for marker, expected in expected_references.items():
+            matches = [
+                p for p in paragraphs
+                if marker in text_of(p) and p.find(".//w:footnoteReference", ns) is not None
+            ]
+            self.assertEqual(len(matches), 1, marker)
+            actual = {
+                node.attrib[f"{{{namespace}}}id"]
+                for node in matches[0].findall(".//w:footnoteReference", ns)
+            }
+            self.assertEqual(actual, expected, marker)
+            referenced.update(actual)
+        self.assertEqual(referenced, {"1", "2", "3", "4"})
 
 
 def run_all_tests():

@@ -33,3 +33,52 @@ PATH 中未找到 lean、lake 或 elan；工作区、D:/migration 和常见工�
 退出码：1
 关键输出：setUpClass ERROR；FileNotFoundError: lean-proof-slice/proof-slice.json；Ran 0 tests；FAILED (errors=1)。
 判定：符合预期 RED，真实编译证据对象尚未生成；零测试发现保护生效。
+
+[bootstrap-success]
+bootstrap_elan.py：退出码 0。
+官方资产大小 2508099 字节，SHA-256=fad2e980a191c15884cc1d80d170ffc5fa84f3774541020145b66d1a644c6111，匹配后解压执行。
+Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)。
+Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)。path_modified=false。
+
+[dependency-cache-and-build-copy]
+首次 lake update：退出码 1；Mathlib 缓存解压到 C 盘时磁盘空间不足。
+迁移缓存到 D:/migration/cache/mathlib：25574 个文件、1281945080 字节，数量与字节数一致；原路径保留目录联接。
+再次获取仍报空间不足；不能归因于依赖体积，检查临时目录和 .lake 写入位置。
+尝试移动 .lake 时源目录删除权限失败，没有修改 ACL 或强制删除原文件。
+改为 D:/migration/lean-proof-slice-build 独立构建副本：源与目标均为 46811 个文件、1948093705 字节；source_deleted=false，acl_modified=false。
+临时副本初始化最小 Git 元数据后，清除不完整依赖包元数据并重新获取固定提交；lake update 退出码 0，Decompressed 9030 file(s)，Completed successfully。
+
+[source-incompatibility-and-clean-slice]
+直接编译原文件发现 Log 模块布局差异；仅以独立导入层转发 Log.Basic，未修改 Mathlib 源码。
+原文件真实编译退出码 1：eulerMascheroni 未定义、λ 标识符错误、ω_D 未绑定、HasEquiv ℝ 实例缺失。
+据此停止原文件直译，不修改原文件；原三条定理的 sorryAx 审计标为不可用，静态 sorry 行仍为 [93,112,185]。
+改用独立清洁定义切片，ASCII binder 为 lam；只含三个 rfl 定义展开，不导入原模块。
+清洁编译退出码 0，三个新定理均只依赖 [propext, Classical.choice, Quot.sound]，无 sorryAx 或额外公理。
+自动审计两次 PATH 可执行文件定位失败后，固定 lake/lean 的 Windows 绝对路径并使用 shutil.which 处理 git；audit_lean.py 退出码 0。
+proof-slice.json SHA-256：8de7da5337872aa8a2fa8feea311ad2b3780223c051e39d7640a490f628b976a。
+
+[word-and-visual-qa]
+双轨图初版缺下标字形，改用 ASCII H3S、LaH10 和 HasEquiv Real 后重新读取，标签清晰。
+check-docx：退出码 0；Materializing vendored docx 9.7.1；FOUND docx。
+docx.py build：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+主合同初次为 6 项通过；增加目录与四条脚注映射后，旧目录 RED，修正为 [2,3,3] 后 Ran 7 tests，OK。
+初版 4 页渲染成功；合并最后两节形成最终 3 页后，渲染退出码 6：临时目录 EPERM。
+按规则不重试、不使用 LibreOffice。word-qa/report.json 记录 visualQA.status=unavailable、renderAttemptCount=1、reviewedPages=[]、visualPassClaimed=false。
+
+[final-validation-and-fresh-regression]
+docx.py validate PROOF_SLICE.docx：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+最终 DOCX SHA-256：66872ddf328982f97cae8c8fe19fcf3ff25bae37870f4b226353da0841a46266。
+主合同：退出码 0；Ran 7 tests；OK。
+audit_lean.py 再次执行：原文件 source_incompatible，清洁切片 passed，退出码 0。
+JSON 解析、原文件哈希、Lean／Mathlib 版本、编译退出码、依赖差异、视觉不可用状态和 DOCX 哈希一致性：退出码 0。
+git diff --check：退出码 0；只有 LF/CRLF 提示，无空白错误。
+
+[scope-guard]
+本次只完成独立清洁定义验证。原文件未修改，原文件直译未通过，原三条物理定理未证明，原 sorryAx 审计不可用。
+物理有效性、材料预测、数值模型和实验验证均未验证；不得将本切片称为项目级 Lean 验证或物理证明。
+
+[staged-evidence-gates]
+首次 git diff --cached --check：退出码 2；原复制件第 164、167、169 行有原始行尾空格。
+处理：RoomTempSC_Formalization.lean whitespace=-trailing-space，保持原复制件字节与哈希不变，不清洗原始证据。
+范围复核另发现 prepare_build_copy.py 在 C 盘写满时为 0 字节；已用 D 盘实际执行成功的脚本替换，替换后 1258 字节，空文件未纳入交付。
+最终 git diff --cached --check：退出码 0；27 个暂存文件，未纳入 .lake 或 node_modules。
