@@ -77,3 +77,95 @@ def floquet_gap(u, epsilon):
     ):
         raise ValueError("epsilon must be exactly 0 or pi")
     return float(np.min(np.abs(np.linalg.eigvals(u) - np.exp(1j * epsilon))))
+
+
+def periodized(u_step_t, u_step_T, period, time, epsilon, gap_tolerance=GAP_TOLERANCE):
+    """Endpoint- and chiral-consistent spectral periodization using a unitary Schur basis."""
+    from scipy.linalg import schur
+
+    if epsilon not in (0.0, np.pi):
+        raise ValueError("epsilon must be exactly 0 or pi")
+    if period <= 0 or not 0 <= time <= period:
+        raise ValueError("require period > 0 and 0 <= time <= period")
+    triangular, vectors = schur(u_step_T, output="complex")
+    values = np.diag(triangular)
+    normality_error = float(np.max(np.abs(triangular - np.diag(values))))
+    if normality_error > 1e-9:
+        return {
+            "status": "nonnormal_schur",
+            "reason": "unitary_schur_not_diagonal",
+            "normality_error": normality_error,
+            "value": None,
+        }
+    gap = float(np.min(np.abs(values - np.exp(1j * epsilon))))
+    if gap <= gap_tolerance:
+        return {
+            "status": "gapless_or_undefined",
+            "reason": "bulk_gap_closed",
+            "bulk_gap": gap,
+            "value": None,
+        }
+    phi = -np.angle(values)
+    # The conduction -2pi shift is essential: statically U_0(T/2)=sign(H)
+    # and U_pi(T/2)=-I, rather than I and sign(H), respectively.
+    phi_eff = np.where(phi < 0, 2 * epsilon - np.abs(phi), np.abs(phi) - 2 * np.pi)
+    factors = np.exp(1j * phi_eff * time / period)
+    power = (vectors * factors) @ vectors.conj().T
+    u_epsilon = np.asarray(u_step_t, dtype=complex) @ power
+    unitarity_error = float(
+        np.max(np.abs(u_epsilon.conj().T @ u_epsilon - np.eye(len(u_epsilon))))
+    )
+    if unitarity_error > 1e-9:
+        return {
+            "status": "nonunitary",
+            "reason": "periodized_unitarity_failed",
+            "bulk_gap": gap,
+            "unitarity_error": unitarity_error,
+            "value": None,
+        }
+    return {
+        "status": "ok",
+        "u": u_epsilon,
+        "bulk_gap": gap,
+        "unitarity_error": unitarity_error,
+        "normality_error": normality_error,
+        "phi": phi,
+        "phi_eff": phi_eff,
+        "value": u_epsilon,
+    }
+
+
+def chiral_blocks(u_half, epsilon, condition_limit=CONDITION_LIMIT):
+    """Extract +/- blocks directly from interleaved Majorana chiral sectors."""
+    u = np.asarray(u_half, dtype=complex)
+    if u.ndim != 2 or u.shape[0] != u.shape[1] or u.shape[0] % 2:
+        raise ValueError("u_half must be an even-dimensional square matrix")
+    if epsilon not in (0.0, np.pi):
+        raise ValueError("epsilon must be exactly 0 or pi")
+    negative, positive = np.arange(0, len(u), 2), np.arange(1, len(u), 2)
+    s = np.diag(np.where(np.arange(len(u)) % 2 == 0, -1.0, 1.0))
+    sign = -1.0 if epsilon == 0.0 else 1.0
+    symmetry_error = float(np.max(np.abs(s @ u @ s - sign * u)))
+    if epsilon == 0.0:
+        blocks = {
+            "plus": u[np.ix_(negative, positive)],
+            "minus": u[np.ix_(positive, negative)],
+        }
+    else:
+        blocks = {
+            "plus": u[np.ix_(negative, negative)],
+            "minus": u[np.ix_(positive, positive)],
+        }
+    conditions = {name: float(np.linalg.cond(block)) for name, block in blocks.items()}
+    max_condition = max(conditions.values())
+    result = {
+        "symmetry_error": symmetry_error,
+        "conditions": conditions,
+        "max_condition": max_condition,
+        "value": None,
+    }
+    if symmetry_error > 1e-9:
+        return dict(result, status="invalid_chiral_block", reason="half_period_chiral_failed")
+    if not np.isfinite(max_condition) or max_condition > condition_limit:
+        return dict(result, status="singular_chiral_block", reason="block_condition_failed")
+    return dict(result, status="ok", blocks=blocks, value=blocks)

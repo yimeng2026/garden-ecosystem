@@ -14,7 +14,7 @@
 - Majorana order is `(a1,b1,...,aN,bN)`, `S=diag(-1,+1,...)`, and `H=i sum(K_rs Gamma_r Gamma_s)`.
 - Closing-bond entries are exactly those in the approved design; `K(theta)` is complex anti-Hermitian, not forcibly real.
 - `U_step(t)=expm(-4K1) expm(-4K0 t)`, with `U_step(0)=I` by definition.
-- Use `phi=-arg(lambda)`, `phi_eff=2 epsilon-|phi|` for valence and `|phi|` for conduction; the fractional inverse factor is `exp(+i phi_eff t/T)`.
+- Use `phi=-arg(lambda)`, `phi_eff=2 epsilon-|phi|` for valence and `|phi|-2 pi` for conduction; the fractional inverse factor is `exp(+i phi_eff t/T)` in a unitary Schur basis. The conduction shift is required by the static half-period chiral limits.
 - `gap_tolerance=1e-8`, block condition limit `1e12`, nominal theta steps `0.05` and `0.025`, quantization and mesh-difference tolerances `1e-3`.
 - Static baselines precede clean kicked; any failure stops promotion. No integer is manufactured by rounding a nonconverged result.
 - Existing kicked endpoint reference is `mu0=2.5, mu1=0.2, omega=7, gamma=delta=1`, with `p0=p_pi=1`; disorder full-kick amplitudes are `2*r*beta`, not `r*beta`.
@@ -99,7 +99,7 @@ Run `python research/floquet-bdg-tbc/test_tbc.py -v`; expect all current tests t
 
 For `n=8`, `mu0=0`, `mu1=0`, `omega=7`, and `theta=0.371`, construct the static Floquet operator. For each epsilon, assert `periodized(...,0)` and `periodized(...,T)` equal identity to `1e-10`, and half-period symmetry errors are below `1e-10`. `epsilon=0` yields `U0[0::2,0::2]=U0[1::2,1::2]=0`; `epsilon=pi` yields the complementary off-diagonal zeros. Assert `np.linalg.cond(block)` is finite and below `1e12`.
 
-Add `test_zero_kick_pi_gap_is_rejected`: `n=8, mu0=2.5, mu1=0, omega=7` must return `status="gapless_or_undefined"`, `value=None`, and a measured `bulk_gap <= 1e-8` for the pi branch. No winding call is allowed after this rejection.
+Add `test_zero_kick_zero_gap_is_rejected`: `n=8, mu0=2.5, mu1=0, omega=7, theta=0` must return `status="gapless_or_undefined"`, `value=None`, and a measured `bulk_gap <= 1e-8` for the zero branch. In the negative-hopping convention the endpoint label `b_pi` does not identify the physical pi gap. The pi branch must remain unitary under Schur periodization. No zero-gap winding call is allowed after this rejection.
 
 Run the tests; expected failure is missing `periodized` and `chiral_blocks`.
 
@@ -112,9 +112,10 @@ gap = float(np.min(np.abs(values - np.exp(1j*epsilon))))
 if gap <= gap_tolerance:
     return {"status": "gapless_or_undefined", "bulk_gap": gap,
             "value": None, "reason": "bulk_gap_closed"}
-phi_eff = np.where(phi < 0, 2*epsilon - np.abs(phi), np.abs(phi))
+phi_eff = np.where(phi < 0, 2*epsilon - np.abs(phi), np.abs(phi) - 2*np.pi)
 factors = np.exp(1j*phi_eff*time/period)
-power = (vectors*factors) @ np.linalg.inv(vectors)
+# vectors come from a unitary Schur decomposition, not generic eig.
+power = (vectors*factors) @ vectors.conj().T
 u_epsilon = u_step_t @ power
 return {"status": "ok", "u": u_epsilon, "bulk_gap": gap,
         "phi": phi, "phi_eff": phi_eff}
@@ -134,7 +135,7 @@ Expect endpoint, half-period block, and singular-rejection tests to pass. Commit
 
 - [ ] **Step 1: Write static tests before the integrator**
 
-Use `n=40`, `omega=7`, and both nominal theta grids. Static topological `(mu0=0,mu1=0)` must produce `W0=1` and `Wpi=0` within `1e-3`; static trivial `(mu0=2.5,mu1=0)` must produce `W0=0` and `Wpi=None`. The `(mu0=2.5,mu1=0,omega=17)` control must produce zero in both gaps. Assert actual mesh difference and nearest-integer residuals are below `1e-3` before reading the integer.
+Use `n=40` and both nominal theta grids. Static topological `(mu0=0,mu1=0,omega=7)` must produce `W0=1` and `Wpi=0` within `1e-3`. Static trivial `(mu0=2.5,mu1=0,omega=7)` must reject `W0` because the measured zero gap closes, while `Wpi=0` is allowed. The main trivial control `(mu0=2.5,mu1=0,omega=17)` must produce zero in both gaps. Assert actual mesh difference and nearest-integer residuals are below `1e-3` before reading the integer.
 
 Run `python research/floquet-bdg-tbc/test_tbc.py -v`; expected failure is missing `winding_convergence`.
 
@@ -211,6 +212,6 @@ Run `python research/floquet-bdg-tbc/run_verification.py` and record its exit co
 
 - Every design requirement maps to a structural, static, clean, disorder-gate, or verification task.
 - The periodization sign is fixed by direct endpoint multiplication, not by copying an internally inconsistent printed exponent.
-- Static trivial pi gap closure and the full-kick amplitude convention are explicit.
+- The static trivial zero-gap closure at omega=7, the omega=17 two-gap control, and the full-kick amplitude convention are explicit.
 - No placeholders, hidden expected numerical assignments, changed random seeds, or post-hoc threshold tuning are present.
 - Function names and status fields are consistent across tests, runner, and verification.
