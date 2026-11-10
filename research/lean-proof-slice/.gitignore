@@ -1,6 +1,6 @@
 node_modules/
 .lake/
 __pycache__/
-word-qa/*.png
+word-qa*/*.png
 *.tmp
 PROOF_SLICE.candidate.docx

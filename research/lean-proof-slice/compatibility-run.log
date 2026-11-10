@@ -19,3 +19,29 @@ Mathlib 源码中已定位实际常量名 Real.eulerMascheroniConstant；不是�
 退出码：1
 关键输出：setUpClass ERROR；FileNotFoundError: compatibility-issues.json；Ran 0 tests；FAILED (errors=1)。
 判定：符合预期 RED，勘误对象尚未生成；零测试发现保护生效。
+
+[errata-build-and-independent-verification]
+build_compatibility_errata.py：退出码 0；issues=4，全部 open；original-compile.log SHA-256=22b58209330ee456000d372db133d8a57630a7de7cca33c11ca22c7d27bb0a2a。
+verify_compatibility_errata.py：退出码 0；Ran 4 tests；OK。
+主合同此阶段退出码 1；Ran 5 tests；4 项通过，仅 COMPATIBILITY_ERRATA.docx 缺失，符合阶段预期。
+
+[native-word-and-visual-qa]
+首次构建命令中的测试路径重复，build 本身已成功；随后用当前目录下的文件名重跑，未改证据或正文。
+docx.py build：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+主合同：退出码 0；Ran 5 tests；OK。
+独立复核：退出码 0；Ran 4 tests；OK。
+最终渲染：退出码 0；3 页、3 页渲染、无近空白页；目录 [2,3,3]。
+逐页观察：四类错误、原生公式、双轨图、清偿动作、开放边界和四条脚注完整，无裁切、表格行拆分或孤立末页。
+渲染器仍报告 content-loss/low w:lvlOverride x1；逐页未见编号导致的内容缺失。未使用 LibreOffice。
+
+[final-validation-and-fresh-regression]
+docx.py validate COMPATIBILITY_ERRATA.docx：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+最终 DOCX SHA-256：232574854646c43e2b90572c89f557c5cd7fafa30709b5e1edac9113fccafcfb。
+主合同：退出码 0；Ran 5 tests；OK。
+独立复核：退出码 0；Ran 4 tests；OK。
+JSON 解析、四项 open、原文件哈希、三页人工验收和 DOCX 哈希一致性：退出码 0。
+git diff --check：退出码 0，无空白错误。
+
+[scope-guard]
+本批只完成四类兼容性勘误和清偿路线，未修改原文件，未宣称任何错误已修复。
+原文件直译、三条物理定理、材料预测、数值模型和实验验证仍未完成；全库目标保持 active。

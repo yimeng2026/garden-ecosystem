@@ -1,0 +1,60 @@
+{
+  "schema": "lean-compatibility-errata-v1",
+  "date": "2026-11-11",
+  "original": {
+    "path": "C:\\Users\\一梦\\Documents\\kimi\\workspace\\toe-sylva-audit\\papers\\room_temp_sc\\room_temp_sc_Formalization.lean",
+    "sha256": "1971e95d7b375c24778d3adae8a1ab3be4c5abeb1ee8b79a2b1f347b7aa00439",
+    "source_modified": false
+  },
+  "original_compile": {
+    "status": "source_incompatible",
+    "exit_code": 1,
+    "log": "original-compile.log",
+    "log_sha256": "22b58209330ee456000d372db133d8a57630a7de7cca33c11ca22c7d27bb0a2a"
+  },
+  "issues": [
+    {
+      "id": "euler_mascheroni",
+      "severity": "P0",
+      "status": "open",
+      "evidence": "Unknown identifier `eulerMascheroni`",
+      "next": "将未限定的 eulerMascheroni 改为经 Mathlib 源码确认存在的 Real.eulerMascheroniConstant，并核对所需 import 与数值语义。",
+      "log_marker": "eulerMascheroni"
+    },
+    {
+      "id": "lambda_identifier",
+      "severity": "P0",
+      "status": "open",
+      "evidence": "unexpected token 'λ'",
+      "next": "将绑定变量 λ 改为 ASCII lam，保持公式参数顺序与物理含义不变。",
+      "log_marker": "unexpected token 'λ'"
+    },
+    {
+      "id": "omega_d_binding",
+      "severity": "P0",
+      "status": "open",
+      "evidence": "ω_D is unknown and autoImplicit cannot infer a function type",
+      "next": "显式声明 ω_D : ℝ → ℝ 与 ω₀ : ℝ 的类型、单位和物理定义，禁止依赖 autoImplicit 猜测。",
+      "log_marker": "ω_D"
+    },
+    {
+      "id": "has_equiv_real",
+      "severity": "P0",
+      "status": "open",
+      "evidence": "failed to synthesize instance of type class HasEquiv ℝ",
+      "next": "不构造虚假实例；将约等号命题改写为等式、极限或显式误差估计，并注明近似条件。",
+      "log_marker": "HasEquiv ℝ"
+    }
+  ],
+  "open_boundaries": {
+    "original_file_compiled": false,
+    "original_theorems_proven": false,
+    "physical_validity_verified": false,
+    "all_errata_resolved": false
+  },
+  "verification_scope": {
+    "errata_only": true,
+    "new_axiom_or_sorry_added": false,
+    "source_modified": false
+  }
+}
