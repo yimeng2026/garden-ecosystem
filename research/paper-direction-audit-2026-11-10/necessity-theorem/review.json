@@ -1,0 +1,56 @@
+{
+  "schema": "paper-direction-review-v1",
+  "paper_id": "toe-sylva:papers/room_temp_sc/manuscript.tex",
+  "review_date": "2026-11-10",
+  "priority": "P0",
+  "priority_reason": "中心必然性命题被稿件自身公式和参数反例直接反驳",
+  "role": "带反例的强耦合研究草案，不是已成立的室温超导必然性证明",
+  "source_file_modified": false,
+  "unit_convention": "1 meV = 11.6 K",
+  "direct_counterexamples": [
+    {
+      "lambda": 2,
+      "omega_log_meV": 100,
+      "mu_star": 0.15,
+      "tc_K": 148.24313461676417
+    },
+    {
+      "lambda": 2,
+      "omega_log_meV": 100,
+      "mu_star": 0.1,
+      "tc_K": 166.85029454929392
+    },
+    {
+      "lambda": 2.5,
+      "omega_log_meV": 140,
+      "mu_star": 0.1,
+      "tc_K": 267.4533390338644
+    }
+  ],
+  "arithmetic_errors": [
+    "mu_c*(2)=0.3，而稿件写约 0.15",
+    "Kiessling sharp constant 为 0.1827262477…，稿件将约 0.371 的角色写错"
+  ],
+  "missing_links": [
+    "eta 到 mu*_eff 的降维—屏蔽映射未证",
+    "严格不等式与边界点混用",
+    "单调性被误作 300 K 穿越性",
+    "现有通用脚本不覆盖核心定理、eta 或 Kiessling 下界"
+  ],
+  "documentation_gaps": [
+    "作者、单位、PACS、材料预测和计算方法仍有占位",
+    "2026 共识验证标准缺少可核来源",
+    "材料参数、同位素系数和实验对应仍需逐项回源"
+  ],
+  "new_directions": [
+    "从必然性定理改为 T_c=300 K 的临界流形研究",
+    "证明或否证降维—屏蔽映射",
+    "以反例优先的 Lean／数值验收"
+  ],
+  "verification": {
+    "unit_checked": true,
+    "all_three_cases_below_300K": true,
+    "counterexample_log": "counterexample.log",
+    "kiessling_source": "https://arxiv.org/pdf/2409.00532"
+  }
+}

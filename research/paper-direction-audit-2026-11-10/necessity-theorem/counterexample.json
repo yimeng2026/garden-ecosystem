@@ -1,0 +1,37 @@
+{
+  "schema": "necessity-counterexample-v1",
+  "paper": "toe-sylva-audit/papers/room_temp_sc/manuscript.tex",
+  "unit_convention": "1 meV = 11.6 K",
+  "mu_c_lambda_2": 0.3,
+  "cases": [
+    {
+      "name": "boundary_100meV_mu_0.15",
+      "lambda": 2,
+      "omega_log_meV": 100,
+      "omega_log_K": 1160,
+      "mu_star": 0.15,
+      "tc_K": 148.24313461676417
+    },
+    {
+      "name": "boundary_100meV_mu_0.10",
+      "lambda": 2,
+      "omega_log_meV": 100,
+      "omega_log_K": 1160,
+      "mu_star": 0.1,
+      "tc_K": 166.85029454929392
+    },
+    {
+      "name": "interior_140meV_lambda_2.5_mu_0.10",
+      "lambda": 2.5,
+      "omega_log_meV": 140,
+      "omega_log_K": 1624,
+      "mu_star": 0.1,
+      "tc_K": 267.4533390338644
+    }
+  ],
+  "all_below_300K": true,
+  "kiessling_sharp_constant": 0.1827262477,
+  "kiessling_upper_bound_factor": 2.034,
+  "manuscript_constant": 0.371,
+  "source_file_modified": false
+}

@@ -218,3 +218,21 @@ Xie／LaH₁₀ 的 2025 年官方 DOI 页面和原文镜像已核。原文给�
 追加检索 arXiv:2312.12706 后确认：v1 于 **2023-12-20** 发布，2025 年为 npj Computational Materials 正式发表。先前“把 2023 改为 2025”的简化修订建议已撤回，改为**分别标注 2023 预印本与 2025 正式发表**。`REVIEW.md`、`REVIEW.docx`、`CLAIM_SOURCE_MAP.md`、`CLAIM_SOURCE_MAP.docx` 及两份 JSON 已统一这一区分；原论文仍未修改。[arXiv:2312.12706](kimi-cite://web?url=https%3A%2F%2Farxiv.org%2Fabs%2F2312.12706&text=Wed%2C%2020%20Dec%202023 "citation")
 
 两份 Word 经工作副本局部更正后均再次通过 `PASSED (17 parts XSD + semantic checks; gen: 6 checks clean)`。`REVIEW.docx` 最终 **5/5 页**无近空白或裁切，QA 为 `review-time-correction-qa-final2/report.json`；`CLAIM_SOURCE_MAP.docx` 最终 **3/3 页**无近空白或裁切且 `content-loss=0`，QA 为 `claim-map-time-correction-qa-final/report.json`。长 URL 曾造成一条孤立末页，已缩短为 arXiv ID 和 DOI 后重新验证；修订顺序中的旧“Xie 改为 2025”也已同步更正。
+
+## “室温超导必然性”反例审计（2026-11-10）
+
+全文读取 `papers/room_temp_sc/manuscript.tex`，以 1 meV = 11.6 K 独立重算稿件 Allen–Dynes 公式，机读结果保存为 `necessity-theorem/counterexample.json` 和 `counterexample.log`：
+
+| 参数 | 独立 $T_c$ |
+|---|---:|
+| $\lambda=2,\omega_{\log}=100$ meV、$\mu^*=0.15$ | 148.243 K |
+| $\lambda=2,\omega_{\log}=100$ meV、$\mu^*=0.10$ | 166.850 K |
+| $\lambda=2.5,\omega_{\log}=140$ meV、$\mu^*=0.10$ | 267.453 K |
+
+三组均低于 300 K，第三组还满足稿件所称内部强耦合和声子条件，直接反驳“任何严格内部组合超过 300 K”。另行确认 $\mu_c^*(2)=0.3$（非约 0.15），以及 Kiessling sharp constant 为 $0.1827262477\ldots$，约 0.371 接近原文 2.034 倍上界而非该 sharp constant 本身。
+
+裁决为 **P0：中心命题与自身推导冲突**。后续方向改为 300 K 临界流形、降维—屏蔽映射证明或否证、反例优先的 Lean／数值验收。其他实验数字保留未核实，不据此判假。
+
+交付件：`necessity-theorem/REVIEW.md`、`REVIEW.docx`、`review.json`、`counterexample.json`、`counterexample.log`、`word-qa/report.json`。Word 校验退出码 **0**，`PASSED (17 parts XSD + semantic checks; gen: 6 checks clean)`；最终 **4/4 页**已逐页检查，无近空白或裁切，仅低风险目录编号兼容提示。原稿未修改。
+
+TOE 勘误簿已登记 FE-18，分支 `audit/necessity-counterexample`，提交 `a610606`。该登记只保留反例与研究方向，不宣称原稿已修订或中心问题已解决。
