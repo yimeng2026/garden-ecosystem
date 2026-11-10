@@ -134,6 +134,61 @@ class ProjectIntroAuditTests(unittest.TestCase):
         self.assertIn("目录与项目介绍", header.decode("utf-8"))
         self.assertTrue(any(name.startswith("word/media/") for name in names))
 
+    def test_toc_cache_and_footnote_claim_mapping(self):
+        import xml.etree.ElementTree as ET
+
+        namespace = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+        ns = {"w": namespace}
+        with zipfile.ZipFile(ROOT / "REVIEW.docx") as package:
+            root = ET.fromstring(package.read("word/document.xml"))
+
+        def text_of(element):
+            return "".join(node.text or "" for node in element.findall(".//w:t", ns))
+
+        toc = root.find(".//w:sdt", ns)
+        self.assertIsNotNone(toc)
+        cached = [text_of(p) for p in toc.findall(".//w:p", ns)]
+        titles = [
+            "一、覆盖裁决与四个方向",
+            "二、4 份文档逐篇裁决",
+            "三、十二项分级勘误",
+            "四、44 份文档覆盖清单",
+            "五、19 项冻结来源",
+            "六、双边界与后续",
+        ]
+        for title, page in zip(titles, [2, 3, 4, 4, 5, 6]):
+            self.assertIn(f"{title}{page}", cached)
+
+        expected_references = {
+            "目录只列 01–11，遗漏 12–21 的资料收集与复盘；": {"1"},
+            "项目说明是 0.1-alpha 草案，明确承认": {"2"},
+            "手册说明写最后更新": {"3"},
+            "杂志策划提供科技人文": {"4"},
+            "基础参考文献有 24": {"5"},
+            "目录推荐的增强参考文献文件": {"6"},
+            "原 README 是 v7.33": {"7"},
+            "手册任务书把至少 10": {"8"},
+            "原手册 DOCX 的应用元数据": {"9"},
+            "手册中的完美对应": {"10"},
+            "技术文档审计要求把资产存在": {"11"},
+            "杂志设计审计已形成": {"12"},
+        }
+        referenced = set()
+        paragraphs = root.findall(".//w:p", ns)
+        for marker, expected in expected_references.items():
+            matches = [
+                p for p in paragraphs
+                if marker in text_of(p) and p.find(".//w:footnoteReference", ns) is not None
+            ]
+            self.assertEqual(len(matches), 1, marker)
+            actual = {
+                node.attrib[f"{{{namespace}}}id"]
+                for node in matches[0].findall(".//w:footnoteReference", ns)
+            }
+            self.assertEqual(actual, expected, marker)
+            referenced.update(actual)
+        self.assertEqual(referenced, {str(index) for index in range(1, 13)})
+
 
 def run_all_tests():
     suite = unittest.defaultTestLoader.loadTestsFromModule(sys.modules[__name__])

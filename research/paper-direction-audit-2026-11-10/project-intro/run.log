@@ -40,3 +40,43 @@ handbook/room_temp_sc_handbook.docx 存在，44510 字节；app 元数据 Pages=
 退出码：1
 关键输出：setUpClass ERROR；FileNotFoundError: project-intro/review.json；Ran 0 tests；FAILED (errors=1)。
 判定：符合预期 RED，唯一证据对象尚未生成；零测试发现保护生效。
+
+[coverage-inventory-and-independent-checks]
+inspect_sources.py：退出码 0；sources=19，actual=44，prior=40，current=4，covered=44，uncovered=[]，duplicates=[]，prior_open_false_items=64。
+首次独立来源测试：退出码 1；Ran 6 tests；仅 base.count("TO_BE_COMPLETED") 期望 5、实际 6。
+根因：5 个真实待补区块外加 1 次文件头说明。分别记录 5 个待补区块和 6 次字符串，不修改证据。
+重建后 sources/coverage-inventory.json SHA-256：638f1e0cfb41ed7902869d28677d6adf50cc7644abe7de3a82a9e0ba6d025f7b。
+verify_primary_sources.py：退出码 0；Ran 6 tests；OK。
+build_review.py：退出码 0；documents=4，directions=4，corrections=12，covered=44；review.json SHA-256=aa4e9645472aa5b3b65006cb3d98828f7b55481f111b86e27b682c4fd869196d。
+主合同此时退出码 1；Ran 7 tests；6 项通过，仅 REVIEW.docx 缺失，符合阶段预期。
+
+[figure-review]
+首版左下横轴标题与总说明重叠；去除重复横轴标题后，总说明仍与刻度重叠。
+最终删除独立底部说明，把“覆盖≠科学验证”并入左图内部说明；重新读取图件，未见重叠或裁切，数据不变。
+
+[native-word-layout-and-regression]
+check-docx：退出码 0；Materializing vendored docx 9.7.1；FOUND docx。
+docx.py build：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+初次渲染：退出码 0；7 页、7 页渲染；第 6 页只有两行覆盖表，人工不通过。
+取消后三节强制分页后：6 页，但末页只剩三段，仍调整。
+最终让开放边界完整从第 6 页开始，保留全部表格和字号；最终目录为 [2,3,4,4,5,6]。
+新增目录与 12 条脚注映射合同，初次主测试退出码 1；目录旧缓存不符合预期。
+随后两次定位失败均为同句同时出现在正文和勘误／其他脚注段；限定为带脚注段落并为 0.1-alpha 使用唯一标记，不改证据或正文。
+最终主合同：退出码 0；Ran 8 tests；OK。
+独立来源复核：退出码 0；Ran 6 tests；OK。
+最终渲染：退出码 0；6 页、6 页渲染、无近空白页。
+逐页观察：目录正确；方向、批次和图件完整；4 篇裁决和 10 条脚注完整；44 行覆盖表连续且续页重复表头；19 项来源完整；开放边界和结尾独立完整。
+渲染器仍报告 content-loss/low w:lvlOverride x1；逐页未见编号导致的内容缺失。未使用 LibreOffice。
+本视觉验收只针对覆盖审计 REVIEW.docx，不针对原手册。
+
+[final-validation-and-fresh-regression]
+docx.py validate REVIEW.docx：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+最终 DOCX SHA-256：f383b4d33ebcbc23a08a558e3f5e5bac860b253080c95088e089e7c711e1b755。
+主合同：退出码 0；Ran 8 tests；OK。
+独立来源复核：退出码 0；Ran 6 tests；OK。
+JSON 解析、19 来源、4 裁决、12 勘误、44 路径唯一性、6 页人工验收和 DOCX 哈希一致性：退出码 0。
+git diff --check：退出码 0；只有 LF/CRLF 提示，无空白错误。
+
+[scope-guard]
+organized 44 份覆盖核验完成，但整个仓库研究、科学验证、Lean 证明、文献库、原手册视觉和生产交付均未因此完成。
+未修改原文，未新增 axiom/postulate/sorry，未新增证明或实验。后续按覆盖图继续推进未竟工作。
