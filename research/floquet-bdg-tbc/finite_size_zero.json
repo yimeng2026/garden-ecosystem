@@ -1,0 +1,619 @@
+{
+  "schema": "floquet-bdg-tbc-finite-size-zero-v1",
+  "n": 160,
+  "target": "zero",
+  "registry_size": 11,
+  "baseline_sha256": "02ba343f5f804220436d5b6e5b7e22618c8e6d6278e585f06bfb700d2f21e193",
+  "complete": false,
+  "rows": [
+    {
+      "n": 160,
+      "seed": 0,
+      "strength": 0.05,
+      "kind": "uniform_mean",
+      "beta_sha256": "f8ce2ec6ea8046fea9ebb0cfa3655f91463008c47d35cd4143306c0de3cc5030",
+      "full_kick_parameter": "K parameter r*beta; full symmetric rotation angle 2*r*beta",
+      "half_kick_convention_error": 6.938893903907228e-18,
+      "endpoint": {
+        "zero": {
+          "eigenvalues_real": [
+            0.9999999516244296,
+            0.9999999516244296
+          ],
+          "eigenvalues_imag": [
+            -0.00031104845095764055,
+            0.00031104845095764055
+          ],
+          "distances": [
+            0.00031104845471942717,
+            0.00031104845471942717
+          ],
+          "separation_ratios": [
+            0.02160284642580908,
+            0.02160284642580908
+          ],
+          "edge_weight": 0.507925316838054,
+          "subspace_ipr": 0.06601213690400781,
+          "second_pair_subspace_ipr": 0.024166609731276323,
+          "joint_pass": true
+        }
+      },
+      "open_unitarity_error": 6.8833827526759706e-15,
+      "zero": {
+        "epsilon": 0.0,
+        "rows": [
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.9995854487512109,
+            "raw_real": 0.9995854487512109,
+            "raw_imag": 2.0539607823197614e-18,
+            "nearest_integer": 1,
+            "integer_residual": 0.00041455124878908567,
+            "min_bulk_gap": 0.011128255506593644,
+            "max_block_condition": 1.0000000000000075,
+            "max_unitarity_error": 8.43769498715119e-15,
+            "max_normality_error": 1.8255618079378797e-14,
+            "nominal_step": 0.05,
+            "actual_step": 0.049866550056980846,
+            "points": 126,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          },
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.999895525012726,
+            "raw_real": 0.999895525012726,
+            "raw_imag": 5.720138354238762e-18,
+            "nearest_integer": 1,
+            "integer_residual": 0.00010447498727395033,
+            "min_bulk_gap": 0.0111280693876878,
+            "max_block_condition": 1.0000000000000082,
+            "max_unitarity_error": 6.883382752707285e-15,
+            "max_normality_error": 1.656879858300305e-14,
+            "nominal_step": 0.025,
+            "actual_step": 0.025032610785576042,
+            "points": 251,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          }
+        ],
+        "value": 0.999895525012726,
+        "nearest_integer": 1,
+        "mesh_difference": 0.00031007626151513534,
+        "integer_residual": 0.00041455124878908567,
+        "min_bulk_gap": 0.0111280693876878,
+        "status": "ok",
+        "reason": null,
+        "passed": true
+      },
+      "target": "zero",
+      "runtime_seconds": 103.23429270007182
+    },
+    {
+      "n": 160,
+      "seed": 0,
+      "strength": 0.1,
+      "kind": "uniform_mean",
+      "beta_sha256": "f8ce2ec6ea8046fea9ebb0cfa3655f91463008c47d35cd4143306c0de3cc5030",
+      "full_kick_parameter": "K parameter r*beta; full symmetric rotation angle 2*r*beta",
+      "half_kick_convention_error": 1.1102230246251565e-16,
+      "endpoint": {
+        "zero": {
+          "eigenvalues_real": [
+            0.9999999985205305,
+            0.9999999985205305
+          ],
+          "eigenvalues_imag": [
+            -5.4396172394277624e-05,
+            5.4396172394277624e-05
+          ],
+          "distances": [
+            5.439617241439696e-05,
+            5.439617241439696e-05
+          ],
+          "separation_ratios": [
+            0.0016341990562077464,
+            0.0016341990562077464
+          ],
+          "edge_weight": 0.7731375716018885,
+          "subspace_ipr": 0.12903312577569517,
+          "second_pair_subspace_ipr": 0.025283097779369372,
+          "joint_pass": true
+        }
+      },
+      "open_unitarity_error": 6.8833827526759706e-15,
+      "zero": {
+        "epsilon": 0.0,
+        "rows": [
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.9995856059750923,
+            "raw_real": 0.9995856059750923,
+            "raw_imag": -7.272046751526504e-18,
+            "nearest_integer": 1,
+            "integer_residual": 0.00041439402490772714,
+            "min_bulk_gap": 0.0309470898458281,
+            "max_block_condition": 1.0000000000000062,
+            "max_unitarity_error": 5.995204332975845e-15,
+            "max_normality_error": 2.4463760863464323e-14,
+            "nominal_step": 0.05,
+            "actual_step": 0.049866550056980846,
+            "points": 126,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          },
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.9998955646509783,
+            "raw_real": 0.9998955646509783,
+            "raw_imag": 4.923144468904329e-18,
+            "nearest_integer": 1,
+            "integer_residual": 0.00010443534902171425,
+            "min_bulk_gap": 0.030947053203934708,
+            "max_block_condition": 1.0000000000000069,
+            "max_unitarity_error": 6.661338196993322e-15,
+            "max_normality_error": 2.3203614587226008e-14,
+            "nominal_step": 0.025,
+            "actual_step": 0.025032610785576042,
+            "points": 251,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          }
+        ],
+        "value": 0.9998955646509783,
+        "nearest_integer": 1,
+        "mesh_difference": 0.0003099586758860129,
+        "integer_residual": 0.00041439402490772714,
+        "min_bulk_gap": 0.030947053203934708,
+        "status": "ok",
+        "reason": null,
+        "passed": true
+      },
+      "target": "zero",
+      "runtime_seconds": 103.6963332000887
+    },
+    {
+      "n": 160,
+      "seed": 0,
+      "strength": 0.2,
+      "kind": "uniform_mean",
+      "beta_sha256": "f8ce2ec6ea8046fea9ebb0cfa3655f91463008c47d35cd4143306c0de3cc5030",
+      "full_kick_parameter": "K parameter r*beta; full symmetric rotation angle 2*r*beta",
+      "half_kick_convention_error": 2.7755575615628914e-17,
+      "endpoint": {
+        "zero": {
+          "eigenvalues_real": [
+            0.9999999999999896,
+            0.9999999999999896
+          ],
+          "eigenvalues_imag": [
+            -9.863124283970845e-08,
+            9.863124283970845e-08
+          ],
+          "distances": [
+            9.8631242839709e-08,
+            9.8631242839709e-08
+          ],
+          "separation_ratios": [
+            1.146791759078025e-06,
+            1.146791759078025e-06
+          ],
+          "edge_weight": 0.9346414074636656,
+          "subspace_ipr": 0.24801173219959416,
+          "second_pair_subspace_ipr": 0.02717492217943012,
+          "joint_pass": true
+        }
+      },
+      "open_unitarity_error": 6.994405055138486e-15,
+      "zero": {
+        "epsilon": 0.0,
+        "rows": [
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.9995856060573657,
+            "raw_real": 0.9995856060573657,
+            "raw_imag": 3.3071862313862393e-18,
+            "nearest_integer": 1,
+            "integer_residual": 0.00041439394263431684,
+            "min_bulk_gap": 0.08390514763034461,
+            "max_block_condition": 1.000000000000008,
+            "max_unitarity_error": 6.217248940489772e-15,
+            "max_normality_error": 1.6694012937734495e-14,
+            "nominal_step": 0.05,
+            "actual_step": 0.049866550056980846,
+            "points": 126,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          },
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.9998955646717204,
+            "raw_real": 0.9998955646717204,
+            "raw_imag": -3.906858800975265e-18,
+            "nearest_integer": 1,
+            "integer_residual": 0.00010443532827963953,
+            "min_bulk_gap": 0.08390515571016302,
+            "max_block_condition": 1.0000000000000087,
+            "max_unitarity_error": 5.329070518200751e-15,
+            "max_normality_error": 1.9608901183038276e-14,
+            "nominal_step": 0.025,
+            "actual_step": 0.025032610785576042,
+            "points": 251,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          }
+        ],
+        "value": 0.9998955646717204,
+        "nearest_integer": 1,
+        "mesh_difference": 0.0003099586143546773,
+        "integer_residual": 0.00041439394263431684,
+        "min_bulk_gap": 0.08390514763034461,
+        "status": "ok",
+        "reason": null,
+        "passed": true
+      },
+      "target": "zero",
+      "runtime_seconds": 104.04392640001606
+    },
+    {
+      "n": 160,
+      "seed": 0,
+      "strength": 0.05,
+      "kind": "disorder",
+      "beta_sha256": "42ef43bc973e7a4c71ebb57c31de694585996f530ea6ddee060b5ce33adb4fa8",
+      "full_kick_parameter": "K parameter r*beta; full symmetric rotation angle 2*r*beta",
+      "half_kick_convention_error": 1.3877787807814457e-17,
+      "endpoint": {
+        "zero": {
+          "eigenvalues_real": [
+            0.9999993012078428,
+            0.9999993012078428
+          ],
+          "eigenvalues_imag": [
+            -0.0011821944944201135,
+            0.0011821944944201135
+          ],
+          "distances": [
+            0.0011821947009472283,
+            0.0011821947009472283
+          ],
+          "separation_ratios": [
+            0.19678499121744833,
+            0.19678499121744833
+          ],
+          "edge_weight": 0.34816708936312973,
+          "subspace_ipr": 0.03906448703915381,
+          "second_pair_subspace_ipr": 0.027310964175662006,
+          "joint_pass": false
+        }
+      },
+      "open_unitarity_error": 6.994405055138486e-15,
+      "zero": {
+        "epsilon": 0.0,
+        "rows": [
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.9995744900252235,
+            "raw_real": 0.9995744900252235,
+            "raw_imag": 1.5571208343887057e-17,
+            "nearest_integer": 1,
+            "integer_residual": 0.00042550997477652786,
+            "min_bulk_gap": 0.0025409385017753808,
+            "max_block_condition": 1.0000000000000069,
+            "max_unitarity_error": 5.99520434836458e-15,
+            "max_normality_error": 1.7774360621236448e-14,
+            "nominal_step": 0.05,
+            "actual_step": 0.049866550056980846,
+            "points": 126,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          },
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.9998927620599435,
+            "raw_real": 0.9998927620599435,
+            "raw_imag": 4.29879682094651e-18,
+            "nearest_integer": 1,
+            "integer_residual": 0.00010723794005651488,
+            "min_bulk_gap": 0.0025409520601599248,
+            "max_block_condition": 1.0000000000000104,
+            "max_unitarity_error": 6.439293552301825e-15,
+            "max_normality_error": 1.7055460637682136e-14,
+            "nominal_step": 0.025,
+            "actual_step": 0.025032610785576042,
+            "points": 251,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          }
+        ],
+        "value": 0.9998927620599435,
+        "nearest_integer": 1,
+        "mesh_difference": 0.000318272034720013,
+        "integer_residual": 0.00042550997477652786,
+        "min_bulk_gap": 0.0025409385017753808,
+        "status": "ok",
+        "reason": null,
+        "passed": true
+      },
+      "target": "zero",
+      "runtime_seconds": 101.50744499999564
+    },
+    {
+      "n": 160,
+      "seed": 1,
+      "strength": 0.05,
+      "kind": "disorder",
+      "beta_sha256": "19d797ff02dd6de5bebc340a3e0b5f37f313149019630843ccac3c3242afd471",
+      "full_kick_parameter": "K parameter r*beta; full symmetric rotation angle 2*r*beta",
+      "half_kick_convention_error": 1.3877787807814457e-17,
+      "endpoint": {
+        "zero": {
+          "eigenvalues_real": [
+            0.9999999855287605,
+            0.9999999855287605
+          ],
+          "eigenvalues_imag": [
+            -0.00017012488407702753,
+            0.00017012488407702753
+          ],
+          "distances": [
+            0.0001701248846925071,
+            0.0001701248846925071
+          ],
+          "separation_ratios": [
+            0.025399976885624644,
+            0.025399976885624644
+          ],
+          "edge_weight": 0.2445061884932866,
+          "subspace_ipr": 0.03139733142728716,
+          "second_pair_subspace_ipr": 0.035315952808013897,
+          "joint_pass": false
+        }
+      },
+      "open_unitarity_error": 6.8833827526759706e-15,
+      "zero": {
+        "epsilon": 0.0,
+        "rows": [
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.9995562860161995,
+            "raw_real": 0.9995562860161995,
+            "raw_imag": 1.4731381899168125e-18,
+            "nearest_integer": 1,
+            "integer_residual": 0.00044371398380049776,
+            "min_bulk_gap": 0.0021703931346383314,
+            "max_block_condition": 1.000000000000008,
+            "max_unitarity_error": 6.439293542868456e-15,
+            "max_normality_error": 2.0615329582784622e-14,
+            "nominal_step": 0.05,
+            "actual_step": 0.049866550056980846,
+            "points": 126,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          },
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.9998881721533662,
+            "raw_real": 0.9998881721533662,
+            "raw_imag": 2.208144026193585e-18,
+            "nearest_integer": 1,
+            "integer_residual": 0.00011182784663377188,
+            "min_bulk_gap": 0.0021704538775330477,
+            "max_block_condition": 1.0000000000000089,
+            "max_unitarity_error": 6.43929354283646e-15,
+            "max_normality_error": 2.2121315653042718e-14,
+            "nominal_step": 0.025,
+            "actual_step": 0.025032610785576042,
+            "points": 251,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          }
+        ],
+        "value": 0.9998881721533662,
+        "nearest_integer": 1,
+        "mesh_difference": 0.0003318861371667259,
+        "integer_residual": 0.00044371398380049776,
+        "min_bulk_gap": 0.0021703931346383314,
+        "status": "ok",
+        "reason": null,
+        "passed": true
+      },
+      "target": "zero",
+      "runtime_seconds": 101.73657230008394
+    },
+    {
+      "n": 160,
+      "seed": 2,
+      "strength": 0.05,
+      "kind": "disorder",
+      "beta_sha256": "6b31f61228cd19468531c199bdc04990473cb19ec19a6897312ce5efe522fa23",
+      "full_kick_parameter": "K parameter r*beta; full symmetric rotation angle 2*r*beta",
+      "half_kick_convention_error": 1.3877787807814457e-17,
+      "endpoint": {
+        "zero": {
+          "eigenvalues_real": [
+            0.9999997605035761,
+            0.9999997605035761
+          ],
+          "eigenvalues_imag": [
+            -0.0006920930510338624,
+            0.0006920930510338624
+          ],
+          "distances": [
+            0.0006920930924723187,
+            0.0006920930924723187
+          ],
+          "separation_ratios": [
+            0.11515502688441234,
+            0.11515502688441234
+          ],
+          "edge_weight": 0.28196158224138523,
+          "subspace_ipr": 0.03112792349903832,
+          "second_pair_subspace_ipr": 0.02251603407203981,
+          "joint_pass": false
+        }
+      },
+      "open_unitarity_error": 6.8833827526759706e-15,
+      "zero": {
+        "epsilon": 0.0,
+        "rows": [
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.9994926101049542,
+            "raw_real": 0.9994926101049542,
+            "raw_imag": 3.744799884648346e-18,
+            "nearest_integer": 1,
+            "integer_residual": 0.00050738989504584,
+            "min_bulk_gap": 0.001437983023861841,
+            "max_block_condition": 1.000000000000008,
+            "max_unitarity_error": 5.773159728090177e-15,
+            "max_normality_error": 2.1775095871767204e-14,
+            "nominal_step": 0.05,
+            "actual_step": 0.049866550056980846,
+            "points": 126,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          },
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.9998721129761321,
+            "raw_real": 0.9998721129761321,
+            "raw_imag": -9.392387266344545e-18,
+            "nearest_integer": 1,
+            "integer_residual": 0.00012788702386790085,
+            "min_bulk_gap": 0.0014381277885778922,
+            "max_block_condition": 1.000000000000007,
+            "max_unitarity_error": 5.995204337101252e-15,
+            "max_normality_error": 2.0924339766124595e-14,
+            "nominal_step": 0.025,
+            "actual_step": 0.025032610785576042,
+            "points": 251,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          }
+        ],
+        "value": 0.9998721129761321,
+        "nearest_integer": 1,
+        "mesh_difference": 0.00037950287117793913,
+        "integer_residual": 0.00050738989504584,
+        "min_bulk_gap": 0.001437983023861841,
+        "status": "ok",
+        "reason": null,
+        "passed": true
+      },
+      "target": "zero",
+      "runtime_seconds": 101.03678130009212
+    },
+    {
+      "n": 160,
+      "seed": 3,
+      "strength": 0.05,
+      "kind": "disorder",
+      "beta_sha256": "83579e2950ee8f4f58f937dc028b416c7405c28a8bd6daca6bcaf35bdc8da9a2",
+      "full_kick_parameter": "K parameter r*beta; full symmetric rotation angle 2*r*beta",
+      "half_kick_convention_error": 1.1102230246251565e-16,
+      "endpoint": {
+        "zero": {
+          "eigenvalues_real": [
+            0.9999991515365383,
+            0.9999991515365383
+          ],
+          "eigenvalues_imag": [
+            -0.0013026612030380136,
+            0.0013026612030380136
+          ],
+          "distances": [
+            0.001302661479353209,
+            0.001302661479353209
+          ],
+          "separation_ratios": [
+            0.20955736197177963,
+            0.20955736197177963
+          ],
+          "edge_weight": 0.25097663715498286,
+          "subspace_ipr": 0.035348109236628025,
+          "second_pair_subspace_ipr": 0.03079304582885495,
+          "joint_pass": false
+        }
+      },
+      "open_unitarity_error": 6.994405055138486e-15,
+      "zero": {
+        "epsilon": 0.0,
+        "rows": [
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.9995533169083353,
+            "raw_real": 0.9995533169083353,
+            "raw_imag": -3.083952846180991e-18,
+            "nearest_integer": 1,
+            "integer_residual": 0.00044668309166473463,
+            "min_bulk_gap": 0.0021457884654721014,
+            "max_block_condition": 1.000000000000007,
+            "max_unitarity_error": 6.217248938684504e-15,
+            "max_normality_error": 2.0127595943592816e-14,
+            "nominal_step": 0.05,
+            "actual_step": 0.049866550056980846,
+            "points": 126,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          },
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.9998874230173455,
+            "raw_real": 0.9998874230173455,
+            "raw_imag": -4.1052818515148345e-18,
+            "nearest_integer": 1,
+            "integer_residual": 0.00011257698265454419,
+            "min_bulk_gap": 0.0021459197129179925,
+            "max_block_condition": 1.0000000000000075,
+            "max_unitarity_error": 6.661338410940905e-15,
+            "max_normality_error": 1.845806334503518e-14,
+            "nominal_step": 0.025,
+            "actual_step": 0.025032610785576042,
+            "points": 251,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          }
+        ],
+        "value": 0.9998874230173455,
+        "nearest_integer": 1,
+        "mesh_difference": 0.00033410610901019044,
+        "integer_residual": 0.00044668309166473463,
+        "min_bulk_gap": 0.0021457884654721014,
+        "status": "ok",
+        "reason": null,
+        "passed": true
+      },
+      "target": "zero",
+      "runtime_seconds": 101.35750319994986
+    }
+  ]
+}
