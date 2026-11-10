@@ -69,10 +69,10 @@
 
 - [x] 重跑两个测试套件、JSON 解析、DOCX 哈希一致性、`docx.py validate` 和 `git diff --check`，全部退出 0。
 - [x] Matplotlib SVG 如产生行尾空格，使用本目录 `.gitattributes` 的 `whitespace=-trailing-space` 保留证据，不改写路径数据。
-- [ ] 仅暂存本批文件和计划，不混入其他目录的未跟踪资料。
-- [ ] 提交 `docs: audit theory framework and breakthrough evidence`，推送 `audit/room-temp-theory-breakthrough`。
-- [ ] 用 `git rev-parse HEAD` 与 `git ls-remote` 核对哈希；记录交付状态，不合并主分支。
-- [ ] 本批只闭合两份文档；继续其余 30 份 room_temp_sc 文档，保持全库目标 active。
+- [x] 仅暂存本批文件和计划，不混入其他目录的未跟踪资料。
+- [x] 提交 `docs: audit theory framework and breakthrough evidence`，推送 `audit/room-temp-theory-breakthrough`。
+- [x] 用 `git rev-parse HEAD` 与 `git ls-remote` 核对哈希；记录交付状态，不合并主分支。
+- [x] 本批只闭合两份文档；继续其余 30 份 room_temp_sc 文档，保持全库目标 active。
 
 ## 计划自审
 
