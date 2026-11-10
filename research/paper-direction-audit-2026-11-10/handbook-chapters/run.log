@@ -25,3 +25,38 @@ BCS 原始文献为相干配对组态；McMillan 不提供所有材料统一的 
 退出码：1
 关键输出：setUpClass ERROR；FileNotFoundError: handbook-chapters/review.json；Ran 0 tests；FAILED (errors=1)。
 判定：符合预期 RED，唯一证据对象尚未生成；零测试发现保护生效。
+
+[source-test-fixture-red-and-correction]
+首次 verify_primary_sources.py：退出码 1；8 项中 7 项通过。
+失败原因：Markdown 原文为 **计算结果**，测试夹具未包含加粗标记；仅修正夹具，不改证据。
+修正后来源复核：退出码 0；Ran 8 tests；OK。
+
+[evidence-build-and-contract-status]
+build_review.py：退出码 0；sources=6；directions=4；corrections=8。
+主合同：退出码 1；Ran 9 tests；8 项通过，仅 REVIEW.docx 缺失。
+handbook-evidence.png 已读取检查：公式 4 错误值与正确示例分轨清晰，条件和实验角色完整，无文字裁切或验证百分比。
+
+[native-word-build]
+check-docx：退出码 0；Materializing vendored docx 9.7.1；FOUND docx。
+docx.py build：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+主合同：退出码 0；Ran 9 tests；OK。
+来源复核：退出码 0；Ran 8 tests；OK。
+
+[visual-qa-unavailable]
+命令：docx.py render REVIEW.docx word-qa
+退出码：6
+错误：E_RENDER_FAILED: EPERM, Permission denied on the temporary render directory。
+处理：按 kimi-word 规则不重试，不使用 LibreOffice，不声称视觉验收通过。
+word-qa/report.json 记录 visualQA.status=unavailable、renderAttemptCount=1、reviewedPages=[]、visualPassClaimed=false。
+交付依据仅为 OOXML 验证门、9 项交付合同、8 项独立来源测试和单独源图检查。
+
+[final-validation-and-fresh-regression]
+docx.py validate REVIEW.docx：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+最终 DOCX SHA-256：2dc128247e24b94cf4827134216e5b8a6fb67a4d2bf59f22c2fbb2c8bcf3f7ca。
+主合同：退出码 0；Ran 9 tests；OK。
+来源复核：退出码 0；Ran 8 tests；OK。
+JSON 解析与哈希：退出码 0；visual QA unavailable；验证门哈希一致。
+git diff --check：退出码 0；仅 LF/CRLF 提示，无空白错误。
+
+[scope-guard]
+两章原文未修改；未重跑计算或实验；Θ_D 原始谱未闭合；其余入门事实未全审；全库审计继续。

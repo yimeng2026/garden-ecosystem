@@ -23,33 +23,33 @@
 
 ### Task 1：规格、计划与失败合同
 
-- [ ] 创建 `test_handbook_chapters_audit.py` 与 `run.log`，固定六项哈希、四个方向和八项勘误。
-- [ ] 检查公式 4=259.594501、示例=326.617108、阈值=2426.861883、210 meV=2436.948806、150 meV=1740.677718、298<300、条件集不等价、教学时间线、H₃S 和六个 false 边界。
-- [ ] Word 合同：OMML 分式、TOC、至少五个表格、PAGE、中文页眉、图片、六条脚注及 `108.1175`、`167.331`、`2510.01273`、两份手册文件名。
-- [ ] 两套测试均含零测试保护；运行主合同确认 `review.json` 缺失 RED。
-- [ ] 提交 `test: define handbook chapters audit contracts`。
+- [x] 创建 `test_handbook_chapters_audit.py` 与 `run.log`，固定六项哈希、四个方向和八项勘误。
+- [x] 检查公式 4=259.594501、示例=326.617108、阈值=2426.861883、210 meV=2436.948806、150 meV=1740.677718、298<300、条件集不等价、教学时间线、H₃S 和六个 false 边界。
+- [x] Word 合同：OMML 分式、TOC、至少五个表格、PAGE、中文页眉、图片、六条脚注及 `108.1175`、`167.331`、`2510.01273`、两份手册文件名。
+- [x] 两套测试均含零测试保护；运行主合同确认 `review.json` 缺失 RED。
+- [x] 提交 `test: define handbook chapters audit contracts`。
 
 ### Task 2：数值函数、独立来源测试与证据对象
 
-- [ ] 创建 `numeric_checks.py`，实现 `exponent(lam,mu)`、`tc(lam,mu,theta)`、`theta_threshold(lam,mu)` 和 `mev_to_kelvin`，输出全部规定值。
-- [ ] 创建 `verify_primary_sources.py`，核对 BCS／McMillan 原文、两份手册原文、既有 Song／Semenok／临界流形角色和独立数值。
-- [ ] 创建 `build_review.py`，生成 `review.json`、`handbook-evidence.svg/.png` 和 `REVIEW.md`。图左为公式 4 与正确示例对照，图右为三条件、定理条件和实验角色分层。
-- [ ] Markdown 含“259.594501”“326.617108”“2436.948806”“图 1”“全库审计尚未完成”，并明确图件位于复算表后、解释前。
-- [ ] 主合同此阶段只能剩余 DOCX 缺失；独立来源测试通过。
+- [x] 创建 `numeric_checks.py`，实现 `exponent(lam,mu)`、`tc(lam,mu,theta)`、`theta_threshold(lam,mu)` 和 `mev_to_kelvin`，输出全部规定值。
+- [x] 创建 `verify_primary_sources.py`，核对 BCS／McMillan 原文、两份手册原文、既有 Song／Semenok／临界流形角色和独立数值。
+- [x] 创建 `build_review.py`，生成 `review.json`、`handbook-evidence.svg/.png` 和 `REVIEW.md`。图左为公式 4 与正确示例对照，图右为三条件、定理条件和实验角色分层。
+- [x] Markdown 含“259.594501”“326.617108”“2436.948806”“图 1”“全库审计尚未完成”，并明确图件位于复算表后、解释前。
+- [x] 主合同此阶段只能剩余 DOCX 缺失；独立来源测试通过。
 
 ### Task 3：原生 Word 与逐页验收
 
-- [ ] 创建 `build_report.js`、`.gitignore`、`.gitattributes`；A4、CJK 字体、中文页眉、PAGE-only 页脚、真实 TOC 域和可见缓存目录。
-- [ ] 用 MathFraction／MathSubScript 创建原生 McMillan 指数和 Tc 公式，不以图片替代。
-- [ ] 至少五个表格：方向、数值复算、教学勘误、实验角色、开放边界；图件在复算表后、解释前。
-- [ ] 六条原生脚注覆盖六项来源。
-- [ ] `check-docx` 后构建并运行两个测试套件；最终视图逐页检查，修改后重新验收，不用 LibreOffice。
-- [ ] 记录页数、逐页观察、版式修正、渲染器限制和 DOCX SHA-256。
+- [x] 创建 `build_report.js`、`.gitignore`、`.gitattributes`；A4、CJK 字体、中文页眉、PAGE-only 页脚、真实 TOC 域和可见缓存目录。
+- [x] 用 MathFraction／MathSubScript 创建原生 McMillan 指数和 Tc 公式，不以图片替代。
+- [x] 至少五个表格：方向、数值复算、教学勘误、实验角色、开放边界；图件在复算表后、解释前。
+- [x] 六条原生脚注覆盖六项来源。
+- [x] `check-docx` 后构建并运行两个测试套件；最终视图逐页检查，修改后重新验收，不用 LibreOffice。
+- [x] 记录页数、逐页观察、版式修正、渲染器限制和 DOCX SHA-256。
 
 ### Task 4：fresh 回归与交付
 
-- [ ] 两套测试、JSON、DOCX 哈希、`docx.py validate` 和 `git diff --check` 全部退出 0。
-- [ ] SVG 和提取文本只通过 `.gitattributes` 保留原始空白，PDF 标 binary。
+- [x] 两套测试、JSON、DOCX 哈希、`docx.py validate` 和 `git diff --check` 全部退出 0。
+- [x] SVG 和提取文本只通过 `.gitattributes` 保留原始空白，PDF 标 binary。
 - [ ] 仅暂存本批文件，提交 `docs: audit handbook pedagogy and necessity claims`。
 - [ ] 推送 `audit/room-temp-handbook-chapters`，核对远端哈希，不合并主分支。
 - [ ] 记录最终交付并继续技术文档、杂志设计和项目介绍，保持全库目标 active。
