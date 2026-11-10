@@ -1,0 +1,182 @@
+{
+  "schema": "validation-materials-audit-v1",
+  "date": "2026-11-10",
+  "scope": "两份实验验证与材料预测文档；只审计，不修改原文，不新增材料预测。",
+  "sources": [
+    {
+      "id": "validation_report",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/05-实验验证/01-实验验证.md",
+      "sha256": "51a4709522000dca521dcecd071f20766763821eca94cb9e279335ea91f47e90",
+      "read_only": true
+    },
+    {
+      "id": "material_predictions",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/04-材料预测/01-材料预测.md",
+      "sha256": "050b52aa56bb633fd1db95e198f9804085de26080f4b18f135f44e3c8ef326ef",
+      "read_only": true
+    },
+    {
+      "id": "numeric_spotcheck",
+      "path": "validation-materials/numeric_spotcheck.py",
+      "sha256": "c11de34cb4f238e9c837effb735ebc9629921ea9494af28d474d75fddcee95d9",
+      "read_only": true
+    },
+    {
+      "id": "primary_excerpts",
+      "path": "validation-materials/sources/primary-source-excerpts.md",
+      "sha256": "62cf61470cc7be0d17ee5e53a7e9f01b8cf8013c009698526aeafdcf5c281528",
+      "read_only": true
+    }
+  ],
+  "source_lineage": {
+    "research_program_count": 1,
+    "decision": "两份文档属于同一研究纲领的验证与预测环节，不是两个独立新理论。"
+  },
+  "directions": [
+    {
+      "id": "formula_evidence",
+      "role": "文内公式、参数、单位和修正因子的可复核证据链",
+      "closed": "两组表内参数与结果不一致已由独立脚本复算。",
+      "unfinished": "f1/f2、ω2/ωlog、参数来源、压力和掺杂结构未闭合。",
+      "next": "补齐推导与原始输入输出，不以复算值替代预测。"
+    },
+    {
+      "id": "sample_doping",
+      "role": "化学式、掺杂范围与样品证据角色审计",
+      "closed": "未掺杂 LaNiO₂ 绝缘与 Ca 掺杂超导穹顶已分清。",
+      "unfinished": "不同掺杂、应变、薄膜厚度和输运证据仍需逐项对应。",
+      "next": "每条材料结论绑定化学式、掺杂、形态和原始图号。"
+    },
+    {
+      "id": "higher_order_hydride",
+      "role": "高阶／取代氢化物的实验争议与独立验证",
+      "closed": "556 K 原文存在，但其不可逆高阶角色与二元 LaH₁₀ 不同。",
+      "unfinished": "独立复现、成分相确定、Meissner、热力学平衡和原始数据。",
+      "next": "把高阶实验宣称与二元材料常规验证分轨。"
+    },
+    {
+      "id": "validation_governance",
+      "role": "验证评分、研发排序与证据治理",
+      "closed": "百分比和星级缺少可复算规则，已降为治理标签。",
+      "unfinished": "评分卡、权重、样本集、误差模型和独立复核未建立。",
+      "next": "若保留评分，公开可复算规则与不确定性。"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "formula_chain",
+      "severity": "P0",
+      "finding": "表内参数—公式—Tc 结果不一致，且 Cl 第一性原理方向与 320 K 推断相反。",
+      "action": "标为推导链未闭合，补齐修正因子和参数来源，禁止直接替换为复算值。"
+    },
+    {
+      "id": "lanio2_sample",
+      "severity": "P0",
+      "finding": "未掺杂 LaNiO₂ 被写成 20–40 K 已验证超导体。",
+      "action": "改为未掺杂薄膜绝缘，超导只用于明确掺杂的 La1−xCaxNiO2 范围。"
+    },
+    {
+      "id": "grockowiak_role",
+      "severity": "P0",
+      "finding": "556 K 被并入二元 LaH₁₀ 的常规验证叙事。",
+      "action": "保留真实论文，改为不可逆高阶／取代氢化物的待独立验证证据。"
+    },
+    {
+      "id": "scoring_rubric",
+      "severity": "P1",
+      "finding": "验证百分比和星级没有公开计算规则。",
+      "action": "删除定量验证口吻或改为主观治理标签，建立评分卡后再量化。"
+    }
+  ],
+  "evidence": {
+    "formula_spotcheck": {
+      "h3s": {
+        "omega_log_k": 1200.0,
+        "lambda": 2.0,
+        "mu_star": 0.13,
+        "claimed_tc_k": 203.0,
+        "computed_tc_k": 161.08184379177882,
+        "exponent": -1.8258426966292134,
+        "is_first_principles_result": false
+      },
+      "h_s_cl": {
+        "omega_log_k": 1500.0,
+        "lambda": 2.5,
+        "mu_star": 0.12,
+        "claimed_tc_k": 320.0,
+        "computed_tc_k": 237.8948189646516,
+        "exponent": -1.659070191431176,
+        "is_first_principles_result": false
+      },
+      "script": "numeric_spotcheck.py"
+    },
+    "lanio2": {
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8856608/",
+      "superconducting_dome": [
+        0.15,
+        0.3
+      ],
+      "undoped_insulating": true,
+      "undoped_tc_20_40_verified": false,
+      "dopant": "Ca",
+      "scope": "La1−xCaxNiO2 thin films"
+    },
+    "grockowiak": {
+      "source_url": "https://www.frontiersin.org/journals/electronic-materials/articles/10.3389/femat.2022.837651/full",
+      "doi": "10.3389/femat.2022.837651",
+      "initial_tc_k": 294,
+      "maximum_onset_tc_k": 556,
+      "irreversible_higher_order": true,
+      "meissner_completed": false,
+      "reliable_high_temperature_ht_diagram": false,
+      "binary_lah10_routine_validation": false,
+      "nonzero_resistance_background": true
+    },
+    "cl_doping": {
+      "source_url": "https://arxiv.org/html/1804.08224v3",
+      "results": [
+        {
+          "cl_fraction": 0.0625,
+          "tc_k": 161,
+          "pressure_gpa": 200
+        },
+        {
+          "cl_fraction": 0.125,
+          "tc_k": 136,
+          "pressure_gpa": 200
+        }
+      ],
+      "lowers_stabilization_pressure": true,
+      "supports_320k_prediction": false
+    },
+    "scoring": {
+      "rubric_available": false,
+      "role": "无复算规则的研究治理标签，不是定量科学验证结果"
+    }
+  },
+  "open_boundaries": {
+    "global_fit": false,
+    "first_principles_recomputed": false,
+    "prediction_replaced": false,
+    "experimental_verification": false,
+    "full_document_source_audit": false,
+    "full_repository_audit": false
+  },
+  "figure": {
+    "svg": "formula-spotcheck.svg",
+    "png": "formula-spotcheck.png",
+    "x_labels": [
+      "H3S",
+      "H-S-Cl"
+    ],
+    "caption": "图 1　文中值与文中公式复算值：不是材料预测",
+    "insert_after": "公式复算表",
+    "insert_before": "结果解释"
+  },
+  "verification_scope": {
+    "source_documents_modified": false,
+    "new_material_prediction": false,
+    "new_experiment_or_independent_replication": false,
+    "new_first_principles_calculation": false
+  }
+}

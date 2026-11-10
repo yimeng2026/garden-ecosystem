@@ -1,0 +1,251 @@
+{
+  "file": "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-methods-audit\\research\\paper-direction-audit-2026-11-10\\validation-materials\\REVIEW.docx",
+  "engine": "doc-k https://www.kimi.com/pages/dock/embed (final view)",
+  "browser": "C:\\Users\\一梦\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1223\\chrome-headless-shell-win64\\chrome-headless-shell.exe",
+  "pages": 4,
+  "rendered": 4,
+  "ms": 2293,
+  "nearBlankPages": [],
+  "fidelity": {
+    "verdict": "lossy",
+    "byCategory": {
+      "content-loss": 1,
+      "degraded": 392,
+      "interactivity-loss": 1,
+      "metadata-loss": 167,
+      "unknown": 1
+    },
+    "suppressed": [
+      {
+        "part": "word/endnotes.xml",
+        "count": 1,
+        "reason": "only separator notes (no real notes), nothing is lost"
+      }
+    ],
+    "findings": [
+      {
+        "category": "interactivity-loss",
+        "severity": "medium",
+        "part": "word/document.xml",
+        "element": "w:sdtPr",
+        "count": 1,
+        "note": "内容控件属性（占位提示/下拉/复选框/日期选择器/数据绑定）不建模（sdt 拆壳保内容）"
+      },
+      {
+        "category": "degraded",
+        "severity": "medium",
+        "part": "word/document.xml",
+        "element": "w:pgMar",
+        "count": 1,
+        "note": "gutter 装订线不建模（非零时版心宽/位置偏移）"
+      },
+      {
+        "category": "degraded",
+        "severity": "low",
+        "part": "word/document.xml",
+        "element": "w:bCs",
+        "count": 83,
+        "note": "复杂脚本粗体（w:bCs）不建模"
+      },
+      {
+        "category": "degraded",
+        "severity": "low",
+        "part": "word/document.xml",
+        "element": "w:top",
+        "count": 69,
+        "note": "单元格边距类型（dxa/auto/pct）不建模（按 dxa 处理）"
+      },
+      {
+        "category": "degraded",
+        "severity": "low",
+        "part": "word/document.xml",
+        "element": "w:left",
+        "count": 69,
+        "note": "单元格边距类型（同上）"
+      },
+      {
+        "category": "degraded",
+        "severity": "low",
+        "part": "word/document.xml",
+        "element": "w:bottom",
+        "count": 69,
+        "note": "单元格边距类型（同上）"
+      },
+      {
+        "category": "degraded",
+        "severity": "low",
+        "part": "word/document.xml",
+        "element": "w:right",
+        "count": 69,
+        "note": "单元格边距类型（同上）"
+      },
+      {
+        "category": "degraded",
+        "severity": "low",
+        "part": "word/document.xml",
+        "element": "w:shd",
+        "count": 15,
+        "note": "底纹图案（w:shd/@val）不建模（仅 fill 烧值）"
+      },
+      {
+        "category": "degraded",
+        "severity": "low",
+        "part": "word/numbering.xml",
+        "element": "w:lvlJc",
+        "count": 9,
+        "note": "编号标签对齐（w:lvlJc）不建模"
+      },
+      {
+        "category": "degraded",
+        "severity": "low",
+        "part": "word/document.xml",
+        "element": "w:iCs",
+        "count": 2,
+        "note": "复杂脚本斜体（w:iCs）不建模"
+      },
+      {
+        "category": "degraded",
+        "severity": "low",
+        "part": "word/styles.xml",
+        "element": "w:iCs",
+        "count": 1,
+        "note": "复杂脚本斜体（w:iCs）不建模"
+      },
+      {
+        "category": "degraded",
+        "severity": "low",
+        "part": "word/styles.xml",
+        "element": "w:bCs",
+        "count": 1,
+        "note": "复杂脚本粗体（w:bCs）不建模"
+      },
+      {
+        "category": "degraded",
+        "severity": "low",
+        "part": "word/document.xml",
+        "element": "wp:inline",
+        "count": 1,
+        "note": "行内图上留白（@distT）不建模（左右留白已建模）"
+      },
+      {
+        "category": "degraded",
+        "severity": "low",
+        "part": "word/document.xml",
+        "element": "wp:inline",
+        "count": 1,
+        "note": "行内图下留白（@distB）不建模（同上）"
+      },
+      {
+        "category": "degraded",
+        "severity": "low",
+        "part": "word/document.xml",
+        "element": "wp:effectExtent",
+        "count": 1,
+        "note": "浮动对象效果外沿（wp:effectExtent）不建模"
+      },
+      {
+        "category": "degraded",
+        "severity": "low",
+        "part": "word/numbering.xml",
+        "element": "w:abstractNum",
+        "count": 1,
+        "note": "编号在分页/节后重启（w15:restartNumberingAfterBreak）不建模"
+      },
+      {
+        "category": "content-loss",
+        "severity": "low",
+        "part": "word/numbering.xml",
+        "element": "w:lvlOverride",
+        "count": 1,
+        "note": "编号级别覆盖（w:lvlOverride/w:startOverride）不建模（语料命中均行为中性，首例非中性出现再建模）"
+      },
+      {
+        "category": "unknown",
+        "severity": "review",
+        "part": "word/document.xml",
+        "element": "w:fldChar",
+        "count": 1
+      }
+    ]
+  },
+  "contactSheet": "contact-sheet.png",
+  "pageFiles": [
+    {
+      "page": 1,
+      "file": "page-01.png",
+      "textChars": 225,
+      "media": 0,
+      "nearBlank": false,
+      "clipped": false
+    },
+    {
+      "page": 2,
+      "file": "page-02.png",
+      "textChars": 1555,
+      "media": 0,
+      "nearBlank": false,
+      "clipped": false
+    },
+    {
+      "page": 3,
+      "file": "page-03.png",
+      "textChars": 973,
+      "media": 1,
+      "nearBlank": false,
+      "clipped": false
+    },
+    {
+      "page": 4,
+      "file": "page-04.png",
+      "textChars": 920,
+      "media": 0,
+      "nearBlank": false,
+      "clipped": false
+    }
+  ],
+  "finalValidation": {
+    "command": "python docx.py validate REVIEW.docx",
+    "exitCode": 0,
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "sha256": "dbdbf18572ed0a8f7a94e38d1d46778961525189c6d59471ee6d643a55120078"
+  },
+  "manualReview": {
+    "status": "passed",
+    "scope": "Kimi doc-k final-view layout and visible-content review; not a claim of pixel parity with Microsoft Word.",
+    "contactSheetRead": true,
+    "reviewedPages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "nearBlankPagesReviewed": [],
+    "observations": [
+      {
+        "page": 1,
+        "observation": "封面、七条可见缓存目录、页眉和页码完整；缓存页码为 2、2、3、3、4、4、4，与最终分页一致。"
+      },
+      {
+        "page": 2,
+        "observation": "四个冻结来源及哈希、四方向表、两条原生公式和两行复算表均清晰；脚注 1 完整，无裁切。"
+      },
+      {
+        "page": 3,
+        "observation": "图 1 位于公式复算表之后、结果解释之前；H3S／H-S-Cl、203.00、161.08、320.00、237.89 和图例完整；第三、四节及脚注 2–4 无裁切。"
+      },
+      {
+        "page": 4,
+        "observation": "第五至七节、勘误表和六项开放边界表完整；表格后正文间距正常；full_repository_audit=false 与全库审计尚未完成均可见。"
+      }
+    ],
+    "contentLossReview": [
+      {
+        "element": "w:lvlOverride",
+        "count": 1,
+        "disposition": "默认编号定义中的编号级别覆盖不由本文使用；标题采用显式中文编号，四页均可见，未观察到相应内容丢失。"
+      }
+    ],
+    "otherRendererFindings": "目录内容控件拆壳但缓存条目可见；degraded 与 metadata-loss 项未造成本次逐页检查中的可见裁切或内容缺失。",
+    "visualPassClaimed": true
+  }
+}

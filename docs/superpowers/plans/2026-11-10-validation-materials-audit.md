@@ -1,6 +1,6 @@
 # Validation and Material Prediction Evidence Audit Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` in the current session. Subagents are prohibited by the owner. Steps use checkbox (`- [ ]`) tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` in the current session. Subagents are prohibited by the owner. Steps use checkbox (`- [x]`) tracking.
 
 **Goal:** Audit two experimental-validation/material-prediction documents, separating formula inconsistencies, doping/sample mismatches, higher-order hydride evidence, and non-reproducible scoring from actual first-principles or experimental verification.
 
@@ -28,7 +28,7 @@
 
 **Interfaces:** future `review.json`, `REVIEW.md`, `REVIEW.docx`; `run_all_tests() -> int`.
 
-- [ ] **Step 1: Write contracts before evidence exists**
+- [x] **Step 1: Write contracts before evidence exists**
 
 Create tests for:
 
@@ -58,11 +58,11 @@ def test_grockowiak_role(self):
 
 Add checks for all four hashes, Cl values 161/136 K and pressure 200 GPa, no scoring rubric, four direction IDs, all six false boundaries, and Markdown/Word structure. Word must contain native `m:oMath`, TOC, at least four tables, PAGE, a media image, Chinese header, and source footnotes for Frontiers, PMC, arXiv and `numeric_spotcheck.py`.
 
-- [ ] **Step 2: Run intentional RED**
+- [x] **Step 2: Run intentional RED**
 
 Run `python research/paper-direction-audit-2026-11-10/validation-materials/test_validation_materials_audit.py -v`. Expected: exit 1 with `FileNotFoundError: review.json`. Save the full failure to `run.log`.
 
-- [ ] **Step 3: Commit specification and failing contract**
+- [x] **Step 3: Commit specification and failing contract**
 
 ```bash
 git add docs/superpowers/specs/2026-11-10-validation-materials-audit-design.md docs/superpowers/plans/2026-11-10-validation-materials-audit.md research/paper-direction-audit-2026-11-10/validation-materials/test_validation_materials_audit.py research/paper-direction-audit-2026-11-10/validation-materials/run.log
@@ -83,21 +83,21 @@ git commit -m "test: define validation and materials audit contracts"
 - `build_markdown(data) -> str`: same evidence, no second fact database.
 - `verify_primary_sources.run_all_tests() -> int`: independent checks.
 
-- [ ] **Step 1: Verify frozen assets and recompute formula**
+- [x] **Step 1: Verify frozen assets and recompute formula**
 
 Resolve both documents and `numeric_spotcheck.py`, verify hashes, and import `simplified_tc` with `importlib.util.spec_from_file_location`. Call it with `(1200, 2.0, 0.13)` and `(1500, 2.5, 0.12)`. Store exact outputs and claimed 203/320. Do not edit the spot-check script.
 
-- [ ] **Step 2: Encode primary-source roles and boundaries**
+- [x] **Step 2: Encode primary-source roles and boundaries**
 
 Record La1−xCaxNiO2 dome `[0.15, 0.3]`, undoped insulating, and `undoped_tc_20_40_verified=False`. Record Grockowiak 294→556 K, irreversible higher-order, no Meissner and no reliable high-temperature H–T diagram; set `binary_lah10_routine_validation=False`. Record Cl 6.25%→161 K and 12.5%→136 K at 200 GPa, with lower stabilization pressure as a separate effect. Set scoring rubric absent and all six open boundaries false.
 
-- [ ] **Step 3: Generate figure and Markdown**
+- [x] **Step 3: Generate figure and Markdown**
 
 Plot two groups: H3S claimed 203 vs computed 161.081843791778823, H-S-Cl claimed 320 vs computed 237.894818964651591. Title the figure `文中值与文中公式复算值：不是材料预测`. Label all four values and show units K. Save deterministic SVG and 220-dpi PNG. Insert figure after the formula table and before interpretation; state the insertion order.
 
 Include source hashes, four direction rows, numeric table, doping scope, Grockowiak caveats, Cl direction, scoring limits, and explicit `全库审计尚未完成`.
 
-- [ ] **Step 4: Independently verify sources**
+- [x] **Step 4: Independently verify sources**
 
 In `verify_primary_sources.py`, read `sources/primary-source-excerpts.md` and assert the dome, undoped-insulating statement, Grockowiak initial/max/onset and missing Meissner, Cl values and pressure, and formula outputs. Run both scripts. Expected: source checks pass; the main contract may fail only because DOCX is absent. Append actual outputs and exit codes to `run.log`.
 
@@ -111,13 +111,13 @@ In `verify_primary_sources.py`, read `sources/primary-source-excerpts.md` and as
 
 **Interfaces:** consumes only `review.json` and `formula-spotcheck.png`.
 
-- [ ] **Step 1: Implement the docx-js report**
+- [x] **Step 1: Implement the docx-js report**
 
 Use explicit CJK font channels, A4 margins, visible cached TOC plus real TOC field, Chinese header, PAGE-only footer, stable DXA tables, native Math API, and `features.updateFields=true`. Include source/direction, formula, doping/Grockowiak, correction, and open-boundary tables. Insert PNG immediately after the formula table with natural aspect ratio and caption. Add native footnotes for Frontiers, PMC, arXiv and `numeric_spotcheck.py`.
 
 Create the simplified temperature formula with `MathFraction`/`MathSubScript`. Do not render it as an image. `.gitignore` excludes `node_modules/`, `__pycache__/`, QA PNGs and temporary files.
 
-- [ ] **Step 2: Build and run contracts**
+- [x] **Step 2: Build and run contracts**
 
 ```bash
 PATH="/c/Program Files/nodejs:$PATH" python "{kimi-word}/scripts/docx.py" check-docx /absolute/path/validation-materials
@@ -128,7 +128,7 @@ python research/paper-direction-audit-2026-11-10/validation-materials/verify_pri
 
 Expected: OOXML and all tests pass. Do not filter build output.
 
-- [ ] **Step 3: Render and inspect once**
+- [x] **Step 3: Render and inspect once**
 
 Run `docx.py render` once. If successful, read contact sheet first, then every page and every content-loss/near-blank finding. Record observations and final DOCX SHA-256. On exit 4/5/6, record unavailable visual QA without retry.
 
@@ -136,7 +136,7 @@ Run `docx.py render` once. If successful, read contact sheet first, then every p
 
 ### Task 4: Final regression and named-branch delivery
 
-- [ ] **Step 1: Fresh verification**
+- [x] **Step 1: Fresh verification**
 
 Run both test suites, JSON parsing for `review.json` and QA report, `docx.py validate`, and `git diff --check`. Require exit 0 for each and append commands/outputs to `run.log`.
 

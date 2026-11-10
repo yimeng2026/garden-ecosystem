@@ -65,6 +65,9 @@ class ValidationMaterialsAuditTests(unittest.TestCase):
         ):
             self.assertFalse(self.data["open_boundaries"][key])
 
+    def test_figure_uses_ascii_labels(self):
+        self.assertEqual(self.data["figure"]["x_labels"], ["H3S", "H-S-Cl"])
+
     def test_markdown_and_native_word_contract(self):
         markdown = (ROOT / "REVIEW.md").read_text(encoding="utf-8")
         for text in (
