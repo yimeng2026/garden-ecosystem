@@ -37,5 +37,5 @@
 
 - [x] 重跑主合同和独立审计，验证原文件哈希、Lean／Mathlib 版本、编译退出码、依赖差异和零测试保护。
 - [x] 真实编译通过后生成 `PROOF_SLICE.docx`，OOXML 验证通过；最终视图退出码 6，已记录视觉验收不可用且未重试。
-- [ ] `git diff --check` 退出 0，仅暂存本批，提交 `feat: add isolated Lean definition proof slice` 并推送具名分支，不合并主分支。
-- [ ] 以 `docs: record Lean proof slice delivery` 记录交付；继续物理证明债务与实验复现，不把定义切片当作项目级证明。
+- [x] `git diff --check` 退出 0，仅暂存本批，提交 `feat: add isolated Lean definition proof slice` 并推送具名分支，不合并主分支。
+- [x] 以 `docs: record Lean proof slice delivery` 记录交付；继续物理证明债务与实验复现，不把定义切片当作项目级证明。
