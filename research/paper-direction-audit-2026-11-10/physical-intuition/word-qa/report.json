@@ -1,18 +1,34 @@
 {
   "file": "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\physical-intuition-audit\\research\\paper-direction-audit-2026-11-10\\physical-intuition\\REVIEW.docx",
   "finalValidation": {
-    "sha256": "591b36b564c44874ba091fe8e7a12d7faeb9c9088d5dd598baa05542c9d2b978",
-    "command": "python C:/Users/一梦/AppData/Roaming/kimi-desktop/daimon-share/daimon/runtime/kimi-code/home/plugins/managed/kimi-word/skills/kimi-word/scripts/docx.py validate C:/Users/一梦/Documents/kimi/workspace/.worktrees/physical-intuition-audit/research/paper-direction-audit-2026-11-10/physical-intuition/REVIEW.docx",
-    "exitCode": 0,
+    "sha256": "39f9973003269f0ca280360695b28027b4d558e3ccff71fb7771e28e27109c8b",
+    "buildExitCode": 0,
+    "validateExitCode": 0,
     "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)"
   },
-  "visualQA": {
+  "previousVisualQA": {
     "status": "unavailable",
     "exitCode": 6,
-    "error": "E_RENDER_FAILED: EPERM, Permission denied on the temporary render directory. Visual QA is unavailable here; no retry and no LibreOffice fallback was used.",
-    "contactSheetRead": false,
-    "reviewedPages": [],
-    "visualPassClaimed": false,
-    "deliveryBasis": "OOXML validation gate and six content contract tests only; no visual verification is claimed."
+    "error": "E_RENDER_FAILED: EPERM, Permission denied on the temporary render directory. No LibreOffice fallback was used.",
+    "visualPassClaimed": false
+  },
+  "finalVisualQA": {
+    "status": "passed_with_renderer_notes",
+    "report": "word-qa-final/report.json",
+    "renderExitCode": 0,
+    "pages": 4,
+    "rendered": 4,
+    "contactSheetReadFirst": true,
+    "reviewedPages": [1, 2, 3, 4],
+    "observations": [
+      "第1页：标题与七节目录完整，无近空白页。",
+      "第2页：来源哈希、四方向表、原生Δχ²公式和证据通道表完整。",
+      "第3页：H0五点表、双面板图、图注、跨代码误差和物理直觉未验收段落清楚，无裁切。",
+      "第4页：验证命令、41/41基线和范围边界完整。"
+    ],
+    "contentLossReview": "唯一content-loss/low为默认w:lvlOverride；最终视图未见编号缺失、错序或实质内容损失。",
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "visualPassClaimed": true
   }
 }

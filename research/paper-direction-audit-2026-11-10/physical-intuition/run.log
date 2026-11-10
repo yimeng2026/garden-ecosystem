@@ -333,3 +333,21 @@ $ git status --short --branch
  M run.log
 ?? ../../../run.log
 EXIT=0
+
+
+FINAL NATIVE WORD REBUILD AND VISUAL QA (2026-11-10 follow-up)
+COMMAND: PATH="/c/Program Files/nodejs:$PATH" python "{kimi-word}/scripts/docx.py" build "{absolute physical-intuition/build_report.js}" "{absolute physical-intuition/REVIEW.docx"
+EXIT=0
+OUTPUT: PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+
+COMMAND: PATH="/c/Program Files/nodejs:$PATH" python "{kimi-word}/scripts/docx.py" validate "{absolute physical-intuition/REVIEW.docx}"
+EXIT=0
+OUTPUT: PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+
+COMMAND: PATH="/c/Program Files/nodejs:$PATH" python "{kimi-word}/scripts/docx.py" render "{absolute physical-intuition/REVIEW.docx}" "{absolute physical-intuition/word-qa-final}"
+EXIT=0
+OUTPUT: dock render OK: 4 page(s), 4 rendered; near-blank pages: none; content-loss/low w:lvlOverride x1.
+FINAL DOCX SHA-256: 39f9973003269f0ca280360695b28027b4d558e3ccff71fb7771e28e27109c8b
+
+Manual review: contact sheet read first, then all four pages. TOC, native OMML, true tables, H0 figure, Chinese header and PAGE footer are present; no near-blank or clipped pages. Historical EPERM failure remains recorded in word-qa/report.json under previousVisualQA; final successful render is in word-qa-final/report.json.
+Root-level untracked run.log was not modified.
