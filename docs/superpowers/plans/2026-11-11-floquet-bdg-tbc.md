@@ -48,8 +48,12 @@ def test_chiral_and_tbc(self):
     self.assertLess(np.max(np.abs(s @ k @ s + k)), 1e-13)
     self.assertLess(np.max(np.abs(k.conj().T + k)), 1e-13)
     np.testing.assert_allclose(k, twisted_majorana_k(np.full(n, 2.5), theta + 2*np.pi), atol=1e-13)
+    expected_ring = majorana_k(n, 2.5)
+    expected_ring[2*(n-1), 1] = expected_ring[1, 2*(n-1)] = 0.0
+    expected_ring[0, 2*(n-1)+1] = -0.5
+    expected_ring[2*(n-1)+1, 0] = 0.5
     np.testing.assert_allclose(twisted_majorana_k(np.full(n, 2.5), 0.).real,
-                               majorana_k(n, 2.5), atol=1e-14)
+                               expected_ring, atol=1e-14)
 
 def test_step_origin_and_unitarity(self):
     n = 8
