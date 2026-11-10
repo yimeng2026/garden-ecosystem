@@ -1,0 +1,52 @@
+{
+  "schema": "floquet-bdg-tbc-baseline-verification-v1",
+  "recorded_utc": "2026-11-10T22:03:46.076942+00:00",
+  "all_passed": true,
+  "test_count": 9,
+  "commands": [
+    {
+      "script": "test_tbc.py",
+      "arguments": [
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "run_tbc.py",
+      "arguments": [],
+      "exit_code": 0
+    },
+    {
+      "script": "verify_tbc.py",
+      "arguments": [],
+      "exit_code": 0
+    }
+  ],
+  "environment": {
+    "python": "3.12.16",
+    "numpy": "2.4.4",
+    "scipy": "1.18.1",
+    "openblas_num_threads": "1",
+    "cache_root": "D:\\kimi-cache\\tbc"
+  },
+  "sha256": {
+    "results.json": "92b90537a94c9f75e0d61a45e76218b5ec8224956265a6596226dbf0f812c2e9",
+    "independent_verification.json": "e0c4097f897646bb63f97c4699e5164b3302838747e5f955d093b507d315abb7",
+    "run.log": "9b3c08e3ec108468a4c03151f47139ef58f7321517afec2b7ab7cecbf5cccb2a",
+    "tbc_model.py": "81ae7f8230c26800c611ac5f92e26739e27a9e24a4f7c6bbfabf531944162b3a",
+    "test_tbc.py": "b9c6d07e0571a059bf9af0f8179fd0e1fa18e43673f733eb1db958aa1dfb841f",
+    "run_tbc.py": "ca2f38ef0623a7b941d9240b795a7995ffd226083a73c681c42469fa821d59ff",
+    "verify_tbc.py": "d5da7bb60bc8dff5e4c9c08ebbed6bf0386af1412874f5ad7f4213a1ce504b16"
+  },
+  "observed_status": "clean_floquet_baseline_passed",
+  "independent_passed": true,
+  "scope": {
+    "static_baseline_checked": true,
+    "clean_kicked_baseline_checked": true,
+    "disorder_evaluated": false,
+    "thermodynamic_limit_proof": false,
+    "interactions_or_dissipation": false,
+    "material_tc_or_experiment": false
+  },
+  "log": "run.log"
+}

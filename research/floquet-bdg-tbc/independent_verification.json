@@ -1,0 +1,93 @@
+{
+  "schema": "floquet-bdg-tbc-independent-verification-v1",
+  "checks": {
+    "static_topological_zero": {
+      "status": "ok",
+      "method": "independent Schur reconstruction and unwrapped det(block) phase",
+      "nominal_step": 0.00625,
+      "actual_step": 0.006251925678785658,
+      "points": 1005,
+      "raw_signed": -1.0,
+      "value": 1.0,
+      "nearest_integer": 1,
+      "integer_residual": 0.0,
+      "min_bulk_gap": 1.5636629649360587,
+      "max_symmetry_error": 1.5865879683389802e-15,
+      "max_block_condition": 1.0000000000000047,
+      "passed": true
+    },
+    "static_topological_pi": {
+      "status": "ok",
+      "method": "independent Schur reconstruction and unwrapped det(block) phase",
+      "nominal_step": 0.00625,
+      "actual_step": 0.006251925678785658,
+      "points": 1005,
+      "raw_signed": -0.0,
+      "value": 0.0,
+      "nearest_integer": 0,
+      "integer_residual": 0.0,
+      "min_bulk_gap": 1.246979603717466,
+      "max_symmetry_error": 1.6232221041664075e-15,
+      "max_block_condition": 1.000000000000002,
+      "passed": true
+    },
+    "clean_zero_n80": {
+      "status": "ok",
+      "method": "independent Schur reconstruction and unwrapped det(block) phase",
+      "nominal_step": 0.00625,
+      "actual_step": 0.006251925678785658,
+      "points": 1005,
+      "raw_signed": 1.0000000000000002,
+      "value": 1.0000000000000002,
+      "nearest_integer": 1,
+      "integer_residual": 2.220446049250313e-16,
+      "min_bulk_gap": 0.08390513910972558,
+      "max_symmetry_error": 8.581843791392763e-15,
+      "max_block_condition": 1.0000000000000078,
+      "passed": true
+    },
+    "clean_pi_n80": {
+      "status": "ok",
+      "method": "independent Schur reconstruction and unwrapped det(block) phase",
+      "nominal_step": 0.00625,
+      "actual_step": 0.006251925678785658,
+      "points": 1005,
+      "raw_signed": -1.0,
+      "value": 1.0,
+      "nearest_integer": 1,
+      "integer_residual": 0.0,
+      "min_bulk_gap": 0.04161338552797906,
+      "max_symmetry_error": 1.3802783892515045e-14,
+      "max_block_condition": 1.0000000000000073,
+      "passed": true
+    }
+  },
+  "comparisons": {
+    "static_topological_zero": {
+      "stored_nearest_integer": 1,
+      "independent_nearest_integer": 1,
+      "absolute_raw_difference": 0.0,
+      "agrees": true
+    },
+    "static_topological_pi": {
+      "stored_nearest_integer": 0,
+      "independent_nearest_integer": 0,
+      "absolute_raw_difference": 0.0,
+      "agrees": true
+    },
+    "clean_zero_n80": {
+      "stored_nearest_integer": 1,
+      "independent_nearest_integer": 1,
+      "absolute_raw_difference": 2.220446049250313e-16,
+      "agrees": true
+    },
+    "clean_pi_n80": {
+      "stored_nearest_integer": 1,
+      "independent_nearest_integer": 1,
+      "absolute_raw_difference": 0.0,
+      "agrees": true
+    }
+  },
+  "passed": true,
+  "scope": "finite quadratic static and clean-kicked baselines; not disorder or thermodynamic-limit proof"
+}

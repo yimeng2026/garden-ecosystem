@@ -13,7 +13,7 @@
 - Work only in `.worktrees/room-temp-isotope-dft-audit` on `research/floquet-bdg-topology`; do not merge or alter prior evidence.
 - Majorana order is `(a1,b1,...,aN,bN)`, `S=diag(-1,+1,...)`, and `H=i sum(K_rs Gamma_r Gamma_s)`.
 - Closing-bond entries are exactly those in the approved design; `K(theta)` is complex anti-Hermitian, not forcibly real.
-- `U_step(t)=expm(-4K1) expm(-4K0 t)`, with `U_step(0)=I` by definition.
+- Symmetric kicked frame: `H=expm(-2K1)`, `U_step(t)=expm(-4K0 t)H` for `0<t<T`, `U_step(T)=H expm(-4K0 T)H`, and `U_step(0)=I` as the endpoint reference definition. Non-symmetric full-kick propagation failed the clean chiral contract and is not promoted.
 - Use `phi=-arg(lambda)`, `phi_eff=2 epsilon-|phi|` for valence and `|phi|-2 pi` for conduction; the fractional inverse factor is `exp(+i phi_eff t/T)` in a unitary Schur basis. The conduction shift is required by the static half-period chiral limits.
 - `gap_tolerance=1e-8`, block condition limit `1e12`, nominal theta steps `0.05` and `0.025`, quantization and mesh-difference tolerances `1e-3`.
 - Static baselines precede clean kicked; any failure stops promotion. No integer is manufactured by rounding a nonconverged result.

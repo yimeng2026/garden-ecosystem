@@ -59,7 +59,12 @@ def twisted_majorana_k(mu, theta, gamma=1.0, delta=1.0, n=None):
 
 
 def step_evolution(k0, k1, period, time):
-    """Full kick at the origin followed by free evolution; U_step(0)=I."""
+    """Symmetric kicked time frame with time-ordered partial propagation.
+
+    H=expm(-2 K1) is the half kick. For 0<t<T, U_step(t)=F(t)H;
+    at the period endpoint, U_step(T)=H F(T)H. U_step(0)=I is the
+    explicit reference-point definition across the endpoint kick.
+    """
     k0, k1 = np.asarray(k0, dtype=complex), np.asarray(k1, dtype=complex)
     if k0.ndim != 2 or k0.shape[0] != k0.shape[1] or k1.shape != k0.shape:
         raise ValueError("k0 and k1 must be equal-sized square matrices")
@@ -67,7 +72,10 @@ def step_evolution(k0, k1, period, time):
         raise ValueError("require period > 0 and 0 <= time <= period")
     if time == 0:
         return np.eye(k0.shape[0], dtype=complex)
-    return expm(-4 * k1) @ expm(-4 * k0 * time)
+    half_kick = expm(-2 * k1)
+    if time == period:
+        return half_kick @ expm(-4 * k0 * period) @ half_kick
+    return expm(-4 * k0 * time) @ half_kick
 
 
 def floquet_gap(u, epsilon):
@@ -169,3 +177,162 @@ def chiral_blocks(u_half, epsilon, condition_limit=CONDITION_LIMIT):
     if not np.isfinite(max_condition) or max_condition > condition_limit:
         return dict(result, status="singular_chiral_block", reason="block_condition_failed")
     return dict(result, status="ok", blocks=blocks, value=blocks)
+
+
+def _parameters(parameters):
+    required = {"n", "mu0", "mu1", "omega", "gamma", "delta"}
+    if set(parameters) != required:
+        raise ValueError(f"parameters must contain exactly {sorted(required)}")
+    n = parameters["n"]
+    mu0 = _onsite_parameters(parameters["mu0"], n)
+    mu1 = _onsite_parameters(parameters["mu1"], n)
+    omega, gamma, delta = (float(parameters[key]) for key in ("omega", "gamma", "delta"))
+    if omega <= 0 or not np.isfinite([omega, gamma, delta]).all():
+        raise ValueError("omega must be positive and all couplings finite")
+    return n, mu0, mu1, omega, gamma, delta
+
+
+def winding(parameters, nominal_step, epsilon, branch="plus", keep_curve=False):
+    """Evaluate one chiral-block winding on a periodic central-difference grid."""
+    if branch not in ("plus", "minus"):
+        raise ValueError("branch must be plus or minus")
+    if nominal_step <= 0:
+        raise ValueError("nominal_step must be positive")
+    n, mu0, mu1, omega, gamma, delta = _parameters(parameters)
+    period = 2 * np.pi / omega
+    m = int(round(2 * np.pi / nominal_step))
+    if m < 8:
+        raise ValueError("theta grid is too coarse for a central difference")
+    h = 2 * np.pi / m
+    theta_values = -np.pi + h * np.arange(m)
+    kick_matrix = twisted_majorana_k(mu1, 0.0, gamma=0.0, delta=0.0)
+    half_kick = expm(-2 * kick_matrix)
+    blocks = []
+    curve = []
+    min_gap = np.inf
+    max_condition = 0.0
+    max_unitarity = 0.0
+    max_normality = 0.0
+    for theta in theta_values:
+        k0 = twisted_majorana_k(mu0, theta, gamma, delta)
+        free_half = expm(-2 * k0 * period)
+        u_half = free_half @ half_kick
+        u_full = half_kick @ free_half @ free_half @ half_kick
+        period_result = periodized(u_half, u_full, period, period / 2, epsilon)
+        if period_result["status"] != "ok":
+            return {
+                "status": period_result["status"],
+                "reason": period_result["reason"],
+                "failed_theta": float(theta),
+                "value": None,
+                "nearest_integer": None,
+                "min_bulk_gap": float(period_result.get("bulk_gap", np.nan)),
+                "nominal_step": float(nominal_step),
+                "actual_step": h,
+                "points": m,
+            }
+        block_result = chiral_blocks(period_result["u"], epsilon)
+        min_gap = min(min_gap, period_result["bulk_gap"])
+        max_unitarity = max(max_unitarity, period_result["unitarity_error"])
+        max_normality = max(max_normality, period_result["normality_error"])
+        max_condition = max(max_condition, block_result["max_condition"])
+        if block_result["status"] != "ok":
+            return {
+                "status": block_result["status"],
+                "reason": block_result["reason"],
+                "failed_theta": float(theta),
+                "value": None,
+                "nearest_integer": None,
+                "min_bulk_gap": float(min_gap),
+                "max_block_condition": float(max_condition),
+                "nominal_step": float(nominal_step),
+                "actual_step": h,
+                "points": m,
+            }
+        block = block_result["blocks"][branch]
+        blocks.append(block)
+        if keep_curve:
+            determinant = np.linalg.det(block)
+            curve.append({
+                "theta": float(theta),
+                "bulk_gap": float(period_result["bulk_gap"]),
+                "block_condition": float(block_result["conditions"][branch]),
+                "determinant_phase": float(np.angle(determinant)),
+            })
+    array = np.asarray(blocks)
+    derivatives = (np.roll(array, -1, axis=0) - np.roll(array, 1, axis=0)) / (2 * h)
+    integrand = np.asarray([
+        np.trace(np.linalg.solve(block, derivative))
+        for block, derivative in zip(array, derivatives)
+    ])
+    raw = (1j / (2 * np.pi)) * h * np.sum(integrand)
+    value = float(abs(raw.real))
+    closest = int(round(value))
+    residual = float(abs(value - closest))
+    quantized = residual < 1e-3
+    if keep_curve:
+        for row, z in zip(curve, integrand):
+            row["integrand_real"] = float(z.real)
+            row["integrand_imag"] = float(z.imag)
+    return {
+        "status": "ok" if quantized else "not_converged",
+        "reason": None if quantized else "integer_residual_above_tolerance",
+        "value": value,
+        "raw_real": float(raw.real),
+        "raw_imag": float(raw.imag),
+        "nearest_integer": closest if quantized else None,
+        "integer_residual": residual,
+        "min_bulk_gap": float(min_gap),
+        "max_block_condition": float(max_condition),
+        "max_unitarity_error": float(max_unitarity),
+        "max_normality_error": float(max_normality),
+        "nominal_step": float(nominal_step),
+        "actual_step": h,
+        "points": m,
+        "branch": branch,
+        "epsilon": float(epsilon),
+        "curve": curve if keep_curve else None,
+    }
+
+
+def winding_convergence(parameters, epsilon, nominal_steps=(0.05, 0.025), keep_curve=False):
+    """Require integer quantization and agreement on two independent theta grids."""
+    rows = [
+        winding(parameters, step, epsilon, keep_curve=keep_curve)
+        for step in nominal_steps
+    ]
+    base = {
+        "epsilon": float(epsilon),
+        "rows": rows,
+        "value": None,
+        "nearest_integer": None,
+        "mesh_difference": None,
+        "integer_residual": None,
+        "min_bulk_gap": min(row["min_bulk_gap"] for row in rows),
+    }
+    failed = next((row for row in rows if row["status"] != "ok"), None)
+    if failed is not None:
+        return dict(base, status=failed["status"], reason=failed["reason"], passed=False)
+    difference = float(abs(rows[-1]["value"] - rows[0]["value"]))
+    residual = float(max(row["integer_residual"] for row in rows))
+    nearest = rows[-1]["nearest_integer"]
+    if difference >= 1e-3 or nearest != rows[0]["nearest_integer"]:
+        return dict(
+            base,
+            status="not_converged",
+            reason="theta_mesh_disagreement",
+            value=rows[-1]["value"],
+            mesh_difference=difference,
+            integer_residual=residual,
+            passed=False,
+        )
+    return dict(
+        base,
+        status="ok",
+        reason=None,
+        value=rows[-1]["value"],
+        nearest_integer=nearest,
+        mesh_difference=difference,
+        integer_residual=residual,
+        passed=True,
+    )

@@ -1,0 +1,40 @@
+$ python research/floquet-bdg-tbc/test_tbc.py -v
+test_clean_kicked_matches_existing_endpoint_counts (__main__.TBCCleanBaselineTests.test_clean_kicked_matches_existing_endpoint_counts) ... ok
+test_endpoint_and_half_period_chiral_blocks (__main__.TBCPeriodizationTests.test_endpoint_and_half_period_chiral_blocks) ... ok
+test_zero_kick_zero_gap_is_rejected (__main__.TBCPeriodizationTests.test_zero_kick_zero_gap_is_rejected) ... ok
+test_static_topological_zero_and_pi (__main__.TBCStaticWindingTests.test_static_topological_zero_and_pi) ... ok
+test_static_trivial_two_gap_control (__main__.TBCStaticWindingTests.test_static_trivial_two_gap_control) ... ok
+test_static_trivial_zero_gap_is_undefined (__main__.TBCStaticWindingTests.test_static_trivial_zero_gap_is_undefined) ... ok
+test_chiral_and_tbc (__main__.TBCStructureTests.test_chiral_and_tbc) ... ok
+test_disordered_onsite_terms_and_chiral (__main__.TBCStructureTests.test_disordered_onsite_terms_and_chiral) ... ok
+test_step_origin_and_unitarity (__main__.TBCStructureTests.test_step_origin_and_unitarity) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 11.525s
+
+OK
+exit_code=0
+$ python research/floquet-bdg-tbc/run_tbc.py
+static_passed True
+topological_omega7 zero {'status': 'ok', 'value': 0.9998955646717206, 'nearest_integer': 1, 'min_bulk_gap': 1.5636629649360587, 'mesh_difference': 0.00030995861435489935, 'integer_residual': 0.00041439394263431684}
+topological_omega7 pi {'status': 'ok', 'value': 5.028595411767406e-31, 'nearest_integer': 0, 'min_bulk_gap': 1.2469796037174665, 'mesh_difference': 6.061253398112509e-32, 'integer_residual': 5.634720751578657e-31}
+trivial_omega17 zero {'status': 'ok', 'value': 6.69008894320936e-18, 'nearest_integer': 0, 'min_bulk_gap': 1.0528643257547126, 'mesh_difference': 2.339512606632605e-18, 'integer_residual': 6.69008894320936e-18}
+trivial_omega17 pi {'status': 'ok', 'value': 5.028595411767406e-31, 'nearest_integer': 0, 'min_bulk_gap': 0.547325980144164, 'mesh_difference': 2.0234110109254554e-31, 'integer_residual': 5.028595411767406e-31}
+trivial_omega7_zero {'status': 'gapless_or_undefined', 'value': None, 'nearest_integer': None, 'min_bulk_gap': 2.0078087588383996e-15, 'mesh_difference': None, 'integer_residual': None}
+clean_zero {'status': 'ok', 'value': 0.9998955646411216, 'nearest_integer': 1, 'min_bulk_gap': 0.08390514763034575, 'mesh_difference': 0.0003099587051256236, 'integer_residual': 0.0004143940640040089}
+clean_pi {'status': 'ok', 'value': 0.9998955646585707, 'nearest_integer': 1, 'min_bulk_gap': 0.04161339979538486, 'mesh_difference': 0.00030995865336280737, 'integer_residual': 0.00041439399479215044}
+clean_reference {'p0': 1, 'p_pi': 1}
+status clean_floquet_baseline_passed
+results C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\results.json
+exit_code=0
+$ python research/floquet-bdg-tbc/verify_tbc.py
+static_topological_zero {"status": "ok", "method": "independent Schur reconstruction and unwrapped det(block) phase", "nominal_step": 0.00625, "actual_step": 0.006251925678785658, "points": 1005, "raw_signed": -1.0, "value": 1.0, "nearest_integer": 1, "integer_residual": 0.0, "min_bulk_gap": 1.5636629649360587, "max_symmetry_error": 1.5865879683389802e-15, "max_block_condition": 1.0000000000000047, "passed": true}
+comparison {"stored_nearest_integer": 1, "independent_nearest_integer": 1, "absolute_raw_difference": 0.0, "agrees": true}
+static_topological_pi {"status": "ok", "method": "independent Schur reconstruction and unwrapped det(block) phase", "nominal_step": 0.00625, "actual_step": 0.006251925678785658, "points": 1005, "raw_signed": -0.0, "value": 0.0, "nearest_integer": 0, "integer_residual": 0.0, "min_bulk_gap": 1.246979603717466, "max_symmetry_error": 1.6232221041664075e-15, "max_block_condition": 1.000000000000002, "passed": true}
+comparison {"stored_nearest_integer": 0, "independent_nearest_integer": 0, "absolute_raw_difference": 0.0, "agrees": true}
+clean_zero_n80 {"status": "ok", "method": "independent Schur reconstruction and unwrapped det(block) phase", "nominal_step": 0.00625, "actual_step": 0.006251925678785658, "points": 1005, "raw_signed": 1.0000000000000002, "value": 1.0000000000000002, "nearest_integer": 1, "integer_residual": 2.220446049250313e-16, "min_bulk_gap": 0.08390513910972558, "max_symmetry_error": 8.581843791392763e-15, "max_block_condition": 1.0000000000000078, "passed": true}
+comparison {"stored_nearest_integer": 1, "independent_nearest_integer": 1, "absolute_raw_difference": 2.220446049250313e-16, "agrees": true}
+clean_pi_n80 {"status": "ok", "method": "independent Schur reconstruction and unwrapped det(block) phase", "nominal_step": 0.00625, "actual_step": 0.006251925678785658, "points": 1005, "raw_signed": -1.0, "value": 1.0, "nearest_integer": 1, "integer_residual": 0.0, "min_bulk_gap": 0.04161338552797906, "max_symmetry_error": 1.3802783892515045e-14, "max_block_condition": 1.0000000000000073, "passed": true}
+comparison {"stored_nearest_integer": 1, "independent_nearest_integer": 1, "absolute_raw_difference": 0.0, "agrees": true}
+independent_passed True
+exit_code=0

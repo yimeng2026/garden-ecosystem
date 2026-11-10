@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT.parent / "floquet-bdg-convention"))
 
 from convention_model import majorana_k  # noqa: E402
+from run_tbc import run_clean  # noqa: E402
 from tbc_model import (  # noqa: E402
     chiral,
     chiral_blocks,
@@ -18,6 +19,7 @@ from tbc_model import (  # noqa: E402
     periodized,
     step_evolution,
     twisted_majorana_k,
+    winding_convergence,
 )
 
 
@@ -107,6 +109,52 @@ class TBCPeriodizationTests(unittest.TestCase):
         pi_result = periodized(u_step, u_step, period, period / 2, np.pi)
         self.assertEqual(pi_result["status"], "ok")
         self.assertLess(pi_result["unitarity_error"], 1e-10)
+
+
+class TBCStaticWindingTests(unittest.TestCase):
+    @staticmethod
+    def parameters(mu0, omega, n=40):
+        return {
+            "n": n,
+            "mu0": np.full(n, mu0),
+            "mu1": np.zeros(n),
+            "omega": omega,
+            "gamma": 1.0,
+            "delta": 1.0,
+        }
+
+    def assert_quantized(self, result, expected):
+        self.assertEqual(result["status"], "ok")
+        self.assertEqual(result["nearest_integer"], expected)
+        self.assertLess(result["mesh_difference"], 1e-3)
+        self.assertLess(result["integer_residual"], 1e-3)
+
+    def test_static_topological_zero_and_pi(self):
+        parameters = self.parameters(0.0, 7.0)
+        self.assert_quantized(winding_convergence(parameters, 0.0), 1)
+        self.assert_quantized(winding_convergence(parameters, np.pi), 0)
+
+    def test_static_trivial_two_gap_control(self):
+        parameters = self.parameters(2.5, 17.0)
+        self.assert_quantized(winding_convergence(parameters, 0.0), 0)
+        self.assert_quantized(winding_convergence(parameters, np.pi), 0)
+
+    def test_static_trivial_zero_gap_is_undefined(self):
+        result = winding_convergence(self.parameters(2.5, 7.0), 0.0)
+        self.assertEqual(result["status"], "gapless_or_undefined")
+        self.assertIsNone(result["nearest_integer"])
+        self.assertLessEqual(result["min_bulk_gap"], 1e-8)
+
+
+class TBCCleanBaselineTests(unittest.TestCase):
+    def test_clean_kicked_matches_existing_endpoint_counts(self):
+        result = run_clean(n=40, nominal_steps=(0.05, 0.025))
+        self.assertEqual(result["reference"], {"p0": 1, "p_pi": 1})
+        self.assertEqual(result["zero"]["status"], "ok")
+        self.assertEqual(result["pi"]["status"], "ok")
+        self.assertEqual(result["zero"]["nearest_integer"], result["reference"]["p0"])
+        self.assertEqual(result["pi"]["nearest_integer"], result["reference"]["p_pi"])
+        self.assertTrue(result["passed"])
 
 
 def run_all_tests():
