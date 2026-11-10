@@ -1,0 +1,86 @@
+{
+  "schema": "floquet-bdg-convention-verification-v1",
+  "recorded_utc": "2026-11-10T19:16:19.990133+00:00",
+  "all_passed": true,
+  "results": [
+    {
+      "script": "run_topology.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-convention\\run_topology.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "test_convention.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-convention\\test_convention.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "test_topology.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-convention\\test_topology.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "verify_topology.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-convention\\verify_topology.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "build_markdown.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-convention\\build_markdown.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "build_figure.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-convention\\build_figure.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "test_report.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-convention\\test_report.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "convention_tests": 4,
+  "topology_tests": 4,
+  "independent_tests": 7,
+  "report_tests": 2,
+  "results_sha256": "ff83974b956968fa06b64bcfa148dce9973eb1502c36ba48546b1927bf507a1a",
+  "docx_sha256": "87592aa9307c71e0b94c399f4f62122f4237c41d8c09513a864e7850a263fb08",
+  "legacy_results_sha256": "c9c9fda60775bd5e509b7a07e44a6f196c7a58ef7365ebe28cd7eab7b17fe15c",
+  "visual_status": "unavailable_exit_6_no_retry",
+  "visual_pass_claimed": false,
+  "scope": {
+    "fock_convention_checked": true,
+    "bloch_winding_checked": true,
+    "n160_open_chain_reproduced": true,
+    "full_size_series_rule_passed": false,
+    "material_tc_prediction": false,
+    "experimental_validation": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "run.log"
+}

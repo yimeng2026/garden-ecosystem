@@ -1,0 +1,26 @@
+$ python research/floquet-bdg-convention/probe_legacy_convention.py
+Traceback (most recent call last):
+  File "C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-convention\probe_legacy_convention.py", line 62, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-convention\probe_legacy_convention.py", line 30, in main
+    k1 = legacy.majorana_k(1, mu)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg\floquet_bdg.py", line 26, in majorana_k
+    raise ValueError("n must be an integer >= 2")
+ValueError: n must be an integer >= 2
+exit_code=1
+$ python research/floquet-bdg-convention/test_convention.py -v
+Traceback (most recent call last):
+  File "C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-convention\test_convention.py", line 13, in <module>
+    from convention_model import kicked_floquet, majorana_k, static_null_vectors  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'convention_model'
+exit_code=1
+$ python research/floquet-bdg-convention/probe_legacy_convention.py
+single-site U[0,1]: actual=0.5702416578408517, expected=0.2987666363611303
+two-site Fock max element difference: 8.1000000000000005e-01
+single-site Fock Heisenberg max difference: 3.0223765311680495e-01
+legacy_convention_passed=False
+This is an intentional RED probe of the legacy implementation, not a failure of the Fock reference.
+exit_code=1

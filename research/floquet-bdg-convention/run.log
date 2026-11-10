@@ -1,0 +1,112 @@
+$ python research/floquet-bdg-convention/run_topology.py
+N=40: zero=[0.0028610210519369027, 0.0028610210519369027]/[0.026067846513400498, 0.026067846513400498], pi=[0.0011423518613264327, 0.0011423518613264327]/[0.02475635313246782, 0.02475635313246782]
+N=80: zero=[9.30072801278813e-05, 9.30072801278813e-05]/[0.001013293444853575, 0.001013293444853575], pi=[3.99592253394572e-05, 3.99592253394572e-05]/[0.0009219842944101175, 0.0009219842944101175]
+N=160: zero=[9.863124283970959e-08, 9.863124283970959e-08]/[1.1467917590780304e-06, 1.1467917590780304e-06], pi=[3.356642169771734e-08, 3.356642169771734e-08]/[7.953283303427857e-07, 7.953283303427857e-07]
+{
+  "winding": [
+    {
+      "nk": 512,
+      "winding": 2.0,
+      "nearest_integer": 2,
+      "min_sin_phi": 0.041654687112029375
+    },
+    {
+      "nk": 1024,
+      "winding": 2.0,
+      "nearest_integer": 2,
+      "min_sin_phi": 0.041613473995394515
+    },
+    {
+      "nk": 2048,
+      "winding": 2.0,
+      "nearest_integer": 2,
+      "min_sin_phi": 0.04160539507829104
+    },
+    {
+      "nk": 4096,
+      "winding": 2.0,
+      "nearest_integer": 2,
+      "min_sin_phi": 0.041604374702911215
+    }
+  ],
+  "convergence": {
+    "zero": {
+      "max_candidate_distances_by_size": [
+        0.0028610210519369027,
+        9.30072801278813e-05,
+        9.863124283970959e-08
+      ],
+      "strictly_decreasing": true,
+      "first_to_last_reduction_factor": 29007.2493214598,
+      "all_candidates_separated": true,
+      "all_candidates_localized": false,
+      "finite_size_status": "inconclusive",
+      "thermodynamic_limit_proof": false
+    },
+    "pi": {
+      "max_candidate_distances_by_size": [
+        0.0011423518613264327,
+        3.99592253394572e-05,
+        3.356642169771734e-08
+      ],
+      "strictly_decreasing": true,
+      "first_to_last_reduction_factor": 34032.57790222297,
+      "all_candidates_separated": true,
+      "all_candidates_localized": false,
+      "finite_size_status": "inconclusive",
+      "thermodynamic_limit_proof": false
+    }
+  }
+}
+exit_code=0
+$ python research/floquet-bdg-convention/test_convention.py -v
+test_generator_is_antisymmetric_and_static_null_space_survives (__main__.ConventionTests.test_generator_is_antisymmetric_and_static_null_space_survives) ... ok
+test_kicked_floquet_is_real_orthogonal (__main__.ConventionTests.test_kicked_floquet_is_real_orthogonal) ... ok
+test_single_site_fock_time_evolution (__main__.ConventionTests.test_single_site_fock_time_evolution) ... ok
+test_two_site_fock_matrix_matches_every_element (__main__.ConventionTests.test_two_site_fock_matrix_matches_every_element) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK
+exit_code=0
+$ python research/floquet-bdg-convention/test_topology.py -v
+test_effective_vector_reconstructs_unitary (__main__.BlochTopologyTests.test_effective_vector_reconstructs_unitary) ... ok
+test_k0_and_kpi_phases_match_endpoint_quantities (__main__.BlochTopologyTests.test_k0_and_kpi_phases_match_endpoint_quantities) ... ok
+test_logm_matches_branch_free_direction_away_from_gap_closing (__main__.BlochTopologyTests.test_logm_matches_branch_free_direction_away_from_gap_closing) ... ok
+test_winding_converges_to_literature_reference_and_control (__main__.BlochTopologyTests.test_winding_converges_to_literature_reference_and_control) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.305s
+
+OK
+exit_code=0
+$ python research/floquet-bdg-convention/verify_topology.py -v
+test_fock_matrix_and_legacy_preservation (__main__.IndependentCorrectedTopologyTests.test_fock_matrix_and_legacy_preservation) ... ok
+test_full_size_rule_remains_honest_about_short_chains (__main__.IndependentCorrectedTopologyTests.test_full_size_rule_remains_honest_about_short_chains) ... ok
+test_no_material_or_experimental_overclaim (__main__.IndependentCorrectedTopologyTests.test_no_material_or_experimental_overclaim) ... ok
+test_open_chain_n160_recomputation (__main__.IndependentCorrectedTopologyTests.test_open_chain_n160_recomputation) ... ok
+test_second_pair_is_not_another_edge_pair_at_n160 (__main__.IndependentCorrectedTopologyTests.test_second_pair_is_not_another_edge_pair_at_n160) ... ok
+test_static_trivial_open_control_and_raw_artifacts (__main__.IndependentCorrectedTopologyTests.test_static_trivial_open_control_and_raw_artifacts) ... ok
+test_winding_grid_and_controls (__main__.IndependentCorrectedTopologyTests.test_winding_grid_and_controls) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.329s
+
+OK
+exit_code=0
+$ python research/floquet-bdg-convention/build_markdown.py
+C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-convention\README.md
+exit_code=0
+$ python research/floquet-bdg-convention/build_figure.py
+C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-convention\topology.png
+exit_code=0
+$ python research/floquet-bdg-convention/test_report.py -v
+test_errata_and_markdown_preserve_short_chain_boundary (__main__.CorrectedReportTests.test_errata_and_markdown_preserve_short_chain_boundary) ... ok
+test_word_contains_current_values_and_native_structure (__main__.CorrectedReportTests.test_word_contains_current_values_and_native_structure) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.011s
+
+OK
+exit_code=0
