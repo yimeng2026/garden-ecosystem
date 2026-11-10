@@ -161,7 +161,7 @@ class RegenerationTests(unittest.TestCase):
         cls.completed = subprocess.run(
             [sys.executable, str(cls.copy / "scripts/render_strength_review.py")],
             cwd=cls.copy,
-            text=True,
+            encoding="utf-8",
             capture_output=True,
             timeout=120,
         )

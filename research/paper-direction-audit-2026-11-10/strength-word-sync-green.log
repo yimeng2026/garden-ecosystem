@@ -1,0 +1,23 @@
+GREEN: regeneration preservation
+
+BEFORE HASHES
+367a133178297b4ca1b2faf5eb488520c2408fb3c6bb86bedb8b82344d8a3e84 *strength-review.json
+bbdc865cea70a1c591ce2dff8951831c4d41d5d9f919f211461e54419dff403d *strength-review-summary.json
+dd918fd61beed11c56d83706585ef2fde413296a95087dc6f2e8102844708a4b *STRENGTH_SERIES_REVIEW.md
+
+COMMAND: python test_strength_regeneration_preserves.py -v
+test_resolution_fields_preserved_by_id (__main__.RegenerationTests.test_resolution_fields_preserved_by_id) ... ok
+test_summary_resolution_fields_preserved (__main__.RegenerationTests.test_summary_resolution_fields_preserved) ... ok
+test_supplements_preserved_in_order_without_duplicates (__main__.RegenerationTests.test_supplements_preserved_in_order_without_duplicates) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.204s
+
+OK
+
+EXIT=0
+
+AFTER HASHES
+367a133178297b4ca1b2faf5eb488520c2408fb3c6bb86bedb8b82344d8a3e84 *strength-review.json
+bbdc865cea70a1c591ce2dff8951831c4d41d5d9f919f211461e54419dff403d *strength-review-summary.json
+dd918fd61beed11c56d83706585ef2fde413296a95087dc6f2e8102844708a4b *STRENGTH_SERIES_REVIEW.md

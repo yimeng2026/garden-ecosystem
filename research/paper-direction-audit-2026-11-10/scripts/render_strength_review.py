@@ -18,6 +18,52 @@ AUDIT = Path(__file__).resolve().parents[1]
 WORKSPACE = Path(__file__).resolve().parents[4]
 TOE = WORKSPACE / "toe-sylva-audit"
 
+RECORD_BASELINE_KEYS = {
+    "id",
+    "series",
+    "title",
+    "role",
+    "novelty",
+    "unfinished",
+    "priority",
+    "evidence",
+    "source_line_1",
+}
+SUMMARY_BASELINE_KEYS = {
+    "status",
+    "reviewed",
+    "series",
+    "priorities",
+    "unique_ids",
+    "evidence_files_exist",
+    "external_novelty_certified",
+    "machine_proofs_certified_by_this_review",
+}
+
+
+def merge_extras(baseline, existing, baseline_keys):
+    """Refresh baseline fields while preserving later evidence by paper ID."""
+    merged = dict(existing)
+    for key in baseline_keys:
+        merged[key] = baseline[key]
+    return merged
+
+
+def supplement_suffix(markdown):
+    """Return the exact K1a/K1b/K2 suffix, rejecting duplicate full titles."""
+    heading_lines = [
+        line
+        for line in markdown.splitlines()
+        if re.match(r"^## (?:K1a |K1b |K2 )", line)
+    ]
+    if len(heading_lines) != len(set(heading_lines)):
+        raise ValueError("duplicate K1a/K1b/K2 supplement heading")
+    matches = list(re.finditer(r"(?m)^## (?:K1a |K1b |K2 )", markdown))
+    if not matches:
+        return ""
+    return markdown[matches[0].start():].rstrip() + "\n"
+
+
 # role, novelty, unfinished, priority
 MATH = [
     ("公理治理方法论", "四分类与清偿流程是项目内治理增量；分类学本身不主张外部首创。", "全量公理登记、最小独立集与模型级相对一致性；落实 O4.3 对 Flyspeck／Metamath 过度引申的更正。", "P0"),
@@ -110,11 +156,48 @@ def main() -> None:
         path = TOE / r["evidence"]
         assert path.is_file(), path
         r["source_line_1"] = path.read_text(encoding="utf-8-sig").splitlines()[0]
-    (AUDIT / "strength-review.json").write_text(json.dumps({"status": "initial_review_not_external_certification", "records": records}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    review_path = AUDIT / "strength-review.json"
+    previous = (
+        json.loads(review_path.read_text(encoding="utf-8"))["records"]
+        if review_path.exists()
+        else []
+    )
+    previous_by_id = {record["id"]: record for record in previous}
+    new_ids = {record["id"] for record in records}
+    for old in previous:
+        if old["id"] not in new_ids and any(
+            key not in RECORD_BASELINE_KEYS for key in old
+        ):
+            raise ValueError(f"baseline would remove extended record: {old['id']}")
+    records = [
+        merge_extras(record, previous_by_id.get(record["id"], {}), RECORD_BASELINE_KEYS)
+        for record in records
+    ]
+    review_path.write_text(
+        json.dumps(
+            {"status": "initial_review_not_external_certification", "records": records},
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
 
     counts = {s: Counter(r["priority"] for r in records if r["series"] == s) for s in ("math", "module")}
     summary = {"status": "pass", "reviewed": len(records), "series": {"math": 25, "module": 30}, "priorities": counts, "unique_ids": len({r["id"] for r in records}), "evidence_files_exist": True, "external_novelty_certified": False, "machine_proofs_certified_by_this_review": False}
-    (AUDIT / "strength-review-summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    summary_path = AUDIT / "strength-review-summary.json"
+    previous_summary = (
+        json.loads(summary_path.read_text(encoding="utf-8"))
+        if summary_path.exists()
+        else {}
+    )
+    summary = merge_extras(summary, previous_summary, SUMMARY_BASELINE_KEYS)
+    summary_path.write_text(
+        json.dumps(summary, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
 
     lines = [
         "# 数学基础与模块强化：55 篇逐篇方向及未竟工作初审", "",
@@ -166,7 +249,14 @@ def main() -> None:
         "- `strength-review-summary.json`：数量、唯一 ID 和证据文件存在性断言结果。", "",
         "- 复核命令：`python scripts/render_strength_review.py`。退出码 0 仅表示总账结构与文件存在性检查通过，不表示数学证明或外部新颖性通过。", "",
     ]
-    (AUDIT / "STRENGTH_SERIES_REVIEW.md").write_text("\n".join(lines), encoding="utf-8", newline="\n")
+    review_md_path = AUDIT / "STRENGTH_SERIES_REVIEW.md"
+    existing_md = (
+        review_md_path.read_text(encoding="utf-8") if review_md_path.exists() else ""
+    )
+    suffix = supplement_suffix(existing_md)
+    baseline_md = "\n".join(lines).rstrip() + "\n"
+    final_md = baseline_md if not suffix else baseline_md + "\n" + suffix
+    review_md_path.write_text(final_md, encoding="utf-8", newline="\n")
 
     candidates = ["Microsoft YaHei", "Noto Sans CJK SC", "SimHei", "Arial Unicode MS"]
     available = {f.name for f in font_manager.fontManager.ttflist}
