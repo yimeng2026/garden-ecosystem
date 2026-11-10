@@ -211,7 +211,7 @@ Run: `python {kimi-word}/scripts/docx.py render <absolute FLOQUET_APPROXIMATION.
 Run: 主合同、独立复核、真实 `audit_floquet_approximation.py`、JSON 解析、原文件哈希、DOCX 哈希和 `git diff --check`。
 Expected: 全部退出 0；主合同至少 6 项、独立复核 4 项，清洁编译退出码 0，标准公理之外无依赖。
 
-- [ ] **Step 2: 提交并推送**
+- [x] **Step 2: 提交并推送**
 
 ```bash
 git add research/lean-proof-slice docs/superpowers/plans/2026-11-11-floquet-approximation.md
@@ -223,7 +223,7 @@ git ls-remote origin refs/heads/fix/floquet-approximation
 
 Require: 本地与远端哈希一致、工作区干净、未合并主分支。
 
-- [ ] **Step 3: 记录交付边界**
+- [x] **Step 3: 记录交付边界**
 
 以 `docs: record Floquet approximation delivery` 记录最终提交、验证、视觉状态和未竟工作。继续 Floquet 物理推导、材料预测和实验复现，保持全库目标 active；不得把语义切片当作 Floquet 增强或项目级证明。
 
