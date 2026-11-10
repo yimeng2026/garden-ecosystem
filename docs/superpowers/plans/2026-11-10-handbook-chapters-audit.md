@@ -50,9 +50,9 @@
 
 - [x] 两套测试、JSON、DOCX 哈希、`docx.py validate` 和 `git diff --check` 全部退出 0。
 - [x] SVG 和提取文本只通过 `.gitattributes` 保留原始空白，PDF 标 binary。
-- [ ] 仅暂存本批文件，提交 `docs: audit handbook pedagogy and necessity claims`。
-- [ ] 推送 `audit/room-temp-handbook-chapters`，核对远端哈希，不合并主分支。
-- [ ] 记录最终交付并继续技术文档、杂志设计和项目介绍，保持全库目标 active。
+- [x] 仅暂存本批文件，提交 `docs: audit handbook pedagogy and necessity claims`。
+- [x] 推送 `audit/room-temp-handbook-chapters`，核对远端哈希，不合并主分支。
+- [x] 记录最终交付并继续技术文档、杂志设计和项目介绍，保持全库目标 active。
 
 ## 计划自审
 
