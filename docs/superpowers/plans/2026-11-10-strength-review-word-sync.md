@@ -158,15 +158,15 @@ class RegenerationTests(unittest.TestCase):
         shutil.copy2(SCRIPT, cls.copy / "scripts/render_strength_review.py")
         for name in INPUTS:
             shutil.copy2(AUDIT / name, cls.copy / name)
-        cls.run = subprocess.run(
+        cls.completed = subprocess.run(
             [sys.executable, str(cls.copy / "scripts/render_strength_review.py")],
             cwd=cls.copy,
             text=True,
             capture_output=True,
             timeout=120,
         )
-        if cls.run.returncode != 0:
-            raise RuntimeError(f"base renderer failed: {cls.run.stdout}\n{cls.run.stderr}")
+        if cls.completed.returncode != 0:
+            raise RuntimeError(f"base renderer failed: {cls.completed.stdout}\n{cls.completed.stderr}")
         cls.after_records = json.loads((cls.copy / "strength-review.json").read_text(encoding="utf-8"))["records"]
         cls.after_summary = json.loads((cls.copy / "strength-review-summary.json").read_text(encoding="utf-8"))
         cls.after_md = (cls.copy / "STRENGTH_SERIES_REVIEW.md").read_text(encoding="utf-8")
