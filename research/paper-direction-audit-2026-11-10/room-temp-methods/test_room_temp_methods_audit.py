@@ -122,6 +122,15 @@ class RoomTempMethodsAuditTests(unittest.TestCase):
                 for name in names
                 if name.startswith("word/footer") and name.endswith(".xml")
             )
+            self.assertIn("word/footnotes.xml", names)
+            footnotes = package.read("word/footnotes.xml")
+        for doi in (
+            b"10.1038/s41524-025-01725-z",
+            b"10.1103/PhysRevLett.133.256003",
+            b"10.1073/pnas.2401840121",
+            b"2409.00532",
+        ):
+            self.assertIn(doi, footnotes)
         self.assertIn(b"<m:oMath", document)
         self.assertIn(b"TOC", document)
         self.assertGreaterEqual(document.count(b"<w:tbl>"), 4)

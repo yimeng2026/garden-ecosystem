@@ -1,0 +1,1129 @@
+npj | computational materials Article
+Published in partnership with the Shanghai Institute of Ceramics of the Chinese Academy of Sciences
+https://doi.org/10.1038/s41524-025-01725-z
+Dynamical approach to realize room-
+temperature superconductivity in LaH10
+Check for updates
+Chendi Xie 1,2,4,A d a mD .S m i t h 3,4, Haoran Yan2, Wei-Chih Chen 1 & Yao Wang 2
+Metallic hydrogen and hydride materials stand as promising avenues to achieve room-temperature
+superconductivity. Characterized by their high phonon frequencies and moderate coupling strengths,
+several high-pressure hydrides were theoretically predicted to exhibit transition temperatures ( T
+c)
+exceeding 250 K, a claim further substantiated by experimental evidence. In an effort to push Tc
+beyond room temperature, we introduce a dynamical method that involves stimulating hydrides with
+mid-infrared lasers. Employing Floquet ﬁrst-principles simulations, we observe that in a
+nonequilibrium state induced by light, both the electronic density of states and the coupling to high-
+energy phonons see notable enhancements. These simultaneous improvements collectively could
+potentially result in an estimated 20% –30% rise in T
+c in practical pump conditions. Our theoretical
+investigation, therefore, offers a novel strategy to potentially raise the Tc of hydrides above room
+temperature.
+Superconductivity is one of the most important quantum phases discovered
+to date and is well-known for its promising applications in ﬁelds like dis-
+sipationless power transmission, quantum computing, and imaging. Due to
+the strict conditions required for the formation of condensed Cooper pairs,
+achieving the superconductivity (SC) phase typically requires extremely low
+temperatures, constrained by the empirical McMillan limit1. To increase the
+transition temperatureTc, previous studies have identiﬁed two promising
+directions. On the one hand, unconventional superconductors, especially
+cuprates, can exhibit relatively highT
+c ~ 130 K2, while the underlying pairing
+mechanism and design principle are still under debate. On the other hand,
+the T
+c of conventional superconductors, describable by the Bardeen-
+Cooper-Schrieffer (BCS) theory, is primarily determined by phonon
+energies
+3–5. This design principle has motivated the idea of leveraging the
+high-frequency lattice vibrations of the lightest element —hydrogen6.
+Metallic hydrogen has been predicted to have Tc on the order of room
+temperature but requires extreme pressure over 400 GPa to stabilize its
+crystal structure, which has proven experimentally challenging
+7–9.
+Hydrogen-rich compounds, or hydrides, offer a more feasible alter-
+native due to their chemically precompressed lattices10–12. Various binary
+hydride compounds have been predicted as candidates for high-
+temperature superconductors, such as La-H
+13,Y - H13,H - S14,C a - H15,T h -
+H16,A c - H17 and Hf-H18. To date, high-temperature superconducting sig-
+natures have been successfully experimentally veriﬁed in H-S19,L a - H20–22,
+Y-H23 and Ca-H24. For example, H3Sh a sb e e nf o u n dt oh a v eaTc of 203 K at
+155 GPa19; more recently, LaH10 has exhibited record-breakingTc of 250 K
+at 150 GPa, 260 K at 170–200 GPa and 246 K at 136 GPa20–22.T h e s eﬁndings
+mark signiﬁcant strides toward room-temperature SC25.
+In parallel to the high-pressure synthesis of hydride superconductors,
+alternative approaches have been considered to enhance Tc of existing
+superconductors. Among these approaches, ultrafast laser engineering in
+electronic and phononic structures has emerged as a promising method.
+Within the pump-probe regime, exis ting experiments have revealed the
+possibility of transiently enhancingTc in K3C60
+26–29, which is likely driven by
+dynamical phonons30–34. Laser-enhanced SC has also been observed in
+unconventional superconductors, including La 1.675Eu0.2Sr0.125CuO4
+35,
+La2−xBaxCuO4
+36,Y B a2Cu3O6.5
+37,38 and κ-salts39,40. While these observations
+may arise from different mechanisms41–47, the success in various materials
+has fueled broad interest in using light to increase the Tc of existing
+superconductors, and may further extend to hydrides as the ﬁnal step
+toward room-temperature SC.
+In this paper, we present a dynamical method utilizing mid-infrared
+(MIR) lasers to raise the transition temperature (Tc) of hydrides above 300
+K. Focusing on a light-driven steady state, we simulate the nonequilibrium
+change in electronic structure and interactions through an integration of
+Floquet theory and density functional perturbation theory (DFPT), using
+LaH
+10 as a representative example. Our simulations reveal that the light-
+engineered electronic structure not only enhances the DOS but also
+reshapes the Fermi surface, leading to an uneven enhancement electron-
+phonon coupling (EPC), as depicted by the Eliashberg spectral function.
+The synergy of these light-engineered properties collectively raises T
+c.
+1Department of Physics and Astronomy, Clemson University, Clemson, SC, USA. 2Department of Chemistry, Emory University, Atlanta, GA, USA. 3Department of
+Physics, The University of Alabama at Birmingham, Birmingham, AL, USA. 4These authors contributed equally: Chendi Xie, Adam D. Smith.
+e-mail: yao.wang@emory.edu
+npj Computational Materials |          (2025) 11:227 1
+1234567890():,;
+1234567890():,;
+
+Within a practical range of pump ﬂuences, our simulations suggest a pos-
+sible a 20% –30% increase in Tc, exceeding room temperature (300 K).
+Additionally, we extend our analysisto evaluate the impact of pressure in
+LaH10 and laser polarization on the light-enhancedTc.
+Results
+Electronic structure of light-driven LaH10
+We selected LaH10, a BCS-based high-temperature superconductor as the
+platform for our simulation due to its demonstrated consistency between
+theoretical predictions
+13,48 and experimental ﬁndings20–22.T h ec r y s t a l
+structure of LaH10 transitions from R/C223m to Fm/C223m (fcc) symmetry when
+pressure increases beyond 150 GPa13,49.A ss h o w ni nF i g .1, its fcc crystal
+structure displays a highly-symmetric clathrate-like geometry formed by a
+cage of hydrogen atoms, with individual lanthanum atoms in the cavities.
+Under 210 GPa, the ﬁrst-principles electronic structure and Migdal-
+Eliashberg theory predict itsT
+c to be between 264 K and 286 K13,48,50.S o o n
+after these predictions, experiments veriﬁed them by observingTc = 251 K at
+168 GPa20, Tc = 260 K at 180 GPa 21 and Tc = 246 K at 136 GPa 22.T h e s e
+agreements in structure and transport properties validate the use of ﬁrst-
+principles and perturbation simulations for LaH10 superconductors.
+To simulate light-matter interactions and dynamical properties, we
+constructed a tight-binding model using the DFT-simulated Kohn-Sham
+band structure, with details listed in “Methods”. Balancing simulation
+complexity with the clarity of SC description, we constrain the tight-binding
+model to 25 maximally-localized Wannier orbitals per unit cell and
+downfold the electronic structure to the second-quantized electronic
+Hamiltonian:
+H ¼
+X
+jl
+X
+αβσ
+HðαβÞ
+jl ðcy
+lβσ cjασ þ h:c:Þ ð1Þ
+Here, we denote the hopping integral between orbital α of unit cell j and
+orbital β of unit cell l as HðαβÞ
+jl , while its diagonal terms represent the site-
+energy of each orbital. A key characteristic of the low-energy ( EF ± kBT)
+electronic structure that determines theTc in the Migdal-Eliashberg theory
+is the Fermi-surface DOSρF. Here, our 25-orbital model predictsρF = 0.932,
+0.894, and 0.881 eV −1 for 150 GPa, 200 GPa, and 250 GPa LaH 10,
+respectively, aligning withﬁndings by Errea et al.51.
+Since the centers of charges are spatially separated among the Wannier
+orbitals, the light-matter interaction in the second-quantized expression can
+be described by the Peierls substitution tðαβÞ
+jl ! tðαβÞ
+jl eiAðtÞ/C1ðrðαÞ
+j /C0 rðβÞ
+l Þ for an
+instantaneous vector potential A(t). Here, we considered the steady state
+driven by a monochromatic laser, whose duration is much longer than its
+oscillation period. This steady-state condition can be mimicked by a peri-
+odic vector potential AðtÞ¼ A
+0 cosðΩ tÞ,w h e r eA0 relates to the peak
+electric ﬁeld strength by E0 = ℏΩ A0/ea0.I nt h i ss i m p l iﬁed situation, the
+dynamics governed byHðtÞ can be approximated using the Floquet theory,
+where the wavefunction solution forms a Fourier series52–54.T h u s ,t h et i m e -
+dependent Schrodinger equation can be mapped to an effective steady-state
+HamiltonianHF with extended dimensions in basis∣mi ¼ eimΩ t
+HF ¼ P
+m;n2Z
+ðHðm/C0 nÞ /C0 mΩ δmnÞ ∣mi nh ∣
+¼
+. .
+. . .
+. ..
+. ..
+.
+. .
+.
+Hð0Þ þ Ω Hð/C0 1Þ Hð/C0 2Þ ...
+... Hð1Þ Hð0Þ Hð/C0 1Þ ...
+... Hð2Þ Hð1Þ Hð0Þ /C0 Ω . .
+.
+... .
+.. . .. . ..
+0
+BBBB
+B
+BBB
+B
+@
+1
+CCCC
+C
+CCC
+C
+A
+;
+ð2Þ
+whose block matrices represent the Fourier transforms of HðtÞ (see Sup-
+plementary Note I):
+H
+ðmÞ ¼
+X
+jl
+X
+αβ
+imJ mðA0 /C1ðrðαÞ
+j /C0 rðβÞ
+l ÞÞ HðαβÞ
+jl ðcy
+lβcjα þ h:c:Þ; ð3Þ
+with J mðzÞ is the Bessel function of the ﬁrst kind. In all pump conditions
+examined here, the 0th-order Bessel function dominates over all higher-
+order ones. Therefore, the DOS, and especially the Fermi-surface DOSρ
+F,
+are primarily determined by the diagonal blocks of Eq. (2), and we take this
+approximation in results below (see Supplementary Notes II and III for the
+discussion about higher-order Floquet analysis and justi ﬁcation of this
+approximation). We analyze the non -thermal steady-state electronic
+structure and EPC using the Floquet HamiltonianH
+F .
+We ﬁrst consider the case at 220 GPa, whose equilibrium properties
+have been studied by ﬁrst-principles methods55. The pump condition is
+chosen as the mid-IR laser (ℏΩ = 400 meV), similar to that used in K3C60
+experiments conducted in diamond anvil cell26. This photon energy corre-
+sponds to a 3 μm laser, away from the absorption window of diamond,
+thereby ensuring that a relatively greater ﬂuence can be delivered. Addi-
+tionally, it is signiﬁcantly higher than thekBTc values examined in this paper,
+allowing the off-resonance approximations in the Floquet-DFPT calcula-
+tions (see Supplementary Note II for detailed discussions). Figure2 shows
+the pump-amplitude dependence for the band structure, inﬂuenced by an
+^x-polarized laser. As the pump amplitude increases, the conduction band-
+width is gradually suppressed due to ph oton dressing. Consequently, the
+DOS ρ
+F increases from 0.898 eV −1 at equilibrium to 1.295 eV −1 for
+E0 =8 0m V /Å (i.e. ~ 4.5 mJ/cm2 for a 50-fs laser pulse). The overall increase
+of ρF by 44% signiﬁes the potential of engineering LaH10 electronic structure
+using the pump laser. Given that theTc from BCS theory is proportional to
+expð/C0 1=ρF VÞ,w i t hV being the phonon-mediated interaction, the laser-
+enhanced DOS could foster a more robust superconducting state.
+More speciﬁcally, the increase inρF occurs gradually for weaker pump
+amplitudes (E0 <5 0m V /Å), rising by only 6% up to 0.956 eV−1 (see Fig.3a).
+This increase becomes more pronounced for pump amplitudeE0 exceeding
+50 mV/Å.S u c har e ﬂection point in ρF is primarily caused by the band
+ﬂattening of the van Hove singularity (vHS) near the L point (indicated in
+the red dashed box of Fig.2a). As depicted in Fig.2,t h i sv H Si s0 . 2e Vb e l o w
+EF at equilibrium, and Floquet renormalization of the entire band shifts it
+across the Fermi level atE0 ~5 0m V /Å.T h es h i f tﬁnishes atE0 ~7 0m V /Å,
+where the DOS plateaus. Additionally, two other hydrogen bands are
+renormalized from aboveE
+F to the Fermi level near the X point for pump
+amplitudesE0 >70 mV/Å. These bands may continue to increaseρF but for
+unrealistically strong pumps beyond the range we are interested in. A similar
+result for ρ
+F is observed under 250 GPa as well, except for a sharp increase
+around E0 =7 0m V /Å (see Fig. 3b). This difference originates from the
+delayed upward shift of the band near the Fermi surface near the L point (see
+Supplementary Note IV forfurther discussions).
+a b
+x
+y
+z
+Γ
+La
+H
+X
+Γ
+Fig. 1 | Structures of fcc LaH10.a Schematic showing the crystal structure of Fm/C223m
+(fcc) LaH10, showcasing two horizontal unit cells. The La and H atoms are repre-
+sented by green and red spheres, respectively.b Illustration of the ﬁrst Brillouin zone
+in the reciprocal space of fcc LaH 10, highlighting key high-symmetry momentum
+points (gray) and momentum cuts (red) referenced in this paper.
+https://doi.org/10.1038/s41524-025-01725-z Article
+npj Computational Materials |          (2025) 11:227 2
+
+Steady-state electron-phonon coupling and transition
+temperature
+While the electronic structure analysis in Section “Electronic structure of
+light-driven LaH10” motivates the possibility of increasing Tc,t h el a t t e ri s
+determined by multiple factors, especially the EPC. To accurately predict the
+transition temperatureTc for the light-driven LaH10, we further simulate the
+EPC matrix elements to obtain the Eliashberg spectral functionα2F in these
+nonequilibrium conditions. Our equilibrium phonon modes are obtained
+by DFPT implemented in PHonon, a module from Quantum ESPRESSO
+(see Supplementary Note V). In the nonequilibrium laser-driven conditions,
+we assume that the phonon energies ω
+qν and eigen-modes remain
+unchanged in the non-thermal state, since the equilibrium states are
+obtained by structural optimization and stay far from a structural transition.
+The rationale behind this assumption is that the duration of pump pulses in
+experimental settings is typically in the order of 100 fs. During such a short
+timescale, the energy transfer from the laser to the crystal lattice, which
+usually takes a few picoseconds, is un likely to occur (see Supplementary
+Note VI for laser-induced corrections to phonons). This assumption also
+prevents the decomposition effect of LaH
+10 due to dehydrogenation over
+time56–59. That being said, the EPC’s impact on superconductivity is through
+the steady-state coupling strength and the Eliashberg function.
+To evaluate these quantities, we generalize the dimensionless EPC
+strength into the Floquet~λ,g i v e nb y :
+~λ ¼
+Z 1
+0
+2
+ω α2 ~Fðω Þdω ð4Þ
+with steady-state Eliashberg spectral function deﬁned as:
+α2 ~Fðω Þ¼ 1
+~ρF
+X
+μμ0 ν
+X
+kk0
+j~gðμμ0 Þ
+kk0 ;νj2δð~εμk Þδð~εμ0 k0 Þδðω /C0 ω qνÞ : ð5Þ
+Here, q ¼ k /C0 k0 and ω qν are phonon momentum vector and energy;~εμk is
+the Floquet band dispersion for band μ; ~ρF is the Fermi-surface DOS for
+steady states. The simulation of the Floquet~λ further requires evaluating the
+steady-state EPC matrix element:
+~gðμμ0 Þ
+kk0 ;ν ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ℏ
+2m0ω qν
+s
+~ψ ðμ0 Þ
+k0 j∂qνVj~ψ ðμÞ
+k
+DE
+ð6Þ
+using Floquet-state-projected DFPT. As discussed in“Methods”,c a l c u l a t i n g
+Eq. (6) is the most computationally intensive step, where the derivative of
+phonon self-consistent potential∂qνV (for wavevector q and branch ν)i s
+projected into a pair of Floquet eigen-states∣~ψ ðμÞ
+k i (for bandμ and momentum
+k). We simulated~gðμμ0 Þ
+kk0 ; ν and ~λ using a modiﬁed version of EPW60,a no p e n -
+source module from Quantum ESPRESSO (see“Methods”).
+In Fig. 4a, we compare the nonequilibrium α2 ~F obtained for the
+maximum peak amplitude ( E0 =8 0m V /Å) with the equilibrium α2F for
+220 GPa. Notably, the two δ-functions for electronic dispersion scale with
+ρF. Therefore, the DOS increase of the Floquet-renormalized electronic
+structure leads to an augmentedα2F across almost all phonon energies. To
+depict this energy-dependent modi ﬁcation, we analyze the relative
+enhancement rate α2 ~F=α2F for the same pump amplitude, as shown in
+Fig. 4c. This relative rate highlights the uneven enhancement of α2 ~F for
+different phonon energies. Compared to the relative ρF increase (dashed
+line), the simulated α2 ~F is lower at some frequencies, indicating a net
+-10
+-8
+-6
+-4
+-2
+2
+4
+6
+0
+energy [eV]
+ρF=0.898 eV-1
+WL Γ X W Kmomentum
+-10
+-8
+-6
+-4
+-2
+2
+4
+6
+0
+energy [eV]
+DOS [eV-15 100
+] ρF=0.956 eV-1
+WL Γ X W Kmomentum DOS [eV10-150
+] ρF=1.081 eV-1
+WL Γ X W K
+momentum DOS [eV-15 100
+]
+ρF=0.901 eV-1
+ρF=0.915 eV-1
+a equilibrium b 16mV/Å c 32mV/Å
+d 48mV/Å e 64mV/Å f 80mV/Å
+ρF=1.295 eV-1
+Fig. 2 | Floquet renormalized electronic structures for LaH 10 under 220 GPa.
+a Wannier-interpolated band structures across the high-symmetry points (left) and
+electronic density of states (DOS, right) at equilibrium. The DOS at the Fermi level
+(gray dashed line) ρF and the van Hove singularity (vHS) are highlighted, respec-
+tively. b–f Same as a but for Floquet steady states induced by an ^x-polarized pump,
+with peak ﬁelds E0 set to 16, 32, 48, 64 and 80 mV/ Å, respectively.
+0 20 40 60
+amplitude E0 [mV/Å]
+0
+0.4
+0.8
+1.2/g85F [eV-1]
+0 20 40 60 80
+amplitude E0 [mV/Å]
+ab
+total
+H La
+LaH10 @ 220 GPa LaH 10 @ 250 GPa
+Fig. 3 | Pump amplitude’si nﬂuence on DOS and partial DOS contributions from
+H and La atoms. a The DOS and partial DOS in LaH 10 at 220 GPa under different
+pump amplitudes. The total DOS is depicted with the black lines and squares.
+Contributions from H orbitals are highlighted in red, while those from La orbitals are
+displayed in green. b Same as a but for LaH
+10 at 250 GPa.
+https://doi.org/10.1038/s41524-025-01725-z Article
+npj Computational Materials |          (2025) 11:227 3
+
+decrease in Fermi-surface-projected EPC matrix elements~gðμμ0 Þ
+kk0 ;ν for these
+speciﬁc phonons. Conversely, in the 230–280 meV phonon energy range,
+the Floquet-engineered electronic wav e f u n c t i o n sa n dc h a n g e si nt h eF e r m i
+surface shape lead to a pronounced increase in α2 ~Fðω Þ, surpassing the
+overall scaling attributable toρF.T h i si n c r e a s er eﬂects an enhanced effective
+EPC strength for phonons in the hydrogen optical branch, caused by the
+steady-state electronic structure. A direct consequence of this uneven
+enhancement is the notable increase in logarithmic-average frequency~ω
+log
+displayed as the insets. Independent from the strength of λ, ~ω log plays a
+crucial role of the Debye frequency in the Allen-Dynes estimation of Tc
+61.
+Similar enhancement for EPC of high-energy phonons also occurs for the
+250 GPa states, whose α
+2F predominantly increases at 260–300 meV (see
+Fig. 4b, d).
+T h er i s ei nα2F naturally leads to a larger dimensionless EPC strengthλ.
+A ss h o w ni nF i g .4e, the Floquet-state~λ exhibits an accelerating growth with
+increasing pump amplitudes at 220 GPa. The growth halts atE0 ~7 0m V /Å,
+where the vHS completes crossing the Fermi level. Compared to the
+220 GPa LaH 10,t h e ~λ for 250 GPa is generally smaller for all pump
+amplitudes. This difference stems from their distinct structural instability at
+equilibrium. The 220 GPa LaH10 is closer to the structure phase transition at
+210 GPa, thus its phonons are softer compared to the 250 GPa structure,
+leading to an overall increase in ~λ (see Fig. 4a, b)
+55. A comprehensive dis-
+cussion about light-engineeredα2F(ω )a n dλ is included in Supplementary
+Note V.
+Within the BCS regime, the enhancedλ typically indicates a higherTc.
+Here, we estimate the nonequilibriumTc using the Allen-Dynes formula61
+with the Floquet steady-state~λ and ~ω log (see “Methods”). Figure 4g, h dis-
+plays the calculatedTc for LaH10 at 220 GPa and 250 GPa. Before adding the
+external laserﬁeld, the equilibrium LaH10 yields aTc of 258 K at 220 GPa and
+237 K at 250 GPa, consistent with previous studies55. The increase inλ raises
+Tc from 258 K at equilibrium to 320 K forE0 =8 0m V /Å at 220 GPa, yielding
+a 25% estimated increase. Similarly,Tc rises from 237 K to 322 K yielding a
+35% estimated increase for 250 GPa. Both scenarios could potentially reach a
+room temperatureTc (300 K) under relatively strong pump conditions. (To
+clarify,“strong pump condition” refers to the relative strength ofE0 in Fig.4.
+This does not compromise the validity of the approximations used in the
+Floquet-DFPT method.) The Tc rise roughly parallels the increase in λ
+shown in Fig. 4c, d. Notably, the Tc for 220 GPa LaH 10 plateaus, not
+decreasing in the strong pump regime ( E0 >70 mV/Å), where λ starts to
+d r o p .T h i si sd u et ot h ea f o r e m e n t i o n e du n e v e ne n h a n c e m e n to fα2F,l e a d i n g
+to a rise in ~ω log and further contributing to theTc increase.
+To unravel various factors contributing to Tc and understand the
+mechanism of light-enhanced SC, we further examine a simpler approx-
+imation for the Floquet renormalization ofα
+2F and Tc. Assuming that the
+EPC matrix elements remain constant compared to the equilibriumgðμμ0 Þ
+kk0 ;ν
+and the Fermi surface is unchanged, the bandwidth renormalization
+described in Section “Electronic structure of light-driven LaH 10” would
+manifest as a uniform, phonon energy-independent rise in α2F(ω )( s e e
+dashed lines in Fig. 4c, d). That being said, this DOS scaling approximates
+steady-state quantities as:
+α2FDSðω Þ¼ ~ρF ðE0Þ
+ρF
+α2Fðω Þ ; ~λDSðE0Þ¼ ~ρF ðE0Þλ
+ρF
+ð7Þ
+where α2F, λ and ρF are the corresponding quantities in equilibrium.
+Incorporating Eq. ( 7) into the Allen-Dynes formula (see Eq. ( 8)i n
+“Methods”), the assessed Tc then re ﬂects solely the impact of Floquet-
+induced DOS increase, excluding nonequilibrium modiﬁcations to the EPC
+matrix elements. The open dots in Fig. 4e–h show this DOS-scaling
+simpliﬁcation and are contrasted by the simulated ~λ s h o w ni ns o l i dd o t s .
+This simpliﬁcation overestimatesλ, since it ignores the decrease in EPC for
+most phonon frequencies as discussed above (also see Supplementary Note
+V). The overestimation becomes more pronounced near the vHS (e.g. forE0
+~7 0 m V /Å at 220 GPa), where the Fermi-surface topology undergoes a
+transition. Interestingly, despite the up to 20% overestimation ofλ,t h eTc
+evaluated via this simpliﬁed scaling is always lower than that obtained from
+the Floquet-DFPT simulation (solid squares in Fig.4g, h). This difference
+e
+g
+0
+1
+2
+3
+4
+5α2F(ω)
+a b
+150 200 250
+phonon energy [meV]
+1
+1.5
+2
+2.5
+3
+rela/g415ve enhancement rate
+0 80E0 [mV/Å]
+76
+64ω log [meV]
+c
+150 200 250 300
+phonon energy [meV]
+d
+2
+3
+4
+5
+DOS-scaling
+Floquet-DFPT
+f
+0 20 40 60
+amplitude E0 [mV/Å]
+220
+240
+260
+280
+300
+320
+340Tc [K]
+DOS-scaling
+Floquet-DFPT
+Tc = 265K [Wang et al.]
+0 20 40 60 80
+amplitude E0 [mV/Å]
+h
+08 0E0 [mV/Å]
+101
+96
+ω log [meV]
+equilibrium
+80 mV/Å
+LaH10 @ 220 GPa LaH 10 @ 250 GPa LaH 10 @ 220 GPa LaH 10 @ 250 GPa
+Floquet-DFPT
+ or λDS
+/g85F //g85F
+~
+Fig. 4 | Floquet-engineered electron-phonon coupling and critical temperature.
+a A comparison between equilibrium (gray) and Floquet-DFPT evaluated steady-
+state α2F (blue) for LaH10 at 220 GPa. The steady-state example shown here is for an
+^x-polarized pump with E0 = 80 mV/Å. c Phonon energy-dependent relative
+enhancement of α2F in the E0 = 80 mV/Å steady states at 220 GPa compared against
+equilibrium α2F. The dashed line re ﬂects the relative enhancement of α2F(ω ) ori-
+ginating from the Floquet-engineered DOS ( ~ρF ðE0Þ=ρF ) under the same pump
+condition, while the shaded regimes highlight the enhancement originating from
+increased EPC. The inset shows the weighted averaged phonon frequency ω log for
+varying pump amplitudes. b, d Similar to a, c but for LaH 10 at 250 GPa. e, f Pump
+amplitude dependence of λ for the two pressures, respectively. Solid dots denote
+Floquet-DFPT simulation results (denoted as~λ), while the open dots represent DOS-
+scaling approximations (denoted as λDS). g, h Pump amplitude dependence of Tc for
+corresponding pressures, evaluated by Floquet-DFPT (solid squares) and DOS
+scaling (open squares). The equilibrium T
+c result from ref. 55 is highlighted in ( g).
+https://doi.org/10.1038/s41524-025-01725-z Article
+npj Computational Materials |          (2025) 11:227 4
+
+arises from the uneven increase of α2 ~F across energy: the enhanced EPC
+coupling to high-energy (230 –280 meV) phonons elevates the ~ω log,
+inﬂuencing Tc in the Allen-Dynes formula apart from λ;t h i sF l o q u e t
+engineering of EPC is overlooked in the simpliﬁed scaling assessment, which
+evaluatesα2 ~F evenly in energy (see dashed lines in Fig.4c, d).
+Light-enhanced Tc at experimental pressures
+While the above simulations suggest a 25% to 35% potential enhancement of
+Tc in the nonequilibrium states of LaH 10 and indicate the feasibility of
+achieving room-temperature SC under realistic pump conditions, they are
+based on Floquet-DFPT simulations above 210 GPa. Due to signi ﬁcant
+lattice anharmonicity below 210 GPa, direct simulations become unreliable
+below this pressure
+51, presenting additional challenges for our none-
+quilibrium simulations. However, ex perimentally accessible pressures
+typically fall below 200 GPa20,21. To offer practical predictions for guiding the
+design of light-enhancedTc in experimentally relevant samples, we employ
+the previously mentioned DOS-scaling simpliﬁcation as a rough estimate
+for the lower bound of the Floquet steady-stateTc.
+Speciﬁcally, we employed the equilibrium anharmonic phonon results
+from the well-recognized study by Errea et al. for lower-pressure LaH10
+51.
+Without re-evaluating the conﬁgurational energy surface and EPC matrix
+elements for Floquet electronic states,we estimate the Floquet-engineeredλ
+and Tc using Eq. ( 7) .H e r e ,w ec h o o s e1 5 0 G P aa n d2 0 0 G P aL a H10 as
+examples, whose experimentalTcs align closely with simulations incorpor-
+ating anharmonicity20,21. By applying the same parameters and the Allen-
+Dynes formula, we reproduceexperimentally measuredTc reported in ref.51.
+The simulated dimensionless EPCλDS is represented by the blue circles
+in Fig. 5a, b. Analogous to the high-pressure scenarios discussed in Section
+“Steady-state electron-phonon coupling and transition temperature”, λDS
+generally increases with the Floquet renormalization of the electronic
+bandwidth and the enhancement of ρF. The relative increase for the most
+intense pump condition is between 45–60% for both 150 GPa and 200 GPa,
+similar to the high-pressure results. Furthermore, Fig. 5c, d displays the
+DOS-scaling estimated Tc’s for varying pump amplitudes of LaH 10 at
+150 GPa and 200 GPa. As the pump amplitude increases from 0 to 80 mV/Å,
+the Tc rises from 249 K to 285 K for 150 GPa LaH10 and from 240 K to 301 K
+for 200 GPa LaH10, approaching room temperature at the highest pump
+amplitude. It is important to note that the Tc predicted using the DOS-
+scaling approach should not be regarded as an accurate prediction. Rather, as
+demonstrated in Fig. 4, it acts as the lower bound for the Floquet-DFPT
+simulatedT
+c, since the DOS scaling does not account for the increase in~ω log.
+To give the best of our EPC-induced superconductive prediction, we added a
+guide-to-the-eyeλ and Tc estimation, which may prove useful for further
+experimental investigations.
+It is important to note that the DOS-induced increase inλ and Tc is not
+unique to LaH 10 but also exists in several other hydrides as well. To
+demonstrate this, we examined the un iversality and feasibility of this
+behavior in other hydride superconductors, including YH 10,C e H9 and
+CaH6. In all cases, the band structures undergo compression, leading to a
+signiﬁcant rise in λ and Tc driven by an increase in ρF. However, not all of
+these hydrides achieve superconductivity above room temperature. The
+detailed results are provided in Supplementary Note VII.
+Polarization dependence
+In the previous subsections, our exploration focused on the light-engineered
+band structure, EPC, andTc for LaH10 speciﬁcally using an^x-polarized laser.
+In this section, we shift our focus to discuss the polarization dependence.
+Given the clathrate-like crystal structure of LaH10, the polarization depen-
+dence should be minimal within a unit cell and predominantly inﬂuenced by
+the crystal symmetry Fm/C223m. Therefore, we examine the nonequivalent
+polarization planar diagonal (i.e.,A0 ¼ A0ð^x þ ^yÞ=
+ﬃﬃ ﬃ
+2
+p
+) and cubical diag-
+onal (i.e.,A0 ¼ A0ð^x þ ^y þ ^zÞ=
+ﬃﬃ ﬃ
+3
+p
+). Continuing with the numerically stable
+examples at 220 GPa and 250 GPa, Fig.6a, b presents the pump-amplitude
+dependence of ~λ for these two polarizations. Although the polarization
+dependence is relatively minor compared to the signiﬁcant increase in~λ by
+^x-polarized light, we observe that the~λ induced by the planar-polarized laser
+is almost identical to that by the^x-polarized laser, as seen in Fig.4. In contrast,
+t h ei n c r e a s ei n~λ is slower for the cubical-polarized laser. This distinction is
+further shown in the simulatedTc in Fig.6c, d. The steady-stateTc is 9% lower
+in the cubical-polarized pump condition, compared to the^x- and planar-
+polarized pump conditions. If we only consider the relative enhancement
+compared to equilibrium, the cubical-polarized pump induces 30% less
+enhancement compared to theother two polarizations.
+To gain insight into the polarization-dependent behavior, we analyze
+the electronic structure across the e ntire Fermi surface. Since the con-
+tribution to DOS at each point on the Fermi surface is inversely related to the
+Fermi velocity at that point, we investigate the normal direction of the Fermi
+surface for the lowestv
+F (i.e. the vHS), which aligns with the L-U cut and its
+23 symmetric equivalents (see Supplementary Note VIII). Weﬁnd that the
+summed projection of three investigated polarizations (^x, planar diagonal
+and cubical diagonal) onto these vHS normal vectors is almost identical to
+each other. As shown in Supplementary Fig. 5, this homogeneity leads to the
+similarity in the steady-state~λ and T
+c evolution among these three different
+polarizations.
+Consequently, the polarization dependence reported in Fig.6a–dc a n
+be attributed to the Floquet modi ﬁcation of EPC. We then analyze the
+Eliashberg spectral functions under these various pump polarizations.
+Figure6e shows that the light-induced changes inα
+2F for E0 =8 0m V /Å are
+nearly identical to those from the^x-polarized pump (see Fig.4a), correlating
+with their similar Tc evolutions presented in Fig. 6c. In contrast, for the
+cubical-diagonal-polarized pump, the increase inα2F under all frequencies
+is less pronounced compared to the other two polarizations. This difference
+is particularly noticeable in the range of 230–270 meV, which is expected to
+signiﬁcantly inﬂuence the T
+c as discussed in Section“Steady-state electron-
+phonon coupling and transition temperature”. This observation aligns with
+the less ef ﬁcient light-induced superconductivity observed under the
+cubical-polarized pump condition, as shown in Fig.6d.
+Discussion
+In our study, we have explored a dynamical approach to potentially increase
+the superconducting tr ansition temperature ( Tc) in hydride materials,
+exempliﬁed by LaH10. In the Floquet state induced by light, both the aug-
+mented DOS and the upward shift in average phonon energy signiﬁcantly
+contribute to elevating Tc by 20 –30%, potentially raising it above room
+temperature. For lower-pressure compounds, our predictions offer a lower-
+bound estimate for Tc, suggesting the possibility for even more effective
+light-enhanced superconductivity. More generally, our Floquet-DFPT
+exp. Tc = 251 K
+250
+ab
+2
+3
+4λDS
+0 20 40 60
+amplitude E0 [mV/Å]
+Tc [K]
+0 20 40 60 80
+amplitude E0 [mV/Å]
+LaH10 @ 150 GPa
+310
+290
+270
+230
+c d
+LaH10 @ 200 GPa
+@ 168 GPa [Drozdov et al.]
+Fig. 5 | DOS-scaling approximated results for low pressures. a , c The approxi-
+mated electron-phonon coupling ~λDS and critical temperature Tc under 150 GPa,
+using the DOS-scaling method. The shaded regions indicate potential over-
+estimations of λ and underestimations of Tc. The experimentally measured Tc at a
+comparable pressure (168 GPa), as reported in ref. 20, is highlighted in ( c).
+b, d Similar to a and c but for LaH 10 under 200 GPa.
+https://doi.org/10.1038/s41524-025-01725-z Article
+npj Computational Materials |          (2025) 11:227 5
+
+simulation paves the way for understanding dynamical superconductivity in
+light-element materials and the nonequilibrium electron-phonon dynamics
+driven by laser light.
+It is important to recognize that the Floquet theory we have employed
+is an approximation of light-driven nonequilibrium dynamics. There have
+been several successful demonstrations in various materials62–68. However,
+achieving non-thermal Floquet states in experiments remains a signiﬁcant
+challenge69. In our assumptions based on Floquet theory, we consider the
+pump to be off-resonant with the relevant electronic states and sufﬁciently
+weak, allowing us to approximate the Floquet states at their lowest order.
+Although it is theoretically possible to evaluate full Floquet states including
+all higher-order terms (see Supplementary Note II), the Allen-Dynes-based
+simulation for T
+c necessitates a speci ﬁc electronic state distribution
+resembling a Fermi sea, which cannot be accurately determined at inﬁnite
+orders. For the parameters used in this work, the Fermi-Dirac distribution in
+Floquet steady states shows a majority of over 70% similarity with electronic
+eigenstates near Fermi level derived from real-time dynamics, with the
+minimum value never dropping belo w 65%, thereby validating our
+assumption regarding electronic states near Fermi surface.
+In our simulation of hydride superconductivity, like many current
+studies, we face the challenge of accurately depicting multi-reference effects,
+ak n o w nd i fﬁculty within the Kohn-Sham DFT framework
+70.T h ei nﬂuence
+of Coulomb interaction on electron pairing is only addressed perturbatively
+through the Morel-Anderson pseudopotentialμ
+*.M o r e o v e r ,t h eM i g d a l -
+Eliashberg theory starts to deviate from a valid description of super-
+conductivity when T
+c reaches 0.1ω Debye
+5,w h i c hf o rh y d r i d e si sa p p r o x i -
+mately 330 K. Given this boundary of validity, along with benchmarks
+between ﬁrst-principles methods, Migdal-Eliashberg theory, and experi-
+mental results20–22, our perturbative approximations are justiﬁable within
+the current context. However, it is important to note that quantum ﬂuc-
+tuations become increasingly signiﬁcant when Tc approaches or surpasses
+330 K71. Extending this method to superconducting materials with either
+strong correlations or low Debye frequencies also requires a more precise
+correction for quantum many-body effects.
+Methods
+First-principles calculations for electronic structure
+We employ the PWscf module in the Quantum ESPRESSO package 72 to
+simulate the electronic structure of LaH10 under hydrostatic pressure, based
+o nt h ep l a n e - w a v ep s e u d o p o t e n t i a lm e t h o d .W eu s et h eP e r d e w - B u r k e -
+Ernzerhof (PBE) exchange-correlation functional
+73 with SG-15 optimized
+norm-conserving Vanderbilt (ONCV) pseudopotentials74.T oe x p a n dt h e
+wavefunctions, a cutoff energy of 80 Rydberg is used and integrate over the
+Brillouin zone via a Γ-centered Monkhorst-Pack 24 × 24 × 24 grid
+75.T h e
+convergence criteria of ionic structure relaxation under pressure and the
+electronic self-consistentﬁeld are set to 10
+−4 Rydberg/Bohr and 10−8 Ryd-
+berg, respectively.
+The Wannier orbitals are obtained by an additional non-self-consistent
+calculation with a 6 × 6 × 6k-grid. The simulated eigen wavefunctions are
+used to construct maximally local ized Wannier functions (MLWFs)
+through the Wannier90 package76. This Wannier downfolding procedure
+takes 10 Hs orbitals, 3 Lap orbitals, 5 Lad orbitals and 7 Laf orbitals as the
+initial projections, resulting in a tight-binding model whose band structure
+reproduces the DFT results. A total number of 47 bands are involved during
+the disentanglement procedure. The DOS is obtained by integrating the
+band distribution in a 72 × 72 × 72 k-grid, with Gaussian broadening
+of 0.1 eV.
+Electron-phonon coupling calculations
+We employ DFPT implemented in PHonon to calculate the phonon dis-
+persion of Fm/C223m LaH10 under different pressure conditions. AΓ-centered
+Monkhorst-Pack sampling75 of 6 × 6 × 6 is adopted as a uniform grid ofq-
+02 0 4 0 6 0
+amplitude E0 [mV/Å]
+240
+260
+280
+300
+320
+340transi/g415on temperature Tc [K] z
+y
+x
+c d
+02 0 4 0 6 0 8 0
+amplitude E0 [mV/Å]
+a b
+3.8
+4.2
+4.6
+5
+z
+y
+x
+x - pol
+planar
+x - pol
+cubical
+x - pol planar
+e
+150 200 250
+phonon energy [meV]
+0
+1
+2
+3
+4
+5α 2F(ω)
+150 200 250
+phonon energy [meV]
+300
+equilibrium
+80 mV/Å
+f
+planar cubical
+x - pol cubical
+Fig. 6 | Polarized dependence of steady-state properties. aThe steady-state ~λ (solid
+circles) engineered by planar-diagonal-polarized pump with various pump ampli-
+tudes, simulated using Floquet-DFPT for LaH
+10 under 220 GPa. b Similar to a but for
+the cubical diagonal polarization. c, d The simulated transition temperature Tc
+corresponds to the pump conditions for ( a) and ( b), respectively. The insets guide
+the eye for the two polarization directions. The light blue and green ribbons in
+a–d display comparative results obtained from ^x-polarized pump conditions,
+extracted from Fig. 4e–g (solid dots). e, f A comparison between equilibrium (gray)
+and steady-state α2F (blue) for LaH 10 under planar and cubical diagonal pump
+polarization, respectively, for E0 = 80 mV/Å.
+https://doi.org/10.1038/s41524-025-01725-z Article
+npj Computational Materials |          (2025) 11:227 6
+
+vectors and the convergence criteria of phonon calculation are set to 10−16
+Rydberg. The EPC matrix elements are simulated using EPW60 in equili-
+brium. The steady-state simulations are realized by substituting the Floquet
+steady-state wavefunctions, obtained by diagonalizing the Floquet-Wannier
+Hamiltonian H
+F ,i n t ot h eﬁner grid rotation matrices Uk for EPC matrix
+elements~gðμμ0 Þ
+kk0 ;ν ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ ﬃ
+ℏ
+2m0 ω qν
+q
+~ψ ðμ0 Þ
+k0
+D
+∣∂qνV∣~ψ ðμÞ
+k
+E
+.T h ep h o n o nm o m e n t u mq is
+sampled over a uniform Fourier-interpolated 12 × 12 × 12 grid.
+Superconductivity transition temperature
+We calculated the estimated corresponding nonequilibrium results with the
+full Allen-Dynes formula61. Using this formula, the transition temperature
+Tc is given by:
+Tc ¼ ω log
+f 1 f 2
+1:2 exp /C0 1:04ð1 þ λÞ
+λ /C0 μ/C3 ð1 þ 0:62λÞ
+/C18/C19
+ð8Þ
+with
+f 1 f 2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ ﬃ
+1 þ λ
+2:46ð1 þ 3:8μ/C3 Þ
+/C20/C21 3=2
+3
+s
+/C11 /C0
+λ2ð1 /C0 ω 2=ω logÞ
+λ2 þ 3:312 1 þ 6:3μ/C3/C0/C1 2
+"#
+ð9Þ
+The logarithmic average frequencyω log and mean-square frequencyω 2 are
+calculated as:
+ω log ¼ exp 2
+λ
+Z 1
+0
+α2Fðω Þ
+ω log ω dω
+/C20/C21
+ð10Þ
+ω 2 ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+1
+λ
+Z 1
+0
+2α2Fðω Þ
+ω ω 2dω
+s
+ð11Þ
+Following ref. 55, we took the typical Morel-Anderson Coulomb
+pseudopotentialμ* = 0.1 throughout this paper.
+Data availability
+The data supporting the ﬁndings ofthis study are available in the public
+repository Figshare athttps://doi.org/10.6084/m9.ﬁgshare.29500673.
+Code availability
+Quantum ESPRESSO is an open-source suite of computational tools
+available at quantum-espresso.org, with an interface to open-source
+packages like Wannier90 (wannier.org)a n dE P W(epw-code.org).
+Received: 13 September 2024; Accepted: 14 June 2025;
+References
+1. McMillan, W. L. Transition temperature of strong-coupled
+superconductors. Phys. Rev. 167, 331 (1968).
+2. Huang, Z. J. et al. Superconductivity, structure and resistivity in
+HgBa2Ca2Cu3O8+δ. Phys. C Supercond. 217, 1 (1993).
+3. Bardeen, J., Cooper, L. N. & Schrieffer, J. R. Microscopic theory of
+superconductivity. Phys. Rev. 106, 162 (1957).
+4. Bardeen, J., Cooper, L. N. & Schrieffer, J. R. Theory of superconductivity.
+Phys. Rev. 108, 1175 (1957).
+5. Esterlis, I., Kivelson, S. A. & Scalapino, D. J. A bound on the
+superconducting transition temperature.npj Quant. Mater.3,5 9( 2 0 1 8 ) .
+6. Ashcroft, N. W. Metallic hydrogen: a high-temperature superconductor?
+P h y s .R e v .L e t t .21, 1748 (1968).
+7. McMahon, J. M., Morales, M. A., Pierleoni, C. & Ceperley, D. M. The
+properties of hydrogen and helium under extreme conditions. Rev.
+Mod. Phys. 84, 1607 (2012).
+8. McMinis, J., Clay, I., Raymond, C., Lee, D. & Morales, M. A. Molecular
+to atomic phase transition in hydrogen under high pressure. Phys.
+Rev. Lett. 114, 105305 (2015).
+9. Dias, R. P. & Silvera, I. F. Observation of the Wigner-Huntington
+transition to metallic hydrogen. Science 355, 715 (2017).
+10. Ashcroft, N. W. Hydrogen dominant metallic alloys: high temperature
+superconductors? Phys. Rev. Lett. 92, 187002 (2004).
+11. Feng, J. et al. Structures and potential superconductivity in SiH 4 at
+high pressure: en route to “metallic hydrogen”. Phys. Rev. Lett. 96,
+017006 (2021).
+12. Eremets, M. I., Trojan, I. A., Medvedev, S. A., Tse, J. S. & Yao, Y.
+Superconductivity in hydrogen dominant materials: silane. Science
+319, 1506 (2008).
+13. Liu, H., Naumov, I. I., Hoffman, R., Ashcroft, N. W. & Hemley, R. J.
+Potential high-Tc superconducting lanthanum and yttrium hydrides at
+high pressure. Proc. Natl. Acad. Sci. USA 114, 6990 (2017).
+1 4 . L i ,Y . ,H a o ,J . ,L i u ,H . ,L i ,Y .&M a ,Y .T h em e t a l l i z a t i o na n d
+superconductivity of dense hydrogen sul ﬁde. J. Chem. Phys. 140,
+174712 (2014).
+15. Wang, H., Tse, J. S., Tanaka, K., Iitaka, T. & Ma, Y. Superconductive
+sodalite-like clathrate calcium hydride at high pressures. Proc. Natl.
+Acad. Sci. USA 109, 6463 (2012).
+1 6 . K v a s h n i n ,A .G . ,S e m e n o k ,D .V . ,K r u g l o v ,I .A . ,W r o n a ,I .A .&
+Oganov, A. R. High-temperatur e superconductivity in a Th-H
+system under pressure conditions. ACS Appl. Mater. Interfaces 10,
+43809 (2018).
+17. Semenok, D. V., Kvashnin, A. G., Kruglov, I. A. & Oganov, A. R.
+Actinium hydrides AcH10, AcH12, and AcH16 as high-temperature
+conventional superconductors. J. Phys. Chem. Lett. 9, 1920 (2018).
+18. Xie, H. et al. Hydrogen pentagraphenelike structure stabilized by
+hafnium: a high-temperature conventional superconductor. Phys.
+Rev. Lett. 125, 217001 (2020).
+19. Drozdov, A. P. et al. Conventional superconductivity at 203 kelvin at
+high pressures in the sulfur hydride system. Nature 525, 73 (2015).
+20. Drozdov, A. P. et al. Superconductivity at 250 K in lanthanum hydride
+under high pressures. Nature 569, 528 (2019).
+21. Somayazulu, M. et al. Evidence for superconductivity above 260 K in
+lanthanum superhydride at megabar pressures. Phys. Rev. Lett. 122,
+027001 (2019).
+22. Sun, D. et al. High-temperature superconductivity on the verge of a
+structural instability in lanthanum superhydride. Nat. Commun. 12,
+6863 (2021).
+23. Kong, P. et al. Superconductivity up to 243 K in the ytterium-hydrogen
+system under high pressure. Nat. Commun. 12, 5075 (2021).
+24. Ma, L. et al. High-temperature superconducting phase in clathrate
+calcium hydride CaH6 up to 215 K at a pressure of 172 GPa.Phys. Rev.
+Lett. 128, 167001 (2022).
+25. Flores-Livas, J. A. et al. A perspective on conventional high-temperature
+superconductors at high pressure: methods and materials.Phys. Rep.
+856, 1 (2020).
+26. Mitrano, M. et al. Possible light-induced superconductivity in K 3C60 at
+high temperature. Nature 530, 461 (2016).
+27. Cantaluppi, A. et al. Pressure tuning of light-induced superconductivity
+in K3C60. Nat. Phys. 14, 837 (2018).
+28. Budden, M. et al. Evidence for metastable photo-induced
+superconductivity in K 3C60. Nat. Phys. 17, 611 (2021).
+29. Rowe, E. et al. Resonant enhancement of photo-induced
+superconductivity in K 3C60. Nat. Phys. 19, 1821 (2023).
+30. Sentef, M. A., Kemper, A. F., Georges, A. & Kollath, C. Theory of light-
+enhanced phonon-mediated superconductivity. Phys. Rev. B 93,
+144506 (2016).
+31. Knap, M., Babadi, M., Refael, G., Martin, I. & Demler, E. Dynamical
+Cooper pairing in nonequilibrium electron-phonon systems. Phys.
+Rev. B 94, 214504 (2016).
+https://doi.org/10.1038/s41524-025-01725-z Article
+npj Computational Materials |          (2025) 11:227 7
+
+32. Murakami, Y., Tsuji, N., Eckstein, M. & Werner, P. Nonequilibrium steady
+states and transient dynamics of conventional superconductors under
+phonon driving.Phys. Rev. B 96, 045125 (2017).
+33. Babadi, M., Knap, M., Martin, I., Refael, G. & Demler, E. A. Theory of
+parametrically ampliﬁed electron-phonon superconductivity. Phys.
+Rev. B 96, 014512 (2017).
+34. Kennes, D. M., Wilner, E. Y., Reichman, D. R. & Millis, A. J. Transient
+superconductivity from electronic squeezing of optically pumped
+phonons. Nat. Phys. 13, 479 (2017).
+35. Fausti, D. et al. Light-induced superconductivity in a stripe-ordered
+cuprate. Science 331, 189 (2011).
+36. Nicoletti, D. et al. Optically induced superconductivity in striped
+La
+2−xBaxCuO4 by polarization-selective excitation in the near
+infrared. Phys. Rev. B 90, 100503(R) (2014).
+37. Hu, W. et al. Optically enhanced coherent transport in YBa 2Cu3O6.5 by
+ultrafast redistribution of interlayer coupling. Nat. Mater. 13, 705
+(2014).
+38. Mankowsky, R. et al. Nonlinear lattice dynamics as a basis for
+enhanced superconductivity in YBa 2Cu3O6.5. Nature 516, 71 (2014).
+39. Buzzi, M. et al. Photomolecular high-temperature superconductivity.
+Phys. Rev. X 10, 031028 (2020).
+40. Buzzi, M. et al. Phase diagram for light-induced superconductivity in κ
+− (ET)2 − X. Phys. Rev. Lett. 127, 197002 (2021).
+41. Denny, S. J., Clark, S. R., Laplace, Y., Cavalleri, A. & Jaksch, D.
+Proposed parametric cooling of bilayer cuprate superconductors by
+terahertz excitation. Phys. Rev. Lett. 114, 137001 (2015).
+42. Raines, Z. M., Stanev, V. & Galitski, V. M. Enhancement of
+superconductivity via periodic modulation in a three-dimensional
+model of cuprates. Phys. Rev. B 91, 184506 (2015).
+43. Patel, A. A. & Eberlein, A. Light-induced enhancement of
+superconductivity via melting of competing bond-density wave order
+in underdoped cuprates. Phys. Rev. B 93, 195139 (2016).
+44. Nava, A., Giannetti, C., Georges, A., Tosatti, E. & Fabrizio, M. Cooling
+quasiparticles in A
+3C60 fullerides by excitonic mid-infrared
+absorption. Nat. Phys. 14, 154 (2018).
+45. Kennes, D. M., Claassen, M., Sentef, M. A. & Karrasch, C. Light-
+induced d-wave superconductivity through Floquet-engineered
+Fermi surfaces in cuprates. Phys. Rev. B 100, 075115 (2019).
+46. Michael, M. H. et al. Parametric resonance of Josephson plasma
+waves: a theory for optically ampli ﬁed interlayer superconductivity in
+YBa2Cu3O6+x. Phys. Rev. B 102, 174505 (2020).
+47. Wang, Y., Shi, T. & Chen, C.-C. Fluctuating nature of light-enhanced
+d-wave superconductivity: a time-dependent variational non-
+Gaussian exact diagonalization study.Phys. Rev. X11, 041028 (2021).
+48. Peng, F. et al. Hydrogen clathrate structures in rare earth hydrides at
+high pressures: possible route to room-temperature
+superconductivity. Phys. Rev. Lett. 119, 107001 (2017).
+49. Geballe, Z. M. et al. Synthesis and stability of lanthanum superhydrides.
+Angew. Chem. Int. Ed. 57, 688 (2018).
+50. Quan, Y., Ghosh, S. S. & Pickett, W. E. Compressed hydrides as
+metallic hydrogen superconductors.Phys. Rev. B100, 184505 (2019).
+51. Errea, I. et al. Quantum crystal structure in the 250-kelvin superconducting
+lanthanum hydride.Nature578, 66 (2020).
+52. Jauho, A.-P., Wingreen, N. S. & Meir, Y. Time-dependent transport in
+interacting and noninteracting resonant-tunneling systems. Phys.
+Rev. B 50, 5528 (1994).
+53. Moskalets, M. & Büttiker, M. Floquet scattering theory of quantum
+pumps. Phys. Rev. B 66, 205320 (2002).
+54. Kohler, S., Lehmann, J. & Hänggi, P. Driven quantum transport on the
+nanoscale. Phys. Rep. 406, 379 (2005).
+55. Wang, C., Yi, S. & Cho, J.-H. Pressure dependence of the
+superconducting transition temperature of compressed LaH
+10. Phys.
+Rev. B 100, 060502(R) (2019).
+56. Liu, H. et al. Dynamics and superconductivity in compressed
+lanthanum superhydride. Phys. Rev. B 98, 100102(R) (2018).
+57. Caussé, M., Geneste, G. & Loubeyre, P. Superionicity of H δ− in LaH10
+superhydride. Phys. Rev. B 107, L060301 (2023).
+58. Wang, H. et al. Quantum structural ﬂuxion in superconducting
+lanthanum polyhydride. Nat. Commun. 14, 1674 (2023).
+59. Zhou, Y. et al. Diffusion-driven transient hydrogenation in metal
+superhydrides at extreme conditions. Nat. Commun. 16, 1135 (2025).
+60. Lee, H. et al. Electron-phonon physics from ﬁrst principles using the
+EPW code. npj Comput. Mater. 9, 156 (2023).
+61. Allen, P. B. & Dynes, R. C. Transition temperature of strong-coupled
+superconductors reanalyzed. Phys. Rev. B 12, 905 (1975).
+62. Wang, Y. H., Steinberg, H., Jarillo-Herrero, P. & Gedik, N. Observation
+of Floquet-Bloch states on the surface of a topological insulator.
+Science 342, 453 (2013).
+63. Mahmood, F. et al. Selective scattering between Floquet-Bloch
+and Volkov states in a topological insulator. Nat. Phys. 12, 306
+(2016).
+64. Shan, J.-Y. et al. Giant modulation of optical nonlinearity by Floquet
+engineering. Nature 600, 235 (2021).
+65. Ito, S. et al. Build-up and dephasing of Floquet-Bloch bands on
+subcycle timescales. Nature 616, 696 (2023).
+66. Oka, T. & Aoki, H. Photovoltaic Hall effect in graphene. Phys. Rev. B
+79, 081406(R) (2009).
+67. McIver, J. W. et al. Light-induced anomalous Hall effect in graphene.
+Nat. Phys. 16, 38 (2020).
+68. Zhou, S. et al. Pseudospin-selective Floquet band engineering in
+black phosphorus. Nature 614, 75 (2023).
+69. de la Torre, A. et al. Colloquium: nonthermal pathways to ultrafast
+control in quantum materials. Rev. Mod. Phys. 93, 041002 (2021).
+70. Huang, W. et al. How much can density functional approximations
+(DFA) fail? The extreme case of the FeO
+4 species. J. Chem. Theory
+Comput. 12, 1525 (2016).
+71. Esterlis, I. et al. Breakdown of the Migdal-Eliashberg theory: a
+determinant quantum Monte Carlo study. Phys. Rev. B 97, 140501
+(2018).
+72. Giannozzi, P. et al. Advanced capabilities for materials modelling
+with Quantum ESPRESSO. J. Phys. Condens. Matter 29, 465901
+(2017).
+73. Perdew, J. P., Burke, K. & Ernzerhof, M. Generalized gradient
+approximation made simple. Phys. Rev. Lett. 77, 3865 (1996).
+74. Hamann, D. R. Optimized norm-conserving Vanderbilt
+pseudopotentials. Phys. Rev. B 88, 085117 (2013).
+75. Monkhorst, H. J. & Pack, J. D. Special points for Brillouin-zone
+integrations. Phys. Rev. B 13, 5188 (1976).
+76. Pizzi, G. et al. Wannier90 as a community code: new features and
+applications. J. Phys. Condens. Matter 32, 165902 (2020).
+Acknowledgements
+The authors thank Cheng-Chien Chen, Ilya Esterlis, Yu He, Matteo Mitrano,
+and Michael Sentef for insightful discussions. This work is supported by the
+Air Force Ofﬁce of Scientiﬁc Research Young Investigator Program under
+grant FA9550-23-1-0153. W.-C.C. and Y.W. also acknowledge support from
+the National Science Foundation (NSF) award DMR-2132338. A.D.S.
+acknowledges support from the NSF awards No. OIA-2148653 and DMR-
+2142801. Simulation results were obtained using the Frontera computing
+system at the Texas Advanced Computing Center. Frontera is made pos-
+sible by NSF Award No. OAC-1818253.
+Author contributions
+Y.W. conceived the project. C.X. and A.D.S. designed the code. C.X. and
+H.Y. performed the calculations and analyzed the data, with the help of
+W.-C.C. Y.W., C.X., A.D.S. and H.Y. wrote the manuscript.
+https://doi.org/10.1038/s41524-025-01725-z Article
+npj Computational Materials |          (2025) 11:227 8
+
+Competing interests
+The authors declare no competing interests.
+Additional information
+Supplementary informationThe online version contains
+supplementary material available at
+https://doi.org/10.1038/s41524-025-01725-z
+.
+Correspondenceand requests for materials should be addressed to
+Yao Wang.
+Reprints and permissions informationis available at
+http://www.nature.com/reprints
+Publisher’s note Springer Nature remains neutral with regard to
+jurisdictional claims in published maps and institutional afﬁliations.
+Open Access This article is licensed under a Creative Commons
+Attribution 4.0 International License, which permits use, sharing,
+adaptation, distribution and reproduction in any medium or format, as long
+as you give appropriate credit to the original author(s) and the source,
+provide a link to the Creative Commons licence, and indicate if changes
+were made. The images or other third party material in this article are
+included in the article ’s Creative Commons licence, unless indicated
+otherwise in a credit line to the material. If material is not included in the
+article’s Creative Commons licence and your intended use is not permitted
+by statutory regulation or exceeds the permitted use, you will need to
+obtain permission directly from the copyright holder. To view a copy of this
+licence, visit http://creativecommons.org/licenses/by/4.0/
+.
+© The Author(s) 2025
+https://doi.org/10.1038/s41524-025-01725-z Article
+npj Computational Materials |          (2025) 11:227 9

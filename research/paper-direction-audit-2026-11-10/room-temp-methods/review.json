@@ -1,0 +1,306 @@
+{
+  "schema": "room-temp-methods-direction-audit-v1",
+  "date": "2026-11-10",
+  "scope": "五份 room_temp_sc 方法与形式化文档，附查一份独立 Lean 文件；只审计，不改原文。",
+  "sources": [
+    {
+      "id": "latest_digest",
+      "path": "toe-sylva-audit/papers/room_temp_sc/latest_research_digest.md",
+      "sha256": "41aea15ed19c68375f29877f7e22deba22394757df178cb67ca827a458a0aa75",
+      "read_only": true
+    },
+    {
+      "id": "floquet_notes",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/13-资料收集-Floquet工程LaH10.md",
+      "sha256": "37b5436dc39bada84c3a520943ea94515d5d08e75c27e808aba5070059d48ab9",
+      "read_only": true
+    },
+    {
+      "id": "eliashberg_notes",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/15-资料收集-Eliashberg理论边界.md",
+      "sha256": "841c1954c7fea9c41e3179476602c64b47eca936643f383e24215284324d0a20",
+      "read_only": true
+    },
+    {
+      "id": "lean_markdown",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/07-形式化代码/01-Lean形式化代码.md",
+      "sha256": "c171f6e5d5e5b6547bddc88d94138b9dc0a87d8c3a6ec59ff696e35746f59141",
+      "read_only": true
+    },
+    {
+      "id": "si_template",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/10-技术文档/06-补充信息.md",
+      "sha256": "9d54064ba6089c82de39ddef90afeb82e47d511f95b35dd0490ee50aef63d97f",
+      "read_only": true
+    },
+    {
+      "id": "lean_standalone",
+      "path": "toe-sylva-audit/papers/room_temp_sc/room_temp_sc_Formalization.lean",
+      "sha256": "1971e95d7b375c24778d3adae8a1ab3be4c5abeb1ee8b79a2b1f347b7aa00439",
+      "read_only": true
+    }
+  ],
+  "source_lineage": {
+    "research_program_count": 1,
+    "decision": "五份文档属于同一 room_temp_sc 研究纲领的五种方法角色，不是五个独立新理论。"
+  },
+  "directions": [
+    {
+      "id": "floquet_evidence",
+      "role": "非平衡第一性原理估计与 DOS-scaling 下界的分层研究",
+      "status": "verified_corrections_open_physics",
+      "closed": "已回源纠正高压压力—Tc 顺序，并区分直接估计与低压下界。",
+      "unfinished": "热效应、非平衡分布、泵浦损伤、样品可实现性、独立复算和实验验证。",
+      "next": "建立按压力、泵浦、方法、近似和证据等级索引的原始数据包。"
+    },
+    {
+      "id": "eliashberg_bounds",
+      "role": "严格数学界与经验 Tc 估算之间的接口",
+      "status": "source_roles_clarified_formalization_open",
+      "closed": "sharp constant、非最优上界和经验公式角色已分开。",
+      "unfinished": "归一化、定理假设、变分命题链和材料级适用域尚未形式化闭合。",
+      "next": "先建立统一定义，再逐项形式化严格界，禁止从经验公式升格必然性。"
+    },
+    {
+      "id": "lean_formalization",
+      "role": "形式化草案与证明债务清偿方向",
+      "status": "draft_not_machine_verified",
+      "closed": "已定位 Markdown 草案和独立 Lean 文件的显式证明债务。",
+      "unfinished": "命题类型、物理假设、全部证明体、公理审计和真实构建均未完成。",
+      "next": "先修复弱耦合与 Floquet 命题，再逐定理清偿并执行 #print axioms。"
+    },
+    {
+      "id": "literature_digest",
+      "role": "研究情报综述，不是独立新理论",
+      "status": "selected_corrections_verified_rest_not_fully_audited",
+      "closed": "DMRG 与 LaSc₂H₂₄ 的卷期和证据角色已回源。",
+      "unfinished": "其他实验段落和外部 Lean 指标未逐项回源，不能整体背书。",
+      "next": "给每条综述记录 DOI、原文定位、证据等级和最后核验日期。"
+    },
+    {
+      "id": "reproducible_si",
+      "role": "可复现材料计算的待建基础设施",
+      "status": "template_only",
+      "closed": "已识别 SI 的占位符和缺失资产，不将模板当成结果。",
+      "unfinished": "DFT 输入、结构、赝势、收敛日志、声子、Eliashberg 输出和重跑脚本。",
+      "next": "选一个材料做最小可复现垂直切片，再扩展材料表。"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "xie_pressure_order",
+      "severity": "P0",
+      "source_id": "floquet_notes",
+      "observed": "220 GPa→322 K；250 GPa→320 K",
+      "corrected": "220 GPa→320 K；250 GPa→322 K",
+      "reason": "Xie 正式论文 lines 421-428 的直接文本核对。"
+    },
+    {
+      "id": "dmrg_bibliography",
+      "severity": "P1",
+      "source_id": "latest_digest",
+      "observed": "PRL 132, 066002",
+      "corrected": "PRL 133, 256003（2024-12-19）",
+      "reason": "APS 官方页面与 DOI 10.1103/PhysRevLett.133.256003。"
+    },
+    {
+      "id": "lasc_issue",
+      "severity": "P1",
+      "source_id": "latest_digest",
+      "observed": "PNAS 121(25)",
+      "corrected": "PNAS 121(26), e2401840121",
+      "reason": "PNAS 官方卷期信息。"
+    },
+    {
+      "id": "lean_limit_statement",
+      "severity": "P0",
+      "source_id": "lean_standalone",
+      "observed": "把 λ → 0 与逻辑箭头用于极限定理陈述，且证明位为 sorry。",
+      "corrected": "降级为待修正命题与证明债务，不称为极限定理或机器证明。",
+      "reason": "独立 Lean 文件 lines 82-93；本批未运行编译。"
+    }
+  ],
+  "evidence": {
+    "floquet": {
+      "title": "Dynamical approach to realize room-temperature superconductivity in LaH10",
+      "doi": "10.1038/s41524-025-01725-z",
+      "journal": "npj Computational Materials 11, 227 (2025)",
+      "source_url": "https://www.nature.com/articles/s41524-025-01725-z",
+      "local_text": "sources/xie-floquet-fulltext.txt",
+      "dfpt_estimates": [
+        {
+          "pressure_gpa": 220,
+          "equilibrium_tc_k": 258,
+          "driven_tc_k": 320,
+          "field_mv_per_angstrom": 80,
+          "role": "direct_floquet_dfpt_allen_dynes_estimate",
+          "source_lines": "421-428"
+        },
+        {
+          "pressure_gpa": 250,
+          "equilibrium_tc_k": 237,
+          "driven_tc_k": 322,
+          "field_mv_per_angstrom": 80,
+          "role": "direct_floquet_dfpt_allen_dynes_estimate",
+          "source_lines": "421-428"
+        }
+      ],
+      "dos_scaling_estimates": [
+        {
+          "pressure_gpa": 150,
+          "equilibrium_tc_k": 249,
+          "driven_tc_k": 285,
+          "field_mv_per_angstrom": 80,
+          "role": "lower_bound_not_accurate_prediction",
+          "source_lines": "556-584"
+        },
+        {
+          "pressure_gpa": 200,
+          "equilibrium_tc_k": 240,
+          "driven_tc_k": 301,
+          "field_mv_per_angstrom": 80,
+          "role": "lower_bound_not_accurate_prediction",
+          "source_lines": "556-584"
+        }
+      ],
+      "not_all_hydrides_above_room_temperature": true,
+      "hydrides_scope_lines": "591-594",
+      "experimental_confirmation": false
+    },
+    "dmrg": {
+      "title": "Phase Diagram, d-Wave Superconductivity, and Pseudogap of the t-t′-J Model at Finite Temperature",
+      "journal": "Physical Review Letters",
+      "volume": 133,
+      "article": "256003",
+      "published": "2024-12-19",
+      "doi": "10.1103/PhysRevLett.133.256003",
+      "arxiv": "2211.06322",
+      "source_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.256003",
+      "max_cylinder_width": 6,
+      "minimum_temperature_t_over_j": 0.06,
+      "max_characteristic_tc_star_over_j": 0.15,
+      "positive_t_prime_behavior": "穹顶状 SC 区与发散 d 波配对磁化率",
+      "negative_t_prime_behavior": "配对关联明显更弱",
+      "complete_cuprate_explanation": false
+    },
+    "lasc2h24": {
+      "title": "Predicted hot superconductivity in LaSc2H24 under pressure",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "volume": 121,
+      "issue": 26,
+      "article": "e2401840121",
+      "doi": "10.1073/pnas.2401840121",
+      "source_url": "https://www.pnas.org/doi/10.1073/pnas.2401840121",
+      "predictions": [
+        {
+          "pressure_gpa": 167,
+          "maximum_tc_k": 316
+        },
+        {
+          "pressure_gpa": 250,
+          "maximum_tc_k": 331
+        }
+      ],
+      "anharmonic_dynamic_stability_down_to_gpa": 150,
+      "theoretical_prediction": true,
+      "experimental_confirmation": false
+    },
+    "eliashberg": {
+      "source": "Kiessling, Altshuler, Yuzbashyan, arXiv:2409.00532v3",
+      "source_url": "https://arxiv.org/html/2409.00532",
+      "sharp_constant": 0.1827262477,
+      "upper_bound_multiplier": 2.034,
+      "upper_bound_coefficient": 0.37166518782179997,
+      "upper_bound_is_sharp": false,
+      "allen_dynes_role": "经验公式，不替代严格界或其假设",
+      "room_temp_necessity_proven": false
+    },
+    "lean": {
+      "status": "draft_not_machine_verified",
+      "markdown_proof_hole_count": 48,
+      "markdown_admit_sorry_token_count": 53,
+      "standalone_sorry_theorems": [
+        "allenDynes_weak_coupling_limit",
+        "bcs_isotope_effect",
+        "floquet_enhanced_tc"
+      ],
+      "standalone_sorry_count": 3,
+      "weak_coupling_limit_statement_valid": false,
+      "floquet_confidence_annotation": 0.05,
+      "build_attempted": false,
+      "build_passed": false,
+      "note": "未运行 Lean 编译；字符串计数只用于定位债务，不代表证明困难度。"
+    },
+    "external_lean_metrics": {
+      "status": "unverified",
+      "claimed_line_count": 15000,
+      "claimed_proof_terms": 845,
+      "claimed_instances": 127,
+      "claimed_seconds": 43,
+      "reason": "当前条目没有可精确复核的实现版本和构建记录，不据此判定真假。"
+    },
+    "si": {
+      "status": "template_only",
+      "placeholder_count": 31,
+      "placeholder_pattern_counts": {
+        "to_be_imported": 15,
+        "to_be_specified": 8,
+        "pending_chinese": 3,
+        "placeholder": 3,
+        "software_marker": 1,
+        "repository_marker": 1
+      },
+      "dft_inputs_provided": false,
+      "phonon_spectra_provided": false,
+      "convergence_logs_provided": false,
+      "material_results_provided": false,
+      "note": "文件列表是模板声明，不证明对应资产存在。"
+    }
+  },
+  "out_of_scope_findings": [
+    {
+      "path": "papers/room_temp_sc/organized/08-手册章节/04-第6章_未来展望.md",
+      "lines": "222,372,384-385",
+      "severity": "P0_candidate",
+      "status": "high_risk_unverified",
+      "finding": "将 LaSc₂H₂₄ 写成实验实现并附 Nature 文献，与已核 PNAS 理论预测角色冲突。",
+      "next": "在手册批次独立回源并修正，不在本批直接改原文或判定虚构。"
+    },
+    {
+      "path": "papers/room_temp_sc/organized/02-主论文/02-Nature版本.md；03-Science版本.md；04-arXiv版本.md",
+      "lines": "摘要与材料预测段",
+      "severity": "P0_candidate",
+      "status": "claim_evidence_mismatch",
+      "finding": "必然性、严格导出和材料预测措辞与当前 Lean 草案、SI 模板不匹配。",
+      "next": "主论文批次逐条对照 proof_status 与计算资产后降级或补证。"
+    },
+    {
+      "path": "papers/room_temp_sc/organized/02-主论文/01-主论文.md",
+      "lines": "60,220-222,296",
+      "severity": "P1",
+      "status": "placeholder_confirmed",
+      "finding": "仍有 [To be imported]，不是完整主论文。",
+      "next": "主论文批次先移除交付完整性误判，再填充真实证明和数据。"
+    }
+  ],
+  "open_boundaries": {
+    "global_fit": false,
+    "material_prediction": false,
+    "lean_proof_verified": false,
+    "dft_inputs_available": false,
+    "phonon_spectra_available": false,
+    "full_repository_audit_completed": false
+  },
+  "verification_scope": {
+    "source_documents_modified": false,
+    "lean_compilation_run": false,
+    "new_material_prediction": false,
+    "new_global_fit": false,
+    "primary_sources_checked": [
+      "Xie",
+      "APS DMRG",
+      "PNAS LaSc2H24",
+      "Kiessling"
+    ]
+  }
+}

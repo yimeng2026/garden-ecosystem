@@ -1,0 +1,6 @@
+node_modules/
+__pycache__/
+word-qa/*.png
+word-qa/candidate*
+*.tmp
+*.parked.docx
