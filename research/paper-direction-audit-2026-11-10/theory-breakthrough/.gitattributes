@@ -1,0 +1,2 @@
+# Preserve Matplotlib's generated SVG path data verbatim.
+logic-evidence-map.svg whitespace=-trailing-space

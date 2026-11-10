@@ -21,3 +21,55 @@ Song onset 271–298 K；PNAS 316/331 K 为预测；Semenok 七次未成功。
 退出码：1
 关键输出：setUpClass ERROR；FileNotFoundError: theory-breakthrough/review.json；Ran 0 tests；FAILED (errors=1)。
 判定：符合预期 RED，唯一证据对象尚未生成；run_all_tests 的零测试发现保护会返回失败。
+
+[evidence-build]
+命令：python research/paper-direction-audit-2026-11-10/theory-breakthrough/build_review.py
+退出码：0
+关键输出：sources=4；research_program_count=1；directions=4；corrections=6；admit=17；sorry=5；song_max_onset=298；semenok_unsuccessful=7。
+独立文本扫描：检索 28 个 Lean 文件，五个模块和三个核心定理名均无命中；只记本次未解析。
+logic-evidence-map.png 已读取检查：双面板、全部标签和数值完整，无裁切；不含成功率或证明完成百分比。
+
+[source-test-fixture-red-and-correction]
+命令：python research/paper-direction-audit-2026-11-10/theory-breakthrough/verify_sources.py -v
+首次退出码：1；6 项中 5 项通过。
+失败原因：测试夹具写为“最终逻辑否证”，既有原始审计实际文本为“最终否证”。证据角色未冲突。
+处理：仅把测试夹具改为原文，不改证据对象或原始审计。
+
+[contract-status-before-word]
+主合同：退出码 1；Ran 8 tests；7 项通过，仅 REVIEW.docx 缺失导致 test_markdown_and_native_word_contract ERROR。
+修正后来源复核：退出码 0；Ran 6 tests；OK。
+
+[native-word-build]
+check-docx：退出码 0；Materializing vendored docx 9.7.1；FOUND docx。
+命令：docx.py build theory-breakthrough/build_report.js theory-breakthrough/REVIEW.docx（显式 Node.js PATH）
+退出码：0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+生成物含真实 TOC 域和可见缓存目录、中文页眉、PAGE 页码、五个真实表格、原生逻辑公式、五条原生脚注和双面板 PNG。
+主合同：退出码 0；Ran 8 tests；OK。
+来源复核：退出码 0；Ran 6 tests；OK。
+
+[visual-qa-initial-and-layout-correction]
+初次 doc-k render：退出码 0；5 pages，5 rendered；near-blank pages: none。
+逐页发现第 5 页仅 85 个字符，虽不触发 nearBlank 标记，仍不记为通过。
+第一处调整：正文段后间距 140→120；重建后仍为 5 页，继续不记通过。
+第二处调整：表格单元格上下边距 90→60、行距 230→220；不删除任何内容。
+
+[visual-qa-final]
+最终 doc-k render：退出码 0；4 pages，4 rendered；near-blank pages: none。
+contact-sheet.png 已先读，page-01.png 至 page-04.png 已全部逐页读取。
+第 1 页：目录缓存页码 2、2、3、4、4，与实际一致。
+第 2 页：来源、方向表、证明债务表、原生逻辑公式和脚注 1–2 完整。
+第 3 页：实验角色表→图 1→结果解释顺序正确；PNAS、Song、Semenok 和 298 K 边界清晰；脚注 3–5 完整。
+第 4 页：日期矛盾、六项勘误、六项开放边界和最终范围说明完整，原孤行已收回。
+renderer clipped=false（4/4）。w:lvlOverride×1 为默认编号级别覆盖不建模，本文未使用该编号功能，未观察到内容丢失。
+结论限于 doc-k 最终视图，不声称与 Microsoft Word 像素一致。
+
+[final-validation-and-fresh-regression]
+docx.py validate REVIEW.docx：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+最终 DOCX SHA-256：f301caee5737cfaf62f49e52ccbb40bc0af79df84146089a89f368ceeb5d5e54。
+主合同：退出码 0；Ran 8 tests；OK。
+来源复核：退出码 0；Ran 6 tests；OK。
+JSON 解析与哈希：退出码 0；JSON OK: 4 directions, 4 reviewed pages。
+git diff --check：退出码 0；仅 LF/CRLF 提示，无空白错误。
+
+[scope-guard]
+两份原文及既有审计对象未修改；未运行 Lean，未新增 DFT/Eliashberg、实验、独立复现或材料预测；全库审计继续。
