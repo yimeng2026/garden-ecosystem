@@ -221,3 +221,11 @@ $$\psi_{\mathrm{toy}}''(\mu)=1 \quad\Longrightarrow\quad \frac{1}{\psi_{\mathrm{
 - 含报告和 Word 验收的完整 K2 回归实际 44/44 通过，退出码 0。
 - 原生 Word 共 5 页并逐页检查，无空白页或裁切；低风险 `w:lvlOverride` 仅为目录编号兼容提示。
 - 普通相似与补零的像模同构均已完成；重索引、有限生成性、稳定相似分类和 K0(R) 仍未完成，矩阵实例使用交换环。
+
+## K2 重索引像模同构复核补记（2026-11-10）
+
+- [重索引像模同构报告](kimi-cite://text?path=C%3A%5CUsers%5C%E4%B8%80%E6%A2%A6%5CDocuments%5Ckimi%5Cworkspace%5C.worktrees%5Ctoe-k0-universal%5Cpapers%5C%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96_%E7%B3%BB%E5%88%97%5C_panel_records%5CK2_REINDEX_RANGE_EQUIV.md&text=K2%20%E9%87%8D%E7%B4%A2%E5%BC%95%E5%83%8F%E6%A8%A1%E5%90%8C%E6%9E%84%EF%BC%9A%E4%B8%8D%E5%90%8C%E6%A8%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B1%E8%BD%AD%E4%B8%8E%E5%87%BD%E6%95%B0%E7%A9%BA%E9%97%B4%E7%AD%89%E4%BB%B7 "citation")及[原生 Word](C:\Users\一梦\Documents\kimi\workspace\.worktrees\toe-k0-universal\papers\数学基础强化_系列\_panel_records\K2_REINDEX_RANGE_EQUIV.docx)。
+- `python verify_k2_reindex_range_equiv_20261110.py` 实际退出码 0，10/10 检查通过；两个构造均只依赖 Lean 标准三公理。
+- 含报告和 Word 验收的完整 K2 回归实际 48/48 通过，退出码 0。
+- 原生 Word 共 5 页并逐页检查，无空白页或裁切；低风险 `w:lvlOverride` 仅为目录编号兼容提示。
+- 普通相似、补零和重索引三个局部像模等价已齐备；有限生成性、稳定相似见证组合、商层分类和 K0(R) 仍未完成。
