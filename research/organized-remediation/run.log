@@ -1,0 +1,24 @@
+Organized 导航与参考文献修复包验证记录
+日期：2026-11-11
+分支：fix/organized-navigation-references
+基线：1f5df69fed7e9121b53e4b7293cb4f177065aa91
+设计提交：af52518fbf8621651da8af61f9770a392aa16bd5
+工作树：复用 room-temp-isotope-dft-audit，未嵌套创建，未使用子代理。
+
+[frozen-inputs]
+coverage_inventory=638f1e0cfb41ed7902869d28677d6adf50cc7644abe7de3a82a9e0ba6d025f7b
+base_bib=ca014a4bae5023081149a1c4d051917e7f0540df18241400992c2b2276d43698
+main_claims_review=e9ac6ff0bc88f11b1c2c91ae61ce398a05fc077815803f48669b46536d6f2f45
+main_claims_builder=ebd3fa8f7459a502218f58e10f1629e0c7de38f9f37905a6ac1c0bde72a4958d
+old_enhanced_bib=d4a7d80243bc2fec0b05af4b0c9519d1be86edd0a62cd0d3d82b94a912ab870f
+
+[scope]
+只写 research/organized-remediation/，不修改原始证据。
+44 份真实路径；基础 24 条保留；PNAS、Song、Semenok 三条新增，总计 27 条。
+5 个待补区块与 6 次占位字符串继续披露；可解析与可导航不等于全部回源或科学验证。
+
+[RED: missing remediation.json]
+命令：python research/organized-remediation/test_remediation.py -v
+退出码：1
+关键输出：setUpClass ERROR；FileNotFoundError: organized-remediation/remediation.json；Ran 0 tests；FAILED (errors=1)。
+判定：符合预期 RED，修复证据对象尚未生成；零测试发现保护生效。
