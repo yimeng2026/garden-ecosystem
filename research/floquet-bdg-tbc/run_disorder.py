@@ -93,6 +93,56 @@ def run_strength(strength, n=80, seeds=SEEDS, nominal_steps=(0.05, 0.025)):
     }
 
 
+def run_strength_incremental(
+    strength,
+    n=80,
+    seeds=SEEDS,
+    nominal_steps=(0.05, 0.025),
+    path=None,
+    expected_seeds=SEEDS,
+):
+    """Compute missing rows and atomically checkpoint after every seed."""
+    baseline_path = ROOT / "results.json"
+    require_baseline(baseline_path)
+    path = checkpoint_path(strength) if path is None else Path(path)
+    if path.exists():
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if (
+            data.get("strength") != strength
+            or data.get("n") != n
+            or data.get("seeds") != list(expected_seeds)
+            or data.get("nominal_steps") != list(nominal_steps)
+        ):
+            raise ValueError("checkpoint metadata does not match the requested ensemble")
+    else:
+        data = {
+            "schema": "floquet-bdg-tbc-disorder-checkpoint-v1",
+            "strength": float(strength),
+            "n": n,
+            "seeds": list(expected_seeds),
+            "nominal_steps": list(nominal_steps),
+            "baseline_sha256": sha256_bytes(baseline_path.read_bytes()),
+            "complete": False,
+            "rows": [],
+        }
+    rows = data["rows"]
+    seen = {(row["seed"], row["kind"]) for row in rows}
+    if len(seen) != len(rows):
+        raise ValueError("duplicate realization in checkpoint")
+    expected = {(seed, kind) for seed in expected_seeds for kind in ("disorder", "uniform_mean")}
+    for seed in seeds:
+        for kind in ("disorder", "uniform_mean"):
+            if (seed, kind) not in seen:
+                rows.append(evaluate_realization(n, seed, strength, kind, nominal_steps))
+        rows.sort(key=lambda row: (row["seed"], row["kind"]))
+        data["rows"] = rows
+        data["complete"] = {(row["seed"], row["kind"]) for row in rows} == expected and len(rows) == 2 * len(expected_seeds)
+        temporary = path.with_suffix(path.suffix + ".tmp")
+        temporary.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        temporary.replace(path)
+    return data
+
+
 def checkpoint_path(strength):
     tag = f"{strength:.2f}".replace(".", "p")
     return ROOT / f"disorder_r{tag}.json"
@@ -224,6 +274,7 @@ def merge_and_write():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--strength", type=float, choices=STRENGTHS)
+    parser.add_argument("--seed", type=int, choices=SEEDS)
     parser.add_argument("--merge-only", action="store_true")
     args = parser.parse_args()
     try:
@@ -233,10 +284,10 @@ def main():
             print("summary", json.dumps(data["summary"], ensure_ascii=False))
             return 0
         strengths = (args.strength,) if args.strength is not None else STRENGTHS
+        seeds = (args.seed,) if args.seed is not None else SEEDS
         for strength in strengths:
-            data = run_strength(strength)
+            data = run_strength_incremental(strength, seeds=seeds)
             path = checkpoint_path(strength)
-            path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             for row in data["rows"]:
                 print(
                     f"N={row['n']} seed={row['seed']} r={row['strength']} kind={row['kind']} "

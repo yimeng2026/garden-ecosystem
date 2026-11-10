@@ -18,6 +18,7 @@ from run_disorder import (  # noqa: E402
     merge_checkpoints,
     require_baseline,
     run_strength,
+    run_strength_incremental,
 )
 
 
@@ -40,7 +41,7 @@ class DisorderContractTests(unittest.TestCase):
         json.dumps(row)
 
     def test_baseline_failure_blocks_promotion(self):
-        with tempfile.TemporaryDirectory() as folder:
+        with tempfile.TemporaryDirectory(dir=ROOT) as folder:
             path = Path(folder) / "results.json"
             path.write_text(json.dumps({"status": "clean_floquet_baseline_failed"}), encoding="utf-8")
             with self.assertRaises(RuntimeError):
@@ -63,6 +64,19 @@ class DisorderContractTests(unittest.TestCase):
     def test_partial_checkpoints_cannot_complete(self):
         with self.assertRaisesRegex(ValueError, "incomplete preregistered disorder checkpoints"):
             merge_checkpoints([Path("missing-r0p05.json")])
+
+    def test_incremental_checkpoint_resumes_without_recomputing(self):
+        with tempfile.TemporaryDirectory(dir=ROOT) as folder:
+            path = Path(folder) / "checkpoint.json"
+            first = run_strength_incremental(0.05, n=8, seeds=(0,), nominal_steps=(0.2, 0.1), path=path, expected_seeds=(0, 1))
+            self.assertEqual(len(first["rows"]), 2)
+            self.assertFalse(first["complete"])
+            original = json.dumps(first["rows"], sort_keys=True)
+            second = run_strength_incremental(0.05, n=8, seeds=(0, 1), nominal_steps=(0.2, 0.1), path=path, expected_seeds=(0, 1))
+            self.assertEqual(len(second["rows"]), 4)
+            self.assertTrue(second["complete"])
+            retained = [row for row in second["rows"] if row["seed"] == 0]
+            self.assertEqual(json.dumps(retained, sort_keys=True), original)
 
 
 def run_all_tests():
