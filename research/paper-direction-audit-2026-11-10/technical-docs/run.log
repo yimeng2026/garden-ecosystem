@@ -1,0 +1,31 @@
+五份技术文档审计验证记录
+日期：2026-11-10
+分支：audit/room-temp-technical-docs
+基线：7842e1449a51be97bf61a6ff57b65c1f1082039c
+工作树：复用 room-temp-isotope-dft-audit，未嵌套创建工作树。
+
+[source-freeze]
+delivery_summary=957e71d98c74e813bed8780614552b20b0802f0ec6c4c598e2f3a39d2c49cdfc
+final_report=563b2fae7222a9ac9ccec3fac849b467e9ae46d571e99def0ef423a9f878e667
+progress_report=a4ffcdc575a2d9f0ae21108b5679856ed022c827bdd549020dc1f3be59d524bb
+quality_progress=0da15ed8122b1908bb8ce155956aebd55166330ca094982f81c6637624354d64
+integration_checklist=1510c3bc360560a1b131c9352616cd28717691abee41ff3951231a65d26d2909
+main_claims_review=e9ac6ff0bc88f11b1c2c91ae61ce398a05fc077815803f48669b46536d6f2f45
+validation_review=17eaa27d30df6849f752e3712d563ebe492ae394ea9c74b1b072ac0755acb491
+methods_review=f30d15d8665644d11957166efaea95d59f7a742037dc697b737704cd15dc9e21
+handbook_review=0394b996c271a6ca24b4692d7bd078b4c0fa8925eefde6df0347a478f298ac48
+
+[observed-status-and-assets]
+最终报告写完成状态 100%，但 A／D 运行中、质量深化进行中、整合清单为 TEMPLATE／PARTIAL／PLACEHOLDERS。
+room_temp_sc_paper_FINAL_v2.tar.gz 未找到，63KB 与 MD5 不可验证。
+references_enhanced.bib 和六张图未找到。
+manuscript.tex、manuscript_nature.tex、manuscript_science.tex、manuscript_arxiv.tex 存在；manuscript_prl.tex 和所称 Markdown 对应文件未找到。
+RoomTempSuperconductivity.lean 未找到；room_temp_sc_Formalization.lean 存在但未编译。
+SI 替代路径 organized/10-技术文档/06-补充信息.md 存在，但为模板且含 31 处既定模式占位。
+五份原文与外部证据只读，不修改。
+
+[RED: missing review.json]
+命令：python research/paper-direction-audit-2026-11-10/technical-docs/test_technical_docs_audit.py -v
+退出码：1
+关键输出：setUpClass ERROR；FileNotFoundError: technical-docs/review.json；Ran 0 tests；FAILED (errors=1)。
+判定：符合预期 RED，唯一证据对象尚未生成；零测试发现保护生效。
