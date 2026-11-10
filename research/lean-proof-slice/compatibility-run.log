@@ -45,3 +45,9 @@ git diff --check：退出码 0，无空白错误。
 [scope-guard]
 本批只完成四类兼容性勘误和清偿路线，未修改原文件，未宣称任何错误已修复。
 原文件直译、三条物理定理、材料预测、数值模型和实验验证仍未完成；全库目标保持 active。
+
+[named-branch-delivery]
+勘误提交：7b8e9cc35f9df9742ec65489308be665487a69ca。
+git push -u origin fix/lean-compatibility-errata：退出码 0，新远端分支已建立并设置跟踪。
+git rev-parse HEAD 与 git ls-remote origin refs/heads/fix/lean-compatibility-errata：退出码 0；本地与远端均为 7b8e9cc35f9df9742ec65489308be665487a69ca。
+未合并主分支。勘误已交付；四项状态继续 open，全库目标保持 active。

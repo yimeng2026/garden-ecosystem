@@ -24,5 +24,5 @@
 ### Task 4：交付
 
 - [x] 重跑两套测试、JSON 解析、原文件哈希和 `git diff --check`，全部退出 0。
-- [ ] 提交 `docs: add Lean compatibility errata` 并推送具名分支，不合并主分支。
-- [ ] 以 `docs: record Lean compatibility errata delivery` 记录交付；继续真实证明与实验复现，保持全库目标 active。
+- [x] 提交 `docs: add Lean compatibility errata` 并推送具名分支，不合并主分支。
+- [x] 以 `docs: record Lean compatibility errata delivery` 记录交付；继续真实证明与实验复现，保持全库目标 active。
