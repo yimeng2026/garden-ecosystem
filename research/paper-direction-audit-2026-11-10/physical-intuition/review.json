@@ -1,0 +1,177 @@
+{
+  "schema": "physical-intuition-direction-audit-v1",
+  "sources": [
+    {
+      "id": "physical-intuition:research/physical-intuition/MATH_PHYSICS_WORLDVIEW_2026.md",
+      "sha256": "89fc5499acd3f5afd05ffd0b4eacae3f40d33822802679a3c105d34acc0f9eb4",
+      "read_only": true
+    },
+    {
+      "id": "physical-intuition:research/physical-intuition/TOTAL_PROJECT_2026-11-08/TOTAL_REPORT.md",
+      "sha256": "91f6653c273c3783e9fc71ef8b9b64463a038fecd5763633038e601d93ae862d",
+      "read_only": true
+    }
+  ],
+  "source_lineage": {
+    "research_program_count": 1,
+    "decision": "两份文档属于同一研究纲领，合订本不是独立新理论。"
+  },
+  "directions": [
+    {
+      "id": "math_physics_methodology",
+      "role": "项目内独立的方法论方向，不是外部新的统一物理理论",
+      "status": "active_methodology_not_external_toe",
+      "closed": "真理、模型与数据分轨；类型化层级、结构卡和可否证流程已有书面框架。",
+      "unfinished": "结构卡覆盖、冻结后评估、跨问题族迁移、常规基线对照与成本审计。",
+      "next": "以未见任务和统一成本面板检验结构卡的实际增益。"
+    },
+    {
+      "id": "zero_cdm_observation",
+      "role": "明确联合模型的可证伪研究方向，与总报告同一血缘",
+      "status": "fixed_model_strongly_disfavored_broader_open",
+      "closed": "固定输入零模型被 Planck 透镜和完整 CMB 强烈排除；五点 H0 切片没有挽救；BBN 不能抵消 CMB 排除。",
+      "unfinished": "非线性、完整参数空间、独立 Boltzmann 实现、更多数据联合、真实物质部门与替代模型。",
+      "next": "把固定点负向结果与全参数后验、非线性和其他无 CDM 机制分开推进。"
+    },
+    {
+      "id": "crosscode_systematics",
+      "role": "可独立发展的跨代码与数值验证基础设施方向",
+      "status": "partially_closed_open_convergence",
+      "closed": "TT 透镜口径、若干插值与共动映射错误已纠正；k800 输出加密被证明无收益。",
+      "unfinished": "极端相位与深谷未收敛，复合实现差异仍在；AccuracyBoost=8 多次触及 300 秒前台时限且无结果。",
+      "next": "以单变量精度和独立实现研究剩余系统误差，不把 ultra 当最佳估计。"
+    },
+    {
+      "id": "physical_intuition_engine",
+      "role": "候选工程与评价方向，不是已经验证有效的系统",
+      "status": "design_only_unvalidated",
+      "closed": "混合工作流、双方法评委、任务包和证据卡已有设计。",
+      "unfinished": "真实引擎实现、未见任务盲测、常规模型对照、消融、许可清单、失败分布和教师依赖评估。",
+      "next": "先实现最小引擎，再用隔离数据、消融和常规基线检验相对增益。"
+    }
+  ],
+  "evidence": {
+    "unit_tests": {
+      "passed": 41,
+      "total": 41,
+      "command": "python -m unittest discover -s \"C:/Users/一梦/Documents/kimi/workspace/.worktrees/provider-main-integration/research/physical-intuition/zero-cdm/tests\" -p \"test*.py\" -v"
+    },
+    "h0_scan": {
+      "case_count": 10,
+      "rows": [
+        {
+          "h0": 55.0,
+          "zero_case": "h0_55_zero",
+          "baseline_case": "h0_55_baseline",
+          "zero_chi_squared_total": 199206.36861538913,
+          "baseline_chi_squared_total": 32188.306111318023,
+          "delta_definition": "zero minus baseline at identical H0",
+          "delta_chi_squared_total": 167018.0625040711,
+          "delta_chi_squared_by_likelihood": {
+            "planck_2018_lowl.EE": 7.170986549371776,
+            "planck_2018_highl_CamSpec2021.TTTEEE": 159998.208044651,
+            "planck_2018_lensing.native": 6839.837988917575,
+            "planck_2018_lowl.TT": 172.84548395315903
+          }
+        },
+        {
+          "h0": 60.0,
+          "zero_case": "h0_60_zero",
+          "baseline_case": "h0_60_baseline",
+          "zero_chi_squared_total": 190973.30175276202,
+          "baseline_chi_squared_total": 18632.529783444446,
+          "delta_definition": "zero minus baseline at identical H0",
+          "delta_chi_squared_total": 172340.77196931757,
+          "delta_chi_squared_by_likelihood": {
+            "planck_2018_lowl.EE": 7.265558683800975,
+            "planck_2018_highl_CamSpec2021.TTTEEE": 164793.5737403354,
+            "planck_2018_lensing.native": 7374.413739295681,
+            "planck_2018_lowl.TT": 165.51893100268245
+          }
+        },
+        {
+          "h0": 67.66,
+          "zero_case": "h0_67p66_zero",
+          "baseline_case": "h0_67p66_baseline",
+          "zero_chi_squared_total": 189668.60418098595,
+          "baseline_chi_squared_total": 10543.642920684408,
+          "delta_definition": "zero minus baseline at identical H0",
+          "delta_chi_squared_total": 179124.9612603015,
+          "delta_chi_squared_by_likelihood": {
+            "planck_2018_lowl.EE": 7.068690104485029,
+            "planck_2018_highl_CamSpec2021.TTTEEE": 171225.95879819657,
+            "planck_2018_lensing.native": 7768.092083309375,
+            "planck_2018_lowl.TT": 123.84168869110255
+          }
+        },
+        {
+          "h0": 75.0,
+          "zero_case": "h0_75_zero",
+          "baseline_case": "h0_75_baseline",
+          "zero_chi_squared_total": 187206.69090376465,
+          "baseline_chi_squared_total": 17017.391810934427,
+          "delta_definition": "zero minus baseline at identical H0",
+          "delta_chi_squared_total": 170189.29909283022,
+          "delta_chi_squared_by_likelihood": {
+            "planck_2018_lowl.EE": 6.870530000677832,
+            "planck_2018_highl_CamSpec2021.TTTEEE": 162107.2927333676,
+            "planck_2018_lensing.native": 7981.455979191397,
+            "planck_2018_lowl.TT": 93.67985027057404
+          }
+        },
+        {
+          "h0": 85.0,
+          "zero_case": "h0_85_zero",
+          "baseline_case": "h0_85_baseline",
+          "zero_chi_squared_total": 182476.36464124665,
+          "baseline_chi_squared_total": 41184.6191504119,
+          "delta_definition": "zero minus baseline at identical H0",
+          "delta_chi_squared_total": 141291.74549083476,
+          "delta_chi_squared_by_likelihood": {
+            "planck_2018_lowl.EE": 6.620953901818211,
+            "planck_2018_highl_CamSpec2021.TTTEEE": 133959.42141854763,
+            "planck_2018_lensing.native": 7266.5850058096585,
+            "planck_2018_lowl.TT": 59.11811257565989
+          }
+        }
+      ],
+      "minimum_h0": 85.0,
+      "minimum_delta_chi_squared": 141291.74549083476,
+      "expanded_scan_triggered": false,
+      "follow_up_threshold": 10,
+      "posterior_sampling_performed": false
+    },
+    "planck_lensing": {
+      "minimum_delta_chi_squared": 1238.7052914170808,
+      "maximum_delta_chi_squared": 1238.773761924766,
+      "scope": "固定输入的 Planck 2018 边缘化透镜诊断，不是全参数拟合。"
+    },
+    "full_cmb_hyrec": {
+      "delta_chi_squared_total": 179124.96703804415,
+      "posterior_sampling_performed": false,
+      "scope": "局部 nuisance profile，不是全参数后验或全局最优证明。"
+    },
+    "bbn": {
+      "maximum_absolute_delta_chi_squared": 0.004415687278122249,
+      "scope": "BBN 近似一致，不能抵消 CMB 排除；不是联合后验。"
+    },
+    "crosscode_systematics": {
+      "k800_shared_nodes": 5878,
+      "k800_bandpower_log_change": 0.0,
+      "accuracy_boost_8": "多次触及 300 秒前台时限，没有数值结果。",
+      "phase_sequence": "零交叉数和完整相位序列未收敛。"
+    }
+  },
+  "open_boundaries": {
+    "global_cosmological_fit_completed": false,
+    "nonlinear_matter_spectrum_completed": false,
+    "extreme_phase_sequence_converged": false,
+    "accuracy_boost_8_completed": false,
+    "physical_intuition_engine_validated": false
+  },
+  "figure": {
+    "svg": "h0-scan-comparison.svg",
+    "png": "h0-scan-comparison.png",
+    "scope": "五点 H0 单变量切片，不是全参数拟合。"
+  }
+}
