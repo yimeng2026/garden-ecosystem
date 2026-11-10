@@ -14,3 +14,36 @@ Lean 兼容性清偿切片验证记录
 退出码：1
 关键输出：setUpClass ERROR；FileNotFoundError: compatible-definitions.json；Ran 0 tests；FAILED (errors=1)。
 判定：符合预期 RED，兼容定义证据对象尚未生成；零测试发现保护生效。
+
+[definition-build-and-independent-verification]
+CompatibleDefinitions.lean 已创建：Real.eulerMascheroniConstant、显式 ω₀ : ℝ 和 debyeModel : ℝ → ℝ；不含 HasEquiv。
+首次真实编译：退出码 0；bcsCriticalTemp_unfold 与 debyeModel_unfold 均只依赖 [propext, Classical.choice, Quot.sound]，无 sorryAx。
+audit_compatible_definitions.py：退出码 0；compatible-definitions.json SHA-256=4a3de15eb671460870faa179fcdf8e7994110ceda5278f501491b503b3d49e14。
+verify_compatible_definitions.py：退出码 0；Ran 4 tests；OK。
+主合同此阶段退出码 1；Ran 5 tests；4 项通过，仅 COMPATIBLE_DEFINITIONS.docx 缺失，符合阶段预期。
+
+[figure-and-word]
+初版对照图缺 ω₀ 下标和 ℝ 字形，改用 ASCII omega0 : Real 和 debyeModel : Real -> Real 后重新读取，标签清晰。
+docx.py build：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+主合同：退出码 0；Ran 5 tests；OK。
+独立复核：退出码 0；Ran 4 tests；OK。
+最终视图渲染：退出码 6，临时目录 EPERM；不重试、不使用 LibreOffice。
+word-qa-compatible/report.json 记录 visualQA.status=unavailable、renderAttemptCount=1、reviewedPages=[]、visualPassClaimed=false。
+
+[final-validation-and-fresh-regression]
+docx.py validate COMPATIBLE_DEFINITIONS.docx：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+最终 DOCX SHA-256：9aeb2a39a831f5394911e61f72bc97088e623edf32953c700c0fe0cf1f8404bb。
+主合同：退出码 0；Ran 5 tests；OK。
+独立复核：退出码 0；Ran 4 tests；OK。
+audit_compatible_definitions.py 再次真实编译：退出码 0，两个新定理仅有标准三公理。
+JSON 解析、原文件哈希、编译退出码、视觉不可用状态和 DOCX 哈希一致性：退出码 0。
+git diff --check：退出码 0，无空白错误。
+
+[scope-guard]
+本次只清偿常量、ASCII 绑定与 Debye 类型；原文件未修改，原文件直译仍不兼容，原三条定理的 sorryAx 审计仍不可用。
+HasEquiv 语义、三条物理定理、材料预测、数值模型和实验复现仍未完成；全库目标保持 active。
+
+[staged-whitespace-gate]
+首次 git diff --cached --check：退出码 2；Matplotlib 生成的 compatible-definitions.svg 含大量原始行尾空格。
+处理：compatible-definitions.svg whitespace=-trailing-space，保持图件原样，不改写路径或内容。
+再次检查：退出码 0；16 个暂存文件，未纳入 .lake 或 node_modules。

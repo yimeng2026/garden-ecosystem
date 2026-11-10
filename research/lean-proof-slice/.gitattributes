@@ -1,5 +1,6 @@
 # Preserve generated evidence verbatim.
 lean-proof-slice.svg whitespace=-trailing-space
+compatible-definitions.svg whitespace=-trailing-space
 RoomTempSC_Formalization.lean whitespace=-trailing-space
 sources/*.pdf binary
 sources/*.txt whitespace=-trailing-space

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "D:/migration/toolchains/elan/home/bin/lake.exe",
+    "env",
+    "lean",
+    "-o",
+    ".lake/build/lib/lean/CompatibleDefinitions.olean",
+    "CompatibleDefinitions.lean"
+  ],
+  "cwd": "D:\\migration\\lean-proof-slice-build",
+  "exit_code": 0,
+  "stdout": "'Sylva.RoomTempSuperconductivity.bcsCriticalTemp_unfold' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Sylva.RoomTempSuperconductivity.debyeModel_unfold' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "stderr": ""
+}

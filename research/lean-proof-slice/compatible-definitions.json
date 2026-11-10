@@ -1,0 +1,73 @@
+{
+  "schema": "lean-compatible-definitions-v1",
+  "date": "2026-11-11",
+  "scope": "两个独立定义的真实编译；只清偿常量、绑定和 Debye 类型，不处理 HasEquiv 或物理证明。",
+  "original": {
+    "path": "C:\\Users\\一梦\\Documents\\kimi\\workspace\\toe-sylva-audit\\papers\\room_temp_sc\\room_temp_sc_Formalization.lean",
+    "sha256": "1971e95d7b375c24778d3adae8a1ab3be4c5abeb1ee8b79a2b1f347b7aa00439",
+    "source_modified": false,
+    "sorry_lines": [
+      93,
+      112,
+      185
+    ]
+  },
+  "original_compile": {
+    "status": "source_incompatible",
+    "original_theorem_axiom_audit_available": false
+  },
+  "compile": {
+    "status": "passed",
+    "exit_code": 0,
+    "machine_checked": true,
+    "log": "compatible-compile.log"
+  },
+  "toolchain": {
+    "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+    "mathlib_rev": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+    "build_copy": "D:\\migration\\lean-proof-slice-build",
+    "path_unchanged": true
+  },
+  "dependencies": {
+    "bcsCriticalTemp_unfold": {
+      "depends_on_axioms": true,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "sorryAx": false,
+      "nonstandard_axioms": [],
+      "raw": "'Sylva.RoomTempSuperconductivity.bcsCriticalTemp_unfold' depends on axioms: [propext, Classical.choice, Quot.sound]"
+    },
+    "debyeModel_unfold": {
+      "depends_on_axioms": true,
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "sorryAx": false,
+      "nonstandard_axioms": [],
+      "raw": "'Sylva.RoomTempSuperconductivity.debyeModel_unfold' depends on axioms: [propext, Classical.choice, Quot.sound]"
+    }
+  },
+  "local_resolution": {
+    "euler_constant": true,
+    "ascii_lambda": true,
+    "debye_types": true,
+    "has_equiv_semantics": false
+  },
+  "open_boundaries": {
+    "original_file_compiled": false,
+    "original_theorems_proven": false,
+    "physical_validity_verified": false,
+    "all_compatibility_complete": false
+  },
+  "verification_scope": {
+    "definitions_only": true,
+    "new_axiom_or_sorry_added": false,
+    "source_modified": false,
+    "physical_validity_verified": false
+  }
+}
