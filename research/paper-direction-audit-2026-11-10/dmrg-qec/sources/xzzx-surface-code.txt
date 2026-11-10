@@ -1,0 +1,1398 @@
+=== PDF PAGE 1 ===
+The XZZX surface code
+J. Pablo Bonilla-Ataides, 1 David K. Tuckett,1 Stephen D. Bartlett, 1 Steven T. Flammia, 2 and Benjamin J. Brown 1
+1Centre for Engineered Quantum Systems, School of Physics,
+University of Sydney, Sydney, New South Wales 2006, Australia
+2A WS Center for Quantum Computing, Pasadena, CA 91125, USA
+(Dated: August 24, 2020)
+We show that a variant of the surface code—the XZZX code—oﬀers remarkable performance
+for fault-tolerant quantum computation. The error threshold of this code achieves the zero-rate
+hashing bound for every single-qubit Pauli noise channel; it is the ﬁrst explicit code shown to
+have this universal property. We present numerical evidence that this threshold even exceeds the
+hashing bound for an experimentally relevant range of noise parameters. Focusing on the common
+situation where qubit dephasing is the dominant noise, we show that this code has a practical,
+high-performance decoder and surpasses all previously known thresholds in the realistic setting
+where syndrome measurements are unreliable. We go on to demonstrate the favorable sub-threshold
+resource scaling that can be obtained by specializing a code to exploit structure in the noise. We
+show that it is possible to maintain all of these advantages when we perform fault-tolerant quantum
+computation. We ﬁnally suggest some small-scale experiments that could exploit noise bias to reduce
+qubit overhead in two-dimensional architectures.
+I. INTRODUCTION
+A large-scale quantum computer must be able to reli-
+ably process data encoded in a nearly noiseless quantum
+system. To build such a quantum computer using phys-
+ical qubits that experience errors from noise and faulty
+control, we require an architecture that operates fault-
+tolerantly [1–4], using quantum error correction to repair
+errors that occur throughout the computation.
+For a fault-tolerant architecture to be practical, it will
+need to correct for physically-relevant errors with only
+a modest overhead. That is, quantum error correction
+can be used to create near-perfect logical qubits if the
+rate of relevant errors on the physical qubits is below
+some threshold, and a good architecture should have a
+suﬃciently high threshold to be achievable in practice.
+This fault-tolerant designs should also be eﬃcient, using
+a reasonable number of physical qubits to achieve the
+desired logical error rate. The most common architec-
+ture for fault-tolerant quantum computing is based on
+the surface code [5]. It oﬀers very favorable thresholds
+against depolarizing noise, but recent results have shown
+that its performance against more structured noise can be
+considerably improved by tailoring the code to the noise
+model [6–8]. While the thresholds are favorable, the over-
+heads for the surface code architecture are daunting [5, 9].
+For fault-tolerant quantum computing to become prac-
+tical, there is a need for new architectures that provide
+high thresholds against a variety of structured noise mod-
+els and that oﬀer reduced overheads through eﬃciencies
+in physical qubits and logic gates.
+In this paper, we present a highly eﬃcient fault tolerant
+architecture design that exploits the common structures
+in the noise experienced by physical qubits. Our central
+tool is a variant of the surface code [10–12] where the
+check operators are given by the product XZZX of Pauli
+operators around each face on a square lattice [13]. This
+seemingly innocuous local change of basis oﬀers a num-
+ber of signiﬁcant advantages over its more conventional
+counterpart for noise models that deviate from depolar-
+izing noise.
+We ﬁrst consider preserving a logical qubit in a quan-
+tum memory using this XZZX code. While the some
+2D codes have been shown to have high error thresholds
+for certain types of biased noise [6, 14], we ﬁnd that the
+XZZX code gives exceptional thresholds for all single-
+qubit Pauli noise channels, matching what is known to be
+achievable with random coding [15], [16, Theorem 24.6.2].
+It is a particularly striking consequence of our results that
+we can operate a fault-tolerant quantum computer expe-
+riencing any single-qubit Pauli error model with the same
+threshold performance of a random code, while retaining
+the practical beneﬁts of local stabilizers and an eﬃcient
+decoder. Intriguingly, we have numerical evidence to sug-
+gest that the XZZX threshold in fact exceeds this random
+coding (hashing) bound for noise that is strongly biased
+towards X (or Z), and so our code can operate in a regime
+where random coding may not work. Thus, this code
+could potentially provide a practical demonstration of
+the superadditivity of the coherent information (a topic
+of considerable theoretical interest [17–21]).
+We show that this high threshold persists with eﬃ-
+cient, practical decoders, by using a generalisation of a
+matching decoder in the regime where dephasing noise
+is dominant. In the fault-tolerant setting when stabilizer
+measurements are unreliable, we obtain thresholds in the
+biased-noise regime that surpass all previously known
+thresholds.
+Along with oﬀering high thresholds against errors, we
+show that the XZZX code can also oﬀer a signiﬁcant
+reduction in the overhead because of a favorable sub-
+threshold scaling of the logical failure rate. This scaling
+determines how many physical qubits will be needed for
+a code to obtain a target logical failure rate. Speciﬁcally,
+we show that this sub-threshold scaling can be aﬀected
+by structured noise in two ways. When the physical noise
+
+=== PDF PAGE 2 ===
+2
+(a)
+(b)
+(c)
+(d)
+(e)
+X Z
+Z X
+X
+X
+X
+Z
+ZZ
+Z
+Z
+Z
+Z
+Y
+Y
+Y
+FIG. 1. The XZZX surface code. Qubits lie on the ver-
+tices of the square lattice. The codespace is the common
++1 eigenspace of its stabilizers Sf for all faces of the lattice
+f. (a) An example of a stabilizer Sf. Unlike the conven-
+tional surface code, all stabilizer take the same form for every
+face. (b) Pauli-Z errors give rise to string-like errors that align
+along a common direction, enabling a one-dimensional decod-
+ing strategy. (c) The product of stabilizer operators along a
+diagonal give rise to the symmetries under an inﬁnite bias
+dephasing noise model [8, 30]. (d) Pauli-X errors align along
+lines with an orthogonal orientation. At ﬁnite bias, errors in
+conjugate bases couple the lines. (e) Pauli-Y errors can be
+decoded as in Ref. [8].
+rate is p and is biased towards dephasing with noise bias
+η, the logical failure rate scales like O((p/√η)d/2), where
+d is the distance of the code. Here η∼ 1 corresponds
+to depolarising noise and η→∞ to a dephasing noise
+model. Thus, experimentally plausible values of η (say,
+between 10 and 1000 [22, 23]) could lead to large improve-
+ments in the logical failure rate with a ﬁnite number of
+biased physical qubits. We also show that at small sys-
+tem sizes and near to the threshold, the logical failure
+rate has a quadratically improved scaling with code dis-
+tance, as O(pd2/2); prior work [7] demonstrated this d2
+scaling only at inﬁnite bias.
+Finally, we consider fault-tolerant quantum computa-
+tion with biased noise [24–26], and we show that the ad-
+vantages of the XZZX code persist in this context. We
+show how to implement low-overhead fault-tolerant Clif-
+ford gates by taking advantage of the noise structure as
+the XZZX code undergoes measurement-based deforma-
+tions [27–29]. With an appropriate lattice orientation,
+noise with bias η is shown to yield a reduction in the re-
+quired number of physical qubits by a factor of ∼ logη
+in a large-scale quantum computation. These advantages
+already manifest at code sizes attainable using present-
+day quantum devices.
+II. THE XZZX SURF ACE CODE
+The XZZX surface code is locally equivalent to the con-
+ventional surface code [10, 12, 31]. The stabilizer gener-
+ators Sf are associated with each face and are given by
+the product of two Pauli-X terms and two Pauli-Z terms
+as shown in Fig. 1(a). This variant of the surface code
+was ﬁrst presented in Ref. [13], and was subsequently
+considered as a topological memory [32]. To contrast the
+XZZX surface code with its conventional counterpart, we
+refer to the latter as the CSS surface code since it is of
+Calderbank-Shor-Steane type [33, 34].
+Together with a choice of code, we require a decod-
+ing algorithm to determine which errors have occurred
+and correct for them. We will consider Pauli errors
+E ∈ P, and we say that E creates a defect at face f
+if SfE = (−1)ESf. A decoder takes as input the er-
+ror syndrome (the locations of the defects) and returns a
+correction that will recover the encoded information with
+high probability.
+Because of the local change of basis, the XZZX surface
+code responds diﬀerently to Pauli errors compared with
+the CSS surface code. We can take advantage of this
+diﬀerence to design better decoding algorithms. Let us
+consider the eﬀect of diﬀerent types of Pauli errors, start-
+ing with Pauli-Z errors. A single Pauli-Z error gives rise
+to two nearby defects. In fact, we can regard a Pauli-Z
+error as a segment of a string where defects lie at the end-
+points of the string segment, and where multiple Pauli-Z
+errors compound into longer strings, see Fig. 1(b).
+A key feature of the XZZX code that we will exploit
+is that Pauli-Z error strings align along the same direc-
+tion, as shown in Fig. 1(b). We can understand this
+phenomenon in more formal terms from the perspective
+of symmetries [8, 30]. Indeed, the product of face op-
+erators along a diagonal such as that shown in Fig. 1(c)
+commute with Pauli-Z errors. This symmetry guarantees
+that defects created by Pauli-Z errors will respect a par-
+ity conservation law on the faces of a diagonal oriented
+along this direction. Using this property, we can decode
+Pauli-Z errors on the XZZX code as a series of disjoint
+repetition codes. It follows that, for a noise model de-
+scribed by independent Pauli-Z errors, this code has a
+threshold error rate of 50%.
+Likewise, Pauli-X errors act similarly to Pauli-Z errors,
+but with Pauli-X error strings aligned along the orthog-
+onal direction to the Pauli-Z error strings. In general,
+we would like to be able to decode all local Pauli errors,
+where error conﬁgurations of Pauli-X and Pauli-Z errors
+violate the one-dimensional symmetries we have intro-
+duced, e.g. Fig. 1(d). As we will see, we can generalize
+conventional decoding methods to account for ﬁnite but
+high bias of one Pauli operator relative to others and
+maintain a very high threshold.
+We ﬁnally remark that the XZZX surface code re-
+sponds to Pauli-Y errors in the same way as the standard
+surface code. Each Pauli-Y error will create four defects
+on each of their adjacent faces; see Fig. 1(e). We there-
+
+=== PDF PAGE 3 ===
+3
+X
+Y
+Z
+0.1
+0.2
+0.3
+0.4
+0.5
+Threshold error rate: pc
+X
+Y
+Z
+0.1
+0.2
+0.3
+0.4
+0.5
+Threshold error rate: pc
+0.1
+0.2
+0.3
+0.4
+0.5
+pc
+FIG. 2. (Left) Threshold estimates for the XZZX surface code over all single-qubit Pauli channels using approximate maximum-
+likelihood decoding. The gray triangle represents the surface of all single-qubit Pauli channels, where the center corresponds to
+standard depolarizing noise, the labeled vertices correspond to pure X and Z noise, and the third vertex corresponds to pure
+Y noise. The estimates closely match the hashing bound (not shown) for all single-qubit Pauli channels. (Right) Threshold
+estimates for the CSS surface code over all single-qubit Pauli channels using approximate maximum-likelihood decoding. The
+estimates closely match the hashing bound (not shown) for Y -biased noise but fall well below for X-biased (and, by code
+symmetry,Z-biased) noise. All estimates use code distances d∈{ 13, 17, 21, 25}.
+fore see that the high-performance decoders presented in
+Refs. [6–8] are readily adapted for the XZZX code in this
+limit.
+III. OPTIMAL THRESHOLDS
+The XZZX code has exceptional thresholds for all
+single-qubit Pauli noise channels. We demonstrate this
+using an eﬃcient maximum-likelihood decoder [35]. This
+decoder gives the optimal threshold attainable with the
+code for any given noise model. Remarkably, we ﬁnd that
+the XZZX surface code achieves threshold error rates that
+closely match the zero-rate hashing bound for all single-
+qubit Pauli noise channels, and appears to exceed this
+bound in some regimes.
+We deﬁne the general single-qubit Pauli noise channel
+E(ρ) = (1−p)ρ +p(rXXρX +rYYρY +rZZρZ ) (1)
+where p is the probability of any error on a single
+qubit and the channel is parameterized by the stochas-
+tic vector r = (rX,rY,rZ), where rX,rY,rZ ≥ 0 and
+rX +rY +rZ = 1. The surface of all possible values
+of r parametrize an equilateral triangle, where the cen-
+tre point (1 /3, 1/3, 1/3) corresponds to standard depo-
+larizing noise, and vertices (1 , 0, 0), (0, 1, 0) and (0, 0, 1)
+correspond to pure X, Y and Z noise, respectively. We
+also deﬁne biased noise channels, which are restrictions
+of this general noise channel, parameterized by the scalar
+η; for example, in the case of Z-biased noise, we deﬁne
+η = rZ/(rX +rY ) where rX = rY , such that η = 0.5
+corresponds to standard depolarizing noise and the limit
+η→∞ corresponds to pure Z noise.
+We estimate the threshold error rate as a function of
+r for both the XZZX surface code with boundaries and
+the CSS surface code with boundaries, see Fig. 13, using
+a tensor network decoder that gives a controlled approx-
+imation to the maximum-likelihood decoder [6, 7, 35].
+Our results are summarized in Fig. 2. We ﬁnd that the
+thresholds of the XZZX surface code closely match or
+slightly exceed (as discussed below), the zero-rate hash-
+ing bound for all investigated values of r, with a global
+minimum pc = 18.7(1)% at standard depolarizing noise
+and peaks pc ∼ 50% at pure X, Y and Z noise. We
+ﬁnd that the thresholds of the CSS surface code closely
+match the hashing bound for Y -biased noise, where Y
+errors dominate, consistent with prior work [6, 7], as well
+as for channels where rY < rX = rZ such that X and
+Z errors dominate but are balanced. In contrast to the
+XZZX surface code, we ﬁnd that the thresholds of the
+CSS surface code fall well below the hashing bound as
+either X or Z errors dominate with a global minimum
+pc = 10.8(1)% at pure X and pure Z noise.
+In some cases, our estimates of XZZX surface code
+thresholds appear to exceed the zero-rate hashing bound;
+we now investigate this further. For the values of r in-
+vestigated for Fig. 2, the mean diﬀerence between our es-
+timates and the hashing bound is pc−ph.b. =−0.1(3)%
+and our estimates never fall more than 1 .1% below the
+hashing bound. However, for high bias, η ≥ 100, we
+observe an asymmetry between Y -biased noise and X-
+biased (or, by code symmetry, Z-biased) noise. In par-
+ticular, with observe that, while threshold estimates with
+Y -biased noise match the hashing bound to within error
+bars, threshold estimates with highly-biasedX-noise, sig-
+niﬁcantly exceed the hashing bound. Our results with
+X-biased noise are summarized in Fig. 3, where, since
+
+=== PDF PAGE 4 ===
+4
+100 101 102 103
+0.1
+0.2
+0.3
+0.4
+0.5
+Bias:η
+Threshold error rate:pc CSS
+XZZX
+X
+0.00
+0.02
+0.04
+0.06 η= 30
+pc −ph.b.
+13,17,21,2517,21,25,2921,25,29,3325,29,33,3729,33,37,4133,37,41,4537,41,45,4941,45,49,5345,49,53,5749,53,57,6153,57,61,6557,61,65,6961,65,69,7365,69,73,77
+0.00
+0.02
+0.04
+0.06 η= 100
+Codes
+pc −ph.b.
+0.00
+0.02
+0.04
+0.06 η= 300
+pc −ph.b.
+13,17,21,2517,21,25,2921,25,29,3325,29,33,3729,33,37,4133,37,41,4537,41,45,4941,45,49,5345,49,53,5749,53,57,6153,57,61,6557,61,65,6961,65,69,7365,69,73,77
+0.00
+0.02
+0.04
+0.06 η= 1000
+Codes
+pc −ph.b.
+FIG. 3. (Left) Threshold estimates, pc, for the XZZX and CSS surface codes as a function of bias, η, with X-biased (or, by
+code symmetry, Z-biased) noise using approximate maximum-likelihood decoding. Error bars indicate one standard deviation
+relative to the ﬁtting procedure. The gray line is the hashing bound for the associated Pauli noise channel. For high bias,
+η≥ 30, the estimates for the XZZX surface code exceed the hashing bound. To investigate this surprising eﬀect, estimates for
+the XZZX surface code with 30 ≤ η≤ 1000 use large code distances, d∈{ 65, 69, 73, 77}; other estimates use code distances
+d∈{ 13, 17, 21, 25} (as used for Fig. 2). (Center and right) Diﬀerence between threshold estimates for the XZZX surface code
+withX-biased noise and the hashing bound, pc−ph.b., as a function of code distances used in the estimation. Data is shown for
+biasesη = 30, 100, 300, 1000. Error bars indicate one standard deviation relative to the ﬁtting procedure. Threshold estimates
+exceed the hashing bound in all cases. The gap reduces, in most cases, with sets of greater code distance, but it persists and
+appears to stabilize for η = 30, 100 and 1000.
+thresholds are deﬁned in the limit of inﬁnite code dis-
+tance, we provide estimates with sets of increasing code
+distance for η≥ 30. Although the gap typically reduces,
+it appears to stabilize forη = 30, 100, 1000, where we ﬁnd
+pc−ph.b. = 1.2(2)%, 1.6(3)%, 3.7(3)%, respectively, with
+the largest code distances; for η = 300, the gap exceeds
+3% but has clearly not yet stabilized. This evidence for
+exceeding the hashing bound appears to be robust, but
+warrants further study.
+IV. A F AUL T-TOLERANT DECODER
+Having demonstrated the remarkable code capacity
+thresholds of the XZZX code, we now demonstrate how
+to translate these high thresholds into practice using a
+symmetry-adapted matching decoder [8]. With this de-
+coder, we calculate record-breaking fault-tolerant thresh-
+olds, which allow for noisy measurements, with respect
+to a biased phenomenological noise model. We also use a
+matching decoder to demonstrate the advantages of the
+XZZX code at low error rates.
+The minimum-weight perfect matching algorithm
+takes a graph with weighted edges and returns a per-
+fect matching using the edges of the input graph such
+that the sum of the weights of the edges is minimal. To
+employ this algorithm for decoding the XZZX code we
+prepare an input graph by assigning each defect a vertex
+of a complete graph, and we weight each edge accord-
+ing to the logarithm of the probability that the error
+model introduced the pair of defects connected by the
+edge. Our decoder is discussed in detail in Sec. C. The
+edges returned in the perfect matching correspond to the
+defects that should be paired by the correction.
+We test the performance of the decoder using two noise
+models: the biased noise model parameterized by η as
+we deﬁned above, and a phenomenological biased noise
+model where qubits experience high-rate Pauli-Z errors
+with probability ph.r. per unit time, and low-rate Pauli
+X or Pauli-Y errors each occurring with probability pl.r.
+per unit time. The noise bias with this phenomenological
+noise model is deﬁned as η =ph.r./(2pl.r.). One time unit
+is the time it takes to make a stabilizer measurement, and
+we assume we can measure all the stabilizers in parallel.
+Each stabilizer measurement returns the incorrect out-
+come with probability q =ph.r. +pl.r.. To leading order,
+this measurement error rate is consistent with a mea-
+surement circuit where an ancilla is prepared in the state
+|+⟩ and subsequently entangled to the qubits of Sf with
+bias preserving controlled-not and controlled-phase gates
+before its measurement in the Pauli-X basis. With such
+a circuit, Pauli-Y and Pauli-Z errors on the ancilla will
+alter the measurement outcome. At η = 1/2 this noise
+model interpolates to a conventional noise model where
+q = 2p/3 [36]. We also remark that hook errors [36, 37]
+are low-rate events with this circuit as the control qubit
+of entangling gates commutes with the high-rate Pauli-Z
+errors.
+Using this phenomenological noise model we repeat
+measurements overd units of time, and we deﬁne a defect
+as the parity of the outcomes of two sequential measure-
+ments of each stabilizer. This allows us to adapt the
+minimum-weight perfect-matching algorithm for decod-
+ing using the prescription given above.
+Intuitively, the decoder will preferentially pair defects
+along the diagonals associated with the dominant er-
+ror. In the limit of inﬁnite bias, the decoder eﬀectively
+corrects the Pauli-Z errors as d independent repetition
+
+=== PDF PAGE 5 ===
+5
+100 101 102 103
+0.1
+0.2
+0.3
+0.4
+0.5
+Bias: η
+Threshold error rate: pc
+Tailored
+XZZX
+∞
+FIG. 4. Threshold values for square L×L lattices with
+periodic boundary conditions using MWPM for the XZZX
+(blue) and X/Y tailored (red) [8] surface code architectures,
+as a function of noise bias η. The zero rate hashing bound
+is shown in grey. All thresholds are calculated with N =
+30000 Monte Carlo simulations for lattice dimensions L =
+24, 28, 32, 36, 40 forη = 0.5, 1, 3, 10, 30, 100, 300, 1000 andL =
+48, 56, 64, 72, 80 for η =∞.
+codes for the ideal measurement case and d decoupled
+copies of the two-dimensional surface code for the inﬁ-
+nite bias phenomenological noise model. In both the case
+of phenomenological noise, and the case with ideal mea-
+surements, when η = 1/2 the minimum-weight perfect-
+matching decoder is equivalent to the conventional de-
+coder presented throughout the literature, e.g. [12, 38].
+We use these observations to check that our decoder be-
+haves correctly in these limits.
+In Figs. 4 and 5 we present our thresholds for the ide-
+alized biased noise model withq = 0, and phenomenolog-
+ical biased noise model with q =ph.r. +pl.r., respectively,
+as a function of η. We ﬁnd for the ideal case, our de-
+coder closely follows the hashing bound at high bias. We
+observe our data drops below the hashing bound at very
+high bias, but we attribute this to a small size eﬀect since
+the success of the decoder depends on eﬀectively decod-
+ing∼d independent copies of the repetition code. In the
+fault tolerant case, we ﬁnd our decoder tends towards a
+threshold of ∼ 10%. In both cases we ﬁnd our decoder
+signiﬁcantly surpasses the thresholds found using the de-
+coder presented in Ref. [8], shown by red data points.
+V. SUB-THRESHOLD SCALING
+We now show that the exceptional error thresholds of
+the XZZX surface code are accompanied by signiﬁcant
+advantages in terms of overheads for fault-tolerant quan-
+tum computing. Speciﬁcally, we evaluate the logical fail-
+ure rate that a tailored code can achieve below threshold
+100 101 102 1030.02
+0.03
+0.04
+0.05
+0.06
+0.07
+0.08
+0.09
+0.10
+Bias: η
+Threshold error rate: pc
+Tailored
+XZZX
+∞
+FIG. 5. Fault tolerant threshold values for square L×L
+lattices with periodic boundary conditions using MWPM for
+the XZZX (blue) and Tailored (red) [8] surface code archi-
+tectures. The noise model used has the measurement errors
+occurring at a rate of q = ph.r. +pl.r.. The solid curve de-
+picts the theoretical optimal performance of a 2-sector de-
+coder which deals with bit-ﬂip noise and dephasing noise in-
+dependently. η quantiﬁes the bias towards dephasing noise.
+The blue and red points are calculated with N=30000 Monte
+Carlo simulations for lattice dimensions L = 12, 14, 16, 18, 20
+forη = 0.5, 1, 3, 10, 30, 100, 300, 1000 andL = 24, 28, 32, 36, 40
+for η =∞.
+for a biased noise model with both high- and low-rate
+errors. In Ref. [7] it was demonstrated that at inﬁnite
+bias a code that can tolerate ∼ d2 dephasing errors has
+a logical failure rate scaling like O(pd2/2
+h.r. ). In practice, at
+ﬁnite bias, other mechanisms can cause logical failures.
+For instance, low-rate errors can align along a path of
+length∼d. In general, the common failure mechanisms
+for this code will depend on the system parameters. We
+use the XZZX code with periodic boundary conditions
+and dimensionality d× (d + 1) in the ideal measurement
+setting to identify two regimes where the two aforemen-
+tioned failure mechanisms are dominant.
+Let us examine the diﬀerent failure mechanisms for
+the XZZX code. Like the coprime codes in Ref. [7], the
+single logical qubit of this code has a least-weight logical
+operator of Pauli-Z terms supported onO(d2) qubits. We
+therefore expect a failure due to only high-rate errors to
+occur with probability
+P h.r.∼Nh.r.p(d2+1)/2
+h.r. , (2)
+at lowp whereNh.r.∼ 2d2
+is the number of conﬁgurations
+that can cause a failure. To identify two distinct regimes,
+we compare this probability to the probability of a logical
+failure due to a string ofd/4 high rate errors andd/4 low
+rate errors. We thus consider the ansatz
+P l.r.∼Nl.r.(1−p)n−d/2(pz +py)d/4(px +py)d/4 (3)
+
+=== PDF PAGE 6 ===
+6
+5 7 9 11 13
+10−3
+10−2
+Code distance: d
+Logical failure rate: P
+19 21 23 25
+−0.25
+−0.2
+−0.15
+−0.1
+p: (%)
+Line gradients
+FIG. 6. Depiction of quadratic scaling achieved with co-
+prime d× (d + 1) codes for d = 5, 7, 9, 11 and 13 at bias
+η = 300. The data was collected using N = 500000 it-
+erations of MC simulations. The physical error rates used
+are, from the bottom to the top curves in the main plot,
+p = 0.19, 0.20, 0.21, 0.22, 0.23, 0.24 and 0.25. The solid lines
+are a ﬁt of the data to P =AeBd2
+and the dashed lines a ﬁt
+to P =AeBd. The quadratic trend observed is supported by
+the gradients of the best ﬁt dashed lines, showed on the inset
+plot. The best-ﬁt line to these gradients, as calculated using
+least-squares, has gradient 0 .643 exceeding the required 0 .5
+consistent with O(d) scaling for this MWPM decoder.
+where Nl.r. ∼ 2γd is an entropy term with 3 /2 <∼ γ <∼
+2 [39]. We justify this ansatz in the Methods.
+We ﬁrst look at the regime where P h.r.≫P l.r. where
+we expect that the logical failure rate will decay super
+exponentially in code distance d. Fig. 6 depicts the data
+for η = 300 with lattices of distance d = 5, 7, 9, 11, 13
+and physical error rate 0.19≤p≤ 0.25. Our data shows
+good agreement with the ﬁtting depicted by solid lines
+that follow a quadratic scaling Ansatz whereP =AeBd2
+.
+We also compare our data to a ﬁt linear scaling where
+P =AeBd. This ﬁtting shows that our data is inconsis-
+tent with a model where ∼ d high-rate errors can cause
+a logical failure. Indeed, the inset shows a plot of the
+gradient of each ﬁtting shown as a function of p. Fitting
+to these data points we ﬁnd a gradient ∼ 0.67≫ 1/2.
+We would expect a gradient of 1/2 for a model where the
+logical failure rate decayed like P∼pd/2
+h.r. whered/2 high
+rate errors might cause the decoder to fail.
+At smallp and modestη whereP l.r.≫P h.r. we expect
+the dominant source of failure to be an error of weight
+O(d). In Fig. 7 we show the above ansatz ﬁt to the
+data with γ ∼ 1.8. The data were collected using the
+splitting method and metropolis sampling algorithm pre-
+sented in [40, 41]. This remarkable correspondence to our
+data shows that our decoder is capable of decoding up
+to∼ d/4 low rate errors, even with a large fraction of
+high-rate errors will commonly occur on the lattice.
+10−4 10−3
+10−27
+10−22
+10−17
+10−12
+10−7
+Physical error rate: p
+Logical error rate: P
+d=5
+d=7
+d=9
+d=11
+d=13
+d=15
+FIG. 7. The data (crosses) was collected at bias η = 3 and
+coprime d× (d + 1) code dimensions of d = 5, 7, 9, 11, 13 and
+15 using the metropolis algorithm and splitting method pre-
+sented in [40, 41] as Monte Carlo is intractable at this low
+physical error rate. The solid lines represent the prediction
+of Eqn. 3. As p decreases the agreement between data and
+ansatz approaches unity.
+(a)
+(b)
+FIG. 8. Fault-tolerant quantum computation by generalised
+lattice surgery [29, 47]. Pairs of qubits are encoded on surface
+codes with six twist defects lying on their boundaries. This
+layout allows a large ancillary surface code, shown at the bot-
+tom of the ﬁgure, from performing arbitrary multi-qubit Pauli
+matrices between the encoded qubits via code deformation.
+Here we will focus on the initialisation of a surface code, (a),
+and a single code deformation procedure, (b), to show a single
+lattice surgery procedure.
+VI. LOW-OVERHEAD F AUL T-TOLERANT
+QUANTUM COMPUT A TION
+Let us now consider how to perform fault-tolerant
+quantum computation using code deformations [42–44]
+with surface codes tailored to deal with bias. The idea
+is to perform stabilizer measurements that project the
+surface code onto a diﬀerent encoding where the logical
+information has been displaced over the lattice of qubits.
+These deformations can be used to perform Cliﬀord oper-
+ations with the surface code. Together with the noisy ini-
+tialisation of magic states to perform magic state distilla-
+tion [45], Cliﬀord gates are suﬃcient for universal quan-
+tum computation. Although initialisation circuits have
+been proposed to exploit noise bias [46], here we focus on
+fault-tolerant Cliﬀord operations and the fault-tolerant
+preparation of ancilla qubits in the computational basis.
+Many approaches for code deformations have been pro-
+posed that, in principle, could be implemented in a way
+
+=== PDF PAGE 7 ===
+7
+to take advantage of bias using a tailored surface code.
+These approaches include braiding punctures [42–44, 48],
+lattice surgery [27, 47, 49] and computation with twist
+defects [28, 50, 51]. Moreover, all of these methods can
+be be uniﬁed [28]. Here let us focus on a single exam-
+ple proposed by Litinski in Refs. [29, 47]; see Fig. 8 and
+its caption for a brief review. Because the general meth-
+ods are well known, we will provide only a high-level
+overview. We leave open the interesting question of im-
+plementing these ideas and concretely estimating thresh-
+olds for fault-tolerant quantum computation using this
+scheme.
+Our layout for fault-tolerant quantum computation re-
+quires the fault-tolerant initialization of a hexon surface
+code, i.e., a surface code with six twist defects at its
+boundaries; see Fig. 9. Note that the lattice geometry
+has been rotated; see a stabilizer in Fig. 9(a). We will
+justify this choice shortly. We can fault-tolerantly ini-
+tialize this code in eigenstates of the computational basis
+by ﬁrst preparing its qubits in a product state before we
+begin measuring its stabilizers. We must check that we
+correct the errors that may occur before we begin mea-
+suring the XZZX surface code stabilizers.
+We initialize the qubits of the hexon surface code in
+eigenstates of Pauli-X and Pauli-Z. In Fig. 9 we show
+qubits initialized in the +1 eigenvalue eigenstate of Pauli-
+X (Pauli-Z) in red (blue). This choice initializes the
+system in the +1 eigenvalue eigenstate of the stabiliz-
+ers on shaded plaquettes, e.g. Fig. 9(a), as well as the +1
+eigenvalue eigenstate of the two logical Pauli-Z operators,
+e.g., 9(b). Measuring the stabilizers of the XZZX surface
+code will project the system onto an eigenstate of the
+stabilizers of the unshaded plaquettes. We remark that
+the reverse operation, where we measure qubits of the
+XZZX surface code in this same product basis, will read
+the code out while respecting the properties required to
+be robust to the noise bias.
+Let us check that this method of initialization is ro-
+bust to our biased noise model. We must be able to cor-
+X
+Z
+Z
+X
+X
+Z Z Z Z Z
+X
+Z Z
+XdX
+dZ
+(a)
+(b)
+(d)
+(c)
+FIG. 9. Initialising a hexon surface code. Red(blue) ver-
+tices are initialised in Pauli-X(Pauli-Z) basis. The system is
+prepared in an eigenstate of shaded plaquettes (a) and the
+logical Pauli-Z operators, (b). This initialisation strategy is
+robust to biased noise. Pauli-Z errors that can occur on red
+vertices are detected by the shaded plaquettes (c). We can
+also detect low-rate Pauli-X errors on blue vertices with using
+this method of initialisation, see (d).
+rect high-rate dephasing errors on the red qubits. On the
+other hand, Pauli-Z errors act trivially on the blue qubits
+in eigenstates of the Pauli-Z operator during preparation.
+Similarly, we should be weary of low-rate Pauli-X errors
+being introduced to these qubits. Given that the initial
+state is already in an eigenstate of some of the stabilizers
+of the XZZX-surface code, we can detect Pauli-Z errors
+on the red qubits, see, e.g. 9(c). The shaded plaquettes
+will identify defects due to the Pauli-Z errors. Moreover,
+as we discussed before, strings created by Pauli-Z errors
+align along horizontal lines using the XZZX-surface code.
+We therefore beneﬁt from the advantages of the XZZX
+surface code for dealing with bias errors during initial-
+ization.
+Low rate errors can also be detected on blue qubits,
+as in Fig. 9(d). The bit-ﬂip errors violate the stabilizers
+we initialize when we prepare the initial product state.
+As such we can detect these errors. We note that with
+this lattice geometry, as the low rate error strings align
+along the vertical direction only, we can change the di-
+mensions of the lattice without compromising the perfor-
+mance of the code signiﬁcantly. In practice, we can have
+that dX≪dZ. This choice may have a dramatic eﬀects
+on the resource scaling of large scale quantum computa-
+tion. We will make estimates on the optimal choice of
+dZ/dX later where we discuss small codes [52].
+Lattice surgery amounts to initializing and reading out
+diﬀerent patches of a large surface code lattice to per-
+form fault-tolerant parity measurements between logical
+qubits. As such demonstrating that we can perform ar-
+bitrary lattice surgery operations while preserving the
+protection that the XZZX surface code oﬀers to bias does
+not become more complicated than what we have already
+demonstrated. The one exception is where we perform
+a logical Pauli-Y measurement. In this case, we intro-
+duce a twist to the lattice [50] and, as such, we need to
+reexamine the symmetries of the lattice. We show the
+twist in the centre of Fig. 10 together with its weight-
+ﬁve stabilizer operator. We shade the stabilizers that are
+members of the symmetry with respect to Pauli-Z errors
+in a lighter color. We ﬁnd that the twist introduces a
+branch in the one-dimensional symmetries of the XZZX
+surface code. It should be straightforward to adapt a
+minimum-weight perfect-matching decoder to account for
+this branch. Moreover, we do not expect that a branch
+on a single location on the lattice will have a signiﬁcant
+impact on the performance of the code given that, even
+with a twist on the lattice, the majority of the lattice is
+decoded as a series of one-dimensional repetition codes
+in the inﬁnite bias limit.
+VII. DISCUSSION
+We have shown how fault-tolerant quantum architec-
+tures based on the XZZX surface code yield remarkably
+high memory thresholds and low overhead as compared
+with the conventional surface code approach. Our gener-
+
+=== PDF PAGE 8 ===
+8
+Z
+XX
+Z
+Y
+Z
+XX
+Z
+X
+Z
+Z
+X
+FIG. 10. The hexon surface code fused to the ancillary
+surface code to perform a logical Pauli-Y measurement. The
+lattice surgery procedure introduces a twist in the centre of
+the lattice. We show the symmetry with respect to the Pauli-
+Z errors by lightly colored plaquettes. Again, decoding this
+model in the inﬁnite bias limit is reduced to decoding one-
+dimensional repetition codes, except at the twist where there
+is a single branching point.
+alised fault-tolerant decoder oﬀers these advantages over
+a broad range of biased error models representing what is
+observed in experiments for a variety of physical qubits.
+The code capacity thresholds of the XZZX code match
+the performance of random coding (hashing) theory, sug-
+gesting that this code may be approaching the limits of
+what is possible. In contrast to this expectation, the
+XZZX surface code threshold is numerically observed to
+exceed this hashing bound for certain error models, open-
+ing the enticing possibility that random coding is not the
+limit for practical thresholds. The highest achievable er-
+ror threshold for fault-tolerant quantum computing re-
+mains an open question.
+We emphasize that the full potential of our results lies
+not just in the demonstrated advantages of using this par-
+ticular architecture, but rather the indication that fur-
+ther innovations in codes and architectures may still yield
+signiﬁcant gains in thresholds and overheads. We have
+shown that substantial gains on code capacity thresholds
+can be found when the code and decoder are tailored to
+the relevant noise model. While the standard approach to
+decoding the surface code considers Pauli-X and Pauli-Z
+errors separately, our results demonstrate that this ap-
+proach is sub-optimal except at the exceptional point
+where these error rates are exactly equal and uncorre-
+lated. There is a clear avenue to generalize our methods
+and results to the practical setting involving correlated
+errors arising from more realistic noise models as we per-
+form fault-tolerant logic. We suggest that the theory of
+symmetries [8, 30] may oﬀer a formalism to make progress
+in this direction.
+Because our decoder is based on minimum-weight
+matching, there are no fundamental obstacles to adapt it
+to the more complicated setting of circuit noise [36, 43,
+53]. We expect that the high numerical thresholds we
+observe for phenomenological noise will, when adapted
+to circuit level noise, continue to outperform the con-
+ventional surface code, especially when using gates that
+preserve the structure of the noise [25, 26]. We expect
+X
+Z
+Z
+X ZZXdX
+dZ
+X X
+Z
+X
+Z
+X
+(a)
+(b)
+(c)
+FIG. 11. Some small codes; an error-correcting surface code
+of dimensions 3× 7, a repetition code, which can be regarded
+as a 1× 5 surface code in this family of rectangular surface
+codes. An error detecting surface code with distance 2 for
+only low-rate errors.
+that the largest performance gains will be obtained by
+using information from a fully characterized Pauli noise
+model [54] that goes beyond the single-qubit error models
+considered here.
+Along with high thresholds, the XZZX surface code
+architecture can yield signiﬁcant reductions in the over-
+heads for fault-tolerant quantum computing, through im-
+provements to the sub-threshold scaling of logical error
+rates. It is in this direction that further research into
+tailored codes and decoders may provide the most sig-
+niﬁcant advances, bringing down the astronomical num-
+bers of physical qubits needed for fault-tolerant quantum
+computing. A key future direction of research would
+be to carry these improvements over to codes and ar-
+chitectures that promise improved (even constant) over-
+heads [55, 56]. Recent research on fault-tolerant quantum
+computing using low-density parity check (LDPC) codes
+that generalize concepts from the surface code [57–59]
+provide a natural starting point.
+Given that the XZZX code has the same hardware re-
+quirements as the conventional surface code, it is natural
+to consider realizing it on current generation quantum
+computers. As in Fig. 11, there are several small-scale ex-
+periments that might showcase the beneﬁts of the XZZX
+code. Indeed, the smallest instance of a rotated variant of
+the XZZX code that can take advantage of biased noise is
+a repetition code. We therefore see that this rectangular
+variation of the code may oﬀer us a gentle path for the
+experimental development towards the ﬁrst generation of
+large-scale quantum computers.
+ACKNOWLEDGMENTS
+We are grateful to A. Darmawan, A. Grimsmo and
+S. Puri for discussions, and especially to J. Wootton
+for recommending consideration of the XZZX code for
+biased noise [60]. This work is supported by the Aus-
+tralian Research Council via the Centre of Excellence in
+Engineered Quantum Systems (EQUS) project number
+
+=== PDF PAGE 9 ===
+9
+CE170100009. BJB also received support from the Uni-
+versity of Sydney Fellowship Programme. Access to high-
+performance computing resources was provided by the
+National Computational Infrastructure (NCI Australia),
+an NCRIS enabled capability supported by the Aus-
+tralian Government, and the Sydney Informatics Hub,
+a Core Research Facility of the University of Sydney.
+Appendix A: Threshold estimation
+For the estimation of a threshold error rate pc, we
+use the critical exponent method of Ref. [38]. Accord-
+ing to this method, if we deﬁne a correlation length
+ξ = (p− pc)−ν in terms of physical error rate p and
+some critical exponent ν, then, for suﬃciently large code
+distanced, we expect the logical failure rate f to depend
+only on the dimensionless ratio d/ξ. Consequently, we
+deﬁne a rescaled variable x = (d/ξ)1/ν = (p−pc)d1/ν
+such that the failure rate, expanded as a power series
+in x, is explicitly scale invariant at the critical point pc
+corresponding to x = 0. It is then natural to model the
+failure rate by a truncated Taylor expansion about pc.
+We use a quadratic model, f =A +Bx +Cx 2, and then
+ﬁt to this model to ﬁnd pc,ν and the nuisance parame-
+tersA,B,C . See Ref. [61] for a discussion of the validity
+of this method. Unless otherwise stated, error bars are
+obtained by jackknife resampling, i.e. the standard devi-
+ation in threshold estimates when reapplying the ﬁtting
+method with a single code distance d removed, over all
+simulated code distances d. As a representative illustra-
+tion of this method, we estimate the threshold error rate
+pc of the XZZX surface code under X-biased noise with
+η = 30, assuming perfect measurements in Fig. 12.
+Appendix B: Optimal thresholds methods
+For the simulations in Section III, we use maximum-
+likelihood decoding in order to highlight features of the
+codes independent of any particular heuristic decoding
+algorithm. Maximum-likelihood decoding, which selects
+a correction from the most probable logical coset of error
+conﬁgurations consistent with a given syndrome, is, by
+deﬁnition, optimal. Exact evaluation of the coset prob-
+abilities is, in general, ineﬃcient. An algorithm due to
+Bravyi, Suchara, and Vargo [35] eﬃciently approximates
+maximum-likelihood decoding by mapping coset proba-
+bilities to tensor-network contractions. Contractions are
+approximated by reducing the size of the tensors during
+contraction through Schmidt decomposition and reten-
+tion of only theχ largest Schmidt values. This approach,
+appropriately adapted, has been found to converge well
+with modest values of χ for a range of Pauli noise chan-
+nels and surface code layouts [7, 35]. A full description
+of the tensor network used in our simulations with the
+rotated CSS surface code (see Fig. 13, left) is provided
+in Ref. [7]; adaptation to the XZZX surface code (see
+−0.4 −0.2 0 0.2 0.4
+0.2
+0.3
+0.4
+Rescaled physical error rate: ( p − pc) d1/ν
+Logical failure rate: f
+d = 29
+d = 41
+d = 53
+d = 65
+d = 77
+0.38 0.4 0.42
+0.2
+0.3
+0.4
+p
+f
+FIG. 12. Illustration of the critical exponent method of
+threshold estimation. Here we consider the XZZX surface
+code under X-biased noise with η = 30, assuming perfect
+measurements. We plot logical failure rate f as a function
+of the rescaled physical error rate x = (p− pc)d1/ν for a
+range of code distances d. The solid line is the best ﬁt to the
+model f =A +Bx +Cx 2, which yields pc = 40.4(1)%. The
+inset shows the raw sample means over 60 000 runs for various
+values of physical error rate p, and the dotted gray vertical
+line indicates the zero-rate hashing bound.
+Fig. 13, right) is a straightforward redeﬁnition of tensor
+element values for the uniform stabilizers.
+FIG. 13. (Left) XZZX surface code with boundaries. Qubits
+are on vertices and stabilizers apply uniformly around all
+faces. (Right) CSS surface code with boundaries. Qubits
+are on vertices and X-type (Z-type) stabilizers apply around
+dark (light) faces. In both codes, boundary stabilizers are
+deﬁned by restricting to two qubits.
+Figure 2, which shows threshold values over all single-
+qubit Pauli noise channels for CSS and XZZX surface
+codes, is constructed as follows. Each threshold surface
+is formed using Delaunay triangulation of 211 thresh-
+old values. Since both CSS and XZZX surface codes
+are symmetric in the exchange of Pauli X and Z, 111
+threshold values are estimated for each surface. Sam-
+ple noise channels are distributed radially such that the
+spacing reduces quadratically towards the sides of the tri-
+angle representing all single-qubit Pauli noise channels,
+see Fig. 14. Each threshold is estimated over four code
+distances d∈{ 13, 17, 21, 25}, at least six physical error
+
+=== PDF PAGE 10 ===
+10
+probabilities, and 30 000 simulations per code distance
+and physical error probability. In all simulations a tensor-
+network decoder approximation parameter of χ = 16 is
+used to achieve reasonable convergence over all sampled
+single-qubit Pauli noise channels for the given code sizes.
+X
+Y
+Z
+FIG. 14. Distribution of 211 samples over the surface of all
+single-qubit Pauli noise channels. By code symmetry, thresh-
+olds are estimated for 111 of these samples to construct each
+threshold surface seen in Fig. 2.
+Figure 3, which investigates threshold estimates ex-
+ceeding the hashing bound for the XZZX surface code
+with X-biased noise, is constructed as follows. For bias
+30 ≤ η ≤ 1000, where XZZX threshold estimates ex-
+ceed the hashing bound, we run compute-intensive sim-
+ulations; each threshold is estimated over sets of four
+code distances up to d∈{ 65, 69, 73, 77}, at least ﬁfteen
+physical error probabilities, and 60 000 simulations per
+code distance and physical error probability. Interest-
+ingly, for the XZZX surface code with X-biased noise,
+we ﬁnd the tensor-network decoder converges extremely
+well, as summarized in Fig. 15 for code distance d = 45,
+allowing us to use χ = 8. For η = 30, the shift in logical
+failure rate between χ = 8 and the largest χ shown is
+less than one tenth of a standard deviation over 30 000
+simulations, and for η >30 the convergence is complete.
+All other threshold estimates in Fig. 3, are included for
+context and use the same simulation parameters as de-
+scribed above for Fig. 2.
+Appendix C: The minimum-weight perfect-matching
+decoder
+The technique of decoding by matching defects in the
+syndrome state of a code is generally accepted to be one
+of the leading procedures to achieve eﬃcient quantum
+error correction and one which is readily scalable to the
+fault tolerant regime [5, 12, 30, 38]. An undirected com-
+plete graph is formed with the defects as vertices and with
+edge weights characterised by a distance metric between
+two defects, whose particularities depend on the error
+model in consideration. The grouping of defects is re-
+alised by solving the discrete combinatorial optimisation
+problem of minimum weight perfect matching (MWPM)
+0.5
+(0.189)
+1
+(0.194)
+3
+(0.222)
+10
+(0.278)
+30
+(0.335)
+100
+(0.390)
+300
+(0.428)
+1000
+(0.456)
+0.000
+0.005
+0.010
+0.015
+Bias: η, (Error probability: p)
+fχ −f40
+χ= 8
+χ= 16
+χ= 24
+χ= 32
+χ= 40
+FIG. 15. Tensor-network decoder convergence for the
+45×45 XZZX surface code with X-biased noise, represented
+by shifted logical failure rate fχ−f40, as a function of χ at
+a physical error probability p near the hashing bound for the
+given biasη. Each data point corresponds to 30 000 runs with
+identical errors generated across all χ for a given bias.
+[62, 63]. Two matched defects create a path of physical
+qubits between them through which we apply Pauli gates
+to bring the system back to the code space, from which
+an inference about the logical error state of the system
+can be devised.
+Denote by Li the diagonals that Z creates plaquette
+defects though (gray line in 1) and let L′
+i be the orthog-
+onal diagonals. Note that due to the periodic boundary
+conditions, for an L×L lattice there are L suchLi diag-
+onals.
+First consider the idealised purely dephasing noise
+channelEZ =⟨Zv⟩ on the square L×L rotated surface
+code with periodic boundary conditions from Fig. 1.
+Any error drawn fromEZ respects theLi diagonal sym-
+metries of this code. Indeed, S =∏
+f∈LiSf is a symme-
+try with respect to EZ since it can be shown that it is
+a product of Z operators which trivially commutes with
+any errors drawn from EZ. We turn the standard 2D
+matching problem across the whole surface of the code
+into L 1D matching problems along the diagonals Li.
+We can always match defects along these diagonals per-
+fectly because any errorE∈E Z always produces an even
+number of defects along each of the diagonalsLi. Match-
+ing defects from homogeneous Pauli errors along a single
+diagonal in this periodic structure is topologically equiv-
+alent to matching defects from bit-ﬂip noise on physical
+qubits arranged in a circle, which is the repetition code.
+The parallelized decoding procedure described vastly
+improves the speed of decoding, especially when exploit-
+ing the modern multi-processor classical computational
+environments.
+Next, consider a model of noise biased toward dephas-
+ing, EZ(η) = ⟨Zv,Xv,Yv⟩ where Z errors occur at a
+higher rate, ph.r., than X and Y errors and the latter
+two occur at the same rate, pl.r.. If p is the rate of phys-
+ical errors then
+ph.r. = pη
+η + 1 and pl.r. = p
+2(1 +η),
+where η is the bias of the model. For η = 0.5 we obtain
+
+=== PDF PAGE 11 ===
+11
+X
+X
+X
+XZ
+Z
+Z
+FIG. 16. A highly probable error conﬁguration that will lead
+to a logical failure. The error consists of ∼ d/4 high rate
+errors and∼d/4 low rate errors along the support of a weight
+d logical operator.
+the depolarising noise model, where Z,X and Y errors
+occur at the same rate, and in the limit of η→∞ we
+obtain the purely dephasing noise model EZ.
+To perform MWPM under this noise model we note
+that the nature of high rate Z errors is to extend pla-
+quette defects along the diagonals Li whereas lower rate
+errors extend the plaquette defects along the orthogonal
+diagonals, L′
+i. Hence, we favour matching along the Li
+diagonals and penalise matching along the L′
+i diagonals.
+We decrease the penalisation of L′
+i matching as the rate
+of X and Y errors increase. This is done by giving a
+higher weight,wl.r., to theL′
+i diagonal steps between the
+2 defects and a lower weight, wh.r., to the Li diagonal
+steps between the two defects, as given by [8]:
+wl.r. =− log( pl.r.
+1−p), w h.r. =− log(ph.r.
+1−p) (C1)
+where wh.r.≥ wh.r. with equality if and only if η = 0.5.
+The total weight assigned to a pair of defects u and v
+is therefore: ω(u,v ) = wh.r.H(u,v ) +wl.r.L(u,v ) where
+H(u,v ) and L(u,v ) are the number of steps along Li
+diagonals and L′
+i diagonals respectively which compose
+the path between u and v.
+Once the complete graph is formed with the defects as
+vertices and the edge weights as described above we use
+Blossom V [63] to perform the MWPM sub-routine to ob-
+tain the pairing of defects. For the path between defects
+in each pair we apply Z andX operators to those qubits
+traversed along Li and L′
+i diagonals respectively. This
+matching procedure leaves the code devoid of plaquette
+defects and therefore in the code space from which the
+logical error state of the code is deduced.
+MWPM on the XZZX code naturally extends to the
+fault tolerance regime by repeating stabiliser measure-
+ments over time and stacking the syndrome state of the
+code at each time stamp [12]. This builds a 2 + 1 di-
+mensional structure with the 2D spatial dimension char-
+acterised by the surface of the code and the orthogonal
+time direction.
+A complete graph is formed with the defects in the 2+
+1D structure as vertices and the edge weight between de-
+fectsu andv takes the formωt(u,v ) =ω(u,v )+wtT (u,v )
+where ω(u,v ) is the edge weight in the spatial direction
+5 7 9 11 1310−28
+10−23
+10−18
+10−13
+10−8
+Code distance: d
+Logical error rate: P
+−9 −8 −7
+−3.5
+−3
+−2.5
+log (p/(1 − p))
+Line gradients
+FIG. 17. Plot showing logical failure rate P as a function
+of code distance d for data where η = 3. The physical er-
+ror rates used are, from the bottom to the top curves in the
+main plot, 0 .0001, 0.0002, 0.0005, 0.001 and 0 .002. We esti-
+mate G(p,η ) for each value of p by taking the gradient of
+each line. Low error rate data is collected using the method
+proposed in Refs. [40, 41]. The inset plot shows the gradients
+G(p,η ) as function of log[ p/(1−p)] for η = 3. Values for
+G(p,η ), see Eqn. (D2), are estimated using the linear ﬁttings
+shown in Fig. 17. Gradient of line of best ﬁt to these data
+points is 0.503(4) in agreement with the expected gradient
+1/2.
+between u and v, T (u,v ) is the time diﬀerence between
+the location of u and v and wt =− log
+(
+q
+1−q
+)
+[8], with
+q being the probability of a stabiliser measurement error
+on any one trial. We set q = ph.r. +pl.r. which inter-
+polates to standard MWPM on the surface code for the
+depolarising noise channel (η = 0.5) [38].
+Appendix D: Ansatz at low error rates
+In the main text we proposed a regime at low error
+rates where the most common cause of logical failure is a
+sequence of∼d/4 low-rate and high-rate errors along the
+support of a weight d logical operator, see Fig. 16. We
+model the logical failure rate in this regime with Eqn. (3).
+Here we justify this Ansatz and compare the model with
+numerical data.
+We take the logarithm of Eqn. (3) to obtain
+logP∼n log(1−p) +γd log 2 + (d/2) log
+[ p
+1−p
+]
++ (d/4) log
+[η + 1/2
+(η + 1)2
+]
+. (D1)
+Neglecting the small term n log(1−p) we can express
+the this equation as log P≈G(p,η )d where we have the
+
+=== PDF PAGE 12 ===
+12
+−2.5 −2 −1.5 −1
+0.7
+0.8
+0.9
+1
+1.1
+log
+(
+(η+ 1/2)/ (η+ 1)2)
+I(η)
+grad = 0.22 ± 0.03, γ= 1.81 ± 0.06
+FIG. 18. Plot showing intercepts I(η) shown as a function of
+ν = log[(η+1/2)/(η+1)2]. The intercept function is deﬁned in
+Eqn. D3 and estimated from the intercept of lines such as that
+shown in the inset of Fig. 17. The gradient 0 .22 is consistent
+with a gradient 1/4 is consistent with the Ansatz that predicts
+d/4 low-rate errors typically causing logical errors. Moreover,
+the intercept∼ 1.17≈ 1.7 log 2 is consistent with the entropy
+term we expect with 3/2≤γ≤ 2.
+gradient
+G(p,η ) = 1
+2 log
+[ p
+1−p
+]
++γ log 2 + 1
+4 log
+[η + 1/2
+(η + 1)2
+]
+.
+(D2)
+In Fig. 17 we plot the data shown in the main text in
+Fig. 7 as a function of d to read the gradient G(p,η )
+from the graph. We then plot G(p,η ) as a function of
+β = log[p/(1−p)] in the inset of Fig. 17. The plot reveals
+a gradient∼ 0.5, consistent with the Ansatz model where
+we expect a gradient 1/2.
+Interrogating the data further we ﬁnd good agree-
+ment between our data and the physics we expect in
+this regime. Expressing G(p,η ) = β/2 + I(η) where
+β = log[p/(1−p)] and
+I(η) =γ log 2 + 1
+4 log
+[η + 1/2
+(η + 1)2
+]
+, (D3)
+we ﬁnd a function ofη andγ. We estimateI(η) using the
+intercepts from ﬁgures, such as that the inset of Fig. 17,
+and plot it as a function of log[( η + 1/2)/(η + 1)2]. We
+show this plot in Fig. 18. From this plot we ﬁnd a line
+of best ﬁt with gradient ∼ 0.22, within the error bars of
+1/4. This is consistent with typical error conﬁgurations
+that lead to logical failure with ∼ d/4 low-rate errros.
+Moreover, we ﬁnd an intercept ∼ 1.25≈ 1.8 log 2, which
+is consistent with 3/2≤γ≤ 2, as we expect [39].
+[1] P. W. Shor, in Proceedings of the 37th Annual Symposium
+on Foundations of Computer Science , FOCS ’96 (IEEE
+Computer Society, USA, 1996) p. 56.
+[2] D. Aharonov and M. Ben-Or, in STOC ’97 Proceedings
+of the twenty-ninth annual ACM symposium on Theory
+of computing (1997) p. 176.
+[3] E. Knill, R. Laﬂamme, and W. Zurek, quant-ph/9610011
+(1996).
+[4] A. Y. Kitaev, Russian Math. Surveys 52, 1191 (1997).
+[5] A. G. Fowler, M. Mariantoni, J. M. Martinis, and A. N.
+Cleland, Phys. Rev. A 86, 032324 (2012).
+[6] D. K. Tuckett, S. D. Bartlett, and S. T. Flammia, Phys.
+Rev. Lett. 120, 050505 (2018).
+[7] D. K. Tuckett, A. S. Darmawan, C. T. Chubb, S. Bravyi,
+S. D. Bartlett, and S. T. Flammia, Phys. Rev. X 9,
+041031 (2019).
+[8] D. K. Tuckett, S. D. Bartlett, S. T. Flammia, and B. J.
+Brown, Phys. Rev. Lett. 124, 130501 (2020).
+[9] C. Gidney and M. Eker˚ a, How to factor 2048 bit RSA
+integers in 8 hours using 20 million noisy qubits (2019),
+arXiv:1905.09749 [quant-ph].
+[10] A. Y. Kitaev, Ann. Phys. 303, 2 (2003).
+[11] S. B. Bravyi and A. Y. Kitaev, arXiv:quant-ph/9811052
+(1998).
+[12] E. Dennis, A. Kitaev, A. Landahl, and J. Preskill, J.
+Math. Phys. 43, 4452 (2002).
+[13] X.-G. Wen, Phys. Rev. Lett. 90, 016803 (2003).
+[14] M. Li, D. Miller, M. Newman, Y. Wu, and K. R. Brown,
+Physical Review X 9, 021041 (2019), arXiv:1809.01193.
+[15] C. H. Bennett, D. P. DiVincenzo, J. A. Smolin, and
+W. K. Wootters, Physical Review A 54, 3824 (1996),
+arXiv:quant-ph/9604024.
+[16] M. M. Wilde, Quantum Information Theory , 2nd ed.
+(Cambridge University Press, 2017).
+[17] P. W. Shor and J. A. Smolin, Quantum error-correcting
+codes need not completely reveal the error syndrome
+(1996), arXiv:quant-ph/9604006 [quant-ph].
+[18] D. P. DiVincenzo, P. W. Shor, and J. A. Smolin, Phys.
+Rev. A 57, 830 (1998).
+[19] G. Smith and J. A. Smolin, Physical Review Letters 98,
+030501 (2007), arXiv:quant-ph/0604107.
+[20] J. Fern and K. B. Whaley, Physical Review A 78, 062335
+(2008), arXiv:0708.1597.
+[21] J. Bausch and F. Leditzky, Error thresholds for arbitrary
+pauli noise (2019), arXiv:1910.00471.
+[22] R. Lescanne, M. Villiers, T. Peronnin, A. Sarlette,
+M. Delbecq, B. Huard, T. Kontos, M. Mirrahimi,
+and Z. Leghtas, Nature Physics 16, 509 (2020),
+arXiv:1907.11729.
+[23] A. Grimm, N. E. Frattini, S. Puri, S. O. Mund-
+hada, S. Touzard, M. Mirrahimi, S. M. Girvin,
+S. Shankar, and M. H. Devoret, Nature 584, 205 (2020),
+arXiv:1907.12131.
+[24] P. Aliferis and J. Preskill, Phys. Rev. A 78, 052331
+(2008).
+[25] S. Puri, L. St-Jean, J. A. Gross, A. Grimm, N. E. Frat-
+tini, P. S. Iyer, A. Krishna, S. Touzard, L. Jiang, A. Blais,
+S. T. Flammia, and S. M. Girvin, arXiv:1905.00450
+
+=== PDF PAGE 13 ===
+13
+(2019).
+[26] J. Guillaud and M. Mirrahimi, Phys. Rev. X 9, 041053
+(2019).
+[27] C. Horsman, A. G. Fowler, S. Devitt, and R. V. Meter,
+New J. Phys. 14, 123011 (2012).
+[28] B. J. Brown, K. Laubscher, M. S. Kesselring, and J. R.
+Wootton, Phys. Rev. X 7, 021029 (2017).
+[29] D. Litinski, Quantum 3, 128 (2019).
+[30] B. J. Brown and D. J. Williamson, Phys. Rev. Research
+2, 013303 (2020).
+[31] S. B. Bravyi and A. Y. Kitaev, Quantum codes on a
+lattice with boundary (1998), arXiv:quant-ph/9811052.
+[32] A. Kay, Phys. Rev. Lett. 107, 270502 (2011).
+[33] A. R. Calderbank and P. W. Shor, Phys. Rev. A 54, 1098
+(1996).
+[34] A. Steane, Proc. R. Soc. A 452, 2551 (1996).
+[35] S. Bravyi, M. Suchara, and A. Vargo, Phys. Rev. A 90,
+032326 (2014).
+[36] A. M. Stephens, Phys. Rev. A 89, 022321 (2014),
+arXiv:1311.5003.
+[37] A. G. Fowler, D. S. Wang, and L. C. L. Hollenberg,
+Quant. Info. Comput. 11, 0008 (2011).
+[38] C. Wang, J. Harrington, and J. Preskill, Ann. Phys. 303,
+31 (2003).
+[39] M. E. Beverland, B. J. Brown, M. J. Kastoryano, and
+Q. Marolleau, J. Stat. Mech.:Theor. Exp. 2019, 073404
+(2019).
+[40] C. H. Bennett, Journal of Computational Physics 22, 245
+(1976).
+[41] S. Bravyi and A. Vargo, Phys. Rev. A 88, 062308 (2013),
+arXiv:1308.6270.
+[42] R. Raussendorf, J. Harrington, and K. Goyal, Ann. Phys.
+321, 2242 (2006).
+[43] R. Raussendorf and J. Harrington, Phys. Rev. Lett. 98,
+190504 (2007).
+[44] H. Bombin and M. A. Martin-Delgado, J. Phys. A: Math.
+Theor. 42, 095302 (2009).
+[45] S. Bravyi and A. Kitaev, Phys. Rev. A 71, 022316 (2005).
+[46] P. Webster, S. D. Bartlett, and D. Poulin, Phys. Rev. A
+92, 062309 (2015).
+[47] D. Litinski and F. von Oppen, Quantum 2, 62 (2018).
+[48] A. G. Fowler, A. M. Stephens, and P. Groszkowski, Phys.
+Rev. A 80, 052312 (2009).
+[49] T. J. Yoder and I. H. Kim, Quantum 1, 2 (2017).
+[50] H. Bombin, Phys. Rev. Lett. 105, 030403 (2010).
+[51] M. B. Hastings and A. Geller, Quant. Inf. Comp. 15,
+0962 (2015).
+[52] P. Brooks and J. Preskill, Phys. Rev. A 87, 032310
+(2013).
+[53] C. Chamberland, G. Zhu, T. J. Yoder, J. B. Hertzberg,
+and A. W. Cross, Physical Review X 10, 011022 (2020),
+arXiv:1907.09528.
+[54] R. Harper, S. T. Flammia, and J. J. Wallman, Nature
+Physics (2020), arXiv:1907.13022.
+[55] D. Gottesman, arXiv:1310.2984 (2013).
+[56] O. Fawzi, A. Grospellier, and A. Leverrier, arXiv preprint
+arXiv:1808.03821 (2018).
+[57] A. Krishna and D. Poulin, Phys. Rev. Research 2, 023116
+(2020).
+[58] A. Krishna and D. Poulin, Fault-tolerant gates on hy-
+pergraph product codes (2019), arXiv:1909.07424 [quant-
+ph].
+[59] N. P. Breuckmann and V. Londe, Single-shot decoding
+of linear rate ldpc quantum codes with high performance
+(2020), arXiv:2001.03568 [quant-ph].
+[60] J. R. Wootton, scirate.com/arxiv/1708.08474 (2017).
+[61] F. H. E. Watson and S. D. Barrett, New J. Phys. 16,
+093045 (2014), arXiv:1312.5213.
+[62] V. Kolmogorov, Math. Prog. Comp. 1, 43 (2009).
+[63] J. Edmonds, Canad. J. Math. 17, 449 (1965).

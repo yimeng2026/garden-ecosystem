@@ -1,0 +1,260 @@
+{
+  "schema": "dmrg-qec-audit-v1",
+  "date": "2026-11-10",
+  "scope": "DMRG 与量子纠错两份资料文档；只审计，不重跑模型、解码器或硬件实验。",
+  "sources": [
+    {
+      "id": "dmrg_notes",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/14-资料收集-DMRG-Hubbard模型.md",
+      "sha256": "59e6b00f0cb240b9b0d3417f0f7906ae0fb5cf4a9b7cbcf79a8229181147d392",
+      "read_only": true
+    },
+    {
+      "id": "qec_notes",
+      "path": "toe-sylva-audit/papers/room_temp_sc/organized/18-资料收集-量子纠错码进展.md",
+      "sha256": "59e747f55a96fd8d93885455d7ae7c2579acdeff4139e292023f5a723ec3fce2",
+      "read_only": true
+    },
+    {
+      "id": "stripes_pdf",
+      "path": "sources/stripes-2501.15709.pdf",
+      "sha256": "d37490cd24da075fd622ef48bc3f212ce35fa09ec8db8bcd737a7fe4b04e1531",
+      "read_only": true
+    },
+    {
+      "id": "finite_temperature_pdf",
+      "path": "sources/dwave-2211.06322.pdf",
+      "sha256": "e1ce8e1480fcf95156b7fffd23800b2b8dc4d6def9b64afb5835903cca3ae107",
+      "read_only": true
+    },
+    {
+      "id": "extended_hubbard_pdf",
+      "path": "sources/extended-hubbard-2206.03486.pdf",
+      "sha256": "2cbaa6cd2ec3e9b00a61627d23cf3f5e3f5ac022b1cd80d73e495028646a7a55",
+      "read_only": true
+    },
+    {
+      "id": "global_dwave_html",
+      "path": "sources/global-dwave-excerpts.md",
+      "sha256": "3c2a77b1550f35e8a8eb8870150872cdc5e7b80c3ddd1d2799f9f455d3a2daca",
+      "read_only": true
+    },
+    {
+      "id": "google_pdf",
+      "path": "sources/google-2408.13687.pdf",
+      "sha256": "9ba05a64dfec13f5d733e0e22484e8f22db2482dc2a5a0d63e6f0766c9c3d368",
+      "read_only": true
+    },
+    {
+      "id": "xzzx_pdf",
+      "path": "sources/xzzx-surface-code.pdf",
+      "sha256": "918860f120639eb6897faff9d834aa977fbf54f781522276bff17c88c8db0cb7",
+      "read_only": true
+    },
+    {
+      "id": "neutral_atoms_pdf",
+      "path": "sources/neutral-atoms-s41586-023-06927-3.pdf",
+      "sha256": "0b81702eedfd2525eb6ab74fe82f43a7dbc930a219298f1f21c7ee7698afa8e7",
+      "read_only": true
+    }
+  ],
+  "source_lineage": {
+    "research_program_count": 1,
+    "decision": "两份文档属于同一研究纲领的模型证据与跨学科资料层，不是两个独立新理论。"
+  },
+  "directions": [
+    {
+      "id": "dmrg_evidence_ladder",
+      "role": "短程关联、有限温度、有限宽度基态和二维极限分层",
+      "closed": "Qu、Chen 与条纹综述的证据层级和编号映射已核清。",
+      "unfinished": "更宽系统、热力学极限、系综一致性和键维数收敛未闭合。",
+      "next": "复现公开代码数据，分别报告有限温度、基态、有限宽度和外推边界。"
+    },
+    {
+      "id": "extended_model_completion",
+      "role": "近邻吸引、声子候选和系综／键维数对模型结论的影响",
+      "closed": "Peng 四腿 d 波增强与前作一维 p 波通道已分开。",
+      "unfinished": "真实材料吸引强度、声子来源、二维极限和多方法交叉验证。",
+      "next": "以扩展模型为参数化研究对象，不把单个配对通道当完整机制。"
+    },
+    {
+      "id": "qec_benchmark_roles",
+      "role": "噪声模型、解码器、阈值、延迟和硬件证据的同口径基准",
+      "closed": "XZZX、Google 和中性原子数值及码族角色已核实。",
+      "unfinished": "跨解码器比较、码族开销、真实噪声和长期逻辑性能基准未统一。",
+      "next": "按噪声、码、解码器和硬件建立四维证据卡，禁止只比阈值。"
+    },
+    {
+      "id": "cross_domain_governance",
+      "role": "书目、码族、硬件平台与高温超导跨学科假说的血缘治理",
+      "closed": "Chen 时间、Google 首次、中性原子拼接和涡旋越级已定位。",
+      "unfinished": "其余引文未全审，涡旋量子比特和双重容错没有实验链。",
+      "next": "逐条补齐 DOI 与原文定位；跨学科内容按已验证、可行假说和待证定义分层。"
+    }
+  ],
+  "evidence": {
+    "dmrg": {
+      "finite_temperature": {
+        "arxiv": "2211.06322",
+        "max_width": 6,
+        "min_temperature_t_over_j": 0.06,
+        "positive_t_prime_dome": true,
+        "negative_t_prime_weaker": true,
+        "infinite_2d_ground_state_proof": false
+      },
+      "global_ground_state": {
+        "arxiv": "2311.15092",
+        "legs": 8,
+        "uniform_abs_t2_over_t1": 0.15,
+        "pure_tj_dwave": true,
+        "gce_natural_ground_state": true,
+        "code_data_available": true,
+        "thermodynamic_limit_proven": false,
+        "pnas_year": 2025,
+        "document_year": 2024,
+        "code_url": "https://github.com/DongNingSheng/Grand_SQL_tJ/tree/main"
+      }
+    },
+    "stripes": {
+      "arxiv": "2501.15709",
+      "dwave_reference_ids": [
+        43,
+        44
+      ],
+      "cdw_reference_ids": [
+        41,
+        42
+      ],
+      "document_mapping_reversed": true,
+      "energy_difference_t": 0.01,
+      "width8_conflict": true
+    },
+    "extended_hubbard": {
+      "arxiv": "2206.03486",
+      "article": "L201102",
+      "journal": "Physical Review B 107",
+      "legs": 4,
+      "current_dwave_enhancement": true,
+      "current_pwave_result": false,
+      "previous_1d_pwave": true
+    },
+    "qec": {
+      "xzzx": {
+        "depolarizing_threshold": 0.187,
+        "pure_pauli_threshold": 0.5,
+        "decoder": "approximate maximum likelihood",
+        "cross_decoder_threshold_comparison_valid": false
+      },
+      "google": {
+        "arxiv": "2408.13687",
+        "distances": [
+          5,
+          7
+        ],
+        "lambda": 2.14,
+        "lambda_uncertainty": 0.02,
+        "latency_us": 63,
+        "first_below_threshold_claim_supported": false,
+        "prior_surface_code_2023": true
+      },
+      "neutral_atoms": {
+        "year": 2024,
+        "journal": "Nature 626",
+        "logical_48_code": "3D [[8,3,2]]",
+        "distance7_surface_bell_pairs": true,
+        "logical_48_ldpc_distance7": false
+      }
+    },
+    "cross_domain": {
+      "ldpc_universal_overhead_and_decoding": false,
+      "vortex_qubit_experimental_evidence": false,
+      "double_fault_tolerance_proven": false
+    }
+  },
+  "corrections": [
+    {
+      "id": "finite_ground",
+      "severity": "P0",
+      "finding": "有限温度、有限宽度基态和二维极限被混写。",
+      "action": "Qu 与 Chen 分轨；保留 8-leg 结果，不升级为无限二维证明。"
+    },
+    {
+      "id": "stripe_reference_swap",
+      "severity": "P1",
+      "finding": "width-8 的 [41,42] 与 [43,44] 证据编号写反。",
+      "action": "改为 [43,44] 报告 d 波，[41,42] 更接近 CDW；保留冲突和亚稳态边界。"
+    },
+    {
+      "id": "extended_channel",
+      "severity": "P1",
+      "finding": "前作一维 p 波与 Peng 四腿 d 波增强容易混淆。",
+      "action": "引用 PRB 107, L201102，并区分前作和当前模型。"
+    },
+    {
+      "id": "chen_metadata",
+      "severity": "P1",
+      "finding": "Chen 全局相图被标为 2024-12-10，书目元数据不精确。",
+      "action": "使用 PNAS 2025／arXiv:2311.15092 的真实身份，保留其科学结果。"
+    },
+    {
+      "id": "xzzx_scope",
+      "severity": "P0",
+      "finding": "XZZX 阈值被用于跨噪声和解码器的直接比较。",
+      "action": "18.7% 与约 50% 分别绑定噪声模型；不得与电路级约 1% 直接横比。"
+    },
+    {
+      "id": "google_first",
+      "severity": "P1",
+      "finding": "Google 被写成首次低于阈值，忽略已有表面码标度工作。",
+      "action": "保留距离 5/7、Λ=2.14 和 63 μs，改为后续里程碑而非绝对首次。"
+    },
+    {
+      "id": "neutral_conflation",
+      "severity": "P0",
+      "finding": "48 个逻辑量子比特与 distance-7、LDPC、2025 被拼成一项结果。",
+      "action": "改为 2024 年 48 个 3D [[8,3,2]] 逻辑量子比特；d=7 表面码 Bell 对另列。"
+    },
+    {
+      "id": "ldpc_generalization",
+      "severity": "P1",
+      "finding": "LDPC 的更高阈值、O(d) 开销和线性解码被泛化为全码族性质。",
+      "action": "逐码列参数、连接度、解码器和硬件条件，不做统一渐近承诺。"
+    },
+    {
+      "id": "vortex_overreach",
+      "severity": "P0",
+      "finding": "YBCO 涡旋量子比特和双重容错被写成已有技术路线。",
+      "action": "降为待验证假说，先提供相干时间、耦合、读出和实验协议。"
+    }
+  ],
+  "open_boundaries": {
+    "dmrg_2d_limit_proven": false,
+    "qec_threshold_cross_model_comparable": false,
+    "neutral_48_ldpc_d7_verified": false,
+    "vortex_qubit_verified": false,
+    "all_citations_checked": false,
+    "full_repository_audit": false
+  },
+  "figure": {
+    "svg": "dmrg-qec-evidence.svg",
+    "png": "dmrg-qec-evidence.png",
+    "labels": [
+      "8-leg",
+      "18.7%",
+      "63 μs",
+      "[[8,3,2]]",
+      "distance-7 LDPC"
+    ],
+    "caption": "图 1　模型证据与硬件证据必须分层",
+    "insert_after": "证据角色表",
+    "insert_before": "结果解释",
+    "success_percentage_plotted": false
+  },
+  "verification_scope": {
+    "source_documents_modified": false,
+    "dmrg_or_tensor_network_rerun": false,
+    "decoder_or_hardware_rerun": false,
+    "all_citations_checked": false,
+    "full_repository_audit": false
+  }
+}

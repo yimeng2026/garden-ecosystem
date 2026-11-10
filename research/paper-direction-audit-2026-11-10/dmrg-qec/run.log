@@ -27,3 +27,50 @@ Chen arXiv PDF 一次连接失败、PNAS PDF 一次 403，随后成功读取 arX
 退出码：1
 关键输出：setUpClass ERROR；FileNotFoundError: dmrg-qec/review.json；Ran 0 tests；FAILED (errors=1)。
 判定：符合预期 RED，唯一证据对象尚未生成；零测试发现保护生效。
+
+[source-test-fixture-red-and-correction]
+首次 verify_primary_sources.py：退出码 1；8 项中 6 项通过。
+两处失败均为 PDF 空白符夹具：条纹 10^-2t 的换行，中性原子 d=7 的 Unicode 窄空格。
+仅对测试副本做空白归一化，原始 PDF/TXT 不改；修正后来源复核：退出码 0；Ran 8 tests；OK。
+
+[evidence-build-and-contract-status]
+build_review.py：退出码 0；sources=9；directions=4；corrections=9；chen_legs=8；xzzx_depolarizing=0.187；google_lambda=2.14；neutral_48_code=3D [[8,3,2]]。
+主合同：退出码 1；Ran 8 tests；7 项通过，仅 REVIEW.docx 缺失。
+dmrg-qec-evidence.png 已读取检查：Qu/Chen、Google/中性原子分层清晰，无文字裁切；不含成功率或验证百分比。
+
+[native-word-build]
+check-docx：退出码 0；Materializing vendored docx 9.7.1；FOUND docx。
+docx.py build：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+主合同：退出码 0；Ran 8 tests；OK。
+来源复核：退出码 0；Ran 8 tests；OK。
+
+[visual-qa-initial-and-layout-correction]
+初次 doc-k render：退出码 0；5 pages，5 rendered；near-blank pages: none。
+第 5 页只剩最后一句范围说明，不记为理想分页。
+调整：单元格上下边距 40→20，目录同步为 2、2、3、4、4；未删减内容。
+
+[visual-qa-final]
+最终 doc-k render：退出码 0；4 pages，4 rendered；near-blank pages: none。
+contact-sheet.png 已先读，page-01.png 至 page-04.png 已全部逐页读取。
+第 1 页：五条目录与实际分页一致。
+第 2 页：九来源、四方向、DMRG 四层证据、原生分式和脚注 1–2 完整。
+第 3 页：Chen／条纹／Peng 分轨、QEC 表、双面板图和脚注 3–6 完整。
+第 4 页：XZZX／Google／中性原子、九项勘误、六项开放边界、最终说明和脚注 7–9 完整。
+renderer clipped=false（4/4）；w:lvlOverride×1 未被本文编号使用，未观察到对应内容丢失。
+结论限于 doc-k 最终视图，不声称与 Microsoft Word 像素一致。
+
+[pdf-integrity-guard]
+逐份 PdfReader 检查：六份证据 PDF 均 VALID。
+失败残件 xzzx-s41467-021-22274-1.pdf 为 PdfStreamError，已仅删除本次生成的残缺文件；有效 xzzx-surface-code.pdf 保留。
+Chen 的失败 PDF 下载未纳入证据，使用已成功读取的 HTML 摘录。
+
+[final-validation-and-fresh-regression]
+docx.py validate REVIEW.docx：退出码 0；PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)。
+最终 DOCX SHA-256：4869a250cf212b67ad0acb447e02a0b79d9e211967baca8ad18d353048bd7a4b。
+主合同：退出码 0；Ran 8 tests；OK。
+来源复核：退出码 0；Ran 8 tests；OK。
+JSON 解析与哈希：退出码 0；JSON OK: 4 directions, 4 reviewed pages。
+git diff --check：退出码 0；仅 LF/CRLF 提示，无空白错误。
+
+[scope-guard]
+两份原文未修改；未重跑模型、解码器或硬件实验；其余引文未全审；全库审计继续。

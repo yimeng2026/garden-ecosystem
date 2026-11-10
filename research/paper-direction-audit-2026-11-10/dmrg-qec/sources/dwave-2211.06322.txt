@@ -1,0 +1,1538 @@
+=== PDF PAGE 1 ===
+Phase Diagram, d-Wave Superconductivity, and Pseudogap
+of the t-t′-J Model at Finite Temperature
+Dai-Wei Qu,1, 2 Qiaoyi Li,2, 3 Shou-Shu Gong,4, 5 Yang Qi,6, 7, ∗ Wei Li,2, 7, † and Gang Su 1, 2, ‡
+1Kavli Institute for Theoretical Sciences, University of Chinese Academy of Sciences, Beijing 100190, China
+2Institute of Theoretical Physics, Chinese Academy of Sciences, Beijing 100190, China
+3School of Physical Sciences, University of Chinese Academy of Sciences, Beijing 100049, China
+4School of Physical Sciences, Great Bay University, Dongguan 523000, China
+5Great Bay Institute for Advanced Study, Dongguan 523000, China
+6Department of Physics, Fudan University, Shanghai 200433, China
+7Hefei National Laboratory, Hefei 230088, China
+Recently, robust d-wave superconductive (SC) order has been unveiled in the ground state of the 2D t-t′-J
+model — with both nearest-neighbor ( t) and next-nearest-neighbor ( t′) hoppings — by density matrix renor-
+malization group studies. However, there is currently a debate on whether the d-wave SC holds up strong on
+both t′/t > 0 and t′/t < 0 cases for the t-t′-J model, which correspond to the electron- and hole-doped sides
+of the cuprate phase diagram, respectively. Here we exploit state-of-the-art thermal tensor network approach to
+accurately obtain the phase diagram of the t-t′-J model on cylinders with widths up to W = 6 and down to
+low temperature as T /J ≃ 0.06, pushing the boundaries of contemporary finite- T calculations. For t′/t > 0,
+we find a domelike SC regime with a diverging d-wave pairing susceptibility, χSC ∝ 1/T α below a character-
+istic temperature T ∗
+c . Near optimal doping, T ∗
+c reaches its highest value of about 0.15J. Above T ∗
+c yet below
+a higher crossover temperature T ∗, the magnetic susceptibility becomes suppressed, which can be related to
+the onset of pseudogap (PG) behaviors. On the other hand, for t′/t < 0 we find the pairing correlations are
+much weaker, although there exhibits a node-antinode structure in the PG regime as observed in the hole-doped
+cuprates. The thermal tensor network calculations of the t-t′-J model underscore both the similarities and dif-
+ferences in the finite-temperature phase diagram between the fundamental model and cuprates, yielding unique
+insights into their intricate behaviors.
+Introduction.— Understanding unconventional supercon-
+ductive (SC) phase and the enigmatic normal states like those
+in the pseudogap (PG) regime of the cuprate phase diagram
+has become one of the major challenges in modern condensed
+matter physics [1–6]. Theoretically, the two-dimensional (2D)
+Hubbard [7, 8] and t-J models [9, 10] are believed to cap-
+ture the essence of electron correlations [11, 12]. Despite ac-
+tive and intensive studies [13–48], it remains elusive whether
+these fundamental models can reproduce the d-wave SC and
+PG states observed in the phase diagram.
+Recently, great efforts have been devoted to the accu-
+rate calculations of Hubbard and t-J models, significantly
+advancing their understanding. It has been shown that in
+the Hubbard model with only nearest-neighbor (NN) hop-
+ping and a large repulsive U, long-range SC order is ab-
+sent under 1/8 hole doping while a stripe order appears in-
+stead [13, 15, 24, 29, 31, 36, 41]. Lately, by considering the
+next NN hopping t′, large-scale density matrix renormaliza-
+tion group (DMRG) studies revealed suppression of the stripe
+order and the emergence of robustd-wave SC [37–39, 45–48].
+Given the discoveries at zero temperature, it is natural to
+inquire whether the t-t′-J model also contains exotic many-
+electron states at elevated temperatures. There are compelling
+questions to be answered, including whether the supercon-
+ducting ground state expands to a SC phase at finite tempera-
+ture; if yes, what is the characteristic temperature T ∗
+c ? Does
+∗ qiyang@fudan.edu.cn
+† w.li@itp.ac.cn
+‡ gsu@ucas.ac.cn
+this imply the existence of high-temperature SC in the 2D
+limit? Are there exotic normal states akin to the PG states
+present? To address these intriguing questions, an efficient
+and unbiased finite-temperature approach is essential.
+While the finite-temperature Lanczos method is limited
+within small system sizes [49–52] and the quantum Monte
+Carlo approaches [19] suffer from the notorious sign prob-
+lem at finite doping, the thermal tensor network (TN) pro-
+vides a powerful framework to simulate correlated systems
+at large scale, which are witnessing a rapid development in
+recent years [53–70]. In particular, the tangent space ten-
+sor renormalization group ( tanTRG) [71] effectively bridges
+the gap between ground-state and finite-temperature TN cal-
+culations. Akin to DMRG, its computational cost scales as
+O(D3), where D is the bond dimension controlling the com-
+putational accuracy.
+In this work, we study the t-t′-J model on width-4 and -6
+cylinders using the state-of-the-art thermal TN approach [63,
+71, 72]. We have established the doping-temperature phase
+diagram containing both t′/t > 0 and t′/t < 0 cases, and re-
+veal that the d-wave SC states exist in a domelike regime on
+the t′/t > 0 side (electron doping), where the SC suscepti-
+bility χSC exhibits a power-law divergence. The estimated SC
+temperature is as high as T ∗
+c ≃ 0.15J near the optimal dop-
+ing, confirming the robust d-wave SC order observed in the
+ground state, which indeed corresponds to high-temperature
+SC. Above the SC phase, we find the magnetic suscepti-
+bility exhibits a maximum at around T ∗ that represents the
+crossover temperature between the PG and high-temperature
+(HT) regimes. T ∗ decreases with increasing the doping level,
+resembling the temperature scale of the PG regime observed
+arXiv:2211.06322v4  [cond-mat.str-el]  30 Nov 2024
+
+=== PDF PAGE 2 ===
+2
+in the doped cuprates [73–75]. On the other hand, on the
+t′/t < 0 side (hole doping) we find vanishingly small pair-
+ing correlation. Nevertheless, calculations of the Matsubara
+Green’s function unveil node-antinode structures in the Fermi
+surface within the PG regime, evident on both t′/t > 0 and
+t′/t < 0 sides. Besides, the antiferromagnetism (AFM) and
+charge density wave (CDW) instabilities are also discussed.
+Our results reveal a domelike d-wave SC phase with high T ∗
+c
+in a basic t-t′-J model, clarifying key aspects of its finite-
+temperature phase diagram and underscoring both the simi-
+larities and distinctions with cuprate superconductors.
+Model and methods.— The Hamiltonian of the square-
+lattice t-J model reads
+H = −
+X
+i,j,σ
+tij(c†
+iσcjσ+H.c.)+
+X
+i,j
+Jij(Si·Sj −1
+4 ninj), (1)
+where c†
+iσ (ciσ) is the electron creation (annihilation) opera-
+tor with spin σ =↑, ↓, Si denotes the spin-1/2 operator, and
+ni = ni↑ + ni↓ is the particle number operator. The dou-
+ble occupancy in the local Hilbert space is projected out. We
+consider the NN hopping t, the next-nearest-neighbor (NNN)
+hopping t′, and also the NNN J ′ as J/J ′ = ( t/t′)2. J ≡ 1
+is set as the energy scale, and the NN hopping is fixed as
+t/J = 3 (implying U/t = 12 for the original Hubbard
+model). The implementation of U(1) charge× SU(2)spin sym-
+metry with QSpace [76–78] significantly enhances the calcu-
+lation efficiency.
+The geometries explored include width-4 cylinders (e.g.,
+4 × 30 with width W = 4 and length L = 30 ), and width-
+6 systems (e.g., 6 × 18 cylinder and 6 × 6 open square). On
+long cylinders, the SC state takes on a form of a Luther-Emery
+liquid with both quasi-long-range CDW and d-wave SC cor-
+relations, where the spin and single-particle excitations are
+gapped [32–35, 79–82]. Below, we consider the two cases
+of t′/t = ±0.17 [with J ′/J = ( t′/t)2 ≈ 0.03] and explore
+the corresponding phase diagrams.
+In the thermal TN simulations, we take the grand canoni-
+cal ensemble with a chemical potential term −µ P
+i ni con-
+trolling the hole doping. We retain U(1) charge× SU(2)spin
+multiplets for the width-4 (up to D∗ = 4000 multiplets,
+about 12, 000 individual states) and width-6 systems (up to
+D∗ = 6000 multiplets, about 21, 000 states), and obtain well
+converged results [83]. For computing the magnetic (SC pair-
+ing) susceptibilities, a small magnetic (pairing) field is ap-
+plied, where the U(1) charge× U(1)spin [Z2,charge × SU(2)spin]
+symmetry is exploited. We have also conducted DMRG calcu-
+lations as references in the zero-temperature limit, by retain-
+ing 4096 U(1)charge× SU(2)spin multiplets (about 11, 000 indi-
+vidual states), where the small truncation error of ϵ ≲ 10−6
+ensures high accuracy.
+Doping-temperature phase diagram.— We first demon-
+strate our main findings for t′/t > 0 in the phase diagram
+Fig. 1(a), where δ = (1 − n) measures the hole doping
+(with n the electron density). We characterize SC by comput-
+ing the pairing correlation Φαβ(r) = ⟨∆†
+α(r0)∆β(r0 + r)⟩
+with ∆α(r) = 1√
+2(cr,↓cr+α,↑ − cr,↑cr+α,↓) being the (sin-
+glet) pairing field operator ( α is the unit vector ˆx or ˆy). In
+0.2 0.1 0 0.1 0.2
+10-1
+100T/J
+5
+6
+7
+8
+9
+T*c
+0
+1
+2
+3
+4
+5
+0
+0.02
+0.04
+0.06
+×10-4
+δ
+PG PG
+HT
+T*
+HT
+(a) t’/t = 0.17 t’/t = -0.17(b)
+SC CDW
+AFM
+(c)
+ 0.085
+-0.085
+t
+t ’
+J ’
+J
+FIG. 1. Finite-temperature phase diagram of the t-t′-J model for
+(a) t′/t = 0 .17 and (b) t′/t = −0.17, on the width-6 cylinder.
+The red contour shows Φyy(r) values averaged over r = 3-5 along
+the cylinder, which forms a domelike regime with strong SC fluctu-
+ations. The dotted dashed line denotes T ∗
+c determined from pairing
+susceptibility [cf. Fig. 2(a)]. In (b), the pairing strength is negli-
+gibly small for t′/t = −0.17. The blue contour illustrates AFM
+spin structure S(π, π), and the purple CDW regime emphasizes the
+electron-density peak max (ρk). The green dashed line indicates the
+crossover T ∗ from the HT to PG regimes, marked by a suppression
+in magnetic susceptibility χm. The insets display the spectral den-
+sity on the Fermi surface for both t′/t = 0.17 and −0.17 in the PG
+regime (cf., Fig. 4). (c) illustrates the d-wave pairing on a 6 × 18
+cylinder at T /J = 1 /14, for t′/t = 0 .17 and doping δ ≃ 0.1.
+Bond thickness and color denote pairing strength and sign, while cir-
+cle size indicates hole density. The inset depicts the t-t′-J model,
+with empty circles representing holes and red (blue) circles indicat-
+ing spin-up (spin-down) electrons.
+Fig. 1(a), we display the color contour of the pairing correla-
+tions Φyy, where a domelike regime extending from the SC
+ground state is identified. The pronounced SC fluctuations
+within this domelike regime support the robust SC order re-
+ported in previous DMRG studies [37–39, 45]. As shown in
+Fig. 2(a), there exists a characteristic SC temperature scale
+T ∗
+c ∼ 0.15J (i.e., ∼ 0.05t), below which the pairing suscep-
+tibility χSC(T ) falls into an algebraic divergence versus T .
+Moreover, we compute the singlet-pairing density matrix
+ρS(ri, α|rj, β) = ⟨∆†
+α(ri)∆β(rj)⟩, whose dominant eigen-
+vector can provide insight into the SC order and pairing pat-
+tern [84, 85]. To exclude local contributions, the matrix ele-
+ment is set as 0 if∆†
+α(ri) and ∆β(rj) overlap. In Fig. 1(c) we
+show the dominant eigenvector computed on a 6 × 18 cylin-
+der system with doping δ ≃ 0.1. A robust d-wave pattern
+with uniform charge distribution appears at low temperature
+T /J = 1/14, fully consistent with previous DMRG calcula-
+tions [38].
+Above the SC dome, we find another temperature scale
+T ∗ derived from the magnetic susceptibility χm shown in
+Fig. 2(b). The location of the χm peak naturally defines T ∗,
+and the intermediate-temperature regime between T ∗
+c and T ∗
+
+=== PDF PAGE 3 ===
+3
+0
+1
+2
+3
+CL4x30
+CL6x12
+CL6x18
+CL4x30
+CL6x18
+0
+0.1
+0.2
+10-110-1
+100
+0.2 0.3
+T*/J ~ 0.15c
+α~1.5
+α~3.4
+t’/t=0.17
+t’/t=-0.17
+χSC
+χm
+100
+T/J 100
+T/J10-1 10-1
+CL4x20
+CL4x30
+t’/t=0.17
+CL6x12
+CL6x20
+t’/t=0.17
+t’/t=-0.17
+CL6x12
+T*T*c
+(a) (b)
+FIG. 2. (a) d-wave pairing susceptibility χSC, where the inset shows
+the power-law divergence ofT −α below T ∗
+c ∼ 0.15J. For the W =
+4 data, the chemical potential is fixed at µ = 5 .34 for t′/t = 0 .17
+and µ = 5.45 for t′/t = −0.17; for all W = 6 data we fix µ = 5.1.
+They render doping levels varying from δ ≃ 0.15 to δ ≃ 0.1 as
+temperature lowers. (b) shows the magnetic susceptibilityχm, where
+the hump or shoulder at T ∗ is indicated by the arrow, with doping
+fixed at δ ≃ 0.1. The results are obtained with up to 3000 Z2,charge ×
+SU(2)spin multiplets in (a) and 8000 U(1)charge× U(1)spin states in (b).
+resembles the PG regime observed in the cuprate phase dia-
+gram. Above the PG regime there exists a HT regime, which
+is possibly a metallic phase influenced by many-electron cor-
+relations yet deformed by the no-double-occupancy constraint
+in the t-J model.
+To explore the magnetic correlations, we compute the spin
+structure factor S(k) = 1
+N
+P
+i,j eik·(ri−rj )⟨Si · Sj⟩, where
+N = W L. In Fig. 1(a), we present the contour plot of
+S(π, π), which reveals a region with pronounced AFM corre-
+lations near half filling (see also Supplemental Material [83]).
+At half filling, the t-J model reduces into the Heisenberg
+model, which exhibits a single peak in its specific heat at
+TAFM/J ≃ 0.6 [64]. Below this temperature, AFM correla-
+tions rapidly strengthen. We use this as the criterion for deter-
+mining the AFM regime, adjusting the color limits to ensure
+that the top of the contour aligns withTAFM/J ≃ 0.6, and find
+that the regime rapidly diminishes with increasing doping.
+For the t′/t < 0 case, on the other hand, we have done sim-
+ilar analysis, and the results are summarized in Fig. 1(b). In
+contrast to the t′/t > 0 case, the pairing correlations are sig-
+nificantly weaker, even negligible, different from experimen-
+tal findings in hole-doped cuprates. The AFM regime is more
+constrained than its counterpart in the t′/t > 0 side, which
+aligns with experiments. Although the SC order is found neg-
+ligible for t′/t < 0, we observe prominent CDW modulations
+at low temperature [83]. In Fig. 1(b), we present a contour
+plot of max(ρk), which reflects the CDW modulation (charge
+stripe) with momentum k, i.e., ρk = 1√
+L
+P
+x eikx[n(x) − n].
+Additionally, under certain doping we observe aπ-phase shift
+in the spin correlation, which is indicative of spin stripes [83],
+and these spin stripes precede the formation of charge stripes,
+or CDWs, as temperature decreases.
+Pairing and magnetic susceptibilities.— To understand the
+two temperature scales T ∗
+c and T ∗, we compute the pair-
+ing and magnetic susceptibilities. The d-wave pairing sus-
+ceptibility is defined as χSC = (1 /N) ∂⟨∆tot⟩/∂hp, which
+10-1
+100T/J
+0.06
+0.07
+0.08
+0.09
+-1 0 1
+10-1
+100T/J
+0.06
+0.07
+0.08
+0.09
+10-1 100
+T/J
+0.06
+0.08
+0.1
+0.12
+Sc
+(c)
+W=2
+W=4
+W=6
+W=6
+t'/t=0.17
+t'/t=-0.17
+ky=0
+kx=kcdw
+kx/π
+(a) W=6
+t'/t=0.17
+(b) W=6
+t'/t=-0.17
+δ=1/12
+δ=1/12
+FIG. 3. (a),(b) The contours of charge structure factor Sc(kx, ky =
+0), for t′/t = 0 .17 and −0.17, respectively. The results are calcu-
+lated on W = 6 cylinders. The dashed gray lines indicate the CDW
+wave vectors kCDW = ±6δπ. (c) shows the temperature dependence
+of Sc(kCDW) at the corresponding CDW wave vectors for different
+W and t′/t. The doping is approximately fixed at δ = 1/12 by fine-
+tuning the chemical potential µ.
+is computed by applying a pairing field term −hp∆tot, with
+∆tot = P
+r,α fα[∆α(r) + ∆†
+α(r)]/2 (fˆx = −1 and fˆy = 1)
+and a small field hp = 0.01. In Fig. 2(a), for t′/t = 0.17 we
+find χSC diverges algebraically below T ∗
+c (see the log-log plot
+in the inset). Upon increasing the system width from 4 to 6,
+we find that the χSC results almost coincide on W = 4 and
+6 cylinders for T > T ∗
+c ; for T < T ∗
+c , the W = 6 curve di-
+verges much faster with a significantly larger exponentα. We
+anticipate that χSC for wider systems will continue to coin-
+cide for T > T ∗
+c , and diverges even more rapidly forT ≲ T ∗
+c .
+T ∗
+c thus provides a good upper bound for the trueTc in the 2D
+limit. Moreover, the specific heat results also support this con-
+clusion, where the strong pairing fluctuations contribute to a
+prominent specific heat peak nearT ∗
+c [83]. In contrast, as also
+depicted in Fig. 2(a), only very small pairing susceptibility
+χSC can be observed for t′/t = −0.17, which, in conjunction
+with the weak pairing correlations indicated in Fig. 1(b), sug-
+gests the absence of SC phase for typical dopings on W = 6
+cylinder with t′/t < 0.
+In Fig. 2(b), we show the magnetic susceptibility χm for
+t′/t = 0 .17, computed under a small pinning magnetic field
+of 0.01. We find it exhibits a maximum at T ∗, indicating the
+onset of PG [14, 23, 86]. Moreover, χm decreases as T low-
+ers, reflecting a finite spin gap in the SC state. In Fig. 1(a),
+we show that T ∗ lowers as the doping level increases. As
+doping ratio δ exceeds a certain value, χm does not vanish
+as T → 0, suggesting that the spin gap closes in the over-
+doped regime. For t′/t = −0.17, while the magnetic suscep-
+tibility χm also displays a hump at T ∗, it keeps increasing as
+the temperature lowers, as illustrated in Fig. 2(b) and also in
+Supplemental Material [83]. This constitutes another striking
+difference between the t′/t > 0 and t′/t < 0 sides, and of-
+fers additional evidence for the absence of SC for the latter
+case. In Fig. 1(b), T ∗ decreases more sharply with doping for
+t′/t = −0.17 compared to the t′/t = 0.17 case in Fig. 1(a),
+aligning with the observation of narrower AFM regime for
+t′/t = −0.17.
+
+=== PDF PAGE 4 ===
+4
+CDW correlations.— In Fig. 3, we show the computed
+charge structure factor Sc(k) = 1
+N
+P
+i,j eik·(ri−rj )⟨(ni −
+n)(nj − n)⟩, where n = 1 − δ is the electron density. The
+doping ratio δ ≃ 1/12 is selected by tuning the chemical po-
+tential µ. In Fig. 3(a) we find, for t′/t = 0 .17 and W = 6,
+that the CDW peaks at kx ≃ ± π/2 emerge for T ≲ T ∗
+c . The
+CDW peaks kx ≃ ± W πδ also emerge for W = 2 , 4, and
+the charge distribution n(x) oscillates in real space below T ∗
+c ,
+shaking hands with the ground-state DMRG results [83]. For
+the case of t′/t = −0.17, as shown in Fig. 3(b) the Sc(k)
+also exhibits CDW peaks at kx ≃ ± π/2 below a certain
+temperature, which are much more prominent than those for
+t′/t = 0 .17. In Fig. 3(c), we show Sc(kCDW) versus T and
+find for t′/t = 0 .17 that it gets significantly suppressed as
+width W increases, consistent with the conclusion in previous
+DMRG studies [34, 38, 87]. Conversely, for t′/t = −0.17,
+Sc(kCDW) remains significant forW = 6, suggesting stronger
+CDW fluctuations in the low-temperature regime with a typi-
+cal doping of δ = 1 /12. This scenario was also observed in
+recent DMRG studies [39, 46, 47]. For t′/t < 0, W = 4
+is special by hosting a distinctive plaquette d-wave ground
+state [35], and thus its charge structure factors are not shown.
+Fermi surface topology.— The suppression of magnetic
+susceptibility below T ∗ suggests the presence of PG behav-
+iors. To validate it, we calculate the Matsubara Green’s
+function G(k, β/2) = P
+σ⟨eβH/2c†
+kσe−βH/2ckσ⟩β, where
+ckσ = 1√
+N
+P
+r e−ik·rcrσ. This imaginary-time proxy pro-
+vides estimate of the spectral weight around the Fermi level
+as βG(k, β/2) ∼ A(k, ω = 0) in the low-temperature
+limit [88, 89], thus reflecting the Fermi surface (FS) topology.
+In Figs. 4(a), (b), and (d) we show the βG(k, β/2) results
+for t′/t = 0 .17 with fixed doping δ ≃ 0.12, calculated on a
+6 × 6 square lattice with open boundaries. To facilitate com-
+parison to electron-doped cuprates with t′/t < 0 [90], the
+data are shifted by (π, π), as through the particle-hole trans-
+formation the system can be mapped to t′/t = −0.17 with
+electron density n = 1 + δ. In Fig. 4(a), for T /J = 1 in
+the HT regime, we find no clear suppression in the FS spec-
+tral weights, while in Fig. 4(b) the spectral weight gets sup-
+pressed near (π/2, π/2) for T /J = 1 /3 in the PG regime,
+consistent with the ARPES results of a typical electron-doped
+superconductor Nd 2−xCexCuO4 [Fig. 4(c)] [91, 92]. Upon
+further reducing the temperature to T /J = 1 /14 and enter-
+ing the SC phase, a dramatic shift in intensity is observed in
+Fig. 4(d). Specifically, the intensities show pronounced in-
+crease near the nodal point (π/2, π/2), while get suppressed
+around the antinodal points (π, 0) and (0, π). This observa-
+tion aligns well with the characteristics of dx2−y2-wave pair-
+ing symmetry.
+In the hole-doped case with t′/t = −0.17, we present the
+results for T /J = 1 /3 in Fig. 4(e), again consistent with
+ARPES experiments [Fig. 4(f)] conducted in the PG regime of
+a hole-doped cuprate Ca 2−xNaxCuO2Cl2 [93]. The intensity
+pattern remains qualitatively similar at lower temperatures, as
+detailed in Supplemental Material [83], contrasting with the
+results observed in the SC phase with t′/t > 0.
+Discussion and outlook.— Recent studies have made great
+progresses in understanding the ground state of the t-t′-J
+(a) t'/t=0.17 T/J=1
+0
+0.1
+0.2
+(b) t'/t=0.17 T/J=1/3
+0.3
+0.4
+0.5
+0.6
+(d) t'/t=0.17 T/J=1/14
+0.2
+0.3
+0.4
+0.5
+0.6
+(e) t'/t=-0.17 T/J=1/3
+0.28
+0.3
+0.32
+0.34
+(0,0)
+(π,π)
+(c) Nd2−xCexCuO4
+x=0.16
+(0,0)
+(π,π)
+(f) Ca2-xNaxCuO2Cl2
+x=0.12
+(0,0)
+(π,π)
+(0,0)
+(π,π)
+(π,π)
+(-π,-π)
+0
+0.5
+(0,0) (π,0) (π,π) (π/2,π/2) (0,0)
+βG(k,β/2)
+A
+N
+T/J=1
+1/3
+1/14
+(g) t'/t=0.17
+A N
+FIG. 4. (a,b,d) Results of βG(k, β/2) for T /J = 1, 1/3, and 1/14,
+calculated for t′/t = 0.17 and doping ratio δ ≃ 0.12, compared to
+experiments on (c) electron- and (f) hole-doped cuprates. The dotted
+black lines denote the ridges, signifying the shape of FS, while the
+dashed gray lines illustrate the free electron FS at the same doping
+level. For clarity, only the first quadrant is show in (b)-(f). (e) shows
+βG(k, β/2) for t′/t = −0.17 case, with T /J = 1/3 and δ ≃ 0.11.
+(g) shows βG(k, β/2) along the triangular path illustrated in (d),
+where the red and blue vertical lines emphasize the antinodal (A)
+and nodal (N) points.
+model, where robust d-wave SC is found for t′/t > 0 [37–
+39, 45]. Here we make a significant step further by obtain-
+ing the finite-T phase diagram of this model, on up to width-6
+cylinder. In particular, fort′/t = 0.17 > 0 we find a domelike
+SC regime, with the characteristic temperature T ∗
+c ∼ 0.15J,
+i.e., ∼ 0.05t, near optimal doping. The estimated transition
+temperature is high (≳ 100 K), given t = 0.3-0.5 eV for typ-
+ical cuprates [23, 94]. Above the dome and below a higher
+temperature scale T ∗, we find PG-like behaviors with sup-
+pressed magnetic susceptibility and a FS with node-antinode
+features. On the other hand, for t′/t = −0.17 < 0, we find a
+very different scenario with nearly negligible SC correlations
+but prominent CDW correlations. Moreover, the partially sup-
+pressed spectral weights on the FS for both t′/t = 0 .17 and
+−0.17 cases align with those observed in electron- and hole-
+doped cuprates, respectively.
+Finite-temperature calculations have alleviated finite-size
+effects, at least in the high- to intermediate-temperature
+regime, where the conclusion may hold for the 2D limit. For
+t′/t > 0, we have seen qualitative consistency between the
+simulated W = 4 and W = 6 phase diagrams [83], where
+a robust high-Tc SC regime is revealed; for t′/t < 0, on the
+other hand, recently there are intensive studies on the ground-
+state properties, yet the existence of SC order remains in-
+conclusive [39, 46–48, 95, 96]. On the width-6 cylinder, re-
+cent DMRG studies find an absence of SC but have identi-
+fied the CDW order for typical doping levels of δ ≈ 1/12
+to 1/8 [39, 46, 47, 95]. In our finite-temperature study, we
+find the pairing correlations are indeed small [Fig. 1(b)], while
+
+=== PDF PAGE 5 ===
+5
+the CDW fluctuations become prominent as temperature de-
+creases, consistent with previous DMRG findings.
+Moreover, possible quasi-long-range SC correlations has
+been reported on the W = 8 cylinder for t′/t < 0 and
+δ = 1 /8 [46], parameters pertinent to hole-doped cuprates.
+However, the pairing correlations are clearly weaker (by an
+order of magnitude) compared to those for t′/t > 0. In a
+different work on the t-t′-Hubbard model, coexistence of SC
+order and partially filled stripe order was obtained by employ-
+ing twisted-averaged boundary conditions and sampling over
+low-lying states [48]. In contrast, we present a thermal aver-
+age of low-energy eigenstates, characteristics of a phase rather
+than an individual state. Our phase diagrams shown in Fig. 1
+are thus highly indicative for wider cylinders and impose sig-
+nificant constraints of the potential SC phase there. To address
+the difference between current simulations and cuprate experi-
+ments, it may be necessary to introduce additional terms, such
+as considering a three-band model or density-assisted hop-
+ping terms [97], etc. Besides, there are rapid progresses in the
+cold-atom quantum simulations of Hubbard/ t-J models [98–
+101], and our results provide fresh perspectives on these ex-
+periments at finite temperature.
+Acknowledgments.— W.L. and D.-W.Q are indebted to Xin
+Lu, Bin-Bin Chen, Tao Shi, Zi-Xiang Li, Wei Wu, and Lei
+Wang for helpful discussions. This work was supported by
+the National Natural Science Foundation of China (Grant
+Nos. 12222412, 11974036, 11834014, 12047503, 12174386,
+12274014, and 11874115), National Key R&D Program of
+China (Grant No. 2018YFA0305800), Strategic Priority Re-
+search Program of CAS (Grant No. XDB28000000), the In-
+novation Program for Quantum Science and Technology (un-
+der Grant Nos. 2021ZD0301800 and 2021ZD0301900), and
+CAS Project for Young Scientists in Basic Research (Grant
+No. YSBR-057). We thank the HPC-ITP for the technical
+support and generous allocation of CPU time.
+[1] J. G. Bednorz and K. A. M ¨uller, Possible high Tc super-
+conductivity in the Ba-La-Cu-O system, Z. Phys. B 64, 189
+(1986).
+[2] C. C. Tsuei and J. R. Kirtley, Pairing symmetry in cuprate su-
+perconductors, Rev. Mod. Phys. 72, 969 (2000).
+[3] P. A. Lee, N. Nagaosa, and X.-G. Wen, Doping a Mott insula-
+tor: Physics of high-temperature superconductivity, Rev. Mod.
+Phys. 78, 17 (2006).
+[4] B. Keimer, S. A. Kivelson, M. R. Norman, S. Uchida, and
+J. Zaanen, From quantum matter to high-temperature super-
+conductivity in copper oxides, Nature 518, 179 (2015).
+[5] C. Proust and L. Taillefer, The remarkable underlying ground
+states of cuprate superconductors, Annu. Rev. Condens. Mat-
+ter Phys. 10, 409 (2019).
+[6] D. P. Arovas, E. Berg, S. A. Kivelson, and S. Raghu, The
+Hubbard model, Annu. Rev. Condens. Matter Phys. 13, 239
+(2022).
+[7] J. Hubbard, Electron correlations in narrow energy bands,
+Proc. R. Soc. A 276, 238 (1963).
+[8] M. C. Gutzwiller, Effect of Correlation on the Ferromagnetism
+of Transition Metals, Phys. Rev. Lett.10, 159 (1963).
+[9] F. C. Zhang and T. M. Rice, Effective Hamiltonian for the su-
+perconducting Cu oxides, Phys. Rev. B 37, 3759 (1988).
+[10] J. Spałek, t-J model then and now: a personal perspective
+from the pioneering times, Acta Phys. Pol. A111, 409 (2007).
+[11] P. W. Anderson, The resonating valence bond state in
+La2CuO4 and superconductivity, Science 235, 1196 (1987).
+[12] P. W. Anderson, P. A. Lee, M. Randeria, T. M. .Rice,
+N. Trivedi, and F. C. Zhang, The physics behind high-
+temperature superconducting cuprates: The ‘plain vanilla’ ver-
+sion of RVB, J. Phys. Condens. Matter 16, R755 (2004).
+[13] S. R. White and D. J. Scalapino, Density matrix renormaliza-
+tion group study of the striped phase in the 2D t-J model,
+Phys. Rev. Lett. 80, 1272 (1998).
+[14] C. Huscroft, M. Jarrell, T. Maier, S. Moukouri, and A. N.
+Tahvildarzadeh, Pseudogaps in the 2D Hubbard model, Phys.
+Rev. Lett. 86, 139 (2001).
+[15] S. R. White and D. J. Scalapino, Stripes on a 6-leg Hubbard
+ladder, Phys. Rev. Lett.91, 136403 (2003).
+[16] A. Georges, G. Kotliar, W. Krauth, and M. J. Rozenberg, Dy-
+namical mean-field theory of strongly correlated fermion sys-
+tems and the limit of infinite dimensions, Rev. Mod. Phys.68,
+13 (1996).
+[17] T. Maier, M. Jarrell, T. Pruschke, and M. H. Hettler, Quantum
+cluster theories, Rev. Mod. Phys. 77, 1027 (2005).
+[18] G. Kotliar, S. Y . Savrasov, K. Haule, V . S. Oudovenko, O. Par-
+collet, and C. A. Marianetti, Electronic structure calculations
+with dynamical mean-field theory, Rev. Mod. Phys. 78, 865
+(2006).
+[19] F. Assaad and H. Evertz, World-line and determinantal quan-
+tum Monte Carlo methods for spins, phonons and electrons, in
+Computational Many-Particle Physics , edited by H. Fehske,
+R. Schneider, and A. Weiße (Springer, Berlin, 2008) pp. 277–
+356.
+[20] Z.-C. Gu, F. Verstraete, and X.-G. Wen, Grassmann tensor
+network states and its renormalization for strongly correlated
+fermionic and bosonic states (2010), arXiv:1004.2563 [cond-
+mat.str-el].
+[21] C.-C. Chang and S. Zhang, Spin and Charge Order in the
+Doped Hubbard Model: Long-Wavelength Collective Modes,
+Phys. Rev. Lett. 104, 116402 (2010).
+[22] G. Knizia and G. K.-L. Chan, Density matrix embedding: A
+simple alternative to dynamical mean-field theory, Phys. Rev.
+Lett. 109, 186404 (2012).
+[23] E. Gull, O. Parcollet, and A. J. Millis, Superconductivity and
+the pseudogap in the two-dimensional Hubbard model, Phys.
+Rev. Lett. 110, 216405 (2013).
+[24] P. Corboz, T. M. Rice, and M. Troyer, Competing states in
+the t-J model: Uniform d-wave state versus stripe state, Phys.
+Rev. Lett. 113, 046402 (2014).
+[25] J. P. F. LeBlanc, A. E. Antipov, F. Becca, I. W. Bulik, G. K.-
+L. Chan, C.-M. Chung, Y . Deng, M. Ferrero, T. M. Hender-
+son, C. A. Jim ´enez-Hoyos, E. Kozik, X.-W. Liu, A. J. Millis,
+N. V . Prokof’ev, M. Qin, G. E. Scuseria, H. Shi, B. V . Svis-
+tunov, L. F. Tocchio, I. S. Tupitsyn, S. R. White, S. Zhang, B.-
+X. Zheng, Z. Zhu, and E. Gull (Simons Collaboration on the
+Many-Electron Problem), Solutions of the two-dimensional
+Hubbard model: Benchmarks and results from a wide range
+of numerical algorithms, Phys. Rev. X 5, 041041 (2015).
+[26] E. Fradkin, S. A. Kivelson, and J. M. Tranquada, Colloquium:
+
+=== PDF PAGE 6 ===
+6
+Theory of intertwined orders in high temperature supercon-
+ductors, Rev. Mod. Phys. 87, 457 (2015).
+[27] W. Wu, M. Ferrero, A. Georges, and E. Kozik, Controlling
+Feynman diagrammatic expansions: Physical nature of the
+pseudogap in the two-dimensional Hubbard model, Phys. Rev.
+B 96, 041105(R) (2017).
+[28] J. F. Dodaro, H.-C. Jiang, and S. A. Kivelson, Intertwined or-
+der in a frustrated four-leg t − J cylinder, Phys. Rev. B 95,
+155116 (2017).
+[29] B.-X. Zheng, C.-M. Chung, P. Corboz, G. Ehlers, M.-P. Qin,
+R. M. Noack, H. Shi, S. R. White, S. Zhang, and G. K.-
+L. Chan, Stripe order in the underdoped region of the two-
+dimensional Hubbard model, Science 358, 1155 (2017).
+[30] Y .-Y . He, M. Qin, H. Shi, Z.-Y . Lu, and S. Zhang, Finite-
+temperature auxiliary-field quantum Monte Carlo: Self-
+consistent constraint and systematic approach to low tempera-
+tures, Phys. Rev. B 99, 045108 (2019).
+[31] B. Ponsioen, S. S. Chung, and P. Corboz, Period 4 stripe in the
+extended two-dimensional Hubbard model, Phys. Rev. B 100,
+195141 (2019).
+[32] H.-C. Jiang, Z.-Y . Weng, and S. A. Kivelson, Superconductiv-
+ity in the doped t − J model: Results for four-leg cylinders,
+Phys. Rev. B 98, 140505(R) (2018).
+[33] H. C. Jiang and T. P. Devereaux, Superconductivity in the
+doped Hubbard model and its interplay with next-nearest hop-
+ping t′, Science 365, 1424 (2019).
+[34] Y .-F. Jiang, J. Zaanen, T. P. Devereaux, and H.-C. Jiang,
+Ground state phase diagram of the doped Hubbard model on
+the four-leg cylinder, Phys. Rev. Res.2, 033073 (2020).
+[35] C.-M. Chung, M. Qin, S. Zhang, U. Schollw ¨ock, and S. R.
+White (The Simons Collaboration on the Many-Electron Prob-
+lem), Plaquette versus ordinary d-wave pairing in the t′-
+Hubbard model on a width-4 cylinder, Phys. Rev. B 102,
+041106(R) (2020).
+[36] M. Qin, C.-M. Chung, H. Shi, E. Vitali, C. Hubig,
+U. Schollw ¨ock, S. R. White, and S. Zhang (Simons Collabo-
+ration on the Many-Electron Problem), Absence of supercon-
+ductivity in the pure two-dimensional Hubbard model, Phys.
+Rev. X 10, 031016 (2020).
+[37] H.-C. Jiang and S. A. Kivelson, High temperature supercon-
+ductivity in a lightly doped quantum spin liquid, Phys. Rev.
+Lett. 127, 097002 (2021).
+[38] S. Gong, W. Zhu, and D. N. Sheng, Robust d-wave super-
+conductivity in the square-lattice t−J model, Phys. Rev. Lett.
+127, 097003 (2021).
+[39] S. Jiang, D. J. Scalapino, and S. R. White, Ground-state phase
+diagram of the t−t′−J model, Proc. Natl. Acad. Sci. 118,
+e2109978118 (2021).
+[40] M. Qin, T. Sch ¨afer, S. Andergassen, P. Corboz, and E. Gull,
+The Hubbard model: A computational perspective, Annu. Rev.
+Condens. Matter Phys. 13, 275 (2022).
+[41] H. Xu, H. Shi, E. Vitali, M. Qin, and S. Zhang, Stripes
+and spin-density waves in the doped two-dimensional Hub-
+bard model: Ground state phase diagram, Phys. Rev. Res. 4,
+013239 (2022).
+[42] X. Dong, E. Gull, and A. J. Millis, Quantifying the role of
+antiferromagnetic fluctuations in the superconductivity of the
+doped Hubbard model, Nature Physics 18, 1293 (2022).
+[43] X. Dong, L. D. Re, A. Toschi, and E. Gull, Mechanism of su-
+perconductivity in the Hubbard model at intermediate interac-
+tion strength, Proc. Natl. Acad. Sci. U.S.A.119, e2205048119
+(2022).
+[44] B. Xiao, Y .-Y . He, A. Georges, and S. Zhang, Tempera-
+ture Dependence of Spin and Charge Orders in the Doped
+Two-Dimensional Hubbard Model, Phys. Rev. X 13, 011007
+(2023).
+[45] H.-C. Jiang, S. A. Kivelson, and D.-H. Lee, Superconducting
+valence bond fluid in lightly doped eight-leg t−J cylinders,
+Phys. Rev. B 108, 054505 (2023).
+[46] X. Lu, F. Chen, W. Zhu, D. N. Sheng, and S.-S. Gong,
+Emergent Superconductivity and Competing Charge Orders in
+Hole-Doped Square-Lattice t−J Model, Phys. Rev. Lett.132,
+066002 (2024).
+[47] Y .-F. Jiang, T. P. Devereaux, and H.-C. Jiang, Ground-state
+phase diagram and superconductivity of the doped Hubbard
+model on six-leg square cylinders, Phys. Rev. B 109, 085121
+(2024).
+[48] H. Xu, C.-M. Chung, M. Qin, U. Schollw ¨ock, S. R. White,
+and S. Zhang, Coexistence of superconductivity with partially
+filled stripes in the Hubbard model, Science 384, eadh7691
+(2024).
+[49] J. Jakli ˇc and P. Prelovˇsek, Lanczos method for the calculation
+of finite-temperature quantities in correlated systems, Phys.
+Rev. B 49, 5065 (1994).
+[50] J. Jakli ˇc and P. Prelov ˇsek, Thermodynamic properties of the
+planar t − J model, Phys. Rev. Lett. 77, 892 (1996).
+[51] J. Jakli ˇc and P. Prelov ˇsek, Finite-temperature properties of
+doped antiferromagnets, Adv. Phys. 49, 1 (2000).
+[52] A. Avella and F. Mancini, eds., Strongly Correlated Systems
+(Springer, Berlin, 2013).
+[53] S. R. White, Minimally entangled typical quantum states at
+finite temperature, Phys. Rev. Lett.102, 190601 (2009).
+[54] E. M. Stoudenmire and S. R. White, Minimally entangled typ-
+ical thermal state algorithms, New J. Phys.12, 055026 (2010).
+[55] A. Wietek, Y .-Y . He, S. R. White, A. Georges, and E. M.
+Stoudenmire, Stripes, antiferromagnetism, and the pseudogap
+in the doped Hubbard model at finite temperature, Phys. Rev.
+X 11, 031007 (2021).
+[56] A. Wietek, R. Rossi, F. ˇSimkovic, M. Klett, P. Hansmann,
+M. Ferrero, E. M. Stoudenmire, T. Sch ¨afer, and A. Georges,
+Mott insulating states with competing orders in the triangular
+lattice Hubbard model, Phys. Rev. X 11, 041013 (2021).
+[57] W. Li, S.-J. Ran, S.-S. Gong, Y . Zhao, B. Xi, F. Ye, and G. Su,
+Linearized tensor renormalization group algorithm for the cal-
+culation of thermodynamic properties of quantum lattice mod-
+els, Phys. Rev. Lett. 106, 127202 (2011).
+[58] P. Czarnik and J. Dziarmaga, Fermionic projected entangled
+pair states at finite temperature, Phys. Rev. B 90, 035144
+(2014).
+[59] P. Czarnik, M. M. Rams, and J. Dziarmaga, Variational ten-
+sor network renormalization in imaginary time: Benchmark
+results in the Hubbard model at finite temperature, Phys. Rev.
+B 94, 235142 (2016).
+[60] P. Czarnik, J. Dziarmaga, and P. Corboz, Time evolution of an
+infinite projected entangled pair state: An efficient algorithm,
+Phys. Rev. B 99, 035115 (2019).
+[61] P. Czarnik and P. Corboz, Finite correlation length scaling with
+infinite projected entangled pair states at finite temperature,
+Phys. Rev. B 99, 245107 (2019).
+[62] A. Sinha, M. M. Rams, P. Czarnik, and J. Dziarmaga, Finite-
+temperature tensor network study of the Hubbard model on an
+infinite square lattice, Phys. Rev. B106, 195105 (2022).
+[63] B.-B. Chen, L. Chen, Z. Chen, W. Li, and A. Weichselbaum,
+Exponential thermal tensor network approach for quantum lat-
+tice models, Phys. Rev. X 8, 031082 (2018).
+[64] H. Li, B.-B. Chen, Z. Chen, J. von Delft, A. Weichselbaum,
+and W. Li, Thermal tensor renormalization group simulations
+of square-lattice quantum spin models, Phys. Rev. B 100,
+
+=== PDF PAGE 7 ===
+7
+045110 (2019).
+[65] L. Chen, D.-W. Qu, H. Li, B.-B. Chen, S.-S. Gong, J. von
+Delft, A. Weichselbaum, and W. Li, Two-temperature scales in
+the triangular-lattice Heisenberg antiferromagnet, Phys. Rev.
+B 99, 140404(R) (2019).
+[66] H. Li, Y . D. Liao, B.-B. Chen, X.-T. Zeng, X.-L. Sheng,
+Y . Qi, Z. Y . Meng, and W. Li, Kosterlitz-Thouless melting
+of magnetic order in the triangular quantum Ising material
+TmMgGaO4, Nat. Commun. 11, 1111 (2020).
+[67] H. Li, D.-W. Qu, H.-K. Zhang, Y .-Z. Jia, S.-S. Gong, Y . Qi,
+and W. Li, Universal thermodynamics in the Kitaev fractional
+liquid, Phys. Rev. Res. 2, 043015 (2020).
+[68] H. Li, H.-K. Zhang, J. Wang, H.-Q. Wu, Y . Gao, D.-W. Qu,
+Z.-X. Liu, S.-S. Gong, and W. Li, Identification of magnetic
+interactions and high-field quantum spin liquid in α-RuCl3,
+Nat. Commun. 12, 4007 (2021).
+[69] S. Yu, Y . Gao, B.-B. Chen, and W. Li, Learning the effective
+spin Hamiltonian of a quantum magnet, Chin. Phys. Lett. 38,
+097502 (2021).
+[70] X. Lin, B.-B. Chen, W. Li, Z. Y . Meng, and T. Shi, Exciton
+proliferation and fate of the topological Mott insulator in a
+twisted bilayer graphene lattice model, Phys. Rev. Lett. 128,
+157201 (2022).
+[71] Q. Li, Y . Gao, Y .-Y . He, Y . Qi, B.-B. Chen, and W. Li, Tangent
+space approach for thermal tensor network simulations of the
+2D Hubbard model, Phys. Rev. Lett. 130, 226502 (2023).
+[72] B.-B. Chen, C. Chen, Z. Chen, J. Cui, Y . Zhai, A. We-
+ichselbaum, J. von Delft, Z. Y . Meng, and W. Li, Quan-
+tum many-body simulations of the two-dimensional Fermi-
+Hubbard model in ultracold optical lattices, Phys. Rev. B103,
+L041107 (2021).
+[73] D. C. Johnston, Magnetic susceptibility scaling in
+La2−xSrxCuO4−y, Phys. Rev. Lett. 62, 957 (1989).
+[74] H. Alloul, T. Ohno, and P. Mendels, 89Y NMR evidence for
+a Fermi-liquid behavior in YBa2Cu3O6+x, Phys. Rev. Lett.
+63, 1700 (1989).
+[75] H. Monien, D. Pines, and M. Takigawa, Application of the
+antiferromagnetic-Fermi-liquid theory to NMR experiments
+on YBa2Cu3O6.63, Phys. Rev. B 43, 258 (1991).
+[76] A. Weichselbaum, Non-abelian symmetries in tensor net-
+works: A quantum symmetry space approach, Ann. Phys.327,
+2972 (2012).
+[77] A. Weichselbaum, X-symbols for non-Abelian symmetries in
+tensor networks, Phys. Rev. Res. 2, 023385 (2020).
+[78] A. Weichselbaum, QSpace - An open-source tensor li-
+brary for Abelian and non-Abelian symmetries (2024),
+arXiv:2405.06632 [cond-mat.str-el].
+[79] L. Balents and M. P. A. Fisher, Weak-coupling phase dia-
+gram of the two-chain Hubbard model, Phys. Rev. B53, 12133
+(1996).
+[80] S. R. White, I. Affleck, and D. J. Scalapino, Friedel oscilla-
+tions and charge density waves in chains and ladders, Phys.
+Rev. B 65, 165122 (2002).
+[81] Y . Gannot, Y .-F. Jiang, and S. A. Kivelson, Hubbard ladders at
+small U revisited, Phys. Rev. B 102, 115136 (2020).
+[82] H.-C. Jiang, S. Chen, and Z.-Y . Weng, Critical role of the
+sign structure in the doped mott insulator: Luther-Emery ver-
+sus Fermi-liquid-like state in quasi-one-dimensional ladders,
+Phys. Rev. B 102, 104512 (2020).
+[83] See Supplemental Material, for a convergence analysis for the
+finite-temperature data (Sec. I), additional data on pairing cor-
+relations (Sec. II), magnetic susceptibility (Sec. III), spin cor-
+relations (Sec. IV), charge order (Sec. V), temperature evolu-
+tion of stripes (Sec. VI), and the spectral density (Sec. VII).
+[84] A. Wietek, Fragmented Cooper pair condensation in striped
+superconductors, Phys. Rev. Lett. 129, 177001 (2022).
+[85] N. Baldelli, B. Kloss, M. Fishman, and A. Wietek, Frag-
+mented superconductivity in the Hubbard model as solitons
+in Ginzburg-Landau theory (2023), arXiv:2307.11820 [cond-
+mat.str-el].
+[86] A. N. Rubtsov, M. I. Katsnelson, A. I. Lichtenstein, and
+A. Georges, Dual fermion approach to the two-dimensional
+Hubbard model: Antiferromagnetic fluctuations and Fermi
+arcs, Phys. Rev. B 79, 045133 (2009).
+[87] X. Lu, D.-W. Qu, Y . Qi, W. Li, and S.-S. Gong, Ground-state
+phase diagram of the extended two-leg t-J ladder, Phys. Rev.
+B 107, 125114 (2023).
+[88] W. Jiang, Y . Liu, A. Klein, Y . Wang, K. Sun, A. V . Chubukov,
+and Z. Y . Meng, Monte Carlo study of the pseudogap and
+superconductivity emerging from quantum magnetic fluctua-
+tions, Nat. Commun. 13, 2655 (2022).
+[89] S. Lederer, Y . Schattner, E. Berg, and S. A. Kivelson, Super-
+conductivity and non-Fermi liquid behavior near a nematic
+quantum critical point, Proc. Natl. Acad. Sci. U.S.A. 114,
+4905 (2017).
+[90] R. S. Markiewicz, S. Sahrakorpi, M. Lindroos, H. Lin, and
+A. Bansil, One-band tight-binding model parametrization of
+the high- Tc cuprates including the effect of kz dispersion,
+Phys. Rev. B 72, 054519 (2005).
+[91] H. Matsui, T. Takahashi, T. Sato, K. Terashima, H. Ding,
+T. Uefuji, and K. Yamada, Evolution of the pseudo-
+gap across the magnet-superconductor phase boundary of
+Nd2−xCexCuO4, Phys. Rev. B 75, 224514 (2007).
+[92] N. P. Armitage, P. Fournier, and R. L. Greene, Progress and
+perspectives on electron-doped cuprates, Rev. Mod. Phys. 82,
+2421 (2010).
+[93] K. M. Shen, F. Ronning, D. H. Lu, F. Baumberger, N. J. C.
+Ingle, W. S. Lee, W. Meevasana, Y . Kohsaka, M. Azuma,
+M. Takano, H. Takagi, and Z.-X. Shen, Nodal quasiparticles
+and antinodal charge ordering in Ca2−xNaxCuO2Cl2, Science
+307, 901 (2005).
+[94] M. Hirayama, T. Misawa, T. Ohgoe, Y . Yamaji, and M. Imada,
+Effective Hamiltonian for cuprate superconductors derived
+from multiscale ab initio scheme with level renormalization,
+Phys. Rev. B 99, 245155 (2019).
+[95] X. Lu, J.-X. Zhang, S.-S. Gong, D. N. Sheng, and Z.-Y . Weng,
+Sign structure of the t-t′-J model and its physical conse-
+quences, Phys. Rev. B 110, 165127 (2024).
+[96] F. Chen, F. D. M. Haldane, and D. N. Sheng, D-Wave and
+Pair-Density-Wave Superconductivity in the Square-Latticet-
+J Model (2023), arXiv:2311.15092 [cond-mat.supr-con].
+[97] S. Jiang, D. J. Scalapino, and S. R. White, Density ma-
+trix renormalization group based downfolding of the three-
+band Hubbard model: Importance of density-assisted hopping,
+Phys. Rev. B 108, L161111 (2023).
+[98] A. Mazurenko, C. S. Chiu, G. Ji, M. F. Parsons, M. Kan ´asz-
+Nagy, R. Schmidt, F. Grusdt, E. Demler, D. Greif, and
+M. Greiner, A cold-atom Fermi–Hubbard antiferromagnet,
+Nature 545, 462 (2017).
+[99] C. S. Chiu, G. Ji, A. Bohrdt, M. Xu, M. Knap, E. Demler,
+F. Grusdt, M. Greiner, and D. Greif, String patterns in the
+doped Hubbard model, Science 365, 251 (2019).
+[100] P. Sompet, S. Hirthe, D. Bourgund, T. Chalopin, J. Bibo,
+J. Koepsell, P. Bojovi´c, R. Verresen, F. Pollmann, G. Salomon,
+C. Gross, T. A. Hilker, and I. Bloch, Realizing the symmetry-
+protected Haldane phase in Fermi-Hubbard ladders, Nature
+606, 484 (2022).
+[101] S. Hirthe, T. Chalopin, D. Bourgund, P. Bojovi ´c, A. Bohrdt,
+
+=== PDF PAGE 8 ===
+8
+E. Demler, F. Grusdt, I. Bloch, and T. A. Hilker, Magnetically
+mediated hole pairing in fermionic ladders of ultracold atoms,
+Nature 613, 463 (2023).
+[102] T. Giamarchi, Quantum Physics in One Dimension (Clarendon
+Press, 2004).
+[103] C. A. Hayward and D. Poilblanc, Luttinger-liquid behavior
+and superconducting correlations in t-J ladders, Phys. Rev.
+B 53, 11721 (1996).
+
+=== PDF PAGE 9 ===
+9
+Supplemental Material for
+Phase Diagram, d-Wave Superconductivity, and Pseudogap of thet-t′-J Model at Finite
+Temperature
+I. CONVERGENCE OF THE FREE ENERGY VERSUS BOND DIMENIONS
+In Fig. S1(a), we present the calculated free energy per site of the4 × 30 (W = 4, L = 30) system. The results were obtained
+by keeping two different values of D∗, i.e., D∗ = 3000 and D∗ = 4000 multiplets, respectively. The relative difference of f is
+≲ 3 × 10−4, showing a very good convergence. In Fig. S1(b), we find the free energy f results of the 6 × 6 open square (with
+µ = 4.9) show relative difference within 10−3 for D∗ = 4000 and D∗ = 6000.
+Overall, the results presented in Fig. S1 demonstrate the importance of carefully assessing the convergence of numerical results
+and choosing appropriate values of D∗ to ensure the accuracy and reliability of the calculations. By verifying the convergence
+of the free energy, we can also be sure that other thermodynamic quantities, e.g., the specific heat, calculated from it are also
+accurate and reliable.
+II. SUPERCONDUCTIVITY PAIRING CORRELATIONS
+In this section, we provide more data on the superconductivity pairing correlations for 2-leg ladder and width-4 cylinder with
+t′/t > 0. In the following, we study a 2-leg ladder with slightly different model parameters, namely, t/J = 3, J ′/J = 0.05,
+and t′ = t
+p
+J ′/J. This larger t′/t leads to enhanced superconductivity and suppressed CDW instabilities [87].
+A. Pairing correlation scalings in the 2-leg ladder
+Firstly, we provide a brief review of some analytical results for the 2-leg ladder, which will aid in the analysis of our numerical
+data. For the parameters mentioned above, and with doping ratio δ ≤ δc ≃ 0.34, the ground state on 2-leg ladder is a Luther-
+Emery liquid (LEL) with quasi-long range SC correlations. While forδ > δ c (except for the special dopingδ = 1/2), the ground
+state is in the Tomonaga-Luttinger liquid (TLL) phase. At doping δ = 1/2, there exists a special SDW point where the system
+opens up a small charge gap [87], while the antiferromagnetic spin-spin correlations are still quasi-long-ranged. Bosonization
+analysis shows that the pairing correlation functions in LEL has two leading terms in the long-range scaling [102, 103], i.e.,
+Φαβ(r) = C0
+r1/(2Kρ) + C1
+cos(2kF r)
+r2Kρ+1/(2Kρ) , (S1)
+where Kρ is the Luttinger parameter, kF is the Fermi momentum estimated from the particle density, and C0, C1 are non-
+universal constants. As Kρ > 0 the first uniform term dominates in LEL, regardless of the specific values of C0, C1, and the
+10-1 100
+T/J
+-7.8
+-7.6
+-7.4
+-7.2
+-7
+-6.8
+-6.6
+-6.4f
+D*=3000
+D*=4000
+10-1 100
+T/J
+10-6
+10-5
+10-4
+10-3
+10-1 100
+T/J
+-7.2
+-7
+-6.8
+-6.6
+-6.4
+-6.2
+-6
+-5.8f
+D*=4000
+D*=6000
+10-1 100
+T/J
+10-4
+10-3
+(a)
+CL4×30
+(b)
+6×6
+|δ f/f|
+|δ f/f|
+FIG. S1. Convergence of the free energy per site vs. D∗. (a) shows the results of 4 × 30 cylinder (W = 4, L = 30, t′/t = 0.17, µ = 5.34)
+obtained with bond dimension D∗ = 3000 (equivalent D ≃ 9000 individual states) and D∗ = 4000 (D ≃ 12000). (b) shows the results of
+6 × 6 open square [W = 6, L = 6, t′/t = 0.17, µ = 4.9 with bond dimension D∗ = 4000 (D ≃ 14000) and D∗ = 6000 (D ≃ 21000)].
+The insets show the relative difference |δf /f| between different bond dimensions, which indicate a very good convergence in the free energy.
+
+=== PDF PAGE 10 ===
+10
+5 10 15
+r
+10-10
+10-8
+10-6
+10-4
+10-2
+T/J=1.22
+  0.610
+  0.305
+  0.153
+  0.076
+  0 (DMRG)
+5 10 15
+r
+10-10
+10-8
+10-6
+10-4
+10-2
+5 10 15
+r
+10-10
+10-8
+10-6
+10-4
+10-2(a)µ=4.7 (b)µ=4.7 (c)µ=2.3
+Фyy
+-Фyx
+|Фyy|
+FIG. S2. Pairing correlation functions for 2-leg ladder at various temperatures. Here we show the data for an L = 32 system. The reference
+point of correlation is at x = L/4 + 1, and the distance is denoted by r. (a,b) show respectively the y-y and y-x pairing correlation functions
+Φyy(r) and Φyx(r) with µ = 4.7 (near optimal doping, LEL phase). We find in (a) that Φyy(r) is always positive, while the y-x pairing is
+negative [hence we show −Φyx(r) in (b)]. (c) shows the absolute value |Φyy | for µ = 2.3 (overdoped, TLL phase). The dashed lines are the
+ground-state DMRG results with 10 doped holes in (a,b) and 26 holes in (c).
+conclusion holds for different directions of pairings. On the other hand, the scaling behavior in TLL is [102, 103]
+Φαβ(r) = C2
+r1+1/(2Kρ) + C3
+cos(2kF r)
+r2Kρ+1/(2Kρ) , (S2)
+where instead the second 2kF -oscillation term dominates, as we always find Kρ < 1/2 in the 2-leg ladder [87].
+In Figs. S2(a,b) we show Φyy(r) and −Φyx(r) at various temperatures, for the 2-leg ladder with µ = 4.7 (LEL ground state).
+According to the d-wave paring symmetry, for Φyy we have C0 > 0 while for Φyx the constant is C0 < 0, and indeed here
+Φyy > 0 and Φyx < 0 are observed. On the other hand, in Fig. S2(c) we show |Φyy(r)| at various T in the TLL phase (with
+µ = 2 .3), where the pairing correlations show clear oscillation behaviors vs. r. In both phases, LEL and TLL, the pairing
+correlations obtained by thermal tensor networks converge to the ground-state DMRG results at sufficiently low temperatures.
+B. Pairing correlation contours for the width-2 and 4 systems
+In the main text, we have shown the superconducting dome by the contour of pairing correlation Φyy(r) averaged over the
+distances r = 3-5. Here we show that such a dome structure can also be observed in Φyy(r) at various fixed distance r. For
+the 2-leg ladder, Figs. S3(a-d) shows the contour of Φyy(r) as a functions of δ and T for r = 1 -4 and a wide doping range
+0 < δ < 0.8. We find that except for the nearest-neighbor r = 1 , there is always a dome-shape regime with prominent and
+positive Φyy correlations. The specific boundaries on the right side of the dome can nevertheless change slightly for different
+distances r, which is possibly influenced by the nearby TLL phase.
+For δ > δ c, Φyy does not vanish but exhibits a vertical bar-like structure with alternating signs asδ changes. This observation
+can be well explained with the dominant 2kF -oscillation in Eq. (S2), where kF = πn = π(1 − δ). As expected, in Figs. S3
+we find Φyy oscillates like − cos(2πrδ) for a fixed T and r. The special SDW point δ = 1 /2 can also be seen in the finite-
+temperature calculations, where the oscillation is just a π-shift, (−1)r−1, from panel (a) to (d). The amplitudes of pairing
+correlations at δ = 1 /2 decay exponentially even in the ground state, due to the presence of a finite charge gap. Unlike the
+SC dome for δ < δ c, these bars extent to quite high temperature T /J ≈ 1. This indicates the paring correlation described in
+Eq. (S2), particularly the oscillating term, has already been established at relatively high temperature in the TLL phase, much
+higher than the SC correlation in the superconductive LEL phase. However, from Fig. S3 we see that the paring correlations
+in the TLL phase decay very rapidly as r increases, while they are much more robust against increasing distance r in the LEL
+regime under the dome.
+For the W = 4 cylinder, in Fig. S4 we find a slightly different scenario. Although the pairing correlations also exhibit a sign
+change as doping ratio δ ≳ 0.25, the Φyy(r) correlations in the highly doped regime decay much more rapidly withr. For r ≥ 4
+we can hardly see the pairing correlation in the overdoped regime. The bright dome regime with prominent pairing correlations,
+on the other hand, is persistent and the overall shape changes only slightly as r increases. In Fig. S5 we show the Φyy(r)
+averaged over r = 3-5, like Fig. 1(a) in the main text. We find the domelike fluctuating SC regime is apparent. Compared with
+the W = 6 data in Fig. 1(a), the SC dome broadens from W = 4 to W = 6. In Fig. S5 we also show the peak temperature T ∗
+
+=== PDF PAGE 11 ===
+11
+0 0.2 0.4 0.6 0.8
+0
+0.2
+0.4
+0.6
+0.8
+1
+T/J
+0
+0.02
+0.04
+0.06
+0 0.2 0.4 0.6 0.8
+0
+0.2
+0.4
+0.6
+0.8
+1
+T/J
+-5
+0
+5
+10
+15
+0 0.2 0.4 0.6 0.8
+0
+0.2
+0.4
+0.6
+0.8
+1
+T/J
+-2
+0
+2
+4
+6
+8
+0 0.2 0.4 0.6 0.8
+0
+0.2
+0.4
+0.6
+0.8
+1
+T/J
+0
+2
+4
+6
+(a) r=1 (b) r=2
+(c) r=3 (d) r=4
+δc δSDW=1/2
+δ δ
+δ δ
+×10-3 ×10-3
+×10-3
+FIG. S3. (a-d) Contour plot of they-y pairing correlation Φyy(r) (r = 1-4) on a 2-leg ladder, as a function of dopingδ and temperature T . The
+dashed lines denote the LEL-TLL critical point δc ∼ 0.34 in ground state, and the dotted dashed lines denote the SDW point at δSDW = 1/2.
+δ δ
+0 0.1 0.2 0.3
+0
+0.2
+0.4
+0.6
+0.8
+1
+T/J
+0
+0.005
+0.01
+0.015
+0 0.1 0.2 0.3
+0
+0.2
+0.4
+0.6
+0.8
+1
+T/J
+-5
+0
+5
+10
+15
+20
+0 0.1 0.2 0.3
+0
+0.2
+0.4
+0.6
+0.8
+1
+T/J
+0
+2
+4
+6
+8
+0 0.1 0.2 0.3
+0
+0.2
+0.4
+0.6
+0.8
+1
+T/J
+0
+1
+2
+3
+4
+5
+(a) r=1 (b) r=2
+(c) r=3 (d) r=4×10-4 ×10-4
+×10-4
+δ δ
+FIG. S4. (a-d) Contour plot of the pairing correlation Φyy(r) (r = 1-4) on the width-4 cylinder, as a function of doping δ and temperature T .
+of magnetic susceptibility, which decreases with increasing doping. Therefore, the overall phase diagram for t′/t = 0.17 > 0 is
+qualitatively unchanged from W = 4 to W = 6. On the other hand, for t′/t = −0.17 < 0 the ground state on W = 4 cylinder
+is the special plaquette d-wave state [35], and therefore it is not directly comparable with the W = 6 data in this case.
+
+=== PDF PAGE 12 ===
+12
+0 0.05 0.1 0.15 0.2
+10-1
+100
+T/J
+HT
+PG
+SC
+T*
+0
+1
+2
+3
+4
+5
+6
+W=4 t'/t=0.17
+δ
+×10-4
+FIG. S5. Phase diagram for t′/t = 0 .17 on a W = 4 cylinder. The red contour map shows the pairing correlations Φyy(r) averaged over
+r = 3 -5, which exhibits a domelike fluctuating SC regime. The dashed green line is the peak temperature of magnetic susceptibility χm,
+which separate the PG and HT regimes.
+10-1 100
+T/J
+0
+0.1
+0.2
+0.3
+CL4x30 D*=4000
+2x64 D*=2000
+T*/J ~ 0.15c T*/J ~ 0.5
+cµ
+FIG. S6. Specific heat results calculated on a 2 × 64 ladder with µ = 4 .7 (and δ ≃ 0.15) and a 4 × 30 cylinder with µ = 5 .34 (and
+0.1 ≲ δ ≲ 0.15). The green shadow indicates the uncertainty of the W = 4 data, which is estimated from the results with different bond
+dimensions.
+C. Thermodynamic signature of the SC fluctuations
+The strong pairing fluctuations within the SC dome leave distinct features in the thermodynamic quantities. In Fig. S6, we
+present the constant-µ specific heat cµ for both 2-leg ladders and width-4 cylinders. These results indicate thatcµ exhibits a peak
+near the SC temperature T ∗
+c , which is associated with the entropy release due to the establishment of SC pairing correlations.
+III. MAGNETIC SUSCEPTIBILITY
+In Fig. 1 of the main text, we have shown the peak temperature T ∗ of the magnetic susceptibility χm, and plot T ∗ versus
+doping ratio δ in the phase diagram. Here we provide more supporting data ofχm with different system sizes and hopping ratios
+t′/t. In Fig. S7 we show χm as a function of T for each (approximately) fixed δ, by tuning the chemical potential µ. In panels
+(a) and (b), we find χm has a peak for t′/t = 0.17 on both W = 4 and W = 6 cylinders, below which it decreases towards zero
+with T . As the doping δ increases, χm gets enhanced and the peak is pushed to lower temperature. On the other hand, as shown
+in Fig. S7(c), the values of χm for t′/t = −0.17 is much greater than those for t′/t = 0.17 shown in Fig. S7(b), with the same
+doping level. In this case, although the χm curve also exhibits a hump at T ∗, it does not decrease monotonically and converge
+towards zero below T ∗, but increases again with T at lower temperatures. This indicates that for t′/t = −0.17 < 0 the spin
+fluctuations are stronger in the stripe phase, while the spin-gapped superconductivity is not favored.
+
+=== PDF PAGE 13 ===
+13
+10-1 100
+T/J
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+0.12
+0.14
+δ=0.05
+0.1
+0.15
+0.2
+10-1 100
+T/J
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+0.12
+0.14
+δ=0.056
+0.083
+0.11
+0.14
+10-1 100
+T/J
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+δ=0.056
+0.083
+0.11
+0.14
+(a)
+W=4 t'/t=0.17
+(b)
+W=6 t'/t=0.17
+(c)W=6 t'/t=-0.17
+χm/n
+FIG. S7. Magnetic susceptibility χm as a function of T for various doping δ. For better visibility of the lines, here we show χm/n normalized
+by electron density n = 1 − δ. (a) shows the results for W × L = 4 × 20 cylinder with t′/t = 0.17. (b) and (c) show the 6 × 12 cylinder
+results for t′/t = 0.17 and t′/t = −0.17 respectively. The bond dimension retained is D = 3000 for W = 4 and D = 6000 for W = 6.
+0 0.2 0.4 0.6 0.8 1
+100
+101
+0 0.2 0.4 0.6 0.8 1
+100
+101
+0 0.05 0.1 0.15 0.2
+0.6
+0.7
+0.8
+0.9
+1
+t'/t=0.17
+t'/t=-0.17
+(a) t'/t=0.17 (b) t'/t=-0.17 (c)
+S(kx,ky=π)
+S(kx,ky=π)
+δ=0.028
+0.056
+0.083
+0.11
+0.14
+0.17
+0.19
+δ=0.028
+0.056
+0.083
+0.11
+0.14
+0.17
+0.19
+δkx/π kx/π
+kSDW/π
+FIG. S8. (a) and (b) show the spin structure factor S(kx, ky = π) as a function of kx for various doping δ, for t′/t = 0.17 and t′/t = −0.17
+cases, respectively. The data are calculated on W = 6 cylinders at a low temperature T /J = 1/16. (c) shows the peak location kx = kSDW of
+the spin structure factor S(kx, ky = π) as a function of doping δ, which indicates the wave vector of dominant spin correlations.
+IV . SPIN CORRELATIONS
+In Fig. 1 of the main text, we presented a contour plot of the spin structure factor S(π, π) to illustrate the fluctuating AFM
+regime. Here in Fig. S8, we provide more details of the spin structure factor S(kx, ky) as a function of kx (with fixed ky = π)
+for various doping levels δ, specifically for t′/t = 0.17 in (a) and t′/t = −0.17 in (b). These data were calculated on W = 6
+cylinders at a low temperature T /J = 1 /16. For both t′/t = 0 .17 and −0.17 cases, we observe that the predominant spin
+correlation at low doping occurs at (π, π), indicative of AFM behavior. As the doping level increases, the (π, π) AFM peak
+gets suppressed for both cases, and the peak location deviates from kx = π upon exceeding a specific doping level threshold.
+The suppression of AFM peak is stronger for the t′/t = −0.17 case as compared to that of t′/t = 0.17 case. In Fig. S8(c), we
+illustrate the wave vector kSDW associated with the dominant spin correlations. For t′/t = 0 .17, kSDW remains at π until the
+doping level becomes greater than δ ≃ 0.17. In contrast, for t′/t = −0.17, it stays at π only up to δ ≃ 0.1. These findings
+suggest that the AFM correlations are more robust in thet′/t = 0.17 case. This is consistent with experiments on cuprates where
+the AFM regime is “larger” in the electron-doped side than that in the hole-doped side.
+V . CHARGE DENSITY W A VE
+For t′/t = 0.17 > 0, we observe intertwined charge and pairing fluctuations in the dome below T ∗
+c . In Fig. 3(a) of the main
+text, we have shown the charge structure factor Sc(kx, ky = 0) as functions of kx and T for t′/t = 0.17, calculated for W = 6
+cylinder with doping level δ ≃ 1/12. Here, we further present the data calculated for W = 2 ladder in Fig. S9(a) and W = 4
+
+=== PDF PAGE 14 ===
+14
+-1 0 1
+10-1
+100
+T/J
+-1 0 1
+ -1 0 1
+ -1 0 1
+0.06
+0.08
+0.1
+0.12
+kx/π kx/π kx/π kx/π
+(a)  W=2  t'/t=0.17 (b)  W=4  t'/t=0.17 (c)  W=6  t'/t=0.17 (d)  W=6  t'/t=-0.17
+FIG. S9. Contour plots of charge structure factor Sc(kx, ky = 0) as functions of kx and T for doping level δ ≃ 1/12. (a-c) show the
+t′/t = 0 .17 case on W = 2 , 4, 6 lattices, respectively, and (d) shows the t′/t = −0.17 case on W = 6 cylinder. The dashed gray lines
+indicate the CDW vectors kx ≃ ±W πδ.
+5 10 15 20
+x
+0.8
+0.9
+1
+n(x)
+T/J=0.305,
+0.181,
+0.128,
+0.076
+DMRG
+5 10 15 20
+x
+0.9
+1
+T/J=0.318,
+0.189,
+0.134,
+0.079
+DMRG
+(a) W=2 (b) W=4
+FIG. S10. Real-space charge density distribution n(x) at various temperatures for (a) 2×64 ladder and (b) 4×20 cylinder. In (a) we plot n(x)
+with x ∈ [1, 20] for the sake of clarity. The dashed red lines are the ground-state DMRG results with 20 doped holes for the 2-leg ladder in (a)
+and 8 holes for the width-4 cylinder in (b). We find the finite-temperature simulations “shake hand” with the ground-state DMRG data in the
+zero-temperature limit.
+cylinder in (b). The W = 6 data are also shown in (c) for comparison. Similar to theW = 6 data, here we find that forW = 2, 4
+the CDW peaks also emerge at kx ≃ ± W πδ for T ≲ T ∗
+c . However, the intensity of the peaks decrease monotonically from
+W = 2 to W = 6. In Fig. S9(d) we also show the t′/t = −0.17 data calculated for W = 6 cylinder. Comparing (c) and (d), we
+find the CDW signature for t′/t = −0.17 is more prominent than the t′/t = 0.17 case at the same doping level δ ≃ 1/12.
+In Fig. S10 we show the real-space charge density distribution n(x) = 1
+W
+P
+y n(x, y), where the emergence of CDW modu-
+lations can be observed. As there is a quasi-long-range order present in the ground state, the charge density oscillates strongly in
+the presence of open boundaries, i.e., there exists prominent Friedel oscillations that penetrates deeply into the bulk. In Fig. S10
+we show n(x) for the 2-leg ladder (a) and width-4 cylinder (b) at various temperatures. As the system cools down, below
+T ∗
+c /J ≃ 0.15 the system leaves the PG regime and enter the SC dome. We find the charge distribution oscillations appear also
+below T ∗
+c and approach the ground-state modulations in the low temperature limit.
+VI. TEMPERATURE EVOLUTION OF SPIN AND CHARGE STRIPES
+For t′/t = −0.17 < 0, we find that both the SDW and CDW correlations develop as temperature lowers, which indicates the
+existence of a stripe order. We show the results on a 6×20 cylinder with t′/t = −0.17 and δ = 1/12 in Fig. S11. In Fig. S11(a),
+we show the spin correlations in real space (along the cylinder), and find the π-phase shift occurs for T ∗
+π /J ≃ 0.111. As
+shown in Fig. S11(b), we find the charge density distribution n(x) exhibits clear spatial modulations with the wave vector
+kCDW = 6δπ = π/2 below T ∗
+CDW/J ≃ 0.0833. Therefore, we conclude that the CDW onset temperature T ∗
+CDW is slightly below
+the spin stripe temperature T ∗
+π . This observation is consistent with the scenario described in Ref. [44], where the charge order
+is proposed to be driven by the development of spin stripe correlations. Note the stripes for t′/t < 0 case is neither filled nor
+half-filled in our W = 6 case, which is distinct from Ref. [44] where only filled stripes are observed for the t′ = 0 case.
+
+=== PDF PAGE 15 ===
+15
+3 4 5 6 7
+r
+-5
+0
+5
+10(-1)r F(r)
+10-3
+T/J=0.143
+0.125
+0.111
+0.1
+0.091
+0.083
+0.071
+0.063
+5 10 15 20
+x
+0.84
+0.86
+0.88
+0.9
+0.92
+0.94
+0.96
+0.98n(x)
+T/J=0.25
+0.2
+0.167
+0.125
+0.1
+0.0833
+0.0667
+0.05
+(a) (b)
+FIG. S11. Spin correlation and charge density distribution in real space for a 6 ×20 cylinder system with t′/t = −0.17 and δ = 1 /12.
+(a) A sign change occurs for the staggered spin correlations (−1)rF (r) along the cylinder (i.e., π-phase shift) below the spin-stripe onset
+temperature of T ∗
+π /J ≃ 0.111. (b) Charge density distribution n(x) is shown for different temperatures, and the charge stripe (i.e., spatial
+modulation) onset temperature is estimated as T ∗
+CDW/J ≃ 0.0833.
+FIG. S12. Contour plots of βG(k, β/2), calculated on a 6 × 6 square lattice with open boundary conditions. (a-c) show the results for
+t′/t = 0.17, at three different temperatures T /J = 1, 1/3 and 1/14, and with doping δ ≃ 0.12. The data have been shown in Fig. 4(a,b,d)
+of the main text, where they have been shifted by (π, π). The black dotted lines represent the ridges of βG(k, β/2) and indicate the Fermi
+surface. The grey dashed lines represent the Fermi surface of the free electron system with the same hopping amplitude and doping level. (d-f)
+show the results for t′/t = −0.17, with temperatures T /J = 1, 1/3 and 1/14, with doping δ ≃ 0.11.
+VII. SPECTRAL DENSITY
+In the main text, Figs. 4(a,b,d) display the temperature evolution of Matsubara Green’s functionβG(k, β/2) for t′/t = 0.17.
+In contrast, Fig. S12(a-c) herein presents the same data without a (π, π) shift, revealing that the Fermi surfaces in both the
+PG and SC regimes exhibit electron-like characteristics and enclose the origin (0, 0), instead of (π, π) after the particle-hole
+transformation. Despite this, the reduced spectral density around (π/2, π/2) in the PG and the distinctive nodal structure
+associated with dx2−y2-wave pairing in the SC regime remain evident.
+In Fig. S12(d-f), we present the temperature evolution of βG(k, β/2) for the t′/t = −0.17 case. We observe that the Fermi
+surface consistently exhibits hole-like characteristics, enclosing the (π, π) point. At high temperature T /J = 1 , the spectral
+density on the Fermi surface is featureless. However, as the temperature decreases to T /J = 1/3, the spectral densities remain
+bright near (π/2, π/2) and gets suppressed at around (π, π). In contrast to the t′/t = 0.17 case, further decrease in temperature
+
+=== PDF PAGE 16 ===
+16
+does not result in a significant change in the topology of the intensity pattern — it remains prominent at around (π/2, π/2).
