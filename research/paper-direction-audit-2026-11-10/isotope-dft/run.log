@@ -1,0 +1,29 @@
+同位素压力与多层 DFT 审计验证记录
+日期：2026-11-10
+分支：audit/room-temp-isotope-dft
+基线：80a994efc7949a33a9b2816f102195cf71ddbeda
+
+[source-freeze]
+isotope_pressure=6199a3f71c53ffe6dfe9505f942d713cdb8b8c8da87d35913898163c04366c07
+multilayer_dft=ef31a1048fe415dfff433effc7fd7caefc4b124b320b104eb5e595e6d0752c5c
+kruglov_pdf=25632b30de626a14d2607f9c4ae1c0c57e78b4af2e0723985a6558e00c1555a4
+isotope_pdf=b5c69550005f7b4e926b12a60078a649d9939cbf6af51e07f42eec4063cfb6a6
+jarvis_pdf=de1d282d5924f1a695e47a52f4e6bb8d696aea3e423ae894ca165452b47a03ab
+nickelate_search=c82c8d735270ac6a154682dfcac6507e3d59224520fd15c5478be93b9e371fa4
+两份原文与外部证据只读，不修改。
+
+[primary-source-retrieval]
+Scholar：Kruglov、同位素、JARVIS、镍酸盐四组检索均成功；另对镍酸盐 dome 精确检索 10 条。
+三份 arXiv PDF 下载成功；extract_sources.py 退出码 0。
+Kruglov：32 pages，54537 chars；同位素：7 pages，28534 chars；JARVIS：41 pages，71527 chars。
+APS 原始页面确认 Phys. Rev. B 101, 024508。
+Kruglov 表 1 的 271 K 星号脚注为 SCDFT；其余表内点为 Eliashberg。
+Durajski：约 150 GPa 的 249/180 K 对应约 0.46；原文表内 240/168 K 不能直接复用该系数。
+JARVIS：1000+/150+ 是既有零压数据，over 900、0–500 GPa、122 个候选是本次新增高压研究。
+初次曾将 1000+/150+ 误判为不相容，阅读全文后已纠正为真实既有数据角色；最终审计不列其为错误。
+
+[RED: missing review.json]
+命令：python research/paper-direction-audit-2026-11-10/isotope-dft/test_isotope_dft_audit.py -v
+退出码：1
+关键输出：setUpClass ERROR；FileNotFoundError: isotope-dft/review.json；Ran 0 tests；FAILED (errors=1)。
+判定：符合预期 RED，唯一证据对象尚未生成；零测试发现保护生效。
