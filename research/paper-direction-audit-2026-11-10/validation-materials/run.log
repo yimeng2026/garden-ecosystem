@@ -1,0 +1,27 @@
+实验验证与材料预测审计验证记录
+日期：2026-11-10
+分支：audit/room-temp-validation-materials
+基线：b72352abcc9ce617608a7485599499f1889cd615
+
+[source-freeze]
+validation_report=51a4709522000dca521dcecd071f20766763821eca94cb9e279335ea91f47e90
+material_predictions=050b52aa56bb633fd1db95e198f9804085de26080f4b18f135f44e3c8ef326ef
+numeric_spotcheck=c11de34cb4f238e9c837effb735ebc9629921ea9494af28d474d75fddcee95d9
+primary_excerpts=62cf61470cc7be0d17ee5e53a7e9f01b8cf8013c009698526aeafdcf5c281528
+两份原文和复算脚本只读，不修改。
+
+[primary-source-check]
+Frontiers DOI 10.3389/femat.2022.837651：294 K 初始值、不可逆 556 K onset、高阶/取代氢化物；无 Meissner 和可靠高温 H–T 相图。
+PMC8856608：未掺杂和低掺杂 La1−xCaxNiO2 薄膜绝缘；超导穹顶 0.15 < x < 0.3。
+arXiv:1804.08224v3：200 GPa 下 6.25% Cl→161 K，12.5% Cl→136 K；Cl 削弱超导但降低稳定压力。
+文内公式复算：H3S=161.081843791778823 K，H-S-Cl=237.894818964651591 K；不是第一性原理结果。
+
+[RED: missing review.json]
+命令：python research/paper-direction-audit-2026-11-10/validation-materials/test_validation_materials_audit.py -v
+退出码：1
+关键输出：
+setUpClass (__main__.ValidationMaterialsAuditTests) ... ERROR
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-methods-audit\\research\\paper-direction-audit-2026-11-10\\validation-materials\\review.json'
+Ran 0 tests in 0.002s
+FAILED (errors=1)
+判定：符合预期 RED，原因是唯一证据对象尚不存在。
