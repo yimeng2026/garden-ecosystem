@@ -53,9 +53,9 @@
 
 - [x] 两套测试、JSON、DOCX 哈希、`docx.py validate` 和 `git diff --check` 全部退出 0。
 - [x] SVG 和提取文本只通过 `.gitattributes` 保留原始空白，PDF 标 binary。
-- [ ] 仅暂存本批文件，提交 `docs: audit technical delivery and validation evidence`。
-- [ ] 推送 `audit/room-temp-technical-docs`，核对远端哈希，不合并主分支。
-- [ ] 记录最终交付并继续杂志设计和项目介绍，保持全库目标 active。
+- [x] 仅暂存本批文件，提交 `docs: audit technical delivery and validation evidence`。
+- [x] 推送 `audit/room-temp-technical-docs`，核对远端哈希，不合并主分支。
+- [x] 记录最终交付；杂志设计和项目介绍列入后续审计，全库目标保持 active。
 
 ## 计划自审
 
