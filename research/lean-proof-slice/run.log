@@ -1,0 +1,35 @@
+Lean 最小真实证明切片验证记录
+日期：2026-11-11
+分支：fix/lean-proof-slice
+基线：db7e1eb2e805f7b88ac4e92335840a0629f10a52
+设计提交：fdcbec31afdd8f71dd52a7dc3cc481af0ddee889
+工作树：复用 room-temp-isotope-dft-audit，未嵌套创建，未使用子代理。
+
+[source-freeze]
+original_sha256=1971e95d7b375c24778d3adae8a1ab3be4c5abeb1ee8b79a2b1f347b7aa00439
+original_bytes=8015
+imports=5
+noncomputable_definitions=5
+theorems=3
+sorry_lines=[93,112,185]
+elan_asset=elan-x86_64-pc-windows-msvc.zip
+elan_bytes=2508099
+elan_sha256=fad2e980a191c15884cc1d80d170ffc5fa84f3774541020145b66d1a644c6111
+lean=leanprover/lean4:v4.35.0
+mathlib=56a005855ea17e0b0958f73ec801ae140b0a1679
+
+[environment-inventory]
+PATH 中未找到 lean、lake 或 elan；工作区、D:/migration 和常见工具目录未找到可复用 Lean。
+未找到可复用 Mathlib 源码或容器环境。
+静态检查不被视为机器证明。官方资产只有在字节数与 SHA-256 均匹配后才允许解压和执行。
+
+[scope]
+只验证 allenDynesTc、h3s_tc_prediction、lah10_tc_prediction 的定义展开。
+三个新证明只使用 rfl，不调用原三条 sorry 定理，不新增公理或证明位 sorry。
+定义编译通过不等于物理证明、材料预测、数值模型或实验验证通过。
+
+[RED: missing proof-slice.json]
+命令：python research/lean-proof-slice/test_lean_slice.py -v
+退出码：1
+关键输出：setUpClass ERROR；FileNotFoundError: lean-proof-slice/proof-slice.json；Ran 0 tests；FAILED (errors=1)。
+判定：符合预期 RED，真实编译证据对象尚未生成；零测试发现保护生效。
