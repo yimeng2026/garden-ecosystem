@@ -214,7 +214,7 @@ git commit -m "feat: decompose disorder sensitivity by mean drive"
 
 - [ ] **Step 1: Independently reconstruct the model and raw outcomes**
 
-`verify_kick_map.py` must rebuild `U=K(a)FK(a)` for `N=160,a=0.1`, check unitarity and candidate metrics, confirm `U(k=0)` is `+I` within `1e-10` at `a=π/14`, recompute pass counts and test subspace rotation invariance. Assert the original disorder verdict remains `not_supported` and no disorder winding was computed.
+`verify_kick_map.py` must rebuild `U=K(a)FK(a)` for `N=160,a=0.1`, check unitarity and candidate metrics, confirm `U(k=π)` is `−I` within `1e-10` at `a=π/14` (negative-hopping map `k=π → b0`, odd integer 1) and `U(k=0)` is `+I` at `a=0` (`k=0 → bπ`, even integer 2), recompute pass counts and test subspace rotation invariance. Assert the original disorder verdict remains `not_supported` and no disorder winding was computed.
 
 - [ ] **Step 2: Generate four data-driven panels**
 

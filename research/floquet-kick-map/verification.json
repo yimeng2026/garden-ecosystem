@@ -1,0 +1,81 @@
+{
+  "schema": "floquet-kick-map-verification-v1",
+  "recorded_utc": "2026-11-10T20:38:37.870488+00:00",
+  "all_passed": true,
+  "results": [
+    {
+      "script": "run_kick_map.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-kick-map\\run_kick_map.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "decompose_disorder.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-kick-map\\decompose_disorder.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "test_kick_map.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-kick-map\\test_kick_map.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "verify_kick_map.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-kick-map\\verify_kick_map.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "build_markdown.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-kick-map\\build_markdown.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "build_figure.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-kick-map\\build_figure.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "script": "test_report.py",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-kick-map\\test_report.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "model_and_grid_tests": 7,
+  "independent_tests": 5,
+  "report_tests": 2,
+  "grid_records": 45,
+  "decomposition_rows": 216,
+  "original_disorder_assessment": "not_supported",
+  "full_size_rule_status": "inconclusive_preserved",
+  "results_sha256": "832ec243574b6a9091b6eefdac7966daee242c6556a504aa9dd2592c82daf279",
+  "sensitivity_sha256": "de0b3d03defbb5e6432bf44d70ec49a70651370c9bb1d7da25eba1ff74260246",
+  "docx_sha256": "bdb184b4b0b8231db39af3a1e6a68d19d7b00e940b5b2c324fbf667780fe7ffb",
+  "disorder_winding_computed": false,
+  "thermodynamic_limit_proof": false,
+  "material_tc_prediction": false,
+  "experimental_validation": false,
+  "log": "run.log"
+}

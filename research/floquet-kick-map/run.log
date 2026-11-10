@@ -1,0 +1,692 @@
+$ python research/floquet-kick-map/run_kick_map.py
+N=80 a=0.000000000: zero=False, pi=False, endpoint=gapless_or_undefined
+N=80 a=0.025000000: zero=False, pi=False, endpoint=ok
+N=80 a=0.050000000: zero=False, pi=False, endpoint=ok
+N=80 a=0.075000000: zero=False, pi=False, endpoint=ok
+N=80 a=0.100000000: zero=True, pi=False, endpoint=ok
+N=80 a=0.125000000: zero=True, pi=True, endpoint=ok
+N=80 a=0.150000000: zero=True, pi=True, endpoint=ok
+N=80 a=0.175000000: zero=True, pi=True, endpoint=ok
+N=80 a=0.200000000: zero=True, pi=True, endpoint=ok
+N=80 a=0.220000000: zero=True, pi=False, endpoint=ok
+N=80 a=0.224399475: zero=True, pi=False, endpoint=gapless_or_undefined
+N=80 a=0.240000000: zero=True, pi=False, endpoint=ok
+N=80 a=0.250000000: zero=True, pi=False, endpoint=ok
+N=80 a=0.300000000: zero=True, pi=False, endpoint=ok
+N=160 a=0.000000000: zero=False, pi=False, endpoint=gapless_or_undefined
+N=160 a=0.025000000: zero=False, pi=False, endpoint=ok
+N=160 a=0.050000000: zero=True, pi=True, endpoint=ok
+N=160 a=0.075000000: zero=True, pi=True, endpoint=ok
+N=160 a=0.100000000: zero=True, pi=True, endpoint=ok
+N=160 a=0.125000000: zero=True, pi=True, endpoint=ok
+N=160 a=0.150000000: zero=True, pi=True, endpoint=ok
+N=160 a=0.175000000: zero=True, pi=True, endpoint=ok
+N=160 a=0.200000000: zero=True, pi=True, endpoint=ok
+N=160 a=0.220000000: zero=True, pi=False, endpoint=ok
+N=160 a=0.224399475: zero=True, pi=False, endpoint=gapless_or_undefined
+N=160 a=0.240000000: zero=True, pi=False, endpoint=ok
+N=160 a=0.250000000: zero=True, pi=False, endpoint=ok
+N=160 a=0.300000000: zero=True, pi=False, endpoint=ok
+N=320 a=0.000000000: zero=False, pi=False, endpoint=gapless_or_undefined
+N=320 a=0.025000000: zero=True, pi=True, endpoint=ok
+N=320 a=0.050000000: zero=True, pi=True, endpoint=ok
+N=320 a=0.075000000: zero=True, pi=True, endpoint=ok
+N=320 a=0.100000000: zero=True, pi=True, endpoint=ok
+N=320 a=0.125000000: zero=True, pi=True, endpoint=ok
+N=320 a=0.150000000: zero=True, pi=True, endpoint=ok
+N=320 a=0.175000000: zero=True, pi=True, endpoint=ok
+N=320 a=0.200000000: zero=True, pi=True, endpoint=ok
+N=320 a=0.220000000: zero=True, pi=True, endpoint=ok
+N=320 a=0.224399475: zero=True, pi=False, endpoint=gapless_or_undefined
+N=320 a=0.240000000: zero=True, pi=False, endpoint=ok
+N=320 a=0.250000000: zero=True, pi=False, endpoint=ok
+N=320 a=0.300000000: zero=True, pi=False, endpoint=ok
+N=640 a=0.050000000: zero=True, pi=True, endpoint=ok
+N=640 a=0.100000000: zero=True, pi=True, endpoint=ok
+N=640 a=0.200000000: zero=True, pi=True, endpoint=ok
+{
+  "grid_count": 45,
+  "pass_islands": [
+    {
+      "n": 80,
+      "target": "zero",
+      "start": 0.1,
+      "end": 0.3,
+      "a_values": [
+        0.1,
+        0.125,
+        0.15,
+        0.175,
+        0.2,
+        0.22,
+        0.2243994752564138,
+        0.24,
+        0.25,
+        0.3
+      ],
+      "endpoint_p0": [
+        null,
+        1
+      ],
+      "endpoint_p_pi": [
+        null,
+        0,
+        1
+      ],
+      "selected_amplitudes_only": false,
+      "interval_semantics": "grid_samples_not_a_precision_boundary"
+    },
+    {
+      "n": 80,
+      "target": "pi",
+      "start": 0.125,
+      "end": 0.2,
+      "a_values": [
+        0.125,
+        0.15,
+        0.175,
+        0.2
+      ],
+      "endpoint_p0": [
+        1
+      ],
+      "endpoint_p_pi": [
+        1
+      ],
+      "selected_amplitudes_only": false,
+      "interval_semantics": "grid_samples_not_a_precision_boundary"
+    },
+    {
+      "n": 160,
+      "target": "zero",
+      "start": 0.05,
+      "end": 0.3,
+      "a_values": [
+        0.05,
+        0.075,
+        0.1,
+        0.125,
+        0.15,
+        0.175,
+        0.2,
+        0.22,
+        0.2243994752564138,
+        0.24,
+        0.25,
+        0.3
+      ],
+      "endpoint_p0": [
+        null,
+        1
+      ],
+      "endpoint_p_pi": [
+        null,
+        0,
+        1
+      ],
+      "selected_amplitudes_only": false,
+      "interval_semantics": "grid_samples_not_a_precision_boundary"
+    },
+    {
+      "n": 160,
+      "target": "pi",
+      "start": 0.05,
+      "end": 0.2,
+      "a_values": [
+        0.05,
+        0.075,
+        0.1,
+        0.125,
+        0.15,
+        0.175,
+        0.2
+      ],
+      "endpoint_p0": [
+        1
+      ],
+      "endpoint_p_pi": [
+        1
+      ],
+      "selected_amplitudes_only": false,
+      "interval_semantics": "grid_samples_not_a_precision_boundary"
+    },
+    {
+      "n": 320,
+      "target": "zero",
+      "start": 0.025,
+      "end": 0.3,
+      "a_values": [
+        0.025,
+        0.05,
+        0.075,
+        0.1,
+        0.125,
+        0.15,
+        0.175,
+        0.2,
+        0.22,
+        0.2243994752564138,
+        0.24,
+        0.25,
+        0.3
+      ],
+      "endpoint_p0": [
+        null,
+        1
+      ],
+      "endpoint_p_pi": [
+        null,
+        0,
+        1
+      ],
+      "selected_amplitudes_only": false,
+      "interval_semantics": "grid_samples_not_a_precision_boundary"
+    },
+    {
+      "n": 320,
+      "target": "pi",
+      "start": 0.025,
+      "end": 0.22,
+      "a_values": [
+        0.025,
+        0.05,
+        0.075,
+        0.1,
+        0.125,
+        0.15,
+        0.175,
+        0.2,
+        0.22
+      ],
+      "endpoint_p0": [
+        1
+      ],
+      "endpoint_p_pi": [
+        1
+      ],
+      "selected_amplitudes_only": false,
+      "interval_semantics": "grid_samples_not_a_precision_boundary"
+    },
+    {
+      "n": 640,
+      "target": "zero",
+      "start": 0.05,
+      "end": 0.05,
+      "a_values": [
+        0.05
+      ],
+      "endpoint_p0": [
+        1
+      ],
+      "endpoint_p_pi": [
+        1
+      ],
+      "selected_amplitudes_only": true,
+      "interval_semantics": "selected_points_not_an_interval"
+    },
+    {
+      "n": 640,
+      "target": "zero",
+      "start": 0.1,
+      "end": 0.1,
+      "a_values": [
+        0.1
+      ],
+      "endpoint_p0": [
+        1
+      ],
+      "endpoint_p_pi": [
+        1
+      ],
+      "selected_amplitudes_only": true,
+      "interval_semantics": "selected_points_not_an_interval"
+    },
+    {
+      "n": 640,
+      "target": "zero",
+      "start": 0.2,
+      "end": 0.2,
+      "a_values": [
+        0.2
+      ],
+      "endpoint_p0": [
+        1
+      ],
+      "endpoint_p_pi": [
+        1
+      ],
+      "selected_amplitudes_only": true,
+      "interval_semantics": "selected_points_not_an_interval"
+    },
+    {
+      "n": 640,
+      "target": "pi",
+      "start": 0.05,
+      "end": 0.05,
+      "a_values": [
+        0.05
+      ],
+      "endpoint_p0": [
+        1
+      ],
+      "endpoint_p_pi": [
+        1
+      ],
+      "selected_amplitudes_only": true,
+      "interval_semantics": "selected_points_not_an_interval"
+    },
+    {
+      "n": 640,
+      "target": "pi",
+      "start": 0.1,
+      "end": 0.1,
+      "a_values": [
+        0.1
+      ],
+      "endpoint_p0": [
+        1
+      ],
+      "endpoint_p_pi": [
+        1
+      ],
+      "selected_amplitudes_only": true,
+      "interval_semantics": "selected_points_not_an_interval"
+    },
+    {
+      "n": 640,
+      "target": "pi",
+      "start": 0.2,
+      "end": 0.2,
+      "a_values": [
+        0.2
+      ],
+      "endpoint_p0": [
+        1
+      ],
+      "endpoint_p_pi": [
+        1
+      ],
+      "selected_amplitudes_only": true,
+      "interval_semantics": "selected_points_not_an_interval"
+    }
+  ]
+}
+exit_code=0
+$ python research/floquet-kick-map/decompose_disorder.py
+{
+  "row_count": 216,
+  "summary": [
+    {
+      "n": 80,
+      "strength": 0.05,
+      "target": "zero",
+      "category": "uniform_fails",
+      "count": 16,
+      "median_abs_distance_delta": 0.0006648703497840825,
+      "median_abs_edge_delta": 0.04558228172947448,
+      "median_abs_subspace_ipr_delta": 0.003575414132565378,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 80,
+      "strength": 0.05,
+      "target": "pi",
+      "category": "uniform_fails",
+      "count": 16,
+      "median_abs_distance_delta": 0.0018187518547749786,
+      "median_abs_edge_delta": 0.013848365944070698,
+      "median_abs_subspace_ipr_delta": 0.0010390251280627642,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 80,
+      "strength": 0.1,
+      "target": "zero",
+      "category": "uniform_fails",
+      "count": 16,
+      "median_abs_distance_delta": 0.0027281618377749664,
+      "median_abs_edge_delta": 0.037003850496579366,
+      "median_abs_subspace_ipr_delta": 0.006045699295289725,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 80,
+      "strength": 0.1,
+      "target": "pi",
+      "category": "uniform_fails",
+      "count": 16,
+      "median_abs_distance_delta": 0.0016704603711356397,
+      "median_abs_edge_delta": 0.021374275262599052,
+      "median_abs_subspace_ipr_delta": 0.005408059620878765,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 80,
+      "strength": 0.2,
+      "target": "zero",
+      "category": "both_pass",
+      "count": 3,
+      "median_abs_distance_delta": 0.0002944625242657739,
+      "median_abs_edge_delta": 0.04243251278211413,
+      "median_abs_subspace_ipr_delta": 0.04711875182585898,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 80,
+      "strength": 0.2,
+      "target": "zero",
+      "category": "fluctuation_sensitive",
+      "count": 8,
+      "median_abs_distance_delta": 0.000996746201787239,
+      "median_abs_edge_delta": 0.17149043149876894,
+      "median_abs_subspace_ipr_delta": 0.03533714614856122,
+      "outcome_change_count": 8
+    },
+    {
+      "n": 80,
+      "strength": 0.2,
+      "target": "zero",
+      "category": "uniform_fails",
+      "count": 5,
+      "median_abs_distance_delta": 0.0015488264428051336,
+      "median_abs_edge_delta": 0.09822555669025057,
+      "median_abs_subspace_ipr_delta": 0.020398439898985668,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 80,
+      "strength": 0.2,
+      "target": "pi",
+      "category": "both_pass",
+      "count": 2,
+      "median_abs_distance_delta": 0.0007096382538910877,
+      "median_abs_edge_delta": 0.03270388979782479,
+      "median_abs_subspace_ipr_delta": 0.005880116521722961,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 80,
+      "strength": 0.2,
+      "target": "pi",
+      "category": "fluctuation_sensitive",
+      "count": 5,
+      "median_abs_distance_delta": 0.001186863358144054,
+      "median_abs_edge_delta": 0.09002856947878779,
+      "median_abs_subspace_ipr_delta": 0.025027589992560634,
+      "outcome_change_count": 5
+    },
+    {
+      "n": 80,
+      "strength": 0.2,
+      "target": "pi",
+      "category": "uniform_fails",
+      "count": 7,
+      "median_abs_distance_delta": 0.0013620626347512197,
+      "median_abs_edge_delta": 0.06862201400110357,
+      "median_abs_subspace_ipr_delta": 0.023280561638500175,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 80,
+      "strength": 0.2,
+      "target": "pi",
+      "category": "fluctuation_assisted",
+      "count": 2,
+      "median_abs_distance_delta": 0.0006894208358123831,
+      "median_abs_edge_delta": 0.03166911889565971,
+      "median_abs_subspace_ipr_delta": 0.015593446821007675,
+      "outcome_change_count": 2
+    },
+    {
+      "n": 160,
+      "strength": 0.05,
+      "target": "zero",
+      "category": "uniform_fails",
+      "count": 15,
+      "median_abs_distance_delta": 0.0003354049455305825,
+      "median_abs_edge_delta": 0.06738488117196567,
+      "median_abs_subspace_ipr_delta": 0.0028172750266151417,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 160,
+      "strength": 0.05,
+      "target": "zero",
+      "category": "fluctuation_assisted",
+      "count": 1,
+      "median_abs_distance_delta": 4.309879104384207e-05,
+      "median_abs_edge_delta": 0.2468082374740811,
+      "median_abs_subspace_ipr_delta": 0.03638518454606472,
+      "outcome_change_count": 1
+    },
+    {
+      "n": 160,
+      "strength": 0.05,
+      "target": "pi",
+      "category": "uniform_fails",
+      "count": 16,
+      "median_abs_distance_delta": 0.0006994596105161907,
+      "median_abs_edge_delta": 0.015896708401432036,
+      "median_abs_subspace_ipr_delta": 0.001700156713956548,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 160,
+      "strength": 0.1,
+      "target": "zero",
+      "category": "both_pass",
+      "count": 1,
+      "median_abs_distance_delta": 0.0002691770555644502,
+      "median_abs_edge_delta": 0.004584715968263153,
+      "median_abs_subspace_ipr_delta": 0.008056038442270652,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 160,
+      "strength": 0.1,
+      "target": "zero",
+      "category": "fluctuation_sensitive",
+      "count": 15,
+      "median_abs_distance_delta": 0.0005851996626924581,
+      "median_abs_edge_delta": 0.1198540293016298,
+      "median_abs_subspace_ipr_delta": 0.016463676975293287,
+      "outcome_change_count": 15
+    },
+    {
+      "n": 160,
+      "strength": 0.1,
+      "target": "pi",
+      "category": "both_pass",
+      "count": 16,
+      "median_abs_distance_delta": 0.0002997344224158371,
+      "median_abs_edge_delta": 0.03358508233297469,
+      "median_abs_subspace_ipr_delta": 0.005092280910162665,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 160,
+      "strength": 0.2,
+      "target": "zero",
+      "category": "both_pass",
+      "count": 15,
+      "median_abs_distance_delta": 9.078161327760078e-05,
+      "median_abs_edge_delta": 0.14938742351102674,
+      "median_abs_subspace_ipr_delta": 0.027257517844703386,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 160,
+      "strength": 0.2,
+      "target": "zero",
+      "category": "fluctuation_sensitive",
+      "count": 1,
+      "median_abs_distance_delta": 0.0009018173803246647,
+      "median_abs_edge_delta": 0.48179516970885683,
+      "median_abs_subspace_ipr_delta": 0.0867739044230098,
+      "outcome_change_count": 1
+    },
+    {
+      "n": 160,
+      "strength": 0.2,
+      "target": "pi",
+      "category": "both_pass",
+      "count": 15,
+      "median_abs_distance_delta": 4.5159816140238974e-05,
+      "median_abs_edge_delta": 0.053567058556080904,
+      "median_abs_subspace_ipr_delta": 0.018182281704892805,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 160,
+      "strength": 0.2,
+      "target": "pi",
+      "category": "fluctuation_sensitive",
+      "count": 1,
+      "median_abs_distance_delta": 0.00014168198315182728,
+      "median_abs_edge_delta": 0.3446230733058389,
+      "median_abs_subspace_ipr_delta": 0.06762978395745672,
+      "outcome_change_count": 1
+    },
+    {
+      "n": 320,
+      "strength": 0.05,
+      "target": "zero",
+      "category": "both_pass",
+      "count": 2,
+      "median_abs_distance_delta": 4.039262677780289e-05,
+      "median_abs_edge_delta": 0.023741383566978913,
+      "median_abs_subspace_ipr_delta": 0.005894034511882987,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 320,
+      "strength": 0.05,
+      "target": "zero",
+      "category": "fluctuation_sensitive",
+      "count": 2,
+      "median_abs_distance_delta": 2.7609788985702183e-05,
+      "median_abs_edge_delta": 0.22598502468646237,
+      "median_abs_subspace_ipr_delta": 0.006605503953819486,
+      "outcome_change_count": 2
+    },
+    {
+      "n": 320,
+      "strength": 0.05,
+      "target": "pi",
+      "category": "both_pass",
+      "count": 2,
+      "median_abs_distance_delta": 6.621230288646776e-05,
+      "median_abs_edge_delta": 0.014105863318990997,
+      "median_abs_subspace_ipr_delta": 0.0009805495858275157,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 320,
+      "strength": 0.05,
+      "target": "pi",
+      "category": "fluctuation_sensitive",
+      "count": 2,
+      "median_abs_distance_delta": 0.00028315977914328256,
+      "median_abs_edge_delta": 0.020353238803048956,
+      "median_abs_subspace_ipr_delta": 0.001581988477136538,
+      "outcome_change_count": 2
+    },
+    {
+      "n": 320,
+      "strength": 0.1,
+      "target": "zero",
+      "category": "both_pass",
+      "count": 1,
+      "median_abs_distance_delta": 3.232385257176287e-05,
+      "median_abs_edge_delta": 0.005164029578277107,
+      "median_abs_subspace_ipr_delta": 0.00021674085463141424,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 320,
+      "strength": 0.1,
+      "target": "zero",
+      "category": "fluctuation_sensitive",
+      "count": 3,
+      "median_abs_distance_delta": 0.00012159894402963843,
+      "median_abs_edge_delta": 0.30103915511387647,
+      "median_abs_subspace_ipr_delta": 0.02597353196537608,
+      "outcome_change_count": 3
+    },
+    {
+      "n": 320,
+      "strength": 0.1,
+      "target": "pi",
+      "category": "both_pass",
+      "count": 4,
+      "median_abs_distance_delta": 9.29152706926409e-06,
+      "median_abs_edge_delta": 0.053864873139553904,
+      "median_abs_subspace_ipr_delta": 0.008560392296085583,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 320,
+      "strength": 0.2,
+      "target": "zero",
+      "category": "both_pass",
+      "count": 4,
+      "median_abs_distance_delta": 8.066745525726308e-07,
+      "median_abs_edge_delta": 0.08872042506621036,
+      "median_abs_subspace_ipr_delta": 0.030779402776731045,
+      "outcome_change_count": 0
+    },
+    {
+      "n": 320,
+      "strength": 0.2,
+      "target": "pi",
+      "category": "both_pass",
+      "count": 4,
+      "median_abs_distance_delta": 7.651253880473785e-09,
+      "median_abs_edge_delta": 0.05469445344758783,
+      "median_abs_subspace_ipr_delta": 0.027778228960318757,
+      "outcome_change_count": 0
+    }
+  ]
+}
+exit_code=0
+$ python research/floquet-kick-map/test_kick_map.py -v
+test_all_216_rows_and_exact_mean_identity (__main__.SensitivityArtifactTests.test_all_216_rows_and_exact_mean_identity) ... ok
+test_mechanical_categories_match_previous_raw_outcomes (__main__.SensitivityArtifactTests.test_mechanical_categories_match_previous_raw_outcomes) ... ok
+test_grid_has_45_records_and_two_unique_singular_amplitudes (__main__.UniformArtifactTests.test_grid_has_45_records_and_two_unique_singular_amplitudes) ... ok
+test_profiles_and_island_semantics (__main__.UniformArtifactTests.test_profiles_and_island_semantics) ... ok
+test_gapped_counts_and_negative_hopping_endpoint_map (__main__.UniformModelTests.test_gapped_counts_and_negative_hopping_endpoint_map) ... ok
+test_two_gapless_amplitudes_are_rejected (__main__.UniformModelTests.test_two_gapless_amplitudes_are_rejected) ... ok
+test_uniform_model_matches_validated_clean_model (__main__.UniformModelTests.test_uniform_model_matches_validated_clean_model) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.012s
+
+OK
+exit_code=0
+$ python research/floquet-kick-map/verify_kick_map.py -v
+test_both_singularities_have_correct_momentum_mapping (__main__.IndependentKickMapTests.test_both_singularities_have_correct_momentum_mapping) ... ok
+test_candidate_counts_respect_the_analytic_transition (__main__.IndependentKickMapTests.test_candidate_counts_respect_the_analytic_transition) ... ok
+test_raw_profiles_csvs_and_unitarity (__main__.IndependentKickMapTests.test_raw_profiles_csvs_and_unitarity) ... ok
+test_selected_uniform_chain_reconstruction_and_rotation (__main__.IndependentKickMapTests.test_selected_uniform_chain_reconstruction_and_rotation) ... ok
+test_sensitivity_identity_categories_and_source_hash (__main__.IndependentKickMapTests.test_sensitivity_identity_categories_and_source_hash) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.624s
+
+OK
+exit_code=0
+$ python research/floquet-kick-map/build_markdown.py
+C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-kick-map\README.md
+exit_code=0
+$ python research/floquet-kick-map/build_figure.py
+C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-kick-map\kick-map.png
+exit_code=0
+$ python research/floquet-kick-map/test_report.py -v
+test_markdown_has_correct_singularities_and_transition (__main__.KickMapReportTests.test_markdown_has_correct_singularities_and_transition) ... ok
+test_word_contains_current_counts_sources_and_native_structure (__main__.KickMapReportTests.test_word_contains_current_counts_sources_and_native_structure) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+OK
+exit_code=0
