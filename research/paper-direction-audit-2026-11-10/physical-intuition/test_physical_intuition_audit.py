@@ -48,7 +48,8 @@ class PhysicalIntuitionAuditTests(unittest.TestCase):
 
     def test_actual_test_count_and_other_observations(self):
         verification = self.data["evidence"]
-        self.assertEqual(verification["unit_tests"], {"passed": 41, "total": 41})
+        self.assertEqual(verification["unit_tests"]["passed"], 41)
+        self.assertEqual(verification["unit_tests"]["total"], 41)
         self.assertGreater(
             verification["planck_lensing"]["maximum_delta_chi_squared"],
             1238.0,

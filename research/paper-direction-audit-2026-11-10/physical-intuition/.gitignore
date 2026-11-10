@@ -1,0 +1,4 @@
+node_modules/
+__pycache__/
+word-qa/*.png
+REVIEW.candidate.docx

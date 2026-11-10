@@ -1,0 +1,18 @@
+{
+  "file": "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\physical-intuition-audit\\research\\paper-direction-audit-2026-11-10\\physical-intuition\\REVIEW.docx",
+  "finalValidation": {
+    "sha256": "591b36b564c44874ba091fe8e7a12d7faeb9c9088d5dd598baa05542c9d2b978",
+    "command": "python C:/Users/一梦/AppData/Roaming/kimi-desktop/daimon-share/daimon/runtime/kimi-code/home/plugins/managed/kimi-word/skills/kimi-word/scripts/docx.py validate C:/Users/一梦/Documents/kimi/workspace/.worktrees/physical-intuition-audit/research/paper-direction-audit-2026-11-10/physical-intuition/REVIEW.docx",
+    "exitCode": 0,
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)"
+  },
+  "visualQA": {
+    "status": "unavailable",
+    "exitCode": 6,
+    "error": "E_RENDER_FAILED: EPERM, Permission denied on the temporary render directory. Visual QA is unavailable here; no retry and no LibreOffice fallback was used.",
+    "contactSheetRead": false,
+    "reviewedPages": [],
+    "visualPassClaimed": false,
+    "deliveryBasis": "OOXML validation gate and six content contract tests only; no visual verification is claimed."
+  }
+}
