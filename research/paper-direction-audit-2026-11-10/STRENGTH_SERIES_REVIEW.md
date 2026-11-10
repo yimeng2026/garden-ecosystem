@@ -237,3 +237,11 @@ $$\psi_{\mathrm{toy}}''(\mu)=1 \quad\Longrightarrow\quad \frac{1}{\psi_{\mathrm{
 - 含报告和 Word 验收的完整 K2 回归实际 52/52 通过，退出码 0。
 - 原生 Word 共 4 页并逐页检查，无空白页或裁切；低风险 `w:lvlOverride` 仅为目录编号兼容提示。
 - 有限生成性与三个局部像模等价均已具备；稳定相似见证组合、商层分类和 K0(R) 仍未完成，有限生成性不单独等同于投射性。
+
+## K2 稳定相似像模等价链复核补记（2026-11-10）
+
+- [稳定相似像模等价链报告](kimi-cite://text?path=C%3A%5CUsers%5C%E4%B8%80%E6%A2%A6%5CDocuments%5Ckimi%5Cworkspace%5C.worktrees%5Ctoe-k0-universal%5Cpapers%5C%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96_%E7%B3%BB%E5%88%97%5C_panel_records%5CK2_STABLE_SIMILARITY_RANGE_EQUIV.md&text=K2%20%E7%A8%B3%E5%AE%9A%E7%9B%B8%E4%BC%BC%E5%83%8F%E6%A8%A1%E7%AD%89%E4%BB%B7%E9%93%BE%EF%BC%9A%E5%9B%9B%E6%AE%B5%E6%9E%84%E9%80%A0%E4%B8%8E%E8%A7%81%E8%AF%81%E7%BB%84%E5%90%88 "citation")及[原生 Word](C:\Users\一梦\Documents\kimi\workspace\.worktrees\toe-k0-universal\papers\数学基础强化_系列\_panel_records\K2_STABLE_SIMILARITY_RANGE_EQUIV.docx)。
+- `python verify_k2_stable_similarity_range_equiv_20261110.py` 实际退出码 0，13/13 检查通过；五个相关构造均只依赖 Lean 标准三公理。
+- 含报告和 Word 验收的完整 K2 回归实际 56/56 通过，退出码 0。
+- 原生 Word 共 5 页并逐页检查，无空白页或裁切；低风险 `w:lvlOverride` 仅为目录编号兼容提示。
+- 稳定相似保持像模同构类型已经闭合；商层分类、逆向构造、直和幺半群和 K0(R) 仍未完成，矩阵实例使用交换环。

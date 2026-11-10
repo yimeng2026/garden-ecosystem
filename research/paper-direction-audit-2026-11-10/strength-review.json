@@ -232,7 +232,7 @@
       "evidence": "papers/数学基础强化_系列/21_代数K理论_从向量丛到普适不变量.md",
       "source_line_1": "# 代数 K 理论：从向量丛到普适不变量",
       "resolution_2026_11_10": {
-        "status": "K2_matrix_range_finite_verified_stable_classification_open",
+        "status": "K2_stable_similarity_range_equiv_verified_quotient_classification_open",
         "theorem": "SylvaK0Probe.universal_property",
         "upstream": "Algebra.GrothendieckAddGroup.lift（mathlib 已有同态等价）",
         "compile_exit_code": 0,
@@ -549,6 +549,33 @@
           "stable_similarity_classification_completed": false,
           "general_k0_completed": false,
           "scope": "交换环上任意矩阵的列向量像模有限生成性；稳定相似见证组合、商层分类和 K0(R) 未完成。"
+        },
+        "k2_stable_similarity_range_equiv": {
+          "constructions": [
+            "conjugate_range_linearEquiv",
+            "similar_range_linearEquiv",
+            "zeroExtend_range_linearEquiv",
+            "reindex_range_linearEquiv",
+            "stableSimilar_range_linearEquiv"
+          ],
+          "compile_exit_code": 0,
+          "checks": "13/13",
+          "k2_regression": "56/56",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "proof": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2_stable_similarity_range_equiv_probe_20261110.lean",
+          "log": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2_stable_similarity_range_equiv_compile_log_20261110.txt",
+          "report": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K2_STABLE_SIMILARITY_RANGE_EQUIV.md",
+          "native_word": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K2_STABLE_SIMILARITY_RANGE_EQUIV.docx",
+          "word_qa": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2-stable-similarity-range-equiv-word-qa\\report.json",
+          "word_pages": 5,
+          "stable_similarity_range_equiv_completed": true,
+          "stable_similarity_classification_completed": false,
+          "general_k0_completed": false,
+          "scope": "稳定相似保持像模同构类型；商层分类、逆向构造、直和幺半群和 K0(R) 未完成。"
         }
       }
     },
