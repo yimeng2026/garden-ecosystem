@@ -232,7 +232,7 @@
       "evidence": "papers/数学基础强化_系列/21_代数K理论_从向量丛到普适不变量.md",
       "source_line_1": "# 代数 K 理论：从向量丛到普适不变量",
       "resolution_2026_11_10": {
-        "status": "K2_idempotent_range_projective_verified_classification_open",
+        "status": "K2_similarity_range_equiv_verified_stable_classification_open",
         "theorem": "SylvaK0Probe.universal_property",
         "upstream": "Algebra.GrothendieckAddGroup.lift（mathlib 已有同态等价）",
         "compile_exit_code": 0,
@@ -453,6 +453,30 @@
           "stable_similarity_classification_completed": false,
           "general_k0_completed": false,
           "scope": "投射模上的幂等线性映射与交换环矩阵实例的像模投射性；有限生成性、稳定相似分类、直和幺半群和 K0(R) 未完成。"
+        },
+        "k2_similarity_range_equiv": {
+          "constructions": [
+            "conjugate_range_linearEquiv",
+            "similar_range_linearEquiv"
+          ],
+          "compile_exit_code": 0,
+          "checks": "10/10",
+          "k2_regression": "40/40",
+          "axioms": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "proof": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2_similarity_range_equiv_probe_20261110.lean",
+          "log": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2_similarity_range_equiv_compile_log_20261110.txt",
+          "report": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K2_SIMILARITY_RANGE_EQUIV.md",
+          "native_word": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\K2_SIMILARITY_RANGE_EQUIV.docx",
+          "word_qa": ".worktrees\\toe-k0-universal\\papers\\数学基础强化_系列\\_panel_records\\k2-similarity-range-equiv-word-qa\\report.json",
+          "word_pages": 5,
+          "range_equiv_completed": true,
+          "stable_similarity_classification_completed": false,
+          "general_k0_completed": false,
+          "scope": "共轭线性映射与交换环矩阵普通相似的像模等价；补零、重索引、有限生成性、稳定相似分类和 K0(R) 未完成。"
         }
       }
     },
