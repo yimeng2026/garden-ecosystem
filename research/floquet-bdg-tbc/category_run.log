@@ -1,0 +1,393 @@
+$ new_cell_registry: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\build_category_cells.py
+{"merge_only": true, "cases": 16, "protocol_sha256": "3cf8e4b5347cdadf2f172972243856530932be1c32a26c3a22fe7a11e38a9cac"}
+exit_code=0
+$ new_cell_independent_projectors: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_category_cells.py
+{
+  "schema": "floquet-bdg-category-new-cells-independent-v1",
+  "protocol_sha256": "3cf8e4b5347cdadf2f172972243856530932be1c32a26c3a22fe7a11e38a9cac",
+  "analysis_sha256": "8df63b89ad43a2ef196b5137f942144d93b414c0b0abb3e5a2bf84b6e476d6ae",
+  "eigensolver": "scipy.linalg.eig",
+  "projector": "direct_gram_inverse",
+  "tolerance": 1e-10,
+  "all_passed": true,
+  "cases": [
+    {
+      "n": 400,
+      "strength": 0.05,
+      "seed": 4,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 5.204170427930421e-18,
+          "edge_weight_absolute_error": 0.0
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 5.204170427930421e-18,
+          "edge_weight_absolute_error": 2.7755575615628914e-17
+        }
+      ]
+    },
+    {
+      "n": 400,
+      "strength": 0.05,
+      "seed": 5,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 2.0816681711721685e-17,
+          "edge_weight_absolute_error": 0.0
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 5.204170427930421e-18,
+          "edge_weight_absolute_error": 0.0
+        }
+      ]
+    },
+    {
+      "n": 400,
+      "strength": 0.05,
+      "seed": 6,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 1.3877787807814457e-17,
+          "edge_weight_absolute_error": 0.0
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 8.673617379884035e-18,
+          "edge_weight_absolute_error": 1.3877787807814457e-17
+        }
+      ]
+    },
+    {
+      "n": 400,
+      "strength": 0.05,
+      "seed": 7,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 1.3877787807814457e-17,
+          "edge_weight_absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 5.551115123125783e-17
+        }
+      ]
+    },
+    {
+      "n": 400,
+      "strength": 0.1,
+      "seed": 4,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 0.0
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 2.7755575615628914e-17
+        }
+      ]
+    },
+    {
+      "n": 400,
+      "strength": 0.1,
+      "seed": 5,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 2.42861286636753e-17,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 1.0408340855860843e-17,
+          "edge_weight_absolute_error": 2.0816681711721685e-17
+        }
+      ]
+    },
+    {
+      "n": 400,
+      "strength": 0.1,
+      "seed": 6,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 1.214306433183765e-17,
+          "edge_weight_absolute_error": 0.0
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 7.806255641895632e-18,
+          "edge_weight_absolute_error": 5.551115123125783e-17
+        }
+      ]
+    },
+    {
+      "n": 400,
+      "strength": 0.1,
+      "seed": 7,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 2.7755575615628914e-17,
+          "edge_weight_absolute_error": 4.440892098500626e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 5.204170427930421e-18,
+          "edge_weight_absolute_error": 3.469446951953614e-18
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.05,
+      "seed": 4,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 1.0408340855860843e-17,
+          "edge_weight_absolute_error": 4.163336342344337e-17
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.05,
+      "seed": 5,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 4.336808689942018e-18,
+          "edge_weight_absolute_error": 1.3877787807814457e-17
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.05,
+      "seed": 6,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 1.0408340855860843e-17,
+          "edge_weight_absolute_error": 2.7755575615628914e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 5.551115123125783e-17
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.05,
+      "seed": 7,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 5.204170427930421e-18,
+          "edge_weight_absolute_error": 5.551115123125783e-17
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 3.469446951953614e-18,
+          "edge_weight_absolute_error": 4.163336342344337e-17
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.1,
+      "seed": 4,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 1.3877787807814457e-17,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 1.5612511283791264e-17,
+          "edge_weight_absolute_error": 6.938893903907228e-17
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.1,
+      "seed": 5,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 1.0408340855860843e-17,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 6.938893903907228e-18
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.1,
+      "seed": 6,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 1.734723475976807e-17,
+          "edge_weight_absolute_error": 3.3306690738754696e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 0.0
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.1,
+      "seed": 7,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 1.734723475976807e-17,
+          "edge_weight_absolute_error": 3.3306690738754696e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 2.0816681711721685e-17
+        }
+      ]
+    }
+  ],
+  "scope": "Independent numerical reproduction of the new cells only; original seed=0..3 verification is unchanged."
+}
+exit_code=0
+$ category_analysis: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_repeated_categories.py
+{
+  "schema": "floquet-bdg-repeated-category-analysis-v1",
+  "analysis_date": "2026-11-11",
+  "protocol_sha256": "3cf8e4b5347cdadf2f172972243856530932be1c32a26c3a22fe7a11e38a9cac",
+  "source_sha256": "d903eadbdecc716719fccd33b5bddd8464be5a59dc1a65dacc75c751756e6c01",
+  "reversal_source_sha256": "554b60d7fc514f18cfdf411d2ff6ca350990adac22320a4b3337310004a7598f",
+  "new_cells_sha256": "8df63b89ad43a2ef196b5137f942144d93b414c0b0abb3e5a2bf84b6e476d6ae",
+  "new_independent_sha256": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+  "category_counts": {
+    "tail_growth_without_endpoint_recovery": 3,
+    "right_end_weakening_with_broadening": 1,
+    "right_end_driven_symmetrization": 3,
+    "left_end_driven_threshold": 2,
+    "other_unclassified": 7
+  },
+  "by_strength": {
+    "0.05": {
+      "tail_growth_without_endpoint_recovery": 3,
+      "right_end_weakening_with_broadening": 0,
+      "right_end_driven_symmetrization": 1,
+      "left_end_driven_threshold": 1,
+      "other_unclassified": 3
+    },
+    "0.1": {
+      "tail_growth_without_endpoint_recovery": 0,
+      "right_end_weakening_with_broadening": 1,
+      "right_end_driven_symmetrization": 2,
+      "left_end_driven_threshold": 1,
+      "other_unclassified": 4
+    }
+  },
+  "new_seed_category_counts": {
+    "tail_growth_without_endpoint_recovery": 2,
+    "right_end_weakening_with_broadening": 0,
+    "right_end_driven_symmetrization": 2,
+    "left_end_driven_threshold": 1,
+    "other_unclassified": 3
+  },
+  "new_seed_count": 4,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "causal_or_universal_category_claim": false
+}
+generated repeated_category_analysis.json repeated-categories.png REPEATED_CATEGORIES.md
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-端部机制类别检验.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_category_qa.py
+{
+  "schema": "floquet-bdg-category-word-qa-v1",
+  "recordedUtc": "2026-11-11T07:05:01.204776+00:00",
+  "sourceSha256": {
+    "repeated_category_protocol.json": "3cf8e4b5347cdadf2f172972243856530932be1c32a26c3a22fe7a11e38a9cac",
+    "category_new_cells.json": "8df63b89ad43a2ef196b5137f942144d93b414c0b0abb3e5a2bf84b6e476d6ae",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "repeated-categories.png": "ea2a99a6674b29b72b6398812ca6301ab99ecb77626926844d44089af98b2c81",
+    "build_category_report.js": "155b2f7cffba8884b6991fe4ad626d5c6a5545df3fc073cb8511784ff0fae884"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "9365804676a15970742f1524e352b46abff49a2b3e3a4cbba7b4cd3f2fae947b",
+    "renderReportSha256": "263a75d10351f38678e3847dccac3020cf0db840a4862b556e5554fd5d266117"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "9365804676a15970742f1524e352b46abff49a2b3e3a4cbba7b4cd3f2fae947b",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "note": "全部单页已查看；目录、公式、类别图、分类表和复现边界清晰，无近空白页或裁切。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_repeated_categories.py -v
+test_every_contrast_has_one_frozen_category (__main__.RepeatedCategoryTests.test_every_contrast_has_one_frozen_category) ... ok
+test_figure_markdown_and_word_visual_gate (__main__.RepeatedCategoryTests.test_figure_markdown_and_word_visual_gate) ... ok
+test_new_cells_have_independent_backend_verification (__main__.RepeatedCategoryTests.test_new_cells_have_independent_backend_verification) ... ok
+test_old_cells_and_reference_categories_are_unchanged (__main__.RepeatedCategoryTests.test_old_cells_and_reference_categories_are_unchanged) ... ok
+test_protocol_and_new_cell_registry (__main__.RepeatedCategoryTests.test_protocol_and_new_cell_registry) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.041s
+
+OK
+exit_code=0

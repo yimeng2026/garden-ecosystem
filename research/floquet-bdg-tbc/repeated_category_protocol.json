@@ -1,0 +1,22 @@
+{
+  "schema": "floquet-bdg-repeated-category-protocol-v1",
+  "registered_before_new_computation": true,
+  "existing_seeds": [0, 1, 2, 3],
+  "new_seeds": [4, 5, 6, 7],
+  "all_seeds": [0, 1, 2, 3, 4, 5, 6, 7],
+  "sizes": [400, 600],
+  "strengths": [0.05, 0.1],
+  "candidate_pairs": [0, 1],
+  "category_definitions": {
+    "tail_growth_without_endpoint_recovery": "edge_delta < 0 and delta_L50 > 0 and not both_sizes_joint_pass",
+    "right_end_weakening_with_broadening": "right_delta < 0 and edge_delta < 0 and delta_L50 > 0 and asymmetry_delta > 0",
+    "right_end_driven_symmetrization": "left_delta > 0 and right_delta > left_delta and asymmetry_delta < 0",
+    "left_end_driven_threshold": "left_delta > right_delta and edge_delta > 0 and delta_L50 > 0 and asymmetry_delta < 0",
+    "other_unclassified": "any case not matching all conditions of one descriptive category"
+  },
+  "category_order": ["tail_growth_without_endpoint_recovery", "right_end_weakening_with_broadening", "right_end_driven_symmetrization", "left_end_driven_threshold", "other_unclassified"],
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "post_hoc_seed_or_threshold_selection": false,
+  "scope": "Descriptive recurrence only; no universal mechanism, statistical-significance, causal, material, thermodynamic or new bulk-winding claim"
+}

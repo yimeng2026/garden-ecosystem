@@ -1,0 +1,94 @@
+{
+  "schema": "floquet-bdg-category-verification-v1",
+  "recorded_utc": "2026-11-11T07:05:01.378485+00:00",
+  "all_passed": true,
+  "test_count": 5,
+  "original_independent_projectors_passed": true,
+  "new_independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "new_cell_registry",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\build_category_cells.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "new_cell_independent_projectors",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\verify_category_cells.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "category_analysis",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_repeated_categories.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-端部机制类别检验.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_category_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_repeated_categories.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "repeated_category_protocol.json": "3cf8e4b5347cdadf2f172972243856530932be1c32a26c3a22fe7a11e38a9cac",
+    "multi_seed_profile_control.json": "d903eadbdecc716719fccd33b5bddd8464be5a59dc1a65dacc75c751756e6c01",
+    "multi_seed_independent.json": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+    "category_new_cells.json": "8df63b89ad43a2ef196b5137f942144d93b414c0b0abb3e5a2bf84b6e476d6ae",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "repeated-categories.png": "ea2a99a6674b29b72b6398812ca6301ab99ecb77626926844d44089af98b2c81",
+    "REPEATED_CATEGORIES.md": "41b4318f2a8d4831903b4837e1218cc627f71f2a6afe4084b3dd217afcba2cf2",
+    "Floquet-BdG-端部机制类别检验.docx": "9365804676a15970742f1524e352b46abff49a2b3e3a4cbba7b4cd3f2fae947b",
+    "category-word-qa.json": "6d491266605dae4a1e32b4beae9825ebccc892faaa4d39ad7e7a1345019c2d9b",
+    "category-word-render/report.json": "263a75d10351f38678e3847dccac3020cf0db840a4862b556e5554fd5d266117",
+    "build_category_cells.py": "2693bcc6375e32f434813d555fbb5d8dde096f77a62e8d942df98ef57d8d4ed5",
+    "verify_category_cells.py": "c711cbbd94fa10da62135728a8f249b2f7dad5e0badea354dad4ebc4401e5958",
+    "analyze_repeated_categories.py": "83655386ed87ab50fd5cd93ab3d598ed1ffc408c9e6a9d8413aa9986304e2e56",
+    "build_category_report.js": "155b2f7cffba8884b6991fe4ad626d5c6a5545df3fc073cb8511784ff0fae884",
+    "record_category_qa.py": "20bf7e69ae6f2648898b0760ad9d100141a2869f907b32edf2892e2d20ad1f6b",
+    "test_repeated_categories.py": "252bcfc1cb90d91b20fff915a4e64e4999220e9611a7f51d9c54448f86717287",
+    "category_run.log": "7aa0360201bf801cc3246b301fa345c780094fa23bf564af92f07f7ebfc15ded"
+  },
+  "scope": {
+    "repeated_category_analysis_evaluated": true,
+    "right_symmetrization_new_seed_recurrences": 2,
+    "right_weakening_new_seed_recurrences": 0,
+    "other_unclassified_count": 7,
+    "unclassified_cases_preserved": true,
+    "n640_automatically_justified": false,
+    "universal_category_claim": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "category_run.log"
+}

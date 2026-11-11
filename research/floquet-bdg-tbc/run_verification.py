@@ -53,6 +53,7 @@ def main():
         ("matched_suite", [sys.executable, str(ROOT / "run_matched_verification.py")], 180),
         ("multi_seed_suite", [sys.executable, str(ROOT / "run_multi_seed_verification.py")], 180),
         ("reversal_suite", [sys.executable, str(ROOT / "run_reversal_verification.py")], 180),
+        ("category_suite", [sys.executable, str(ROOT / "run_category_verification.py")], 180),
     ]
     rows, logs = [], []
     for label, command, timeout in commands:
@@ -77,6 +78,7 @@ def main():
     matched_verification = json.loads((ROOT / "matched_verification.json").read_text(encoding="utf-8")) if (ROOT / "matched_verification.json").exists() else {}
     multi_seed_verification = json.loads((ROOT / "multi_seed_verification.json").read_text(encoding="utf-8")) if (ROOT / "multi_seed_verification.json").exists() else {}
     reversal_verification = json.loads((ROOT / "reversal_verification.json").read_text(encoding="utf-8")) if (ROOT / "reversal_verification.json").exists() else {}
+    category_verification = json.loads((ROOT / "category_verification.json").read_text(encoding="utf-8")) if (ROOT / "category_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -124,6 +126,12 @@ def main():
         "Floquet-BdG-反转单元机制诊断.docx", "reversal-word-qa.json", "reversal-word-render/report.json",
         "reversal_verification.json", "reversal_run.log", "analyze_reversal_units.py",
         "build_reversal_report.js", "record_reversal_qa.py", "test_reversal_units.py", "run_reversal_verification.py",
+        "repeated_category_protocol.json", "category_new_cells.json", "category_new_cells_independent.json",
+        "repeated_category_analysis.json", "repeated-categories.png", "REPEATED_CATEGORIES.md",
+        "Floquet-BdG-端部机制类别检验.docx", "category-word-qa.json", "category-word-render/report.json",
+        "category_verification.json", "category_run.log", "build_category_cells.py", "verify_category_cells.py",
+        "analyze_repeated_categories.py", "build_category_report.js", "record_category_qa.py",
+        "test_repeated_categories.py", "run_category_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py",
@@ -134,7 +142,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -171,6 +179,9 @@ def main():
         "reversal_all_passed": reversal_verification.get("all_passed"),
         "reversal_original_independent_projectors_passed": reversal_verification.get("original_independent_projectors_passed"),
         "reversal_visual_review_status": reversal_verification.get("visual_review_status"),
+        "category_all_passed": category_verification.get("all_passed"),
+        "category_new_independent_projectors_passed": category_verification.get("new_independent_projectors_passed"),
+        "category_visual_review_status": category_verification.get("visual_review_status"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
@@ -191,7 +202,12 @@ def main():
             "reversal_mechanism_analysis_pending": False,
             "targeted_reversal_decomposition_evaluated": "passed",
             "broadening_is_not_endpoint_loss": True,
-            "repeated_category_analysis_pending": True,
+            "repeated_category_analysis_pending": False,
+            "repeated_category_analysis_evaluated": "passed",
+            "right_symmetrization_new_seed_recurrences": 2,
+            "right_weakening_new_seed_recurrences": 0,
+            "other_unclassified_count": 7,
+            "universal_category_claim": False,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,
             "paired_control_rows": 12, "uniform_controls_are_independent_random_samples": False,
             "double_kick_diagnostic_excluded": True,

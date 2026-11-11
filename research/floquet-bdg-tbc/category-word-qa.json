@@ -1,0 +1,39 @@
+{
+  "schema": "floquet-bdg-category-word-qa-v1",
+  "recordedUtc": "2026-11-11T07:05:01.204776+00:00",
+  "sourceSha256": {
+    "repeated_category_protocol.json": "3cf8e4b5347cdadf2f172972243856530932be1c32a26c3a22fe7a11e38a9cac",
+    "category_new_cells.json": "8df63b89ad43a2ef196b5137f942144d93b414c0b0abb3e5a2bf84b6e476d6ae",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "repeated-categories.png": "ea2a99a6674b29b72b6398812ca6301ab99ecb77626926844d44089af98b2c81",
+    "build_category_report.js": "155b2f7cffba8884b6991fe4ad626d5c6a5545df3fc073cb8511784ff0fae884"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "9365804676a15970742f1524e352b46abff49a2b3e3a4cbba7b4cd3f2fae947b",
+    "renderReportSha256": "263a75d10351f38678e3847dccac3020cf0db840a4862b556e5554fd5d266117"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "9365804676a15970742f1524e352b46abff49a2b3e3a4cbba7b4cd3f2fae947b",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "note": "全部单页已查看；目录、公式、类别图、分类表和复现边界清晰，无近空白页或裁切。"
+  }
+}
