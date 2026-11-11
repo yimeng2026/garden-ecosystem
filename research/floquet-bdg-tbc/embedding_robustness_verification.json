@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-embedding-robustness-verification-v1",
-  "recorded_utc": "2026-11-11T12:35:04.633090+00:00",
+  "recorded_utc": "2026-11-11T12:55:02.382905+00:00",
   "all_passed": true,
   "test_count": 6,
   "original_independent_projectors_passed": true,
@@ -54,13 +54,13 @@
     "embedding-robustness.png": "3ecce690503fb87e61f5307931c03459eb0fcafd32d5b9f3ea184b6e1c0eb097",
     "EMBEDDING_ROBUSTNESS.md": "c34113d02e52b705e303cdfd0e63dbc1d1074248cfa5da41b6df735cf910d9e3",
     "Floquet-BdG-共同表示稳健性.docx": "d290e504ebe6f25f026689bf0d55038814ee1b4742166e6d502976d7d803f7bd",
-    "embedding-robustness-word-qa.json": "41cc2fe1c91696045aa9f00aff0ef645b867e28db1ceb6c92997e839d7cf144b",
+    "embedding-robustness-word-qa.json": "68aa56beea555199a15ddd989ce07463de8057db02a20e1cd84f0c042a0a62e5",
     "embedding-robustness-word-render/report.json": "a6bcea65065e2574dd743e121d2bfd5716547659861e3a59b4b37c4604073783",
     "analyze_embedding_robustness.py": "bf62c5e4527616ab7f6cd50cca04a3dd1f475d8c65dbd10ad1f925dbc15e144f",
     "build_embedding_robustness_report.js": "a43407b2afd75f7be58ee14027528ca5e636b9d52c77e4be0a9f75879ad1a235",
     "record_embedding_robustness_qa.py": "690a875f7d39ac5fc5b5cd3960646c0febebb79fa2a2cb3c475c49822c30ac42",
     "test_embedding_robustness.py": "0100c31791e894c352c276358dcd342a77fd785ad5989e1a04f286264c3c9a8f",
-    "embedding_robustness_run.log": "9c6db8b5d25aed8d1122a18f3774bbf00a2c1c98706ca97e9677e48f9420b741"
+    "embedding_robustness_run.log": "25860dcc051f09e2bc1a8a318dc8af626f06cef15eb1d6aba4c945ece974d600"
   },
   "scope": {
     "embedding_robustness_analysis_evaluated": true,

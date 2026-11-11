@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-tbc-dynamical-winding-v1",
-  "recorded_utc": "2026-11-11T12:31:09.880060+00:00",
+  "recorded_utc": "2026-11-11T12:51:05.127214+00:00",
   "method": {
     "basis": "(a1,b1,...,aN,bN), S=diag(-1,+1,...)",
     "periodization": "unitary Schur; phi_eff valence=2epsilon-|phi|, conduction=|phi|-2pi",

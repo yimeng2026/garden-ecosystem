@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-fixed-n-path-word-qa-v1",
-  "recordedUtc": "2026-11-11T12:35:19.398293+00:00",
+  "recordedUtc": "2026-11-11T12:55:17.365715+00:00",
   "sourceSha256": {
     "fixed_n_path_protocol.json": "9485300fc5f0a2f18df15e6499424611d40902c2c01cf5341bcce4a68a12becf",
     "fixed_n_path_analysis.json": "aca217e838a73469eeb1bfb9686bf6be22910d85f1f997c792905235f3552ab2",

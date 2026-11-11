@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-n600-valley-verification-v1",
-  "recorded_utc": "2026-11-11T12:35:32.160056+00:00",
+  "recorded_utc": "2026-11-11T12:55:30.089632+00:00",
   "all_passed": true,
   "test_count": 6,
   "check_only": true,
@@ -57,13 +57,13 @@
     "n600-valley.png": "1821f887092caeb3910e065b2520f8e3619136c7f7946e76bd2473739c408819",
     "N600_VALLEY.md": "1c0b3e58f7aa7e7f21f9be235709c2c5b7cdf3065396128d565e93d403b14750",
     "Floquet-BdG-N600谷值细化.docx": "fb6289cd8aafd14b67072c63921ea6db77bf0d5639cef5bf139b197fe878cec9",
-    "n600-valley-word-qa.json": "ab3246ead69be36cbc0b45a4838b5eaeaf0ee8806e8c369ecdb38d40c1e4836b",
+    "n600-valley-word-qa.json": "2dc9d434e17baca56f3f5c4e78eccad6ee08de35d94cb8d970f89fd0061ee10a",
     "n600-valley-word-render/report.json": "eaf91b57f0afc934f2640c64b2405f2258a8fa9e21981655f951680618fa50ac",
     "analyze_n600_valley.py": "70050f264d4eb6cb9486d181968d74d3a346d4b843a592ae48a590c0aaf257ff",
     "build_n600_valley_report.js": "a768319117b09ffb588bfdde99b87adac12866355e695450a6115e4b867479c5",
     "record_n600_valley_qa.py": "9b14ece6cb8a03dc47fafdd66d32ec23919d112edb5afd59078e592eba6ec589",
     "test_n600_valley.py": "bfaee399edf68fa33e2713726734fbe1688ef93db87f907bdda883267e52d09f",
-    "n600_valley_run.log": "78b322b4196e27881c4c8af080afbc482df5b9ae52f2bc53167b28d16c0e23ae"
+    "n600_valley_run.log": "7c3fa2bf64508296e298342a9b7ac01ef7ed1322843100120d2ad681f355978d"
   },
   "scope": {
     "n600_valley_analysis_evaluated": true,

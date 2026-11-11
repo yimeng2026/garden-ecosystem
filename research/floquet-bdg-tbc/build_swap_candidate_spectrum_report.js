@@ -2,7 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import {
   AlignmentType, Document, Footer, FootnoteReferenceRun, Header, HeadingLevel,
-  ImageRun, ImportedXmlComponent, Math as MathEquation, MathRun, Packer,
+  ImageRun, ImportedXmlComponent, Math as MathEquation, MathFraction, MathRun,
+  MathSubScript, Packer,
   PageBreak, PageNumber, Paragraph, ShadingType, Table, TableCell, TableRow,
   TextRun, WidthType,
 } from "docx";
@@ -33,7 +34,8 @@ const makeTable = (headers, rows, widths, size = 10) => new Table({
   width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths,
   rows: [new TableRow({ tableHeader: true, cantSplit: true, children: headers.map((text, index) => cell(text, index, widths, true, size)) }), ...rows.map((row) => new TableRow({ cantSplit: true, children: row.map((text, index) => cell(text, index, widths, false, size)) }))],
 });
-const equation = (text) => para(new MathEquation({ children: [new MathRun(text)] }), { alignment: AlignmentType.CENTER, spacing: { before: 55, after: 70 } });
+const equation = (children) => para(new MathEquation({ children: Array.isArray(children) ? children : [new MathRun(children)] }), { alignment: AlignmentType.CENTER, spacing: { before: 55, after: 70 } });
+const sub = (base, subscript) => new MathSubScript({ children: [new MathRun(base)], subScript: [new MathRun(subscript)] });
 const footnote = (text) => para(run(text, { size: 15 }), { spacing: { after: 30, line: 190 } });
 const fmt = (value) => Number(value).toPrecision(5).replace(/\.0+$/, "");
 const spectrumRows = analysis.cells.flatMap((item) => item.spectrum.map((row) => [String(item.n), String(row.rank), fmt(row.eigenvalue_real), fmt(row.eigenvalue_imag), fmt(row.phase), fmt(row.distance)]));
@@ -59,7 +61,11 @@ const children = [
 
   heading(titles[0]),
   citedBody("按 |λ−1| 升序排列，报告前六个距离和相位。对内距离差用于数值复现 TBC 简并；10⁻¹⁰ 仅是复现容差，不是物理近简并阈值。", 1),
-  equation("c_p = (d_(2p) + d_(2p+1)) / 2,  δ_p = |d_(2p+1) − d_(2p)|"),
+  equation([
+    sub("c", "p"), new MathRun(" = "),
+    new MathFraction({ numerator: [sub("d", "2p"), new MathRun(" + "), sub("d", "2p+1")], denominator: [new MathRun("2")] }),
+    new MathRun(",　"), sub("δ", "p"), new MathRun(" = |"), sub("d", "2p+1"), new MathRun(" − "), sub("d", "2p"), new MathRun("|"),
+  ]),
   spectrumTable,
   heading("两对中心与既有诊断", 2),
   pairTable,
@@ -67,7 +73,11 @@ const children = [
 
   heading(titles[1]),
   citedBody("对内 TBC 简并与两对中心间隔是不同问题。谱秩由排序构造，不是参数路径上的态追踪。", 2),
-  equation("Δc = |c_1 − c_0|,  R_c = Δc / max(c_0, c_1)"),
+  equation([
+    new MathRun("Δc = |"), sub("c", "1"), new MathRun(" − "), sub("c", "0"), new MathRun("|,　"),
+    sub("R", "c"), new MathRun(" = "),
+    new MathFraction({ numerator: [new MathRun("Δc")], denominator: [new MathRun("max("), sub("c", "0"), new MathRun(", "), sub("c", "1"), new MathRun(")")] }),
+  ]),
   body(`N=400 的中心间隔为 ${fmt(analysis.cells[0].center_separation)}，相对中心间隔为 ${fmt(analysis.cells[0].center_separation_ratio)}；N=600 分别为 ${fmt(analysis.cells[1].center_separation)} 和 ${fmt(analysis.cells[1].center_separation_ratio)}。中心间隔的尺寸差为 ${fmt(analysis.size_comparison.center_separation_delta)}。`),
   para(new ImageRun({ type: "png", data: fs.readFileSync(path.join(root, "swap-candidate-spectrum.png")), transformation: { width: 500, height: Math.round(500 * 1335 / 2036) } }), { alignment: AlignmentType.CENTER, keepNext: true }),
   para(run("图 1　前六谱距离、两对中心、既有分离比与交换矩阵。", { size: 16, italics: true }), { alignment: AlignmentType.CENTER }),

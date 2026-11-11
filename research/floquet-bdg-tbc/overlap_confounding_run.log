@@ -36,7 +36,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_overlap_confounding_qa.py
 {
   "schema": "floquet-bdg-overlap-confounding-word-qa-v1",
-  "recordedUtc": "2026-11-11T12:35:35.280798+00:00",
+  "recordedUtc": "2026-11-11T12:55:33.282337+00:00",
   "sourceSha256": {
     "overlap_confounding_protocol.json": "6d08fbc8e5d64085cad3635a3766c2050da5ebe51f6f6372bf71d4107274d717",
     "overlap_confounding_analysis.json": "1ac3e76108f81b46e61ddd75eae32e52bfb697d3ad0bfe347aa2da57baa08948",
@@ -85,7 +85,7 @@ test_representation_fidelity_is_bidirectional_and_not_a_correction (__main__.Ove
 test_same_n_rank_controls_identify_embedding_leakage (__main__.OverlapConfoundingTests.test_same_n_rank_controls_identify_embedding_leakage) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.042s
+Ran 6 tests in 0.041s
 
 OK
 exit_code=0
