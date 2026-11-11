@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "class": "recovered",
+      "count": 3,
+      "winding_valid": 3,
+      "winding_one": 3,
+      "endpoint_pass": 3,
+      "min_gap": 0.0023647905526659723
+    },
+    {
+      "class": "not_recovered",
+      "count": 2,
+      "winding_valid": 2,
+      "winding_one": 2,
+      "endpoint_pass": 0,
+      "min_gap": 0.0018730234476264556
+    },
+    {
+      "class": "uniform_control",
+      "count": 2,
+      "winding_valid": 2,
+      "winding_one": 2,
+      "endpoint_pass": 2,
+      "min_gap": 0.011128010082119954
+    }
+  ]
+}

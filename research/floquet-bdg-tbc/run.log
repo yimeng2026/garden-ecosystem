@@ -10,7 +10,7 @@ test_disordered_onsite_terms_and_chiral (__main__.TBCStructureTests.test_disorde
 test_step_origin_and_unitarity (__main__.TBCStructureTests.test_step_origin_and_unitarity) ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 11.513s
+Ran 9 tests in 11.494s
 
 OK
 exit_code=0
@@ -49,7 +49,7 @@ test_strength_checkpoint_row_counts (__main__.DisorderContractTests.test_strengt
 test_uniform_control_is_separate (__main__.DisorderContractTests.test_uniform_control_is_separate) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.591s
+Ran 8 tests in 0.674s
 
 OK
 exit_code=0
@@ -93,7 +93,7 @@ test_markdown_matches_failures_and_control_scope (__main__.ReportContractTests.t
 test_visual_review_hashes_are_current (__main__.ReportContractTests.test_visual_review_hashes_are_current) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.015s
+Ran 5 tests in 0.017s
 
 OK
 exit_code=0
@@ -105,7 +105,7 @@ test_preregistered_registry (__main__.FiniteSizeTargetTests.test_preregistered_r
 test_zero_only_evaluation_preserves_amplitude_contract (__main__.FiniteSizeTargetTests.test_zero_only_evaluation_preserves_amplitude_contract) ... ok
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.168s
+Ran 4 tests in 0.135s
 
 OK
 exit_code=0
@@ -134,9 +134,53 @@ test_size_trend_table (__main__.FiniteSizeReportTests.test_size_trend_table) ...
 test_visual_hash_binding (__main__.FiniteSizeReportTests.test_visual_hash_binding) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.353s
+Ran 5 tests in 0.344s
 
 OK
 exit_code=0
 finite_size_overall passed
+exit_code=0
+$ n320_suite: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_n320_verification.py
+$ backend_and_registry_tests: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_n320.py -v
+test_exact_seven_case_registry (__main__.N320RegistryTests.test_exact_seven_case_registry) ... ok
+test_incremental_checkpoint_and_incomplete_merge (__main__.N320RegistryTests.test_incremental_checkpoint_and_incomplete_merge) ... ok
+test_backend_winding_values_match (__main__.SpectralBackendTests.test_backend_winding_values_match) ... ok
+test_eigh_free_propagator_matches_expm (__main__.SpectralBackendTests.test_eigh_free_propagator_matches_expm) ... ok
+test_single_grid_cannot_claim_convergence (__main__.SpectralBackendTests.test_single_grid_cannot_claim_convergence) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.413s
+
+OK
+exit_code=0
+$ registry_integrity: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_n320.py --merge-only
+n320_complete 7
+exit_code=0
+$ independent_integrity: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_n320.py --merge-only
+n320_independent 7 passed True
+exit_code=0
+$ report_data: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\build_n320_report.py
+generated n320-winding.png n320-endpoints.png N320.md n320_summary.json
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-TBC-N320定向报告.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_n320_qa.py
+{"pages": 4, "manualReview": "passed", "docxSha256": "b795ff95f9744fb40e6ffe1eb628d8f782ed2cfb8e331581d8eda8b2c211eacb"}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_n320_report.py -v
+test_docx_native_structure (__main__.N320ReportTests.test_docx_native_structure) ... ok
+test_group_summary (__main__.N320ReportTests.test_group_summary) ... ok
+test_markdown_and_figures (__main__.N320ReportTests.test_markdown_and_figures) ... ok
+test_registry_and_independent_counts (__main__.N320ReportTests.test_registry_and_independent_counts) ... ok
+test_visual_hash_binding (__main__.N320ReportTests.test_visual_hash_binding) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.012s
+
+OK
+exit_code=0
+n320_overall passed
 exit_code=0
