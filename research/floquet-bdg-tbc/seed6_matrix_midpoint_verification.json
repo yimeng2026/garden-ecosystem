@@ -1,0 +1,256 @@
+{
+  "schema": "floquet-bdg-seed6-matrix-midpoint-verification-v1",
+  "recorded_utc": "2026-11-11T23:30:43.940697+00:00",
+  "all_passed": true,
+  "test_count": 10,
+  "check_only": true,
+  "independent_recheck_passed": true,
+  "independent_max_spectrum_absolute_error": 0.0,
+  "independent_max_matrix_absolute_error": 0.0,
+  "independent_max_entry_delta_absolute_error": 0.0,
+  "independent_max_native_link_absolute_error": 0.0,
+  "visual_review_status": "passed",
+  "rendered_pages": 5,
+  "commands": [
+    {
+      "label": "seed6_matrix_midpoint_evidence_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_seed6_matrix_midpoint.py",
+        "--check-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "seed6_matrix_midpoint_independent_recheck",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\verify_seed6_matrix_midpoint.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-固定种子跳变窗口中点复核.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_seed6_matrix_midpoint_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_seed6_matrix_midpoint.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "seed6_matrix_midpoint_protocol.json": "0c0b871635586b025180c46d39642404fdb918f632e50665d3e4a930bc15fc89",
+    "seed6_matrix_midpoint_analysis.json": "dc95212ab89d25487b60b326364a3911eed9a56c35ba9d867b1adc6acc58a761",
+    "seed6_matrix_midpoint_independent.json": "d41689425d4c0997c6475bfd73a995807c7e0a58c96c9a5999884c6a43ab80f7",
+    "seed6-matrix-midpoint.png": "69536393051c3d8e45918ae241b2d02bd5d7f0d7294f42318090ed4163d187b6",
+    "SEED6_MATRIX_MIDPOINT.md": "bd47605cd0313137f251f8df6e399b7f78d2a485203703174a930d0490e9da28",
+    "Floquet-BdG-固定种子跳变窗口中点复核.docx": "03c06ec01ebe4142db34a214502e3d990d8bc86289e2de88c8010954e1c9e905",
+    "seed6-matrix-midpoint-word-qa.json": "327a3e3805816438d9e2096dae8e37184b378a6a60a2960d67a628fef510c694",
+    "seed6-matrix-midpoint-word-render/report.json": "5f96265fc6e2afba899870ef1427b03a1cb0b2029229c4e17a72741b877e764e",
+    "seed6_matrix_midpoint_run.log": "8990d0b1d40bc05f3eaf72beb5a14067a37e696952f8e6763a59280fee584568",
+    "analyze_seed6_matrix_midpoint.py": "8fa61154382ba803c9d1691e3ef3a24e6cd1b8b59a469f2e1781490f9a2a6f25",
+    "verify_seed6_matrix_midpoint.py": "a5a8beef1cbfb5496c68fe3577d996a61786e0e40139370236315ccdd12cedf9",
+    "build_seed6_matrix_midpoint_report.js": "8d9964661342f6bf04d1c57fc7fcba510bd56ca97921d0ea16fc32ccc2e49742",
+    "record_seed6_matrix_midpoint_qa.py": "0284251fa9ba84411b76eacc360112b688cb345d27aeb03f89e60d55146bcfe0",
+    "test_seed6_matrix_midpoint.py": "23ef5fc448edfc953f9c77b81577522275e2c7eeefc582c37f193c5fdb6f313a",
+    "run_seed6_matrix_midpoint_verification.py": "837c71f6bd5f0644b8eb52b4bc45f0d6888f628424b4393c929fad2b7e89ccde",
+    "seed6_matrix_path_analysis.json": "59699eca97c5dbf34411f19839c1f3dd579e7af9b2b6ee9f32234923352a1b34"
+  },
+  "scope": {
+    "seed6_matrix_midpoint_analysis_evaluated": true,
+    "new_midpoint_strengths": 4,
+    "refined_strength_points": 13,
+    "new_midpoint_control_cells": 8,
+    "reused_path_control_cells": 18,
+    "evaluated_control_cells": 26,
+    "cross_size_path_matrices": 78,
+    "native_adjacent_links": 24,
+    "entry_links": 288,
+    "not_merged_into_batch_counts": true,
+    "cross_size_assignment_counts": {
+      "linear_point": {
+        "diagonal": 39
+      },
+      "cell_average": {
+        "diagonal": 39
+      }
+    },
+    "method_grid_assignment_change_count": 0,
+    "jump_change_count": 6,
+    "driver_comparison_change_count": 4,
+    "new_extrema_midpoint_count": 1,
+    "driver_comparisons": [
+      {
+        "method": "linear_point",
+        "score_group": "diagonal",
+        "old_dominant_entry_counts": {
+          "O00": 8,
+          "O11": 0
+        },
+        "old_link_count": 8,
+        "refined_dominant_entry_counts": {
+          "O00": 11,
+          "O11": 1
+        },
+        "refined_link_count": 12,
+        "old_score_ratio_range": [
+          0.9495875593473679,
+          1.3557245165805363
+        ],
+        "refined_score_ratio_range": [
+          0.9141951692582135,
+          1.1764911261526823
+        ],
+        "driver_counts_changed": true
+      },
+      {
+        "method": "linear_point",
+        "score_group": "swapped",
+        "old_dominant_entry_counts": {
+          "O01": 3,
+          "O10": 5
+        },
+        "old_link_count": 8,
+        "refined_dominant_entry_counts": {
+          "O01": 8,
+          "O10": 4
+        },
+        "refined_link_count": 12,
+        "old_score_ratio_range": [
+          0.15853390153968597,
+          5.877398345898124
+        ],
+        "refined_score_ratio_range": [
+          0.1566149213722032,
+          5.167035918862785
+        ],
+        "driver_counts_changed": true
+      },
+      {
+        "method": "cell_average",
+        "score_group": "diagonal",
+        "old_dominant_entry_counts": {
+          "O00": 8,
+          "O11": 0
+        },
+        "old_link_count": 8,
+        "refined_dominant_entry_counts": {
+          "O00": 10,
+          "O11": 2
+        },
+        "refined_link_count": 12,
+        "old_score_ratio_range": [
+          0.9403977494793633,
+          1.3636163102765206
+        ],
+        "refined_score_ratio_range": [
+          0.908703741805737,
+          1.180920841314301
+        ],
+        "driver_counts_changed": true
+      },
+      {
+        "method": "cell_average",
+        "score_group": "swapped",
+        "old_dominant_entry_counts": {
+          "O01": 3,
+          "O10": 5
+        },
+        "old_link_count": 8,
+        "refined_dominant_entry_counts": {
+          "O01": 7,
+          "O10": 5
+        },
+        "refined_link_count": 12,
+        "old_score_ratio_range": [
+          0.15750293649097222,
+          6.108259049088204
+        ],
+        "refined_score_ratio_range": [
+          0.15444540105592963,
+          5.293493078491478
+        ],
+        "driver_counts_changed": true
+      }
+    ],
+    "link_summary": [
+      {
+        "n": 400,
+        "link_count": 12,
+        "assignment_counts": {
+          "diagonal": 12
+        },
+        "min_diagonal_score": 0.34900788903940594,
+        "min_diagonal_from": 0.1,
+        "min_diagonal_to": 0.1125,
+        "max_swapped_score": 0.01155866381733956,
+        "max_swapped_from": 0.1,
+        "max_swapped_to": 0.1125,
+        "max_absolute_center_separation_delta": 0.0019938637484011278,
+        "max_center_change_from": 0.1625,
+        "max_center_change_to": 0.175
+      },
+      {
+        "n": 600,
+        "link_count": 12,
+        "assignment_counts": {
+          "diagonal": 12
+        },
+        "min_diagonal_score": 0.299582434590759,
+        "min_diagonal_from": 0.1,
+        "min_diagonal_to": 0.1125,
+        "max_swapped_score": 0.008872511800555271,
+        "max_swapped_from": 0.1,
+        "max_swapped_to": 0.1125,
+        "max_absolute_center_separation_delta": 0.0025782544588765326,
+        "max_center_change_from": 0.1,
+        "max_center_change_to": 0.1125
+      }
+    ],
+    "original_path_binding": {
+      "original_cell_count": 18,
+      "original_matrix_count": 54,
+      "max_spectrum_absolute_error": 0.0,
+      "max_matrix_absolute_error": 0.0,
+      "max_singular_absolute_error": 0.0,
+      "reused_cells_are_not_new_realizations": true
+    },
+    "min_representation_fidelity": 0.975168672681924,
+    "max_representation_fidelity": 0.9915027719591105,
+    "max_linear_point_off_diagonal": 1.741834653517829e-06,
+    "max_cell_average_off_diagonal": 3.7786737144920157e-26,
+    "normalization_correction_applied": false,
+    "representation_invariant_claim": false,
+    "statistical_significance_claim": false,
+    "continuous_path_proof": false,
+    "spectral_crossing_proven": false,
+    "avoided_crossing_claim": false,
+    "state_exchange_proven": false,
+    "causal_mechanism_proven": false,
+    "new_winding_computed": false,
+    "n640_computed": false,
+    "thermodynamic_limit_proof": false,
+    "old_candidate_is_different_realization": true,
+    "difference_from_original_is_not_size_effect": true
+  },
+  "log": "seed6_matrix_midpoint_run.log"
+}

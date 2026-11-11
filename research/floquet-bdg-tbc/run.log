@@ -3767,3 +3767,110 @@ OK
 exit_code=0
 seed6_matrix_path_overall passed check_only True
 exit_code=0
+$ seed6_matrix_midpoint_suite: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_seed6_matrix_midpoint_verification.py --check-only
+$ seed6_matrix_midpoint_evidence_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_seed6_matrix_midpoint.py --check-only
+{"check_only": true, "cells": 26, "path_matrices": 78, "native_links": 24, "entry_links": 288, "all_passed": true}
+exit_code=0
+$ seed6_matrix_midpoint_independent_recheck: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_seed6_matrix_midpoint.py
+{
+  "schema": "floquet-bdg-seed6-matrix-midpoint-independent-v1",
+  "protocol_sha256": "0c0b871635586b025180c46d39642404fdb918f632e50665d3e4a930bc15fc89",
+  "analysis_sha256": "dc95212ab89d25487b60b326364a3911eed9a56c35ba9d867b1adc6acc58a761",
+  "original_path_analysis_sha256": "59699eca97c5dbf34411f19839c1f3dd579e7af9b2b6ee9f32234923352a1b34",
+  "cell_count": 26,
+  "cross_size_path_matrix_count": 78,
+  "native_adjacent_link_count": 24,
+  "entry_link_count": 288,
+  "max_coarsening_absolute_error": 0.0,
+  "max_spectrum_absolute_error": 0.0,
+  "max_pair_center_absolute_error": 0.0,
+  "max_matrix_absolute_error": 0.0,
+  "max_singular_absolute_error": 0.0,
+  "max_entry_delta_absolute_error": 0.0,
+  "max_native_link_absolute_error": 0.0,
+  "max_representation_fidelity_absolute_error": 0.0,
+  "max_direction_absolute_error": 6.938893903907228e-18,
+  "driver_mismatch_count": 0,
+  "original_path_binding": {
+    "original_cell_count": 18,
+    "original_matrix_count": 54,
+    "max_spectrum_absolute_error": 0.0,
+    "max_matrix_absolute_error": 0.0,
+    "max_singular_absolute_error": 0.0,
+    "reused_cells_are_not_new_realizations": true
+  },
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "all_passed": true
+}
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-固定种子跳变窗口中点复核.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_seed6_matrix_midpoint_qa.py
+{
+  "schema": "floquet-bdg-seed6-matrix-midpoint-word-qa-v1",
+  "recordedUtc": "2026-11-11T23:30:43.650535+00:00",
+  "sourceSha256": {
+    "seed6_matrix_midpoint_protocol.json": "0c0b871635586b025180c46d39642404fdb918f632e50665d3e4a930bc15fc89",
+    "seed6_matrix_midpoint_analysis.json": "dc95212ab89d25487b60b326364a3911eed9a56c35ba9d867b1adc6acc58a761",
+    "seed6_matrix_midpoint_independent.json": "d41689425d4c0997c6475bfd73a995807c7e0a58c96c9a5999884c6a43ab80f7",
+    "seed6_matrix_path_analysis.json": "59699eca97c5dbf34411f19839c1f3dd579e7af9b2b6ee9f32234923352a1b34",
+    "seed6-matrix-midpoint.png": "69536393051c3d8e45918ae241b2d02bd5d7f0d7294f42318090ed4163d187b6",
+    "build_seed6_matrix_midpoint_report.js": "8d9964661342f6bf04d1c57fc7fcba510bd56ca97921d0ea16fc32ccc2e49742"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "03c06ec01ebe4142db34a214502e3d990d8bc86289e2de88c8010954e1c9e905",
+    "renderReportSha256": "5f96265fc6e2afba899870ef1427b03a1cb0b2029229c4e17a72741b877e764e"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "03c06ec01ebe4142db34a214502e3d990d8bc86289e2de88c8010954e1c9e905",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看五个单页；原生公式、8行中点谱表、跳变与主导项对照、四面板图、原生链接及边界完整，无近空白页、裁切或表后叠字。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_seed6_matrix_midpoint.py -v
+test_cross_size_matrices_and_assignment_counts (__main__.Seed6MatrixMidpointTests.test_cross_size_matrices_and_assignment_counts) ... ok
+test_driver_comparisons_and_singular_channels (__main__.Seed6MatrixMidpointTests.test_driver_comparisons_and_singular_channels) ... ok
+test_extrema_and_jump_comparisons (__main__.Seed6MatrixMidpointTests.test_extrema_and_jump_comparisons) ... ok
+test_figure_markdown_and_native_word_review (__main__.Seed6MatrixMidpointTests.test_figure_markdown_and_native_word_review) ... ok
+test_independent_midpoint_recheck (__main__.Seed6MatrixMidpointTests.test_independent_midpoint_recheck) ... ok
+test_native_adjacent_links_and_finite_path_boundaries (__main__.Seed6MatrixMidpointTests.test_native_adjacent_links_and_finite_path_boundaries) ... ok
+test_protocol_cells_counts_and_nested_profiles (__main__.Seed6MatrixMidpointTests.test_protocol_cells_counts_and_nested_profiles) ... ok
+test_representation_fidelity_and_rank_controls (__main__.Seed6MatrixMidpointTests.test_representation_fidelity_and_rank_controls) ... ok
+test_spectra_and_original_path_binding (__main__.Seed6MatrixMidpointTests.test_spectra_and_original_path_binding) ... ok
+test_word_layout_and_analysis_scope (__main__.Seed6MatrixMidpointTests.test_word_layout_and_analysis_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.100s
+
+OK
+exit_code=0
+seed6_matrix_midpoint_overall passed check_only True
+exit_code=0

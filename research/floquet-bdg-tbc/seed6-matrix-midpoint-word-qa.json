@@ -1,0 +1,44 @@
+{
+  "schema": "floquet-bdg-seed6-matrix-midpoint-word-qa-v1",
+  "recordedUtc": "2026-11-11T23:30:43.650535+00:00",
+  "sourceSha256": {
+    "seed6_matrix_midpoint_protocol.json": "0c0b871635586b025180c46d39642404fdb918f632e50665d3e4a930bc15fc89",
+    "seed6_matrix_midpoint_analysis.json": "dc95212ab89d25487b60b326364a3911eed9a56c35ba9d867b1adc6acc58a761",
+    "seed6_matrix_midpoint_independent.json": "d41689425d4c0997c6475bfd73a995807c7e0a58c96c9a5999884c6a43ab80f7",
+    "seed6_matrix_path_analysis.json": "59699eca97c5dbf34411f19839c1f3dd579e7af9b2b6ee9f32234923352a1b34",
+    "seed6-matrix-midpoint.png": "69536393051c3d8e45918ae241b2d02bd5d7f0d7294f42318090ed4163d187b6",
+    "build_seed6_matrix_midpoint_report.js": "8d9964661342f6bf04d1c57fc7fcba510bd56ca97921d0ea16fc32ccc2e49742"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "03c06ec01ebe4142db34a214502e3d990d8bc86289e2de88c8010954e1c9e905",
+    "renderReportSha256": "5f96265fc6e2afba899870ef1427b03a1cb0b2029229c4e17a72741b877e764e"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "03c06ec01ebe4142db34a214502e3d990d8bc86289e2de88c8010954e1c9e905",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看五个单页；原生公式、8行中点谱表、跳变与主导项对照、四面板图、原生链接及边界完整，无近空白页、裁切或表后叠字。"
+  }
+}
