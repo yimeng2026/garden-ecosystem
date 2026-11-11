@@ -1,0 +1,30 @@
+{
+  "schema": "floquet-bdg-path-refinement-protocol-v1",
+  "analysis_date": "2026-11-11",
+  "registered_before_analysis": true,
+  "n": 400,
+  "seed": 6,
+  "regions": {
+    "max_change": [0.05, 0.050625, 0.05125, 0.051875, 0.0525],
+    "minimum_region": [0.04, 0.04125, 0.0425, 0.04375, 0.045]
+  },
+  "rationale": {
+    "max_change": "refine the coarse link r=0.050 to 0.0525 with the largest adjacent center-separation change",
+    "minimum_region": "refine the interval r=0.040 to 0.045 around the coarse minimum at r=0.0425"
+  },
+  "random_stream": "identical beta stream at every strength; same as fixed_n_path_protocol.json",
+  "adjacent_overlap": "same-N two-dimensional subspaces and the same QR/SVD metric as the coarse path",
+  "reference_gate": "all five old coarse points reproduce pair centers, distances, separation ratios, edge weights and diagnostic flags within 1e-10",
+  "new_unique_parameter_points": 5,
+  "new_seed_count": 0,
+  "adaptive_refinement_only": true,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "continuous_path_proof": false,
+  "spectral_crossing_proven": false,
+  "avoided_crossing_claim": false,
+  "state_exchange_proven": false,
+  "second_pair_topological_claim": false,
+  "new_taxonomy_claim": false,
+  "universal_mechanism_claim": false
+}

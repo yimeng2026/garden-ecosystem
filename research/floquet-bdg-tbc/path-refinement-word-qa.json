@@ -1,0 +1,41 @@
+{
+  "schema": "floquet-bdg-path-refinement-word-qa-v1",
+  "recordedUtc": "2026-11-11T10:20:54.776571+00:00",
+  "sourceSha256": {
+    "path_refinement_protocol.json": "3ca375c15793ef28f64a65608b7e11b7c3afb6c37458280bc9d5b8a7b7f4fd84",
+    "path_refinement_analysis.json": "99a72c98602509de7bd6a4fd2f32fc6bb32fd276816576e1dc32100785047af8",
+    "fixed_n_path_analysis.json": "aca217e838a73469eeb1bfb9686bf6be22910d85f1f997c792905235f3552ab2",
+    "path-refinement.png": "1a204f0d3567bbce90459e72b645c9ce8f48eb6f397a8b1e4126a2ed30433b99",
+    "build_path_refinement_report.js": "cb384acef9b11aff8403e8a31bff89b6bcf2760ba980a878c0588b7540bc4c7f"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "2f5d373d15710b8101e8585c7e52d9817e48f2e3cbf7d8f76378b95fb70fa68f",
+    "renderReportSha256": "2728b632498aec13da05aae9d229e3bf6953af3002cb12e8d18ebbd634e070c6"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "2f5d373d15710b8101e8585c7e52d9817e48f2e3cbf7d8f76378b95fb70fa68f",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看四个单页；OMML公式、两个细化点表、路径图、八条链接和边界说明完整，无近空白页或裁切。"
+  }
+}

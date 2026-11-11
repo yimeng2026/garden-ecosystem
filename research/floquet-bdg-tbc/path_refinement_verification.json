@@ -1,0 +1,95 @@
+{
+  "schema": "floquet-bdg-path-refinement-verification-v1",
+  "recorded_utc": "2026-11-11T10:20:54.925034+00:00",
+  "all_passed": true,
+  "test_count": 6,
+  "original_independent_projectors_passed": true,
+  "new_independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "path_refinement_analysis",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_path_refinement.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-参数路径细化.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_path_refinement_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_path_refinement.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "path_refinement_protocol.json": "3ca375c15793ef28f64a65608b7e11b7c3afb6c37458280bc9d5b8a7b7f4fd84",
+    "fixed_n_path_analysis.json": "aca217e838a73469eeb1bfb9686bf6be22910d85f1f997c792905235f3552ab2",
+    "swap_candidate_spectrum_analysis.json": "67283bfcf6d1f2d5a107f959ae9219d2e5fa2d14c27c5f9685de026ad62efc6d",
+    "multi_seed_independent.json": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "path_refinement_analysis.json": "99a72c98602509de7bd6a4fd2f32fc6bb32fd276816576e1dc32100785047af8",
+    "path-refinement.png": "1a204f0d3567bbce90459e72b645c9ce8f48eb6f397a8b1e4126a2ed30433b99",
+    "PATH_REFINEMENT.md": "06fb7f8b7b2521b9193a81aa5c78964fae4b26935ba341c2e62a29df7fa53515",
+    "Floquet-BdG-参数路径细化.docx": "2f5d373d15710b8101e8585c7e52d9817e48f2e3cbf7d8f76378b95fb70fa68f",
+    "path-refinement-word-qa.json": "d3e695b31e19f9db01bf5162fa982132a1c4fc9d98d9db23daf857780bb16b70",
+    "path-refinement-word-render/report.json": "2728b632498aec13da05aae9d229e3bf6953af3002cb12e8d18ebbd634e070c6",
+    "analyze_path_refinement.py": "d187e969cdb82d45db401a24dd70a07251c6a3df58b442aec212cb7076bd6ffc",
+    "build_path_refinement_report.js": "cb384acef9b11aff8403e8a31bff89b6bcf2760ba980a878c0588b7540bc4c7f",
+    "record_path_refinement_qa.py": "7c7559f76d5f1e68c2e37f9607669fd45ec7d6d47a06cfcc49be43a8b9f12ba1",
+    "test_path_refinement.py": "c78b8f20cd8768b0c00889d2298d9ae009bc8941e41f9f0ecc1959f70a021aec",
+    "path_refinement_run.log": "0f0985140979650edf918793dd5cbc5e97eb4c1e32212ff18a98a10cc6fa4e46"
+  },
+  "scope": {
+    "path_refinement_analysis_evaluated": true,
+    "regions": 2,
+    "refined_points": 10,
+    "adjacent_links": 8,
+    "new_unique_strengths": [
+      0.04125,
+      0.04375,
+      0.050625,
+      0.05125,
+      0.051875
+    ],
+    "diagonal_link_count": 8,
+    "swapped_link_count": 0,
+    "min_center_separation": 0.0021869066664570976,
+    "min_center_separation_strength": 0.04125,
+    "max_adjacent_center_separation_change": 0.00019730593093726092,
+    "max_reference_error": 0.0,
+    "coarse_jump_is_not_crossing_proof": true,
+    "discrete_minimum_is_not_continuous_extremum": true,
+    "continuous_path_proof": false,
+    "spectral_crossing_proven": false,
+    "avoided_crossing_claim": false,
+    "state_exchange_proven": false,
+    "second_pair_topological_claim": false,
+    "new_taxonomy_claim": false,
+    "n640_automatically_justified": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "path_refinement_run.log"
+}

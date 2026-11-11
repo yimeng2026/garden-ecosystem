@@ -62,6 +62,7 @@ def main():
         ("embedding_census_suite", [sys.executable, str(ROOT / "run_embedding_census_verification.py"), "--check-only"], 180),
         ("swap_candidate_spectrum_suite", [sys.executable, str(ROOT / "run_swap_candidate_spectrum_verification.py")], 180),
         ("fixed_n_path_suite", [sys.executable, str(ROOT / "run_fixed_n_path_verification.py")], 180),
+        ("path_refinement_suite", [sys.executable, str(ROOT / "run_path_refinement_verification.py")], 180),
     ]
     rows, logs = [], []
     for label, command, timeout in commands:
@@ -95,6 +96,7 @@ def main():
     embedding_census_verification = json.loads((ROOT / "embedding_census_verification.json").read_text(encoding="utf-8")) if (ROOT / "embedding_census_verification.json").exists() else {}
     swap_candidate_spectrum_verification = json.loads((ROOT / "swap_candidate_spectrum_verification.json").read_text(encoding="utf-8")) if (ROOT / "swap_candidate_spectrum_verification.json").exists() else {}
     fixed_n_path_verification = json.loads((ROOT / "fixed_n_path_verification.json").read_text(encoding="utf-8")) if (ROOT / "fixed_n_path_verification.json").exists() else {}
+    path_refinement_verification = json.loads((ROOT / "path_refinement_verification.json").read_text(encoding="utf-8")) if (ROOT / "path_refinement_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -188,6 +190,11 @@ def main():
         "fixed-n-path-word-render/report.json", "fixed_n_path_verification.json", "fixed_n_path_run.log",
         "analyze_fixed_n_path.py", "build_fixed_n_path_report.js", "record_fixed_n_path_qa.py",
         "test_fixed_n_path.py", "run_fixed_n_path_verification.py",
+        "path_refinement_protocol.json", "path_refinement_analysis.json", "path-refinement.png",
+        "PATH_REFINEMENT.md", "Floquet-BdG-参数路径细化.docx", "path-refinement-word-qa.json",
+        "path-refinement-word-render/report.json", "path_refinement_verification.json", "path_refinement_run.log",
+        "analyze_path_refinement.py", "build_path_refinement_report.js", "record_path_refinement_qa.py",
+        "test_path_refinement.py", "run_path_refinement_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py",
@@ -198,7 +205,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 6 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 6 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -262,6 +269,9 @@ def main():
         "fixed_n_path_all_passed": fixed_n_path_verification.get("all_passed"),
         "fixed_n_path_original_independent_projectors_passed": fixed_n_path_verification.get("original_independent_projectors_passed"),
         "fixed_n_path_visual_review_status": fixed_n_path_verification.get("visual_review_status"),
+        "path_refinement_all_passed": path_refinement_verification.get("all_passed"),
+        "path_refinement_original_independent_projectors_passed": path_refinement_verification.get("original_independent_projectors_passed"),
+        "path_refinement_visual_review_status": path_refinement_verification.get("visual_review_status"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
@@ -332,6 +342,14 @@ def main():
             "fixed_n_path_swapped_link_count": 0,
             "fixed_n_path_continuous_path_proof": False,
             "fixed_n_path_state_exchange_proven": False,
+            "path_refinement_analysis_evaluated": "passed",
+            "path_refinement_refined_points": 10,
+            "path_refinement_adjacent_links": 8,
+            "path_refinement_diagonal_link_count": 8,
+            "path_refinement_swapped_link_count": 0,
+            "path_refinement_min_center_separation_strength": 0.04125,
+            "path_refinement_coarse_jump_is_not_crossing": True,
+            "path_refinement_continuous_path_proof": False,
             "new_taxonomy_claim": False,
             "universal_category_claim": False,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,

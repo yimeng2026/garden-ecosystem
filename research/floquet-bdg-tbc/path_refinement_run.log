@@ -1,0 +1,84 @@
+$ path_refinement_analysis: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_path_refinement.py
+{"completed_region": "max_change", "summary": {"diagonal_link_count": 4, "swapped_link_count": 0, "tie_link_count": 0, "min_center_separation": 0.0029015153398740516, "min_center_separation_strength": 0.05, "max_adjacent_center_separation_change": 0.00019730593093726092}, "assignments": ["diagonal", "diagonal", "diagonal", "diagonal"]}
+{"completed_region": "minimum_region", "summary": {"diagonal_link_count": 4, "swapped_link_count": 0, "tie_link_count": 0, "min_center_separation": 0.0021869066664570976, "min_center_separation_strength": 0.04125, "max_adjacent_center_separation_change": 8.614013437265857e-05}, "assignments": ["diagonal", "diagonal", "diagonal", "diagonal"]}
+{
+  "summary": {
+    "diagonal_link_count": 8,
+    "swapped_link_count": 0,
+    "tie_link_count": 0,
+    "min_center_separation": 0.0021869066664570976,
+    "min_center_separation_strength": 0.04125,
+    "max_adjacent_center_separation_change": 0.00019730593093726092
+  },
+  "new_unique_strengths": [
+    0.04125,
+    0.04375,
+    0.050625,
+    0.05125,
+    0.051875
+  ],
+  "max_reference_error": 0.0
+}
+generated path_refinement_analysis.json path-refinement.png PATH_REFINEMENT.md
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-参数路径细化.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_path_refinement_qa.py
+{
+  "schema": "floquet-bdg-path-refinement-word-qa-v1",
+  "recordedUtc": "2026-11-11T10:20:54.776571+00:00",
+  "sourceSha256": {
+    "path_refinement_protocol.json": "3ca375c15793ef28f64a65608b7e11b7c3afb6c37458280bc9d5b8a7b7f4fd84",
+    "path_refinement_analysis.json": "99a72c98602509de7bd6a4fd2f32fc6bb32fd276816576e1dc32100785047af8",
+    "fixed_n_path_analysis.json": "aca217e838a73469eeb1bfb9686bf6be22910d85f1f997c792905235f3552ab2",
+    "path-refinement.png": "1a204f0d3567bbce90459e72b645c9ce8f48eb6f397a8b1e4126a2ed30433b99",
+    "build_path_refinement_report.js": "cb384acef9b11aff8403e8a31bff89b6bcf2760ba980a878c0588b7540bc4c7f"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "2f5d373d15710b8101e8585c7e52d9817e48f2e3cbf7d8f76378b95fb70fa68f",
+    "renderReportSha256": "2728b632498aec13da05aae9d229e3bf6953af3002cb12e8d18ebbd634e070c6"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "2f5d373d15710b8101e8585c7e52d9817e48f2e3cbf7d8f76378b95fb70fa68f",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看四个单页；OMML公式、两个细化点表、路径图、八条链接和边界说明完整，无近空白页或裁切。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_path_refinement.py -v
+test_coarse_points_are_reproduced (__main__.PathRefinementTests.test_coarse_points_are_reproduced) ... ok
+test_figure_markdown_and_reviewed_word (__main__.PathRefinementTests.test_figure_markdown_and_reviewed_word) ... ok
+test_refined_centers_and_links_are_consistent (__main__.PathRefinementTests.test_refined_centers_and_links_are_consistent) ... ok
+test_refinement_is_not_crossing_or_state_tracking_proof (__main__.PathRefinementTests.test_refinement_is_not_crossing_or_state_tracking_proof) ... ok
+test_refinement_registry_and_sources (__main__.PathRefinementTests.test_refinement_registry_and_sources) ... ok
+test_region_and_global_summaries_are_exact (__main__.PathRefinementTests.test_region_and_global_summaries_are_exact) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.024s
+
+OK
+exit_code=0
