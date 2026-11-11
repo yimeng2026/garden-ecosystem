@@ -229,12 +229,12 @@
     "exitCode": 0,
     "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
     "docxSha256": "039dbf5b4bd73e90492932bc5ec98d32c644948da5af730fd9087fd80f222939",
-    "resultsSha256": "56e2f1b1bae528a3af5a4ae618d70e44618e768a5aa735769116ea6eb480a4c0",
+    "resultsSha256": "ba51e8d2a2fc57031cc62b53196534906f632e3e7da325e47e879d126008c794",
     "disorderResultsSha256": "454ec9a5012a5196cba1b310ad0e7d80816082926268e318b35d52e05ad16e4a",
     "disorderIndependentSha256": "f7a053795fcb58efdd76ff2c37a8d7475b211af478ecb660eb76764ac6a62786"
   },
   "manualReview": {
-    "recordedUtc": "2026-11-11T10:37:17.794001+00:00",
+    "recordedUtc": "2026-11-11T10:56:24.750368+00:00",
     "status": "passed",
     "contactSheetRead": true,
     "reviewedPages": [

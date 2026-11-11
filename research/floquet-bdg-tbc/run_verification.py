@@ -64,6 +64,7 @@ def main():
         ("fixed_n_path_suite", [sys.executable, str(ROOT / "run_fixed_n_path_verification.py")], 180),
         ("path_refinement_suite", [sys.executable, str(ROOT / "run_path_refinement_verification.py")], 180),
         ("n600_path_suite", [sys.executable, str(ROOT / "run_n600_path_verification.py"), "--check-only"], 180),
+        ("n600_valley_suite", [sys.executable, str(ROOT / "run_n600_valley_verification.py"), "--check-only"], 180),
     ]
     rows, logs = [], []
     for label, command, timeout in commands:
@@ -99,6 +100,7 @@ def main():
     fixed_n_path_verification = json.loads((ROOT / "fixed_n_path_verification.json").read_text(encoding="utf-8")) if (ROOT / "fixed_n_path_verification.json").exists() else {}
     path_refinement_verification = json.loads((ROOT / "path_refinement_verification.json").read_text(encoding="utf-8")) if (ROOT / "path_refinement_verification.json").exists() else {}
     n600_path_verification = json.loads((ROOT / "n600_path_verification.json").read_text(encoding="utf-8")) if (ROOT / "n600_path_verification.json").exists() else {}
+    n600_valley_verification = json.loads((ROOT / "n600_valley_verification.json").read_text(encoding="utf-8")) if (ROOT / "n600_valley_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -202,6 +204,11 @@ def main():
         "n600-path-word-render/report.json", "n600_path_verification.json", "n600_path_run.log",
         "analyze_n600_path.py", "build_n600_path_report.js", "record_n600_path_qa.py",
         "test_n600_path.py", "run_n600_path_verification.py",
+        "n600_valley_protocol.json", "n600_valley_analysis.json", "n600-valley.png",
+        "N600_VALLEY.md", "Floquet-BdG-N600谷值细化.docx", "n600-valley-word-qa.json",
+        "n600-valley-word-render/report.json", "n600_valley_verification.json", "n600_valley_run.log",
+        "analyze_n600_valley.py", "build_n600_valley_report.js", "record_n600_valley_qa.py",
+        "test_n600_valley.py", "run_n600_valley_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py",
@@ -212,7 +219,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 6 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 6 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -282,6 +289,9 @@ def main():
         "n600_path_all_passed": n600_path_verification.get("all_passed"),
         "n600_path_original_independent_projectors_passed": n600_path_verification.get("original_independent_projectors_passed"),
         "n600_path_visual_review_status": n600_path_verification.get("visual_review_status"),
+        "n600_valley_all_passed": n600_valley_verification.get("all_passed"),
+        "n600_valley_original_independent_projectors_passed": n600_valley_verification.get("original_independent_projectors_passed"),
+        "n600_valley_visual_review_status": n600_valley_verification.get("visual_review_status"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
@@ -369,6 +379,15 @@ def main():
             "n600_path_min_center_separation_same_strength": False,
             "n600_path_max_change_same_link": False,
             "n600_path_size_invariance_claim": False,
+            "n600_valley_analysis_evaluated": "passed",
+            "n600_valley_refined_points": 5,
+            "n600_valley_adjacent_links": 4,
+            "n600_valley_diagonal_link_count": 4,
+            "n600_valley_swapped_link_count": 0,
+            "n600_valley_min_center_separation_strength": 0.044375,
+            "n600_valley_is_not_crossing_proof": True,
+            "n600_valley_low_overlap_has_step_dependence": True,
+            "n600_valley_continuous_path_proof": False,
             "new_taxonomy_claim": False,
             "universal_category_claim": False,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,

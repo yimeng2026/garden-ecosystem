@@ -1,0 +1,65 @@
+$ n600_valley_evidence_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_n600_valley.py --check-only
+{"check_only": true, "points": 5, "links": 4, "new_parameter_points": 2, "all_passed": true}
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-N600谷值细化.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_n600_valley_qa.py
+{
+  "schema": "floquet-bdg-n600-valley-word-qa-v1",
+  "recordedUtc": "2026-11-11T10:58:17.400970+00:00",
+  "sourceSha256": {
+    "n600_valley_protocol.json": "5b0cb07dc20814a33ee005dd1f79fb42502e1f23a1d703c89da07841d383eade",
+    "n600_valley_analysis.json": "dbc9593a91cf54ce2a07bc05292816c74c0f4b8b050377f5bd0cf7b879fa1ab4",
+    "n600_path_analysis.json": "42cfae36089c692c9aad952d5fa8139defdb99f6b658725d8558e8fc71a60938",
+    "path_refinement_analysis.json": "99a72c98602509de7bd6a4fd2f32fc6bb32fd276816576e1dc32100785047af8",
+    "n600-valley.png": "1821f887092caeb3910e065b2520f8e3619136c7f7946e76bd2473739c408819",
+    "build_n600_valley_report.js": "a768319117b09ffb588bfdde99b87adac12866355e695450a6115e4b867479c5"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "fb6289cd8aafd14b67072c63921ea6db77bf0d5639cef5bf139b197fe878cec9",
+    "renderReportSha256": "eaf91b57f0afc934f2640c64b2405f2258a8fa9e21981655f951680618fa50ac"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "fb6289cd8aafd14b67072c63921ea6db77bf0d5639cef5bf139b197fe878cec9",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看四个单页；OMML公式、五点表、路径图、四条链接和指标边界完整，无近空白页或裁切。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_n600_valley.py -v
+test_centers_and_links_are_consistent (__main__.N600ValleyTests.test_centers_and_links_are_consistent) ... ok
+test_figure_markdown_and_reviewed_word (__main__.N600ValleyTests.test_figure_markdown_and_reviewed_word) ... ok
+test_old_points_are_reproduced (__main__.N600ValleyTests.test_old_points_are_reproduced) ... ok
+test_registry_and_sources (__main__.N600ValleyTests.test_registry_and_sources) ... ok
+test_summary_and_size_comparison_are_exact (__main__.N600ValleyTests.test_summary_and_size_comparison_are_exact) ... ok
+test_valley_is_not_crossing_or_invariance_proof (__main__.N600ValleyTests.test_valley_is_not_crossing_or_invariance_proof) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.025s
+
+OK
+exit_code=0

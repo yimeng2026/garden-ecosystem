@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-path-refinement-verification-v1",
-  "recorded_utc": "2026-11-11T10:39:08.363816+00:00",
+  "recorded_utc": "2026-11-11T10:58:14.296816+00:00",
   "all_passed": true,
   "test_count": 6,
   "original_independent_projectors_passed": true,
@@ -54,13 +54,13 @@
     "path-refinement.png": "1a204f0d3567bbce90459e72b645c9ce8f48eb6f397a8b1e4126a2ed30433b99",
     "PATH_REFINEMENT.md": "06fb7f8b7b2521b9193a81aa5c78964fae4b26935ba341c2e62a29df7fa53515",
     "Floquet-BdG-参数路径细化.docx": "2f5d373d15710b8101e8585c7e52d9817e48f2e3cbf7d8f76378b95fb70fa68f",
-    "path-refinement-word-qa.json": "766de0977934911e89e4f6feebdf7032480114001df6034ef7fb23af94398ae7",
+    "path-refinement-word-qa.json": "b08176d404bd659172f284d04aadc08ce5ece27617c2db921f72cfee8e6c2efb",
     "path-refinement-word-render/report.json": "2728b632498aec13da05aae9d229e3bf6953af3002cb12e8d18ebbd634e070c6",
     "analyze_path_refinement.py": "d187e969cdb82d45db401a24dd70a07251c6a3df58b442aec212cb7076bd6ffc",
     "build_path_refinement_report.js": "cb384acef9b11aff8403e8a31bff89b6bcf2760ba980a878c0588b7540bc4c7f",
     "record_path_refinement_qa.py": "7c7559f76d5f1e68c2e37f9607669fd45ec7d6d47a06cfcc49be43a8b9f12ba1",
     "test_path_refinement.py": "c78b8f20cd8768b0c00889d2298d9ae009bc8941e41f9f0ecc1959f70a021aec",
-    "path_refinement_run.log": "317c45bc2d38d778f2786e4f0d68f37294e01c3eeb0003c9c08a9431b0e91975"
+    "path_refinement_run.log": "96e4eef4f5a873f0001408e926141f90bdc0392749dc6ce3a725faf4b8d05d15"
   },
   "scope": {
     "path_refinement_analysis_evaluated": true,

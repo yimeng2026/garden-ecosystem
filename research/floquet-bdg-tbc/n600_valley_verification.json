@@ -1,0 +1,112 @@
+{
+  "schema": "floquet-bdg-n600-valley-verification-v1",
+  "recorded_utc": "2026-11-11T10:58:17.542348+00:00",
+  "all_passed": true,
+  "test_count": 6,
+  "check_only": true,
+  "original_independent_projectors_passed": true,
+  "new_independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "n600_valley_evidence_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_n600_valley.py",
+        "--check-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-N600谷值细化.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_n600_valley_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_n600_valley.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "n600_valley_protocol.json": "5b0cb07dc20814a33ee005dd1f79fb42502e1f23a1d703c89da07841d383eade",
+    "n600_path_analysis.json": "42cfae36089c692c9aad952d5fa8139defdb99f6b658725d8558e8fc71a60938",
+    "path_refinement_analysis.json": "99a72c98602509de7bd6a4fd2f32fc6bb32fd276816576e1dc32100785047af8",
+    "swap_candidate_spectrum_analysis.json": "67283bfcf6d1f2d5a107f959ae9219d2e5fa2d14c27c5f9685de026ad62efc6d",
+    "multi_seed_independent.json": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "n600_valley_analysis.json": "dbc9593a91cf54ce2a07bc05292816c74c0f4b8b050377f5bd0cf7b879fa1ab4",
+    "n600-valley.png": "1821f887092caeb3910e065b2520f8e3619136c7f7946e76bd2473739c408819",
+    "N600_VALLEY.md": "1c0b3e58f7aa7e7f21f9be235709c2c5b7cdf3065396128d565e93d403b14750",
+    "Floquet-BdG-N600谷值细化.docx": "fb6289cd8aafd14b67072c63921ea6db77bf0d5639cef5bf139b197fe878cec9",
+    "n600-valley-word-qa.json": "9db76c60a99ac7b040691f58d87d66eb6fc9653eb38031273100dab4c79aead2",
+    "n600-valley-word-render/report.json": "eaf91b57f0afc934f2640c64b2405f2258a8fa9e21981655f951680618fa50ac",
+    "analyze_n600_valley.py": "70050f264d4eb6cb9486d181968d74d3a346d4b843a592ae48a590c0aaf257ff",
+    "build_n600_valley_report.js": "a768319117b09ffb588bfdde99b87adac12866355e695450a6115e4b867479c5",
+    "record_n600_valley_qa.py": "9b14ece6cb8a03dc47fafdd66d32ec23919d112edb5afd59078e592eba6ec589",
+    "test_n600_valley.py": "bfaee399edf68fa33e2713726734fbe1688ef93db87f907bdda883267e52d09f",
+    "n600_valley_run.log": "07eeb621828d8e7469d9e48877a281784953b7bc48fa18755e56c873bb935eca"
+  },
+  "scope": {
+    "n600_valley_analysis_evaluated": true,
+    "points": 5,
+    "links": 4,
+    "new_unique_strengths": [
+      0.043125,
+      0.044375
+    ],
+    "diagonal_link_count": 4,
+    "swapped_link_count": 0,
+    "min_center_separation": 0.0012895484186492092,
+    "min_center_separation_strength": 0.044375,
+    "max_adjacent_center_separation_change": 0.0002121833195288731,
+    "max_diagonal_score_drop": 0.03226761458852723,
+    "max_swapped_score_increase": 0.03171034977798207,
+    "min_diagonal_score": 0.9049561427844149,
+    "max_change_link": {
+      "from": 0.0425,
+      "to": 0.043125
+    },
+    "assignment_agreement_with_n400": 4,
+    "min_center_separation_same_strength": false,
+    "pair0_joint_pass_strengths": [
+      0.0425,
+      0.043125,
+      0.04375,
+      0.044375,
+      0.045
+    ],
+    "pair1_joint_pass_strengths": [],
+    "max_reference_error": 0.0,
+    "valley_is_not_crossing_proof": true,
+    "low_overlap_has_step_dependence": true,
+    "size_invariance_claim": false,
+    "continuous_path_proof": false,
+    "spectral_crossing_proven": false,
+    "avoided_crossing_claim": false,
+    "state_exchange_proven": false,
+    "second_pair_topological_claim": false,
+    "new_taxonomy_claim": false,
+    "n640_automatically_justified": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "n600_valley_run.log"
+}

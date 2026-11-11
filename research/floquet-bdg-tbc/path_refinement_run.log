@@ -29,7 +29,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_path_refinement_qa.py
 {
   "schema": "floquet-bdg-path-refinement-word-qa-v1",
-  "recordedUtc": "2026-11-11T10:39:08.208437+00:00",
+  "recordedUtc": "2026-11-11T10:58:14.145927+00:00",
   "sourceSha256": {
     "path_refinement_protocol.json": "3ca375c15793ef28f64a65608b7e11b7c3afb6c37458280bc9d5b8a7b7f4fd84",
     "path_refinement_analysis.json": "99a72c98602509de7bd6a4fd2f32fc6bb32fd276816576e1dc32100785047af8",
@@ -78,7 +78,7 @@ test_refinement_registry_and_sources (__main__.PathRefinementTests.test_refineme
 test_region_and_global_summaries_are_exact (__main__.PathRefinementTests.test_region_and_global_summaries_are_exact) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.025s
+Ran 6 tests in 0.026s
 
 OK
 exit_code=0
