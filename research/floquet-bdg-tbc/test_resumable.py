@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 from run_disorder import beta_for  # noqa: E402
 from resumable_winding import resumable_winding  # noqa: E402
+from run_scale_diagnostic import diagnostic_registry  # noqa: E402
 from tbc_model import half_chiral_block, winding  # noqa: E402
 
 
@@ -81,6 +82,16 @@ class ResumableWindingTests(unittest.TestCase):
             resumable_winding(parameters, 0.2, 0.0, work_path, chunk_size=2, max_chunks=1)
             with self.assertRaises(ValueError):
                 resumable_winding(parameters, 0.1, 0.0, work_path, chunk_size=2, max_chunks=1)
+
+
+class DiagnosticRegistryTests(unittest.TestCase):
+    def test_n400_and_n600_have_distinct_rationales(self):
+        cases = diagnostic_registry()
+        self.assertEqual([case["n"] for case in cases], [400, 600])
+        self.assertEqual(cases[0]["strength"], 0.1)
+        self.assertEqual(cases[1]["strength"], 0.05)
+        self.assertNotEqual(cases[0]["rationale"], cases[1]["rationale"])
+        self.assertTrue(all(case["seed"] == 0 and case["target"] == "zero" for case in cases))
 
 
 def run_all_tests():
