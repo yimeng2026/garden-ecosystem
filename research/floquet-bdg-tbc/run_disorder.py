@@ -38,7 +38,7 @@ def beta_for(seed, n=80):
     return beta_sequence(seed, n)
 
 
-def evaluate_realization(n, seed, strength, kind, nominal_steps, targets=("zero", "pi")):
+def evaluate_realization(n, seed, strength, kind, nominal_steps, targets=("zero", "pi"), free_method="expm"):
     if kind not in ("disorder", "uniform_mean"):
         raise ValueError("kind must be disorder or uniform_mean")
     if strength not in STRENGTHS:
@@ -61,7 +61,7 @@ def evaluate_realization(n, seed, strength, kind, nominal_steps, targets=("zero"
     windings = {}
     for target in targets:
         epsilon = 0.0 if target == "zero" else np.pi
-        windings[target] = winding_convergence(case, epsilon, nominal_steps, keep_curve=False)
+        windings[target] = winding_convergence(case, epsilon, nominal_steps, keep_curve=False, free_method=free_method)
     u, period = disordered_floquet(n, 2.5, beta, strength, 7.0, 1.0, 1.0)
     spectrum = quasienergy_spectrum(u, period)
     endpoint = {}
@@ -75,6 +75,7 @@ def evaluate_realization(n, seed, strength, kind, nominal_steps, targets=("zero"
         "seed": int(seed),
         "strength": float(strength),
         "kind": kind,
+        "free_method": free_method,
         "beta_sha256": sha256_bytes(beta.tobytes()),
         "full_kick_parameter": "K parameter r*beta; full symmetric rotation angle 2*r*beta",
         "half_kick_convention_error": half_kick_error,

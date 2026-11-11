@@ -78,6 +78,28 @@ def step_evolution(k0, k1, period, time):
     return expm(-4 * k0 * time) @ half_kick
 
 
+def free_evolution(k0, time, method="expm"):
+    """Compute exp(-4 K0 time), optionally using the Hermitian iK eigensystem."""
+    from scipy.linalg import eigh
+
+    k0 = np.asarray(k0, dtype=complex)
+    if k0.ndim != 2 or k0.shape[0] != k0.shape[1] or not np.isfinite(time):
+        raise ValueError("k0 must be square and time finite")
+    if method == "expm":
+        return expm(-4 * k0 * time)
+    if method != "eigh":
+        raise ValueError("free evolution method must be expm or eigh")
+    hermitian = 1j * k0
+    if np.max(np.abs(hermitian - hermitian.conj().T)) > 1e-10:
+        raise ValueError("iK is not Hermitian within tolerance")
+    energies, vectors = eigh(hermitian)
+    # K=-i(iK), hence exp(-4Kt)=Q exp(+4iEt)Q†.
+    u = (vectors * np.exp(4j * energies * time)) @ vectors.conj().T
+    if np.max(np.abs(u.conj().T @ u - np.eye(len(u)))) > 1e-10:
+        raise RuntimeError("Hermitian free-evolution reconstruction is not unitary")
+    return u
+
+
 def floquet_gap(u, epsilon):
     """Minimum unit-circle distance to the requested 0 or pi gap."""
     if not np.isclose(epsilon, 0.0, atol=0, rtol=0) and not np.isclose(
@@ -192,7 +214,7 @@ def _parameters(parameters):
     return n, mu0, mu1, omega, gamma, delta
 
 
-def winding(parameters, nominal_step, epsilon, branch="plus", keep_curve=False):
+def winding(parameters, nominal_step, epsilon, branch="plus", keep_curve=False, free_method="expm"):
     """Evaluate one chiral-block winding on a periodic central-difference grid."""
     if branch not in ("plus", "minus"):
         raise ValueError("branch must be plus or minus")
@@ -215,7 +237,7 @@ def winding(parameters, nominal_step, epsilon, branch="plus", keep_curve=False):
     max_normality = 0.0
     for theta in theta_values:
         k0 = twisted_majorana_k(mu0, theta, gamma, delta)
-        free_half = expm(-2 * k0 * period)
+        free_half = free_evolution(k0, period / 2, method=free_method)
         u_half = free_half @ half_kick
         u_full = half_kick @ free_half @ free_half @ half_kick
         period_result = periodized(u_half, u_full, period, period / 2, epsilon)
@@ -295,14 +317,17 @@ def winding(parameters, nominal_step, epsilon, branch="plus", keep_curve=False):
     }
 
 
-def winding_convergence(parameters, epsilon, nominal_steps=(0.05, 0.025), keep_curve=False):
-    """Require integer quantization and agreement on two independent theta grids."""
+def winding_convergence(parameters, epsilon, nominal_steps=(0.05, 0.025), keep_curve=False, free_method="expm"):
+    """Require integer quantization and agreement on exactly two theta grids."""
+    if len(nominal_steps) != 2:
+        raise ValueError("production winding convergence requires exactly two grids")
     rows = [
-        winding(parameters, step, epsilon, keep_curve=keep_curve)
+        winding(parameters, step, epsilon, keep_curve=keep_curve, free_method=free_method)
         for step in nominal_steps
     ]
     base = {
         "epsilon": float(epsilon),
+        "free_method": free_method,
         "rows": rows,
         "value": None,
         "nearest_integer": None,
