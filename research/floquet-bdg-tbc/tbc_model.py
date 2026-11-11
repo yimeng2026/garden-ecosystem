@@ -318,17 +318,26 @@ def winding(parameters, nominal_step, epsilon, branch="plus", keep_curve=False, 
 
 
 def winding_convergence(parameters, epsilon, nominal_steps=(0.05, 0.025), keep_curve=False, free_method="expm"):
-    """Require integer quantization and agreement on exactly two theta grids."""
+    """Compute exactly two grids and apply the unchanged convergence contract."""
     if len(nominal_steps) != 2:
         raise ValueError("production winding convergence requires exactly two grids")
     rows = [
         winding(parameters, step, epsilon, keep_curve=keep_curve, free_method=free_method)
         for step in nominal_steps
     ]
+    return winding_convergence_from_rows(rows, free_method=free_method, epsilon=epsilon)
+
+
+def winding_convergence_from_rows(rows, free_method="expm", epsilon=None):
+    """Aggregate two previously computed grids without rerunning either one."""
+    if len(rows) != 2:
+        raise ValueError("production winding convergence requires exactly two grids")
+    if epsilon is None:
+        epsilon = rows[0].get("epsilon", 0.0)
     base = {
         "epsilon": float(epsilon),
         "free_method": free_method,
-        "rows": rows,
+        "rows": list(rows),
         "value": None,
         "nearest_integer": None,
         "mesh_difference": None,

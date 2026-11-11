@@ -65,13 +65,17 @@ class N320RegistryTests(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=ROOT) as folder:
             path = Path(folder) / "n320.json"
             selector = lambda case: case["kind"] == "uniform_mean" and case["strength"] == 0.05
-            first = run_n320(n=8, selector=selector, path=path)
-            self.assertEqual(len(first["rows"]), 1)
+            first = run_n320(n=8, selector=selector, path=path, grid="0.05")
+            self.assertEqual(len(first["rows"]), 0)
+            self.assertEqual(len(first["partial"]["grid_results"]), 1)
             self.assertFalse(first["complete"])
-            self.assertEqual(first["rows"][0]["free_method"], "eigh")
-            original = json.dumps(first["rows"], sort_keys=True)
-            second = run_n320(n=8, selector=selector, path=path)
-            self.assertEqual(json.dumps(second["rows"], sort_keys=True), original)
+            original = first["partial"]["grid_results"]["0.05"]["value"]
+            second = run_n320(n=8, selector=selector, path=path, grid="0.025")
+            self.assertEqual(len(second["rows"]), 1)
+            self.assertNotIn("partial", second)
+            self.assertFalse(second["complete"])
+            self.assertEqual(second["rows"][0]["free_method"], "eigh")
+            self.assertEqual(second["rows"][0]["zero"]["rows"][0]["value"], original)
             with self.assertRaisesRegex(ValueError, "incomplete N320 case registry"):
                 merge_n320(path)
 

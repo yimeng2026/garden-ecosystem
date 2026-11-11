@@ -38,13 +38,15 @@ def beta_for(seed, n=80):
     return beta_sequence(seed, n)
 
 
-def evaluate_realization(n, seed, strength, kind, nominal_steps, targets=("zero", "pi"), free_method="expm"):
+def evaluate_realization(n, seed, strength, kind, nominal_steps, targets=("zero", "pi"), free_method="expm", windings_override=None):
     if kind not in ("disorder", "uniform_mean"):
         raise ValueError("kind must be disorder or uniform_mean")
     if strength not in STRENGTHS:
         raise ValueError("strength is outside the preregistered set")
     if not targets or len(set(targets)) != len(targets) or any(target not in ("zero", "pi") for target in targets):
         raise ValueError("targets must be a nonempty unique subset of zero and pi")
+    if windings_override is not None and any(target not in targets for target in windings_override):
+        raise ValueError("winding override target is outside the requested subset")
     beta = beta_for(seed, n) if kind == "disorder" else np.ones(n)
     case = {
         "n": n,
@@ -58,8 +60,10 @@ def evaluate_realization(n, seed, strength, kind, nominal_steps, targets=("zero"
     half_kick_error = float(np.max(np.abs(half_kick - chemical_kick(strength * beta))))
     if half_kick_error > 1e-12:
         raise RuntimeError("TBC and open-chain half-kick conventions disagree")
-    windings = {}
+    windings = dict(windings_override or {})
     for target in targets:
+        if target in windings:
+            continue
         epsilon = 0.0 if target == "zero" else np.pi
         windings[target] = winding_convergence(case, epsilon, nominal_steps, keep_curve=False, free_method=free_method)
     u, period = disordered_floquet(n, 2.5, beta, strength, 7.0, 1.0, 1.0)
