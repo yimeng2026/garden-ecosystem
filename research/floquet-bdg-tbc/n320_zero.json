@@ -276,6 +276,96 @@
       "target": "zero",
       "endpoint_class": "recovered",
       "runtime_seconds": 427.2709001000039
+    },
+    {
+      "n": 320,
+      "seed": 0,
+      "strength": 0.05,
+      "kind": "disorder",
+      "free_method": "eigh",
+      "beta_sha256": "11a85d54b1ed7c16ced633131bc19ae97b09ae9c6d06aec7419c9b08438d6e64",
+      "full_kick_parameter": "K parameter r*beta; full symmetric rotation angle 2*r*beta",
+      "half_kick_convention_error": 1.3877787807814457e-17,
+      "endpoint": {
+        "zero": {
+          "eigenvalues_real": [
+            0.9999999975128038,
+            0.9999999975128038
+          ],
+          "eigenvalues_imag": [
+            7.052935091228506e-05,
+            -7.052935091228506e-05
+          ],
+          "distances": [
+            7.052935095614017e-05,
+            7.052935095614017e-05
+          ],
+          "separation_ratios": [
+            0.024513093805948728,
+            0.024513093805948728
+          ],
+          "edge_weight": 0.3444370991575222,
+          "subspace_ipr": 0.026824451526572535,
+          "second_pair_subspace_ipr": 0.024584254577945566,
+          "joint_pass": false
+        }
+      },
+      "open_unitarity_error": 6.994405055138486e-15,
+      "zero": {
+        "epsilon": 0.0,
+        "free_method": "eigh",
+        "rows": [
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.999584924525383,
+            "raw_real": 0.999584924525383,
+            "raw_imag": -4.1406197253970224e-18,
+            "nearest_integer": 1,
+            "integer_residual": 0.00041507547461705485,
+            "min_bulk_gap": 0.0018730234476264556,
+            "max_block_condition": 1.0000000000009106,
+            "max_unitarity_error": 5.758804943522349e-14,
+            "max_normality_error": 3.0799089546056857e-12,
+            "nominal_step": 0.05,
+            "actual_step": 0.049866550056980846,
+            "points": 126,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          },
+          {
+            "status": "ok",
+            "reason": null,
+            "value": 0.9998953928482138,
+            "raw_real": 0.9998953928482138,
+            "raw_imag": -1.935149694316757e-19,
+            "nearest_integer": 1,
+            "integer_residual": 0.00010460715178617352,
+            "min_bulk_gap": 0.001873034719354449,
+            "max_block_condition": 1.0000000000026363,
+            "max_unitarity_error": 7.09427526367151e-14,
+            "max_normality_error": 6.073618634153507e-12,
+            "nominal_step": 0.025,
+            "actual_step": 0.025032610785576042,
+            "points": 251,
+            "branch": "plus",
+            "epsilon": 0.0,
+            "curve": null
+          }
+        ],
+        "value": 0.9998953928482138,
+        "nearest_integer": 1,
+        "mesh_difference": 0.0003104683228308813,
+        "integer_residual": 0.00041507547461705485,
+        "min_bulk_gap": 0.0018730234476264556,
+        "status": "ok",
+        "reason": null,
+        "passed": true
+      },
+      "target": "zero",
+      "endpoint_class": "not_recovered",
+      "runtime_seconds": 425.22412329993676
     }
   ]
 }
