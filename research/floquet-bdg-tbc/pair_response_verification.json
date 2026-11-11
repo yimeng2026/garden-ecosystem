@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-pair-response-verification-v1",
-  "recorded_utc": "2026-11-11T11:17:10.340436+00:00",
+  "recorded_utc": "2026-11-11T11:39:38.381981+00:00",
   "all_passed": true,
   "test_count": 6,
   "original_independent_projectors_passed": true,
@@ -54,13 +54,13 @@
     "pair-response-audit.png": "5612657a44bce2aca72a8cad9284b493791d508ad3cff33ae61ac34d1ec5fc2c",
     "PAIR_RESPONSE_AUDIT.md": "106982c8c0c2673bcd94a96ac652f8cae1cfe3ce1a1dd985b4be94835a294365",
     "Floquet-BdG-最近对与次近对响应审计.docx": "99ce39fef995eb6ccc7e9821fef96f2452e131461c9ef1193c72c570ca7a0f0c",
-    "pair-response-word-qa.json": "e6f3f174b10687ba015c76567434cfb79655ac3cea93b4b0c57e9db2a21d812f",
+    "pair-response-word-qa.json": "a046001198e37659f58952706e9cf6990e8f522c3dd955f816e45b7ed45ea2a0",
     "pair-response-word-render/report.json": "ec0bfbec8d408cab66856692626872a718d425f0371837b77c85d47779667665",
     "analyze_pair_responses.py": "760cea7fad9ff0dd6ce04ce3866326f73baa34b6dda1e3e029b809e1b1d581c2",
     "build_pair_response_report.js": "852853a03ca082266ee78494308eec70987f975c8a6963e3a96d2b907edf2393",
     "record_pair_response_qa.py": "6b6d50c5a1548d9db8772846d0eb3db6161904a32cf507800a9b1c0dc80b8375",
     "test_pair_responses.py": "9240368ab562c7db03e8b01b3e0446336af776006698c4d2d1e989694f42a251",
-    "pair_response_run.log": "d928ee47fcd116a0d98181555905370de307aef1f2fccfcf0b7dce96fca537a2"
+    "pair_response_run.log": "38dbfe44cf16eb41897a56c62bf8619024b3060899683300c1e88f3e5f33a01a"
   },
   "scope": {
     "pair_response_analysis_evaluated": true,

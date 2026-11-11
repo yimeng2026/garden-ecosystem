@@ -37,10 +37,11 @@ def main():
         },
         "visualReview": {
             "status": "passed", "pagesReviewed": 4,
-            "reviewedPages": [row["file"] for row in pages], "contactSheetRead": False,
+            "reviewedPages": [row["file"] for row in pages], "contactSheetRead": True,
             "nearBlankPages": [], "clippedPages": [], "docxSha256": sha(DOCX),
             "tocPageMapping": [2, 3, 4], "libreOfficeFallbackUsed": False,
-            "note": "全部四个单页已逐一查看；OMML公式、九行分配表、对数坐标图、三份重叠矩阵与主角度完整，无近空白页或裁切。",
+            "contentLossFindingsReviewed": ["word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"],
+            "note": "已先查看联系表，再逐一查看四个单页；结构化OMML上下标与分式、九行分配表、对数坐标图、三份重叠矩阵与主角度完整，无近空白页或裁切。",
         },
     }
     (ROOT / "subspace-overlap-word-qa.json").write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-reversal-verification-v1",
-  "recorded_utc": "2026-11-11T11:17:02.599018+00:00",
+  "recorded_utc": "2026-11-11T11:39:30.618981+00:00",
   "all_passed": true,
   "test_count": 6,
   "original_independent_projectors_passed": true,
@@ -50,13 +50,13 @@
     "reversal-units.png": "323f073dd80a08003fd592d206ea3be9362b2477ada074b5b1add4473685e0b2",
     "REVERSAL_UNITS.md": "7e155e38514ce115f4c3858b5e662c5940e016ff361ef93f8a4d200b55aab95a",
     "Floquet-BdG-反转单元机制诊断.docx": "50e4c4b252d9dc1f1f917fe6a44b687e43c66403601e5b20620478025031336b",
-    "reversal-word-qa.json": "9a9c95a4a228563137f6f73490c4c458420ab1d39088f8a646b14de8960e3bc8",
+    "reversal-word-qa.json": "9edfa840297a90ade62f2490ae0bdfce940742d4d05f45ed4206b632d5295f7d",
     "reversal-word-render/report.json": "738bcb26d5e202690d8fac243d819fde605d0b0deab12f9fe317535a07e9d0a3",
     "analyze_reversal_units.py": "3bfb6bdb3cc15473b597c1406b54fd511a5061344709842a2fe5673ace01b20b",
     "build_reversal_report.js": "ab8c7a71c929925e286623d7bfb907ec9a55bf97d1c98083e23b64f9ef85c243",
     "record_reversal_qa.py": "769394b44be27ae11055b529bb72e6611e5c8cb3bf156d8e87bc979b482e8868",
     "test_reversal_units.py": "fa9e65226471ce292e34e3524a0247cedc1bc129a85b4d5e2f7262d5b687385a",
-    "reversal_run.log": "c966872cbbf286541eea9a5f675d81fc97177344ffbda553002b1d158bcb46e0"
+    "reversal_run.log": "4d1b02c6ff7f5ef35ebaeb596b0707c35942d14df2fb122ec082ff893b3e1e56"
   },
   "scope": {
     "targeted_reversal_decomposition_evaluated": true,

@@ -2,7 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import {
   AlignmentType, Document, Footer, FootnoteReferenceRun, Header, HeadingLevel,
-  ImageRun, ImportedXmlComponent, Math as MathEquation, MathRun, Packer,
+  ImageRun, ImportedXmlComponent, Math as MathEquation, MathFraction, MathRun,
+  MathSubScript, MathSuperScript, Packer,
   PageBreak, PageNumber, Paragraph, ShadingType, Table, TableCell, TableRow,
   TextRun, WidthType,
 } from "docx";
@@ -33,7 +34,9 @@ const makeTable = (headers, rows, widths, size = 10) => new Table({
   width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths,
   rows: [new TableRow({ tableHeader: true, cantSplit: true, children: headers.map((text, index) => cell(text, index, widths, true, size)) }), ...rows.map((row) => new TableRow({ cantSplit: true, children: row.map((text, index) => cell(text, index, widths, false, size)) }))],
 });
-const equation = (text) => para(new MathEquation({ children: [new MathRun(text)] }), { alignment: AlignmentType.CENTER, spacing: { before: 55, after: 70 } });
+const equation = (children) => para(new MathEquation({ children: Array.isArray(children) ? children : [new MathRun(children)] }), { alignment: AlignmentType.CENTER, spacing: { before: 55, after: 70 } });
+const sub = (base, subscript) => new MathSubScript({ children: [new MathRun(base)], subScript: [new MathRun(subscript)] });
+const subSup = (base, subscript, superScript) => new MathSuperScript({ children: [sub(base, subscript)], superScript: [new MathRun(superScript)] });
 const footnote = (text) => para(run(text, { size: 15 }), { spacing: { after: 30, line: 190 } });
 const fmt = (value) => Number(value).toPrecision(6).replace(/\.0+$/, "");
 const scoreRows = analysis.cases.flatMap((item) => item.grids.map((grid) => [
@@ -61,8 +64,16 @@ const children = [
 
   heading(titles[0]),
   citedBody("不同尺寸本征矢不能直接点积。将复数内部旋量分量从格心 (i+1/2)/N 线性插值到共同 M 网格，再做约化 QR 正交化；M 预先固定为1200、2400、4800。", 1),
-  equation("Q(N,M) = orth(I_M(V_N)),  O_ij = (s_1² + s_2²) / 2"),
-  equation("{s_1, s_2} = singular values[Q(400,M)_i^H Q(600,M)_j],  θ_k = arccos(s_k)"),
+  equation([
+    new MathRun("Q(N,M) = orth("), sub("I", "M"), new MathRun("("), sub("V", "N"), new MathRun(")),　"),
+    sub("O", "ij"), new MathRun(" = "),
+    new MathFraction({ numerator: [subSup("s", "1", "2"), new MathRun(" + "), subSup("s", "2", "2")], denominator: [new MathRun("2")] }),
+  ]),
+  equation([
+    new MathRun("{"), sub("s", "1"), new MathRun(", "), sub("s", "2"), new MathRun("} = singular values["),
+    subSup("Q(400,M)", "i", "H"), new MathRun(" "), sub("Q(600,M)", "j"), new MathRun("],　"),
+    sub("θ", "k"), new MathRun(" = arccos("), sub("s", "k"), new MathRun(")"),
+  ]),
   para(run("二维子空间比较消除了单矢量相位和内部旋转任意性。同谱秩与交换分配均保留，不新增数值阈值。", { size: 18, color: palette.light })),
   scoreTable,
   para(run(`重算相同本征对仍复现冻结剖面，最大误差 ${analysis.max_profile_absolute_error.toExponential(3)}，低于 10⁻¹⁰。`, { size: 17, color: palette.light })),

@@ -192,6 +192,9 @@ class SubspaceOverlapTests(unittest.TestCase):
             footer = "".join(package.read(name).decode("utf-8") for name in package.namelist() if name.startswith("word/footer") and name.endswith(".xml"))
             media = [name for name in package.namelist() if name.startswith("word/media/") and not name.endswith("/")]
         self.assertIn("m:oMath", document)
+        self.assertIn("<m:sSub", document)
+        self.assertIn("<m:sSup", document)
+        self.assertIn("<m:f>", document)
         self.assertIn("TOC", document)
         self.assertIn("PAGE", footer)
         self.assertEqual(len(media), 1)
@@ -205,6 +208,9 @@ class SubspaceOverlapTests(unittest.TestCase):
         self.assertEqual(qa["visualReview"]["docxSha256"], sha(docx))
         self.assertEqual(qa["visualReview"]["nearBlankPages"], [])
         self.assertEqual(qa["visualReview"]["clippedPages"], [])
+        self.assertTrue(qa["visualReview"]["contactSheetRead"])
+        self.assertEqual(qa["visualReview"]["contentLossFindingsReviewed"], ["word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"])
+        self.assertIn("结构化OMML", qa["visualReview"]["note"])
         runner = (ROOT / "run_subspace_overlap_verification.py").read_text(encoding="utf-8")
         self.assertNotIn('("docx_build"', runner)
 
