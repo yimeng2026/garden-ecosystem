@@ -1,0 +1,50 @@
+[
+  {
+    "n": 160,
+    "repeats": 3,
+    "expm_seconds": [
+      0.057072299998253584,
+      0.054962399997748435,
+      0.057217199937440455
+    ],
+    "np_eig_seconds": [
+      0.0936877999920398,
+      0.09457930002827197,
+      0.08731940004508942
+    ],
+    "scipy_schur_seconds": [
+      0.08257039997261018,
+      0.08306580001953989,
+      0.08271750004496425
+    ],
+    "hermitian_eigh_seconds": [
+      0.029789800057187676,
+      0.02420490002259612,
+      0.02452039998024702
+    ],
+    "np_eig_eigenvector_unitarity": 1.2731589152619832e-11,
+    "np_eig_diagonalization_error": 1.8193685206547404e-15,
+    "eigh_free_reconstruction_error": 1.0719403247982148e-14,
+    "schur_normality_error": 1.7072920545000452e-14
+  },
+  {
+    "n": 320,
+    "repeats": 1,
+    "expm_seconds": [
+      0.31509180006105453
+    ],
+    "np_eig_seconds": [
+      0.616530800005421
+    ],
+    "scipy_schur_seconds": [
+      0.5493405000306666
+    ],
+    "hermitian_eigh_seconds": [
+      0.14348339999560267
+    ],
+    "np_eig_eigenvector_unitarity": 1.548454553014744e-11,
+    "np_eig_diagonalization_error": 2.4147749569310253e-15,
+    "eigh_free_reconstruction_error": 7.5772213085086e-15,
+    "schur_normality_error": 1.496780535282529e-14
+  }
+]
