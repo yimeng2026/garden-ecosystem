@@ -1,0 +1,30 @@
+{
+  "schema": "floquet-bdg-tbc-n320-independent-case-v1",
+  "case": {
+    "strength": 0.1,
+    "seed": 0,
+    "kind": "disorder",
+    "target": "zero",
+    "endpoint_class": "not_recovered"
+  },
+  "production_status": "ok",
+  "production_value": 0.999895548527403,
+  "production_nearest_integer": 1,
+  "independent": {
+    "status": "ok",
+    "method": "independent Schur reconstruction and unwrapped det(block) phase",
+    "nominal_step": 0.05,
+    "actual_step": 0.049866550056980846,
+    "points": 126,
+    "raw_signed": 0.9999999999999999,
+    "value": 0.9999999999999999,
+    "nearest_integer": 1,
+    "integer_residual": 1.1102230246251565e-16,
+    "min_bulk_gap": 0.0034755255483302806,
+    "max_symmetry_error": 5.450152382779322e-14,
+    "max_block_condition": 1.0000000000000515,
+    "passed": true
+  },
+  "integer_agreement": true,
+  "rejection_category_independently_checked": false
+}
