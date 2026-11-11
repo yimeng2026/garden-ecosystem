@@ -2,7 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import {
   AlignmentType, Document, Footer, FootnoteReferenceRun, Header, HeadingLevel,
-  ImageRun, ImportedXmlComponent, Math as MathEquation, MathRun, Packer,
+  ImageRun, ImportedXmlComponent, Math as MathEquation, MathFraction, MathRun,
+  MathSubScript, Packer,
   PageBreak, PageNumber, Paragraph, ShadingType, Table, TableCell, TableRow,
   TextRun, WidthType,
 } from "docx";
@@ -33,7 +34,8 @@ const makeTable = (headers, rows, widths, size = 10) => new Table({
   width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths,
   rows: [new TableRow({ tableHeader: true, cantSplit: true, children: headers.map((text, index) => cell(text, index, widths, true, size)) }), ...rows.map((row) => new TableRow({ cantSplit: true, children: row.map((text, index) => cell(text, index, widths, false, size)) }))],
 });
-const equation = (text) => para(new MathEquation({ children: [new MathRun(text)] }), { alignment: AlignmentType.CENTER, spacing: { before: 55, after: 70 } });
+const equation = (children) => para(new MathEquation({ children: Array.isArray(children) ? children : [new MathRun(children)] }), { alignment: AlignmentType.CENTER, spacing: { before: 55, after: 70 } });
+const sub = (base, subscript) => new MathSubScript({ children: [new MathRun(base)], subScript: [new MathRun(subscript)] });
 const footnote = (text) => para(run(text, { size: 15 }), { spacing: { after: 30, line: 190 } });
 const fmt = (value) => Number(value).toPrecision(5).replace(/\.0+$/, "");
 const pointTable = (region) => makeTable(["r", "最近对中心", "次近对中心", "中心间隔"], region.points.map((point) => [String(point.strength), fmt(point.pairs[0].center), fmt(point.pairs[1].center), fmt(point.center_separation)]), [1200, 2900, 2900, 2906], 9);
@@ -51,7 +53,11 @@ const children = [
 
   heading(titles[0]),
   citedBody("只细化粗路径识别的最大变化链接与最小间隔邻域。新增唯一点共5个；五个粗网格旧点全部复核，中心、距离、分离比、端点权重和诊断标志均一致。", 1),
-  equation("c_p = (d_(2p) + d_(2p+1)) / 2,  Δc = |c_1 − c_0|"),
+  equation([
+    sub("c", "p"), new MathRun(" = "),
+    new MathFraction({ numerator: [sub("d", "2p"), new MathRun(" + "), sub("d", "2p+1")], denominator: [new MathRun("2")] }),
+    new MathRun(",　Δc = |"), sub("c", "1"), new MathRun(" − "), sub("c", "0"), new MathRun("|"),
+  ]),
   heading("最大变化链接：0.050000–0.052500", 2),
   pointTable(analysis.regions[0]),
   heading("最小间隔邻域：0.040000–0.045000", 2),
@@ -61,7 +67,12 @@ const children = [
 
   heading(titles[1]),
   citedBody("相同 N 的二维子空间直接 QR 后比较。细步长提高分辨率，但不把有限点外推为连续路径不变性。", 2),
-  equation("D = (O_00 + O_11) / 2,  S = (O_01 + O_10) / 2"),
+  equation([
+    new MathRun("D = "),
+    new MathFraction({ numerator: [sub("O", "00"), new MathRun(" + "), sub("O", "11")], denominator: [new MathRun("2")] }),
+    new MathRun(",　S = "),
+    new MathFraction({ numerator: [sub("O", "01"), new MathRun(" + "), sub("O", "10")], denominator: [new MathRun("2")] }),
+  ]),
   para(new ImageRun({ type: "png", data: fs.readFileSync(path.join(root, "path-refinement.png")), transformation: { width: 500, height: Math.round(500 * 1366 / 2079) } }), { alignment: AlignmentType.CENTER, keepNext: true }),
   para(run("图 1　上排为最大变化链接，下排为最小间隔邻域；左侧为中心间隔，右侧为分配得分。", { size: 16, italics: true }), { alignment: AlignmentType.CENTER }),
   body("8条细分链接全部由同谱秩分配占优。最大变化区同谱秩得分范围为0.97676–0.98489，最小间隔邻域为0.84764–0.90466。细步长提高了同 N 对应的可辨识性。"),

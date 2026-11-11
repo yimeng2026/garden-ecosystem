@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-multi-seed-verification-v1",
-  "recorded_utc": "2026-11-11T13:14:26.177095+00:00",
+  "recorded_utc": "2026-11-11T13:31:09.767276+00:00",
   "all_passed": true,
   "test_count": 7,
   "independent_projectors_passed": true,
@@ -51,14 +51,14 @@
     "multi-seed-control.png": "8df8d62304a00b185cfb487f77d7ea161f727c1b2a7a7190f2e70c3afd3b20a7",
     "MULTI_SEED_CONTROL.md": "634c35e95374b090a01a733bc8d592e84db19ffdda2c64a1b56e19a7719685ce",
     "Floquet-BdG-多种子稳健性对照.docx": "c79a3523aefb67f68ed97756be062bb9ab6d3914ffa82ea5cb540918bc551e5a",
-    "multi-seed-word-qa.json": "a9bcfce32b839dd31fe60741c00affd9a2384cb7e60dd5bb005f6f44cf16e5b5",
+    "multi-seed-word-qa.json": "8b93d8ea98c6a033517ed149afce741b02fb4e9b0a7a7ccd5f222ef377be2122",
     "multi-seed-word-render/report.json": "7ae63b2888a4111b75dfc44f26ec05bcf2c1be7f9d88431dd6064cf71689c37a",
     "analyze_multi_seed.py": "f0232165e7f127d26695dd88bbae97ad37cb90e1343a3e41ec6fd1004eeef2c7",
     "verify_multi_seed.py": "2885acf5916d0a5ca611715e93c41940c6adbf698329a8065cd5fca08b9a981a",
     "build_multi_seed_report.js": "304b18a0d0e4ddf4ae8d53e6085dbae2ccbc992084408b6be600f6ed8720200f",
     "record_multi_seed_qa.py": "0575f177734b84c43e7c15cf47b8e3ffa01918c415756faab71b4d36ab726b35",
     "test_multi_seed.py": "67a41acff622b643ce4412118d97d56a72d11c7d6c27d3e76c9d6919c6ac6fbb",
-    "multi_seed_run.log": "48f4e9ed779601cee28e38249eb008be71784157af1e430b17d3862437da1f0b"
+    "multi_seed_run.log": "b5795e965bfa9196ad922c787f6e317af932d7678c920439d4b66aa3ba91ec2d"
   },
   "scope": {
     "four_seed_profile_robustness_evaluated": true,

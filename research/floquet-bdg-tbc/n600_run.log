@@ -34,7 +34,7 @@ test_tail_metrics_and_markdown (__main__.N600ReportTests.test_tail_metrics_and_m
 test_visual_status_is_unavailable_not_passed (__main__.N600ReportTests.test_visual_status_is_unavailable_not_passed) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.015s
+Ran 5 tests in 0.016s
 
 OK
 exit_code=0

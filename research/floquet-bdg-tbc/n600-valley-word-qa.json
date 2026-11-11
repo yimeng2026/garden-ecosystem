@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-n600-valley-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:15:28.472313+00:00",
+  "recordedUtc": "2026-11-11T13:32:12.761680+00:00",
   "sourceSha256": {
     "n600_valley_protocol.json": "5b0cb07dc20814a33ee005dd1f79fb42502e1f23a1d703c89da07841d383eade",
     "n600_valley_analysis.json": "dbc9593a91cf54ce2a07bc05292816c74c0f4b8b050377f5bd0cf7b879fa1ab4",
