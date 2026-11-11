@@ -1,0 +1,92 @@
+{
+  "schema": "floquet-bdg-embedding-census-verification-v1",
+  "recorded_utc": "2026-11-11T09:14:54.136635+00:00",
+  "all_passed": true,
+  "test_count": 6,
+  "check_only": true,
+  "original_independent_projectors_passed": true,
+  "new_independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "embedding_census_evidence_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_embedding_census.py",
+        "--check-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-全样本共同表示审计.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_embedding_census_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_embedding_census.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "embedding_census_protocol.json": "ccf32cff8be12a96b60effeb0fec8cd7aa22b846418e2d55ec71aaaa02c922f4",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "subspace_overlap_analysis.json": "ad158072c581628e86c44a4e0fd67cd2039ebbf2b2f16ce1ff4eb71afe09e283",
+    "embedding_robustness_analysis.json": "d62108d415aed1b0bdacd8f74f8e4e86db38830cdfa0f3bdcf49cd7aab2d586a",
+    "multi_seed_independent.json": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "embedding_census_analysis.json": "c62d4158580378583a9abee081e9d08da9380cd2e226e132da32ac0394ffc7d0",
+    "embedding-census.png": "c6e31d55abee4740be83ed116b7f01f4166444885f942967ec262c98eae16b12",
+    "EMBEDDING_CENSUS.md": "020228d95ab3ba3d29a6916d09cf0052ee3b86d1f990f0a357dd4301807120b4",
+    "Floquet-BdG-全样本共同表示审计.docx": "90871ae52bda635d2cb9ee1e6aa28653875e6a4355e3309c3e6b161c0d497734",
+    "embedding-census-word-qa.json": "d48867b5d0af822c5ea6adee5486e0619693d5ceb829903066f2fbd783eaadd4",
+    "embedding-census-word-render/report.json": "6d0bc98dfd1b16f867bcf6bdcdfb78098986240af648ac05e7a762a5821102f7",
+    "analyze_embedding_census.py": "b4924efcfc1e825c553f38083f7b675f471398f72ec63583d1ffb961f86c261a",
+    "build_embedding_census_report.js": "160cb616b3931050aafc5cefc44c7604bdb0589178969c6deb9fc227d5dd3e20",
+    "record_embedding_census_qa.py": "4014ae2377353282379b3fbe893dbd86c5386f5f7495fe9a0447ea56d2d318cc",
+    "test_embedding_census.py": "c639450addbfb7e8c3061587ba50a651d5fb5b1610e4e4d064eb52939744a18f",
+    "embedding_census_run.log": "a3f2edbbd10db9694462490f82a4085c10e3e34bf06a444754b6d3aa18f62afb"
+  },
+  "scope": {
+    "embedding_census_analysis_evaluated": true,
+    "contrasts": 16,
+    "cells": 32,
+    "method_grid_count": 96,
+    "diagonal_dominant_count": 90,
+    "same_assignment_count": 48,
+    "finest_same_assignment_count": 16,
+    "fully_diagonal_case_count": 15,
+    "swapped_candidate_cases": [
+      "seed_6_r_0p05"
+    ],
+    "candidate_is_not_state_exchange_proof": true,
+    "representation_invariant_claim": false,
+    "same_physics_state_tracking_claim": false,
+    "rank_exchange_proven": false,
+    "embedding_convergence_proof": false,
+    "new_physics_cells": 0,
+    "new_taxonomy_claim": false,
+    "statistical_significance_claim": false,
+    "n640_automatically_justified": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "embedding_census_run.log"
+}

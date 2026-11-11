@@ -1,0 +1,65 @@
+$ embedding_census_evidence_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_embedding_census.py --check-only
+{"check_only": true, "cases": 16, "cells": 32, "method_grid_count": 96, "all_passed": true}
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-全样本共同表示审计.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_embedding_census_qa.py
+{
+  "schema": "floquet-bdg-embedding-census-word-qa-v1",
+  "recordedUtc": "2026-11-11T09:14:53.969792+00:00",
+  "sourceSha256": {
+    "embedding_census_protocol.json": "ccf32cff8be12a96b60effeb0fec8cd7aa22b846418e2d55ec71aaaa02c922f4",
+    "embedding_census_analysis.json": "c62d4158580378583a9abee081e9d08da9380cd2e226e132da32ac0394ffc7d0",
+    "subspace_overlap_analysis.json": "ad158072c581628e86c44a4e0fd67cd2039ebbf2b2f16ce1ff4eb71afe09e283",
+    "embedding_robustness_analysis.json": "d62108d415aed1b0bdacd8f74f8e4e86db38830cdfa0f3bdcf49cd7aab2d586a",
+    "embedding-census.png": "c6e31d55abee4740be83ed116b7f01f4166444885f942967ec262c98eae16b12",
+    "build_embedding_census_report.js": "160cb616b3931050aafc5cefc44c7604bdb0589178969c6deb9fc227d5dd3e20"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "90871ae52bda635d2cb9ee1e6aa28653875e6a4355e3309c3e6b161c0d497734",
+    "renderReportSha256": "6d0bc98dfd1b16f867bcf6bdcdfb78098986240af648ac05e7a762a5821102f7"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "90871ae52bda635d2cb9ee1e6aa28653875e6a4355e3309c3e6b161c0d497734",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看四个单页；OMML公式、16行对照表、全样本图、交换候选矩阵与边界说明完整，无近空白页或裁切。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_embedding_census.py -v
+test_all_profiles_and_previous_three_cases_are_reproduced (__main__.EmbeddingCensusTests.test_all_profiles_and_previous_three_cases_are_reproduced) ... ok
+test_figure_markdown_and_reviewed_word (__main__.EmbeddingCensusTests.test_figure_markdown_and_reviewed_word) ... ok
+test_full_census_does_not_change_physics_or_categories (__main__.EmbeddingCensusTests.test_full_census_does_not_change_physics_or_categories) ... ok
+test_full_frozen_registry_and_sources (__main__.EmbeddingCensusTests.test_full_frozen_registry_and_sources) ... ok
+test_overlap_metrics_and_assignments_are_consistent (__main__.EmbeddingCensusTests.test_overlap_metrics_and_assignments_are_consistent) ... ok
+test_summary_counts_and_swap_candidates_are_exact (__main__.EmbeddingCensusTests.test_summary_counts_and_swap_candidates_are_exact) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.040s
+
+OK
+exit_code=0

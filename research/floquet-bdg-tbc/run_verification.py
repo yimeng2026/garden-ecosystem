@@ -59,6 +59,7 @@ def main():
         ("pair_response_suite", [sys.executable, str(ROOT / "run_pair_response_verification.py")], 180),
         ("subspace_overlap_suite", [sys.executable, str(ROOT / "run_subspace_overlap_verification.py")], 180),
         ("embedding_robustness_suite", [sys.executable, str(ROOT / "run_embedding_robustness_verification.py")], 180),
+        ("embedding_census_suite", [sys.executable, str(ROOT / "run_embedding_census_verification.py"), "--check-only"], 180),
     ]
     rows, logs = [], []
     for label, command, timeout in commands:
@@ -89,6 +90,7 @@ def main():
     pair_response_verification = json.loads((ROOT / "pair_response_verification.json").read_text(encoding="utf-8")) if (ROOT / "pair_response_verification.json").exists() else {}
     subspace_overlap_verification = json.loads((ROOT / "subspace_overlap_verification.json").read_text(encoding="utf-8")) if (ROOT / "subspace_overlap_verification.json").exists() else {}
     embedding_robustness_verification = json.loads((ROOT / "embedding_robustness_verification.json").read_text(encoding="utf-8")) if (ROOT / "embedding_robustness_verification.json").exists() else {}
+    embedding_census_verification = json.loads((ROOT / "embedding_census_verification.json").read_text(encoding="utf-8")) if (ROOT / "embedding_census_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -167,6 +169,11 @@ def main():
         "embedding-robustness-word-render/report.json", "embedding_robustness_verification.json", "embedding_robustness_run.log",
         "analyze_embedding_robustness.py", "build_embedding_robustness_report.js", "record_embedding_robustness_qa.py",
         "test_embedding_robustness.py", "run_embedding_robustness_verification.py",
+        "embedding_census_protocol.json", "embedding_census_analysis.json", "embedding-census.png",
+        "EMBEDDING_CENSUS.md", "Floquet-BdG-全样本共同表示审计.docx", "embedding-census-word-qa.json",
+        "embedding-census-word-render/report.json", "embedding_census_verification.json", "embedding_census_run.log",
+        "analyze_embedding_census.py", "build_embedding_census_report.js", "record_embedding_census_qa.py",
+        "test_embedding_census.py", "run_embedding_census_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py",
@@ -177,7 +184,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 6 if passed else None, "embedding_robustness": 6 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 6 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -232,6 +239,9 @@ def main():
         "embedding_robustness_all_passed": embedding_robustness_verification.get("all_passed"),
         "embedding_robustness_original_independent_projectors_passed": embedding_robustness_verification.get("original_independent_projectors_passed"),
         "embedding_robustness_visual_review_status": embedding_robustness_verification.get("visual_review_status"),
+        "embedding_census_all_passed": embedding_census_verification.get("all_passed"),
+        "embedding_census_original_independent_projectors_passed": embedding_census_verification.get("original_independent_projectors_passed"),
+        "embedding_census_visual_review_status": embedding_census_verification.get("visual_review_status"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
@@ -283,6 +293,12 @@ def main():
             "embedding_finest_same_assignment_count": 3,
             "embedding_direction_stability_is_not_state_tracking": True,
             "embedding_representation_invariant_claim": False,
+            "embedding_census_analysis_evaluated": "passed",
+            "embedding_census_diagonal_dominant_count": 90,
+            "embedding_census_same_assignment_count": 48,
+            "embedding_census_fully_diagonal_cases": 15,
+            "embedding_census_swap_candidates": ["seed_6_r_0p05"],
+            "embedding_census_candidate_is_not_state_exchange": True,
             "new_taxonomy_claim": False,
             "universal_category_claim": False,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,

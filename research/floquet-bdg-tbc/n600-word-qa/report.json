@@ -218,7 +218,7 @@
     "n600ScaleSha256": "422504685ee1d490d7e25762a89dcd587f86832b1a5a5011ccd1db28d47fbab5"
   },
   "visualReview": {
-    "recordedUtc": "2026-11-11T08:52:06.427357+00:00",
+    "recordedUtc": "2026-11-11T09:13:44.923454+00:00",
     "status": "unavailable_exit_6_no_retry",
     "renderAttempted": true,
     "error": "E_RENDER_FAILED: temporary-directory permission denied",

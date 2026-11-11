@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-matched-verification-v1",
-  "recorded_utc": "2026-11-11T08:52:21.766469+00:00",
+  "recorded_utc": "2026-11-11T09:13:59.973476+00:00",
   "all_passed": true,
   "test_count": 7,
   "independent_projectors_passed": true,
@@ -52,14 +52,14 @@
     "matched-profile-control.png": "6b961a786e0520f60a9255312a44b0692db43e346fbcf2cf5ca9a3bf481e55de",
     "MATCHED_PROFILE_CONTROL.md": "de1c4442ef2c1571ec4734700aac0d66ef5a2ba001ad95201058bff3c8840282",
     "Floquet-BdG-同强度尺寸对照.docx": "962c6ae44f7d6c6cb4848ec287a85d68f8776701312a959d6dff344723ca0c3f",
-    "matched-word-qa.json": "e334b40a7d3df458c742ae380c0b95df23cac2547d715952a239c2c87a1971ff",
+    "matched-word-qa.json": "60e22ec8b20a2fc98e1351ff1400ae7cb162e00dd5d2b5468a03244bd461621d",
     "matched-word-render/report.json": "e04688bc2231db9e87e32a1ef785ab0c3074e97a4e11dc464d47484040772865",
     "analyze_matched_profiles.py": "d459ac60580d01776a20abba9b1dc01e604457b14dba8d830f52aba41d36e0ee",
     "verify_matched_profiles.py": "59bf8fe5fd5d1bc0fd47d3a8582bbe66ff943d015233e26253d3c783dd99ba82",
     "build_matched_report.js": "2cd695ccaebd4bbcc5deeb9baff18170dc52db5e79d7f7281b41ca5951836f58",
     "record_matched_qa.py": "3160ce48ce1318bef4e65a97002918b585720fbeca9eb4ecd1162c7f220a9a40",
     "test_matched_profiles.py": "ecced7234a36bcab3e0e9438d46f6c2bc60faf51ef8dcbcff67ec9d6c31a44c9",
-    "matched_run.log": "32f609e34d094b553b4cdf4382deda7a178d04a1267f61f4f436adef7ea536b2"
+    "matched_run.log": "9929a890c39114f6418ef7af11fafb17f713a660d7a7696b61a52ff30cc40334"
   },
   "scope": {
     "matched_2x2_profile_control_evaluated": true,
