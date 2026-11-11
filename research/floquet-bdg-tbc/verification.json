@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-tbc-complete-verification-v2",
-  "recorded_utc": "2026-11-11T15:34:47.608062+00:00",
+  "recorded_utc": "2026-11-11T22:19:51.051720+00:00",
   "all_passed": true,
   "test_counts": {
     "baseline": 9,
@@ -33,6 +33,7 @@
     "overlap_confounding": 6,
     "matched_beta_control": 8,
     "matched_beta_batch_a": 8,
+    "matched_beta_batch_b": 9,
     "log_reuse": 9
   },
   "commands": [
@@ -324,6 +325,15 @@
         "-v"
       ],
       "exit_code": 0
+    },
+    {
+      "label": "matched_beta_batch_b_suite",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\run_matched_beta_batch_b_verification.py",
+        "--check-only"
+      ],
+      "exit_code": 0
     }
   ],
   "environment": {
@@ -348,7 +358,7 @@
     "REPORT.md": "f1c7d2678b1c0082fef1d57840171fc592b8e9670b0fd6d02d42e19e873ec9ed",
     "Floquet-BdG-TBC无序对照报告.docx": "039dbf5b4bd73e90492932bc5ec98d32c644948da5af730fd9087fd80f222939",
     "word-qa/report.json": "7251e0c94c75236faec17d7431f734ec8f0d44b2a7e682e438c3731cacdf2dcf",
-    "run.log": "dad1ac5daa606e66a5ac8d09e83309ea991bd1a0be274e1c39248336112ef0b3",
+    "run.log": "d6f4a216e266a15a6f73b2f67ea1d6db71662f706de0a4d02acf2926b76578c3",
     "ERRATA.md": "e435f0115edbb8fd7b26218515204d1501e2db94ef94935c1b15cc1bddb6b229",
     "finite_size_zero.json": "813a48c05e0e4cb80fbd615e908115572a646c75c438d33160fd1918d59ec50b",
     "finite_size_independent.json": "5b3c8925a63c1f1f62eef8d5a171f32a4e98e24ad1c67aeaf1d7af671097b932",
@@ -704,6 +714,22 @@
     "record_matched_beta_batch_a_qa.py": "8a45fcda8f1f5423bbd6b171e62cb9ffde83042f580b53964f9cc479f17a4207",
     "test_matched_beta_batch_a.py": "57d780d99ecff14c9495e47c0a9008b7b1646d9ea31bac76ba707c9cac8ccf77",
     "run_matched_beta_batch_a_verification.py": "c3f26aecbd4a30269e4f4df6ee036551ecf72cccc15371a1953371992ada479c",
+    "matched_beta_batch_b_protocol.json": "8dd571b511805c4bed583645db7ae9ff6b410ad585803068fd2d21b102f6b006",
+    "matched_beta_batch_b_analysis.json": "c2055fa215bcab2cf23e1ec818d77b78b3e7d8f5c3809b4eedb69ab49eec2db5",
+    "matched_beta_batch_b_independent.json": "8f10e82843a5e2bc8516dad6e166d5a0d1ffa892c78b8e5891b924d0eda418dc",
+    "matched-beta-batch-b.png": "97a4ac411df65ff27ccfe50a727a3556a59c0f12cbaf821b291139f374c939b5",
+    "MATCHED_BETA_BATCH_B.md": "ab58c0bea2297ce72625948c2a38aed0361b95a057a9b58658c1893c8f747434",
+    "Floquet-BdG-共同无序剖面第二批尺寸隔离.docx": "2aa104346bb153b9a59016542fef7b12ec26b0444056411fe0d0f80ac8b07335",
+    "matched-beta-batch-b-word-qa.json": "9d70b04131f45ebdfc16b2aef16bc0557cdd3579141f230d962b6be6728c3ef0",
+    "matched-beta-batch-b-word-render/report.json": "d31f2862a5f084e14c199036adf5e972f03f5c2873ced495dd60545b09620b21",
+    "matched_beta_batch_b_verification.json": "bb9face97d20077abe94fabb327c5d13f738e49f119256aa66bd2a418fddce8d",
+    "matched_beta_batch_b_run.log": "1a3c6166b56cc34238d45bc89afd8b0708a5e9275faf4f779547bd1feda75c7a",
+    "analyze_matched_beta_batch_b.py": "cefe0b2346274109ac3926bd4437a7b6b65672eaa4c302ca34da388191fa753b",
+    "verify_matched_beta_batch_b.py": "ea6fb25885ded01205685ae839f02704233dab065cd7e34ba12576a4d3c8ef31",
+    "build_matched_beta_batch_b_report.js": "2071a660da97d8ae928ecc109a69a8665a572c238c9dde98dc76d9d45173966d",
+    "record_matched_beta_batch_b_qa.py": "42b1f724e64385ff8355bebef2b9c637b4e15c27e9912b44cb7fcff2d2aa7eca",
+    "test_matched_beta_batch_b.py": "8f89ae5e3b20d9b6d5be847a625139ab9831d5889f148ba66e5adca3f5155de4",
+    "run_matched_beta_batch_b_verification.py": "c5024e009a7f406b373d252ecb2e353b38337b0edd3c53f12b4081d558bd5a1f",
     "tbc_model.py": "bc7f7541434920ae9d5a9bdca396dc86306fb383a7d9f4bff19902077de641fc",
     "test_tbc.py": "b9c6d07e0571a059bf9af0f8179fd0e1fa18e43673f733eb1db958aa1dfb841f",
     "run_tbc.py": "ca2f38ef0623a7b941d9240b795a7995ffd226083a73c681c42469fa821d59ff",
@@ -715,7 +741,7 @@
     "build_report.js": "9a7d3463ca8a54ec48f659b294a59feb02909ec05529ed3af13eb917a961e276",
     "record_word_qa.py": "05923bfe7343998bcf1da68ee4e0fb175f9863a924968eb614c94b05fdb85168",
     "test_report.py": "ae5a094729fc9aac80c7ad935bb9277281cb73dc16ecfaf1e061a371a263cbda",
-    "run_verification.py": "247904f7bf5c5eff6467bc63dcbe79ed2e062c8a5fa302a63abcbb110417e663",
+    "run_verification.py": "779fc71853ec488a4e7f9d719da83abfed7da54a005b2560063c52be2f30ae6c",
     "test_verification_log_reuse.py": "74ba6d245d085783fe9778244d3b9f3e0705804bd7e8d181edbf50901af27fa4"
   },
   "observed_status": "clean_floquet_baseline_passed",
@@ -795,6 +821,10 @@
   "matched_beta_batch_a_independent_recheck_passed": true,
   "matched_beta_batch_a_visual_review_status": "passed",
   "matched_beta_batch_a_size_effect_separated": "matched_nested_profile_descriptive_only",
+  "matched_beta_batch_b_all_passed": true,
+  "matched_beta_batch_b_independent_recheck_passed": true,
+  "matched_beta_batch_b_visual_review_status": "passed",
+  "matched_beta_batch_b_size_effect_separated": "matched_nested_profile_descriptive_only",
   "scope": {
     "static_baseline_checked": true,
     "clean_kicked_baseline_checked": true,
@@ -945,6 +975,42 @@
     "matched_beta_batch_a_all_results_retained": true,
     "matched_beta_batch_a_universal_size_law_claim": false,
     "matched_beta_batch_a_statistical_significance_claim": false,
+    "matched_beta_batch_b_analysis_evaluated": "passed",
+    "matched_beta_batch_b_new_realizations": 7,
+    "matched_beta_batch_b_reused_anchor_realizations": 1,
+    "matched_beta_batch_b_new_control_cells": 14,
+    "matched_beta_batch_b_reused_anchor_control_cells": 2,
+    "matched_beta_batch_b_reported_control_cells": 16,
+    "matched_beta_batch_b_anchor_reused_exactly_once": true,
+    "matched_beta_batch_b_assignment_counts": {
+      "linear_point": {
+        "diagonal": 24
+      },
+      "cell_average": {
+        "diagonal": 24
+      }
+    },
+    "matched_beta_batch_b_center_separation_delta_range": [
+      -0.0024072367692100655,
+      0.0002639120377132334
+    ],
+    "matched_beta_combined_realizations": 16,
+    "matched_beta_combined_control_cells": 32,
+    "matched_beta_combined_unique_seed_strength_keys": true,
+    "matched_beta_combined_assignment_counts": {
+      "linear_point": {
+        "diagonal": 48
+      },
+      "cell_average": {
+        "diagonal": 48
+      }
+    },
+    "matched_beta_combined_center_separation_delta_range": [
+      -0.0024072367692100655,
+      0.00039312849249900465
+    ],
+    "matched_beta_combined_universal_size_law_claim": false,
+    "matched_beta_combined_statistical_significance_claim": false,
     "new_taxonomy_claim": false,
     "universal_category_claim": false,
     "localization_scale_analysis_pending": false,

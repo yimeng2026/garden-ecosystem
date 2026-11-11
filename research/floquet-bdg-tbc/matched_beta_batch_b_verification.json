@@ -1,0 +1,140 @@
+{
+  "schema": "floquet-bdg-matched-beta-batch-b-verification-v1",
+  "recorded_utc": "2026-11-11T22:19:12.717303+00:00",
+  "all_passed": true,
+  "test_count": 9,
+  "check_only": true,
+  "independent_recheck_passed": true,
+  "independent_max_spectrum_absolute_error": 0.0,
+  "independent_max_pair_center_absolute_error": 0.0,
+  "visual_review_status": "passed",
+  "rendered_pages": 5,
+  "commands": [
+    {
+      "label": "matched_beta_batch_b_evidence_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_matched_beta_batch_b.py",
+        "--check-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "matched_beta_batch_b_independent_recheck",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\verify_matched_beta_batch_b.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-共同无序剖面第二批尺寸隔离.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_matched_beta_batch_b_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_matched_beta_batch_b.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "matched_beta_batch_b_protocol.json": "8dd571b511805c4bed583645db7ae9ff6b410ad585803068fd2d21b102f6b006",
+    "matched_beta_batch_b_analysis.json": "c2055fa215bcab2cf23e1ec818d77b78b3e7d8f5c3809b4eedb69ab49eec2db5",
+    "matched_beta_batch_b_independent.json": "8f10e82843a5e2bc8516dad6e166d5a0d1ffa892c78b8e5891b924d0eda418dc",
+    "matched-beta-batch-b.png": "97a4ac411df65ff27ccfe50a727a3556a59c0f12cbaf821b291139f374c939b5",
+    "MATCHED_BETA_BATCH_B.md": "ab58c0bea2297ce72625948c2a38aed0361b95a057a9b58658c1893c8f747434",
+    "Floquet-BdG-共同无序剖面第二批尺寸隔离.docx": "2aa104346bb153b9a59016542fef7b12ec26b0444056411fe0d0f80ac8b07335",
+    "matched-beta-batch-b-word-qa.json": "9d70b04131f45ebdfc16b2aef16bc0557cdd3579141f230d962b6be6728c3ef0",
+    "matched-beta-batch-b-word-render/report.json": "d31f2862a5f084e14c199036adf5e972f03f5c2873ced495dd60545b09620b21",
+    "matched_beta_batch_b_run.log": "1a3c6166b56cc34238d45bc89afd8b0708a5e9275faf4f779547bd1feda75c7a",
+    "analyze_matched_beta_batch_b.py": "cefe0b2346274109ac3926bd4437a7b6b65672eaa4c302ca34da388191fa753b",
+    "verify_matched_beta_batch_b.py": "ea6fb25885ded01205685ae839f02704233dab065cd7e34ba12576a4d3c8ef31",
+    "build_matched_beta_batch_b_report.js": "2071a660da97d8ae928ecc109a69a8665a572c238c9dde98dc76d9d45173966d",
+    "record_matched_beta_batch_b_qa.py": "42b1f724e64385ff8355bebef2b9c637b4e15c27e9912b44cb7fcff2d2aa7eca",
+    "test_matched_beta_batch_b.py": "8f89ae5e3b20d9b6d5be847a625139ab9831d5889f148ba66e5adca3f5155de4",
+    "run_matched_beta_batch_b_verification.py": "c5024e009a7f406b373d252ecb2e353b38337b0edd3c53f12b4081d558bd5a1f",
+    "matched_beta_batch_a_analysis.json": "871e5cfdc33a792ac4e0ec84e19a372a6a1b5154f0ec4262eee3ec8f8da9f898",
+    "matched_beta_control_analysis.json": "ce1e99cde0e1184f77fa53d9238f054b022e848aa9533fbe6bf145a855b2257b",
+    "matched_beta_independent.json": "590cdf628ecabd73e7ca6998a84faeb488c91f6014c181dd384566da4b0fb2ba",
+    "swap_candidate_spectrum_analysis.json": "67283bfcf6d1f2d5a107f959ae9219d2e5fa2d14c27c5f9685de026ad62efc6d"
+  },
+  "scope": {
+    "matched_beta_batch_b_analysis_evaluated": true,
+    "new_realizations": 7,
+    "reused_anchor_realizations": 1,
+    "new_control_cells": 14,
+    "reused_anchor_control_cells": 2,
+    "reported_control_cells": 16,
+    "combined_realizations": 16,
+    "combined_control_cells": 32,
+    "coarsening_max_absolute_error": 0,
+    "assignment_counts": {
+      "linear_point": {
+        "diagonal": 24
+      },
+      "cell_average": {
+        "diagonal": 24
+      }
+    },
+    "combined_assignment_counts": {
+      "linear_point": {
+        "diagonal": 48
+      },
+      "cell_average": {
+        "diagonal": 48
+      }
+    },
+    "same_rank_all_grids_both_methods_count": 8,
+    "method_agreement_all_grids_count": 8,
+    "min_representation_fidelity": 0.9873305996797794,
+    "max_representation_fidelity": 0.9954679547921588,
+    "center_separation_delta_range": [
+      -0.0024072367692100655,
+      0.0002639120377132334
+    ],
+    "combined_center_separation_delta_range": [
+      -0.0024072367692100655,
+      0.00039312849249900465
+    ],
+    "anchor_reused_exactly_once": true,
+    "unique_combined_seed_strength_keys": true,
+    "common_disorder_profile_control_computed": true,
+    "size_effect_separated": "matched_nested_profile_descriptive_only",
+    "old_candidate_is_different_realization": true,
+    "difference_from_original_is_not_size_effect": true,
+    "all_preregistered_results_retained": true,
+    "normalization_correction_applied": false,
+    "max_native_off_diagonal": 9.803741457656468e-25,
+    "max_cell_average_off_diagonal": 9.803986456643752e-25,
+    "max_linear_point_off_diagonal": 5.124202640737667e-07,
+    "universal_size_law_claim": false,
+    "continuous_path_proof": false,
+    "spectral_crossing_proven": false,
+    "avoided_crossing_claim": false,
+    "state_exchange_proven": false,
+    "second_pair_topological_claim": false,
+    "new_winding_computed": false,
+    "n640_computed": false,
+    "statistical_significance_claim": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "matched_beta_batch_b_run.log"
+}
