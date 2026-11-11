@@ -6,7 +6,7 @@ test_chunk_resume_and_reference_equality (__main__.ResumableWindingTests.test_ch
 test_metadata_mismatch_is_rejected (__main__.ResumableWindingTests.test_metadata_mismatch_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.305s
+Ran 5 tests in 0.293s
 
 OK
 exit_code=0
@@ -34,7 +34,7 @@ test_n400_result_and_independent_agreement (__main__.ScaleReportTests.test_n400_
 test_visual_hash_binding (__main__.ScaleReportTests.test_visual_hash_binding) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.015s
+Ran 5 tests in 0.014s
 
 OK
 exit_code=0

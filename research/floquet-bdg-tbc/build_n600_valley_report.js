@@ -2,7 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import {
   AlignmentType, Document, Footer, FootnoteReferenceRun, Header, HeadingLevel,
-  ImageRun, ImportedXmlComponent, Math as MathEquation, MathRun, Packer,
+  ImageRun, ImportedXmlComponent, Math as MathEquation, MathFraction, MathRun,
+  MathSubScript, Packer,
   PageBreak, PageNumber, Paragraph, ShadingType, Table, TableCell, TableRow,
   TextRun, WidthType,
 } from "docx";
@@ -33,7 +34,8 @@ const makeTable = (headers, rows, widths, size = 10) => new Table({
   width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths,
   rows: [new TableRow({ tableHeader: true, cantSplit: true, children: headers.map((text, index) => cell(text, index, widths, true, size)) }), ...rows.map((row) => new TableRow({ cantSplit: true, children: row.map((text, index) => cell(text, index, widths, false, size)) }))],
 });
-const equation = (text) => para(new MathEquation({ children: [new MathRun(text)] }), { alignment: AlignmentType.CENTER, spacing: { before: 55, after: 70 } });
+const equation = (children) => para(new MathEquation({ children: Array.isArray(children) ? children : [new MathRun(children)] }), { alignment: AlignmentType.CENTER, spacing: { before: 55, after: 70 } });
+const sub = (base, subscript) => new MathSubScript({ children: [new MathRun(base)], subScript: [new MathRun(subscript)] });
 const footnote = (text) => para(run(text, { size: 15 }), { spacing: { after: 30, line: 190 } });
 const fmt = (value) => Number(value).toPrecision(5).replace(/\.0+$/, "");
 const pointTable = makeTable(["r", "N=600中心间隔", "N=400中心间隔", "绝对差"], analysis.points.map((point, index) => [String(point.strength), fmt(point.center_separation), fmt(analysis.n400_points[index].center_separation), fmt(Math.abs(point.center_separation - analysis.n400_points[index].center_separation))]), [1200, 2900, 2900, 2906], 9);
@@ -51,7 +53,11 @@ const children = [
 
   heading(titles[0]),
   citedBody("新增 r=0.043125 和0.044375，复核0.0425、0.04375、0.045三个旧点。分别记录中心间隔、同谱秩重叠、交换得分和既有 profile 诊断，不把它们混成同一个机制名称。", 1),
-  equation("c_p = (d_(2p) + d_(2p+1)) / 2,  Δc = |c_1 − c_0|"),
+  equation([
+    sub("c", "p"), new MathRun(" = "),
+    new MathFraction({ numerator: [sub("d", "2p"), new MathRun(" + "), sub("d", "2p+1")], denominator: [new MathRun("2")] }),
+    new MathRun(",　Δc = |"), sub("c", "1"), new MathRun(" − "), sub("c", "0"), new MathRun("|"),
+  ]),
   pointTable,
   heading("相邻链接与尺寸对照", 2),
   linkTable,
@@ -60,7 +66,12 @@ const children = [
 
   heading(titles[1]),
   citedBody("同 N 的二维子空间直接 QR 后比较。新增点只提高局部分辨率，不把有限步长外推为连续路径不变性。", 2),
-  equation("D = (O_00 + O_11) / 2,  S = (O_01 + O_10) / 2"),
+  equation([
+    new MathRun("D = "),
+    new MathFraction({ numerator: [sub("O", "00"), new MathRun(" + "), sub("O", "11")], denominator: [new MathRun("2")] }),
+    new MathRun(",　S = "),
+    new MathFraction({ numerator: [sub("O", "01"), new MathRun(" + "), sub("O", "10")], denominator: [new MathRun("2")] }),
+  ]),
   para(new ImageRun({ type: "png", data: fs.readFileSync(path.join(root, "n600-valley.png")), transformation: { width: 500, height: Math.round(500 * 1366 / 2060) } }), { alignment: AlignmentType.CENTER, keepNext: true }),
   para(run("图 1　中心间隔、同谱秩重叠、交换得分和既有分离比；虚线为此前最小值位置 r=0.04375。", { size: 16, italics: true }), { alignment: AlignmentType.CENTER }),
   body("4条链接全部由同谱秩分配占优，与 N=400 的方向一致。最小中心间隔移动到新增点 r=0.044375，当前值为0.00128955。"),

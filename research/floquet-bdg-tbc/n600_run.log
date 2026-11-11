@@ -6,7 +6,7 @@ test_chunk_resume_and_reference_equality (__main__.ResumableWindingTests.test_ch
 test_metadata_mismatch_is_rejected (__main__.ResumableWindingTests.test_metadata_mismatch_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.299s
+Ran 5 tests in 0.280s
 
 OK
 exit_code=0
@@ -34,7 +34,7 @@ test_tail_metrics_and_markdown (__main__.N600ReportTests.test_tail_metrics_and_m
 test_visual_status_is_unavailable_not_passed (__main__.N600ReportTests.test_visual_status_is_unavailable_not_passed) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.016s
+Ran 5 tests in 0.014s
 
 OK
 exit_code=0

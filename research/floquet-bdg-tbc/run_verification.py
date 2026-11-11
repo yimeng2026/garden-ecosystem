@@ -23,6 +23,34 @@ def sha256(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def parse_completed_log(text, commands):
+    """Accept only an exact, unique and fully successful command log."""
+    lines = text.splitlines()
+    top_level_headers = {f"$ {label}: {' '.join(command)}" for label, command, _timeout in commands}
+    rows = []
+    for label, command, _timeout in commands:
+        header = f"$ {label}: {' '.join(command)}"
+        candidates = [line for line in lines if line.startswith(f"$ {label}: ")]
+        exact = [index for index, line in enumerate(lines) if line == header]
+        if len(exact) > 1:
+            raise ValueError(f"duplicate command label: {label}")
+        if not exact:
+            if candidates:
+                raise ValueError(f"command mismatch for {label}: {candidates[0]}")
+            raise ValueError(f"missing command label: {label}")
+        start = exact[0]
+        remaining = lines[start + 1:]
+        next_header = next((index for index, line in enumerate(remaining) if line in top_level_headers), len(remaining))
+        exit_lines = [line for line in remaining[:next_header] if line.startswith("exit_code=")]
+        if not exit_lines:
+            raise ValueError(f"missing exit code for {label}")
+        exit_code = int(exit_lines[-1].split("=", 1)[1])
+        if exit_code != 0:
+            raise ValueError(f"nonzero exit code for {label}: {exit_code}")
+        rows.append({"label": label, "command": command, "exit_code": exit_code})
+    return rows
+
+
 def main():
     for name in ("tmp", "pycache", "matplotlib", "npm"):
         (CACHE / name).mkdir(parents=True, exist_ok=True)
@@ -68,13 +96,18 @@ def main():
         ("overlap_confounding_suite", [sys.executable, str(ROOT / "run_overlap_confounding_verification.py"), "--check-only"], 180),
     ]
     rows, logs = [], []
-    for label, command, timeout in commands:
-        completed = subprocess.run(command, cwd=WORKTREE, env=env, text=True, encoding="utf-8", capture_output=True, timeout=timeout)
-        output = completed.stdout + completed.stderr
-        logs.extend([f"$ {label}: {' '.join(command)}", output.rstrip(), f"exit_code={completed.returncode}"])
-        rows.append({"label": label, "command": command, "exit_code": completed.returncode})
-        if completed.returncode != 0:
-            break
+    if "--reuse-completed-log" in sys.argv:
+        completed_text = (ROOT / "run.log").read_text(encoding="utf-8")
+        rows = parse_completed_log(completed_text, commands)
+        logs = completed_text.splitlines()
+    else:
+        for label, command, timeout in commands:
+            completed = subprocess.run(command, cwd=WORKTREE, env=env, text=True, encoding="utf-8", capture_output=True, timeout=timeout)
+            output = completed.stdout + completed.stderr
+            logs.extend([f"$ {label}: {' '.join(command)}", output.rstrip(), f"exit_code={completed.returncode}"])
+            rows.append({"label": label, "command": command, "exit_code": completed.returncode})
+            if completed.returncode != 0:
+                break
     passed = len(rows) == len(commands) and all(row["exit_code"] == 0 for row in rows)
     (ROOT / "run.log").write_text("\n".join(logs) + "\n", encoding="utf-8")
     result_data = json.loads((ROOT / "results.json").read_text(encoding="utf-8"))
@@ -219,7 +252,7 @@ def main():
         "test_overlap_confounding.py", "run_overlap_confounding_verification.py", "diagnose_same_n_rank_leakage.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
-        "record_word_qa.py", "test_report.py",
+        "record_word_qa.py", "test_report.py", "run_verification.py", "test_verification_log_reuse.py",
     ]
     valid_count = sum(row[target]["status"] == "ok" for row in disorder["realizations"] for target in ("zero", "pi"))
     nc_count = sum(row[target]["status"] == "not_converged" for row in disorder["realizations"] for target in ("zero", "pi"))
@@ -227,7 +260,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 9 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None, "overlap_confounding": 6 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 9 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None, "overlap_confounding": 6 if passed else None, "log_reuse": 7 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
