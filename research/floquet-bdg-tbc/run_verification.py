@@ -47,6 +47,7 @@ def main():
         ("report_contracts", [sys.executable, str(ROOT / "test_report.py"), "-v"], 60),
         ("finite_size_suite", [sys.executable, str(ROOT / "run_finite_size_verification.py")], 180),
         ("n320_suite", [sys.executable, str(ROOT / "run_n320_verification.py")], 180),
+        ("n400_suite", [sys.executable, str(ROOT / "run_scale_verification.py")], 180),
     ]
     rows, logs = [], []
     for label, command, timeout in commands:
@@ -65,6 +66,7 @@ def main():
     qa = json.loads((ROOT / "word-qa" / "report.json").read_text(encoding="utf-8"))
     finite_verification = json.loads((ROOT / "finite_verification.json").read_text(encoding="utf-8")) if (ROOT / "finite_verification.json").exists() else {}
     n320_verification = json.loads((ROOT / "n320_verification.json").read_text(encoding="utf-8")) if (ROOT / "n320_verification.json").exists() else {}
+    n400_verification = json.loads((ROOT / "scale_verification.json").read_text(encoding="utf-8")) if (ROOT / "scale_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -82,6 +84,12 @@ def main():
         "n320_verification.json", "n320_run.log", "run_n320.py", "test_n320.py", "verify_n320.py",
         "build_n320_report.py", "build_n320_report.js", "record_n320_qa.py", "test_n320_report.py",
         "run_n320_verification.py", "spectral_benchmark.json",
+        "scale_diagnostic.json", "scale_independent_n400.json", "n400_scale.json", "n400-result.png",
+        "n400-coverage.png", "SCALE_DIAGNOSTIC.md", "Floquet-BdG-N400阈值诊断报告.docx",
+        "n400-word-qa/report.json", "scale_verification.json", "scale_run.log", "resumable_winding.py",
+        "run_scale_diagnostic.py", "verify_scale_diagnostic.py", "build_scale_report.py", "build_scale_report.js",
+        "record_scale_qa.py", "test_scale_report.py", "run_scale_verification.py", "test_resumable.py",
+        "scale_work/n400_zero_dtheta0p05.json", "scale_work/n400_zero_dtheta0p025.json",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py",
@@ -92,7 +100,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -111,11 +119,14 @@ def main():
         "finite_size_independent_count": finite_verification.get("independent_count"),
         "n320_all_passed": n320_verification.get("all_passed"),
         "n320_independent_count": n320_verification.get("independent_count"),
+        "n400_all_passed": n400_verification.get("all_passed"),
+        "n400_independent_agreement": n400_verification.get("independent_agreement"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
-            "n320_tbc_winding_computed": passed, "n640_tbc_winding_computed": False,
-            "localization_scale_analysis_pending": True, "independent_disorder_realizations": 12,
+            "n320_tbc_winding_computed": passed, "n400_threshold_diagnostic_evaluated": passed,
+            "n600_tail_growth_diagnostic_pending": True, "n640_tbc_winding_computed": False,
+            "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,
             "paired_control_rows": 12, "uniform_controls_are_independent_random_samples": False,
             "double_kick_diagnostic_excluded": True,
             "old_disorder_assessment": old_disorder["assessment"]["status"],

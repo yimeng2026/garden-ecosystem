@@ -1,0 +1,40 @@
+$ resume_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_resumable.py -v
+test_n400_and_n600_have_distinct_rationales (__main__.DiagnosticRegistryTests.test_n400_and_n600_have_distinct_rationales) ... ok
+test_extended_streams_are_exactly_nested (__main__.NestedSequenceTests.test_extended_streams_are_exactly_nested) ... ok
+test_half_chiral_block_matches_contract (__main__.OneThetaTests.test_half_chiral_block_matches_contract) ... ok
+test_chunk_resume_and_reference_equality (__main__.ResumableWindingTests.test_chunk_resume_and_reference_equality) ... ok
+test_metadata_mismatch_is_rejected (__main__.ResumableWindingTests.test_metadata_mismatch_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.317s
+
+OK
+exit_code=0
+$ diagnostic_integrity: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_scale_diagnostic.py --n 400 --grid 0.05 --merge-only
+n400_complete True n600_complete False rows 1
+exit_code=0
+$ report_data: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\build_scale_report.py
+N400 metrics {"n": 400, "strength": 0.1, "seed": 0, "L50": 24, "L90": 133, "L99": 190, "L50_fraction": 0.06, "mass5": 0.23999450367242225, "mass10": 0.3142027103956898, "mass20": 0.47064970751134483, "mass40": 0.5842622494736688, "center20_mass": 0.05136850196226496, "subspace_ipr": 0.018275221151439983, "n_subspace_ipr": 7.310088460575994, "edge_weight": 0.5842622494736688, "separation": 0.0010719041005146524, "joint_pass": true}
+envelope_R2 0.3315533318387055
+generated n400-result.png n400-coverage.png SCALE_DIAGNOSTIC.md
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-N400阈值诊断报告.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_scale_qa.py
+{"pages": 4, "manualReview": "passed", "docxSha256": "e7ccaed059b26b8024d90f6883f9b10e1c01ff3d3d4c0c96315928f8e5d1a914"}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_scale_report.py -v
+test_coverage_metrics_preserve_tail_distinction (__main__.ScaleReportTests.test_coverage_metrics_preserve_tail_distinction) ... ok
+test_docx_native_structure (__main__.ScaleReportTests.test_docx_native_structure) ... ok
+test_markdown_and_figures (__main__.ScaleReportTests.test_markdown_and_figures) ... ok
+test_n400_result_and_independent_agreement (__main__.ScaleReportTests.test_n400_result_and_independent_agreement) ... ok
+test_visual_hash_binding (__main__.ScaleReportTests.test_visual_hash_binding) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.013s
+
+OK
+exit_code=0
