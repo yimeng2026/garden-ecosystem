@@ -1,0 +1,1325 @@
+{
+  "schema": "floquet-bdg-embedding-robustness-analysis-v1",
+  "analysis_date": "2026-11-11",
+  "protocol_sha256": "e7165492ca173f10435aaa394116f6c2e91e02a6095a6669af3deb45fcb20a79",
+  "source_sha256": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+  "previous_linear_source_sha256": "ad158072c581628e86c44a4e0fd67cd2039ebbf2b2f16ce1ff4eb71afe09e283",
+  "original_independent_source_sha256": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+  "new_independent_source_sha256": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+  "verification_eigenvectors_recomputed": true,
+  "new_physics_cells": 0,
+  "new_seed_count": 0,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "representation_invariant_claim": false,
+  "embedding_convergence_proof": false,
+  "same_physics_state_tracking_claim": false,
+  "rank_exchange_proven": false,
+  "second_pair_topological_claim": false,
+  "new_taxonomy_claim": false,
+  "categories_changed": false,
+  "universal_mechanism_claim": false,
+  "original_category_counts": {
+    "tail_growth_without_endpoint_recovery": 3,
+    "right_end_weakening_with_broadening": 1,
+    "right_end_driven_symmetrization": 3,
+    "left_end_driven_threshold": 2,
+    "other_unclassified": 7
+  },
+  "cells": [
+    {
+      "n": 400,
+      "strength": 0.05,
+      "seed": 5,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "stored_profile_sha256": "381d35a8d040229c31cfddcd903fa62c5d9e8276b8f05ca4245282f903082057",
+          "max_profile_absolute_error": 2.0816681711721685e-17,
+          "edge_weight_absolute_error": 0.0
+        },
+        {
+          "pair_index": 1,
+          "stored_profile_sha256": "6fd4037a6a44738b2a7b4d749c068044ff67c9b6d6c7c0bf076a8269c3c3deeb",
+          "max_profile_absolute_error": 5.204170427930421e-18,
+          "edge_weight_absolute_error": 0.0
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.05,
+      "seed": 5,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "stored_profile_sha256": "fab7a2fdc3a287a9513930e7430ac899c205b1e71f7867b77af2a16b75d3d4a9",
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "pair_index": 1,
+          "stored_profile_sha256": "658b47872130c124bd9e5eeb7c0ca9288c2c8f8528a87c1b9988c9dc468766e0",
+          "max_profile_absolute_error": 4.336808689942018e-18,
+          "edge_weight_absolute_error": 1.3877787807814457e-17
+        }
+      ]
+    },
+    {
+      "n": 400,
+      "strength": 0.1,
+      "seed": 5,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "stored_profile_sha256": "7f3a3f10e2ec75ed7c1a660752906041ed998ba867ed8acbbf409fff0b68535b",
+          "max_profile_absolute_error": 2.42861286636753e-17,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "stored_profile_sha256": "3ac4ec593cec2136f23682a4739acbed31e866e93beb3c049f59b7d467990d23",
+          "max_profile_absolute_error": 1.0408340855860843e-17,
+          "edge_weight_absolute_error": 2.0816681711721685e-17
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.1,
+      "seed": 5,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "stored_profile_sha256": "c1323bd04a13db7b454565cfbe6d30389bcbbd835826a178439adfdc5e1ef5bf",
+          "max_profile_absolute_error": 1.0408340855860843e-17,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "stored_profile_sha256": "ad7ca2a4b3854d0ae7264199dde81ce069749dfab6aa4e395a837b56f3286206",
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 6.938893903907228e-18
+        }
+      ]
+    },
+    {
+      "n": 400,
+      "strength": 0.1,
+      "seed": 2,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "stored_profile_sha256": "10de1a2ef5976411e3c1dc1f2f185439cd80ac5b278118e5baa1e47f7a26562c",
+          "max_profile_absolute_error": 1.3877787807814457e-17,
+          "edge_weight_absolute_error": 1.1102230246251565e-16
+        },
+        {
+          "pair_index": 1,
+          "stored_profile_sha256": "fdc69d586f9a6e06cf307a8f52919d0b160484e2dfde217e92f5f7075a9729d8",
+          "max_profile_absolute_error": 2.0816681711721685e-17,
+          "edge_weight_absolute_error": 8.326672684688674e-17
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.1,
+      "seed": 2,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "stored_profile_sha256": "5d407a958caf63fe90834d321d68238d43cbbbe6700388910671c2975a52e696",
+          "max_profile_absolute_error": 1.3877787807814457e-17,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "stored_profile_sha256": "65bdf5209165f21e475fcb5edd66fa9288a46941d5143fd205a016dac56ceec5",
+          "max_profile_absolute_error": 1.3877787807814457e-17,
+          "edge_weight_absolute_error": 5.551115123125783e-17
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "label": "near_miss_low",
+      "seed": 5,
+      "strength": 0.05,
+      "original_category": "other_unclassified",
+      "methods": {
+        "linear_point": {
+          "grids": [
+            {
+              "m": 1200,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.4227281588776222,
+                      0.0781591120155552
+                    ],
+                    "overlap": 0.09240397154956216,
+                    "principal_angles_deg": [
+                      64.9930522276658,
+                      85.51724074484083
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.08472588152116073,
+                      0.028445144161679207
+                    ],
+                    "overlap": 0.0039938006129582385,
+                    "principal_angles_deg": [
+                      85.13973782416573,
+                      88.36999342796973
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.1304046231292489,
+                      0.011847327933931782
+                    ],
+                    "overlap": 0.008572862456327776,
+                    "principal_angles_deg": [
+                      82.50702544326049,
+                      89.32118223052922
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.02553962772613389,
+                      0.00387688383909191
+                    ],
+                    "overlap": 0.0003336514063456595,
+                    "principal_angles_deg": [
+                      88.53652799443333,
+                      89.777870361912
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.04636881147795391,
+              "swapped_score": 0.0062833315346430075,
+              "dominant_assignment": "diagonal"
+            },
+            {
+              "m": 2400,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.42265257541732254,
+                      0.07812901438336287
+                    ],
+                    "overlap": 0.09236967119770562,
+                    "principal_angles_deg": [
+                      64.99783070802881,
+                      85.51897050160142
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.0846854804661402,
+                      0.028437839284579554
+                    ],
+                    "overlap": 0.003990170652478295,
+                    "principal_angles_deg": [
+                      85.14206098350525,
+                      88.370412135982
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.13041002052868272,
+                      0.011844357939942998
+                    ],
+                    "overlap": 0.00857353113465047,
+                    "principal_angles_deg": [
+                      82.50671353148311,
+                      89.32135241059055
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.025531727380642785,
+                      0.003889735046995484
+                    ],
+                    "overlap": 0.00033349957088764473,
+                    "principal_angles_deg": [
+                      88.53698079854091,
+                      89.77713403638552
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.04635158538429663,
+              "swapped_score": 0.0062818508935643825,
+              "dominant_assignment": "diagonal"
+            },
+            {
+              "m": 4800,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.4226155504408597,
+                      0.07812266900003595
+                    ],
+                    "overlap": 0.09235352744306,
+                    "principal_angles_deg": [
+                      65.00017140526838,
+                      85.51933517992279
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.08468111798416332,
+                      0.02843473216196104
+                    ],
+                    "overlap": 0.003989712868085125,
+                    "principal_angles_deg": [
+                      85.14231183639491,
+                      88.37059023301565
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.1303963926933601,
+                      0.011843266262194502
+                    ],
+                    "overlap": 0.008571741091599104,
+                    "principal_angles_deg": [
+                      82.50750107371873,
+                      89.32141496350562
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.02553024774918174,
+                      0.003885945950809065
+                    ],
+                    "overlap": 0.00033344706303360433,
+                    "principal_angles_deg": [
+                      88.53706560282242,
+                      89.77735113724596
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.0463434872530468,
+              "swapped_score": 0.006280726979842114,
+              "dominant_assignment": "diagonal"
+            }
+          ]
+        },
+        "cell_average": {
+          "grids": [
+            {
+              "m": 1200,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.41965358300459976,
+                      0.07762341671583611
+                    ],
+                    "overlap": 0.09106726227561941,
+                    "principal_angles_deg": [
+                      65.1872813282332,
+                      85.54802735902987
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.08418422697037903,
+                      0.028209532208601926
+                    ],
+                    "overlap": 0.00394138088901422,
+                    "principal_angles_deg": [
+                      85.17088361917014,
+                      88.38349841806188
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.129253787190066,
+                      0.011748473611361568
+                    ],
+                    "overlap": 0.008422284067585864,
+                    "principal_angles_deg": [
+                      82.57352632811381,
+                      89.32684656022549
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.02535296647425258,
+                      0.0037175356299701916
+                    ],
+                    "overlap": 0.0003282964901023366,
+                    "principal_angles_deg": [
+                      88.54722636061233,
+                      89.78700040759969
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.045697779382860876,
+              "swapped_score": 0.006181832478300042,
+              "dominant_assignment": "diagonal"
+            },
+            {
+              "m": 2400,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.41965358300459943,
+                      0.07762341671583642
+                    ],
+                    "overlap": 0.0910672622756193,
+                    "principal_angles_deg": [
+                      65.18728132823323,
+                      85.54802735902986
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.08418422697037903,
+                      0.02820953220860187
+                    ],
+                    "overlap": 0.0039413808890142185,
+                    "principal_angles_deg": [
+                      85.17088361917014,
+                      88.38349841806188
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.12925378719006625,
+                      0.011748473611361464
+                    ],
+                    "overlap": 0.008422284067585896,
+                    "principal_angles_deg": [
+                      82.5735263281138,
+                      89.32684656022549
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.025352966474252593,
+                      0.003717535629970168
+                    ],
+                    "overlap": 0.0003282964901023368,
+                    "principal_angles_deg": [
+                      88.54722636061233,
+                      89.78700040759969
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.04569777938286082,
+              "swapped_score": 0.0061818324783000575,
+              "dominant_assignment": "diagonal"
+            },
+            {
+              "m": 4800,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.41965358300459865,
+                      0.07762341671583559
+                    ],
+                    "overlap": 0.09106726227561891,
+                    "principal_angles_deg": [
+                      65.18728132823327,
+                      85.5480273590299
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.08418422697037853,
+                      0.02820953220860178
+                    ],
+                    "overlap": 0.003941380889014174,
+                    "principal_angles_deg": [
+                      85.17088361917017,
+                      88.38349841806189
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.12925378719006572,
+                      0.011748473611361302
+                    ],
+                    "overlap": 0.008422284067585826,
+                    "principal_angles_deg": [
+                      82.57352632811383,
+                      89.32684656022549
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.025352966474252458,
+                      0.0037175356299701218
+                    ],
+                    "overlap": 0.00032829649010233323,
+                    "principal_angles_deg": [
+                      88.54722636061234,
+                      89.78700040759969
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.045697779382860626,
+              "swapped_score": 0.0061818324783,
+              "dominant_assignment": "diagonal"
+            }
+          ]
+        }
+      },
+      "method_comparisons": [
+        {
+          "m": 1200,
+          "linear_diagonal_score": 0.04636881147795391,
+          "cell_average_diagonal_score": 0.045697779382860876,
+          "diagonal_score_change_cell_minus_linear": -0.0006710320950930326,
+          "linear_swapped_score": 0.0062833315346430075,
+          "cell_average_swapped_score": 0.006181832478300042,
+          "max_overlap_entry_absolute_change": 0.0013367092739427489,
+          "linear_assignment": "diagonal",
+          "cell_average_assignment": "diagonal",
+          "same_dominant_assignment": true
+        },
+        {
+          "m": 2400,
+          "linear_diagonal_score": 0.04635158538429663,
+          "cell_average_diagonal_score": 0.04569777938286082,
+          "diagonal_score_change_cell_minus_linear": -0.0006538060014358096,
+          "linear_swapped_score": 0.0062818508935643825,
+          "cell_average_swapped_score": 0.0061818324783000575,
+          "max_overlap_entry_absolute_change": 0.001302408922086315,
+          "linear_assignment": "diagonal",
+          "cell_average_assignment": "diagonal",
+          "same_dominant_assignment": true
+        },
+        {
+          "m": 4800,
+          "linear_diagonal_score": 0.0463434872530468,
+          "cell_average_diagonal_score": 0.045697779382860626,
+          "diagonal_score_change_cell_minus_linear": -0.0006457078701861754,
+          "linear_swapped_score": 0.006280726979842114,
+          "cell_average_swapped_score": 0.0061818324783,
+          "max_overlap_entry_absolute_change": 0.0012862651674410835,
+          "linear_assignment": "diagonal",
+          "cell_average_assignment": "diagonal",
+          "same_dominant_assignment": true
+        }
+      ]
+    },
+    {
+      "label": "near_miss_high",
+      "seed": 5,
+      "strength": 0.1,
+      "original_category": "other_unclassified",
+      "methods": {
+        "linear_point": {
+          "grids": [
+            {
+              "m": 1200,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.05346316224227855,
+                      0.008534635145862854
+                    ],
+                    "overlap": 0.0014655748570085983,
+                    "principal_angles_deg": [
+                      86.93532529508025,
+                      89.510995489821
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.01873434785381728,
+                      0.001722178044679239
+                    ],
+                    "overlap": 0.00017697084336270165,
+                    "principal_angles_deg": [
+                      88.92653813661333,
+                      89.9013264176938
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.009103153704419536,
+                      0.007023067152264346
+                    ],
+                    "overlap": 6.609543979575077e-05,
+                    "principal_angles_deg": [
+                      89.47842050865205,
+                      89.59760458496888
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.040883970346780936,
+                      0.01650457685231376
+                    ],
+                    "overlap": 0.000971950044195197,
+                    "principal_angles_deg": [
+                      87.6568679828359,
+                      89.05431446610912
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.0012187624506018978,
+              "swapped_score": 0.00012153314157922621,
+              "dominant_assignment": "diagonal"
+            },
+            {
+              "m": 2400,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.05342959503988078,
+                      0.008476166469764427
+                    ],
+                    "overlap": 0.001463283512074406,
+                    "principal_angles_deg": [
+                      86.93725130691628,
+                      89.5143456193751
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.018663009903432705,
+                      0.00172363566863451
+                    ],
+                    "overlap": 0.00017563942928690816,
+                    "principal_angles_deg": [
+                      88.93062621483186,
+                      89.90124290186908
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.009060539862044685,
+                      0.007019173946885735
+                    ],
+                    "overlap": 6.568109274417009e-05,
+                    "principal_angles_deg": [
+                      89.4808622026666,
+                      89.59782765470416
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.04087218335367954,
+                      0.016446512766333927
+                    ],
+                    "overlap": 0.000970511577134992,
+                    "principal_angles_deg": [
+                      87.65754389275843,
+                      89.05764174479238
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.001216897544604699,
+              "swapped_score": 0.00012066026101553913,
+              "dominant_assignment": "diagonal"
+            },
+            {
+              "m": 4800,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.05341953554831499,
+                      0.008487976456937477
+                    ],
+                    "overlap": 0.0014628462612656067,
+                    "principal_angles_deg": [
+                      86.93782849761993,
+                      89.51366893261124
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.01867506744678168,
+                      0.0017226223410323374
+                    ],
+                    "overlap": 0.00017586278593583428,
+                    "principal_angles_deg": [
+                      88.92993524806381,
+                      89.90130096135015
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.009068113872253843,
+                      0.007017918381458712
+                    ],
+                    "overlap": 6.574093380448933e-05,
+                    "principal_angles_deg": [
+                      89.48042822601906,
+                      89.59789959507594
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.040862124058542094,
+                      0.01645529251324063
+                    ],
+                    "overlap": 0.0009702449171359989,
+                    "principal_angles_deg": [
+                      87.65812072981075,
+                      89.05713863426587
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.0012165455892008028,
+              "swapped_score": 0.0001208018598701618,
+              "dominant_assignment": "diagonal"
+            }
+          ]
+        },
+        "cell_average": {
+          "grids": [
+            {
+              "m": 1200,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.05279322214933313,
+                      0.009067788266304168
+                    ],
+                    "overlap": 0.001434674544475681,
+                    "principal_angles_deg": [
+                      86.97376432308624,
+                      89.48044688263283
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.01910327388453875,
+                      0.0016671656551267122
+                    ],
+                    "overlap": 0.00018385725721466713,
+                    "principal_angles_deg": [
+                      88.9053964481104,
+                      89.9044783999626
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.009378832791013541,
+                      0.006922539426389659
+                    ],
+                    "overlap": 6.794202831585507e-05,
+                    "principal_angles_deg": [
+                      89.4626245859718,
+                      89.60336453941413
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.040125985150508296,
+                      0.016710108580756614
+                    ],
+                    "overlap": 0.0009446612065397441,
+                    "principal_angles_deg": [
+                      87.70033300671457,
+                      89.04253674120973
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.0011896678755077125,
+              "swapped_score": 0.0001258996427652611,
+              "dominant_assignment": "diagonal"
+            },
+            {
+              "m": 2400,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.05279322214933308,
+                      0.009067788266304196
+                    ],
+                    "overlap": 0.0014346745444756787,
+                    "principal_angles_deg": [
+                      86.97376432308624,
+                      89.48044688263283
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.019103273884538745,
+                      0.001667165655126702
+                    ],
+                    "overlap": 0.00018385725721466702,
+                    "principal_angles_deg": [
+                      88.9053964481104,
+                      89.9044783999626
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.009378832791013546,
+                      0.006922539426389658
+                    ],
+                    "overlap": 6.79420283158551e-05,
+                    "principal_angles_deg": [
+                      89.46262458597178,
+                      89.60336453941413
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.04012598515050821,
+                      0.01671010858075656
+                    ],
+                    "overlap": 0.0009446612065397398,
+                    "principal_angles_deg": [
+                      87.70033300671459,
+                      89.04253674120973
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.0011896678755077092,
+              "swapped_score": 0.00012589964276526106,
+              "dominant_assignment": "diagonal"
+            },
+            {
+              "m": 4800,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.05279322214933309,
+                      0.009067788266304269
+                    ],
+                    "overlap": 0.0014346745444756795,
+                    "principal_angles_deg": [
+                      86.97376432308624,
+                      89.48044688263282
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.019103273884538714,
+                      0.001667165655126705
+                    ],
+                    "overlap": 0.00018385725721466642,
+                    "principal_angles_deg": [
+                      88.9053964481104,
+                      89.9044783999626
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.00937883279101354,
+                      0.006922539426389645
+                    ],
+                    "overlap": 6.794202831585494e-05,
+                    "principal_angles_deg": [
+                      89.4626245859718,
+                      89.60336453941413
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.040125985150508234,
+                      0.016710108580756586
+                    ],
+                    "overlap": 0.0009446612065397411,
+                    "principal_angles_deg": [
+                      87.70033300671459,
+                      89.04253674120973
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.0011896678755077103,
+              "swapped_score": 0.00012589964276526068,
+              "dominant_assignment": "diagonal"
+            }
+          ]
+        }
+      },
+      "method_comparisons": [
+        {
+          "m": 1200,
+          "linear_diagonal_score": 0.0012187624506018978,
+          "cell_average_diagonal_score": 0.0011896678755077125,
+          "diagonal_score_change_cell_minus_linear": -2.909457509418529e-05,
+          "linear_swapped_score": 0.00012153314157922621,
+          "cell_average_swapped_score": 0.0001258996427652611,
+          "max_overlap_entry_absolute_change": 3.0900312532917236e-05,
+          "linear_assignment": "diagonal",
+          "cell_average_assignment": "diagonal",
+          "same_dominant_assignment": true
+        },
+        {
+          "m": 2400,
+          "linear_diagonal_score": 0.001216897544604699,
+          "cell_average_diagonal_score": 0.0011896678755077092,
+          "diagonal_score_change_cell_minus_linear": -2.722966909698976e-05,
+          "linear_swapped_score": 0.00012066026101553913,
+          "cell_average_swapped_score": 0.00012589964276526106,
+          "max_overlap_entry_absolute_change": 2.8608967598727332e-05,
+          "linear_assignment": "diagonal",
+          "cell_average_assignment": "diagonal",
+          "same_dominant_assignment": true
+        },
+        {
+          "m": 4800,
+          "linear_diagonal_score": 0.0012165455892008028,
+          "cell_average_diagonal_score": 0.0011896678755077103,
+          "diagonal_score_change_cell_minus_linear": -2.6877713693092492e-05,
+          "linear_swapped_score": 0.0001208018598701618,
+          "cell_average_swapped_score": 0.00012589964276526068,
+          "max_overlap_entry_absolute_change": 2.817171678992712e-05,
+          "linear_assignment": "diagonal",
+          "cell_average_assignment": "diagonal",
+          "same_dominant_assignment": true
+        }
+      ]
+    },
+    {
+      "label": "reference_weakening",
+      "seed": 2,
+      "strength": 0.1,
+      "original_category": "right_end_weakening_with_broadening",
+      "methods": {
+        "linear_point": {
+          "grids": [
+            {
+              "m": 1200,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.12198987762684183,
+                      0.04049218501723025
+                    ],
+                    "overlap": 0.008260573645440725,
+                    "principal_angles_deg": [
+                      82.99304198229538,
+                      87.67933423320163
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.05123456961290873,
+                      0.03535971767407023
+                    ],
+                    "overlap": 0.0019376453787049725,
+                    "principal_angles_deg": [
+                      87.06318959380958,
+                      87.97361499469937
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.02975159127064089,
+                      0.0024084459633306526
+                    ],
+                    "overlap": 0.00044547889754677943,
+                    "principal_angles_deg": [
+                      88.29510780702455,
+                      89.86200607770742
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.06227620785433262,
+                      0.036424993792601223
+                    ],
+                    "overlap": 0.0026025531187535388,
+                    "principal_angles_deg": [
+                      86.42952567412387,
+                      87.91253981311884
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.005431563382097132,
+              "swapped_score": 0.001191562138125876,
+              "dominant_assignment": "diagonal"
+            },
+            {
+              "m": 2400,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.12205796783743407,
+                      0.04044307071065591
+                    ],
+                    "overlap": 0.008266894740555602,
+                    "principal_angles_deg": [
+                      82.9891113274446,
+                      87.6821505826949
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.05122890128946621,
+                      0.03532243387359584
+                    ],
+                    "overlap": 0.0019360373310402116,
+                    "principal_angles_deg": [
+                      87.06351479187232,
+                      87.97575253441256
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.029780322664594478,
+                      0.0024052908840949934
+                    ],
+                    "overlap": 0.00044632652112223503,
+                    "principal_angles_deg": [
+                      88.29346088965531,
+                      89.86218685095527
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.06225966089577883,
+                      0.03640926424813917
+                    ],
+                    "overlap": 0.002600949948974098,
+                    "principal_angles_deg": [
+                      86.43047558835048,
+                      87.91344164783848
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.005433922344764849,
+              "swapped_score": 0.0011911819260812233,
+              "dominant_assignment": "diagonal"
+            },
+            {
+              "m": 4800,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.12200166358919996,
+                      0.04044212701128525
+                    ],
+                    "overlap": 0.008259985777864624,
+                    "principal_angles_deg": [
+                      82.99236161446903,
+                      87.68220469695883
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.051211099823292736,
+                      0.035321072720418775
+                    ],
+                    "overlap": 0.0019350774616161822,
+                    "principal_angles_deg": [
+                      87.06453608130354,
+                      87.9758305714406
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.02976403138668804,
+                      0.002405236904433316
+                    ],
+                    "overlap": 0.0004458413644770993,
+                    "principal_angles_deg": [
+                      88.29439472508169,
+                      89.862189943771
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.06224351111026944,
+                      0.03640011967885301
+                    ],
+                    "overlap": 0.0025996116939845286,
+                    "principal_angles_deg": [
+                      86.43140270104531,
+                      87.91396594060225
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.005429798735924576,
+              "swapped_score": 0.0011904594130466408,
+              "dominant_assignment": "diagonal"
+            }
+          ]
+        },
+        "cell_average": {
+          "grids": [
+            {
+              "m": 1200,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.11854912141047072,
+                      0.04001016870647195
+                    ],
+                    "overlap": 0.007827353893557439,
+                    "principal_angles_deg": [
+                      83.19162434879374,
+                      87.70697413330214
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.050060239684433926,
+                      0.03497786229279691
+                    ],
+                    "overlap": 0.0018647392239184186,
+                    "principal_angles_deg": [
+                      87.13056021004843,
+                      87.9955072393966
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.028801044036827803,
+                      0.00238620298721625
+                    ],
+                    "overlap": 0.00041759705115374706,
+                    "principal_angles_deg": [
+                      88.34959350873584,
+                      89.86328051002481
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.061073479869422055,
+                      0.03569850507538574
+                    ],
+                    "overlap": 0.002502176603989021,
+                    "principal_angles_deg": [
+                      86.49856835268686,
+                      87.9541916432666
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.005164765248773229,
+              "swapped_score": 0.001141168137536083,
+              "dominant_assignment": "diagonal"
+            },
+            {
+              "m": 2400,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.11854912141047082,
+                      0.04001016870647201
+                    ],
+                    "overlap": 0.00782735389355745,
+                    "principal_angles_deg": [
+                      83.19162434879372,
+                      87.70697413330214
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.050060239684433884,
+                      0.034977862292796834
+                    ],
+                    "overlap": 0.001864739223918414,
+                    "principal_angles_deg": [
+                      87.13056021004843,
+                      87.9955072393966
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.028801044036827716,
+                      0.0023862029872162506
+                    ],
+                    "overlap": 0.0004175970511537445,
+                    "principal_angles_deg": [
+                      88.34959350873584,
+                      89.86328051002481
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.061073479869422,
+                      0.035698505075385654
+                    ],
+                    "overlap": 0.0025021766039890147,
+                    "principal_angles_deg": [
+                      86.49856835268687,
+                      87.95419164326661
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.005164765248773233,
+              "swapped_score": 0.0011411681375360792,
+              "dominant_assignment": "diagonal"
+            },
+            {
+              "m": 4800,
+              "overlap_matrix": [
+                [
+                  {
+                    "singular_values": [
+                      0.118549121410471,
+                      0.04001016870647221
+                    ],
+                    "overlap": 0.007827353893557482,
+                    "principal_angles_deg": [
+                      83.19162434879372,
+                      87.70697413330213
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.050060239684433974,
+                      0.0349778622927969
+                    ],
+                    "overlap": 0.001864739223918421,
+                    "principal_angles_deg": [
+                      87.13056021004842,
+                      87.9955072393966
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "singular_values": [
+                      0.02880104403682779,
+                      0.002386202987216259
+                    ],
+                    "overlap": 0.0004175970511537467,
+                    "principal_angles_deg": [
+                      88.34959350873584,
+                      89.86328051002481
+                    ]
+                  },
+                  {
+                    "singular_values": [
+                      0.06107347986942199,
+                      0.03569850507538581
+                    ],
+                    "overlap": 0.00250217660398902,
+                    "principal_angles_deg": [
+                      86.49856835268687,
+                      87.9541916432666
+                    ]
+                  }
+                ]
+              ],
+              "diagonal_score": 0.005164765248773251,
+              "swapped_score": 0.0011411681375360838,
+              "dominant_assignment": "diagonal"
+            }
+          ]
+        }
+      },
+      "method_comparisons": [
+        {
+          "m": 1200,
+          "linear_diagonal_score": 0.005431563382097132,
+          "cell_average_diagonal_score": 0.005164765248773229,
+          "diagonal_score_change_cell_minus_linear": -0.00026679813332390265,
+          "linear_swapped_score": 0.001191562138125876,
+          "cell_average_swapped_score": 0.001141168137536083,
+          "max_overlap_entry_absolute_change": 0.00043321975188328685,
+          "linear_assignment": "diagonal",
+          "cell_average_assignment": "diagonal",
+          "same_dominant_assignment": true
+        },
+        {
+          "m": 2400,
+          "linear_diagonal_score": 0.005433922344764849,
+          "cell_average_diagonal_score": 0.005164765248773233,
+          "diagonal_score_change_cell_minus_linear": -0.00026915709599161647,
+          "linear_swapped_score": 0.0011911819260812233,
+          "cell_average_swapped_score": 0.0011411681375360792,
+          "max_overlap_entry_absolute_change": 0.00043954084699815085,
+          "linear_assignment": "diagonal",
+          "cell_average_assignment": "diagonal",
+          "same_dominant_assignment": true
+        },
+        {
+          "m": 4800,
+          "linear_diagonal_score": 0.005429798735924576,
+          "cell_average_diagonal_score": 0.005164765248773251,
+          "diagonal_score_change_cell_minus_linear": -0.00026503348715132494,
+          "linear_swapped_score": 0.0011904594130466408,
+          "cell_average_swapped_score": 0.0011411681375360838,
+          "max_overlap_entry_absolute_change": 0.00043263188430714243,
+          "linear_assignment": "diagonal",
+          "cell_average_assignment": "diagonal",
+          "same_dominant_assignment": true
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "method_grid_count": 18,
+    "diagonal_dominant_count": 18,
+    "finest_same_assignment_count": 3,
+    "max_absolute_diagonal_score_change": 0.0006710320950930326
+  },
+  "max_linear_reproduction_error": 0.0,
+  "max_profile_absolute_error": 2.42861286636753e-17
+}

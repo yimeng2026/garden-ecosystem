@@ -1,0 +1,41 @@
+{
+  "schema": "floquet-bdg-embedding-robustness-word-qa-v1",
+  "recordedUtc": "2026-11-11T08:53:14.680632+00:00",
+  "sourceSha256": {
+    "embedding_robustness_protocol.json": "e7165492ca173f10435aaa394116f6c2e91e02a6095a6669af3deb45fcb20a79",
+    "embedding_robustness_analysis.json": "d62108d415aed1b0bdacd8f74f8e4e86db38830cdfa0f3bdcf49cd7aab2d586a",
+    "subspace_overlap_analysis.json": "ad158072c581628e86c44a4e0fd67cd2039ebbf2b2f16ce1ff4eb71afe09e283",
+    "embedding-robustness.png": "3ecce690503fb87e61f5307931c03459eb0fcafd32d5b9f3ea184b6e1c0eb097",
+    "build_embedding_robustness_report.js": "a43407b2afd75f7be58ee14027528ca5e636b9d52c77e4be0a9f75879ad1a235"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "d290e504ebe6f25f026689bf0d55038814ee1b4742166e6d502976d7d803f7bd",
+    "renderReportSha256": "a6bcea65065e2574dd743e121d2bfd5716547659861e3a59b4b37c4604073783"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "d290e504ebe6f25f026689bf0d55038814ee1b4742166e6d502976d7d803f7bd",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看四个单页；OMML公式、九行方法对照、比较图、三份单元平均矩阵与边界说明完整，无近空白页或裁切。"
+  }
+}

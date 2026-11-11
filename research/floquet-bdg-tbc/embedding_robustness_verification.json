@@ -1,0 +1,89 @@
+{
+  "schema": "floquet-bdg-embedding-robustness-verification-v1",
+  "recorded_utc": "2026-11-11T08:53:14.843637+00:00",
+  "all_passed": true,
+  "test_count": 6,
+  "original_independent_projectors_passed": true,
+  "new_independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "embedding_robustness_analysis",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_embedding_robustness.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-共同表示稳健性.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_embedding_robustness_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_embedding_robustness.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "embedding_robustness_protocol.json": "e7165492ca173f10435aaa394116f6c2e91e02a6095a6669af3deb45fcb20a79",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "subspace_overlap_analysis.json": "ad158072c581628e86c44a4e0fd67cd2039ebbf2b2f16ce1ff4eb71afe09e283",
+    "multi_seed_independent.json": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "embedding_robustness_analysis.json": "d62108d415aed1b0bdacd8f74f8e4e86db38830cdfa0f3bdcf49cd7aab2d586a",
+    "embedding-robustness.png": "3ecce690503fb87e61f5307931c03459eb0fcafd32d5b9f3ea184b6e1c0eb097",
+    "EMBEDDING_ROBUSTNESS.md": "c34113d02e52b705e303cdfd0e63dbc1d1074248cfa5da41b6df735cf910d9e3",
+    "Floquet-BdG-共同表示稳健性.docx": "d290e504ebe6f25f026689bf0d55038814ee1b4742166e6d502976d7d803f7bd",
+    "embedding-robustness-word-qa.json": "b13eacc050a13cbe1b3f4d6e94f17984e766a20c61d2020d172a3f59a5ed700c",
+    "embedding-robustness-word-render/report.json": "a6bcea65065e2574dd743e121d2bfd5716547659861e3a59b4b37c4604073783",
+    "analyze_embedding_robustness.py": "bf62c5e4527616ab7f6cd50cca04a3dd1f475d8c65dbd10ad1f925dbc15e144f",
+    "build_embedding_robustness_report.js": "a43407b2afd75f7be58ee14027528ca5e636b9d52c77e4be0a9f75879ad1a235",
+    "record_embedding_robustness_qa.py": "690a875f7d39ac5fc5b5cd3960646c0febebb79fa2a2cb3c475c49822c30ac42",
+    "test_embedding_robustness.py": "0100c31791e894c352c276358dcd342a77fd785ad5989e1a04f286264c3c9a8f",
+    "embedding_robustness_run.log": "c5cc39885fd1b457dc04aa2647ce1ec1059dbfe3e13e4bbb0ae7225eac9024e0"
+  },
+  "scope": {
+    "embedding_robustness_analysis_evaluated": true,
+    "cases": 3,
+    "cells": 6,
+    "methods": [
+      "linear_point",
+      "cell_average"
+    ],
+    "method_grid_count": 18,
+    "diagonal_dominant_count": 18,
+    "finest_same_assignment_count": 3,
+    "max_absolute_diagonal_score_change": 0.0006710320950930326,
+    "cell_average_lower_in_all_nine_comparisons": true,
+    "direction_stability_is_not_state_tracking": true,
+    "representation_invariant_claim": false,
+    "embedding_convergence_proof": false,
+    "same_physics_state_tracking_claim": false,
+    "rank_exchange_proven": false,
+    "new_physics_cells": 0,
+    "new_taxonomy_claim": false,
+    "n640_automatically_justified": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "embedding_robustness_run.log"
+}

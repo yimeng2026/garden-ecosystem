@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-n600-verification-v1",
-  "recorded_utc": "2026-11-11T08:34:44.265325+00:00",
+  "recorded_utc": "2026-11-11T08:52:06.566302+00:00",
   "all_passed": true,
   "resume_test_count": 5,
   "report_test_count": 5,
@@ -75,8 +75,8 @@
     "n600-coverage.png": "e5789ea9046c78b50b47053d838f1a65477a1e83c73acc5a7cea5c8ba4746a51",
     "N600_DIAGNOSTIC.md": "564dd86dcebc0376e8c469417a083c2eff7d143f32c8ecee6a27d570dc28d114",
     "Floquet-BdG-N600尾长诊断报告.docx": "40bd486d796d3b3f2b770c051b5ab1e14379abce02f28bf695cdaee548eb2a2f",
-    "n600-word-qa/report.json": "1f799ebe6d064177244966314863f84d094f15869d5673df6e4a5530d3d77715",
-    "n600_run.log": "0092d2ed8a61d931294018ede64f5febed14257545d6299b1dea2d1525477d0a",
+    "n600-word-qa/report.json": "3b6e299eef68e6cd529c8f1aa465f397ed2b6afcd399f52b11d843e4c881355b",
+    "n600_run.log": "34d6f05774ca679b58bf91758a68111d37f9a9aeda4a85b6c3faf73347b26d65",
     "scale_work/n600_zero_dtheta0p05.json": "072616545183f24c6b11affe379b44d8765a977007de4eb1f7deef3efca2a6cc",
     "scale_work/n600_zero_dtheta0p025.json": "571f84ee5a9249d1cdbc4a4c6f0a243ffac713ef6014596713419c77230f7182",
     "tbc_model.py": "bc7f7541434920ae9d5a9bdca396dc86306fb383a7d9f4bff19902077de641fc",

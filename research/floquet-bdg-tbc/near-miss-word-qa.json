@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-near-miss-word-qa-v1",
-  "recordedUtc": "2026-11-11T08:35:29.165774+00:00",
+  "recordedUtc": "2026-11-11T08:52:51.804160+00:00",
   "sourceSha256": {
     "near_miss_spatial_protocol.json": "679095de8ed6f34cc1bdb21e7c59fd5f0f0a490a7e7aeac7f775efc859639a17",
     "near_miss_spatial_analysis.json": "9a7916e54ec332714185956b471d28edab0419003ad90d6fa649084490af43bc",

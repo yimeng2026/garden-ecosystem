@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-category-verification-v1",
-  "recorded_utc": "2026-11-11T08:35:26.559600+00:00",
+  "recorded_utc": "2026-11-11T08:52:49.163398+00:00",
   "all_passed": true,
   "test_count": 5,
   "original_independent_projectors_passed": true,
@@ -71,7 +71,7 @@
     "repeated-categories.png": "ea2a99a6674b29b72b6398812ca6301ab99ecb77626926844d44089af98b2c81",
     "REPEATED_CATEGORIES.md": "41b4318f2a8d4831903b4837e1218cc627f71f2a6afe4084b3dd217afcba2cf2",
     "Floquet-BdG-端部机制类别检验.docx": "9365804676a15970742f1524e352b46abff49a2b3e3a4cbba7b4cd3f2fae947b",
-    "category-word-qa.json": "4473447fd2e454c4c5060e5c67a992042fa28c7a86bfa842f87bc2e18d1a02be",
+    "category-word-qa.json": "b2d317c0dc3488807b26e6b8e32f013e1c98b1c7d3ab0aae284ed3ebadec980e",
     "category-word-render/report.json": "263a75d10351f38678e3847dccac3020cf0db840a4862b556e5554fd5d266117",
     "build_category_cells.py": "2693bcc6375e32f434813d555fbb5d8dde096f77a62e8d942df98ef57d8d4ed5",
     "verify_category_cells.py": "0385a8012fcbd62dcfa02a0084bae05aa6d9de18996188e13ebd4287d9f4c7bc",
@@ -79,7 +79,7 @@
     "build_category_report.js": "155b2f7cffba8884b6991fe4ad626d5c6a5545df3fc073cb8511784ff0fae884",
     "record_category_qa.py": "20bf7e69ae6f2648898b0760ad9d100141a2869f907b32edf2892e2d20ad1f6b",
     "test_repeated_categories.py": "7d618ecb2af03fc1281ee4cddae7002a24dcf4bfbc6ad987746dd222196151f2",
-    "category_run.log": "4971e86ffcdfbe42d2b738355d24b0d840cd9a150bcbacd6076a6ecd76ab7f65"
+    "category_run.log": "e215c5892d1f447ef38bfda049dcda9b63507d8b4a6396107566f962c7af1b02"
   },
   "scope": {
     "repeated_category_analysis_evaluated": true,

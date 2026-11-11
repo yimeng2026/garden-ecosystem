@@ -1,0 +1,31 @@
+{
+  "schema": "floquet-bdg-embedding-robustness-protocol-v1",
+  "analysis_date": "2026-11-11",
+  "registered_before_analysis": true,
+  "selected_cases": [
+    {"label": "near_miss_low", "seed": 5, "strength": 0.05},
+    {"label": "near_miss_high", "seed": 5, "strength": 0.1},
+    {"label": "reference_weakening", "seed": 2, "strength": 0.1}
+  ],
+  "n_values": [400, 600],
+  "pair_indices": [0, 1],
+  "common_grids": [1200, 2400, 4800],
+  "methods": ["linear_point", "cell_average"],
+  "linear_point": "reuse analyze_subspace_overlap.embedded_orthonormal_basis without modification",
+  "cell_average": "piecewise-constant L2 cell-average embedding; on nested grids M divisible by N, each original cell value is constant over exactly M//N target cells, followed by reduced QR",
+  "comparison": "same eigenvectors, same common grids and same overlap metric; only the embedding changes",
+  "linear_reproduction_gate": "all linear overlaps and assignment scores must reproduce subspace_overlap_analysis.json within 1e-12",
+  "profile_gate": "each recomputed frozen pair profile and edge weight must agree within 1e-10",
+  "new_physics_cells": 0,
+  "new_seed_count": 0,
+  "verification_eigenvectors_recomputed": true,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "representation_invariant_claim": false,
+  "embedding_convergence_proof": false,
+  "same_physics_state_tracking_claim": false,
+  "rank_exchange_proven": false,
+  "second_pair_topological_claim": false,
+  "new_taxonomy_claim": false,
+  "universal_mechanism_claim": false
+}

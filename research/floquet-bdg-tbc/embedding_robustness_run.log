@@ -1,0 +1,79 @@
+$ embedding_robustness_analysis: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_embedding_robustness.py
+{"completed": "near_miss_low", "comparisons": [{"m": 1200, "linear_diagonal_score": 0.04636881147795391, "cell_average_diagonal_score": 0.045697779382860876, "diagonal_score_change_cell_minus_linear": -0.0006710320950930326, "linear_swapped_score": 0.0062833315346430075, "cell_average_swapped_score": 0.006181832478300042, "max_overlap_entry_absolute_change": 0.0013367092739427489, "linear_assignment": "diagonal", "cell_average_assignment": "diagonal", "same_dominant_assignment": true}, {"m": 2400, "linear_diagonal_score": 0.04635158538429663, "cell_average_diagonal_score": 0.04569777938286082, "diagonal_score_change_cell_minus_linear": -0.0006538060014358096, "linear_swapped_score": 0.0062818508935643825, "cell_average_swapped_score": 0.0061818324783000575, "max_overlap_entry_absolute_change": 0.001302408922086315, "linear_assignment": "diagonal", "cell_average_assignment": "diagonal", "same_dominant_assignment": true}, {"m": 4800, "linear_diagonal_score": 0.0463434872530468, "cell_average_diagonal_score": 0.045697779382860626, "diagonal_score_change_cell_minus_linear": -0.0006457078701861754, "linear_swapped_score": 0.006280726979842114, "cell_average_swapped_score": 0.0061818324783, "max_overlap_entry_absolute_change": 0.0012862651674410835, "linear_assignment": "diagonal", "cell_average_assignment": "diagonal", "same_dominant_assignment": true}]}
+{"completed": "near_miss_high", "comparisons": [{"m": 1200, "linear_diagonal_score": 0.0012187624506018978, "cell_average_diagonal_score": 0.0011896678755077125, "diagonal_score_change_cell_minus_linear": -2.909457509418529e-05, "linear_swapped_score": 0.00012153314157922621, "cell_average_swapped_score": 0.0001258996427652611, "max_overlap_entry_absolute_change": 3.0900312532917236e-05, "linear_assignment": "diagonal", "cell_average_assignment": "diagonal", "same_dominant_assignment": true}, {"m": 2400, "linear_diagonal_score": 0.001216897544604699, "cell_average_diagonal_score": 0.0011896678755077092, "diagonal_score_change_cell_minus_linear": -2.722966909698976e-05, "linear_swapped_score": 0.00012066026101553913, "cell_average_swapped_score": 0.00012589964276526106, "max_overlap_entry_absolute_change": 2.8608967598727332e-05, "linear_assignment": "diagonal", "cell_average_assignment": "diagonal", "same_dominant_assignment": true}, {"m": 4800, "linear_diagonal_score": 0.0012165455892008028, "cell_average_diagonal_score": 0.0011896678755077103, "diagonal_score_change_cell_minus_linear": -2.6877713693092492e-05, "linear_swapped_score": 0.0001208018598701618, "cell_average_swapped_score": 0.00012589964276526068, "max_overlap_entry_absolute_change": 2.817171678992712e-05, "linear_assignment": "diagonal", "cell_average_assignment": "diagonal", "same_dominant_assignment": true}]}
+{"completed": "reference_weakening", "comparisons": [{"m": 1200, "linear_diagonal_score": 0.005431563382097132, "cell_average_diagonal_score": 0.005164765248773229, "diagonal_score_change_cell_minus_linear": -0.00026679813332390265, "linear_swapped_score": 0.001191562138125876, "cell_average_swapped_score": 0.001141168137536083, "max_overlap_entry_absolute_change": 0.00043321975188328685, "linear_assignment": "diagonal", "cell_average_assignment": "diagonal", "same_dominant_assignment": true}, {"m": 2400, "linear_diagonal_score": 0.005433922344764849, "cell_average_diagonal_score": 0.005164765248773233, "diagonal_score_change_cell_minus_linear": -0.00026915709599161647, "linear_swapped_score": 0.0011911819260812233, "cell_average_swapped_score": 0.0011411681375360792, "max_overlap_entry_absolute_change": 0.00043954084699815085, "linear_assignment": "diagonal", "cell_average_assignment": "diagonal", "same_dominant_assignment": true}, {"m": 4800, "linear_diagonal_score": 0.005429798735924576, "cell_average_diagonal_score": 0.005164765248773251, "diagonal_score_change_cell_minus_linear": -0.00026503348715132494, "linear_swapped_score": 0.0011904594130466408, "cell_average_swapped_score": 0.0011411681375360838, "max_overlap_entry_absolute_change": 0.00043263188430714243, "linear_assignment": "diagonal", "cell_average_assignment": "diagonal", "same_dominant_assignment": true}]}
+{
+  "summary": {
+    "method_grid_count": 18,
+    "diagonal_dominant_count": 18,
+    "finest_same_assignment_count": 3,
+    "max_absolute_diagonal_score_change": 0.0006710320950930326
+  },
+  "max_linear_reproduction_error": 0.0,
+  "max_profile_absolute_error": 2.42861286636753e-17,
+  "new_physics_cells": 0,
+  "n640_computed": false
+}
+generated embedding_robustness_analysis.json embedding-robustness.png EMBEDDING_ROBUSTNESS.md
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-共同表示稳健性.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_embedding_robustness_qa.py
+{
+  "schema": "floquet-bdg-embedding-robustness-word-qa-v1",
+  "recordedUtc": "2026-11-11T08:53:14.680632+00:00",
+  "sourceSha256": {
+    "embedding_robustness_protocol.json": "e7165492ca173f10435aaa394116f6c2e91e02a6095a6669af3deb45fcb20a79",
+    "embedding_robustness_analysis.json": "d62108d415aed1b0bdacd8f74f8e4e86db38830cdfa0f3bdcf49cd7aab2d586a",
+    "subspace_overlap_analysis.json": "ad158072c581628e86c44a4e0fd67cd2039ebbf2b2f16ce1ff4eb71afe09e283",
+    "embedding-robustness.png": "3ecce690503fb87e61f5307931c03459eb0fcafd32d5b9f3ea184b6e1c0eb097",
+    "build_embedding_robustness_report.js": "a43407b2afd75f7be58ee14027528ca5e636b9d52c77e4be0a9f75879ad1a235"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "d290e504ebe6f25f026689bf0d55038814ee1b4742166e6d502976d7d803f7bd",
+    "renderReportSha256": "a6bcea65065e2574dd743e121d2bfd5716547659861e3a59b4b37c4604073783"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "d290e504ebe6f25f026689bf0d55038814ee1b4742166e6d502976d7d803f7bd",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看四个单页；OMML公式、九行方法对照、比较图、三份单元平均矩阵与边界说明完整，无近空白页或裁切。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_embedding_robustness.py -v
+test_figure_markdown_and_reviewed_word (__main__.EmbeddingRobustnessTests.test_figure_markdown_and_reviewed_word) ... ok
+test_frozen_registry_and_sources (__main__.EmbeddingRobustnessTests.test_frozen_registry_and_sources) ... ok
+test_method_comparison_and_summary_are_exact (__main__.EmbeddingRobustnessTests.test_method_comparison_and_summary_are_exact) ... ok
+test_no_representation_invariant_or_state_tracking_claim (__main__.EmbeddingRobustnessTests.test_no_representation_invariant_or_state_tracking_claim) ... ok
+test_overlap_metrics_are_consistent_for_both_methods (__main__.EmbeddingRobustnessTests.test_overlap_metrics_are_consistent_for_both_methods) ... ok
+test_profiles_and_previous_linear_results_are_reproduced (__main__.EmbeddingRobustnessTests.test_profiles_and_previous_linear_results_are_reproduced) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.035s
+
+OK
+exit_code=0
