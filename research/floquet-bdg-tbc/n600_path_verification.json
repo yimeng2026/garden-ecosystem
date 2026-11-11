@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-n600-path-verification-v1",
-  "recorded_utc": "2026-11-11T13:32:11.309762+00:00",
+  "recorded_utc": "2026-11-11T13:51:24.149730+00:00",
   "all_passed": true,
   "test_count": 6,
   "check_only": true,
@@ -57,14 +57,14 @@
     "n600_path_analysis.json": "42cfae36089c692c9aad952d5fa8139defdb99f6b658725d8558e8fc71a60938",
     "n600-path.png": "0609fac537d5a531666468760bc84807b7f911a4d67138820df3374101719d02",
     "N600_PATH.md": "52dbc32c9ed095e4f0db207bffc75e24f34ab24851651bf425f0ae83ad45feab",
-    "Floquet-BdG-N600路径复核.docx": "d192e94e33c12c766d4094f6cae02412f1358180723377ebc3c7a3dd8cb10c46",
-    "n600-path-word-qa.json": "109f7b8912af20b5c401f6cb92610eed4209a4a267426b2efe26713cb15a0877",
-    "n600-path-word-render/report.json": "8b5ea5076ebc14f8c21010460c35e0557f7a15a6235a57ff913cbb0bc0793471",
+    "Floquet-BdG-N600路径复核.docx": "849ffe1faaae2038c7b1ef6c5e84881126fe2b8b67d1bd0af590641c0a93da2c",
+    "n600-path-word-qa.json": "1d1267e65a511596290928914b3f940d21c626300d394c5439c5354c598c6d99",
+    "n600-path-word-render/report.json": "4dc88efc8943bfab4f8163b36bcf743e0cce1792635a5923ed478a1af76fd28b",
     "analyze_n600_path.py": "eb4e71327588b78e7f96841da87856dca5a187aa8844bffb0c4052d7159ee4fb",
-    "build_n600_path_report.js": "19fc779afc7d3784046b18119f3cfbdc33592bb8377af71bad936f58bd983b85",
+    "build_n600_path_report.js": "7b528ff61aafd995aa13f4c42828bc45b2808e030e92d166445bd2c2d9ea07f5",
     "record_n600_path_qa.py": "34a3a6b9d280b332219a734d18a629aa840ff9d40bc66548484a4a68ab1bc97e",
-    "test_n600_path.py": "390f9fb5fb2ed4aaae038088091066f1021d07bf07252da72f426a6404df9341",
-    "n600_path_run.log": "8e0a0b84009384a24b69e2b117dc68932243833d33c2b0e7c1eb03ca182c2150"
+    "test_n600_path.py": "72cac5eafe9e2f885251adef6e83c4ebe51ee82e8cb2a10bf0b86f2045240dca",
+    "n600_path_run.log": "179490192e903221c5ace573238162bcb88ff040a2c1485f9177c2ad6dbf631b"
   },
   "scope": {
     "n600_path_analysis_evaluated": true,

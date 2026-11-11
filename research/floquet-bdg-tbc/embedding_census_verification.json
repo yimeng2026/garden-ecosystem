@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-embedding-census-verification-v1",
-  "recorded_utc": "2026-11-11T13:31:46.056207+00:00",
+  "recorded_utc": "2026-11-11T13:50:59.631997+00:00",
   "all_passed": true,
   "test_count": 6,
   "check_only": true,
@@ -57,13 +57,13 @@
     "embedding-census.png": "c6e31d55abee4740be83ed116b7f01f4166444885f942967ec262c98eae16b12",
     "EMBEDDING_CENSUS.md": "020228d95ab3ba3d29a6916d09cf0052ee3b86d1f990f0a357dd4301807120b4",
     "Floquet-BdG-全样本共同表示审计.docx": "b182f42df8bae541e1dfed5fd384233a06719bea454240596d8c72f8aba6e192",
-    "embedding-census-word-qa.json": "12cd09681b00bfde4d2946a0e0ac4169602337aef3c9f8b76e8de94402cb7612",
+    "embedding-census-word-qa.json": "f0fa181239e6f9ba08b906ce9bd7b8d63f414f717c9f26c580e9d53563fde2b2",
     "embedding-census-word-render/report.json": "6a3ac3e03791a2ae0eef09f60fc287b8e6231c2f44bd9e4c2810d74056168952",
     "analyze_embedding_census.py": "b4924efcfc1e825c553f38083f7b675f471398f72ec63583d1ffb961f86c261a",
     "build_embedding_census_report.js": "dc98d36c20d551c37a9e6e206388092fc7fc09c349443805c1bc6341bcae0cf7",
     "record_embedding_census_qa.py": "4014ae2377353282379b3fbe893dbd86c5386f5f7495fe9a0447ea56d2d318cc",
     "test_embedding_census.py": "38f4f990011bab1e66c6c4fe656aefd6f4b7b31750fe1af57c725ee7d77e278c",
-    "embedding_census_run.log": "a1dded2974775b8a378879c24d77789da45f5e55c5bdb6e9e1afee1d9ea86968"
+    "embedding_census_run.log": "d6b4dbfa331c6dd96d0b487deef6fd11a1f762eeec1749076477fd9715a0b3c8"
   },
   "scope": {
     "embedding_census_analysis_evaluated": true,

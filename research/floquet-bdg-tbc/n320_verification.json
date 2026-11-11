@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-tbc-n320-verification-v1",
-  "recorded_utc": "2026-11-11T13:30:22.468695+00:00",
+  "recorded_utc": "2026-11-11T13:49:35.967324+00:00",
   "all_passed": true,
   "backend_test_count": 5,
   "report_test_count": 5,
@@ -80,8 +80,8 @@
     "n320-endpoints.png": "af3016198f8e8a3bed7a5d90449fe2e6cdbf37fde8200743b457f9f89ddf968f",
     "N320.md": "dc358e92db61341c5b1d096b23959d53ca954a97ffca1bc7d000670b17ef0350",
     "Floquet-BdG-TBC-N320定向报告.docx": "b795ff95f9744fb40e6ffe1eb628d8f782ed2cfb8e331581d8eda8b2c211eacb",
-    "n320-word-qa/report.json": "c89429b1e9a33326c2d8b0d781854bb9a9e0a32561cd2eac352880394205d805",
-    "n320_run.log": "248a4d01fed3fe16c7ad106be2b484549d491f9722bbd574857f55e97bce950f",
+    "n320-word-qa/report.json": "341187b8895bed0243db7e9b893418f096d86f784f4803bd9d373a673f33a22c",
+    "n320_run.log": "fe95cc41022fc0c8c4b7cd1421898e76b762150b1eb624068b05983edb246083",
     "tbc_model.py": "bc7f7541434920ae9d5a9bdca396dc86306fb383a7d9f4bff19902077de641fc",
     "run_disorder.py": "a5b543e05b7f1e2136fc6e948c8607e3efc105f959d254a7dbce2169156964e9",
     "run_n320.py": "3c4486e7443d66a4bfb31e2ca3b7f960cbfe837c92385a1227fd3eabeaca16f0",

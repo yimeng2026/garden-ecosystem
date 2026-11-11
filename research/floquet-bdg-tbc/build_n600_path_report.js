@@ -2,7 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import {
   AlignmentType, Document, Footer, FootnoteReferenceRun, Header, HeadingLevel,
-  ImageRun, ImportedXmlComponent, Math as MathEquation, MathRun, Packer,
+  ImageRun, ImportedXmlComponent, Math as MathEquation, MathFraction, MathRun,
+  MathSubScript, Packer,
   PageBreak, PageNumber, Paragraph, ShadingType, Table, TableCell, TableRow,
   TextRun, WidthType,
 } from "docx";
@@ -33,7 +34,8 @@ const makeTable = (headers, rows, widths, size = 10) => new Table({
   width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths,
   rows: [new TableRow({ tableHeader: true, cantSplit: true, children: headers.map((text, index) => cell(text, index, widths, true, size)) }), ...rows.map((row) => new TableRow({ cantSplit: true, children: row.map((text, index) => cell(text, index, widths, false, size)) }))],
 });
-const equation = (text) => para(new MathEquation({ children: [new MathRun(text)] }), { alignment: AlignmentType.CENTER, spacing: { before: 55, after: 70 } });
+const equation = (children) => para(new MathEquation({ children: Array.isArray(children) ? children : [new MathRun(children)] }), { alignment: AlignmentType.CENTER, spacing: { before: 55, after: 70 } });
+const sub = (base, subscript) => new MathSubScript({ children: [new MathRun(base)], subScript: [new MathRun(subscript)] });
 const footnote = (text) => para(run(text, { size: 15 }), { spacing: { after: 30, line: 190 } });
 const fmt = (value) => Number(value).toPrecision(5).replace(/\.0+$/, "");
 const pointTable = (region, old) => makeTable(["r", "N=600中心间隔", "N=400中心间隔", "绝对差"], region.points.map((point, index) => [String(point.strength), fmt(point.center_separation), fmt(old.points[index].center_separation), fmt(Math.abs(point.center_separation - old.points[index].center_separation))]), [1200, 2900, 2900, 2906], 9);
@@ -51,7 +53,11 @@ const children = [
 
   heading(titles[0]),
   citedBody("复核 N=400 的两个细化邻域；各自比较同 N 子空间，不做跨尺寸本征矢点积。N=600 的 r=0.050 原冻结单元必须复现到10⁻¹⁰。", 1),
-  equation("c_p = (d_(2p) + d_(2p+1)) / 2,  Δc = |c_1 − c_0|"),
+  equation([
+    sub("c", "p"), new MathRun(" = "),
+    new MathFraction({ numerator: [sub("d", "2p"), new MathRun(" + "), sub("d", "2p+1")], denominator: [new MathRun("2")] }),
+    new MathRun(",　Δc = |"), sub("c", "1"), new MathRun(" − "), sub("c", "0"), new MathRun("|"),
+  ]),
   heading("最大变化链接", 2),
   pointTable(analysis.regions[0], analysis.n400_regions[0]),
   heading("最小间隔邻域", 2),
@@ -61,7 +67,12 @@ const children = [
 
   heading(titles[1]),
   citedBody("两个尺寸各自的同 N 谱指标和重叠得分。分配方向可比较，但不能把指标对照当成连续态追踪或尺寸不变性。", 2),
-  equation("D = (O_00 + O_11) / 2,  S = (O_01 + O_10) / 2"),
+  equation([
+    new MathRun("D = "),
+    new MathFraction({ numerator: [sub("O", "00"), new MathRun(" + "), sub("O", "11")], denominator: [new MathRun("2")] }),
+    new MathRun(",　S = "),
+    new MathFraction({ numerator: [sub("O", "01"), new MathRun(" + "), sub("O", "10")], denominator: [new MathRun("2")] }),
+  ]),
   para(new ImageRun({ type: "png", data: fs.readFileSync(path.join(root, "n600-path.png")), transformation: { width: 500, height: Math.round(500 * 1366 / 2053) } }), { alignment: AlignmentType.CENTER, keepNext: true }),
   para(run("图 1　上排为最大变化链接，下排为最小间隔邻域；绿色为 N=600，棕色为 N=400。", { size: 16, italics: true }), { alignment: AlignmentType.CENTER }),
   body(`N=600 的8条链接全部由同谱秩分配占优，与 N=400 的主导分配一致 ${analysis.size_comparison.assignment_agreement_count}/8。最小中心间隔为 ${fmt(analysis.summary.min_center_separation)}，位于 r=${analysis.summary.min_center_separation_strength}，与 N=400 的位置不同。`),
