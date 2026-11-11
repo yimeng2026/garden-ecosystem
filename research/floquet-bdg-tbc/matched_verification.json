@@ -1,0 +1,91 @@
+{
+  "schema": "floquet-bdg-matched-verification-v1",
+  "recorded_utc": "2026-11-11T05:54:20.809924+00:00",
+  "all_passed": true,
+  "test_count": 7,
+  "independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "matched_analysis",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_matched_profiles.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "independent_projectors",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\verify_matched_profiles.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_build",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "build",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\build_matched_report.js",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-同强度尺寸对照.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-同强度尺寸对照.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_matched_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_matched_profiles.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "scale_diagnostic.json": "242e53c9bc81a9a2751cfe5ff191664cb8d3f1a2d6f2a167a790d020dec5b320",
+    "n400_scale.json": "2f7e6d4b80c3baec13627bb6991f97ec2b15af470d8c0df91a48f5d9671831b0",
+    "n600_scale.json": "422504685ee1d490d7e25762a89dcd587f86832b1a5a5011ccd1db28d47fbab5",
+    "matched_profile_control.json": "77e01d93c6fd466fde283b34c6afffc52d73acf4a38af18febf87bb56f733a04",
+    "matched_profile_independent.json": "1659c566c87a05e14e2de9fa5f3bd8044c9cd2b235c2c0c12dfdb6f5ffc36ab6",
+    "matched-profile-control.png": "6b961a786e0520f60a9255312a44b0692db43e346fbcf2cf5ca9a3bf481e55de",
+    "MATCHED_PROFILE_CONTROL.md": "de1c4442ef2c1571ec4734700aac0d66ef5a2ba001ad95201058bff3c8840282",
+    "Floquet-BdG-同强度尺寸对照.docx": "962c6ae44f7d6c6cb4848ec287a85d68f8776701312a959d6dff344723ca0c3f",
+    "matched-word-qa.json": "e12937c535d9e2ed12a1fd2f2f58d61b035d1227700dc1bdc71a39ba486f6016",
+    "matched-word-render/report.json": "e1e055782b30916b181b0af7b564fd5a820ce984c72edba016f99c982a7c3555",
+    "analyze_matched_profiles.py": "d459ac60580d01776a20abba9b1dc01e604457b14dba8d830f52aba41d36e0ee",
+    "verify_matched_profiles.py": "59bf8fe5fd5d1bc0fd47d3a8582bbe66ff943d015233e26253d3c783dd99ba82",
+    "build_matched_report.js": "2cd695ccaebd4bbcc5deeb9baff18170dc52db5e79d7f7281b41ca5951836f58",
+    "record_matched_qa.py": "3160ce48ce1318bef4e65a97002918b585720fbeca9eb4ecd1162c7f220a9a40",
+    "test_matched_profiles.py": "3eefcc9e020f5c04dc1ea8fb451b56fb1ce74c73eccbcaacc7f96faa3d263a69",
+    "matched_run.log": "8a434b37b6615a89025ac12d4d289b5eb650509c1fbb562f3e7ca9884401bd12"
+  },
+  "scope": {
+    "matched_2x2_profile_control_evaluated": true,
+    "new_profile_pass_is_not_bulk_winding": true,
+    "n640_automatically_justified": false,
+    "multi_seed_control_pending": true,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "matched_run.log"
+}

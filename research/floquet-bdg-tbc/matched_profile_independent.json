@@ -1,0 +1,76 @@
+{
+  "schema": "floquet-bdg-matched-profile-independent-v1",
+  "source_sha256": "242e53c9bc81a9a2751cfe5ff191664cb8d3f1a2d6f2a167a790d020dec5b320",
+  "analysis_sha256": "77e01d93c6fd466fde283b34c6afffc52d73acf4a38af18febf87bb56f733a04",
+  "eigensolver": "scipy.linalg.eig",
+  "projector": "direct_gram_inverse",
+  "tolerance": 1e-10,
+  "all_passed": true,
+  "cases": [
+    {
+      "n": 400,
+      "strength": 0.05,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 1.0408340855860843e-17,
+          "edge_weight_absolute_error": 5.551115123125783e-17
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 5.204170427930421e-18,
+          "edge_weight_absolute_error": 6.938893903907228e-18
+        }
+      ]
+    },
+    {
+      "n": 400,
+      "strength": 0.1,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 4.163336342344337e-17,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 1.3877787807814457e-17,
+          "edge_weight_absolute_error": 1.1102230246251565e-16
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.05,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 5.204170427930421e-18,
+          "edge_weight_absolute_error": 6.938893903907228e-18
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.1,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 1.0408340855860843e-17,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 2.0816681711721685e-17,
+          "edge_weight_absolute_error": 2.6020852139652106e-18
+        }
+      ]
+    }
+  ],
+  "scope": "Independent numerical reproduction of all four cells; no causal or topological promotion."
+}

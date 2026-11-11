@@ -1,0 +1,335 @@
+$ matched_analysis: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_matched_profiles.py
+{
+  "cases": [
+    {
+      "n": 400,
+      "strength": 0.05,
+      "first_pair": {
+        "pair_index": 0,
+        "spectrum_indices": [
+          0,
+          799
+        ],
+        "distances": [
+          3.965063763843702e-05,
+          3.965063763843702e-05
+        ],
+        "separation_ratios": [
+          0.014777035705555348,
+          0.014777035705555348
+        ],
+        "max_separation_ratio": 0.014777035705555348,
+        "edge_sites_per_end": 40,
+        "left_edge_weight": 0.16489633329119913,
+        "right_edge_weight": 0.270563732797261,
+        "edge_weight": 0.4354600660884601,
+        "L50": 51,
+        "L90": 124,
+        "L99": 175,
+        "mass20": 0.28450662849423836,
+        "mass40": 0.4354600660884601,
+        "center20_mass": 0.024214802190779615,
+        "subspace_ipr": 0.02637438329926066,
+        "n_profile_ipr": 2.6926416932493424,
+        "diagnostic_joint_pass": false,
+        "profile_sha256": "2993688fc620eced3bfb50abca106a3700c88f784ec7b610f8c19836c59ada69"
+      }
+    },
+    {
+      "n": 400,
+      "strength": 0.1,
+      "first_pair": {
+        "pair_index": 0,
+        "spectrum_indices": [
+          0,
+          799
+        ],
+        "distances": [
+          4.783481535860862e-06,
+          4.783481535860862e-06
+        ],
+        "separation_ratios": [
+          0.0010719041005146524,
+          0.0010719041005146524
+        ],
+        "max_separation_ratio": 0.0010719041005146524,
+        "edge_sites_per_end": 40,
+        "left_edge_weight": 0.13497373707382734,
+        "right_edge_weight": 0.44928851239984147,
+        "edge_weight": 0.5842622494736688,
+        "L50": 24,
+        "L90": 133,
+        "L99": 190,
+        "mass20": 0.47064970751134483,
+        "mass40": 0.5842622494736688,
+        "center20_mass": 0.05136850196226496,
+        "subspace_ipr": 0.07309268128970547,
+        "n_profile_ipr": 7.310088460575994,
+        "diagnostic_joint_pass": true,
+        "profile_sha256": "b51bbe0d5a6808ed83557406ab03b66f6e837947b35221fc5613ffcc06d152ce"
+      }
+    },
+    {
+      "n": 600,
+      "strength": 0.05,
+      "first_pair": {
+        "pair_index": 0,
+        "spectrum_indices": [
+          0,
+          1199
+        ],
+        "distances": [
+          8.15123468042408e-06,
+          8.15123468042408e-06
+        ],
+        "separation_ratios": [
+          0.0032500191360026235,
+          0.0032500191360026235
+        ],
+        "max_separation_ratio": 0.0032500191360026235,
+        "edge_sites_per_end": 60,
+        "left_edge_weight": 0.22577384734333752,
+        "right_edge_weight": 0.14469429744264478,
+        "edge_weight": 0.37046814478598233,
+        "L50": 85,
+        "L90": 164,
+        "L99": 280,
+        "mass20": 0.1442265313400878,
+        "mass40": 0.26454789873253215,
+        "center20_mass": 0.02295770904584484,
+        "subspace_ipr": 0.0185595373678357,
+        "n_profile_ipr": 2.7928798617903783,
+        "diagnostic_joint_pass": false,
+        "profile_sha256": "2463b9131a3e38ac38897723c08db69e76d37b504ee8de54820a5e2cfb8dd97e"
+      }
+    },
+    {
+      "n": 600,
+      "strength": 0.1,
+      "first_pair": {
+        "pair_index": 0,
+        "spectrum_indices": [
+          0,
+          1199
+        ],
+        "distances": [
+          2.8695724055283407e-07,
+          2.8695724055283407e-07
+        ],
+        "separation_ratios": [
+          8.536188289021439e-05,
+          8.536188289021439e-05
+        ],
+        "max_separation_ratio": 8.536188289021439e-05,
+        "edge_sites_per_end": 60,
+        "left_edge_weight": 0.20914047794257826,
+        "right_edge_weight": 0.44856486573505033,
+        "edge_weight": 0.6577053436776286,
+        "L50": 37,
+        "L90": 136,
+        "L99": 201,
+        "mass20": 0.2789444029173763,
+        "mass40": 0.5257469075947859,
+        "center20_mass": 0.0029762593490397695,
+        "subspace_ipr": 0.036690747625545875,
+        "n_profile_ipr": 5.503675341010169,
+        "diagnostic_joint_pass": true,
+        "profile_sha256": "ebcf5faa3b9c389bf2c01485375583fcec745b60d24ef7a40a79e6fd0ae8e1ed"
+      }
+    }
+  ],
+  "contrasts": {
+    "size_at_fixed_strength": [
+      {
+        "strength": 0.05,
+        "delta_L50": 34,
+        "delta_L90": 40,
+        "delta_edge_weight": -0.06499192130247777,
+        "delta_center20_mass": -0.0012570931449347733
+      },
+      {
+        "strength": 0.1,
+        "delta_L50": 13,
+        "delta_L90": 3,
+        "delta_edge_weight": 0.07344309420395978,
+        "delta_center20_mass": -0.04839224261322519
+      }
+    ],
+    "strength_at_fixed_size": [
+      {
+        "n": 400,
+        "delta_L50": -27,
+        "delta_L90": 9,
+        "delta_edge_weight": 0.14880218338520868,
+        "delta_center20_mass": 0.027153699771485344
+      },
+      {
+        "n": 600,
+        "delta_L50": -48,
+        "delta_L90": -28,
+        "delta_edge_weight": 0.28723719889164623,
+        "delta_center20_mass": -0.01998144969680507
+      }
+    ],
+    "interaction": {
+      "status": "descriptive_single_seed_only",
+      "formula": "(N600-N400 at r=0.1) - (N600-N400 at r=0.05)",
+      "delta_L50": -21,
+      "delta_L90": -37,
+      "delta_edge_weight": 0.13843501550643755,
+      "delta_center20_mass": -0.047135149468290415
+    }
+  },
+  "new_winding_computed": false,
+  "n640_computed": false
+}
+generated matched_profile_control.json matched-profile-control.png MATCHED_PROFILE_CONTROL.md
+exit_code=0
+$ independent_projectors: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_matched_profiles.py
+{
+  "schema": "floquet-bdg-matched-profile-independent-v1",
+  "source_sha256": "242e53c9bc81a9a2751cfe5ff191664cb8d3f1a2d6f2a167a790d020dec5b320",
+  "analysis_sha256": "77e01d93c6fd466fde283b34c6afffc52d73acf4a38af18febf87bb56f733a04",
+  "eigensolver": "scipy.linalg.eig",
+  "projector": "direct_gram_inverse",
+  "tolerance": 1e-10,
+  "all_passed": true,
+  "cases": [
+    {
+      "n": 400,
+      "strength": 0.05,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 1.0408340855860843e-17,
+          "edge_weight_absolute_error": 5.551115123125783e-17
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 5.204170427930421e-18,
+          "edge_weight_absolute_error": 6.938893903907228e-18
+        }
+      ]
+    },
+    {
+      "n": 400,
+      "strength": 0.1,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 4.163336342344337e-17,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 1.3877787807814457e-17,
+          "edge_weight_absolute_error": 1.1102230246251565e-16
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.05,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 5.204170427930421e-18,
+          "edge_weight_absolute_error": 6.938893903907228e-18
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "strength": 0.1,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "max_profile_absolute_error": 1.0408340855860843e-17,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "max_profile_absolute_error": 2.0816681711721685e-17,
+          "edge_weight_absolute_error": 2.6020852139652106e-18
+        }
+      ]
+    }
+  ],
+  "scope": "Independent numerical reproduction of all four cells; no causal or topological promotion."
+}
+exit_code=0
+$ docx_build: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py build C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\build_matched_report.js C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-同强度尺寸对照.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+▶ Syntax check
+▶ docx-js lint
+▶ Generate
+▶ Auto-fix and validate
+✓ Done: C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-同强度尺寸对照.docx
+(node:47168) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-同强度尺寸对照.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_matched_qa.py
+{
+  "schema": "floquet-bdg-matched-word-qa-v1",
+  "recordedUtc": "2026-11-11T05:54:20.677849+00:00",
+  "sourceSha256": {
+    "matched_profile_control.json": "77e01d93c6fd466fde283b34c6afffc52d73acf4a38af18febf87bb56f733a04",
+    "matched_profile_independent.json": "1659c566c87a05e14e2de9fa5f3bd8044c9cd2b235c2c0c12dfdb6f5ffc36ab6",
+    "matched-profile-control.png": "6b961a786e0520f60a9255312a44b0692db43e346fbcf2cf5ca9a3bf481e55de",
+    "build_matched_report.js": "2cd695ccaebd4bbcc5deeb9baff18170dc52db5e79d7f7281b41ca5951836f58"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "962c6ae44f7d6c6cb4848ec287a85d68f8776701312a959d6dff344723ca0c3f",
+    "renderReportSha256": "e1e055782b30916b181b0af7b564fd5a820ce984c72edba016f99c982a7c3555"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "962c6ae44f7d6c6cb4848ec287a85d68f8776701312a959d6dff344723ca0c3f",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "note": "全部单页已查看；目录、原生公式、四格图和对照表清晰，无近空白页或裁切。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_matched_profiles.py -v
+test_existing_cells_match_frozen_evidence (__main__.MatchedProfileTests.test_existing_cells_match_frozen_evidence) ... ok
+test_factor_contrasts_are_descriptive_not_causal (__main__.MatchedProfileTests.test_factor_contrasts_are_descriptive_not_causal) ... ok
+test_factorial_registry_and_scope (__main__.MatchedProfileTests.test_factorial_registry_and_scope) ... ok
+test_figure_markdown_and_word_visual_gate (__main__.MatchedProfileTests.test_figure_markdown_and_word_visual_gate) ... ok
+test_independent_backend_reproduces_all_cells (__main__.MatchedProfileTests.test_independent_backend_reproduces_all_cells) ... ok
+test_observed_directions_do_not_promote_new_topology (__main__.MatchedProfileTests.test_observed_directions_do_not_promote_new_topology) ... ok
+test_word_error_value_matches_latest_independent_backend (__main__.MatchedProfileTests.test_word_error_value_matches_latest_independent_backend) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.015s
+
+OK
+exit_code=0

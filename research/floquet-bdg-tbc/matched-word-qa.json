@@ -1,0 +1,37 @@
+{
+  "schema": "floquet-bdg-matched-word-qa-v1",
+  "recordedUtc": "2026-11-11T05:54:20.677849+00:00",
+  "sourceSha256": {
+    "matched_profile_control.json": "77e01d93c6fd466fde283b34c6afffc52d73acf4a38af18febf87bb56f733a04",
+    "matched_profile_independent.json": "1659c566c87a05e14e2de9fa5f3bd8044c9cd2b235c2c0c12dfdb6f5ffc36ab6",
+    "matched-profile-control.png": "6b961a786e0520f60a9255312a44b0692db43e346fbcf2cf5ca9a3bf481e55de",
+    "build_matched_report.js": "2cd695ccaebd4bbcc5deeb9baff18170dc52db5e79d7f7281b41ca5951836f58"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "962c6ae44f7d6c6cb4848ec287a85d68f8776701312a959d6dff344723ca0c3f",
+    "renderReportSha256": "e1e055782b30916b181b0af7b564fd5a820ce984c72edba016f99c982a7c3555"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "962c6ae44f7d6c6cb4848ec287a85d68f8776701312a959d6dff344723ca0c3f",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "note": "全部单页已查看；目录、原生公式、四格图和对照表清晰，无近空白页或裁切。"
+  }
+}
