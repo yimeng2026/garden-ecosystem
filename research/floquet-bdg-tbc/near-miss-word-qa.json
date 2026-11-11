@@ -1,0 +1,39 @@
+{
+  "schema": "floquet-bdg-near-miss-word-qa-v1",
+  "recordedUtc": "2026-11-11T07:56:14.978590+00:00",
+  "sourceSha256": {
+    "near_miss_spatial_protocol.json": "679095de8ed6f34cc1bdb21e7c59fd5f0f0a490a7e7aeac7f775efc859639a17",
+    "near_miss_spatial_analysis.json": "9a7916e54ec332714185956b471d28edab0419003ad90d6fa649084490af43bc",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "unclassified_signature_analysis.json": "fd4751a578e330d9d942c45b51a8ef1056dfa9a58cb4e42bfd6db3a61f79099e",
+    "near-miss-spatial.png": "a38295c3f7c6581125daa21a16fd378ba918ab1f0f1919efdb6a96c326f6e299",
+    "build_near_miss_report.js": "5009bd9aac8a773a98be7e2429be313c3b4502e49d089ad62ae7387e3207ad88"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "2f6254821ee958e1b4d5182cfaafbaa18ca4d864acc0999c65bee1ebabbd4e1c",
+    "renderReportSha256": "e169556e9e696ca579153ae163ff6237bb6a2d704f8d693bd580e7868fd41677"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": false,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "2f6254821ee958e1b4d5182cfaafbaa18ca4d864acc0999c65bee1ebabbd4e1c",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "note": "全部四个单页已逐一查看；目录、OMML公式、两张表、空间图和边界说明清晰，无近空白页或裁切；表格宽度回归通过。"
+  }
+}

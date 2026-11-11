@@ -1,0 +1,192 @@
+$ spatial_analysis: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_near_miss_spatial.py
+{
+  "cases": [
+    {
+      "label": "near_miss_low",
+      "seed": 5,
+      "strength": 0.05,
+      "original_category": "other_unclassified"
+    },
+    {
+      "label": "near_miss_high",
+      "seed": 5,
+      "strength": 0.1,
+      "original_category": "other_unclassified"
+    },
+    {
+      "label": "reference_weakening",
+      "seed": 2,
+      "strength": 0.1,
+      "original_category": "right_end_weakening_with_broadening"
+    }
+  ],
+  "size_deltas": [
+    {
+      "label": "near_miss_low",
+      "pair_index": 0,
+      "left_outer40": -0.0009997422444988913,
+      "left_inner40": -0.00048659752857869304,
+      "central40": -0.012001803000313286,
+      "right_inner40": 0.0012266661325413541,
+      "right_outer40": -0.05664370816750522,
+      "edge40": -0.05764345041200414,
+      "signed_asymmetry40": -0.14480018951896767,
+      "left10pct": 0.024111626248328466,
+      "right10pct": -0.00647059565891947,
+      "edge10pct": 0.017641030589409024,
+      "asymmetry10pct": 0.03862301135212981,
+      "L50": 1,
+      "max_separation_ratio": -0.006410185047067545
+    },
+    {
+      "label": "near_miss_low",
+      "pair_index": 1,
+      "left_outer40": -0.14983802816381725,
+      "left_inner40": -0.1403647612546754,
+      "central40": -0.010526944766886828,
+      "right_inner40": 0.030906758327149047,
+      "right_outer40": 0.019592481105156524,
+      "edge40": -0.1302455470586607,
+      "signed_asymmetry40": 1.7314162350157762,
+      "left10pct": -0.14899815758028356,
+      "right10pct": 0.03380933880257643,
+      "edge10pct": -0.11518881877770712,
+      "asymmetry10pct": -0.02570111815615106,
+      "L50": 88,
+      "max_separation_ratio": 0.0
+    },
+    {
+      "label": "near_miss_high",
+      "pair_index": 0,
+      "left_outer40": -0.00037986740315562595,
+      "left_inner40": -0.0003454594519948506,
+      "central40": -0.0040364169598053395,
+      "right_inner40": 0.06888800517100176,
+      "right_outer40": -0.16845364035206314,
+      "edge40": -0.16883350775521877,
+      "signed_asymmetry40": -0.2778117910212899,
+      "left10pct": 0.08438171239042436,
+      "right10pct": -0.09190254605051046,
+      "edge10pct": -0.007520833660086157,
+      "asymmetry10pct": -0.3251242259476572,
+      "L50": 18,
+      "max_separation_ratio": -0.02312288753380857
+    },
+    {
+      "label": "near_miss_high",
+      "pair_index": 1,
+      "left_outer40": -0.0008867799973692331,
+      "left_inner40": -0.0012520670189582958,
+      "central40": -0.1097088339852648,
+      "right_inner40": -0.0362094091658243,
+      "right_outer40": -0.008322370498013418,
+      "edge40": -0.009209150495382647,
+      "signed_asymmetry40": -0.4768661088658158,
+      "left10pct": 0.013226484540245123,
+      "right10pct": -0.008295182982288459,
+      "edge10pct": 0.004931301557956666,
+      "asymmetry10pct": 0.47595811829952017,
+      "L50": 81,
+      "max_separation_ratio": 0.0
+    },
+    {
+      "label": "reference_weakening",
+      "pair_index": 0,
+      "left_outer40": -5.739846674029936e-05,
+      "left_inner40": -6.128787289819138e-05,
+      "central40": -0.0024256913386571754,
+      "right_inner40": 0.08125440402466422,
+      "right_outer40": -0.1524873677029418,
+      "edge40": -0.15254476616968204,
+      "signed_asymmetry40": -0.23053345104382175,
+      "left10pct": 0.039745441062271014,
+      "right10pct": -0.07591379436902301,
+      "edge10pct": -0.036168353306751944,
+      "asymmetry10pct": 0.14778558957041169,
+      "L50": 12,
+      "max_separation_ratio": -0.003869672421148944
+    },
+    {
+      "label": "reference_weakening",
+      "pair_index": 1,
+      "left_outer40": -0.038827712104201564,
+      "left_inner40": -0.06963043885842515,
+      "central40": -0.0663683709276319,
+      "right_inner40": 0.010313734261130905,
+      "right_outer40": 0.005540955276025342,
+      "edge40": -0.03328675682817622,
+      "signed_asymmetry40": 0.11160638671987155,
+      "left10pct": 0.04468646048550967,
+      "right10pct": 0.01106773168503984,
+      "edge10pct": 0.0557541921705495,
+      "asymmetry10pct": -0.11188780273432775,
+      "L50": 17,
+      "max_separation_ratio": 0.0
+    }
+  ],
+  "max_original_metric_recompute_error": 1.1102230246251565e-16,
+  "new_seed_count": 0,
+  "new_eigenpairs_computed": false,
+  "n640_computed": false
+}
+generated near_miss_spatial_analysis.json near-miss-spatial.png NEAR_MISS_SPATIAL.md
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-近miss空间分布与次近对.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_near_miss_qa.py
+{
+  "schema": "floquet-bdg-near-miss-word-qa-v1",
+  "recordedUtc": "2026-11-11T07:56:14.978590+00:00",
+  "sourceSha256": {
+    "near_miss_spatial_protocol.json": "679095de8ed6f34cc1bdb21e7c59fd5f0f0a490a7e7aeac7f775efc859639a17",
+    "near_miss_spatial_analysis.json": "9a7916e54ec332714185956b471d28edab0419003ad90d6fa649084490af43bc",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "unclassified_signature_analysis.json": "fd4751a578e330d9d942c45b51a8ef1056dfa9a58cb4e42bfd6db3a61f79099e",
+    "near-miss-spatial.png": "a38295c3f7c6581125daa21a16fd378ba918ab1f0f1919efdb6a96c326f6e299",
+    "build_near_miss_report.js": "5009bd9aac8a773a98be7e2429be313c3b4502e49d089ad62ae7387e3207ad88"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "2f6254821ee958e1b4d5182cfaafbaa18ca4d864acc0999c65bee1ebabbd4e1c",
+    "renderReportSha256": "e169556e9e696ca579153ae163ff6237bb6a2d704f8d693bd580e7868fd41677"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": false,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "2f6254821ee958e1b4d5182cfaafbaa18ca4d864acc0999c65bee1ebabbd4e1c",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "note": "全部四个单页已逐一查看；目录、OMML公式、两张表、空间图和边界说明清晰，无近空白页或裁切；表格宽度回归通过。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_near_miss_spatial.py -v
+test_figure_markdown_and_reviewed_word (__main__.NearMissSpatialTests.test_figure_markdown_and_reviewed_word) ... ok
+test_frozen_registry_and_sources (__main__.NearMissSpatialTests.test_frozen_registry_and_sources) ... ok
+test_second_pair_is_diagnostic_and_categories_are_unchanged (__main__.NearMissSpatialTests.test_second_pair_is_diagnostic_and_categories_are_unchanged) ... ok
+test_size_deltas_explain_the_two_near_misses (__main__.NearMissSpatialTests.test_size_deltas_explain_the_two_near_misses) ... ok
+test_tables_fit_word_page (__main__.NearMissSpatialTests.test_tables_fit_word_page) ... ok
+test_windows_recomputed_from_independently_verified_profiles (__main__.NearMissSpatialTests.test_windows_recomputed_from_independently_verified_profiles) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.059s
+
+OK
+exit_code=0

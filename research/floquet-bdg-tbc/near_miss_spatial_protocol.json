@@ -1,0 +1,39 @@
+{
+  "schema": "floquet-bdg-near-miss-spatial-protocol-v1",
+  "analysis_date": "2026-11-11",
+  "registered_before_analysis": true,
+  "selected_cases": [
+    {"label": "near_miss_low", "seed": 5, "strength": 0.05},
+    {"label": "near_miss_high", "seed": 5, "strength": 0.1},
+    {"label": "reference_weakening", "seed": 2, "strength": 0.1}
+  ],
+  "n_values": [400, 600],
+  "pair_indices": [0, 1],
+  "source": "repeated_category_analysis.json all_cells; previously computed and independently verified profiles",
+  "window_definitions": {
+    "index_convention": "zero-based physical-site indices; all stop indices excluded",
+    "left_outer40": "[0, 40)",
+    "left_inner40": "[40, 80)",
+    "central40": "[n//2 - 20, n//2 + 20)",
+    "right_inner40": "[n - 80, n - 40)",
+    "right_outer40": "[n - 40, n)"
+  },
+  "original_endpoint_definitions": {
+    "edge_sites_per_end": "use each stored pair's existing edge_sites_per_end = n//10; 40 at N=400 and 60 at N=600",
+    "edge10pct": "left10pct + right10pct using that existing endpoint width",
+    "asymmetry10pct": "abs(right10pct - left10pct) / edge10pct",
+    "purpose": "reproduce the frozen comparison exactly; never replace it with fixed40 quantities"
+  },
+  "size_contrast": "N=600 minus N=400 at fixed seed, strength and pair_index",
+  "signed_asymmetry40": "(right_outer40 - left_outer40) / (right_outer40 + left_outer40); descriptive fixed-window quantity, distinct from original absolute asymmetry",
+  "definition_correction": "The first draft incorrectly used fixed40 as though it were the original n//10 endpoint window. The failing cross-check exposed this before acceptance. Both definitions are now separated; no original data, category or threshold is changed.",
+  "fixed_window_rationale": "Resolve the known outer-edge sign conditions and test whether adjacent inner or central weight accompanies them; fixed site counts are descriptive, not optimized cutoffs.",
+  "new_seed_count": 0,
+  "new_eigenpairs_computed": false,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "post_hoc_seed_or_window_selection": false,
+  "second_pair_topological_claim": false,
+  "new_taxonomy_claim": false,
+  "universal_mechanism_claim": false
+}

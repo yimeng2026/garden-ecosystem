@@ -1,0 +1,78 @@
+{
+  "schema": "floquet-bdg-near-miss-spatial-verification-v1",
+  "recorded_utc": "2026-11-11T07:56:15.177107+00:00",
+  "all_passed": true,
+  "test_count": 6,
+  "original_independent_projectors_passed": true,
+  "new_independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "spatial_analysis",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_near_miss_spatial.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-近miss空间分布与次近对.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_near_miss_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_near_miss_spatial.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "near_miss_spatial_protocol.json": "679095de8ed6f34cc1bdb21e7c59fd5f0f0a490a7e7aeac7f775efc859639a17",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "unclassified_signature_analysis.json": "fd4751a578e330d9d942c45b51a8ef1056dfa9a58cb4e42bfd6db3a61f79099e",
+    "multi_seed_independent.json": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "near_miss_spatial_analysis.json": "9a7916e54ec332714185956b471d28edab0419003ad90d6fa649084490af43bc",
+    "near-miss-spatial.png": "a38295c3f7c6581125daa21a16fd378ba918ab1f0f1919efdb6a96c326f6e299",
+    "NEAR_MISS_SPATIAL.md": "f15a05d36a95ada29db50d69f0c60503be540cd238d913892cea053d8b0fb06a",
+    "Floquet-BdG-近miss空间分布与次近对.docx": "2f6254821ee958e1b4d5182cfaafbaa18ca4d864acc0999c65bee1ebabbd4e1c",
+    "near-miss-word-qa.json": "efe488598b4879ec3f4682e751d4a836372621770bec8c1b7a1cdcc974e96cab",
+    "near-miss-word-render/report.json": "e169556e9e696ca579153ae163ff6237bb6a2d704f8d693bd580e7868fd41677",
+    "analyze_near_miss_spatial.py": "ac0bb16c7615e82c09e80022a683f40c94b447b2e0c306e22e2fce170f13787c",
+    "build_near_miss_report.js": "5009bd9aac8a773a98be7e2429be313c3b4502e49d089ad62ae7387e3207ad88",
+    "record_near_miss_qa.py": "ad3343c166ffdda9331b6f0f0e40aa3f70a3a93d2d1ba520d28a526d11164926",
+    "test_near_miss_spatial.py": "27a1246deb2f2cc1e4b00b8b8f1aeb67fc177cf9a90efb9333ea849f30b890f6",
+    "near_miss_run.log": "4733c5f8f45fea8d2661bef127c39f10b7c1e1df0c32cead64754bf6e673d790"
+  },
+  "scope": {
+    "near_miss_spatial_analysis_evaluated": true,
+    "records": 12,
+    "size_deltas": 6,
+    "original_metric_max_error": 1.1102230246251565e-16,
+    "fixed40_and_original10pct_separated": true,
+    "second_pair_is_descriptive_only": true,
+    "categories_changed": false,
+    "new_taxonomy_claim": false,
+    "n640_automatically_justified": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "near_miss_run.log"
+}
