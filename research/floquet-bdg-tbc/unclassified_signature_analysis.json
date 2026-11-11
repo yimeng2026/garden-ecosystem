@@ -1,0 +1,3264 @@
+{
+  "schema": "floquet-bdg-unclassified-signature-analysis-v1",
+  "analysis_date": "2026-11-11",
+  "source_sha256": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+  "new_independent_source_sha256": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+  "original_independent_source_sha256": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+  "analysis_role": "condition_audit_not_new_taxonomy",
+  "new_seed_count": 0,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "new_taxonomy_claim": false,
+  "unclassified_not_homogeneous": true,
+  "original_category_counts": {
+    "tail_growth_without_endpoint_recovery": 3,
+    "right_end_weakening_with_broadening": 1,
+    "right_end_driven_symmetrization": 3,
+    "left_end_driven_threshold": 2,
+    "other_unclassified": 7
+  },
+  "reference_weakening_new_seed_recurrences": 0,
+  "cases": [
+    {
+      "seed": 0,
+      "strength": 0.05,
+      "category": "tail_growth_without_endpoint_recovery",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            3.965063763843702e-05,
+            3.965063763843702e-05
+          ],
+          "separation_ratios": [
+            0.014777035705555348,
+            0.014777035705555348
+          ],
+          "max_separation_ratio": 0.014777035705555348,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.16489633329119913,
+          "right_edge_weight": 0.270563732797261,
+          "edge_weight": 0.4354600660884601,
+          "L50": 51,
+          "L90": 124,
+          "L99": 175,
+          "mass20": 0.28450662849423836,
+          "mass40": 0.4354600660884601,
+          "center20_mass": 0.024214802190779615,
+          "subspace_ipr": 0.02637438329926066,
+          "n_profile_ipr": 2.6926416932493424,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "2993688fc620eced3bfb50abca106a3700c88f784ec7b610f8c19836c59ada69"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            8.15123468042408e-06,
+            8.15123468042408e-06
+          ],
+          "separation_ratios": [
+            0.0032500191360026235,
+            0.0032500191360026235
+          ],
+          "max_separation_ratio": 0.0032500191360026235,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.22577384734333752,
+          "right_edge_weight": 0.14469429744264478,
+          "edge_weight": 0.37046814478598233,
+          "L50": 85,
+          "L90": 164,
+          "L99": 280,
+          "mass20": 0.1442265313400878,
+          "mass40": 0.26454789873253215,
+          "center20_mass": 0.02295770904584484,
+          "subspace_ipr": 0.0185595373678357,
+          "n_profile_ipr": 2.7928798617903783,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "2463b9131a3e38ac38897723c08db69e76d37b504ee8de54820a5e2cfb8dd97e"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.002683260596273079,
+            0.002683260596273079
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.00746094412570654,
+          "right_edge_weight": 0.030138989504631376,
+          "edge_weight": 0.037599933630337916,
+          "L50": 146,
+          "L90": 191,
+          "L99": 200,
+          "mass20": 0.022198331400801224,
+          "mass40": 0.037599933630337916,
+          "center20_mass": 0.3817147042169262,
+          "subspace_ipr": 0.023855395189623776,
+          "n_profile_ipr": 2.6443091992133123,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "fec8d139bc8e7662e69ec30c58efe4d74a3721b8ac4d5c5f153c59f4253f9673"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.0025080574419170127,
+            0.0025080574419170127
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.013979239282775096,
+          "right_edge_weight": 0.00792112860420016,
+          "edge_weight": 0.021900367886975254,
+          "L50": 169,
+          "L90": 270,
+          "L99": 296,
+          "mass20": 0.004427312823967586,
+          "mass40": 0.011092433790283181,
+          "center20_mass": 0.18947636926237837,
+          "subspace_ipr": 0.017901130702618968,
+          "n_profile_ipr": 3.0393941938057547,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "77c370004d89929b69bea7b8885d1b5084248de944c079f46e698a942645e543"
+        },
+        "n400_asymmetry": 0.24265692249400522,
+        "n600_asymmetry": 0.21885700846838535,
+        "asymmetry_delta": -0.023799914025619873,
+        "left_delta": 0.0608775140521384,
+        "right_delta": -0.1258694353546162,
+        "edge_delta": -0.06499192130247777,
+        "delta_L50": 34,
+        "delta_L90": 40,
+        "both_sizes_joint_pass": false,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 1,
+      "strength": 0.05,
+      "category": "right_end_driven_symmetrization",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            6.220525843850317e-05,
+            6.220525843850317e-05
+          ],
+          "separation_ratios": [
+            0.02023659117421531,
+            0.02023659117421531
+          ],
+          "max_separation_ratio": 0.02023659117421531,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.2152768440004398,
+          "right_edge_weight": 0.09082484089766606,
+          "edge_weight": 0.30610168489810585,
+          "L50": 66,
+          "L90": 179,
+          "L99": 200,
+          "mass20": 0.19584473053456675,
+          "mass40": 0.30610168489810585,
+          "center20_mass": 0.18575264155540366,
+          "subspace_ipr": 0.022117849200819936,
+          "n_profile_ipr": 2.4009942093339887,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "3b479ae0f976efa83451271501c8b1e2876f69d5cf15865f1ea4d522a7045292"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            2.8265564373788932e-05,
+            2.8265564373788932e-05
+          ],
+          "separation_ratios": [
+            0.021356445885170838,
+            0.021356445885170838
+          ],
+          "max_separation_ratio": 0.021356445885170838,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.3031316602964216,
+          "right_edge_weight": 0.33834786442888704,
+          "edge_weight": 0.6414795247253087,
+          "L50": 35,
+          "L90": 156,
+          "L99": 282,
+          "mass20": 0.3662048519615501,
+          "mass40": 0.5138766841462845,
+          "center20_mass": 0.035657070614558216,
+          "subspace_ipr": 0.03307560223041883,
+          "n_profile_ipr": 5.015064579713761,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "d6ef68d965a31c92080caea5d0a9e6678290eba47a5eaf0f2c27bea43e34a90e"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.00307390004092007,
+            0.00307390004092007
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.011349801449476797,
+          "right_edge_weight": 0.20393060247352246,
+          "edge_weight": 0.21528040392299927,
+          "L50": 101,
+          "L90": 181,
+          "L99": 199,
+          "mass20": 0.12769483332311843,
+          "mass40": 0.21528040392299927,
+          "center20_mass": 0.20916385158541512,
+          "subspace_ipr": 0.015174304451680784,
+          "n_profile_ipr": 1.7293025098198034,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "03d54dea76ca3736c7529cf218d707ec437ae14c86020ec7e2f6318493bef776"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.0013235144333362857,
+            0.0013235144333362857
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.010832254678479404,
+          "right_edge_weight": 0.09597051924268633,
+          "edge_weight": 0.10680277392116574,
+          "L50": 191,
+          "L90": 281,
+          "L99": 299,
+          "mass20": 0.063022926113014,
+          "mass40": 0.08787477954511044,
+          "center20_mass": 0.2740419798300291,
+          "subspace_ipr": 0.011189403752474288,
+          "n_profile_ipr": 1.8550525097996806,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "c2ae73640f5f58f354f66ff94159a29c7b6b66927ed69620fa74d0ca4326769a"
+        },
+        "n400_asymmetry": 0.4065707875610059,
+        "n600_asymmetry": 0.05489840715889657,
+        "asymmetry_delta": -0.35167238040210935,
+        "left_delta": 0.08785481629598177,
+        "right_delta": 0.24752302353122096,
+        "edge_delta": 0.3353778398272028,
+        "delta_L50": -31,
+        "delta_L90": -23,
+        "both_sizes_joint_pass": false,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 2,
+      "strength": 0.05,
+      "category": "other_unclassified",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            6.0603233549294876e-05,
+            6.0603233549294876e-05
+          ],
+          "separation_ratios": [
+            0.01768782133924149,
+            0.01768782133924149
+          ],
+          "max_separation_ratio": 0.01768782133924149,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.2550212109459643,
+          "right_edge_weight": 0.2427906164292633,
+          "edge_weight": 0.4978118273752276,
+          "L50": 41,
+          "L90": 120,
+          "L99": 175,
+          "mass20": 0.3247510207017372,
+          "mass40": 0.4978118273752276,
+          "center20_mass": 0.02356286505350421,
+          "subspace_ipr": 0.02987825181431314,
+          "n_profile_ipr": 2.9911144446977564,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "65660cd4c02dd936495e0a062a6f283c4a85ba8dfca497035a9ee2d2b4d6ad0d"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            9.826698579775512e-06,
+            9.826698579775512e-06
+          ],
+          "separation_ratios": [
+            0.003652720669612669,
+            0.003652720669612669
+          ],
+          "max_separation_ratio": 0.003652720669612669,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.3137203496940361,
+          "right_edge_weight": 0.3437025326124428,
+          "edge_weight": 0.6574228823064789,
+          "L50": 38,
+          "L90": 120,
+          "L99": 227,
+          "mass20": 0.3628714340852237,
+          "mass40": 0.5358129885899234,
+          "center20_mass": 0.007455428842680366,
+          "subspace_ipr": 0.03346350154266834,
+          "n_profile_ipr": 5.020037994209155,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "87343817c53965c121a1bac8c18b8e48b1c397bd8c108b662f3f8d866aa5bdec"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.0034262689783530875,
+            0.0034262689783530875
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.03342390675984771,
+          "right_edge_weight": 0.005626439897713888,
+          "edge_weight": 0.039050346657561595,
+          "L50": 151,
+          "L90": 190,
+          "L99": 199,
+          "mass20": 0.01748947462849203,
+          "mass40": 0.039050346657561595,
+          "center20_mass": 0.38024954769905883,
+          "subspace_ipr": 0.015599763692375446,
+          "n_profile_ipr": 1.9511186589090168,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "12331da7aa8b79dbb1956eed0a578a0e7bf90e63bb5dff379b84807d47181e30"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.002690240910432805,
+            0.002690240910432805
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.0009931096001972843,
+          "right_edge_weight": 0.05104738214434339,
+          "edge_weight": 0.05204049174454067,
+          "L50": 197,
+          "L90": 279,
+          "L99": 297,
+          "mass20": 0.019736839204137137,
+          "mass40": 0.030226859636124526,
+          "center20_mass": 0.28196882851955823,
+          "subspace_ipr": 0.012390664355349874,
+          "n_profile_ipr": 2.325415069555501,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "abfd0be4310fa22f6c38d5122e32a3dfbef3cf399cc301826dcc5114753d1585"
+        },
+        "n400_asymmetry": 0.02456871019153617,
+        "n600_asymmetry": 0.04560562725352408,
+        "asymmetry_delta": 0.02103691706198791,
+        "left_delta": 0.05869913874807181,
+        "right_delta": 0.10091191618317952,
+        "edge_delta": 0.15961105493125133,
+        "delta_L50": -3,
+        "delta_L90": 0,
+        "both_sizes_joint_pass": false,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 3,
+      "strength": 0.05,
+      "category": "other_unclassified",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            0.0001786478404058746,
+            0.0001786478404058746
+          ],
+          "separation_ratios": [
+            0.05503299653439575,
+            0.05503299653439575
+          ],
+          "max_separation_ratio": 0.05503299653439575,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.27642423650436465,
+          "right_edge_weight": 0.24627910069041026,
+          "edge_weight": 0.5227033371947749,
+          "L50": 39,
+          "L90": 128,
+          "L99": 196,
+          "mass20": 0.31510658755894694,
+          "mass40": 0.5227033371947749,
+          "center20_mass": 0.06292248594492125,
+          "subspace_ipr": 0.02745746920108554,
+          "n_profile_ipr": 2.7643464653851035,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "6a50467ed83acd4fbe989604365d94ca65d0fbac9f7b8bfc8d7335c788c20a73"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            2.25803009124517e-05,
+            2.25803009124517e-05
+          ],
+          "separation_ratios": [
+            0.007480097593293658,
+            0.007480097593293658
+          ],
+          "max_separation_ratio": 0.007480097593293658,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.3369545102551561,
+          "right_edge_weight": 0.25113022656393674,
+          "edge_weight": 0.5880847368190929,
+          "L50": 48,
+          "L90": 146,
+          "L99": 251,
+          "mass20": 0.26221601591525234,
+          "mass40": 0.45815425337993615,
+          "center20_mass": 0.013154075619743959,
+          "subspace_ipr": 0.02431099604513256,
+          "n_profile_ipr": 3.6474102036903338,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "7394bdc767d8dd6450db5be49560fbbdb0bf93cd16a1b5d3c788bf29028fefb2"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.0032461950403558214,
+            0.0032461950403558214
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.1083545116025389,
+          "right_edge_weight": 0.028758945486516377,
+          "edge_weight": 0.13711345708905526,
+          "L50": 136,
+          "L90": 192,
+          "L99": 200,
+          "mass20": 0.0746097974643138,
+          "mass40": 0.13711345708905526,
+          "center20_mass": 0.32239757931551893,
+          "subspace_ipr": 0.012361767588952043,
+          "n_profile_ipr": 1.7191487138571035,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "8356a3c5ae1fa76d31e82aa57d6ee47a3fac38c5958909a58ba3785b6879b223"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.003018717420571658,
+            0.003018717420571658
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.07992827505923261,
+          "right_edge_weight": 0.0030976814104371714,
+          "edge_weight": 0.08302595646966979,
+          "L50": 199,
+          "L90": 284,
+          "L99": 299,
+          "mass20": 0.03319322584957666,
+          "mass40": 0.06102555463420595,
+          "center20_mass": 0.29947045708613607,
+          "subspace_ipr": 0.009165608093747384,
+          "n_profile_ipr": 1.9405318192737449,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "b220e4c1eef7a5df070890820c884577925706e71f4e6f80529e6a2a9ebdd5f9"
+        },
+        "n400_asymmetry": 0.05767159623609101,
+        "n600_asymmetry": 0.14593863489033332,
+        "asymmetry_delta": 0.0882670386542423,
+        "left_delta": 0.06053027375079145,
+        "right_delta": 0.004851125873526485,
+        "edge_delta": 0.06538139962431799,
+        "delta_L50": 9,
+        "delta_L90": 18,
+        "both_sizes_joint_pass": true,
+        "dominant_end": "left",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 4,
+      "strength": 0.05,
+      "category": "left_end_driven_threshold",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            0.00010487015192903616,
+            0.00010487015192903616
+          ],
+          "separation_ratios": [
+            0.040825600669661226,
+            0.040825600669661226
+          ],
+          "max_separation_ratio": 0.040825600669661226,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.1947647179907153,
+          "right_edge_weight": 0.3497088698248238,
+          "edge_weight": 0.5444735878155391,
+          "L50": 38,
+          "L90": 107,
+          "L99": 193,
+          "mass20": 0.30913077375965314,
+          "mass40": 0.5444735878155391,
+          "center20_mass": 0.03713348148001393,
+          "subspace_ipr": 0.03287347586647763,
+          "n_profile_ipr": 3.302931012877419,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "d530013643fc9193babfccb102655d3ec9bcd490b52bb3e82a16fee88d1438ce"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            3.115488672402431e-05,
+            3.115488672402431e-05
+          ],
+          "separation_ratios": [
+            0.012563933363197955,
+            0.012563933363197955
+          ],
+          "max_separation_ratio": 0.012563933363197955,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.28663884612243506,
+          "right_edge_weight": 0.2651280910354546,
+          "edge_weight": 0.5517669371578897,
+          "L50": 52,
+          "L90": 163,
+          "L99": 279,
+          "mass20": 0.19146577010445004,
+          "mass40": 0.3924377888097537,
+          "center20_mass": 0.03480815147166858,
+          "subspace_ipr": 0.021690916959302267,
+          "n_profile_ipr": 3.2591738225314675,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "28d5c7bc34a7cb085c8a9238d0c30cbc5b26da4b8d3780c329fad1a372069a57"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.0025687350635104906,
+            0.0025687350635104906
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.04653928858504268,
+          "right_edge_weight": 0.02328729795930668,
+          "edge_weight": 0.06982658654434937,
+          "L50": 139,
+          "L90": 193,
+          "L99": 198,
+          "mass20": 0.027036615148900316,
+          "mass40": 0.06982658654434937,
+          "center20_mass": 0.365523107140758,
+          "subspace_ipr": 0.01723065042706626,
+          "n_profile_ipr": 2.1264680589091625,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "98f3af5526fd000c7e48dac6205685a384d41833705e05769ac35bcfcd66cf1d"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.0024797080518814785,
+            0.0024797080518814785
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.08370447745523522,
+          "right_edge_weight": 0.01201645236815337,
+          "edge_weight": 0.09572092982338859,
+          "L50": 159,
+          "L90": 250,
+          "L99": 294,
+          "mass20": 0.018006866441144194,
+          "mass40": 0.0515899736749955,
+          "center20_mass": 0.12406502788018212,
+          "subspace_ipr": 0.013901261897798809,
+          "n_profile_ipr": 2.599460225242269,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "51a9e4e9c8b9807d9f5e0a4a894d02b2f8ddf7ee56986f7f286d2d58c95761f0"
+        },
+        "n400_asymmetry": 0.28457606631710786,
+        "n600_asymmetry": 0.03898521937139033,
+        "asymmetry_delta": -0.24559084694571753,
+        "left_delta": 0.09187412813171977,
+        "right_delta": -0.0845807787893692,
+        "edge_delta": 0.007293349342350597,
+        "delta_L50": 14,
+        "delta_L90": 56,
+        "both_sizes_joint_pass": true,
+        "dominant_end": "left",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 5,
+      "strength": 0.05,
+      "category": "other_unclassified",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            5.527220440805407e-05,
+            5.527220440805407e-05
+          ],
+          "separation_ratios": [
+            0.0152402212404775,
+            0.0152402212404775
+          ],
+          "max_separation_ratio": 0.0152402212404775,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.41427346432471945,
+          "right_edge_weight": 0.18237547041419774,
+          "edge_weight": 0.5966489347389172,
+          "L50": 29,
+          "L90": 134,
+          "L99": 187,
+          "mass20": 0.4501189699851047,
+          "mass40": 0.5966489347389172,
+          "center20_mass": 0.04345620628198815,
+          "subspace_ipr": 0.05895015111463718,
+          "n_profile_ipr": 5.911843725131038,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "381d35a8d040229c31cfddcd903fa62c5d9e8276b8f05ca4245282f903082057"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            1.758954761101079e-05,
+            1.758954761101079e-05
+          ],
+          "separation_ratios": [
+            0.008830036193409956,
+            0.008830036193409956
+          ],
+          "max_separation_ratio": 0.008830036193409956,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.438385090573048,
+          "right_edge_weight": 0.1759048747552783,
+          "edge_weight": 0.6142899653283262,
+          "L50": 30,
+          "L90": 153,
+          "L99": 277,
+          "mass20": 0.4519314309471028,
+          "mass40": 0.5390054843269131,
+          "center20_mass": 0.02971595483342143,
+          "subspace_ipr": 0.05688792605610778,
+          "n_profile_ipr": 8.536535157278038,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "fab7a2fdc3a287a9513930e7430ac899c205b1e71f7867b77af2a16b75d3d4a9"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.00362673241653822,
+            0.00362673241653822
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.15224487522211838,
+          "right_edge_weight": 0.009248150264524784,
+          "edge_weight": 0.16149302548664315,
+          "L50": 116,
+          "L90": 184,
+          "L99": 199,
+          "mass20": 0.11528413346188021,
+          "mass40": 0.16149302548664315,
+          "center20_mass": 0.24286111504206617,
+          "subspace_ipr": 0.012546639418927339,
+          "n_profile_ipr": 1.8354349373976806,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "6fd4037a6a44738b2a7b4d749c068044ff67c9b6d6c7c0bf076a8269c3c3deeb"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.0019920130819099297,
+            0.0019920130819099297
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.00324671764183482,
+          "right_edge_weight": 0.04305748906710122,
+          "edge_weight": 0.046304206708936035,
+          "L50": 204,
+          "L90": 283,
+          "L99": 298,
+          "mass20": 0.019970879049425686,
+          "mass40": 0.03124747842798245,
+          "center20_mass": 0.3337638610149483,
+          "subspace_ipr": 0.012724975986740097,
+          "n_profile_ipr": 2.3224691344423207,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "658b47872130c124bd9e5eeb7c0ca9288c2c8f8528a87c1b9988c9dc468766e0"
+        },
+        "n400_asymmetry": 0.3886674062562369,
+        "n600_asymmetry": 0.42729041760836683,
+        "asymmetry_delta": 0.03862301135212992,
+        "left_delta": 0.02411162624832852,
+        "right_delta": -0.0064705956589194424,
+        "edge_delta": 0.017641030589409024,
+        "delta_L50": 1,
+        "delta_L90": 19,
+        "both_sizes_joint_pass": true,
+        "dominant_end": "left",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 6,
+      "strength": 0.05,
+      "category": "tail_growth_without_endpoint_recovery",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            6.055550038966538e-05,
+            6.055550038966538e-05
+          ],
+          "separation_ratios": [
+            0.020443636784957527,
+            0.020443636784957527
+          ],
+          "max_separation_ratio": 0.020443636784957527,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.33292450133847984,
+          "right_edge_weight": 0.30583694259942446,
+          "edge_weight": 0.6387614439379043,
+          "L50": 28,
+          "L90": 93,
+          "L99": 184,
+          "mass20": 0.4225648327866999,
+          "mass40": 0.6387614439379043,
+          "center20_mass": 0.02073562100012526,
+          "subspace_ipr": 0.03746543122346132,
+          "n_profile_ipr": 3.7518727792630435,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "05e38a7877a64bb128c8beb482702009832480c89a5438ff07fb74284f440c57"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            1.0119108365338095e-05,
+            1.0119108365338095e-05
+          ],
+          "separation_ratios": [
+            0.0035524356348957203,
+            0.0035524356348957203
+          ],
+          "max_separation_ratio": 0.0035524356348957203,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.40677393206560564,
+          "right_edge_weight": 0.09107314625437961,
+          "edge_weight": 0.49784707831998526,
+          "L50": 61,
+          "L90": 224,
+          "L99": 290,
+          "mass20": 0.27657060255515736,
+          "mass40": 0.40557595502365296,
+          "center20_mass": 0.07124826170333569,
+          "subspace_ipr": 0.025434509352972073,
+          "n_profile_ipr": 3.818248807599056,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "53271798d4b08856c06833cd98dc50c9c62da3199a5f81d7f762a200f6ab70d6"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.002962070840263717,
+            0.002962070840263717
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.07255021708030399,
+          "right_edge_weight": 0.008516494299526696,
+          "edge_weight": 0.08106671137983068,
+          "L50": 149,
+          "L90": 193,
+          "L99": 199,
+          "mass20": 0.041454595552820855,
+          "mass40": 0.08106671137983068,
+          "center20_mass": 0.39383400849943856,
+          "subspace_ipr": 0.014954351866168638,
+          "n_profile_ipr": 1.8922261096662996,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "b1efa755e95981d164a26d6c00cfd6863d3589ae4d9cde07ae8ba528d9379f81"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.002848498721817133,
+            0.002848498721817133
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.004780209794726358,
+          "right_edge_weight": 0.16781835693577807,
+          "edge_weight": 0.17259856673050442,
+          "L50": 148,
+          "L90": 267,
+          "L99": 297,
+          "mass20": 0.0895863904322377,
+          "mass40": 0.13139654238118806,
+          "center20_mass": 0.19022228206157732,
+          "subspace_ipr": 0.012154205666324998,
+          "n_profile_ipr": 2.3125733308899377,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "c2210b567bddc621d7b1b7409c8a8bd84f3c705f707e6faf4d3d4f6a84ec05d8"
+        },
+        "n400_asymmetry": 0.04240637721034496,
+        "n600_asymmetry": 0.6341320448772687,
+        "asymmetry_delta": 0.5917256676669238,
+        "left_delta": 0.0738494307271258,
+        "right_delta": -0.21476379634504483,
+        "edge_delta": -0.1409143656179191,
+        "delta_L50": 33,
+        "delta_L90": 131,
+        "both_sizes_joint_pass": false,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 7,
+      "strength": 0.05,
+      "category": "tail_growth_without_endpoint_recovery",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            9.935544858372671e-05,
+            9.935544858372671e-05
+          ],
+          "separation_ratios": [
+            0.026823373147946153,
+            0.026823373147946153
+          ],
+          "max_separation_ratio": 0.026823373147946153,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.17411268392063295,
+          "right_edge_weight": 0.37284114472481916,
+          "edge_weight": 0.5469538286454521,
+          "L50": 32,
+          "L90": 154,
+          "L99": 196,
+          "mass20": 0.35361217917936644,
+          "mass40": 0.5469538286454521,
+          "center20_mass": 0.08639038508089263,
+          "subspace_ipr": 0.031802250297146464,
+          "n_profile_ipr": 3.185254428499767,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "2a46a8612b788a3b0dd7615b31b399af295ca3c6cc6f9cbe4b94661c4347004d"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            9.8814951778699e-06,
+            9.8814951778699e-06
+          ],
+          "separation_ratios": [
+            0.0031331376715065537,
+            0.0031331376715065537
+          ],
+          "max_separation_ratio": 0.0031331376715065537,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.2219505859667837,
+          "right_edge_weight": 0.23205755236843928,
+          "edge_weight": 0.45400813833522297,
+          "L50": 81,
+          "L90": 187,
+          "L99": 270,
+          "mass20": 0.2223008453823915,
+          "mass40": 0.3757420353970756,
+          "center20_mass": 0.027028276615437184,
+          "subspace_ipr": 0.01769702813978393,
+          "n_profile_ipr": 2.657972721780655,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "89584650037897adcb0231d8dc615aee680a7275fc81cd45dc997795bfcf21d3"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.003704062424801121,
+            0.003704062424801121
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.02155391484228522,
+          "right_edge_weight": 0.1552186681335134,
+          "edge_weight": 0.17677258297579862,
+          "L50": 98,
+          "L90": 177,
+          "L99": 198,
+          "mass20": 0.07608472300834022,
+          "mass40": 0.17677258297579862,
+          "center20_mass": 0.1823858021670188,
+          "subspace_ipr": 0.015250796308378004,
+          "n_profile_ipr": 1.9435259059570946,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "3ece4ff43b262033409be209139e00f3517a30996b4606319c0a705e8b9009ba"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.0031538656177589643,
+            0.0031538656177589643
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.0022108097651635655,
+          "right_edge_weight": 0.09181873052399286,
+          "edge_weight": 0.09402954028915643,
+          "L50": 230,
+          "L90": 290,
+          "L99": 300,
+          "mass20": 0.038563413673841494,
+          "mass40": 0.0726277818734831,
+          "center20_mass": 0.43385205176048464,
+          "subspace_ipr": 0.011680106330346765,
+          "n_profile_ipr": 2.1854067249005937,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "8c5db2bf01c08fb89118604130bb4ccddbf3a6bf6d4ec6cd10ac9df548942c11"
+        },
+        "n400_asymmetry": 0.36333681271843976,
+        "n600_asymmetry": 0.022261641473468433,
+        "asymmetry_delta": -0.34107517124497133,
+        "left_delta": 0.04783790204615074,
+        "right_delta": -0.14078359235637988,
+        "edge_delta": -0.09294569031022909,
+        "delta_L50": 49,
+        "delta_L90": 33,
+        "both_sizes_joint_pass": false,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 0,
+      "strength": 0.1,
+      "category": "left_end_driven_threshold",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            4.783481535860862e-06,
+            4.783481535860862e-06
+          ],
+          "separation_ratios": [
+            0.0010719041005146524,
+            0.0010719041005146524
+          ],
+          "max_separation_ratio": 0.0010719041005146524,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.13497373707382734,
+          "right_edge_weight": 0.44928851239984147,
+          "edge_weight": 0.5842622494736688,
+          "L50": 24,
+          "L90": 133,
+          "L99": 190,
+          "mass20": 0.47064970751134483,
+          "mass40": 0.5842622494736688,
+          "center20_mass": 0.05136850196226496,
+          "subspace_ipr": 0.07309268128970547,
+          "n_profile_ipr": 7.310088460575994,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "b51bbe0d5a6808ed83557406ab03b66f6e837947b35221fc5613ffcc06d152ce"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            2.8695724055283407e-07,
+            2.8695724055283407e-07
+          ],
+          "separation_ratios": [
+            8.536188289021439e-05,
+            8.536188289021439e-05
+          ],
+          "max_separation_ratio": 8.536188289021439e-05,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.20914047794257826,
+          "right_edge_weight": 0.44856486573505033,
+          "edge_weight": 0.6577053436776286,
+          "L50": 37,
+          "L90": 136,
+          "L99": 201,
+          "mass20": 0.2789444029173763,
+          "mass40": 0.5257469075947859,
+          "center20_mass": 0.0029762593490397695,
+          "subspace_ipr": 0.036690747625545875,
+          "n_profile_ipr": 5.503675341010169,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "ebcf5faa3b9c389bf2c01485375583fcec745b60d24ef7a40a79e6fd0ae8e1ed"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.0044626021428261844,
+            0.0044626021428261844
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 6.058241914367528e-06,
+          "right_edge_weight": 0.4440688569037361,
+          "edge_weight": 0.44407491514565045,
+          "L50": 47,
+          "L90": 131,
+          "L99": 192,
+          "mass20": 0.26634358568718314,
+          "mass40": 0.44407491514565045,
+          "center20_mass": 0.05153371103179473,
+          "subspace_ipr": 0.038428116814356233,
+          "n_profile_ipr": 4.720595856974582,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "472d26ec5882fa7b52a6ca4413b69e1ce7f0f8a4f61db852bb445e5935f61d46"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.003361655470063793,
+            0.003361655470063793
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 3.628268158726256e-06,
+          "right_edge_weight": 0.004942722528544054,
+          "edge_weight": 0.0049463507967027805,
+          "L50": 232,
+          "L90": 281,
+          "L99": 298,
+          "mass20": 0.002073121140238201,
+          "mass40": 0.003860527807864716,
+          "center20_mass": 0.4590284267737217,
+          "subspace_ipr": 0.02655631366302084,
+          "n_profile_ipr": 4.332912105755361,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "30f3bdf94c10796d61c5043bc22cafa85fb8e376e15beed2b5541743d27bbb77"
+        },
+        "n400_asymmetry": 0.5379686529621995,
+        "n600_asymmetry": 0.36402986549220573,
+        "asymmetry_delta": -0.1739387874699938,
+        "left_delta": 0.07416674086875091,
+        "right_delta": -0.0007236466647911333,
+        "edge_delta": 0.07344309420395978,
+        "delta_L50": 13,
+        "delta_L90": 3,
+        "both_sizes_joint_pass": true,
+        "dominant_end": "left",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 1,
+      "strength": 0.1,
+      "category": "other_unclassified",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            0.00011071149053069494,
+            0.00011071149053069494
+          ],
+          "separation_ratios": [
+            0.023850976961192732,
+            0.023850976961192732
+          ],
+          "max_separation_ratio": 0.023850976961192732,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.2114852423458251,
+          "right_edge_weight": 0.27735613976294765,
+          "edge_weight": 0.48884138210877276,
+          "L50": 43,
+          "L90": 94,
+          "L99": 183,
+          "mass20": 0.24819959544957157,
+          "mass40": 0.48884138210877276,
+          "center20_mass": 0.02198943976099493,
+          "subspace_ipr": 0.031085185183560363,
+          "n_profile_ipr": 3.111667437682915,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "09f1ba93d19c649686d1d79ebd8bb0767cd9f6eada289ffdc1c3a218cda5cb67"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            1.5206036214185599e-06,
+            1.5206036214185599e-06
+          ],
+          "separation_ratios": [
+            0.00035758041204135815,
+            0.00035758041204135815
+          ],
+          "max_separation_ratio": 0.00035758041204135815,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.31172856783372827,
+          "right_edge_weight": 0.45497084671539495,
+          "edge_weight": 0.7666994145491233,
+          "L50": 36,
+          "L90": 79,
+          "L99": 190,
+          "mass20": 0.2771643517059751,
+          "mass40": 0.5550678941237442,
+          "center20_mass": 0.0032220255354015936,
+          "subspace_ipr": 0.03931002301553325,
+          "n_profile_ipr": 5.896515610683402,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "73e679cfc5135d0f4b16fc0cd10484c7789cadeec112daa18d0b6639aad4c1b6"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.004641801076359704,
+            0.004641801076359704
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.00890601849309373,
+          "right_edge_weight": 0.019573994452166017,
+          "edge_weight": 0.028480012945259748,
+          "L50": 165,
+          "L90": 196,
+          "L99": 200,
+          "mass20": 0.015083035918305145,
+          "mass40": 0.028480012945259748,
+          "center20_mass": 0.6150880833897947,
+          "subspace_ipr": 0.031028858031017417,
+          "n_profile_ipr": 3.369979145415765,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "a4992d862b54ea932565ca94fd3ffcf489ddb96e62c82d90a027b2393f245339"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.004252480198055942,
+            0.004252480198055942
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.012008277703686492,
+          "right_edge_weight": 0.0003694503537931503,
+          "edge_weight": 0.012377728057479642,
+          "L50": 212,
+          "L90": 275,
+          "L99": 297,
+          "mass20": 0.003140503142243164,
+          "mass40": 0.007504346717487043,
+          "center20_mass": 0.2559710199041344,
+          "subspace_ipr": 0.01888276006624081,
+          "n_profile_ipr": 3.171946454086589,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "64b122b3cdf335039db1669d88dd00569c3e505b0d8387d325a4d146757b1b81"
+        },
+        "n400_asymmetry": 0.1347490204961116,
+        "n600_asymmetry": 0.1868297746984767,
+        "asymmetry_delta": 0.052080754202365104,
+        "left_delta": 0.10024332548790316,
+        "right_delta": 0.1776147069524473,
+        "edge_delta": 0.2778580324403505,
+        "delta_L50": -7,
+        "delta_L90": -15,
+        "both_sizes_joint_pass": false,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 2,
+      "strength": 0.1,
+      "category": "right_end_weakening_with_broadening",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            1.880106144422162e-05,
+            1.880106144422162e-05
+          ],
+          "separation_ratios": [
+            0.004406632000809725,
+            0.004406632000809725
+          ],
+          "max_separation_ratio": 0.004406632000809725,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.4158284898227369,
+          "right_edge_weight": 0.4059092011615474,
+          "edge_weight": 0.8217376909842843,
+          "L50": 15,
+          "L90": 59,
+          "L99": 146,
+          "mass20": 0.6044607190136124,
+          "mass40": 0.8217376909842843,
+          "center20_mass": 0.005755616710528066,
+          "subspace_ipr": 0.06322506252815359,
+          "n_profile_ipr": 6.323092809464397,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "10de1a2ef5976411e3c1dc1f2f185439cd80ac5b278118e5baa1e47f7a26562c"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            2.2722324078698e-06,
+            2.2722324078698e-06
+          ],
+          "separation_ratios": [
+            0.0005369595796607812,
+            0.0005369595796607812
+          ],
+          "max_separation_ratio": 0.0005369595796607812,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.4555739308850079,
+          "right_edge_weight": 0.32999540679252437,
+          "edge_weight": 0.7855693376775323,
+          "L50": 27,
+          "L90": 99,
+          "L99": 193,
+          "mass20": 0.4175360350682444,
+          "mass40": 0.669192924814602,
+          "center20_mass": 0.0020176052464779704,
+          "subspace_ipr": 0.047131930830528974,
+          "n_profile_ipr": 7.0698042327351045,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "5d407a958caf63fe90834d321d68238d43cbbbe6700388910671c2975a52e696"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.004266537673390221,
+            0.004266537673390221
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.1353267837408522,
+          "right_edge_weight": 0.0008118790528281196,
+          "edge_weight": 0.1361386627936803,
+          "L50": 102,
+          "L90": 176,
+          "L99": 199,
+          "mass20": 0.06003940368072628,
+          "mass40": 0.1361386627936803,
+          "center20_mass": 0.1594265761739747,
+          "subspace_ipr": 0.020871013978439792,
+          "n_profile_ipr": 2.4495409577463394,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "fdc69d586f9a6e06cf307a8f52919d0b160484e2dfde217e92f5f7075a9729d8"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.004231663786136863,
+            0.004231663786136863
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.1800132442263619,
+          "right_edge_weight": 0.011879610737867956,
+          "edge_weight": 0.19189285496422984,
+          "L50": 119,
+          "L90": 211,
+          "L99": 284,
+          "mass20": 0.04491775754608827,
+          "mass40": 0.1028519059655041,
+          "center20_mass": 0.05388261759128096,
+          "subspace_ipr": 0.013099657581374735,
+          "n_profile_ipr": 2.277903727493118,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "65bdf5209165f21e475fcb5edd66fa9288a46941d5143fd205a016dac56ceec5"
+        },
+        "n400_asymmetry": 0.012071113166670146,
+        "n600_asymmetry": 0.15985670273708183,
+        "asymmetry_delta": 0.14778558957041169,
+        "left_delta": 0.039745441062271014,
+        "right_delta": -0.07591379436902301,
+        "edge_delta": -0.036168353306751944,
+        "delta_L50": 12,
+        "delta_L90": 40,
+        "both_sizes_joint_pass": true,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 3,
+      "strength": 0.1,
+      "category": "other_unclassified",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            1.7065743825321154e-05,
+            1.7065743825321154e-05
+          ],
+          "separation_ratios": [
+            0.002395198033922384,
+            0.002395198033922384
+          ],
+          "max_separation_ratio": 0.002395198033922384,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.16323263147835768,
+          "right_edge_weight": 0.4316062831523094,
+          "edge_weight": 0.5948389146306671,
+          "L50": 34,
+          "L90": 108,
+          "L99": 186,
+          "mass20": 0.2917865172470522,
+          "mass40": 0.5948389146306671,
+          "center20_mass": 0.029140092426602093,
+          "subspace_ipr": 0.04087160389401089,
+          "n_profile_ipr": 4.087611445729376,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "716af9acdc42be088ceaab15ca2f83c145161c5a9e958463c8f376b8ee31adae"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            1.1747808877082832e-07,
+            1.1747808877082832e-07
+          ],
+          "separation_ratios": [
+            1.7142959171628414e-05,
+            1.7142959171628414e-05
+          ],
+          "max_separation_ratio": 1.7142959171628414e-05,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.2987256256025469,
+          "right_edge_weight": 0.4557997380926234,
+          "edge_weight": 0.7545253636951703,
+          "L50": 29,
+          "L90": 108,
+          "L99": 189,
+          "mass20": 0.43032239407755896,
+          "mass40": 0.5896193055344734,
+          "center20_mass": 0.0005880396761882257,
+          "subspace_ipr": 0.05197473754913607,
+          "n_profile_ipr": 7.796210716634149,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "24fc784470990613680c941ac18e35785bfb57e0fd40c69d51ffc68757c37b42"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.007124982395453222,
+            0.007124982395453222
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.01951157562390128,
+          "right_edge_weight": 0.013144903972649885,
+          "edge_weight": 0.032656479596551165,
+          "L50": 164,
+          "L90": 195,
+          "L99": 200,
+          "mass20": 0.014220644944490175,
+          "mass40": 0.032656479596551165,
+          "center20_mass": 0.5211455653675328,
+          "subspace_ipr": 0.022593707143843324,
+          "n_profile_ipr": 2.824702485909331,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "aa3aee13eff7d9166a005c4f45d575a9fa341e64ee139354ad1aee6633355d5c"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.006852847725686385,
+            0.006852847725686385
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.003282625108202785,
+          "right_edge_weight": 0.10732754948012452,
+          "edge_weight": 0.11061017458832731,
+          "L50": 141,
+          "L90": 237,
+          "L99": 293,
+          "mass20": 0.03647933994450285,
+          "mass40": 0.06980065579139737,
+          "center20_mass": 0.08495340213229895,
+          "subspace_ipr": 0.012986461964281748,
+          "n_profile_ipr": 2.4952724197175726,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "60d9a64b148757aaf1868b5d209ce6d1daf85ba9680220b93d4da076475aeeff"
+        },
+        "n400_asymmetry": 0.4511703001821658,
+        "n600_asymmetry": 0.2081760535137355,
+        "asymmetry_delta": -0.2429942466684303,
+        "left_delta": 0.13549299412418922,
+        "right_delta": 0.024193454940313996,
+        "edge_delta": 0.15968644906450324,
+        "delta_L50": -5,
+        "delta_L90": 0,
+        "both_sizes_joint_pass": true,
+        "dominant_end": "left",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 4,
+      "strength": 0.1,
+      "category": "right_end_driven_symmetrization",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            0.00026392657793300424,
+            0.00026392657793300424
+          ],
+          "separation_ratios": [
+            0.08137424010102345,
+            0.08137424010102345
+          ],
+          "max_separation_ratio": 0.08137424010102345,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.18015464795976943,
+          "right_edge_weight": 0.2921860398559756,
+          "edge_weight": 0.472340687815745,
+          "L50": 43,
+          "L90": 155,
+          "L99": 197,
+          "mass20": 0.2875295154156398,
+          "mass40": 0.472340687815745,
+          "center20_mass": 0.09465997916260209,
+          "subspace_ipr": 0.030235155190093732,
+          "n_profile_ipr": 3.108799025225034,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "a7572e3cedcb1e64a213f44090a0ebc031017860a397bb0cc2d5a7379b7b91d0"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            2.4912041771563945e-05,
+            2.4912041771563945e-05
+          ],
+          "separation_ratios": [
+            0.007927991111240528,
+            0.007927991111240528
+          ],
+          "max_separation_ratio": 0.007927991111240528,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.21576812741759643,
+          "right_edge_weight": 0.344704476362452,
+          "edge_weight": 0.5604726037800485,
+          "L50": 51,
+          "L90": 187,
+          "L99": 287,
+          "mass20": 0.2641022269155061,
+          "mass40": 0.4424747689730848,
+          "center20_mass": 0.04191628666535506,
+          "subspace_ipr": 0.02400222204616166,
+          "n_profile_ipr": 3.60227121549012,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "c424e2d1d9ed008a8f9c226a82bfbace0c105ea83b2c5077b1b1071150533b11"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.0032433676505654375,
+            0.0032433676505654375
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.08707495767037697,
+          "right_edge_weight": 0.03425516395073037,
+          "edge_weight": 0.12133012162110735,
+          "L50": 117,
+          "L90": 181,
+          "L99": 199,
+          "mass20": 0.06491456656477122,
+          "mass40": 0.12133012162110735,
+          "center20_mass": 0.22437516964206297,
+          "subspace_ipr": 0.014528717057802839,
+          "n_profile_ipr": 1.7114995485490276,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "62240b245e0f1f4045160d170db00662ed44d194ed9c019c9a74abccfb019857"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.00314228931667733,
+            0.00314228931667733
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.11104358584593373,
+          "right_edge_weight": 0.0004455965792310019,
+          "edge_weight": 0.11148918242516473,
+          "L50": 200,
+          "L90": 286,
+          "L99": 298,
+          "mass20": 0.05473602719825911,
+          "mass40": 0.088869055009251,
+          "center20_mass": 0.39024732711710736,
+          "subspace_ipr": 0.015025931839922308,
+          "n_profile_ipr": 2.558085125410201,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "830a50433bf405c91413b30f3cf88b0f3776c5980af03f92963c51b43cfbaf54"
+        },
+        "n400_asymmetry": 0.2371834457333652,
+        "n600_asymmetry": 0.2300493335004386,
+        "asymmetry_delta": -0.007134112232926593,
+        "left_delta": 0.035613479457827,
+        "right_delta": 0.05251843650647642,
+        "edge_delta": 0.08813191596430348,
+        "delta_L50": 8,
+        "delta_L90": 32,
+        "both_sizes_joint_pass": false,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 5,
+      "strength": 0.1,
+      "category": "other_unclassified",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            9.129947483692016e-05,
+            9.129947483692016e-05
+          ],
+          "separation_ratios": [
+            0.023265194840130773,
+            0.023265194840130773
+          ],
+          "max_separation_ratio": 0.023265194840130773,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.16676309274182616,
+          "right_edge_weight": 0.3740961008536196,
+          "edge_weight": 0.5408591935954458,
+          "L50": 37,
+          "L90": 126,
+          "L99": 181,
+          "mass20": 0.2594362412030787,
+          "mass40": 0.5408591935954458,
+          "center20_mass": 0.030394142620518462,
+          "subspace_ipr": 0.03550354446966737,
+          "n_profile_ipr": 3.559488326975465,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "7f3a3f10e2ec75ed7c1a660752906041ed998ba867ed8acbbf409fff0b68535b"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            5.476686971983764e-07,
+            5.476686971983764e-07
+          ],
+          "separation_ratios": [
+            0.00014230730632220644,
+            0.00014230730632220644
+          ],
+          "max_separation_ratio": 0.00014230730632220644,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.2511448051322505,
+          "right_edge_weight": 0.2821935548031091,
+          "edge_weight": 0.5333383599353596,
+          "L50": 55,
+          "L90": 130,
+          "L99": 273,
+          "mass20": 0.14344552204389582,
+          "mass40": 0.372025685840227,
+          "center20_mass": 0.02392651947054307,
+          "subspace_ipr": 0.023525859451876012,
+          "n_profile_ipr": 3.529025458951554,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "c1323bd04a13db7b454565cfbe6d30389bcbbd835826a178439adfdc5e1ef5bf"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.003924294443450574,
+            0.003924294443450574
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.02654062441513195,
+          "right_edge_weight": 0.008338915173211735,
+          "edge_weight": 0.03487953958834368,
+          "L50": 148,
+          "L90": 190,
+          "L99": 199,
+          "mass20": 0.013486974276876458,
+          "mass40": 0.03487953958834368,
+          "center20_mass": 0.39828801341519254,
+          "subspace_ipr": 0.0270654195092994,
+          "n_profile_ipr": 2.9709399700146735,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "3ac4ec593cec2136f23682a4739acbed31e866e93beb3c049f59b7d467990d23"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.0038484931754548648,
+            0.0038484931754548648
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.03976710895537707,
+          "right_edge_weight": 4.373219092327624e-05,
+          "edge_weight": 0.039810841146300346,
+          "L50": 229,
+          "L90": 282,
+          "L99": 297,
+          "mass20": 0.009865024579335635,
+          "mass40": 0.025670389092961033,
+          "center20_mass": 0.42948980568182504,
+          "subspace_ipr": 0.02460512634918563,
+          "n_profile_ipr": 4.050435472647903,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "ad7ca2a4b3854d0ae7264199dde81ce069749dfab6aa4e395a837b56f3286206"
+        },
+        "n400_asymmetry": 0.38334008290312116,
+        "n600_asymmetry": 0.05821585695546383,
+        "asymmetry_delta": -0.32512422594765733,
+        "left_delta": 0.08438171239042436,
+        "right_delta": -0.09190254605051051,
+        "edge_delta": -0.007520833660086157,
+        "delta_L50": 18,
+        "delta_L90": 4,
+        "both_sizes_joint_pass": true,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 6,
+      "strength": 0.1,
+      "category": "right_end_driven_symmetrization",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            2.1613227262003678e-05,
+            2.1613227262003678e-05
+          ],
+          "separation_ratios": [
+            0.0038624111052640185,
+            0.0038624111052640185
+          ],
+          "max_separation_ratio": 0.0038624111052640185,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.3797915515837923,
+          "right_edge_weight": 0.2472125144622322,
+          "edge_weight": 0.6270040660460245,
+          "L50": 28,
+          "L90": 124,
+          "L99": 185,
+          "mass20": 0.40046046257263845,
+          "mass40": 0.6270040660460245,
+          "center20_mass": 0.038811004022592896,
+          "subspace_ipr": 0.04216346925017059,
+          "n_profile_ipr": 4.2167547959768985,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "1347287ed0d1aa6825399c1ad091c112ac9a507f72ed02d6cba7af369c5e7731"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            2.1699365732041982e-07,
+            2.1699365732041982e-07
+          ],
+          "separation_ratios": [
+            5.07511838081563e-05,
+            5.07511838081563e-05
+          ],
+          "max_separation_ratio": 5.07511838081563e-05,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.48928650624626974,
+          "right_edge_weight": 0.4726177750958246,
+          "edge_weight": 0.9619042813420944,
+          "L50": 15,
+          "L90": 45,
+          "L99": 129,
+          "mass20": 0.6109677767909989,
+          "mass40": 0.844177252942667,
+          "center20_mass": 0.00013915757009940285,
+          "subspace_ipr": 0.0805512050086501,
+          "n_profile_ipr": 12.082681271789927,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "bb5c1558199f06dbb6b508457307a9c29485be2288e7cef95511411580558ac3"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.005595786329566875,
+            0.005595786329566875
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.0010430561481444118,
+          "right_edge_weight": 0.19532978402167206,
+          "edge_weight": 0.19637284016981646,
+          "L50": 133,
+          "L90": 186,
+          "L99": 199,
+          "mass20": 0.09901746574101308,
+          "mass40": 0.19637284016981646,
+          "center20_mass": 0.2998063458291078,
+          "subspace_ipr": 0.015420517922086964,
+          "n_profile_ipr": 2.222213542822605,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "b1aed6c6f969172fa1a2aa6a923d0dae591acc6919f99ad1435db5b004ce838e"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.004275637355390052,
+            0.004275637355390052
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.0006988319561262835,
+          "right_edge_weight": 0.002598594581407609,
+          "edge_weight": 0.003297426537533893,
+          "L50": 248,
+          "L90": 289,
+          "L99": 299,
+          "mass20": 0.0009044216800034761,
+          "mass40": 0.0015651899895048709,
+          "center20_mass": 0.5733883901378305,
+          "subspace_ipr": 0.018074183890027955,
+          "n_profile_ipr": 3.3928788730037684,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "43af9844bc065832d53d35d6b64d8fc212267416a48495b5061cc59e1497e491"
+        },
+        "n400_asymmetry": 0.21144844874391658,
+        "n600_asymmetry": 0.01732888757620264,
+        "asymmetry_delta": -0.19411956116771395,
+        "left_delta": 0.10949495466247744,
+        "right_delta": 0.2254052606335924,
+        "edge_delta": 0.33490021529606984,
+        "delta_L50": -13,
+        "delta_L90": -79,
+        "both_sizes_joint_pass": true,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 7,
+      "strength": 0.1,
+      "category": "other_unclassified",
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            2.110815074569552e-05,
+            2.110815074569552e-05
+          ],
+          "separation_ratios": [
+            0.003826534272353024,
+            0.003826534272353024
+          ],
+          "max_separation_ratio": 0.003826534272353024,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.272925895469874,
+          "right_edge_weight": 0.3234661429249833,
+          "edge_weight": 0.5963920383948573,
+          "L50": 27,
+          "L90": 80,
+          "L99": 148,
+          "mass20": 0.4320719050012184,
+          "mass40": 0.5963920383948573,
+          "center20_mass": 0.006012009308495581,
+          "subspace_ipr": 0.046507760389755126,
+          "n_profile_ipr": 4.6514457147455985,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "03645648b2a7b06b082f83911ffbf2b917f5323719537afe75a0a7eda28d03ce"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            7.2932645200917624e-09,
+            7.2932645200917624e-09
+          ],
+          "separation_ratios": [
+            1.4662377221507887e-06,
+            1.4662377221507887e-06
+          ],
+          "max_separation_ratio": 1.4662377221507887e-06,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.3711425640616102,
+          "right_edge_weight": 0.456944227686994,
+          "edge_weight": 0.8280867917486042,
+          "L50": 28,
+          "L90": 71,
+          "L99": 110,
+          "mass20": 0.4261608330332052,
+          "mass40": 0.6537801527147911,
+          "center20_mass": 0.00017764662568927733,
+          "subspace_ipr": 0.044221843710549304,
+          "n_profile_ipr": 6.633276710670594,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "5074760f0799618a8851fe239551072184da170a0f555a1cab00910938f2a633"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.005516258118528658,
+            0.005516258118528658
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.002497106597798351,
+          "right_edge_weight": 0.012399826488805138,
+          "edge_weight": 0.01489693308660349,
+          "L50": 161,
+          "L90": 193,
+          "L99": 200,
+          "mass20": 0.009815409780742385,
+          "mass40": 0.01489693308660349,
+          "center20_mass": 0.5023644478608735,
+          "subspace_ipr": 0.025723941443784266,
+          "n_profile_ipr": 3.043459575272717,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "f627e8d71a6100c1d3565b0fb15a32ec90611fdd9a970909fa3551d58d18756b"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.004974135100953104,
+            0.004974135100953104
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 4.933962735006903e-05,
+          "right_edge_weight": 0.060588068486970605,
+          "edge_weight": 0.060637408114320675,
+          "L50": 121,
+          "L90": 180,
+          "L99": 238,
+          "mass20": 0.005137249796563542,
+          "mass40": 0.021616555423070147,
+          "center20_mass": 0.00949437238631273,
+          "subspace_ipr": 0.028861078896538803,
+          "n_profile_ipr": 5.032003033757705,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "014a6757e6fa8a817295ec52e2af1f10c7f63ac6ef2ee5d593395a342f12250b"
+        },
+        "n400_asymmetry": 0.0847433302281071,
+        "n600_asymmetry": 0.10361433666174448,
+        "asymmetry_delta": 0.018871006433637386,
+        "left_delta": 0.09821666859173622,
+        "right_delta": 0.13347808476201067,
+        "edge_delta": 0.2316947533537469,
+        "delta_L50": 1,
+        "delta_L90": -9,
+        "both_sizes_joint_pass": true,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    }
+  ],
+  "unclassified_cases": [
+    {
+      "seed": 2,
+      "strength": 0.05,
+      "original_category": "other_unclassified",
+      "signature": "positive_edge_tail_shorter_or_asymmetry_up",
+      "blocking_conditions": [
+        "right_delta_not_negative",
+        "edge_delta_not_negative",
+        "L50_not_positive"
+      ],
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            6.0603233549294876e-05,
+            6.0603233549294876e-05
+          ],
+          "separation_ratios": [
+            0.01768782133924149,
+            0.01768782133924149
+          ],
+          "max_separation_ratio": 0.01768782133924149,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.2550212109459643,
+          "right_edge_weight": 0.2427906164292633,
+          "edge_weight": 0.4978118273752276,
+          "L50": 41,
+          "L90": 120,
+          "L99": 175,
+          "mass20": 0.3247510207017372,
+          "mass40": 0.4978118273752276,
+          "center20_mass": 0.02356286505350421,
+          "subspace_ipr": 0.02987825181431314,
+          "n_profile_ipr": 2.9911144446977564,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "65660cd4c02dd936495e0a062a6f283c4a85ba8dfca497035a9ee2d2b4d6ad0d"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            9.826698579775512e-06,
+            9.826698579775512e-06
+          ],
+          "separation_ratios": [
+            0.003652720669612669,
+            0.003652720669612669
+          ],
+          "max_separation_ratio": 0.003652720669612669,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.3137203496940361,
+          "right_edge_weight": 0.3437025326124428,
+          "edge_weight": 0.6574228823064789,
+          "L50": 38,
+          "L90": 120,
+          "L99": 227,
+          "mass20": 0.3628714340852237,
+          "mass40": 0.5358129885899234,
+          "center20_mass": 0.007455428842680366,
+          "subspace_ipr": 0.03346350154266834,
+          "n_profile_ipr": 5.020037994209155,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "87343817c53965c121a1bac8c18b8e48b1c397bd8c108b662f3f8d866aa5bdec"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.0034262689783530875,
+            0.0034262689783530875
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.03342390675984771,
+          "right_edge_weight": 0.005626439897713888,
+          "edge_weight": 0.039050346657561595,
+          "L50": 151,
+          "L90": 190,
+          "L99": 199,
+          "mass20": 0.01748947462849203,
+          "mass40": 0.039050346657561595,
+          "center20_mass": 0.38024954769905883,
+          "subspace_ipr": 0.015599763692375446,
+          "n_profile_ipr": 1.9511186589090168,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "12331da7aa8b79dbb1956eed0a578a0e7bf90e63bb5dff379b84807d47181e30"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.002690240910432805,
+            0.002690240910432805
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.0009931096001972843,
+          "right_edge_weight": 0.05104738214434339,
+          "edge_weight": 0.05204049174454067,
+          "L50": 197,
+          "L90": 279,
+          "L99": 297,
+          "mass20": 0.019736839204137137,
+          "mass40": 0.030226859636124526,
+          "center20_mass": 0.28196882851955823,
+          "subspace_ipr": 0.012390664355349874,
+          "n_profile_ipr": 2.325415069555501,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "abfd0be4310fa22f6c38d5122e32a3dfbef3cf399cc301826dcc5114753d1585"
+        },
+        "n400_asymmetry": 0.02456871019153617,
+        "n600_asymmetry": 0.04560562725352408,
+        "asymmetry_delta": 0.02103691706198791,
+        "left_delta": 0.05869913874807181,
+        "right_delta": 0.10091191618317952,
+        "edge_delta": 0.15961105493125133,
+        "delta_L50": -3,
+        "delta_L90": 0,
+        "both_sizes_joint_pass": false,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 3,
+      "strength": 0.05,
+      "original_category": "other_unclassified",
+      "signature": "mixed_nonmatching_sign_combinations",
+      "blocking_conditions": [
+        "right_delta_not_negative",
+        "edge_delta_not_negative"
+      ],
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            0.0001786478404058746,
+            0.0001786478404058746
+          ],
+          "separation_ratios": [
+            0.05503299653439575,
+            0.05503299653439575
+          ],
+          "max_separation_ratio": 0.05503299653439575,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.27642423650436465,
+          "right_edge_weight": 0.24627910069041026,
+          "edge_weight": 0.5227033371947749,
+          "L50": 39,
+          "L90": 128,
+          "L99": 196,
+          "mass20": 0.31510658755894694,
+          "mass40": 0.5227033371947749,
+          "center20_mass": 0.06292248594492125,
+          "subspace_ipr": 0.02745746920108554,
+          "n_profile_ipr": 2.7643464653851035,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "6a50467ed83acd4fbe989604365d94ca65d0fbac9f7b8bfc8d7335c788c20a73"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            2.25803009124517e-05,
+            2.25803009124517e-05
+          ],
+          "separation_ratios": [
+            0.007480097593293658,
+            0.007480097593293658
+          ],
+          "max_separation_ratio": 0.007480097593293658,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.3369545102551561,
+          "right_edge_weight": 0.25113022656393674,
+          "edge_weight": 0.5880847368190929,
+          "L50": 48,
+          "L90": 146,
+          "L99": 251,
+          "mass20": 0.26221601591525234,
+          "mass40": 0.45815425337993615,
+          "center20_mass": 0.013154075619743959,
+          "subspace_ipr": 0.02431099604513256,
+          "n_profile_ipr": 3.6474102036903338,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "7394bdc767d8dd6450db5be49560fbbdb0bf93cd16a1b5d3c788bf29028fefb2"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.0032461950403558214,
+            0.0032461950403558214
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.1083545116025389,
+          "right_edge_weight": 0.028758945486516377,
+          "edge_weight": 0.13711345708905526,
+          "L50": 136,
+          "L90": 192,
+          "L99": 200,
+          "mass20": 0.0746097974643138,
+          "mass40": 0.13711345708905526,
+          "center20_mass": 0.32239757931551893,
+          "subspace_ipr": 0.012361767588952043,
+          "n_profile_ipr": 1.7191487138571035,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "8356a3c5ae1fa76d31e82aa57d6ee47a3fac38c5958909a58ba3785b6879b223"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.003018717420571658,
+            0.003018717420571658
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.07992827505923261,
+          "right_edge_weight": 0.0030976814104371714,
+          "edge_weight": 0.08302595646966979,
+          "L50": 199,
+          "L90": 284,
+          "L99": 299,
+          "mass20": 0.03319322584957666,
+          "mass40": 0.06102555463420595,
+          "center20_mass": 0.29947045708613607,
+          "subspace_ipr": 0.009165608093747384,
+          "n_profile_ipr": 1.9405318192737449,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "b220e4c1eef7a5df070890820c884577925706e71f4e6f80529e6a2a9ebdd5f9"
+        },
+        "n400_asymmetry": 0.05767159623609101,
+        "n600_asymmetry": 0.14593863489033332,
+        "asymmetry_delta": 0.0882670386542423,
+        "left_delta": 0.06053027375079145,
+        "right_delta": 0.004851125873526485,
+        "edge_delta": 0.06538139962431799,
+        "delta_L50": 9,
+        "delta_L90": 18,
+        "both_sizes_joint_pass": true,
+        "dominant_end": "left",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 5,
+      "strength": 0.05,
+      "original_category": "other_unclassified",
+      "signature": "mixed_nonmatching_sign_combinations",
+      "blocking_conditions": [
+        "edge_delta_not_negative"
+      ],
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            5.527220440805407e-05,
+            5.527220440805407e-05
+          ],
+          "separation_ratios": [
+            0.0152402212404775,
+            0.0152402212404775
+          ],
+          "max_separation_ratio": 0.0152402212404775,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.41427346432471945,
+          "right_edge_weight": 0.18237547041419774,
+          "edge_weight": 0.5966489347389172,
+          "L50": 29,
+          "L90": 134,
+          "L99": 187,
+          "mass20": 0.4501189699851047,
+          "mass40": 0.5966489347389172,
+          "center20_mass": 0.04345620628198815,
+          "subspace_ipr": 0.05895015111463718,
+          "n_profile_ipr": 5.911843725131038,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "381d35a8d040229c31cfddcd903fa62c5d9e8276b8f05ca4245282f903082057"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            1.758954761101079e-05,
+            1.758954761101079e-05
+          ],
+          "separation_ratios": [
+            0.008830036193409956,
+            0.008830036193409956
+          ],
+          "max_separation_ratio": 0.008830036193409956,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.438385090573048,
+          "right_edge_weight": 0.1759048747552783,
+          "edge_weight": 0.6142899653283262,
+          "L50": 30,
+          "L90": 153,
+          "L99": 277,
+          "mass20": 0.4519314309471028,
+          "mass40": 0.5390054843269131,
+          "center20_mass": 0.02971595483342143,
+          "subspace_ipr": 0.05688792605610778,
+          "n_profile_ipr": 8.536535157278038,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "fab7a2fdc3a287a9513930e7430ac899c205b1e71f7867b77af2a16b75d3d4a9"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.00362673241653822,
+            0.00362673241653822
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.15224487522211838,
+          "right_edge_weight": 0.009248150264524784,
+          "edge_weight": 0.16149302548664315,
+          "L50": 116,
+          "L90": 184,
+          "L99": 199,
+          "mass20": 0.11528413346188021,
+          "mass40": 0.16149302548664315,
+          "center20_mass": 0.24286111504206617,
+          "subspace_ipr": 0.012546639418927339,
+          "n_profile_ipr": 1.8354349373976806,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "6fd4037a6a44738b2a7b4d749c068044ff67c9b6d6c7c0bf076a8269c3c3deeb"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.0019920130819099297,
+            0.0019920130819099297
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.00324671764183482,
+          "right_edge_weight": 0.04305748906710122,
+          "edge_weight": 0.046304206708936035,
+          "L50": 204,
+          "L90": 283,
+          "L99": 298,
+          "mass20": 0.019970879049425686,
+          "mass40": 0.03124747842798245,
+          "center20_mass": 0.3337638610149483,
+          "subspace_ipr": 0.012724975986740097,
+          "n_profile_ipr": 2.3224691344423207,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "658b47872130c124bd9e5eeb7c0ca9288c2c8f8528a87c1b9988c9dc468766e0"
+        },
+        "n400_asymmetry": 0.3886674062562369,
+        "n600_asymmetry": 0.42729041760836683,
+        "asymmetry_delta": 0.03862301135212992,
+        "left_delta": 0.02411162624832852,
+        "right_delta": -0.0064705956589194424,
+        "edge_delta": 0.017641030589409024,
+        "delta_L50": 1,
+        "delta_L90": 19,
+        "both_sizes_joint_pass": true,
+        "dominant_end": "left",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 1,
+      "strength": 0.1,
+      "original_category": "other_unclassified",
+      "signature": "positive_edge_tail_shorter_or_asymmetry_up",
+      "blocking_conditions": [
+        "right_delta_not_negative",
+        "edge_delta_not_negative",
+        "L50_not_positive"
+      ],
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            0.00011071149053069494,
+            0.00011071149053069494
+          ],
+          "separation_ratios": [
+            0.023850976961192732,
+            0.023850976961192732
+          ],
+          "max_separation_ratio": 0.023850976961192732,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.2114852423458251,
+          "right_edge_weight": 0.27735613976294765,
+          "edge_weight": 0.48884138210877276,
+          "L50": 43,
+          "L90": 94,
+          "L99": 183,
+          "mass20": 0.24819959544957157,
+          "mass40": 0.48884138210877276,
+          "center20_mass": 0.02198943976099493,
+          "subspace_ipr": 0.031085185183560363,
+          "n_profile_ipr": 3.111667437682915,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "09f1ba93d19c649686d1d79ebd8bb0767cd9f6eada289ffdc1c3a218cda5cb67"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            1.5206036214185599e-06,
+            1.5206036214185599e-06
+          ],
+          "separation_ratios": [
+            0.00035758041204135815,
+            0.00035758041204135815
+          ],
+          "max_separation_ratio": 0.00035758041204135815,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.31172856783372827,
+          "right_edge_weight": 0.45497084671539495,
+          "edge_weight": 0.7666994145491233,
+          "L50": 36,
+          "L90": 79,
+          "L99": 190,
+          "mass20": 0.2771643517059751,
+          "mass40": 0.5550678941237442,
+          "center20_mass": 0.0032220255354015936,
+          "subspace_ipr": 0.03931002301553325,
+          "n_profile_ipr": 5.896515610683402,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "73e679cfc5135d0f4b16fc0cd10484c7789cadeec112daa18d0b6639aad4c1b6"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.004641801076359704,
+            0.004641801076359704
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.00890601849309373,
+          "right_edge_weight": 0.019573994452166017,
+          "edge_weight": 0.028480012945259748,
+          "L50": 165,
+          "L90": 196,
+          "L99": 200,
+          "mass20": 0.015083035918305145,
+          "mass40": 0.028480012945259748,
+          "center20_mass": 0.6150880833897947,
+          "subspace_ipr": 0.031028858031017417,
+          "n_profile_ipr": 3.369979145415765,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "a4992d862b54ea932565ca94fd3ffcf489ddb96e62c82d90a027b2393f245339"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.004252480198055942,
+            0.004252480198055942
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.012008277703686492,
+          "right_edge_weight": 0.0003694503537931503,
+          "edge_weight": 0.012377728057479642,
+          "L50": 212,
+          "L90": 275,
+          "L99": 297,
+          "mass20": 0.003140503142243164,
+          "mass40": 0.007504346717487043,
+          "center20_mass": 0.2559710199041344,
+          "subspace_ipr": 0.01888276006624081,
+          "n_profile_ipr": 3.171946454086589,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "64b122b3cdf335039db1669d88dd00569c3e505b0d8387d325a4d146757b1b81"
+        },
+        "n400_asymmetry": 0.1347490204961116,
+        "n600_asymmetry": 0.1868297746984767,
+        "asymmetry_delta": 0.052080754202365104,
+        "left_delta": 0.10024332548790316,
+        "right_delta": 0.1776147069524473,
+        "edge_delta": 0.2778580324403505,
+        "delta_L50": -7,
+        "delta_L90": -15,
+        "both_sizes_joint_pass": false,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 3,
+      "strength": 0.1,
+      "original_category": "other_unclassified",
+      "signature": "mixed_nonmatching_sign_combinations",
+      "blocking_conditions": [
+        "right_delta_not_negative",
+        "edge_delta_not_negative",
+        "L50_not_positive",
+        "asymmetry_delta_not_positive"
+      ],
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            1.7065743825321154e-05,
+            1.7065743825321154e-05
+          ],
+          "separation_ratios": [
+            0.002395198033922384,
+            0.002395198033922384
+          ],
+          "max_separation_ratio": 0.002395198033922384,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.16323263147835768,
+          "right_edge_weight": 0.4316062831523094,
+          "edge_weight": 0.5948389146306671,
+          "L50": 34,
+          "L90": 108,
+          "L99": 186,
+          "mass20": 0.2917865172470522,
+          "mass40": 0.5948389146306671,
+          "center20_mass": 0.029140092426602093,
+          "subspace_ipr": 0.04087160389401089,
+          "n_profile_ipr": 4.087611445729376,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "716af9acdc42be088ceaab15ca2f83c145161c5a9e958463c8f376b8ee31adae"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            1.1747808877082832e-07,
+            1.1747808877082832e-07
+          ],
+          "separation_ratios": [
+            1.7142959171628414e-05,
+            1.7142959171628414e-05
+          ],
+          "max_separation_ratio": 1.7142959171628414e-05,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.2987256256025469,
+          "right_edge_weight": 0.4557997380926234,
+          "edge_weight": 0.7545253636951703,
+          "L50": 29,
+          "L90": 108,
+          "L99": 189,
+          "mass20": 0.43032239407755896,
+          "mass40": 0.5896193055344734,
+          "center20_mass": 0.0005880396761882257,
+          "subspace_ipr": 0.05197473754913607,
+          "n_profile_ipr": 7.796210716634149,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "24fc784470990613680c941ac18e35785bfb57e0fd40c69d51ffc68757c37b42"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.007124982395453222,
+            0.007124982395453222
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.01951157562390128,
+          "right_edge_weight": 0.013144903972649885,
+          "edge_weight": 0.032656479596551165,
+          "L50": 164,
+          "L90": 195,
+          "L99": 200,
+          "mass20": 0.014220644944490175,
+          "mass40": 0.032656479596551165,
+          "center20_mass": 0.5211455653675328,
+          "subspace_ipr": 0.022593707143843324,
+          "n_profile_ipr": 2.824702485909331,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "aa3aee13eff7d9166a005c4f45d575a9fa341e64ee139354ad1aee6633355d5c"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.006852847725686385,
+            0.006852847725686385
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.003282625108202785,
+          "right_edge_weight": 0.10732754948012452,
+          "edge_weight": 0.11061017458832731,
+          "L50": 141,
+          "L90": 237,
+          "L99": 293,
+          "mass20": 0.03647933994450285,
+          "mass40": 0.06980065579139737,
+          "center20_mass": 0.08495340213229895,
+          "subspace_ipr": 0.012986461964281748,
+          "n_profile_ipr": 2.4952724197175726,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "60d9a64b148757aaf1868b5d209ce6d1daf85ba9680220b93d4da076475aeeff"
+        },
+        "n400_asymmetry": 0.4511703001821658,
+        "n600_asymmetry": 0.2081760535137355,
+        "asymmetry_delta": -0.2429942466684303,
+        "left_delta": 0.13549299412418922,
+        "right_delta": 0.024193454940313996,
+        "edge_delta": 0.15968644906450324,
+        "delta_L50": -5,
+        "delta_L90": 0,
+        "both_sizes_joint_pass": true,
+        "dominant_end": "left",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 5,
+      "strength": 0.1,
+      "original_category": "other_unclassified",
+      "signature": "right_weakening_with_symmetrization",
+      "blocking_conditions": [
+        "asymmetry_delta_not_positive"
+      ],
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            9.129947483692016e-05,
+            9.129947483692016e-05
+          ],
+          "separation_ratios": [
+            0.023265194840130773,
+            0.023265194840130773
+          ],
+          "max_separation_ratio": 0.023265194840130773,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.16676309274182616,
+          "right_edge_weight": 0.3740961008536196,
+          "edge_weight": 0.5408591935954458,
+          "L50": 37,
+          "L90": 126,
+          "L99": 181,
+          "mass20": 0.2594362412030787,
+          "mass40": 0.5408591935954458,
+          "center20_mass": 0.030394142620518462,
+          "subspace_ipr": 0.03550354446966737,
+          "n_profile_ipr": 3.559488326975465,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "7f3a3f10e2ec75ed7c1a660752906041ed998ba867ed8acbbf409fff0b68535b"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            5.476686971983764e-07,
+            5.476686971983764e-07
+          ],
+          "separation_ratios": [
+            0.00014230730632220644,
+            0.00014230730632220644
+          ],
+          "max_separation_ratio": 0.00014230730632220644,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.2511448051322505,
+          "right_edge_weight": 0.2821935548031091,
+          "edge_weight": 0.5333383599353596,
+          "L50": 55,
+          "L90": 130,
+          "L99": 273,
+          "mass20": 0.14344552204389582,
+          "mass40": 0.372025685840227,
+          "center20_mass": 0.02392651947054307,
+          "subspace_ipr": 0.023525859451876012,
+          "n_profile_ipr": 3.529025458951554,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "c1323bd04a13db7b454565cfbe6d30389bcbbd835826a178439adfdc5e1ef5bf"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.003924294443450574,
+            0.003924294443450574
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.02654062441513195,
+          "right_edge_weight": 0.008338915173211735,
+          "edge_weight": 0.03487953958834368,
+          "L50": 148,
+          "L90": 190,
+          "L99": 199,
+          "mass20": 0.013486974276876458,
+          "mass40": 0.03487953958834368,
+          "center20_mass": 0.39828801341519254,
+          "subspace_ipr": 0.0270654195092994,
+          "n_profile_ipr": 2.9709399700146735,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "3ac4ec593cec2136f23682a4739acbed31e866e93beb3c049f59b7d467990d23"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.0038484931754548648,
+            0.0038484931754548648
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.03976710895537707,
+          "right_edge_weight": 4.373219092327624e-05,
+          "edge_weight": 0.039810841146300346,
+          "L50": 229,
+          "L90": 282,
+          "L99": 297,
+          "mass20": 0.009865024579335635,
+          "mass40": 0.025670389092961033,
+          "center20_mass": 0.42948980568182504,
+          "subspace_ipr": 0.02460512634918563,
+          "n_profile_ipr": 4.050435472647903,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "ad7ca2a4b3854d0ae7264199dde81ce069749dfab6aa4e395a837b56f3286206"
+        },
+        "n400_asymmetry": 0.38334008290312116,
+        "n600_asymmetry": 0.05821585695546383,
+        "asymmetry_delta": -0.32512422594765733,
+        "left_delta": 0.08438171239042436,
+        "right_delta": -0.09190254605051051,
+        "edge_delta": -0.007520833660086157,
+        "delta_L50": 18,
+        "delta_L90": 4,
+        "both_sizes_joint_pass": true,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    },
+    {
+      "seed": 7,
+      "strength": 0.1,
+      "original_category": "other_unclassified",
+      "signature": "mixed_nonmatching_sign_combinations",
+      "blocking_conditions": [
+        "right_delta_not_negative",
+        "edge_delta_not_negative"
+      ],
+      "comparison": {
+        "n400_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            799
+          ],
+          "distances": [
+            2.110815074569552e-05,
+            2.110815074569552e-05
+          ],
+          "separation_ratios": [
+            0.003826534272353024,
+            0.003826534272353024
+          ],
+          "max_separation_ratio": 0.003826534272353024,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.272925895469874,
+          "right_edge_weight": 0.3234661429249833,
+          "edge_weight": 0.5963920383948573,
+          "L50": 27,
+          "L90": 80,
+          "L99": 148,
+          "mass20": 0.4320719050012184,
+          "mass40": 0.5963920383948573,
+          "center20_mass": 0.006012009308495581,
+          "subspace_ipr": 0.046507760389755126,
+          "n_profile_ipr": 4.6514457147455985,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "03645648b2a7b06b082f83911ffbf2b917f5323719537afe75a0a7eda28d03ce"
+        },
+        "n600_first": {
+          "pair_index": 0,
+          "spectrum_indices": [
+            0,
+            1199
+          ],
+          "distances": [
+            7.2932645200917624e-09,
+            7.2932645200917624e-09
+          ],
+          "separation_ratios": [
+            1.4662377221507887e-06,
+            1.4662377221507887e-06
+          ],
+          "max_separation_ratio": 1.4662377221507887e-06,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 0.3711425640616102,
+          "right_edge_weight": 0.456944227686994,
+          "edge_weight": 0.8280867917486042,
+          "L50": 28,
+          "L90": 71,
+          "L99": 110,
+          "mass20": 0.4261608330332052,
+          "mass40": 0.6537801527147911,
+          "center20_mass": 0.00017764662568927733,
+          "subspace_ipr": 0.044221843710549304,
+          "n_profile_ipr": 6.633276710670594,
+          "diagnostic_joint_pass": true,
+          "profile_sha256": "5074760f0799618a8851fe239551072184da170a0f555a1cab00910938f2a633"
+        },
+        "n400_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            798,
+            1
+          ],
+          "distances": [
+            0.005516258118528658,
+            0.005516258118528658
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 40,
+          "left_edge_weight": 0.002497106597798351,
+          "right_edge_weight": 0.012399826488805138,
+          "edge_weight": 0.01489693308660349,
+          "L50": 161,
+          "L90": 193,
+          "L99": 200,
+          "mass20": 0.009815409780742385,
+          "mass40": 0.01489693308660349,
+          "center20_mass": 0.5023644478608735,
+          "subspace_ipr": 0.025723941443784266,
+          "n_profile_ipr": 3.043459575272717,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "f627e8d71a6100c1d3565b0fb15a32ec90611fdd9a970909fa3551d58d18756b"
+        },
+        "n600_second": {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1198,
+            1
+          ],
+          "distances": [
+            0.004974135100953104,
+            0.004974135100953104
+          ],
+          "separation_ratios": [
+            1.0,
+            1.0
+          ],
+          "max_separation_ratio": 1.0,
+          "edge_sites_per_end": 60,
+          "left_edge_weight": 4.933962735006903e-05,
+          "right_edge_weight": 0.060588068486970605,
+          "edge_weight": 0.060637408114320675,
+          "L50": 121,
+          "L90": 180,
+          "L99": 238,
+          "mass20": 0.005137249796563542,
+          "mass40": 0.021616555423070147,
+          "center20_mass": 0.00949437238631273,
+          "subspace_ipr": 0.028861078896538803,
+          "n_profile_ipr": 5.032003033757705,
+          "diagnostic_joint_pass": false,
+          "profile_sha256": "014a6757e6fa8a817295ec52e2af1f10c7f63ac6ef2ee5d593395a342f12250b"
+        },
+        "n400_asymmetry": 0.0847433302281071,
+        "n600_asymmetry": 0.10361433666174448,
+        "asymmetry_delta": 0.018871006433637386,
+        "left_delta": 0.09821666859173622,
+        "right_delta": 0.13347808476201067,
+        "edge_delta": 0.2316947533537469,
+        "delta_L50": 1,
+        "delta_L90": -9,
+        "both_sizes_joint_pass": true,
+        "dominant_end": "right",
+        "profile_metrics_recomputed": true,
+        "max_recompute_error": 0.0
+      }
+    }
+  ],
+  "signature_counts": {
+    "positive_edge_tail_shorter_or_asymmetry_up": 2,
+    "mixed_nonmatching_sign_combinations": 4,
+    "right_weakening_with_symmetrization": 1
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "floquet-bdg-unclassified-verification-v1",
+  "recorded_utc": "2026-11-11T07:31:45.307770+00:00",
+  "all_passed": true,
+  "test_count": 5,
+  "original_independent_projectors_passed": true,
+  "new_independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "signature_audit",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_unclassified_signatures.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-未归类与未复现诊断.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_unclassified_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_unclassified_signatures.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "multi_seed_independent.json": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "unclassified_signature_analysis.json": "fd4751a578e330d9d942c45b51a8ef1056dfa9a58cb4e42bfd6db3a61f79099e",
+    "unclassified-signatures.png": "f94b1a7711bc88f9703970c412b14ae5edced4ce2614b4bb65fa75518fd0c158",
+    "UNCLASSIFIED_SIGNATURES.md": "e9a851e6c66a7621d7f0b80f479d2ccca05235159ed8e16062b672b948e59eed",
+    "Floquet-BdG-未归类与未复现诊断.docx": "b1278846ad2962d762ae75459e0c43a017600eaadfd388f79ffc1d1ce943e5d8",
+    "unclassified-word-qa.json": "1737eaaba6df1f64de6363a0acb6b1c2897fa2e9db99ab8c26557739f80b1a45",
+    "unclassified-word-render/report.json": "1b34e904efa5c8611c0d2476ba324a1dc12bacde05b9e2886aae427a3bf632df",
+    "analyze_unclassified_signatures.py": "a1b3a72af3e99b6a5b071fa6240fc4461845c4abb85d628e309d25b34600a3e2",
+    "build_unclassified_report.js": "6b3f169d72b39e20ab80cb1a226f08fa2f0fb52f34a971e83226a2c83131861b",
+    "record_unclassified_qa.py": "0f33a0dcf1609ca79daf7041f8c9e3eb93377bf0ce09bc6342b5e74bb74b3ac9",
+    "test_unclassified_signatures.py": "ac6af2e41babbdb9a1b90b0a01f3e210f51339374456dfd369e261353f1b2996",
+    "unclassified_run.log": "77ced58604b74ec19c11a382d9959227337d89a275eec138d4a3fb6f76d3ef2f"
+  },
+  "scope": {
+    "unclassified_condition_audit_evaluated": true,
+    "unclassified_not_homogeneous": true,
+    "right_weakening_new_seed_recurrences": 0,
+    "near_misses_are_not_reference_recurrence": true,
+    "new_taxonomy_claim": false,
+    "n640_automatically_justified": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "unclassified_run.log"
+}

@@ -1,0 +1,86 @@
+$ signature_audit: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_unclassified_signatures.py
+{
+  "schema": "floquet-bdg-unclassified-signature-analysis-v1",
+  "analysis_date": "2026-11-11",
+  "source_sha256": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+  "new_independent_source_sha256": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+  "original_independent_source_sha256": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+  "analysis_role": "condition_audit_not_new_taxonomy",
+  "new_seed_count": 0,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "new_taxonomy_claim": false,
+  "unclassified_not_homogeneous": true,
+  "original_category_counts": {
+    "tail_growth_without_endpoint_recovery": 3,
+    "right_end_weakening_with_broadening": 1,
+    "right_end_driven_symmetrization": 3,
+    "left_end_driven_threshold": 2,
+    "other_unclassified": 7
+  },
+  "reference_weakening_new_seed_recurrences": 0,
+  "signature_counts": {
+    "positive_edge_tail_shorter_or_asymmetry_up": 2,
+    "mixed_nonmatching_sign_combinations": 4,
+    "right_weakening_with_symmetrization": 1
+  }
+}
+generated unclassified_signature_analysis.json unclassified-signatures.png UNCLASSIFIED_SIGNATURES.md
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-未归类与未复现诊断.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_unclassified_qa.py
+{
+  "schema": "floquet-bdg-unclassified-word-qa-v1",
+  "recordedUtc": "2026-11-11T07:31:45.165847+00:00",
+  "sourceSha256": {
+    "unclassified_signature_analysis.json": "fd4751a578e330d9d942c45b51a8ef1056dfa9a58cb4e42bfd6db3a61f79099e",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "unclassified-signatures.png": "f94b1a7711bc88f9703970c412b14ae5edced4ce2614b4bb65fa75518fd0c158",
+    "build_unclassified_report.js": "6b3f169d72b39e20ab80cb1a226f08fa2f0fb52f34a971e83226a2c83131861b"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "b1278846ad2962d762ae75459e0c43a017600eaadfd388f79ffc1d1ce943e5d8",
+    "renderReportSha256": "1b34e904efa5c8611c0d2476ba324a1dc12bacde05b9e2886aae427a3bf632df"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "b1278846ad2962d762ae75459e0c43a017600eaadfd388f79ffc1d1ce943e5d8",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "note": "全部单页已查看；目录、公式、条件图、未归类表和近 miss 解释清晰，无近空白页或裁切。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_unclassified_signatures.py -v
+test_figure_markdown_and_word_visual_gate (__main__.UnclassifiedSignatureTests.test_figure_markdown_and_word_visual_gate) ... ok
+test_near_misses_explain_zero_weakening_recurrence (__main__.UnclassifiedSignatureTests.test_near_misses_explain_zero_weakening_recurrence) ... ok
+test_registry_preserves_sources_and_scope (__main__.UnclassifiedSignatureTests.test_registry_preserves_sources_and_scope) ... ok
+test_signatures_do_not_change_original_categories (__main__.UnclassifiedSignatureTests.test_signatures_do_not_change_original_categories) ... ok
+test_unclassified_has_three_descriptive_signatures (__main__.UnclassifiedSignatureTests.test_unclassified_has_three_descriptive_signatures) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.024s
+
+OK
+exit_code=0

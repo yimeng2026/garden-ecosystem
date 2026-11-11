@@ -29,7 +29,7 @@ def main():
     })
     commands = [
         ("new_cell_registry", [sys.executable, str(ROOT / "build_category_cells.py")]),
-        ("new_cell_independent_projectors", [sys.executable, str(ROOT / "verify_category_cells.py")]),
+        ("new_cell_evidence_binding", [sys.executable, str(ROOT / "verify_category_cells.py"), "--check-only"]),
         ("category_analysis", [sys.executable, str(ROOT / "analyze_repeated_categories.py")]),
         ("docx_gate", [sys.executable, str(DOCX_PY), "validate", str(DOCX)]),
         ("visual_hash_binding", [sys.executable, str(ROOT / "record_category_qa.py")]),

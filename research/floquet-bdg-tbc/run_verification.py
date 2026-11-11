@@ -54,6 +54,7 @@ def main():
         ("multi_seed_suite", [sys.executable, str(ROOT / "run_multi_seed_verification.py")], 180),
         ("reversal_suite", [sys.executable, str(ROOT / "run_reversal_verification.py")], 180),
         ("category_suite", [sys.executable, str(ROOT / "run_category_verification.py")], 180),
+        ("unclassified_suite", [sys.executable, str(ROOT / "run_unclassified_verification.py")], 180),
     ]
     rows, logs = [], []
     for label, command, timeout in commands:
@@ -79,6 +80,7 @@ def main():
     multi_seed_verification = json.loads((ROOT / "multi_seed_verification.json").read_text(encoding="utf-8")) if (ROOT / "multi_seed_verification.json").exists() else {}
     reversal_verification = json.loads((ROOT / "reversal_verification.json").read_text(encoding="utf-8")) if (ROOT / "reversal_verification.json").exists() else {}
     category_verification = json.loads((ROOT / "category_verification.json").read_text(encoding="utf-8")) if (ROOT / "category_verification.json").exists() else {}
+    unclassified_verification = json.loads((ROOT / "unclassified_verification.json").read_text(encoding="utf-8")) if (ROOT / "unclassified_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -132,6 +134,11 @@ def main():
         "category_verification.json", "category_run.log", "build_category_cells.py", "verify_category_cells.py",
         "analyze_repeated_categories.py", "build_category_report.js", "record_category_qa.py",
         "test_repeated_categories.py", "run_category_verification.py",
+        "unclassified_signature_analysis.json", "unclassified-signatures.png", "UNCLASSIFIED_SIGNATURES.md",
+        "Floquet-BdG-未归类与未复现诊断.docx", "unclassified-word-qa.json", "unclassified-word-render/report.json",
+        "unclassified_verification.json", "unclassified_run.log", "analyze_unclassified_signatures.py",
+        "build_unclassified_report.js", "record_unclassified_qa.py", "test_unclassified_signatures.py",
+        "run_unclassified_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py",
@@ -142,7 +149,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -182,6 +189,9 @@ def main():
         "category_all_passed": category_verification.get("all_passed"),
         "category_new_independent_projectors_passed": category_verification.get("new_independent_projectors_passed"),
         "category_visual_review_status": category_verification.get("visual_review_status"),
+        "unclassified_all_passed": unclassified_verification.get("all_passed"),
+        "unclassified_new_independent_projectors_passed": unclassified_verification.get("new_independent_projectors_passed"),
+        "unclassified_visual_review_status": unclassified_verification.get("visual_review_status"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
@@ -207,6 +217,10 @@ def main():
             "right_symmetrization_new_seed_recurrences": 2,
             "right_weakening_new_seed_recurrences": 0,
             "other_unclassified_count": 7,
+            "unclassified_condition_audit_evaluated": "passed",
+            "unclassified_not_homogeneous": True,
+            "near_misses_are_not_reference_recurrence": True,
+            "new_taxonomy_claim": False,
             "universal_category_claim": False,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,
             "paired_control_rows": 12, "uniform_controls_are_independent_random_samples": False,

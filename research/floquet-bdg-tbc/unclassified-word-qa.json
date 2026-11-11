@@ -1,0 +1,38 @@
+{
+  "schema": "floquet-bdg-unclassified-word-qa-v1",
+  "recordedUtc": "2026-11-11T07:31:45.165847+00:00",
+  "sourceSha256": {
+    "unclassified_signature_analysis.json": "fd4751a578e330d9d942c45b51a8ef1056dfa9a58cb4e42bfd6db3a61f79099e",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "unclassified-signatures.png": "f94b1a7711bc88f9703970c412b14ae5edced4ce2614b4bb65fa75518fd0c158",
+    "build_unclassified_report.js": "6b3f169d72b39e20ab80cb1a226f08fa2f0fb52f34a971e83226a2c83131861b"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "b1278846ad2962d762ae75459e0c43a017600eaadfd388f79ffc1d1ce943e5d8",
+    "renderReportSha256": "1b34e904efa5c8611c0d2476ba324a1dc12bacde05b9e2886aae427a3bf632df"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "b1278846ad2962d762ae75459e0c43a017600eaadfd388f79ffc1d1ce943e5d8",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "note": "全部单页已查看；目录、公式、条件图、未归类表和近 miss 解释清晰，无近空白页或裁切。"
+  }
+}

@@ -10,7 +10,7 @@ test_disordered_onsite_terms_and_chiral (__main__.TBCStructureTests.test_disorde
 test_step_origin_and_unitarity (__main__.TBCStructureTests.test_step_origin_and_unitarity) ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 12.534s
+Ran 9 tests in 15.701s
 
 OK
 exit_code=0
@@ -49,7 +49,7 @@ test_strength_checkpoint_row_counts (__main__.DisorderContractTests.test_strengt
 test_uniform_control_is_separate (__main__.DisorderContractTests.test_uniform_control_is_separate) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.646s
+Ran 8 tests in 0.672s
 
 OK
 exit_code=0
@@ -93,7 +93,7 @@ test_markdown_matches_failures_and_control_scope (__main__.ReportContractTests.t
 test_visual_review_hashes_are_current (__main__.ReportContractTests.test_visual_review_hashes_are_current) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.013s
+Ran 5 tests in 0.015s
 
 OK
 exit_code=0
@@ -105,7 +105,7 @@ test_preregistered_registry (__main__.FiniteSizeTargetTests.test_preregistered_r
 test_zero_only_evaluation_preserves_amplitude_contract (__main__.FiniteSizeTargetTests.test_zero_only_evaluation_preserves_amplitude_contract) ... ok
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.155s
+Ran 4 tests in 0.158s
 
 OK
 exit_code=0
@@ -134,7 +134,7 @@ test_size_trend_table (__main__.FiniteSizeReportTests.test_size_trend_table) ...
 test_visual_hash_binding (__main__.FiniteSizeReportTests.test_visual_hash_binding) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.315s
+Ran 5 tests in 0.308s
 
 OK
 exit_code=0
@@ -149,7 +149,7 @@ test_eigh_free_propagator_matches_expm (__main__.SpectralBackendTests.test_eigh_
 test_single_grid_cannot_claim_convergence (__main__.SpectralBackendTests.test_single_grid_cannot_claim_convergence) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.393s
+Ran 5 tests in 0.391s
 
 OK
 exit_code=0
@@ -178,7 +178,7 @@ test_registry_and_independent_counts (__main__.N320ReportTests.test_registry_and
 test_visual_hash_binding (__main__.N320ReportTests.test_visual_hash_binding) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.012s
+Ran 5 tests in 0.011s
 
 OK
 exit_code=0
@@ -193,7 +193,7 @@ test_chunk_resume_and_reference_equality (__main__.ResumableWindingTests.test_ch
 test_metadata_mismatch_is_rejected (__main__.ResumableWindingTests.test_metadata_mismatch_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.303s
+Ran 5 tests in 0.287s
 
 OK
 exit_code=0
@@ -221,7 +221,7 @@ test_n400_result_and_independent_agreement (__main__.ScaleReportTests.test_n400_
 test_visual_hash_binding (__main__.ScaleReportTests.test_visual_hash_binding) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.025s
+Ran 5 tests in 0.017s
 
 OK
 exit_code=0
@@ -236,7 +236,7 @@ test_chunk_resume_and_reference_equality (__main__.ResumableWindingTests.test_ch
 test_metadata_mismatch_is_rejected (__main__.ResumableWindingTests.test_metadata_mismatch_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.294s
+Ran 5 tests in 0.285s
 
 OK
 exit_code=0
@@ -264,7 +264,7 @@ test_tail_metrics_and_markdown (__main__.N600ReportTests.test_tail_metrics_and_m
 test_visual_status_is_unavailable_not_passed (__main__.N600ReportTests.test_visual_status_is_unavailable_not_passed) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.014s
+Ran 5 tests in 0.015s
 
 OK
 exit_code=0
@@ -478,7 +478,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_endpoint_qa.py
 {
   "schema": "floquet-bdg-endpoint-word-qa-v1",
-  "recordedUtc": "2026-11-11T07:04:05.752892+00:00",
+  "recordedUtc": "2026-11-11T07:31:07.151524+00:00",
   "sourceSha256": {
     "endpoint_subspace_analysis.json": "a37ca37fe9c8aaf54f1d363cc2ba3006efb4857c1aa97ba2999f37b681c98b74",
     "endpoint-subspaces.png": "309c027bff0a26059e6453f8a3d63c893a2e1c419c773f48fec5a90d8ffd3be5",
@@ -616,7 +616,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_matched_qa.py
 {
   "schema": "floquet-bdg-matched-word-qa-v1",
-  "recordedUtc": "2026-11-11T07:04:12.466232+00:00",
+  "recordedUtc": "2026-11-11T07:31:14.330983+00:00",
   "sourceSha256": {
     "matched_profile_control.json": "77e01d93c6fd466fde283b34c6afffc52d73acf4a38af18febf87bb56f733a04",
     "matched_profile_independent.json": "1659c566c87a05e14e2de9fa5f3bd8044c9cd2b235c2c0c12dfdb6f5ffc36ab6",
@@ -662,7 +662,7 @@ test_observed_directions_do_not_promote_new_topology (__main__.MatchedProfileTes
 test_word_error_value_matches_latest_independent_backend (__main__.MatchedProfileTests.test_word_error_value_matches_latest_independent_backend) ... ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.019s
+Ran 7 tests in 0.024s
 
 OK
 exit_code=0
@@ -963,7 +963,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_multi_seed_qa.py
 {
   "schema": "floquet-bdg-multi-seed-word-qa-v1",
-  "recordedUtc": "2026-11-11T07:04:35.319497+00:00",
+  "recordedUtc": "2026-11-11T07:31:39.335192+00:00",
   "sourceSha256": {
     "multi_seed_protocol.json": "d6f1a440a94ef75bc57ebef64f76a9a3d5e5978ee3016c3340bd63bab454521c",
     "multi_seed_profile_control.json": "d903eadbdecc716719fccd33b5bddd8464be5a59dc1a65dacc75c751756e6c01",
@@ -1010,7 +1010,7 @@ test_stability_conclusions_match_all_sign_counts (__main__.MultiSeedTests.test_s
 test_word_error_value_matches_latest_independent_backend (__main__.MultiSeedTests.test_word_error_value_matches_latest_independent_backend) ... ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.034s
+Ran 7 tests in 0.042s
 
 OK
 exit_code=0
@@ -1604,7 +1604,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_reversal_qa.py
 {
   "schema": "floquet-bdg-reversal-word-qa-v1",
-  "recordedUtc": "2026-11-11T07:04:36.618107+00:00",
+  "recordedUtc": "2026-11-11T07:31:40.655425+00:00",
   "sourceSha256": {
     "reversal_unit_analysis.json": "554b60d7fc514f18cfdf411d2ff6ca350990adac22320a4b3337310004a7598f",
     "multi_seed_profile_control.json": "d903eadbdecc716719fccd33b5bddd8464be5a59dc1a65dacc75c751756e6c01",
@@ -1650,7 +1650,7 @@ test_seed1_is_right_driven_symmetrization (__main__.ReversalUnitTests.test_seed1
 test_seed2_is_broadening_not_endpoint_loss (__main__.ReversalUnitTests.test_seed2_is_broadening_not_endpoint_loss) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.013s
+Ran 6 tests in 0.012s
 
 OK
 exit_code=0
@@ -1660,291 +1660,8 @@ $ category_suite: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daim
 $ new_cell_registry: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\build_category_cells.py
 {"merge_only": true, "cases": 16, "protocol_sha256": "3cf8e4b5347cdadf2f172972243856530932be1c32a26c3a22fe7a11e38a9cac"}
 exit_code=0
-$ new_cell_independent_projectors: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_category_cells.py
-{
-  "schema": "floquet-bdg-category-new-cells-independent-v1",
-  "protocol_sha256": "3cf8e4b5347cdadf2f172972243856530932be1c32a26c3a22fe7a11e38a9cac",
-  "analysis_sha256": "8df63b89ad43a2ef196b5137f942144d93b414c0b0abb3e5a2bf84b6e476d6ae",
-  "eigensolver": "scipy.linalg.eig",
-  "projector": "direct_gram_inverse",
-  "tolerance": 1e-10,
-  "all_passed": true,
-  "cases": [
-    {
-      "n": 400,
-      "strength": 0.05,
-      "seed": 4,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 5.204170427930421e-18,
-          "edge_weight_absolute_error": 0.0
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 5.204170427930421e-18,
-          "edge_weight_absolute_error": 2.7755575615628914e-17
-        }
-      ]
-    },
-    {
-      "n": 400,
-      "strength": 0.05,
-      "seed": 5,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 2.0816681711721685e-17,
-          "edge_weight_absolute_error": 0.0
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 5.204170427930421e-18,
-          "edge_weight_absolute_error": 0.0
-        }
-      ]
-    },
-    {
-      "n": 400,
-      "strength": 0.05,
-      "seed": 6,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 1.3877787807814457e-17,
-          "edge_weight_absolute_error": 0.0
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 8.673617379884035e-18,
-          "edge_weight_absolute_error": 1.3877787807814457e-17
-        }
-      ]
-    },
-    {
-      "n": 400,
-      "strength": 0.05,
-      "seed": 7,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 1.3877787807814457e-17,
-          "edge_weight_absolute_error": 1.1102230246251565e-16
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 6.938893903907228e-18,
-          "edge_weight_absolute_error": 5.551115123125783e-17
-        }
-      ]
-    },
-    {
-      "n": 400,
-      "strength": 0.1,
-      "seed": 4,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 6.938893903907228e-18,
-          "edge_weight_absolute_error": 0.0
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 6.938893903907228e-18,
-          "edge_weight_absolute_error": 2.7755575615628914e-17
-        }
-      ]
-    },
-    {
-      "n": 400,
-      "strength": 0.1,
-      "seed": 5,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 2.42861286636753e-17,
-          "edge_weight_absolute_error": 2.220446049250313e-16
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 1.0408340855860843e-17,
-          "edge_weight_absolute_error": 2.0816681711721685e-17
-        }
-      ]
-    },
-    {
-      "n": 400,
-      "strength": 0.1,
-      "seed": 6,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 1.214306433183765e-17,
-          "edge_weight_absolute_error": 0.0
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 7.806255641895632e-18,
-          "edge_weight_absolute_error": 5.551115123125783e-17
-        }
-      ]
-    },
-    {
-      "n": 400,
-      "strength": 0.1,
-      "seed": 7,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 2.7755575615628914e-17,
-          "edge_weight_absolute_error": 4.440892098500626e-16
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 5.204170427930421e-18,
-          "edge_weight_absolute_error": 3.469446951953614e-18
-        }
-      ]
-    },
-    {
-      "n": 600,
-      "strength": 0.05,
-      "seed": 4,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 6.938893903907228e-18,
-          "edge_weight_absolute_error": 2.220446049250313e-16
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 1.0408340855860843e-17,
-          "edge_weight_absolute_error": 4.163336342344337e-17
-        }
-      ]
-    },
-    {
-      "n": 600,
-      "strength": 0.05,
-      "seed": 5,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 6.938893903907228e-18,
-          "edge_weight_absolute_error": 1.1102230246251565e-16
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 4.336808689942018e-18,
-          "edge_weight_absolute_error": 1.3877787807814457e-17
-        }
-      ]
-    },
-    {
-      "n": 600,
-      "strength": 0.05,
-      "seed": 6,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 1.0408340855860843e-17,
-          "edge_weight_absolute_error": 2.7755575615628914e-16
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 6.938893903907228e-18,
-          "edge_weight_absolute_error": 5.551115123125783e-17
-        }
-      ]
-    },
-    {
-      "n": 600,
-      "strength": 0.05,
-      "seed": 7,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 5.204170427930421e-18,
-          "edge_weight_absolute_error": 5.551115123125783e-17
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 3.469446951953614e-18,
-          "edge_weight_absolute_error": 4.163336342344337e-17
-        }
-      ]
-    },
-    {
-      "n": 600,
-      "strength": 0.1,
-      "seed": 4,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 1.3877787807814457e-17,
-          "edge_weight_absolute_error": 2.220446049250313e-16
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 1.5612511283791264e-17,
-          "edge_weight_absolute_error": 6.938893903907228e-17
-        }
-      ]
-    },
-    {
-      "n": 600,
-      "strength": 0.1,
-      "seed": 5,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 1.0408340855860843e-17,
-          "edge_weight_absolute_error": 2.220446049250313e-16
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 6.938893903907228e-18,
-          "edge_weight_absolute_error": 6.938893903907228e-18
-        }
-      ]
-    },
-    {
-      "n": 600,
-      "strength": 0.1,
-      "seed": 6,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 1.734723475976807e-17,
-          "edge_weight_absolute_error": 3.3306690738754696e-16
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 6.938893903907228e-18,
-          "edge_weight_absolute_error": 0.0
-        }
-      ]
-    },
-    {
-      "n": 600,
-      "strength": 0.1,
-      "seed": 7,
-      "pairs": [
-        {
-          "pair_index": 0,
-          "max_profile_absolute_error": 1.734723475976807e-17,
-          "edge_weight_absolute_error": 3.3306690738754696e-16
-        },
-        {
-          "pair_index": 1,
-          "max_profile_absolute_error": 6.938893903907228e-18,
-          "edge_weight_absolute_error": 2.0816681711721685e-17
-        }
-      ]
-    }
-  ],
-  "scope": "Independent numerical reproduction of the new cells only; original seed=0..3 verification is unchanged."
-}
+$ new_cell_evidence_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_category_cells.py --check-only
+{"check_only": true, "independent_cells": 16, "all_passed": true}
 exit_code=0
 $ category_analysis: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_repeated_categories.py
 {
@@ -2000,7 +1717,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_category_qa.py
 {
   "schema": "floquet-bdg-category-word-qa-v1",
-  "recordedUtc": "2026-11-11T07:05:01.204776+00:00",
+  "recordedUtc": "2026-11-11T07:31:43.840775+00:00",
   "sourceSha256": {
     "repeated_category_protocol.json": "3cf8e4b5347cdadf2f172972243856530932be1c32a26c3a22fe7a11e38a9cac",
     "category_new_cells.json": "8df63b89ad43a2ef196b5137f942144d93b414c0b0abb3e5a2bf84b6e476d6ae",
@@ -2051,4 +1768,93 @@ Ran 5 tests in 0.041s
 OK
 exit_code=0
 category_overall passed
+exit_code=0
+$ unclassified_suite: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_unclassified_verification.py
+$ signature_audit: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_unclassified_signatures.py
+{
+  "schema": "floquet-bdg-unclassified-signature-analysis-v1",
+  "analysis_date": "2026-11-11",
+  "source_sha256": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+  "new_independent_source_sha256": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+  "original_independent_source_sha256": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+  "analysis_role": "condition_audit_not_new_taxonomy",
+  "new_seed_count": 0,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "new_taxonomy_claim": false,
+  "unclassified_not_homogeneous": true,
+  "original_category_counts": {
+    "tail_growth_without_endpoint_recovery": 3,
+    "right_end_weakening_with_broadening": 1,
+    "right_end_driven_symmetrization": 3,
+    "left_end_driven_threshold": 2,
+    "other_unclassified": 7
+  },
+  "reference_weakening_new_seed_recurrences": 0,
+  "signature_counts": {
+    "positive_edge_tail_shorter_or_asymmetry_up": 2,
+    "mixed_nonmatching_sign_combinations": 4,
+    "right_weakening_with_symmetrization": 1
+  }
+}
+generated unclassified_signature_analysis.json unclassified-signatures.png UNCLASSIFIED_SIGNATURES.md
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-未归类与未复现诊断.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_unclassified_qa.py
+{
+  "schema": "floquet-bdg-unclassified-word-qa-v1",
+  "recordedUtc": "2026-11-11T07:31:45.165847+00:00",
+  "sourceSha256": {
+    "unclassified_signature_analysis.json": "fd4751a578e330d9d942c45b51a8ef1056dfa9a58cb4e42bfd6db3a61f79099e",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "unclassified-signatures.png": "f94b1a7711bc88f9703970c412b14ae5edced4ce2614b4bb65fa75518fd0c158",
+    "build_unclassified_report.js": "6b3f169d72b39e20ab80cb1a226f08fa2f0fb52f34a971e83226a2c83131861b"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "b1278846ad2962d762ae75459e0c43a017600eaadfd388f79ffc1d1ce943e5d8",
+    "renderReportSha256": "1b34e904efa5c8611c0d2476ba324a1dc12bacde05b9e2886aae427a3bf632df"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "b1278846ad2962d762ae75459e0c43a017600eaadfd388f79ffc1d1ce943e5d8",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "note": "全部单页已查看；目录、公式、条件图、未归类表和近 miss 解释清晰，无近空白页或裁切。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_unclassified_signatures.py -v
+test_figure_markdown_and_word_visual_gate (__main__.UnclassifiedSignatureTests.test_figure_markdown_and_word_visual_gate) ... ok
+test_near_misses_explain_zero_weakening_recurrence (__main__.UnclassifiedSignatureTests.test_near_misses_explain_zero_weakening_recurrence) ... ok
+test_registry_preserves_sources_and_scope (__main__.UnclassifiedSignatureTests.test_registry_preserves_sources_and_scope) ... ok
+test_signatures_do_not_change_original_categories (__main__.UnclassifiedSignatureTests.test_signatures_do_not_change_original_categories) ... ok
+test_unclassified_has_three_descriptive_signatures (__main__.UnclassifiedSignatureTests.test_unclassified_has_three_descriptive_signatures) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.024s
+
+OK
+exit_code=0
+unclassified_overall passed
 exit_code=0

@@ -74,6 +74,8 @@ class RepeatedCategoryTests(unittest.TestCase):
         self.assertTrue(result["all_passed"])
         self.assertEqual(result["eigensolver"], "scipy.linalg.eig")
         self.assertEqual(result["projector"], "direct_gram_inverse")
+        self.assertEqual(result["analysis_sha256"], sha(ROOT / "category_new_cells.json"))
+        self.assertIn('"--check-only"', (ROOT / "run_category_verification.py").read_text(encoding="utf-8"))
         self.assertEqual(len(result["cases"]), 16)
         for row in result["cases"]:
             self.assertGreaterEqual(row["seed"], 4)

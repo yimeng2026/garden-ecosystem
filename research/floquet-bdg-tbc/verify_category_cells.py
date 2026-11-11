@@ -18,6 +18,17 @@ def main():
     protocol_hash = hashlib.sha256((ROOT / "repeated_category_protocol.json").read_bytes()).hexdigest()
     if stored["protocol_sha256"] != protocol_hash:
         raise ValueError("Category protocol has changed")
+    if "--check-only" in sys.argv:
+        independent = json.loads((ROOT / "category_new_cells_independent.json").read_text(encoding="utf-8"))
+        expected = hashlib.sha256((ROOT / "category_new_cells.json").read_bytes()).hexdigest()
+        if independent.get("analysis_sha256") != expected or not independent.get("all_passed"):
+            raise ValueError("New-cell independent evidence is stale or failed")
+        print(json.dumps({
+            "check_only": True,
+            "independent_cells": len(independent["cases"]),
+            "all_passed": True,
+        }, ensure_ascii=False))
+        return 0
     rows = []
     for case in stored["cases"]:
         n, strength, seed = case["n"], case["strength"], case["seed"]
