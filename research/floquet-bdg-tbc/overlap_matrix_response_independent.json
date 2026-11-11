@@ -1,0 +1,23 @@
+{
+  "schema": "floquet-bdg-overlap-matrix-response-independent-v1",
+  "protocol_sha256": "903b1504d5e6c3b8bd2f480260b42acb73d9d6739911efeab2bd48baf8bd6ddf",
+  "analysis_sha256": "f0868a20041fe72f63e8c517a0cd3c46ede5f2d763c5192f75298df1df25d935",
+  "method_grid_transition_count": 48,
+  "entry_transition_count": 192,
+  "singular_channel_transition_count": 384,
+  "representation_delta_comparison_count": 96,
+  "max_delta_absolute_error": 0.0,
+  "max_singular_delta_absolute_error": 0.0,
+  "max_ratio_absolute_error": 0.0,
+  "max_log2_ratio_absolute_error": 0.0,
+  "driver_mismatch_count": 0,
+  "agreement_mismatch_count": 0,
+  "source_independent_rechecks_all_passed": true,
+  "source_independent_sha256": {
+    "matched_beta_batch_a_independent.json": "a3629d3d5d8c5f4e9a6a71fa899b86fe60238f4890e45017405f6c15e743b11f",
+    "matched_beta_batch_b_independent.json": "8f10e82843a5e2bc8516dad6e166d5a0d1ffa892c78b8e5891b924d0eda418dc",
+    "matched_beta_batch_c_independent.json": "31d5413020b9bbee292be7107d3992a22225b22bff7daff39deb52ecc761b2c9"
+  },
+  "new_floquet_spectra_recomputed": false,
+  "all_passed": true
+}

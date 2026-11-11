@@ -1,0 +1,46 @@
+{
+  "schema": "floquet-bdg-overlap-matrix-response-word-qa-v1",
+  "recordedUtc": "2026-11-11T22:54:15.844196+00:00",
+  "sourceSha256": {
+    "overlap_matrix_response_protocol.json": "903b1504d5e6c3b8bd2f480260b42acb73d9d6739911efeab2bd48baf8bd6ddf",
+    "overlap_matrix_response_analysis.json": "f0868a20041fe72f63e8c517a0cd3c46ede5f2d763c5192f75298df1df25d935",
+    "overlap_matrix_response_independent.json": "3e7841762855a9b3d0645e0eb9b2ce2a984e1c6058cfd266f443e23d227bf495",
+    "matched_beta_batch_a_analysis.json": "871e5cfdc33a792ac4e0ec84e19a372a6a1b5154f0ec4262eee3ec8f8da9f898",
+    "matched_beta_batch_b_analysis.json": "c2055fa215bcab2cf23e1ec818d77b78b3e7d8f5c3809b4eedb69ab49eec2db5",
+    "matched_beta_batch_c_analysis.json": "3e08944f3c61a06f6a2ad119d88e9c62d5cc231627a03d7af760818d1b99cf13",
+    "overlap-matrix-response.png": "20fd000723795ece65d1b0794421ab3fc81b09719e1d42911fdce33fd18b10a9",
+    "build_overlap_matrix_response_report.js": "f997c02c4ff101c6102e44452621bc896d00c857be452b26e87b92e66961d1f5"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "69656c4dacb35ba4908841d033d74c33ecb29a771e9498d67edd123882f06ed7",
+    "renderReportSha256": "e464be276953f9929a04102fdcaa15c87db4d7cb158aca4005ee306ed36e3530"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "69656c4dacb35ba4908841d033d74c33ecb29a771e9498d67edd123882f06ed7",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看五个单页；原生公式、矩阵项表、主导项与奇异通道表、四面板图、分母范围及边界完整，无近空白页、裁切或表后叠字。"
+  }
+}

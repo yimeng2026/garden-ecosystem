@@ -1,0 +1,128 @@
+{
+  "schema": "floquet-bdg-overlap-matrix-response-verification-v1",
+  "recorded_utc": "2026-11-11T22:54:34.260313+00:00",
+  "all_passed": true,
+  "test_count": 8,
+  "check_only": true,
+  "independent_recheck_passed": true,
+  "independent_max_delta_absolute_error": 0.0,
+  "independent_max_singular_delta_absolute_error": 0.0,
+  "independent_max_ratio_absolute_error": 0.0,
+  "visual_review_status": "passed",
+  "rendered_pages": 5,
+  "commands": [
+    {
+      "label": "overlap_matrix_response_evidence_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_overlap_matrix_response.py",
+        "--check-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "overlap_matrix_response_independent_recheck",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\verify_overlap_matrix_response.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-重叠矩阵响应分解.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_overlap_matrix_response_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_overlap_matrix_response.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "overlap_matrix_response_protocol.json": "903b1504d5e6c3b8bd2f480260b42acb73d9d6739911efeab2bd48baf8bd6ddf",
+    "overlap_matrix_response_analysis.json": "f0868a20041fe72f63e8c517a0cd3c46ede5f2d763c5192f75298df1df25d935",
+    "overlap_matrix_response_independent.json": "3e7841762855a9b3d0645e0eb9b2ce2a984e1c6058cfd266f443e23d227bf495",
+    "overlap-matrix-response.png": "20fd000723795ece65d1b0794421ab3fc81b09719e1d42911fdce33fd18b10a9",
+    "OVERLAP_MATRIX_RESPONSE.md": "e1dda2371c7981b0f61d658eeac488392a67764140917a96ca5b405910d8973c",
+    "Floquet-BdG-重叠矩阵响应分解.docx": "69656c4dacb35ba4908841d033d74c33ecb29a771e9498d67edd123882f06ed7",
+    "overlap-matrix-response-word-qa.json": "d23e15b0860a3a3bcf3c922f6c78495e63376ad710f96987a74fc0cb00723548",
+    "overlap-matrix-response-word-render/report.json": "e464be276953f9929a04102fdcaa15c87db4d7cb158aca4005ee306ed36e3530",
+    "overlap_matrix_response_run.log": "9d0aa1f9170e460ab5a71ffdf5d8e9886a63e03f05972f04c4c018146a838bb0",
+    "analyze_overlap_matrix_response.py": "c1ce947b57bea42f66ee40e76bb56f37be84c4f76ce9d560094fe7fd67e91046",
+    "verify_overlap_matrix_response.py": "cc8f3bc7931a78ad359e0a4330045a94c0d72868fc9f4e9d625a2f72dd5c1be2",
+    "build_overlap_matrix_response_report.js": "f997c02c4ff101c6102e44452621bc896d00c857be452b26e87b92e66961d1f5",
+    "record_overlap_matrix_response_qa.py": "ca9a902959685113bef45ec2209240c510b6cbd2009effc0f801884e3512b65e",
+    "test_overlap_matrix_response.py": "972c0b18716fa2271d70e75a56f4cf788d12fceab05aa6d91c578f9e1a175040",
+    "run_overlap_matrix_response_verification.py": "9620a37887ead7cdfc94c79940db0162671243a01ea146082fefb8c68a6ff29a",
+    "matched_beta_batch_a_analysis.json": "871e5cfdc33a792ac4e0ec84e19a372a6a1b5154f0ec4262eee3ec8f8da9f898",
+    "matched_beta_batch_b_analysis.json": "c2055fa215bcab2cf23e1ec818d77b78b3e7d8f5c3809b4eedb69ab49eec2db5",
+    "matched_beta_batch_c_analysis.json": "3e08944f3c61a06f6a2ad119d88e9c62d5cc231627a03d7af760818d1b99cf13",
+    "matched_beta_batch_a_independent.json": "a3629d3d5d8c5f4e9a6a71fa899b86fe60238f4890e45017405f6c15e743b11f",
+    "matched_beta_batch_b_independent.json": "8f10e82843a5e2bc8516dad6e166d5a0d1ffa892c78b8e5891b924d0eda418dc",
+    "matched_beta_batch_c_independent.json": "31d5413020b9bbee292be7107d3992a22225b22bff7daff39deb52ecc761b2c9",
+    "swap_candidate_spectrum_analysis.json": "67283bfcf6d1f2d5a107f959ae9219d2e5fa2d14c27c5f9685de026ad62efc6d"
+  },
+  "scope": {
+    "overlap_matrix_response_analysis_evaluated": true,
+    "method_grid_transitions": 48,
+    "entry_transitions": 192,
+    "singular_channel_transitions": 384,
+    "representation_delta_comparisons": 96,
+    "new_floquet_cells_computed": 0,
+    "method_grid_assignment_change_count": 0,
+    "representation_sign_agreement_count": 96,
+    "representation_sign_disagreement_count": 0,
+    "entry_ratio_range_by_method": {
+      "linear_point": [
+        0.0003657430645199712,
+        1272.7636993885312
+      ],
+      "cell_average": [
+        0.00026950019602118804,
+        1185.096617215903
+      ]
+    },
+    "high_strength_controls": {
+      "representation_fidelity_range": [
+        0.9746956097201178,
+        0.9843937660543788
+      ],
+      "max_native_off_diagonal": 6.587724413508909e-27,
+      "max_linear_point_off_diagonal": 5.482891609688766e-07,
+      "max_cell_average_off_diagonal": 6.590046220808571e-27
+    },
+    "near_zero_denominator_caution_required": true,
+    "normalization_correction_applied": false,
+    "representation_invariant_claim": false,
+    "causal_mechanism_proven": false,
+    "statistical_significance_claim": false,
+    "universal_size_law_claim": false,
+    "continuous_path_proof": false,
+    "spectral_crossing_proven": false,
+    "state_exchange_proven": false,
+    "new_winding_computed": false,
+    "n640_computed": false,
+    "thermodynamic_limit_proof": false,
+    "old_candidate_is_different_realization": true,
+    "difference_from_original_is_not_size_effect": true
+  },
+  "log": "overlap_matrix_response_run.log"
+}
