@@ -66,13 +66,15 @@ def merge():
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--kind", choices=("disorder", "uniform_mean"), required=True)
-    parser.add_argument("--strength", type=float, choices=(0.05, 0.1), required=True)
-    parser.add_argument("--seed", type=int, choices=range(4), required=True)
+    parser.add_argument("--kind", choices=("disorder", "uniform_mean"))
+    parser.add_argument("--strength", type=float, choices=(0.05, 0.1))
+    parser.add_argument("--seed", type=int, choices=range(4))
     parser.add_argument("--merge-only", action="store_true")
     args = parser.parse_args()
     if args.merge_only:
         return merge()
+    if args.kind is None or args.strength is None or args.seed is None:
+        parser.error("single-case verification requires --kind, --strength, and --seed")
     case = next(
         case for case in n320_registry()
         if case["kind"] == args.kind and case["strength"] == args.strength and case["seed"] == args.seed

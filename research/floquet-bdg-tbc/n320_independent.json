@@ -1,0 +1,226 @@
+{
+  "schema": "floquet-bdg-tbc-n320-independent-v1",
+  "selected_count": 7,
+  "checks": [
+    {
+      "schema": "floquet-bdg-tbc-n320-independent-case-v1",
+      "case": {
+        "strength": 0.05,
+        "seed": 2,
+        "kind": "disorder",
+        "target": "zero",
+        "endpoint_class": "recovered"
+      },
+      "production_status": "ok",
+      "production_value": 0.9998954525453664,
+      "production_nearest_integer": 1,
+      "independent": {
+        "status": "ok",
+        "method": "independent Schur reconstruction and unwrapped det(block) phase",
+        "nominal_step": 0.05,
+        "actual_step": 0.049866550056980846,
+        "points": 126,
+        "raw_signed": 1.0000000000000002,
+        "value": 1.0000000000000002,
+        "nearest_integer": 1,
+        "integer_residual": 2.220446049250313e-16,
+        "min_bulk_gap": 0.002364790552666719,
+        "max_symmetry_error": 6.558708364829997e-14,
+        "max_block_condition": 1.0000000000000497,
+        "passed": true
+      },
+      "integer_agreement": true,
+      "rejection_category_independently_checked": false
+    },
+    {
+      "schema": "floquet-bdg-tbc-n320-independent-case-v1",
+      "case": {
+        "strength": 0.05,
+        "seed": 3,
+        "kind": "disorder",
+        "target": "zero",
+        "endpoint_class": "recovered"
+      },
+      "production_status": "ok",
+      "production_value": 0.9998954304191533,
+      "production_nearest_integer": 1,
+      "independent": {
+        "status": "ok",
+        "method": "independent Schur reconstruction and unwrapped det(block) phase",
+        "nominal_step": 0.05,
+        "actual_step": 0.049866550056980846,
+        "points": 126,
+        "raw_signed": 1.0,
+        "value": 1.0,
+        "nearest_integer": 1,
+        "integer_residual": 0.0,
+        "min_bulk_gap": 0.002410452989246551,
+        "max_symmetry_error": 4.6277355415518985e-14,
+        "max_block_condition": 1.0000000000000446,
+        "passed": true
+      },
+      "integer_agreement": true,
+      "rejection_category_independently_checked": false
+    },
+    {
+      "schema": "floquet-bdg-tbc-n320-independent-case-v1",
+      "case": {
+        "strength": 0.1,
+        "seed": 2,
+        "kind": "disorder",
+        "target": "zero",
+        "endpoint_class": "recovered"
+      },
+      "production_status": "ok",
+      "production_value": 0.9998955446425419,
+      "production_nearest_integer": 1,
+      "independent": {
+        "status": "ok",
+        "method": "independent Schur reconstruction and unwrapped det(block) phase",
+        "nominal_step": 0.05,
+        "actual_step": 0.049866550056980846,
+        "points": 126,
+        "raw_signed": 1.0,
+        "value": 1.0,
+        "nearest_integer": 1,
+        "integer_residual": 0.0,
+        "min_bulk_gap": 0.003394049086945943,
+        "max_symmetry_error": 8.210080026959288e-14,
+        "max_block_condition": 1.0000000000000435,
+        "passed": true
+      },
+      "integer_agreement": true,
+      "rejection_category_independently_checked": false
+    },
+    {
+      "schema": "floquet-bdg-tbc-n320-independent-case-v1",
+      "case": {
+        "strength": 0.05,
+        "seed": 0,
+        "kind": "disorder",
+        "target": "zero",
+        "endpoint_class": "not_recovered"
+      },
+      "production_status": "ok",
+      "production_value": 0.9998953928482138,
+      "production_nearest_integer": 1,
+      "independent": {
+        "status": "ok",
+        "method": "independent Schur reconstruction and unwrapped det(block) phase",
+        "nominal_step": 0.05,
+        "actual_step": 0.049866550056980846,
+        "points": 126,
+        "raw_signed": 1.0,
+        "value": 1.0,
+        "nearest_integer": 1,
+        "integer_residual": 0.0,
+        "min_bulk_gap": 0.0018730234476276018,
+        "max_symmetry_error": 6.3395369676225e-14,
+        "max_block_condition": 1.0000000000000453,
+        "passed": true
+      },
+      "integer_agreement": true,
+      "rejection_category_independently_checked": false
+    },
+    {
+      "schema": "floquet-bdg-tbc-n320-independent-case-v1",
+      "case": {
+        "strength": 0.1,
+        "seed": 0,
+        "kind": "disorder",
+        "target": "zero",
+        "endpoint_class": "not_recovered"
+      },
+      "production_status": "ok",
+      "production_value": 0.999895548527403,
+      "production_nearest_integer": 1,
+      "independent": {
+        "status": "ok",
+        "method": "independent Schur reconstruction and unwrapped det(block) phase",
+        "nominal_step": 0.05,
+        "actual_step": 0.049866550056980846,
+        "points": 126,
+        "raw_signed": 0.9999999999999999,
+        "value": 0.9999999999999999,
+        "nearest_integer": 1,
+        "integer_residual": 1.1102230246251565e-16,
+        "min_bulk_gap": 0.0034755255483302806,
+        "max_symmetry_error": 5.450152382779322e-14,
+        "max_block_condition": 1.0000000000000515,
+        "passed": true
+      },
+      "integer_agreement": true,
+      "rejection_category_independently_checked": false
+    },
+    {
+      "schema": "floquet-bdg-tbc-n320-independent-case-v1",
+      "case": {
+        "strength": 0.05,
+        "seed": 0,
+        "kind": "uniform_mean",
+        "target": "zero",
+        "endpoint_class": "uniform_control"
+      },
+      "production_status": "ok",
+      "production_value": 0.999895564653577,
+      "production_nearest_integer": 1,
+      "independent": {
+        "status": "ok",
+        "method": "independent Schur reconstruction and unwrapped det(block) phase",
+        "nominal_step": 0.05,
+        "actual_step": 0.049866550056980846,
+        "points": 126,
+        "raw_signed": 1.0000000000000002,
+        "value": 1.0000000000000002,
+        "nearest_integer": 1,
+        "integer_residual": 2.220446049250313e-16,
+        "min_bulk_gap": 0.011128010082120752,
+        "max_symmetry_error": 1.45717314722197e-14,
+        "max_block_condition": 1.000000000000043,
+        "passed": true
+      },
+      "integer_agreement": true,
+      "rejection_category_independently_checked": false
+    },
+    {
+      "schema": "floquet-bdg-tbc-n320-independent-case-v1",
+      "case": {
+        "strength": 0.1,
+        "seed": 0,
+        "kind": "uniform_mean",
+        "target": "zero",
+        "endpoint_class": "uniform_control"
+      },
+      "production_status": "ok",
+      "production_value": 0.9998955646717206,
+      "production_nearest_integer": 1,
+      "independent": {
+        "status": "ok",
+        "method": "independent Schur reconstruction and unwrapped det(block) phase",
+        "nominal_step": 0.05,
+        "actual_step": 0.049866550056980846,
+        "points": 126,
+        "raw_signed": 1.0,
+        "value": 1.0,
+        "nearest_integer": 1,
+        "integer_residual": 0.0,
+        "min_bulk_gap": 0.030947089845828925,
+        "max_symmetry_error": 9.416547854283941e-15,
+        "max_block_condition": 1.000000000000043,
+        "passed": true
+      },
+      "integer_agreement": true,
+      "rejection_category_independently_checked": false
+    }
+  ],
+  "passed": true,
+  "case_sha256": {
+    "n320_independent_r0p05_seed2_disorder.json": "4f83724ef639d5f61bbd7e615d9701622985d44821166ea21228ae8b0ec44c5e",
+    "n320_independent_r0p05_seed3_disorder.json": "964d3528b0c6d82f6cf707d8926c0493ec2ced2c899aac283d218afc8f5a071f",
+    "n320_independent_r0p10_seed2_disorder.json": "27b9c93b65c451096d3622fde6feea6d71d0d65fc4efa2376f9e61b746837366",
+    "n320_independent_r0p05_seed0_disorder.json": "cdcc7d6a382503044b068f0e6506fdfcf0314f684457e21c76b16a135517f032",
+    "n320_independent_r0p10_seed0_disorder.json": "c21e9dd70d98bfde040969383c15019b62d8c96587dec2d82a8aa6d194bc5fcd",
+    "n320_independent_r0p05_seed0_uniform_mean.json": "9338f14c21824ce83f5e537351ae7dd244c771c59bc3e2ddccb422ce829d5605",
+    "n320_independent_r0p10_seed0_uniform_mean.json": "402d420d8b79a0e4af9bbd3b156419a299106170164559430bb7a215cd7c6351"
+  }
+}
