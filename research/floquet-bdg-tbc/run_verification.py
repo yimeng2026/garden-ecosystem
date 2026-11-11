@@ -45,6 +45,7 @@ def main():
         ("docx_structure_gate", [sys.executable, str(DOCX_PY), "validate", str(DOCX)], 120),
         ("visual_hash_binding", [sys.executable, str(ROOT / "record_word_qa.py")], 60),
         ("report_contracts", [sys.executable, str(ROOT / "test_report.py"), "-v"], 60),
+        ("finite_size_suite", [sys.executable, str(ROOT / "run_finite_size_verification.py")], 180),
     ]
     rows, logs = [], []
     for label, command, timeout in commands:
@@ -61,12 +62,19 @@ def main():
     independent = json.loads((ROOT / "disorder_independent.json").read_text(encoding="utf-8"))
     recheck = json.loads((ROOT / "disorder_recheck.json").read_text(encoding="utf-8")) if (ROOT / "disorder_recheck.json").exists() else {}
     qa = json.loads((ROOT / "word-qa" / "report.json").read_text(encoding="utf-8"))
+    finite_verification = json.loads((ROOT / "finite_verification.json").read_text(encoding="utf-8")) if (ROOT / "finite_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
         "disorder_r0p05.json", "disorder_r0p10.json", "disorder_r0p20.json", "disorder_independent.json",
         "disorder_recheck.json", "disorder-winding.png", "disorder-gaps.png", "REPORT.md",
         "Floquet-BdG-TBC无序对照报告.docx", "word-qa/report.json", "run.log", "ERRATA.md",
+        "finite_size_zero.json", "finite_size_independent.json", "finite_size_independent_controls.json",
+        "finite_size_independent_remaining.json", "finite-size-winding.png", "finite-size-endpoints.png",
+        "FINITE_SIZE.md", "Floquet-BdG-TBC有限尺寸报告.docx", "finite-word-qa/report.json",
+        "finite_verification.json", "finite_run.log", "run_finite_size.py", "test_finite_size.py",
+        "verify_finite_size.py", "build_finite_size_report.py", "build_finite_size_report.js",
+        "record_finite_size_qa.py", "test_finite_size_report.py", "run_finite_size_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py",
@@ -77,7 +85,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -92,9 +100,12 @@ def main():
         "rendered_pages": qa.get("rendered"),
         "main_winding_valid_count": valid_count,
         "main_winding_not_converged_count": nc_count,
+        "finite_size_all_passed": finite_verification.get("all_passed"),
+        "finite_size_independent_count": finite_verification.get("independent_count"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
-            "disorder_evaluated": passed, "independent_disorder_realizations": 12,
+            "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
+            "n320_tbc_winding_computed": False, "independent_disorder_realizations": 12,
             "paired_control_rows": 12, "uniform_controls_are_independent_random_samples": False,
             "double_kick_diagnostic_excluded": True,
             "old_disorder_assessment": old_disorder["assessment"]["status"],

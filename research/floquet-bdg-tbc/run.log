@@ -10,7 +10,7 @@ test_disordered_onsite_terms_and_chiral (__main__.TBCStructureTests.test_disorde
 test_step_origin_and_unitarity (__main__.TBCStructureTests.test_step_origin_and_unitarity) ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 11.554s
+Ran 9 tests in 11.513s
 
 OK
 exit_code=0
@@ -49,7 +49,7 @@ test_strength_checkpoint_row_counts (__main__.DisorderContractTests.test_strengt
 test_uniform_control_is_separate (__main__.DisorderContractTests.test_uniform_control_is_separate) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.557s
+Ran 8 tests in 0.591s
 
 OK
 exit_code=0
@@ -93,7 +93,50 @@ test_markdown_matches_failures_and_control_scope (__main__.ReportContractTests.t
 test_visual_review_hashes_are_current (__main__.ReportContractTests.test_visual_review_hashes_are_current) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.014s
+Ran 5 tests in 0.015s
 
 OK
+exit_code=0
+$ finite_size_suite: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_finite_size_verification.py
+$ unit_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_finite_size.py -v
+test_incremental_case_checkpoint_and_incomplete_merge (__main__.FiniteSizeTargetTests.test_incremental_case_checkpoint_and_incomplete_merge) ... ok
+test_nested_beta_sequence (__main__.FiniteSizeTargetTests.test_nested_beta_sequence) ... ok
+test_preregistered_registry (__main__.FiniteSizeTargetTests.test_preregistered_registry) ... ok
+test_zero_only_evaluation_preserves_amplitude_contract (__main__.FiniteSizeTargetTests.test_zero_only_evaluation_preserves_amplitude_contract) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.168s
+
+OK
+exit_code=0
+$ registry_integrity: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_finite_size.py --merge-only
+finite_size_complete 11
+exit_code=0
+$ independent_integrity: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_finite_size.py --merge-only
+finite_size_independent 7 passed True
+exit_code=0
+$ report_data: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\build_finite_size_report.py
+generated finite-size-winding.png finite-size-endpoints.png FINITE_SIZE.md
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-TBC有限尺寸报告.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_finite_size_qa.py
+{"pages": 4, "manualReview": "passed", "docxSha256": "b7c4cb3122a4dd7757a13dd368c5eb3565b989b5169b7e9ef49302991cbf6e74"}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_finite_size_report.py -v
+test_docx_native_structure (__main__.FiniteSizeReportTests.test_docx_native_structure) ... ok
+test_markdown_and_figures_preserve_missing_n320 (__main__.FiniteSizeReportTests.test_markdown_and_figures_preserve_missing_n320) ... ok
+test_registry_and_independent_counts (__main__.FiniteSizeReportTests.test_registry_and_independent_counts) ... ok
+test_size_trend_table (__main__.FiniteSizeReportTests.test_size_trend_table) ... ok
+test_visual_hash_binding (__main__.FiniteSizeReportTests.test_visual_hash_binding) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.353s
+
+OK
+exit_code=0
+finite_size_overall passed
 exit_code=0
