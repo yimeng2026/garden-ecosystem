@@ -4,7 +4,7 @@
   "browser": "C:\\Users\\一梦\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1223\\chrome-headless-shell-win64\\chrome-headless-shell.exe",
   "pages": 4,
   "rendered": 4,
-  "ms": 1680,
+  "ms": 2761,
   "nearBlankPages": [],
   "fidelity": {
     "verdict": "lossy",
@@ -181,7 +181,7 @@
     {
       "page": 2,
       "file": "page-02.png",
-      "textChars": 821,
+      "textChars": 815,
       "media": 0,
       "nearBlank": false,
       "clipped": false
@@ -189,7 +189,7 @@
     {
       "page": 3,
       "file": "page-03.png",
-      "textChars": 361,
+      "textChars": 357,
       "media": 1,
       "nearBlank": false,
       "clipped": false

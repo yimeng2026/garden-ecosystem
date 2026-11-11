@@ -2,7 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import {
   AlignmentType, Document, Footer, FootnoteReferenceRun, Header, HeadingLevel,
-  ImageRun, ImportedXmlComponent, Math as MathEquation, MathRun, Packer,
+  ImageRun, ImportedXmlComponent, Math as MathEquation, MathFraction, MathRun,
+  MathSubScript, Packer,
   PageBreak, PageNumber, Paragraph, ShadingType, Table, TableCell, TableRow,
   TextRun, WidthType,
 } from "docx";
@@ -33,7 +34,8 @@ const makeTable = (headers, rows, widths, size = 10) => new Table({
   width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths,
   rows: [new TableRow({ tableHeader: true, cantSplit: true, children: headers.map((text, index) => cell(text, index, widths, true, size)) }), ...rows.map((row) => new TableRow({ cantSplit: true, children: row.map((text, index) => cell(text, index, widths, false, size)) }))],
 });
-const equation = (text) => para(new MathEquation({ children: [new MathRun(text)] }), { alignment: AlignmentType.CENTER, spacing: { before: 55, after: 70 } });
+const equation = (children) => para(new MathEquation({ children: Array.isArray(children) ? children : [new MathRun(children)] }), { alignment: AlignmentType.CENTER, spacing: { before: 55, after: 70 } });
+const sub = (base, subscript) => new MathSubScript({ children: [new MathRun(base)], subScript: [new MathRun(subscript)] });
 const footnote = (text) => para(run(text, { size: 15 }), { spacing: { after: 30, line: 190 } });
 const fmt = (value) => Number(value).toPrecision(5).replace(/\.0+$/, "");
 const pathRows = analysis.path.map((point) => [
@@ -56,7 +58,11 @@ const children = [
 
   heading(titles[0]),
   citedBody("所有强度点使用同一个 beta 随机流，因此变化只来自无序强度。相同 N 的二维子空间直接 QR 后比较，不再需要跨尺寸插值。", 1),
-  equation("c_p = (d_(2p) + d_(2p+1)) / 2,  Δc = |c_1 − c_0|"),
+  equation([
+    sub("c", "p"), new MathRun(" = "),
+    new MathFraction({ numerator: [sub("d", "2p"), new MathRun(" + "), sub("d", "2p+1")], denominator: [new MathRun("2")] }),
+    new MathRun(",　Δc = |"), sub("c", "1"), new MathRun(" − "), sub("c", "0"), new MathRun("|"),
+  ]),
   para(run("r=0.050 必须复现原冻结剖面、端点权重、谱距离和分离比；10⁻¹⁰ 仅用于复现，不是近简并或交叉阈值。", { size: 18, color: palette.light })),
   pathTable,
   para(run(`参考点最大剖面误差 ${analysis.max_reference_profile_absolute_error.toExponential(1)}，最大谱距离误差 ${analysis.max_reference_distance_absolute_error.toExponential(1)}。`, { size: 17, color: palette.light })),
@@ -64,7 +70,12 @@ const children = [
 
   heading(titles[1]),
   citedBody("同谱秩与交换分配均由相邻二维子空间的奇异值给出。这里比较同一 N 的子空间，不需要共同嵌入。", 2),
-  equation("D = (O_00 + O_11) / 2,  S = (O_01 + O_10) / 2"),
+  equation([
+    new MathRun("D = "),
+    new MathFraction({ numerator: [sub("O", "00"), new MathRun(" + "), sub("O", "11")], denominator: [new MathRun("2")] }),
+    new MathRun(",　S = "),
+    new MathFraction({ numerator: [sub("O", "01"), new MathRun(" + "), sub("O", "10")], denominator: [new MathRun("2")] }),
+  ]),
   para(new ImageRun({ type: "png", data: fs.readFileSync(path.join(root, "fixed-n-path.png")), transformation: { width: 500, height: Math.round(500 * 1366 / 1978) } }), { alignment: AlignmentType.CENTER, keepNext: true }),
   para(run("图 1　谱中心、中心间隔、既有分离比与相邻重叠。虚线为参考点 r=0.050。", { size: 16, italics: true }), { alignment: AlignmentType.CENTER }),
   body(`8条链接全部由同谱秩分配占优，没有交换分配链接。同尺寸相邻重叠范围为 ${fmt(Math.min(...analysis.links.map((row) => row.diagonal_score)))}–${fmt(Math.max(...analysis.links.map((row) => row.diagonal_score)))}。`),

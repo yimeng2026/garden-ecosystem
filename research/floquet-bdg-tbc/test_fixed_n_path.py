@@ -130,6 +130,8 @@ class FixedNPathTests(unittest.TestCase):
             footer = "".join(package.read(name).decode("utf-8") for name in package.namelist() if name.startswith("word/footer") and name.endswith(".xml"))
             media = [name for name in package.namelist() if name.startswith("word/media/") and not name.endswith("/")]
         self.assertIn("m:oMath", document)
+        self.assertIn("<m:sSub", document)
+        self.assertIn("<m:f>", document)
         self.assertIn("TOC", document)
         self.assertIn("PAGE", footer)
         self.assertEqual(len(media), 1)

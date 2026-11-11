@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-n600-path-word-qa-v1",
-  "recordedUtc": "2026-11-11T12:55:28.328010+00:00",
+  "recordedUtc": "2026-11-11T13:15:26.887234+00:00",
   "sourceSha256": {
     "n600_path_protocol.json": "b75dd435fadfce9fee59d3827336220fdde1b17ecb1b493c8463b87d98ea28fd",
     "n600_path_analysis.json": "42cfae36089c692c9aad952d5fa8139defdb99f6b658725d8558e8fc71a60938",
