@@ -1,0 +1,90 @@
+{
+  "schema": "floquet-bdg-subspace-overlap-verification-v1",
+  "recorded_utc": "2026-11-11T08:35:41.594738+00:00",
+  "all_passed": true,
+  "test_count": 6,
+  "original_independent_projectors_passed": true,
+  "new_independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "subspace_overlap_analysis",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_subspace_overlap.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-跨尺寸子空间重叠.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_subspace_overlap_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_subspace_overlap.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "subspace_overlap_protocol.json": "1c6c4b18fdbb8a0df42ffad36a7bbc7c44748b02b51d188b4fbbded62a453a71",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "pair_response_analysis.json": "87661b75fdb55d79ac766e7c527247ebde9d11d475fccd2c433582369b894b8d",
+    "multi_seed_independent.json": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "subspace_overlap_analysis.json": "ad158072c581628e86c44a4e0fd67cd2039ebbf2b2f16ce1ff4eb71afe09e283",
+    "subspace-overlap.png": "4e3b1d7a8295ff928f57839cfee9fd59ccf2d4c0d7584a2ad652d2b3b1fc41f6",
+    "SUBSPACE_OVERLAP.md": "3dbf35901b927cec587efb9824c1c698afa17ecab4648702576bc45b04fa5d68",
+    "Floquet-BdG-跨尺寸子空间重叠.docx": "9bf03f5d51a5900de0f11d5606b70a13520d631beee1a2b26a935cc1d9271f13",
+    "subspace-overlap-word-qa.json": "d7a822079aeab6420a80cd831c696fe3a62a5e6fc33744f66c9fe653d68cc420",
+    "subspace-overlap-word-render/report.json": "fff421643093030393d4da059102bfb789cd1ddd479d763f3371abe76314d2d9",
+    "analyze_subspace_overlap.py": "480ac17aee642698dbe98eeb27aca9b8b919627eaabac8b62939c7a598c68ca7",
+    "build_subspace_overlap_report.js": "0da4f634fbaf6c7aef42f975e9635b6034bd08dd383eeace869f7b728ab02c3b",
+    "record_subspace_overlap_qa.py": "8270c139646504c3f8faabb79137354c7e3292f8d94a8fad75f5877a8a64d9c2",
+    "test_subspace_overlap.py": "9ea179269b3b0efb824ad6818ca888fa1eec84336982ebaaf6af8c8a6da7738d",
+    "subspace_overlap_run.log": "af59769c9b77b4e5fecc190173e4942d27c58e9a3f6f232fb84e58d8fb5ade76"
+  },
+  "scope": {
+    "subspace_overlap_analysis_evaluated": true,
+    "cases": 3,
+    "cells": 6,
+    "common_grids": [
+      1200,
+      2400,
+      4800
+    ],
+    "finest_assignment_counts": {
+      "diagonal": 3
+    },
+    "absolute_overlap_is_weak": true,
+    "relative_rank_advantage_is_not_state_tracking": true,
+    "same_physics_state_tracking_claim": false,
+    "rank_exchange_proven": false,
+    "grid_convergence_proof": false,
+    "second_pair_topological_claim": false,
+    "new_physics_cells": 0,
+    "categories_changed": false,
+    "new_taxonomy_claim": false,
+    "n640_automatically_justified": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "subspace_overlap_run.log"
+}

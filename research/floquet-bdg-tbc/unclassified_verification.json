@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-unclassified-verification-v1",
-  "recorded_utc": "2026-11-11T08:13:46.576178+00:00",
+  "recorded_utc": "2026-11-11T08:35:27.866212+00:00",
   "all_passed": true,
   "test_count": 5,
   "original_independent_projectors_passed": true,
@@ -52,13 +52,13 @@
     "unclassified-signatures.png": "f94b1a7711bc88f9703970c412b14ae5edced4ce2614b4bb65fa75518fd0c158",
     "UNCLASSIFIED_SIGNATURES.md": "e9a851e6c66a7621d7f0b80f479d2ccca05235159ed8e16062b672b948e59eed",
     "Floquet-BdG-未归类与未复现诊断.docx": "b1278846ad2962d762ae75459e0c43a017600eaadfd388f79ffc1d1ce943e5d8",
-    "unclassified-word-qa.json": "0eb729584d527e60c1adea962a7255e2515968a4b54356240bf03d73c4510037",
+    "unclassified-word-qa.json": "b616e09ba17ba30facd95756a0f082f123096b9dacaefa7d0610c66212fb8b2c",
     "unclassified-word-render/report.json": "1b34e904efa5c8611c0d2476ba324a1dc12bacde05b9e2886aae427a3bf632df",
     "analyze_unclassified_signatures.py": "a1b3a72af3e99b6a5b071fa6240fc4461845c4abb85d628e309d25b34600a3e2",
     "build_unclassified_report.js": "6b3f169d72b39e20ab80cb1a226f08fa2f0fb52f34a971e83226a2c83131861b",
     "record_unclassified_qa.py": "0f33a0dcf1609ca79daf7041f8c9e3eb93377bf0ce09bc6342b5e74bb74b3ac9",
     "test_unclassified_signatures.py": "ac6af2e41babbdb9a1b90b0a01f3e210f51339374456dfd369e261353f1b2996",
-    "unclassified_run.log": "9507f2548972d47ef685258b19aacbcbf31b13c527ea4e576e6bb9cadbfa3577"
+    "unclassified_run.log": "be766acb9650b2eea9d54b3424a181f9a05c13910ba42b236c76c0d1f320c1e1"
   },
   "scope": {
     "unclassified_condition_audit_evaluated": true,

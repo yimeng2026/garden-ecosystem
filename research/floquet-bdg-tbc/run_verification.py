@@ -57,6 +57,7 @@ def main():
         ("unclassified_suite", [sys.executable, str(ROOT / "run_unclassified_verification.py")], 180),
         ("near_miss_suite", [sys.executable, str(ROOT / "run_near_miss_verification.py")], 180),
         ("pair_response_suite", [sys.executable, str(ROOT / "run_pair_response_verification.py")], 180),
+        ("subspace_overlap_suite", [sys.executable, str(ROOT / "run_subspace_overlap_verification.py")], 180),
     ]
     rows, logs = [], []
     for label, command, timeout in commands:
@@ -85,6 +86,7 @@ def main():
     unclassified_verification = json.loads((ROOT / "unclassified_verification.json").read_text(encoding="utf-8")) if (ROOT / "unclassified_verification.json").exists() else {}
     near_miss_verification = json.loads((ROOT / "near_miss_verification.json").read_text(encoding="utf-8")) if (ROOT / "near_miss_verification.json").exists() else {}
     pair_response_verification = json.loads((ROOT / "pair_response_verification.json").read_text(encoding="utf-8")) if (ROOT / "pair_response_verification.json").exists() else {}
+    subspace_overlap_verification = json.loads((ROOT / "subspace_overlap_verification.json").read_text(encoding="utf-8")) if (ROOT / "subspace_overlap_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -153,6 +155,11 @@ def main():
         "pair-response-word-render/report.json", "pair_response_verification.json", "pair_response_run.log",
         "analyze_pair_responses.py", "build_pair_response_report.js", "record_pair_response_qa.py",
         "test_pair_responses.py", "run_pair_response_verification.py",
+        "subspace_overlap_protocol.json", "subspace_overlap_analysis.json", "subspace-overlap.png",
+        "SUBSPACE_OVERLAP.md", "Floquet-BdG-跨尺寸子空间重叠.docx", "subspace-overlap-word-qa.json",
+        "subspace-overlap-word-render/report.json", "subspace_overlap_verification.json", "subspace_overlap_run.log",
+        "analyze_subspace_overlap.py", "build_subspace_overlap_report.js", "record_subspace_overlap_qa.py",
+        "test_subspace_overlap.py", "run_subspace_overlap_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py",
@@ -163,7 +170,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 6 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -212,6 +219,9 @@ def main():
         "pair_response_all_passed": pair_response_verification.get("all_passed"),
         "pair_response_original_independent_projectors_passed": pair_response_verification.get("original_independent_projectors_passed"),
         "pair_response_visual_review_status": pair_response_verification.get("visual_review_status"),
+        "subspace_overlap_all_passed": subspace_overlap_verification.get("all_passed"),
+        "subspace_overlap_original_independent_projectors_passed": subspace_overlap_verification.get("original_independent_projectors_passed"),
+        "subspace_overlap_visual_review_status": subspace_overlap_verification.get("visual_review_status"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
@@ -252,6 +262,12 @@ def main():
             "pair_response_second_joint_pass_contrasts": 0,
             "pair_rank_matching_is_not_state_tracking": True,
             "pair_response_not_statistical_significance": True,
+            "subspace_overlap_analysis_evaluated": "passed",
+            "subspace_overlap_finest_diagonal_assignments": 3,
+            "subspace_absolute_overlap_is_weak": True,
+            "subspace_relative_rank_advantage_is_not_state_tracking": True,
+            "subspace_rank_exchange_proven": False,
+            "subspace_grid_convergence_proof": False,
             "new_taxonomy_claim": False,
             "universal_category_claim": False,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,

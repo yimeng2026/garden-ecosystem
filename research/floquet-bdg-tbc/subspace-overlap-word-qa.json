@@ -1,0 +1,39 @@
+{
+  "schema": "floquet-bdg-subspace-overlap-word-qa-v1",
+  "recordedUtc": "2026-11-11T08:35:41.438390+00:00",
+  "sourceSha256": {
+    "subspace_overlap_protocol.json": "1c6c4b18fdbb8a0df42ffad36a7bbc7c44748b02b51d188b4fbbded62a453a71",
+    "subspace_overlap_analysis.json": "ad158072c581628e86c44a4e0fd67cd2039ebbf2b2f16ce1ff4eb71afe09e283",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "pair_response_analysis.json": "87661b75fdb55d79ac766e7c527247ebde9d11d475fccd2c433582369b894b8d",
+    "subspace-overlap.png": "4e3b1d7a8295ff928f57839cfee9fd59ccf2d4c0d7584a2ad652d2b3b1fc41f6",
+    "build_subspace_overlap_report.js": "0da4f634fbaf6c7aef42f975e9635b6034bd08dd383eeace869f7b728ab02c3b"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "9bf03f5d51a5900de0f11d5606b70a13520d631beee1a2b26a935cc1d9271f13",
+    "renderReportSha256": "fff421643093030393d4da059102bfb789cd1ddd479d763f3371abe76314d2d9"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": false,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "9bf03f5d51a5900de0f11d5606b70a13520d631beee1a2b26a935cc1d9271f13",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "note": "全部四个单页已逐一查看；OMML公式、九行分配表、对数坐标图、三份重叠矩阵与主角度完整，无近空白页或裁切。"
+  }
+}

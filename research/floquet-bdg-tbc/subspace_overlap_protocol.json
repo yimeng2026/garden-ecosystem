@@ -1,0 +1,32 @@
+{
+  "schema": "floquet-bdg-subspace-overlap-protocol-v1",
+  "analysis_date": "2026-11-11",
+  "registered_before_analysis": true,
+  "selected_cases": [
+    {"label": "near_miss_low", "seed": 5, "strength": 0.05},
+    {"label": "near_miss_high", "seed": 5, "strength": 0.1},
+    {"label": "reference_weakening", "seed": 2, "strength": 0.1}
+  ],
+  "n_values": [400, 600],
+  "pair_indices": [0, 1],
+  "common_grids": [1200, 2400, 4800],
+  "grid_coordinate": "cell-center x_i=(i+0.5)/N; common M-grid x_j=(j+0.5)/M",
+  "embedding": "linear interpolation of each complex internal-spinor component, followed by reduced QR orthonormalization at each M",
+  "subspace_overlap": "singular values s_k of Q400_i^H Q600_j; overlap = (s_1^2+s_2^2)/2",
+  "principal_angles": "acos(clipped singular values) in degrees",
+  "diagonal_score": "mean(overlap(pair0_N400,pair0_N600), overlap(pair1_N400,pair1_N600))",
+  "swapped_score": "mean(overlap(pair0_N400,pair1_N600), overlap(pair1_N400,pair0_N600))",
+  "assignment_rule": "larger score wins; exact tie only when scores are exactly equal; no new tolerance",
+  "profile_gate": "recomputed scipy eigenvectors must reproduce each frozen pair profile and original edge weight within 1e-10",
+  "new_physics_cells": 0,
+  "new_seed_count": 0,
+  "verification_eigenvectors_recomputed": true,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "second_pair_topological_claim": false,
+  "same_physics_state_tracking_claim": false,
+  "rank_exchange_proven": false,
+  "grid_convergence_proof": false,
+  "new_taxonomy_claim": false,
+  "universal_mechanism_claim": false
+}
