@@ -56,7 +56,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_matched_beta_qa.py
 {
   "schema": "floquet-bdg-matched-beta-word-qa-v1",
-  "recordedUtc": "2026-11-11T14:44:11.964446+00:00",
+  "recordedUtc": "2026-11-11T14:48:37.881877+00:00",
   "sourceSha256": {
     "matched_beta_control_protocol.json": "bc75d2aa396027bdf87f4b7b40c5807de98a262b05f9f899caf9e3bbf9f823b2",
     "matched_beta_control_analysis.json": "ce1e99cde0e1184f77fa53d9238f054b022e848aa9533fbe6bf145a855b2257b",
@@ -106,7 +106,7 @@ test_representation_and_native_rank_controls (__main__.MatchedBetaControlTests.t
 test_spectrum_and_pair_metrics_are_consistent (__main__.MatchedBetaControlTests.test_spectrum_and_pair_metrics_are_consistent) ... ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.033s
+Ran 7 tests in 0.031s
 
 OK
 exit_code=0
