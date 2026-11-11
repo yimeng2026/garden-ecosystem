@@ -35,7 +35,9 @@ def require_baseline(path):
 
 
 def beta_for(seed, n=80):
-    return beta_sequence(seed, n)
+    if n <= 320:
+        return beta_sequence(seed, n)
+    return np.random.default_rng(20261111 + int(seed)).random(n)
 
 
 def evaluate_realization(n, seed, strength, kind, nominal_steps, targets=("zero", "pi"), free_method="expm", windings_override=None):

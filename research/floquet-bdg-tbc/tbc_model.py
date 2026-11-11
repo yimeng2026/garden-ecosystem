@@ -214,6 +214,34 @@ def _parameters(parameters):
     return n, mu0, mu1, omega, gamma, delta
 
 
+def half_chiral_block(parameters, theta, epsilon, branch="plus", free_method="expm"):
+    """Evaluate one half-period chiral block and its full diagnostic set."""
+    n, mu0, mu1, omega, gamma, delta = _parameters(parameters)
+    period = 2 * np.pi / omega
+    k0 = twisted_majorana_k(mu0, theta, gamma, delta)
+    kick_matrix = twisted_majorana_k(mu1, 0.0, gamma=0.0, delta=0.0)
+    half_kick = expm(-2 * kick_matrix)
+    free_half = free_evolution(k0, period / 2, method=free_method)
+    u_half = free_half @ half_kick
+    u_full = half_kick @ free_half @ free_half @ half_kick
+    period_result = periodized(u_half, u_full, period, period / 2, epsilon)
+    if period_result["status"] != "ok":
+        return dict(period_result, failed_theta=float(theta))
+    block_result = chiral_blocks(period_result["u"], epsilon)
+    result = {
+        "theta": float(theta), "epsilon": float(epsilon),
+        "bulk_gap": float(period_result["bulk_gap"]),
+        "unitarity_error": float(period_result["unitarity_error"]),
+        "normality_error": float(period_result["normality_error"]),
+        "max_condition": float(block_result["max_condition"]),
+        "conditions": block_result["conditions"],
+        "symmetry_error": float(block_result["symmetry_error"]),
+    }
+    if block_result["status"] != "ok":
+        return dict(result, status=block_result["status"], reason=block_result["reason"], value=None)
+    return dict(result, status="ok", reason=None, block=block_result["blocks"][branch], value=block_result["blocks"][branch])
+
+
 def winding(parameters, nominal_step, epsilon, branch="plus", keep_curve=False, free_method="expm"):
     """Evaluate one chiral-block winding on a periodic central-difference grid."""
     if branch not in ("plus", "minus"):
@@ -227,8 +255,6 @@ def winding(parameters, nominal_step, epsilon, branch="plus", keep_curve=False, 
         raise ValueError("theta grid is too coarse for a central difference")
     h = 2 * np.pi / m
     theta_values = -np.pi + h * np.arange(m)
-    kick_matrix = twisted_majorana_k(mu1, 0.0, gamma=0.0, delta=0.0)
-    half_kick = expm(-2 * kick_matrix)
     blocks = []
     curve = []
     min_gap = np.inf
@@ -236,49 +262,31 @@ def winding(parameters, nominal_step, epsilon, branch="plus", keep_curve=False, 
     max_unitarity = 0.0
     max_normality = 0.0
     for theta in theta_values:
-        k0 = twisted_majorana_k(mu0, theta, gamma, delta)
-        free_half = free_evolution(k0, period / 2, method=free_method)
-        u_half = free_half @ half_kick
-        u_full = half_kick @ free_half @ free_half @ half_kick
-        period_result = periodized(u_half, u_full, period, period / 2, epsilon)
-        if period_result["status"] != "ok":
+        point = half_chiral_block(parameters, theta, epsilon, branch=branch, free_method=free_method)
+        if point["status"] != "ok":
             return {
-                "status": period_result["status"],
-                "reason": period_result["reason"],
+                "status": point["status"],
+                "reason": point["reason"],
                 "failed_theta": float(theta),
                 "value": None,
                 "nearest_integer": None,
-                "min_bulk_gap": float(period_result.get("bulk_gap", np.nan)),
+                "min_bulk_gap": float(point.get("bulk_gap", np.nan)),
                 "nominal_step": float(nominal_step),
                 "actual_step": h,
                 "points": m,
             }
-        block_result = chiral_blocks(period_result["u"], epsilon)
-        min_gap = min(min_gap, period_result["bulk_gap"])
-        max_unitarity = max(max_unitarity, period_result["unitarity_error"])
-        max_normality = max(max_normality, period_result["normality_error"])
-        max_condition = max(max_condition, block_result["max_condition"])
-        if block_result["status"] != "ok":
-            return {
-                "status": block_result["status"],
-                "reason": block_result["reason"],
-                "failed_theta": float(theta),
-                "value": None,
-                "nearest_integer": None,
-                "min_bulk_gap": float(min_gap),
-                "max_block_condition": float(max_condition),
-                "nominal_step": float(nominal_step),
-                "actual_step": h,
-                "points": m,
-            }
-        block = block_result["blocks"][branch]
+        min_gap = min(min_gap, point["bulk_gap"])
+        max_unitarity = max(max_unitarity, point["unitarity_error"])
+        max_normality = max(max_normality, point["normality_error"])
+        max_condition = max(max_condition, point["max_condition"])
+        block = point["block"]
         blocks.append(block)
         if keep_curve:
             determinant = np.linalg.det(block)
             curve.append({
                 "theta": float(theta),
-                "bulk_gap": float(period_result["bulk_gap"]),
-                "block_condition": float(block_result["conditions"][branch]),
+                "bulk_gap": float(point["bulk_gap"]),
+                "block_condition": float(point["conditions"][branch]),
                 "determinant_phase": float(np.angle(determinant)),
             })
     array = np.asarray(blocks)
