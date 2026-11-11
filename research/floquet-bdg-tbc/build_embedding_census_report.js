@@ -2,7 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import {
   AlignmentType, Document, Footer, FootnoteReferenceRun, Header, HeadingLevel,
-  ImageRun, ImportedXmlComponent, Math as MathEquation, MathRun, Packer,
+  ImageRun, ImportedXmlComponent, Math as MathEquation, MathFraction, MathRun,
+  MathSubScript, MathSuperScript, Packer,
   PageBreak, PageNumber, Paragraph, ShadingType, Table, TableCell, TableRow,
   TextRun, WidthType,
 } from "docx";
@@ -33,7 +34,9 @@ const makeTable = (headers, rows, widths, size = 10) => new Table({
   width: { size: widths.reduce((a, b) => a + b, 0), type: WidthType.DXA }, columnWidths: widths,
   rows: [new TableRow({ tableHeader: true, cantSplit: true, children: headers.map((text, index) => cell(text, index, widths, true, size)) }), ...rows.map((row) => new TableRow({ cantSplit: true, children: row.map((text, index) => cell(text, index, widths, false, size)) }))],
 });
-const equation = (text) => para(new MathEquation({ children: [new MathRun(text)] }), { alignment: AlignmentType.CENTER, spacing: { before: 55, after: 70 } });
+const equation = (children) => para(new MathEquation({ children: Array.isArray(children) ? children : [new MathRun(children)] }), { alignment: AlignmentType.CENTER, spacing: { before: 55, after: 70 } });
+const sub = (base, subscript) => new MathSubScript({ children: [new MathRun(base)], subScript: [new MathRun(subscript)] });
+const subSup = (base, subscript, superScript) => new MathSuperScript({ children: [sub(base, subscript)], superScript: [new MathRun(superScript)] });
 const footnote = (text) => para(run(text, { size: 15 }), { spacing: { after: 30, line: 190 } });
 const fmt = (value) => Number(value).toPrecision(5).replace(/\.0+$/, "");
 const rows = analysis.cases.map((item) => {
@@ -60,7 +63,14 @@ const children = [
 
   heading(titles[0]),
   citedBody("线性点值和分片常数单元平均沿用前两轮实现。M=1200／2400／4800；最近对与次近对分别形成二维子空间。只重算相同本征对，不改变物理输入。", 1),
-  equation("O_ij = (s_1² + s_2²) / 2,  D = (O_00 + O_11) / 2,  S = (O_01 + O_10) / 2"),
+  equation([
+    sub("O", "ij"), new MathRun(" = "),
+    new MathFraction({ numerator: [subSup("s", "1", "2"), new MathRun(" + "), subSup("s", "2", "2")], denominator: [new MathRun("2")] }),
+    new MathRun(",　D = "),
+    new MathFraction({ numerator: [sub("O", "00"), new MathRun(" + "), sub("O", "11")], denominator: [new MathRun("2")] }),
+    new MathRun(",　S = "),
+    new MathFraction({ numerator: [sub("O", "01"), new MathRun(" + "), sub("O", "10")], denominator: [new MathRun("2")] }),
+  ]),
   para(run("D 为同谱秩分配得分，S 为交换分配得分；较大者仅构成数值主导分配。下表为 M=4800。", { size: 18, color: palette.light })),
   censusTable,
   para(run(`原剖面最大误差 ${analysis.max_profile_absolute_error.toExponential(3)}；前三例两种方法的最大复现差均为零。`, { size: 17, color: palette.light })),
