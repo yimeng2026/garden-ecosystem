@@ -1,0 +1,18 @@
+{
+  "schema": "review-toc-layout-v1",
+  "baseline_render": "review-pre-toc-qa/report.json",
+  "baseline_docx_sha256": "4c360ddd4eaf1fa1f3e8c52d99dd0f32498e30786449e0eef1913963206bfc23",
+  "baseline_pages": 4,
+  "layout_adjustment_after_baseline": "无正文内容或列宽修改；二级标题所在页由最终渲染再次核验。",
+  "body_page_offset": 1,
+  "baseline_heading_pages": {
+    "“室温超导必然性”稿件：数值反例与方向审计": 1,
+    "一、结论": 1,
+    "二、正确单位下的三个直接反例": 1,
+    "三、另外两个独立的数学问题": 2,
+    "四、推导链还缺哪些必要环节": 3,
+    "五、文档与证据状态的附加风险": 3,
+    "六、可保留并发展的新方向": 3,
+    "七、建议处置": 4
+  }
+}

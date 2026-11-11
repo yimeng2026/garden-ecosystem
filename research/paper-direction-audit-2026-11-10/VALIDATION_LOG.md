@@ -250,3 +250,57 @@ TOE 勘误簿已登记 FE-18，分支 `audit/necessity-counterexample`，提交 
 交付 `LINEAGE_AUDIT.md`、`LINEAGE_AUDIT.docx`、`lineage-review.json`、`lineage.log`、`lineage-word-qa/report.json`。Word 校验退出码 **0**，`PASSED (17 parts XSD + semantic checks; gen: 6 checks clean)`；最终 **3/3 页**已逐页检查，无近空白或裁切，仅低风险目录编号兼容提示。原文件均未修改。
 
 FE-18 已补全受影响版本，提交 `37ea8d0`。后续只设一个反例与临界流形项目，不为 Science、Nature、arXiv 分别立项。
+
+
+## 两份 REVIEW 的来源对应、原生目录与逐页验收（2026-11-11）
+
+本次只修改两份审计交付件及其 Markdown／JSON 元数据，未修改 `toe-sylva-audit` 原论文。
+
+### 来源与论断对应
+
+原稿 `floquet_superconductivity_deep.md` 第 8 节引文索引的表格条目编号实际连续为 `[1]`–`[23]`。`REVIEW.md` 的审计范围由误写的 35 条更正为 **23 条**，`review.json` 同步登记计数规则。该计数不表示 23 条均已回源核验。
+
+Floquet `REVIEW.docx` 的时间线条目此前与当前 Markdown 不一致，并缺少两个对应来源链接。现已在工作副本中恢复与 Markdown 相同的论断：2023 年为 arXiv 预印本，2025 年为期刊正式发表；条目末端分别保留 arXiv:2312.12706 与 npj Computational Materials 原始链接。没有将 arXiv 链接误接到其他论断，也没有把其余未核验条目升级为已核验。
+
+### 原生目录与分页
+
+两份旧 Word 均只有 TOC 域外壳，未含可见目录条目。现补齐：外层 TOC 域、每标题的 `PAGEREF` 子域、可点击超链接、标题书签、实际页码缓存及 `updateFields=true`。
+
+首次最终视图渲染发现预览引擎将中文书签显示为“错误！未定义书签”。没有将结构验证通过当作视觉通过。随后为每个目录目标增设配对且唯一的 ASCII 书签 `review-h1`…，保留原书签，重新验证后目录正常显示。
+
+目录单独占第 1 页，正文从第 2 页开始。最终实际页码为：
+
+- Floquet：`2、2、3、3、4、5、6`，共 7 个目录条目、6 页；
+- 反例审计：`2、2、2、3、4、4、4、5`，共 8 个目录条目、5 页。
+
+Floquet 数值表另将四列宽度改为 `[1400, 2600, 2450, 2576]` twips，消除了 `Ω=60` 的挤压换行；未改科学数值或正文。
+
+### 验证命令与真实结果
+
+两份文档分别执行工作副本打包和基线验收：
+
+```bash
+python <kimi-word>/scripts/verify/opc.py pack <review-current-audit/unpacked> REVIEW.docx
+python <kimi-word>/scripts/verify/verify.py REVIEW.docx --baseline <review-current-audit/baseline.docx>
+```
+
+两次实际退出码均为 **0**，均为 `PASSED (17 parts XSD + semantic checks)`。基线差异仅含上述来源、目录、书签和列宽修改。
+
+执行：
+
+```bash
+python research/paper-direction-audit-2026-11-10/tests/test_review_delivery.py
+```
+
+实际退出码 **0**，**6 项测试全部通过**：引文计数、时间线正文与双来源对应、数值表列宽、完整目录与页码缓存、ASCII 书签配对、最终文档及渲染哈希绑定。
+
+最终视图分别执行一次修复后的完整渲染：
+
+```bash
+python <kimi-word>/scripts/docx.py render floquet-superconductivity/REVIEW.docx floquet-superconductivity/review-delivery-render
+python <kimi-word>/scripts/docx.py render necessity-theorem/REVIEW.docx necessity-theorem/review-delivery-render
+```
+
+实际结果分别为 **6/6 页**和 **5/5 页**，已逐页查看联系表与全部单页；`nearBlankPages=[]`，所有 `clipped=false`。目录未再出现未定义书签，正文、公式、表格与双来源链接可见。预览引擎仅保留 `w:lvlOverride` 的编号级别覆盖低风险兼容提示，不将其误报为正文来源丢失。
+
+最终人工验收记录：`floquet-superconductivity/review-delivery-qa.json` 与 `necessity-theorem/review-delivery-qa.json`，分别绑定当前 DOCX 与渲染报告 SHA-256。`review-current-audit/`、前置渲染及中间失败 QA 不作为最终交付，不纳入提交。

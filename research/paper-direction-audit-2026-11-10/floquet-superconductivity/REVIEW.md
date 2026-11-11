@@ -2,7 +2,7 @@
 
 > 审计日期：2026-11-10
 > 对象：`toe-sylva-audit/papers/room_temp_sc/floquet_superconductivity_deep.md`
-> 范围：全文结构、内部一致性、配套脚本、Xie 等 LaH₁₀ 原始来源；不是对全部 35 条引文和全部实验数字的逐项终审。
+> 范围：全文结构、内部一致性、配套脚本、Xie 等 LaH₁₀ 原始来源；不是对全部 23 条引文和全部实验数字的逐项终审。
 
 ## 一、裁决摘要
 

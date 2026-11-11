@@ -1,0 +1,17 @@
+{
+  "schema": "review-toc-layout-v1",
+  "baseline_render": "review-pre-toc-qa/report.json",
+  "baseline_docx_sha256": "5292e1fbb0ead8afbcbf8e97f8e122370e64e5db357babcd54f51df20afd6916",
+  "baseline_pages": 5,
+  "layout_adjustment_after_baseline": "仅调整数值表列宽；二级标题所在页由最终渲染再次核验。",
+  "body_page_offset": 1,
+  "baseline_heading_pages": {
+    "Floquet 工程驱动高温超导：单篇方向与证据审计": 1,
+    "一、裁决摘要": 1,
+    "二、已实际运行的验证": 2,
+    "三、原始来源核查：Xie 与 LaH₁₀": 2,
+    "四、需要优先修复的内部问题": 3,
+    "五、这篇文章是否代表新方向": 4,
+    "六、建议的修订与验收顺序": 5
+  }
+}

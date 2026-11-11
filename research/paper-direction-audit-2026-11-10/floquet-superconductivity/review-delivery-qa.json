@@ -1,0 +1,20 @@
+{
+  "schema": "review-delivery-visual-qa-v1",
+  "status": "passed",
+  "docx_sha256": "99f4487f746d54134f8c57a7c3c807dcdcd61a7a89d43f4fb673fecb8e78d2d1",
+  "render_report_sha256": "75d91802fbeb3351d1d1eb473b1a6722308fcbb047b8f3d5ddcc0905b9a90fa1",
+  "pages_reviewed": 6,
+  "reviewed_pages": [
+    "page-01.png",
+    "page-02.png",
+    "page-03.png",
+    "page-04.png",
+    "page-05.png",
+    "page-06.png"
+  ],
+  "near_blank_pages": [],
+  "clipped_pages": [],
+  "toc_page_mapping_checked": true,
+  "source_links_checked": true,
+  "numbering_override_note": "预览引擎的 w:lvlOverride 提示仅涉及编号级别覆盖，不是正文来源或目录条目丢失。"
+}

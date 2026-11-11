@@ -77,6 +77,10 @@
       "status": "独立研究候选，需另行规格与验证协议"
     }
   ],
+  "source_scope": {
+    "registered_citation_entries": 23,
+    "counting_rule": "原稿第 8 节引文索引中编号连续的表格条目 [1]–[23]；不代表 23 条均已回源核验。"
+  },
   "unverified_remainder": "其余实验数字和引文未经逐项原始来源终审，统一保留为未核实，不据此判假。",
   "source_file_modified": false
 }
