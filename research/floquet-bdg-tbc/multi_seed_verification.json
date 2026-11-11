@@ -1,0 +1,74 @@
+{
+  "schema": "floquet-bdg-multi-seed-verification-v1",
+  "recorded_utc": "2026-11-11T06:26:13.777839+00:00",
+  "all_passed": true,
+  "test_count": 7,
+  "independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "independent_projectors",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\verify_multi_seed.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-多种子稳健性对照.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_multi_seed_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_multi_seed.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "multi_seed_protocol.json": "d6f1a440a94ef75bc57ebef64f76a9a3d5e5978ee3016c3340bd63bab454521c",
+    "matched_profile_control.json": "77e01d93c6fd466fde283b34c6afffc52d73acf4a38af18febf87bb56f733a04",
+    "multi_seed_profile_control.json": "d903eadbdecc716719fccd33b5bddd8464be5a59dc1a65dacc75c751756e6c01",
+    "multi_seed_independent.json": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+    "multi-seed-control.png": "8df8d62304a00b185cfb487f77d7ea161f727c1b2a7a7190f2e70c3afd3b20a7",
+    "MULTI_SEED_CONTROL.md": "634c35e95374b090a01a733bc8d592e84db19ffdda2c64a1b56e19a7719685ce",
+    "Floquet-BdG-多种子稳健性对照.docx": "c79a3523aefb67f68ed97756be062bb9ab6d3914ffa82ea5cb540918bc551e5a",
+    "multi-seed-word-qa.json": "23915ea31125b1543cfee2a27de570d0795a29fc690acd603a1335a0ec5f3d3b",
+    "multi-seed-word-render/report.json": "7ae63b2888a4111b75dfc44f26ec05bcf2c1be7f9d88431dd6064cf71689c37a",
+    "analyze_multi_seed.py": "f0232165e7f127d26695dd88bbae97ad37cb90e1343a3e41ec6fd1004eeef2c7",
+    "verify_multi_seed.py": "2885acf5916d0a5ca611715e93c41940c6adbf698329a8065cd5fca08b9a981a",
+    "build_multi_seed_report.js": "304b18a0d0e4ddf4ae8d53e6085dbae2ccbc992084408b6be600f6ed8720200f",
+    "record_multi_seed_qa.py": "0575f177734b84c43e7c15cf47b8e3ffa01918c415756faab71b4d36ab726b35",
+    "test_multi_seed.py": "67a41acff622b643ce4412118d97d56a72d11c7d6c27d3e76c9d6919c6ac6fbb",
+    "multi_seed_run.log": "8f0b737060c7c403643456c710c5a9b3ee4ac3dcb4665ef190e156f1c33797db"
+  },
+  "scope": {
+    "four_seed_profile_robustness_evaluated": true,
+    "strength_edge_increase_stable_within_grid": true,
+    "size_effect_is_not_universal": true,
+    "interaction_has_two_positive_and_two_negative_signs": true,
+    "new_profile_pass_is_not_bulk_winding": true,
+    "n640_automatically_justified": false,
+    "reversal_mechanism_analysis_pending": true,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "multi_seed_run.log"
+}

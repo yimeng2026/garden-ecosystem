@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-matched-word-qa-v1",
-  "recordedUtc": "2026-11-11T05:54:20.677849+00:00",
+  "recordedUtc": "2026-11-11T06:25:49.492179+00:00",
   "sourceSha256": {
     "matched_profile_control.json": "77e01d93c6fd466fde283b34c6afffc52d73acf4a38af18febf87bb56f733a04",
     "matched_profile_independent.json": "1659c566c87a05e14e2de9fa5f3bd8044c9cd2b235c2c0c12dfdb6f5ffc36ab6",
@@ -11,7 +11,7 @@
     "route": "kimi-word docx.py build with vendored docx-js",
     "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
     "docxSha256": "962c6ae44f7d6c6cb4848ec287a85d68f8776701312a959d6dff344723ca0c3f",
-    "renderReportSha256": "e1e055782b30916b181b0af7b564fd5a820ce984c72edba016f99c982a7c3555"
+    "renderReportSha256": "e04688bc2231db9e87e32a1ef785ab0c3074e97a4e11dc464d47484040772865"
   },
   "visualReview": {
     "status": "passed",

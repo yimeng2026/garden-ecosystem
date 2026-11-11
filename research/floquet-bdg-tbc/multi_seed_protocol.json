@@ -1,0 +1,21 @@
+{
+  "schema": "floquet-bdg-multi-seed-profile-protocol-v1",
+  "registered_before_computation": true,
+  "seeds": [0, 1, 2, 3],
+  "sizes": [400, 600],
+  "strengths": [0.05, 0.1],
+  "target": "zero",
+  "candidate_pairs": [0, 1],
+  "random_stream": "numpy.default_rng(20261111 + seed).random(n), nested within each seed",
+  "primary_metrics": ["L50", "L90", "edge_weight", "center20_mass"],
+  "contrasts": [
+    "N600 minus N400 at each fixed strength and seed",
+    "r=0.1 minus r=0.05 at each fixed size and seed",
+    "size contrast at r=0.1 minus size contrast at r=0.05 for each seed"
+  ],
+  "summary": "Report every seed, sign counts, medians and min/max ranges; no p-values or confidence intervals in this four-seed pilot",
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "post_hoc_seed_or_threshold_selection": false,
+  "scope": "Descriptive robustness of profile directions only; no causal, statistical-significance, material, thermodynamic, or new bulk-winding claim"
+}

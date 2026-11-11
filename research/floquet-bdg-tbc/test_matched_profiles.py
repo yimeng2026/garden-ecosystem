@@ -95,6 +95,9 @@ class MatchedProfileTests(unittest.TestCase):
         with zipfile.ZipFile(ROOT / "Floquet-BdG-同强度尺寸对照.docx") as package:
             document = package.read("word/document.xml").decode("utf-8")
         self.assertIn(f"最大剖面绝对误差为 {maximum:.3e}", document)
+        runner = (ROOT / "run_matched_verification.py").read_text(encoding="utf-8")
+        self.assertNotIn('("docx_build"', runner)
+        self.assertNotIn('("matched_analysis"', runner)
 
     def test_figure_markdown_and_word_visual_gate(self):
         with Image.open(ROOT / "matched-profile-control.png") as image:

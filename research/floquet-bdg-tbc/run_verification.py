@@ -51,6 +51,7 @@ def main():
         ("n600_suite", [sys.executable, str(ROOT / "run_n600_verification.py")], 180),
         ("endpoint_suite", [sys.executable, str(ROOT / "run_endpoint_verification.py")], 180),
         ("matched_suite", [sys.executable, str(ROOT / "run_matched_verification.py")], 180),
+        ("multi_seed_suite", [sys.executable, str(ROOT / "run_multi_seed_verification.py")], 180),
     ]
     rows, logs = [], []
     for label, command, timeout in commands:
@@ -73,6 +74,7 @@ def main():
     n600_verification = json.loads((ROOT / "n600_verification.json").read_text(encoding="utf-8")) if (ROOT / "n600_verification.json").exists() else {}
     endpoint_verification = json.loads((ROOT / "endpoint_verification.json").read_text(encoding="utf-8")) if (ROOT / "endpoint_verification.json").exists() else {}
     matched_verification = json.loads((ROOT / "matched_verification.json").read_text(encoding="utf-8")) if (ROOT / "matched_verification.json").exists() else {}
+    multi_seed_verification = json.loads((ROOT / "multi_seed_verification.json").read_text(encoding="utf-8")) if (ROOT / "multi_seed_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -111,6 +113,11 @@ def main():
         "matched-word-render/report.json", "matched_verification.json", "matched_run.log",
         "analyze_matched_profiles.py", "verify_matched_profiles.py", "build_matched_report.js",
         "record_matched_qa.py", "test_matched_profiles.py", "run_matched_verification.py",
+        "multi_seed_protocol.json", "multi_seed_profile_control.json", "multi_seed_independent.json",
+        "multi-seed-control.png", "MULTI_SEED_CONTROL.md", "Floquet-BdG-多种子稳健性对照.docx",
+        "multi-seed-word-qa.json", "multi-seed-word-render/report.json", "multi_seed_verification.json",
+        "multi_seed_run.log", "analyze_multi_seed.py", "verify_multi_seed.py", "build_multi_seed_report.js",
+        "record_multi_seed_qa.py", "test_multi_seed.py", "run_multi_seed_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py",
@@ -121,7 +128,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -152,6 +159,9 @@ def main():
         "matched_all_passed": matched_verification.get("all_passed"),
         "matched_independent_projectors_passed": matched_verification.get("independent_projectors_passed"),
         "matched_visual_review_status": matched_verification.get("visual_review_status"),
+        "multi_seed_all_passed": multi_seed_verification.get("all_passed"),
+        "multi_seed_independent_projectors_passed": multi_seed_verification.get("independent_projectors_passed"),
+        "multi_seed_visual_review_status": multi_seed_verification.get("visual_review_status"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
@@ -164,7 +174,12 @@ def main():
             "uniform_strength_profile_control_pending": False,
             "matched_2x2_profile_control_evaluated": "passed",
             "n600_r0p1_profile_pass_is_not_bulk_winding": True,
-            "multi_seed_profile_control_pending": True,
+            "multi_seed_profile_control_pending": False,
+            "four_seed_profile_robustness_evaluated": "passed",
+            "strength_edge_increase_stable_within_grid": True,
+            "size_effect_is_not_universal": True,
+            "interaction_has_two_positive_and_two_negative_signs": True,
+            "reversal_mechanism_analysis_pending": True,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,
             "paired_control_rows": 12, "uniform_controls_are_independent_random_samples": False,
             "double_kick_diagnostic_excluded": True,

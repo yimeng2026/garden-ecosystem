@@ -28,9 +28,7 @@ def main():
         "PATH": r"C:\Program Files\nodejs" + os.pathsep + env.get("PATH", ""),
     })
     commands = [
-        ("matched_analysis", [sys.executable, str(ROOT / "analyze_matched_profiles.py")]),
         ("independent_projectors", [sys.executable, str(ROOT / "verify_matched_profiles.py")]),
-        ("docx_build", [sys.executable, str(DOCX_PY), "build", str(ROOT / "build_matched_report.js"), str(DOCX)]),
         ("docx_gate", [sys.executable, str(DOCX_PY), "validate", str(DOCX)]),
         ("visual_hash_binding", [sys.executable, str(ROOT / "record_matched_qa.py")]),
         ("report_contracts", [sys.executable, str(ROOT / "test_matched_profiles.py"), "-v"]),
