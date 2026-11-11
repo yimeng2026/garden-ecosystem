@@ -1,0 +1,46 @@
+$ analysis_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-localization-scale\test_scale_analysis.py -v
+test_direct_two_end_coverage_has_no_extra_half (__main__.CoverageTests.test_direct_two_end_coverage_has_no_extra_half) ... ok
+test_fixed_width_masses (__main__.CoverageTests.test_fixed_width_masses) ... ok
+test_nonuniform_coverages_and_ipr (__main__.CoverageTests.test_nonuniform_coverages_and_ipr) ... ok
+test_profile_validation (__main__.CoverageTests.test_profile_validation) ... ok
+test_registry_and_actual_recovery_classes (__main__.OriginalProfileTests.test_registry_and_actual_recovery_classes) ... ok
+test_growth_is_not_established (__main__.RecoveryTests.test_growth_is_not_established) ... ok
+test_measured_recovery_is_not_an_estimate (__main__.RecoveryTests.test_measured_recovery_is_not_an_estimate) ... ok
+test_plateau_is_bounded_diagnostic (__main__.RecoveryTests.test_plateau_is_bounded_diagnostic) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.067s
+
+OK
+exit_code=0
+$ profile_analysis: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-localization-scale\analyze_scale.py
+r=0.05 seed=0 status=not_established next_size=600 L50=[21, 31, 51] L90=[38, 70, 115] R2=[0.0032, 0.1882, 0.1492]
+r=0.1 seed=0 status=bounded_diagnostic next_size=400 L50=[19, 38, 33] L90=[36, 71, 129] R2=[0.015, 0.0378, 0.2616]
+r=0.05 seed=2 status=measured_recovered next_size=None L50=[19, 35, 26] L90=[38, 74, 101] R2=[0.0376, 0.1027, 0.4163]
+r=0.05 seed=3 status=measured_recovered next_size=None L50=[20, 29, 31] L90=[39, 64, 115] R2=[-0.0, 0.1061, 0.4197]
+r=0.1 seed=2 status=measured_recovered next_size=None L50=[16, 19, 16] L90=[36, 59, 51] R2=[0.025, 0.4126, 0.5112]
+profiles 15 cases 5
+exit_code=0
+$ report_data: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-localization-scale\build_report.py
+generated coverage-scale.png scale-diagnostics.png REPORT.md
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-localization-scale\Floquet-BdG-局域恢复尺度报告.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-localization-scale\record_qa.py
+{"pages": 4, "manualReview": "passed", "docxSha256": "60350b2f973aac12b3ffce6043589347bb63ce9fcf2b5b317a986684dee51508"}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-localization-scale\test_report.py -v
+test_docx_native_structure (__main__.LocalizationReportTests.test_docx_native_structure) ... ok
+test_figures_are_nonempty (__main__.LocalizationReportTests.test_figures_are_nonempty) ... ok
+test_markdown_preserves_diagnostic_boundaries (__main__.LocalizationReportTests.test_markdown_preserves_diagnostic_boundaries) ... ok
+test_profile_counts_and_recovery_classes (__main__.LocalizationReportTests.test_profile_counts_and_recovery_classes) ... ok
+test_visual_review_hashes_are_current (__main__.LocalizationReportTests.test_visual_review_hashes_are_current) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.011s
+
+OK
+exit_code=0

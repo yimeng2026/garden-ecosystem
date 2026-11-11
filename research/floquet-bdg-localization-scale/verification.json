@@ -1,0 +1,90 @@
+{
+  "schema": "floquet-bdg-localization-scale-verification-v1",
+  "recorded_utc": "2026-11-11T02:28:58.110111+00:00",
+  "all_passed": true,
+  "analysis_test_count": 8,
+  "report_test_count": 5,
+  "profile_count": 15,
+  "case_count": 5,
+  "rendered_pages": 4,
+  "visual_review_status": "passed",
+  "commands": [
+    {
+      "label": "analysis_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-localization-scale\\test_scale_analysis.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "profile_analysis",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-localization-scale\\analyze_scale.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_data",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-localization-scale\\build_report.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-localization-scale\\Floquet-BdG-局域恢复尺度报告.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-localization-scale\\record_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-localization-scale\\test_report.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "localization_scale.json": "9ff2cc091c9081537bcce90e943748c04dc421e7b19b9d39f4da7448a2a42082",
+    "localization_scale.csv": "c139e37416669a597579a92fc88ea06b4b9aaed9c33417e7683f58649b226d09",
+    "coverage-scale.png": "b083fe00e9f65785317e08995c8dbd5aeceb6a723facb2a999699cc2b91cfe57",
+    "scale-diagnostics.png": "708675b7d6c7b62be43fc08db6b5662226580c99fada9b943cabe45e3918916d",
+    "REPORT.md": "47343016c09c88b72e4012c81d235b126fb5e26fd69711fff828ac153b07082e",
+    "Floquet-BdG-局域恢复尺度报告.docx": "60350b2f973aac12b3ffce6043589347bb63ce9fcf2b5b317a986684dee51508",
+    "word-qa/report.json": "4d8840203c380485522e19cf2393129b552752df601d4fef910fefd9d3ab09de",
+    "run.log": "6f038af5761c41c717d8a8b8387bc30030aa9777745b4f707985cb645a4cc8c7",
+    "scale_analysis.py": "00fb38739cc1f47fe84a1376d2db5cb918e74a54a9259c7d370740303f09e2fd",
+    "analyze_scale.py": "628ca98dbf6d731b7a5e94699b98bc1da4526fbe1b0b61f186300f7f267bd40a",
+    "test_scale_analysis.py": "15763edad1ead04daf935eb2ad50e2427fa242ccb7c20262e3016eb5d0beda36",
+    "build_report.py": "6711a4b6b22fd5dbac52ec528dfcdc9c338dc9d167c166d86c819fd1332edddd",
+    "build_report.js": "6428b88bbc089f9f825350205dd2a5a8966860758cf43c974cf241c92aa89d15",
+    "record_qa.py": "d425e48f2baa1795fa946f55412b79a81782f2cfcd0c810b6106d6d285ed1323",
+    "test_report.py": "518498b5dc3437560d4746703ffdbd1a64c415c43d9a298c441128bca31056c6"
+  },
+  "scope": {
+    "n400_diagnostic_pending": true,
+    "n600_diagnostic_pending": true,
+    "n640_computed": false,
+    "recovery_prediction": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "run.log"
+}
