@@ -22,7 +22,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_swap_candidate_spectrum_qa.py
 {
   "schema": "floquet-bdg-swap-candidate-spectrum-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:51:04.213920+00:00",
+  "recordedUtc": "2026-11-11T14:42:51.460445+00:00",
   "sourceSha256": {
     "swap_candidate_spectrum_protocol.json": "a0ca42621184032ed7a47209d01f3fc2307c7ce7c04d03c4834d36c5c2c55261",
     "swap_candidate_spectrum_analysis.json": "67283bfcf6d1f2d5a107f959ae9219d2e5fa2d14c27c5f9685de026ad62efc6d",
@@ -71,7 +71,7 @@ test_static_rank_is_not_parameter_tracking (__main__.SwapCandidateSpectrumTests.
 test_target_registry_and_sources (__main__.SwapCandidateSpectrumTests.test_target_registry_and_sources) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.035s
+Ran 6 tests in 0.034s
 
 OK
 exit_code=0

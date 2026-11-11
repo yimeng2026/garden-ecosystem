@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-n400-verification-v1",
-  "recorded_utc": "2026-11-11T14:06:59.586354+00:00",
+  "recorded_utc": "2026-11-11T14:41:24.026177+00:00",
   "all_passed": true,
   "resume_test_count": 5,
   "report_test_count": 5,
@@ -75,8 +75,8 @@
     "n400-coverage.png": "9999cc31f15307c9b9503aead94b4da81f46f5ccbc8502aab4025bf00d6563fd",
     "SCALE_DIAGNOSTIC.md": "13fd591e94fbc23d49afe11ecaa9671e482f4e1350655892c82c0b70e47d8100",
     "Floquet-BdG-N400阈值诊断报告.docx": "e7ccaed059b26b8024d90f6883f9b10e1c01ff3d3d4c0c96315928f8e5d1a914",
-    "n400-word-qa/report.json": "bc93cd8c2d9f7b1958355f82b9e924223fdb8de15d075fb82edeac094b6ddb46",
-    "scale_run.log": "ebb8c4b47f594af98fd6f2aec66a058f6af451dafc8f9e9a7c5512eaf2a703dc",
+    "n400-word-qa/report.json": "b4d7e066ee116ccc0d9564c62d680dc1709d0e806a18af24731f2dd607c6643c",
+    "scale_run.log": "bd95f94cccccef4b1230ed7f1f00abf90e3e9b44f59b499764d4e20c8df936c0",
     "scale_work/n400_zero_dtheta0p05.json": "6f070848add8b448fd0c50924dad1b150faae93490308897eb563a33c683280f",
     "scale_work/n400_zero_dtheta0p025.json": "69056fffafe12d44b1f94680f51c70e1d5ddbeaa7d7932792a672eadc28b1d44",
     "tbc_model.py": "bc7f7541434920ae9d5a9bdca396dc86306fb383a7d9f4bff19902077de641fc",

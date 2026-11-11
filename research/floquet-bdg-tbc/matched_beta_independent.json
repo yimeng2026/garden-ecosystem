@@ -1,0 +1,45 @@
+{
+  "schema": "floquet-bdg-matched-beta-independent-v1",
+  "protocol_sha256": "bc75d2aa396027bdf87f4b7b40c5807de98a262b05f9f899caf9e3bbf9f823b2",
+  "candidate_source_sha256": "67283bfcf6d1f2d5a107f959ae9219d2e5fa2d14c27c5f9685de026ad62efc6d",
+  "cell_count": 2,
+  "max_master_profile_absolute_error": 0.0,
+  "max_coarsening_absolute_error": 0.0,
+  "max_spectrum_absolute_error": 0.0,
+  "max_pair_center_absolute_error": 0.0,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "cells": [
+    {
+      "n": 400,
+      "computed_pair_centers": [
+        7.94540857228508e-05,
+        0.0042578569822053014
+      ],
+      "computed_first_six": [
+        7.94540857228508e-05,
+        7.94540857228508e-05,
+        0.0042578569822053014,
+        0.0042578569822053014,
+        0.00507759240759085,
+        0.00507759240759085
+      ]
+    },
+    {
+      "n": 600,
+      "computed_pair_centers": [
+        2.2766841922816705e-07,
+        0.0034816087200927725
+      ],
+      "computed_first_six": [
+        2.2766841922816705e-07,
+        2.2766841922816705e-07,
+        0.0034816087200927725,
+        0.0034816087200927725,
+        0.004383523267763472,
+        0.004383523267763472
+      ]
+    }
+  ],
+  "all_passed": true
+}

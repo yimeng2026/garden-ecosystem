@@ -94,6 +94,7 @@ def main():
         ("n600_path_suite", [sys.executable, str(ROOT / "run_n600_path_verification.py"), "--check-only"], 180),
         ("n600_valley_suite", [sys.executable, str(ROOT / "run_n600_valley_verification.py"), "--check-only"], 180),
         ("overlap_confounding_suite", [sys.executable, str(ROOT / "run_overlap_confounding_verification.py"), "--check-only"], 180),
+        ("matched_beta_control_suite", [sys.executable, str(ROOT / "run_matched_beta_verification.py"), "--check-only"], 180),
     ]
     rows, logs = [], []
     if "--reuse-completed-log" in sys.argv:
@@ -136,6 +137,7 @@ def main():
     n600_path_verification = json.loads((ROOT / "n600_path_verification.json").read_text(encoding="utf-8")) if (ROOT / "n600_path_verification.json").exists() else {}
     n600_valley_verification = json.loads((ROOT / "n600_valley_verification.json").read_text(encoding="utf-8")) if (ROOT / "n600_valley_verification.json").exists() else {}
     overlap_confounding_verification = json.loads((ROOT / "overlap_confounding_verification.json").read_text(encoding="utf-8")) if (ROOT / "overlap_confounding_verification.json").exists() else {}
+    matched_beta_verification = json.loads((ROOT / "matched_beta_verification.json").read_text(encoding="utf-8")) if (ROOT / "matched_beta_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -250,6 +252,12 @@ def main():
         "overlap-confounding-word-render/report.json", "overlap_confounding_verification.json", "overlap_confounding_run.log",
         "analyze_overlap_confounding.py", "build_overlap_confounding_report.js", "record_overlap_confounding_qa.py",
         "test_overlap_confounding.py", "run_overlap_confounding_verification.py", "diagnose_same_n_rank_leakage.py",
+        "matched_beta_control_protocol.json", "matched_beta_control_analysis.json", "matched_beta_independent.json",
+        "matched-beta-control.png", "MATCHED_BETA_CONTROL.md", "Floquet-BdG-共同无序剖面尺寸隔离.docx",
+        "matched-beta-word-qa.json", "matched-beta-word-render/report.json", "matched_beta_verification.json",
+        "matched_beta_run.log", "analyze_matched_beta_control.py", "verify_matched_beta.py",
+        "build_matched_beta_report.js", "record_matched_beta_qa.py", "test_matched_beta_control.py",
+        "run_matched_beta_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py", "run_verification.py", "test_verification_log_reuse.py",
@@ -260,7 +268,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 9 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None, "overlap_confounding": 6 if passed else None, "log_reuse": 7 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 9 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None, "overlap_confounding": 6 if passed else None, "matched_beta_control": 7 if passed else None, "log_reuse": 7 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -336,6 +344,10 @@ def main():
         "overlap_confounding_all_passed": overlap_confounding_verification.get("all_passed"),
         "overlap_confounding_visual_review_status": overlap_confounding_verification.get("visual_review_status"),
         "overlap_confounding_size_effect_separated": overlap_confounding_verification.get("scope", {}).get("size_effect_separated"),
+        "matched_beta_all_passed": matched_beta_verification.get("all_passed"),
+        "matched_beta_independent_recheck_passed": matched_beta_verification.get("independent_recheck_passed"),
+        "matched_beta_visual_review_status": matched_beta_verification.get("visual_review_status"),
+        "matched_beta_size_effect_separated": matched_beta_verification.get("scope", {}).get("size_effect_separated"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
@@ -440,6 +452,15 @@ def main():
             "overlap_confounding_size_effect_separated": False,
             "overlap_confounding_common_beta_control_computed": False,
             "overlap_confounding_normalization_correction_applied": False,
+            "matched_beta_analysis_evaluated": "passed",
+            "matched_beta_control_cells": 2,
+            "matched_beta_common_disorder_profile_control_computed": True,
+            "matched_beta_size_effect_separated": "matched_nested_profile_descriptive_only",
+            "matched_beta_assignment_counts": {"linear_point": {"diagonal": 3}, "cell_average": {"diagonal": 3}},
+            "matched_beta_center_separation_delta": -0.0006970218448089059,
+            "matched_beta_old_candidate_is_different_realization": True,
+            "matched_beta_difference_from_original_is_not_size_effect": True,
+            "matched_beta_universal_size_law_claim": False,
             "new_taxonomy_claim": False,
             "universal_category_claim": False,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,

@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-subspace-overlap-verification-v1",
-  "recorded_utc": "2026-11-11T13:50:47.590419+00:00",
+  "recorded_utc": "2026-11-11T14:42:34.267291+00:00",
   "all_passed": true,
   "test_count": 9,
   "original_independent_projectors_passed": true,
@@ -62,13 +62,13 @@
     "subspace-overlap.png": "4e3b1d7a8295ff928f57839cfee9fd59ccf2d4c0d7584a2ad652d2b3b1fc41f6",
     "SUBSPACE_OVERLAP.md": "3dbf35901b927cec587efb9824c1c698afa17ecab4648702576bc45b04fa5d68",
     "Floquet-BdG-跨尺寸子空间重叠.docx": "0d85145bd397bd93a8f155afa174c560085dde27c2ab4d2f77aef2576d22195a",
-    "subspace-overlap-word-qa.json": "d35a4f316491195cacc80a35efb4dced3e87a9d31c6c2ad9f017c154166f240c",
+    "subspace-overlap-word-qa.json": "60c9ce2f69dd0a4acd3379d75b2e0a4f9e1d9fc7d0184a1100073308f0405f76",
     "subspace-overlap-word-render/report.json": "ed169996e762d79cd41aef65ed906d4dae61ef38e2b5ba656ce74b570c4843ef",
     "analyze_subspace_overlap.py": "480ac17aee642698dbe98eeb27aca9b8b919627eaabac8b62939c7a598c68ca7",
     "build_subspace_overlap_report.js": "819c4467d6734c3b658fa0675467bd9e433b70faeb446a0f55a34d7f7cd4e57d",
     "record_subspace_overlap_qa.py": "a77ba1a96cd6ee989b8d165c39762099e1d7c457618fb8c06f0ae89295c16e08",
     "test_subspace_overlap.py": "74edab2f46557bde73176c18317bac36b2a94edc9ae0d06ad25e03f4e2198efd",
-    "subspace_overlap_run.log": "6a12d6533833660a78d80b01eb47472f06d85c0d9124f5689c99bbcdc94da1bf",
+    "subspace_overlap_run.log": "343f704d2f837e93ae5210aa6471af67ef4ef6604dd0c580af0967892a207504",
     "diagnose_overlap_symmetry.py": "d13f3c75d420ac80a4c3a3753320c89810609fb6cd8308623f1a24076d20aa52",
     "overlap_symmetry_diagnostic.json": "4484cb8418d401c3bac54b661aa89e7c3e63602c975544846bc66c8ce1a81be1"
   },
