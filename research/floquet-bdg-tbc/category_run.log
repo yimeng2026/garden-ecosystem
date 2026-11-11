@@ -58,7 +58,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_category_qa.py
 {
   "schema": "floquet-bdg-category-word-qa-v1",
-  "recordedUtc": "2026-11-11T09:14:26.923291+00:00",
+  "recordedUtc": "2026-11-11T09:34:52.064324+00:00",
   "sourceSha256": {
     "repeated_category_protocol.json": "3cf8e4b5347cdadf2f172972243856530932be1c32a26c3a22fe7a11e38a9cac",
     "category_new_cells.json": "8df63b89ad43a2ef196b5137f942144d93b414c0b0abb3e5a2bf84b6e476d6ae",
@@ -104,7 +104,7 @@ test_old_cells_and_reference_categories_are_unchanged (__main__.RepeatedCategory
 test_protocol_and_new_cell_registry (__main__.RepeatedCategoryTests.test_protocol_and_new_cell_registry) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.040s
+Ran 5 tests in 0.043s
 
 OK
 exit_code=0

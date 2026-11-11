@@ -1,0 +1,88 @@
+{
+  "schema": "floquet-bdg-swap-candidate-spectrum-verification-v1",
+  "recorded_utc": "2026-11-11T09:35:24.235019+00:00",
+  "all_passed": true,
+  "test_count": 6,
+  "original_independent_projectors_passed": true,
+  "new_independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "swap_candidate_spectrum_analysis",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_swap_candidate_spectrum.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-交换候选谱结构.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_swap_candidate_spectrum_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_swap_candidate_spectrum.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "swap_candidate_spectrum_protocol.json": "a0ca42621184032ed7a47209d01f3fc2307c7ce7c04d03c4834d36c5c2c55261",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "embedding_census_analysis.json": "c62d4158580378583a9abee081e9d08da9380cd2e226e132da32ac0394ffc7d0",
+    "multi_seed_independent.json": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "swap_candidate_spectrum_analysis.json": "67283bfcf6d1f2d5a107f959ae9219d2e5fa2d14c27c5f9685de026ad62efc6d",
+    "swap-candidate-spectrum.png": "b2e996b727f305d0a13b796b125f86ec53ce937e8b90350384c4ba87ed8f5d6c",
+    "SWAP_CANDIDATE_SPECTRUM.md": "970f1ebc49ece47e164a34e171858f22e907dc9cfcf120fb4e7ff7146018d8d7",
+    "Floquet-BdG-交换候选谱结构.docx": "99af83f044f111f40ac642cb775e901e97cf6ef8a334e84b951d1bf109e7b3a6",
+    "swap-candidate-spectrum-word-qa.json": "292088e33c7a71de61fb8ce8bb90e9cfd9c5a8e95858fce8d070e4d70d733da4",
+    "swap-candidate-spectrum-word-render/report.json": "a078fd707725be7e49b5564be9e33fec146f7079410bab0a6587ab6742487b19",
+    "analyze_swap_candidate_spectrum.py": "e5fa455f3229033a1d82161ebcc5ccaa986b44b7d5a5a9922f3a5b7716cfb27f",
+    "build_swap_candidate_spectrum_report.js": "047e8accf648c98ac7780178cefa48b99d971620ba4fc1f7a8ee27b12ee02cb5",
+    "record_swap_candidate_spectrum_qa.py": "b6befcb5c95ad12deb8b2bf947624b266c62a599cdcd64a3053e6ffd4b31cd18",
+    "test_swap_candidate_spectrum.py": "e7376dd7425f8b38036829f110764e01ba0bc7863e0459a83bdc02519d28399a",
+    "swap_candidate_spectrum_run.log": "3be47c3c870b8658e365f300ef0a874a180b230318ce433d6949bfaa463e8555"
+  },
+  "scope": {
+    "swap_candidate_spectrum_analysis_evaluated": true,
+    "cells": 2,
+    "spectrum_ranks_per_cell": 6,
+    "center_separations": [
+      0.002901515339874052,
+      0.0028383796134517944
+    ],
+    "center_separation_delta": -6.31357264222576e-05,
+    "cross_pair_exact_degenerate": false,
+    "second_pair_separation_ratio": 1,
+    "cross_term_drives_candidate": true,
+    "spectral_crossing_proven": false,
+    "avoided_crossing_claim": false,
+    "state_exchange_proven": false,
+    "near_degeneracy_threshold_added": false,
+    "second_pair_topological_claim": false,
+    "new_physics_cells": 0,
+    "new_taxonomy_claim": false,
+    "n640_automatically_justified": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "swap_candidate_spectrum_run.log"
+}

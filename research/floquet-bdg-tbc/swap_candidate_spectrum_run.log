@@ -1,0 +1,77 @@
+$ swap_candidate_spectrum_analysis: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_swap_candidate_spectrum.py
+{"completed_cell": 400, "center_separation": 0.002901515339874052, "center_separation_ratio": 0.9795563632150425, "pairs": [{"pair_index": 0, "stored_profile_sha256": "05e38a7877a64bb128c8beb482702009832480c89a5438ff07fb74284f440c57", "max_profile_absolute_error": 1.3877787807814457e-17, "edge_weight_absolute_error": 0.0, "stored_distance_max_absolute_error": 6.776263578034403e-21, "center": 6.0555500389665384e-05, "within_distance_difference": 0.0, "max_separation_ratio": 0.020443636784957527, "diagnostic_joint_pass": true}, {"pair_index": 1, "stored_profile_sha256": "b1efa755e95981d164a26d6c00cfd6863d3589ae4d9cde07ae8ba528d9379f81", "max_profile_absolute_error": 8.673617379884035e-18, "edge_weight_absolute_error": 1.3877787807814457e-17, "stored_distance_max_absolute_error": 4.336808689942018e-19, "center": 0.0029620708402637174, "within_distance_difference": 0.0, "max_separation_ratio": 1.0, "diagnostic_joint_pass": false}]}
+{"completed_cell": 600, "center_separation": 0.0028383796134517944, "center_separation_ratio": 0.9964475643651042, "pairs": [{"pair_index": 0, "stored_profile_sha256": "53271798d4b08856c06833cd98dc50c9c62da3199a5f81d7f762a200f6ab70d6", "max_profile_absolute_error": 1.0408340855860843e-17, "edge_weight_absolute_error": 2.7755575615628914e-16, "stored_distance_max_absolute_error": 0.0, "center": 1.0119108365338095e-05, "within_distance_difference": 0.0, "max_separation_ratio": 0.0035524356348957203, "diagnostic_joint_pass": false}, {"pair_index": 1, "stored_profile_sha256": "c2210b567bddc621d7b1b7409c8a8bd84f3c705f707e6faf4d3d4f6a84ec05d8", "max_profile_absolute_error": 6.938893903907228e-18, "edge_weight_absolute_error": 5.551115123125783e-17, "stored_distance_max_absolute_error": 4.336808689942018e-19, "center": 0.0028484987218171326, "within_distance_difference": 0.0, "max_separation_ratio": 1.0, "diagnostic_joint_pass": false}]}
+{
+  "size_comparison": {
+    "center_separation_delta": -6.31357264222576e-05,
+    "pair0_center_delta": -5.043639202432729e-05,
+    "pair1_center_delta": -0.00011357211844658472
+  },
+  "max_profile_absolute_error": 1.3877787807814457e-17,
+  "cross_pair_exact_degenerate": false,
+  "spectral_crossing_proven": false,
+  "state_exchange_proven": false
+}
+generated swap_candidate_spectrum_analysis.json swap-candidate-spectrum.png SWAP_CANDIDATE_SPECTRUM.md
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-交换候选谱结构.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_swap_candidate_spectrum_qa.py
+{
+  "schema": "floquet-bdg-swap-candidate-spectrum-word-qa-v1",
+  "recordedUtc": "2026-11-11T09:35:24.073861+00:00",
+  "sourceSha256": {
+    "swap_candidate_spectrum_protocol.json": "a0ca42621184032ed7a47209d01f3fc2307c7ce7c04d03c4834d36c5c2c55261",
+    "swap_candidate_spectrum_analysis.json": "67283bfcf6d1f2d5a107f959ae9219d2e5fa2d14c27c5f9685de026ad62efc6d",
+    "embedding_census_analysis.json": "c62d4158580378583a9abee081e9d08da9380cd2e226e132da32ac0394ffc7d0",
+    "swap-candidate-spectrum.png": "b2e996b727f305d0a13b796b125f86ec53ce937e8b90350384c4ba87ed8f5d6c",
+    "build_swap_candidate_spectrum_report.js": "047e8accf648c98ac7780178cefa48b99d971620ba4fc1f7a8ee27b12ee02cb5"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "99af83f044f111f40ac642cb775e901e97cf6ef8a334e84b951d1bf109e7b3a6",
+    "renderReportSha256": "a078fd707725be7e49b5564be9e33fec146f7079410bab0a6587ab6742487b19"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "99af83f044f111f40ac642cb775e901e97cf6ef8a334e84b951d1bf109e7b3a6",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看四个单页；OMML公式、前六谱距离、两对中心表、谱结构图、重叠矩阵和边界说明完整，无近空白页或裁切。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_swap_candidate_spectrum.py -v
+test_figure_markdown_and_reviewed_word (__main__.SwapCandidateSpectrumTests.test_figure_markdown_and_reviewed_word) ... ok
+test_overlap_advantage_is_cross_term_not_state_exchange (__main__.SwapCandidateSpectrumTests.test_overlap_advantage_is_cross_term_not_state_exchange) ... ok
+test_pair_centers_and_separations_are_exact (__main__.SwapCandidateSpectrumTests.test_pair_centers_and_separations_are_exact) ... ok
+test_profiles_and_stored_distances_are_reproduced (__main__.SwapCandidateSpectrumTests.test_profiles_and_stored_distances_are_reproduced) ... ok
+test_static_rank_is_not_parameter_tracking (__main__.SwapCandidateSpectrumTests.test_static_rank_is_not_parameter_tracking) ... ok
+test_target_registry_and_sources (__main__.SwapCandidateSpectrumTests.test_target_registry_and_sources) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.034s
+
+OK
+exit_code=0

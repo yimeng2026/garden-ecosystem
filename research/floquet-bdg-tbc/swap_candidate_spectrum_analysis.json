@@ -1,0 +1,304 @@
+{
+  "schema": "floquet-bdg-swap-candidate-spectrum-analysis-v1",
+  "analysis_date": "2026-11-11",
+  "protocol_sha256": "a0ca42621184032ed7a47209d01f3fc2307c7ce7c04d03c4834d36c5c2c55261",
+  "source_sha256": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+  "census_source_sha256": "c62d4158580378583a9abee081e9d08da9380cd2e226e132da32ac0394ffc7d0",
+  "original_independent_source_sha256": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+  "new_independent_source_sha256": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+  "verification_eigenvectors_recomputed": true,
+  "new_physics_cells": 0,
+  "new_seed_count": 0,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "cross_pair_exact_degenerate": false,
+  "near_degeneracy_threshold_added": false,
+  "spectral_crossing_proven": false,
+  "avoided_crossing_claim": false,
+  "state_exchange_proven": false,
+  "second_pair_topological_claim": false,
+  "sorted_order_is_constructed_not_tracking": true,
+  "rank_swap_observed": false,
+  "new_taxonomy_claim": false,
+  "categories_changed": false,
+  "universal_mechanism_claim": false,
+  "original_category_counts": {
+    "tail_growth_without_endpoint_recovery": 3,
+    "right_end_weakening_with_broadening": 1,
+    "right_end_driven_symmetrization": 3,
+    "left_end_driven_threshold": 2,
+    "other_unclassified": 7
+  },
+  "cells": [
+    {
+      "n": 400,
+      "seed": 6,
+      "strength": 0.05,
+      "spectrum": [
+        {
+          "rank": 0,
+          "eigenvalue_real": 0.9999999981665155,
+          "eigenvalue_imag": 6.055550036190849e-05,
+          "phase": 6.055550039891768e-05,
+          "distance": 6.0555500389665384e-05
+        },
+        {
+          "rank": 1,
+          "eigenvalue_real": 0.9999999981665155,
+          "eigenvalue_imag": -6.055550036190849e-05,
+          "phase": -6.055550039891768e-05,
+          "distance": 6.0555500389665384e-05
+        },
+        {
+          "rank": 2,
+          "eigenvalue_real": 0.999995613068176,
+          "eigenvalue_imag": 0.0029620675916612327,
+          "phase": 0.0029620719231316798,
+          "distance": 0.0029620708402637174
+        },
+        {
+          "rank": 3,
+          "eigenvalue_real": 0.999995613068176,
+          "eigenvalue_imag": -0.0029620675916612327,
+          "phase": -0.0029620719231316798,
+          "distance": 0.0029620708402637174
+        },
+        {
+          "rank": 4,
+          "eigenvalue_real": 0.9999888912468526,
+          "eigenvalue_imag": 0.004713531891597456,
+          "phase": 0.004713549345495754,
+          "distance": 0.004713544982017546
+        },
+        {
+          "rank": 5,
+          "eigenvalue_real": 0.9999888912468526,
+          "eigenvalue_imag": -0.004713531891597456,
+          "phase": -0.004713549345495754,
+          "distance": 0.004713544982017546
+        }
+      ],
+      "pairs": [
+        {
+          "pair_index": 0,
+          "stored_profile_sha256": "05e38a7877a64bb128c8beb482702009832480c89a5438ff07fb74284f440c57",
+          "max_profile_absolute_error": 1.3877787807814457e-17,
+          "edge_weight_absolute_error": 0.0,
+          "stored_distance_max_absolute_error": 6.776263578034403e-21,
+          "center": 6.0555500389665384e-05,
+          "within_distance_difference": 0.0,
+          "max_separation_ratio": 0.020443636784957527,
+          "diagnostic_joint_pass": true
+        },
+        {
+          "pair_index": 1,
+          "stored_profile_sha256": "b1efa755e95981d164a26d6c00cfd6863d3589ae4d9cde07ae8ba528d9379f81",
+          "max_profile_absolute_error": 8.673617379884035e-18,
+          "edge_weight_absolute_error": 1.3877787807814457e-17,
+          "stored_distance_max_absolute_error": 4.336808689942018e-19,
+          "center": 0.0029620708402637174,
+          "within_distance_difference": 0.0,
+          "max_separation_ratio": 1.0,
+          "diagnostic_joint_pass": false
+        }
+      ],
+      "center_separation": 0.002901515339874052,
+      "center_separation_ratio": 0.9795563632150425,
+      "max_stored_distance_absolute_error": 4.336808689942018e-19
+    },
+    {
+      "n": 600,
+      "seed": 6,
+      "strength": 0.05,
+      "spectrum": [
+        {
+          "rank": 0,
+          "eigenvalue_real": 0.9999999999488014,
+          "eigenvalue_imag": -1.0119108365208573e-05,
+          "phase": -1.0119108365381272e-05,
+          "distance": 1.0119108365338095e-05
+        },
+        {
+          "rank": 1,
+          "eigenvalue_real": 0.9999999999488014,
+          "eigenvalue_imag": 1.0119108365208573e-05,
+          "phase": 1.0119108365381272e-05,
+          "distance": 1.0119108365338095e-05
+        },
+        {
+          "rank": 2,
+          "eigenvalue_real": 0.9999959430275166,
+          "eigenvalue_imag": -0.0028484958327454346,
+          "phase": -0.002848499684841422,
+          "distance": 0.0028484987218171326
+        },
+        {
+          "rank": 3,
+          "eigenvalue_real": 0.9999959430275166,
+          "eigenvalue_imag": 0.0028484958327454346,
+          "phase": 0.002848499684841422,
+          "distance": 0.0028484987218171326
+        },
+        {
+          "rank": 4,
+          "eigenvalue_real": 0.9999957074409982,
+          "eigenvalue_imag": 0.00293003405967307,
+          "phase": 0.0029300382521282816,
+          "distance": 0.002930037204014146
+        },
+        {
+          "rank": 5,
+          "eigenvalue_real": 0.9999957074409982,
+          "eigenvalue_imag": -0.00293003405967307,
+          "phase": -0.0029300382521282816,
+          "distance": 0.002930037204014146
+        }
+      ],
+      "pairs": [
+        {
+          "pair_index": 0,
+          "stored_profile_sha256": "53271798d4b08856c06833cd98dc50c9c62da3199a5f81d7f762a200f6ab70d6",
+          "max_profile_absolute_error": 1.0408340855860843e-17,
+          "edge_weight_absolute_error": 2.7755575615628914e-16,
+          "stored_distance_max_absolute_error": 0.0,
+          "center": 1.0119108365338095e-05,
+          "within_distance_difference": 0.0,
+          "max_separation_ratio": 0.0035524356348957203,
+          "diagnostic_joint_pass": false
+        },
+        {
+          "pair_index": 1,
+          "stored_profile_sha256": "c2210b567bddc621d7b1b7409c8a8bd84f3c705f707e6faf4d3d4f6a84ec05d8",
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 5.551115123125783e-17,
+          "stored_distance_max_absolute_error": 4.336808689942018e-19,
+          "center": 0.0028484987218171326,
+          "within_distance_difference": 0.0,
+          "max_separation_ratio": 1.0,
+          "diagnostic_joint_pass": false
+        }
+      ],
+      "center_separation": 0.0028383796134517944,
+      "center_separation_ratio": 0.9964475643651042,
+      "max_stored_distance_absolute_error": 4.336808689942018e-19
+    }
+  ],
+  "size_comparison": {
+    "center_separation_delta": -6.31357264222576e-05,
+    "pair0_center_delta": -5.043639202432729e-05,
+    "pair1_center_delta": -0.00011357211844658472
+  },
+  "candidate_overlap": {
+    "linear_point": {
+      "overlap_matrix": [
+        [
+          {
+            "singular_values": [
+              0.08043527848489433,
+              0.011710744141003574
+            ],
+            "overlap": 0.0033034877766392775,
+            "principal_angles_deg": [
+              85.38641401296547,
+              89.32900844836581
+            ]
+          },
+          {
+            "singular_values": [
+              0.09164825812702493,
+              0.0026852355328557368
+            ],
+            "overlap": 0.0042033068537923515,
+            "principal_angles_deg": [
+              84.7415627257741,
+              89.84614715207603
+            ]
+          }
+        ],
+        [
+          {
+            "singular_values": [
+              0.029676485941183613,
+              0.009919713741661673
+            ],
+            "overlap": 0.00048954726926689,
+            "principal_angles_deg": [
+              88.2994129263889,
+              89.43163294707703
+            ]
+          },
+          {
+            "singular_values": [
+              0.036259212487572454,
+              0.010295890705629118
+            ],
+            "overlap": 0.0007103679278205951,
+            "principal_angles_deg": [
+              87.92204466106062,
+              89.41007849345229
+            ]
+          }
+        ]
+      ],
+      "diagonal_score": 0.0020069278522299363,
+      "swapped_score": 0.0023464270615296207,
+      "cross_term_exceeds_each_diagonal_entry": true
+    },
+    "cell_average": {
+      "overlap_matrix": [
+        [
+          {
+            "singular_values": [
+              0.07933658863209843,
+              0.011217121973170199
+            ],
+            "overlap": 0.003210059060569894,
+            "principal_angles_deg": [
+              85.44956614123937,
+              89.35729277419308
+            ]
+          },
+          {
+            "singular_values": [
+              0.09080247387755519,
+              0.0026799682911583258
+            ],
+            "overlap": 0.004126135746162853,
+            "principal_angles_deg": [
+              84.79022550564831,
+              89.84644894388087
+            ]
+          }
+        ],
+        [
+          {
+            "singular_values": [
+              0.029410271879222447,
+              0.009760272100542342
+            ],
+            "overlap": 0.0004801135017432039,
+            "principal_angles_deg": [
+              88.31467252946176,
+              89.44076872250002
+            ]
+          },
+          {
+            "singular_values": [
+              0.03602659146581742,
+              0.010335598876463306
+            ],
+            "overlap": 0.0007023699483900292,
+            "principal_angles_deg": [
+              87.9353815777797,
+              89.407803261789
+            ]
+          }
+        ]
+      ],
+      "diagonal_score": 0.0019562145044799617,
+      "swapped_score": 0.0023031246239530287,
+      "cross_term_exceeds_each_diagonal_entry": true
+    }
+  },
+  "max_profile_absolute_error": 1.3877787807814457e-17
+}

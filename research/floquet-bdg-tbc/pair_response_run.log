@@ -79,7 +79,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_pair_response_qa.py
 {
   "schema": "floquet-bdg-pair-response-word-qa-v1",
-  "recordedUtc": "2026-11-11T09:14:31.203983+00:00",
+  "recordedUtc": "2026-11-11T09:34:56.396459+00:00",
   "sourceSha256": {
     "pair_response_protocol.json": "1576a22234b92d569e44afc53808225269631e20e7156d46721bd25cd64704a1",
     "pair_response_analysis.json": "87661b75fdb55d79ac766e7c527247ebde9d11d475fccd2c433582369b894b8d",
@@ -126,7 +126,7 @@ test_second_pair_is_rank_matched_not_tracked_or_topological (__main__.PairRespon
 test_sign_tables_are_descriptive_and_complete (__main__.PairResponseTests.test_sign_tables_are_descriptive_and_complete) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.348s
+Ran 6 tests in 0.346s
 
 OK
 exit_code=0
