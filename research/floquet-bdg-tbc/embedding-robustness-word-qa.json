@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-embedding-robustness-word-qa-v1",
-  "recordedUtc": "2026-11-11T11:40:03.590961+00:00",
+  "recordedUtc": "2026-11-11T12:12:27.691517+00:00",
   "sourceSha256": {
     "embedding_robustness_protocol.json": "e7165492ca173f10435aaa394116f6c2e91e02a6095a6669af3deb45fcb20a79",
     "embedding_robustness_analysis.json": "d62108d415aed1b0bdacd8f74f8e4e86db38830cdfa0f3bdcf49cd7aab2d586a",

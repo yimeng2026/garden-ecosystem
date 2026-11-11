@@ -1,0 +1,41 @@
+{
+  "schema": "floquet-bdg-overlap-confounding-word-qa-v1",
+  "recordedUtc": "2026-11-11T12:12:58.416987+00:00",
+  "sourceSha256": {
+    "overlap_confounding_protocol.json": "6d08fbc8e5d64085cad3635a3766c2050da5ebe51f6f6372bf71d4107274d717",
+    "overlap_confounding_analysis.json": "1ac3e76108f81b46e61ddd75eae32e52bfb697d3ad0bfe347aa2da57baa08948",
+    "embedding_census_analysis.json": "c62d4158580378583a9abee081e9d08da9380cd2e226e132da32ac0394ffc7d0",
+    "overlap-confounding-audit.png": "042d8b73010ed8b8d8ea30cb6d1e9d1a8d2a970e0309fef94ef5ef044ab86262",
+    "build_overlap_confounding_report.js": "1068a6fdf65949dc207e833735fe72b45ace5da9034573bb171e73ce51baf202"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "6a7696ecb2021a952d91b706deac71ba7e95ddf2d6c4b90ae1529c04fb79a744",
+    "renderReportSha256": "4b76d473d2d8507a49e4d5a5f8e36e10015130fd1eb22a80a2a3c68e8845fcec"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "6a7696ecb2021a952d91b706deac71ba7e95ddf2d6c4b90ae1529c04fb79a744",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看四个单页；结构化OMML、全样本汇总、四面板图、十六案例表及线性嵌入门槛失败均完整，无近空白页或裁切。"
+  }
+}

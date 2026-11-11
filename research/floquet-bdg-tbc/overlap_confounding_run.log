@@ -1,0 +1,91 @@
+$ overlap_confounding_evidence_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_overlap_confounding.py --check-only
+{"check_only": true, "cases": 16, "cells": 32, "same_n_embedding_rank_gate_passed": false, "all_passed": true}
+exit_code=0
+$ native_rank_leakage_worst_case: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\diagnose_same_n_rank_leakage.py
+{
+  "seed": 0,
+  "strength": 0.1,
+  "n": 400,
+  "m": 2400,
+  "native_qr": {
+    "off01": 3.236958291308849e-25,
+    "off10": 3.2369582913088498e-25,
+    "self00": 1.0000000000000009,
+    "self11": 1.0000000000000002
+  },
+  "linear_point": {
+    "off01": 3.2111372980829974e-06,
+    "off10": 3.2111372980829987e-06,
+    "self00": 0.9999999999999989,
+    "self11": 0.9999999999999984
+  },
+  "cell_average": {
+    "off01": 3.237179767829347e-25,
+    "off10": 3.237179767829347e-25,
+    "self00": 1.0000000000000064,
+    "self11": 0.9999999999999982
+  },
+  "hypothesis": "linear interpolation does not preserve the native cross-pair Gram matrix; nested cell repetition preserves its zero off-diagonal blocks up to a scalar factor"
+}
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-重叠差异混杂审计.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_overlap_confounding_qa.py
+{
+  "schema": "floquet-bdg-overlap-confounding-word-qa-v1",
+  "recordedUtc": "2026-11-11T12:12:58.416987+00:00",
+  "sourceSha256": {
+    "overlap_confounding_protocol.json": "6d08fbc8e5d64085cad3635a3766c2050da5ebe51f6f6372bf71d4107274d717",
+    "overlap_confounding_analysis.json": "1ac3e76108f81b46e61ddd75eae32e52bfb697d3ad0bfe347aa2da57baa08948",
+    "embedding_census_analysis.json": "c62d4158580378583a9abee081e9d08da9380cd2e226e132da32ac0394ffc7d0",
+    "overlap-confounding-audit.png": "042d8b73010ed8b8d8ea30cb6d1e9d1a8d2a970e0309fef94ef5ef044ab86262",
+    "build_overlap_confounding_report.js": "1068a6fdf65949dc207e833735fe72b45ace5da9034573bb171e73ce51baf202"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "6a7696ecb2021a952d91b706deac71ba7e95ddf2d6c4b90ae1529c04fb79a744",
+    "renderReportSha256": "4b76d473d2d8507a49e4d5a5f8e36e10015130fd1eb22a80a2a3c68e8845fcec"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "6a7696ecb2021a952d91b706deac71ba7e95ddf2d6c4b90ae1529c04fb79a744",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看四个单页；结构化OMML、全样本汇总、四面板图、十六案例表及线性嵌入门槛失败均完整，无近空白页或裁切。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_overlap_confounding.py -v
+test_beta_mismatch_is_recomputed_and_size_is_not_isolated (__main__.OverlapConfoundingTests.test_beta_mismatch_is_recomputed_and_size_is_not_isolated) ... ok
+test_cross_size_evidence_and_frozen_profiles_are_reproduced (__main__.OverlapConfoundingTests.test_cross_size_evidence_and_frozen_profiles_are_reproduced) ... ok
+test_figure_markdown_and_native_word_review (__main__.OverlapConfoundingTests.test_figure_markdown_and_native_word_review) ... ok
+test_protocol_sources_and_full_census_scope (__main__.OverlapConfoundingTests.test_protocol_sources_and_full_census_scope) ... ok
+test_representation_fidelity_is_bidirectional_and_not_a_correction (__main__.OverlapConfoundingTests.test_representation_fidelity_is_bidirectional_and_not_a_correction) ... ok
+test_same_n_rank_controls_identify_embedding_leakage (__main__.OverlapConfoundingTests.test_same_n_rank_controls_identify_embedding_leakage) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.042s
+
+OK
+exit_code=0

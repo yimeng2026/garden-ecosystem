@@ -80,7 +80,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_fixed_n_path_qa.py
 {
   "schema": "floquet-bdg-fixed-n-path-word-qa-v1",
-  "recordedUtc": "2026-11-11T11:40:18.311690+00:00",
+  "recordedUtc": "2026-11-11T12:12:42.632535+00:00",
   "sourceSha256": {
     "fixed_n_path_protocol.json": "9485300fc5f0a2f18df15e6499424611d40902c2c01cf5341bcce4a68a12becf",
     "fixed_n_path_analysis.json": "aca217e838a73469eeb1bfb9686bf6be22910d85f1f997c792905235f3552ab2",
@@ -129,7 +129,7 @@ test_reference_cell_profiles_and_distances_are_reproduced (__main__.FixedNPathTe
 test_summary_counts_and_extrema_are_exact (__main__.FixedNPathTests.test_summary_counts_and_extrema_are_exact) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.032s
+Ran 6 tests in 0.033s
 
 OK
 exit_code=0

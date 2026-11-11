@@ -1,0 +1,103 @@
+{
+  "schema": "floquet-bdg-overlap-confounding-verification-v1",
+  "recorded_utc": "2026-11-11T12:12:58.654954+00:00",
+  "all_passed": true,
+  "test_count": 6,
+  "check_only": true,
+  "original_independent_projectors_passed": true,
+  "new_independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "overlap_confounding_evidence_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_overlap_confounding.py",
+        "--check-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "native_rank_leakage_worst_case",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\diagnose_same_n_rank_leakage.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-重叠差异混杂审计.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_overlap_confounding_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_overlap_confounding.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "overlap_confounding_protocol.json": "6d08fbc8e5d64085cad3635a3766c2050da5ebe51f6f6372bf71d4107274d717",
+    "overlap_confounding_analysis.json": "1ac3e76108f81b46e61ddd75eae32e52bfb697d3ad0bfe347aa2da57baa08948",
+    "overlap-confounding-audit.png": "042d8b73010ed8b8d8ea30cb6d1e9d1a8d2a970e0309fef94ef5ef044ab86262",
+    "OVERLAP_CONFOUNDING_AUDIT.md": "851aa72ebb80b080bf6831a1841d6429b8469e075ddd9b0d2daa54d2396afbde",
+    "Floquet-BdG-重叠差异混杂审计.docx": "6a7696ecb2021a952d91b706deac71ba7e95ddf2d6c4b90ae1529c04fb79a744",
+    "overlap-confounding-word-qa.json": "a5f4c02f03e4d213df5e1caa93794302e51b7905f0a2275d593ff6b185c85143",
+    "overlap-confounding-word-render/report.json": "4b76d473d2d8507a49e4d5a5f8e36e10015130fd1eb22a80a2a3c68e8845fcec",
+    "overlap_confounding_run.log": "d537e5ec021124b3df97cf10d0658169ff65bc11fe241d7176af8903791ef4c4",
+    "analyze_overlap_confounding.py": "70e4931bbdc5bc1379210b249105eb6cd2c7f0254034d7f02033632a88349e63",
+    "build_overlap_confounding_report.js": "1068a6fdf65949dc207e833735fe72b45ace5da9034573bb171e73ce51baf202",
+    "record_overlap_confounding_qa.py": "41c2b0e9e33952f26ba73cb19854ad220863a60522d34a896c33d1b8f0438265",
+    "test_overlap_confounding.py": "8c3e235e4043860ac29f9baae115666cb9e8ded31e77f259c28a741861d365a3",
+    "diagnose_same_n_rank_leakage.py": "f23c994de09868012a78fe30e6b57f90a3a929603787f3646b2e604cf57025e0",
+    "embedding_census_analysis.json": "c62d4158580378583a9abee081e9d08da9380cd2e226e132da32ac0394ffc7d0",
+    "multi_seed_independent.json": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9"
+  },
+  "scope": {
+    "overlap_confounding_analysis_evaluated": true,
+    "cases": 16,
+    "cells": 32,
+    "method_grid_count": 96,
+    "same_n_rank_controls": 192,
+    "native_rank_controls": 32,
+    "representation_fidelity_count": 192,
+    "beta_profile_comparisons": 96,
+    "same_n_embedding_rank_gate_passed": false,
+    "max_linear_point_same_n_off_diagonal": 3.2111372980829987e-06,
+    "max_native_same_n_off_diagonal": 1.5499955259592814e-24,
+    "max_cell_average_same_n_off_diagonal": 1.5500265839431962e-24,
+    "min_representation_fidelity": 0.9872555832052331,
+    "min_beta_rms_absolute_difference": 0.3135955056912623,
+    "normalization_correction_applied": false,
+    "size_effect_separated": false,
+    "same_disorder_realization": false,
+    "common_disorder_profile_control_computed": false,
+    "next_control": "common_beta_x_sampling",
+    "new_physics_cells": 0,
+    "new_winding_computed": false,
+    "n640_computed": false,
+    "new_taxonomy_claim": false,
+    "statistical_significance_claim": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "overlap_confounding_run.log"
+}

@@ -24,7 +24,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_embedding_robustness_qa.py
 {
   "schema": "floquet-bdg-embedding-robustness-word-qa-v1",
-  "recordedUtc": "2026-11-11T11:40:03.590961+00:00",
+  "recordedUtc": "2026-11-11T12:12:27.691517+00:00",
   "sourceSha256": {
     "embedding_robustness_protocol.json": "e7165492ca173f10435aaa394116f6c2e91e02a6095a6669af3deb45fcb20a79",
     "embedding_robustness_analysis.json": "d62108d415aed1b0bdacd8f74f8e4e86db38830cdfa0f3bdcf49cd7aab2d586a",
@@ -73,7 +73,7 @@ test_overlap_metrics_are_consistent_for_both_methods (__main__.EmbeddingRobustne
 test_profiles_and_previous_linear_results_are_reproduced (__main__.EmbeddingRobustnessTests.test_profiles_and_previous_linear_results_are_reproduced) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.034s
+Ran 6 tests in 0.033s
 
 OK
 exit_code=0

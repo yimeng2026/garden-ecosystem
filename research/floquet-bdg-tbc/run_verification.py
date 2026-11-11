@@ -65,6 +65,7 @@ def main():
         ("path_refinement_suite", [sys.executable, str(ROOT / "run_path_refinement_verification.py")], 180),
         ("n600_path_suite", [sys.executable, str(ROOT / "run_n600_path_verification.py"), "--check-only"], 180),
         ("n600_valley_suite", [sys.executable, str(ROOT / "run_n600_valley_verification.py"), "--check-only"], 180),
+        ("overlap_confounding_suite", [sys.executable, str(ROOT / "run_overlap_confounding_verification.py"), "--check-only"], 180),
     ]
     rows, logs = [], []
     for label, command, timeout in commands:
@@ -101,6 +102,7 @@ def main():
     path_refinement_verification = json.loads((ROOT / "path_refinement_verification.json").read_text(encoding="utf-8")) if (ROOT / "path_refinement_verification.json").exists() else {}
     n600_path_verification = json.loads((ROOT / "n600_path_verification.json").read_text(encoding="utf-8")) if (ROOT / "n600_path_verification.json").exists() else {}
     n600_valley_verification = json.loads((ROOT / "n600_valley_verification.json").read_text(encoding="utf-8")) if (ROOT / "n600_valley_verification.json").exists() else {}
+    overlap_confounding_verification = json.loads((ROOT / "overlap_confounding_verification.json").read_text(encoding="utf-8")) if (ROOT / "overlap_confounding_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -210,6 +212,11 @@ def main():
         "n600-valley-word-render/report.json", "n600_valley_verification.json", "n600_valley_run.log",
         "analyze_n600_valley.py", "build_n600_valley_report.js", "record_n600_valley_qa.py",
         "test_n600_valley.py", "run_n600_valley_verification.py",
+        "overlap_confounding_protocol.json", "overlap_confounding_analysis.json", "overlap-confounding-audit.png",
+        "OVERLAP_CONFOUNDING_AUDIT.md", "Floquet-BdG-重叠差异混杂审计.docx", "overlap-confounding-word-qa.json",
+        "overlap-confounding-word-render/report.json", "overlap_confounding_verification.json", "overlap_confounding_run.log",
+        "analyze_overlap_confounding.py", "build_overlap_confounding_report.js", "record_overlap_confounding_qa.py",
+        "test_overlap_confounding.py", "run_overlap_confounding_verification.py", "diagnose_same_n_rank_leakage.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py",
@@ -220,7 +227,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 9 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 9 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None, "overlap_confounding": 6 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -293,6 +300,9 @@ def main():
         "n600_valley_all_passed": n600_valley_verification.get("all_passed"),
         "n600_valley_original_independent_projectors_passed": n600_valley_verification.get("original_independent_projectors_passed"),
         "n600_valley_visual_review_status": n600_valley_verification.get("visual_review_status"),
+        "overlap_confounding_all_passed": overlap_confounding_verification.get("all_passed"),
+        "overlap_confounding_visual_review_status": overlap_confounding_verification.get("visual_review_status"),
+        "overlap_confounding_size_effect_separated": overlap_confounding_verification.get("scope", {}).get("size_effect_separated"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
@@ -389,6 +399,14 @@ def main():
             "n600_valley_is_not_crossing_proof": True,
             "n600_valley_low_overlap_has_step_dependence": True,
             "n600_valley_continuous_path_proof": False,
+            "overlap_confounding_analysis_evaluated": "passed",
+            "overlap_confounding_cases": 16,
+            "overlap_confounding_same_n_embedding_rank_gate_passed": False,
+            "overlap_confounding_linear_embedding_max_rank_leakage": 3.2111372980829987e-06,
+            "overlap_confounding_same_disorder_realization": False,
+            "overlap_confounding_size_effect_separated": False,
+            "overlap_confounding_common_beta_control_computed": False,
+            "overlap_confounding_normalization_correction_applied": False,
             "new_taxonomy_claim": False,
             "universal_category_claim": False,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,
