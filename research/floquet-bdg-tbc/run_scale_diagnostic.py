@@ -121,7 +121,11 @@ def main():
                 f"W0={row['zero']['nearest_integer']} raw={row['zero']['value']} "
                 f"gap={row['zero']['min_bulk_gap']} endpoint={row['endpoint']['zero']['joint_pass']}"
             )
-        print("partial_grids", json.dumps(data["partial_grids"], ensure_ascii=False))
+        for n_key, partial in data["partial_grids"].items():
+            for grid_key in ("0.05", "0.025"):
+                if grid_key in partial:
+                    grid = partial[grid_key]
+                    print(f"N={n_key} grid={grid_key} status={grid.get('status')} next={grid.get('next_index')}/{grid.get('points')}")
         print("n400_complete", data["n400_complete"], "n600_complete", data["n600_complete"])
         return 0
     except (RuntimeError, ValueError, FileNotFoundError) as error:

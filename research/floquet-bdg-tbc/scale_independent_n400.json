@@ -1,0 +1,30 @@
+{
+  "schema": "floquet-bdg-scale-independent-v1",
+  "n": 400,
+  "strength": 0.1,
+  "seed": 0,
+  "target": "zero",
+  "method": "original expm+Schur determinant phase",
+  "independent_nominal_step": 0.1,
+  "production_status": "ok",
+  "production_nearest_integer": 1,
+  "production_value": 0.9998955645474457,
+  "production_min_bulk_gap": 0.00246008320556524,
+  "endpoint_joint_pass": true,
+  "independent": {
+    "status": "ok",
+    "method": "independent Schur reconstruction and unwrapped det(block) phase",
+    "nominal_step": 0.1,
+    "actual_step": 0.09973310011396169,
+    "points": 63,
+    "raw_signed": 1.0000000000000002,
+    "value": 1.0000000000000002,
+    "nearest_integer": 1,
+    "integer_residual": 2.220446049250313e-16,
+    "min_bulk_gap": 0.0024600832055643993,
+    "max_symmetry_error": 1.4762885239613745e-13,
+    "max_block_condition": 1.0000000000000502,
+    "passed": true
+  },
+  "integer_agreement": true
+}
