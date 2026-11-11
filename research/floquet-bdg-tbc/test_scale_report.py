@@ -22,8 +22,8 @@ class ScaleReportTests(unittest.TestCase):
         data = json.loads((ROOT / "scale_diagnostic.json").read_text(encoding="utf-8"))
         independent = json.loads((ROOT / "scale_independent_n400.json").read_text(encoding="utf-8"))
         self.assertTrue(data["n400_complete"])
-        self.assertEqual(len(data["rows"]), 1)
-        row = data["rows"][0]
+        self.assertEqual({row["n"] for row in data["rows"]}, {400, 600})
+        row = next(row for row in data["rows"] if row["n"] == 400)
         self.assertEqual(row["zero"]["status"], "ok")
         self.assertEqual(row["zero"]["nearest_integer"], 1)
         self.assertTrue(row["endpoint"]["zero"]["joint_pass"])

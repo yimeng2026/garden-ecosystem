@@ -12,12 +12,14 @@ from verify_tbc import determinant_winding
 ROOT = Path(__file__).resolve().parent
 
 
-def verify(n):
+def verify(n, step):
+    if not 0 < step < np.pi:
+        raise ValueError("independent step must be positive and less than pi")
     data = json.loads((ROOT / "scale_diagnostic.json").read_text(encoding="utf-8"))
     row = next(row for row in data["rows"] if row["n"] == n)
     beta = beta_for(row["seed"], n)
     independent = determinant_winding(
-        n, np.full(n, 2.5), row["strength"] * beta, 7.0, 0.0, nominal_step=0.1,
+        n, np.full(n, 2.5), row["strength"] * beta, 7.0, 0.0, nominal_step=step,
     )
     production = row["zero"]
     agreement = bool(independent["passed"] and independent["nearest_integer"] == production["nearest_integer"])
@@ -25,7 +27,7 @@ def verify(n):
         "schema": "floquet-bdg-scale-independent-v1",
         "n": n, "strength": row["strength"], "seed": row["seed"], "target": "zero",
         "method": "original expm+Schur determinant phase",
-        "independent_nominal_step": 0.1,
+        "independent_nominal_step": step,
         "production_status": production["status"], "production_nearest_integer": production["nearest_integer"],
         "production_value": production["value"], "production_min_bulk_gap": production["min_bulk_gap"],
         "endpoint_joint_pass": row["endpoint"]["zero"]["joint_pass"],
@@ -40,8 +42,9 @@ def verify(n):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--n", type=int, choices=(400, 600), required=True)
+    parser.add_argument("--step", type=float, default=0.1)
     args = parser.parse_args()
-    return verify(args.n)
+    return verify(args.n, args.step)
 
 
 if __name__ == "__main__":

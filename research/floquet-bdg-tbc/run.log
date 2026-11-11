@@ -10,7 +10,7 @@ test_disordered_onsite_terms_and_chiral (__main__.TBCStructureTests.test_disorde
 test_step_origin_and_unitarity (__main__.TBCStructureTests.test_step_origin_and_unitarity) ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 12.729s
+Ran 9 tests in 16.860s
 
 OK
 exit_code=0
@@ -49,7 +49,7 @@ test_strength_checkpoint_row_counts (__main__.DisorderContractTests.test_strengt
 test_uniform_control_is_separate (__main__.DisorderContractTests.test_uniform_control_is_separate) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.695s
+Ran 8 tests in 0.694s
 
 OK
 exit_code=0
@@ -93,7 +93,7 @@ test_markdown_matches_failures_and_control_scope (__main__.ReportContractTests.t
 test_visual_review_hashes_are_current (__main__.ReportContractTests.test_visual_review_hashes_are_current) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.014s
+Ran 5 tests in 0.012s
 
 OK
 exit_code=0
@@ -105,7 +105,7 @@ test_preregistered_registry (__main__.FiniteSizeTargetTests.test_preregistered_r
 test_zero_only_evaluation_preserves_amplitude_contract (__main__.FiniteSizeTargetTests.test_zero_only_evaluation_preserves_amplitude_contract) ... ok
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.164s
+Ran 4 tests in 0.160s
 
 OK
 exit_code=0
@@ -134,7 +134,7 @@ test_size_trend_table (__main__.FiniteSizeReportTests.test_size_trend_table) ...
 test_visual_hash_binding (__main__.FiniteSizeReportTests.test_visual_hash_binding) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.339s
+Ran 5 tests in 0.304s
 
 OK
 exit_code=0
@@ -149,7 +149,7 @@ test_eigh_free_propagator_matches_expm (__main__.SpectralBackendTests.test_eigh_
 test_single_grid_cannot_claim_convergence (__main__.SpectralBackendTests.test_single_grid_cannot_claim_convergence) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.421s
+Ran 5 tests in 0.412s
 
 OK
 exit_code=0
@@ -178,7 +178,7 @@ test_registry_and_independent_counts (__main__.N320ReportTests.test_registry_and
 test_visual_hash_binding (__main__.N320ReportTests.test_visual_hash_binding) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.012s
+Ran 5 tests in 0.013s
 
 OK
 exit_code=0
@@ -193,12 +193,12 @@ test_chunk_resume_and_reference_equality (__main__.ResumableWindingTests.test_ch
 test_metadata_mismatch_is_rejected (__main__.ResumableWindingTests.test_metadata_mismatch_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.317s
+Ran 5 tests in 0.366s
 
 OK
 exit_code=0
 $ diagnostic_integrity: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_scale_diagnostic.py --n 400 --grid 0.05 --merge-only
-n400_complete True n600_complete False rows 1
+n400_complete True n600_complete True rows 2
 exit_code=0
 $ report_data: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\build_scale_report.py
 N400 metrics {"n": 400, "strength": 0.1, "seed": 0, "L50": 24, "L90": 133, "L99": 190, "L50_fraction": 0.06, "mass5": 0.23999450367242225, "mass10": 0.3142027103956898, "mass20": 0.47064970751134483, "mass40": 0.5842622494736688, "center20_mass": 0.05136850196226496, "subspace_ipr": 0.018275221151439983, "n_subspace_ipr": 7.310088460575994, "edge_weight": 0.5842622494736688, "separation": 0.0010719041005146524, "joint_pass": true}
@@ -221,9 +221,52 @@ test_n400_result_and_independent_agreement (__main__.ScaleReportTests.test_n400_
 test_visual_hash_binding (__main__.ScaleReportTests.test_visual_hash_binding) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.013s
+Ran 5 tests in 0.016s
 
 OK
 exit_code=0
 n400_overall passed
+exit_code=0
+$ n600_suite: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_n600_verification.py
+$ resume_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_resumable.py -v
+test_n400_and_n600_have_distinct_rationales (__main__.DiagnosticRegistryTests.test_n400_and_n600_have_distinct_rationales) ... ok
+test_extended_streams_are_exactly_nested (__main__.NestedSequenceTests.test_extended_streams_are_exactly_nested) ... ok
+test_half_chiral_block_matches_contract (__main__.OneThetaTests.test_half_chiral_block_matches_contract) ... ok
+test_chunk_resume_and_reference_equality (__main__.ResumableWindingTests.test_chunk_resume_and_reference_equality) ... ok
+test_metadata_mismatch_is_rejected (__main__.ResumableWindingTests.test_metadata_mismatch_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.285s
+
+OK
+exit_code=0
+$ diagnostic_integrity: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_scale_diagnostic.py --n 600 --grid 0.05 --merge-only
+n400_complete True n600_complete True rows 2
+exit_code=0
+$ report_data: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\build_n600_report.py
+N600 metrics {"n": 600, "strength": 0.05, "seed": 0, "L50": 85, "L90": 164, "L99": 280, "L50_fraction": 0.14166666666666666, "mass5": 0.05289846140539215, "mass10": 0.10278373605131076, "mass20": 0.1442265313400878, "mass40": 0.26454789873253215, "center20_mass": 0.02295770904584484, "subspace_ipr": 0.004654799769650631, "n_subspace_ipr": 2.7928798617903783, "edge_weight": 0.37046814478598233, "separation": 0.0032500191360026235, "joint_pass": false}
+envelope_R2 0.2525257197533778
+generated n600-result.png n600-coverage.png N600_DIAGNOSTIC.md
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-N600尾长诊断报告.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_status_hash: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_n600_qa.py
+{"visualReview": "unavailable_exit_6_no_retry", "visualPassClaimed": false, "docxSha256": "40bd486d796d3b3f2b770c051b5ab1e14379abce02f28bf695cdaee548eb2a2f"}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_n600_report.py -v
+test_docx_native_structure (__main__.N600ReportTests.test_docx_native_structure) ... ok
+test_figures_are_nonempty (__main__.N600ReportTests.test_figures_are_nonempty) ... ok
+test_n600_result_and_independent_agreement (__main__.N600ReportTests.test_n600_result_and_independent_agreement) ... ok
+test_tail_metrics_and_markdown (__main__.N600ReportTests.test_tail_metrics_and_markdown) ... ok
+test_visual_status_is_unavailable_not_passed (__main__.N600ReportTests.test_visual_status_is_unavailable_not_passed) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.015s
+
+OK
+exit_code=0
+n600_overall passed
 exit_code=0

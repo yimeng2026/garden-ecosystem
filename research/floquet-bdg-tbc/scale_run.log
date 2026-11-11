@@ -6,12 +6,12 @@ test_chunk_resume_and_reference_equality (__main__.ResumableWindingTests.test_ch
 test_metadata_mismatch_is_rejected (__main__.ResumableWindingTests.test_metadata_mismatch_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.317s
+Ran 5 tests in 0.366s
 
 OK
 exit_code=0
 $ diagnostic_integrity: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_scale_diagnostic.py --n 400 --grid 0.05 --merge-only
-n400_complete True n600_complete False rows 1
+n400_complete True n600_complete True rows 2
 exit_code=0
 $ report_data: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\build_scale_report.py
 N400 metrics {"n": 400, "strength": 0.1, "seed": 0, "L50": 24, "L90": 133, "L99": 190, "L50_fraction": 0.06, "mass5": 0.23999450367242225, "mass10": 0.3142027103956898, "mass20": 0.47064970751134483, "mass40": 0.5842622494736688, "center20_mass": 0.05136850196226496, "subspace_ipr": 0.018275221151439983, "n_subspace_ipr": 7.310088460575994, "edge_weight": 0.5842622494736688, "separation": 0.0010719041005146524, "joint_pass": true}
@@ -34,7 +34,7 @@ test_n400_result_and_independent_agreement (__main__.ScaleReportTests.test_n400_
 test_visual_hash_binding (__main__.ScaleReportTests.test_visual_hash_binding) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.013s
+Ran 5 tests in 0.016s
 
 OK
 exit_code=0

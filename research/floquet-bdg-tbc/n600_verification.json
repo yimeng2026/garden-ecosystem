@@ -1,0 +1,98 @@
+{
+  "schema": "floquet-bdg-n600-verification-v1",
+  "recorded_utc": "2026-11-11T04:48:55.130379+00:00",
+  "all_passed": true,
+  "resume_test_count": 5,
+  "report_test_count": 5,
+  "n600_complete": true,
+  "independent_agreement": true,
+  "visual_review_status": "unavailable_exit_6_no_retry",
+  "visual_pass_claimed": false,
+  "commands": [
+    {
+      "label": "resume_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_resumable.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "diagnostic_integrity",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\run_scale_diagnostic.py",
+        "--n",
+        "600",
+        "--grid",
+        "0.05",
+        "--merge-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_data",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\build_n600_report.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-N600尾长诊断报告.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_status_hash",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_n600_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_n600_report.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "scale_diagnostic.json": "242e53c9bc81a9a2751cfe5ff191664cb8d3f1a2d6f2a167a790d020dec5b320",
+    "scale_independent_n600.json": "9af8b1ff239c5e736d963bf615ea23e8707d199302f7e3a4772a7573296388d4",
+    "n600_scale.json": "422504685ee1d490d7e25762a89dcd587f86832b1a5a5011ccd1db28d47fbab5",
+    "n600-result.png": "60af73ab07401ee38dab1703a28ca7f1071c37f1e9beb0e49668ce13bedeab45",
+    "n600-coverage.png": "e5789ea9046c78b50b47053d838f1a65477a1e83c73acc5a7cea5c8ba4746a51",
+    "N600_DIAGNOSTIC.md": "564dd86dcebc0376e8c469417a083c2eff7d143f32c8ecee6a27d570dc28d114",
+    "Floquet-BdG-N600尾长诊断报告.docx": "40bd486d796d3b3f2b770c051b5ab1e14379abce02f28bf695cdaee548eb2a2f",
+    "n600-word-qa/report.json": "e710738c1c1f71dcc52554ad820797eb260cb0cfa10202cba515485e3cc10520",
+    "n600_run.log": "82ed2f837c37d4bca25327a019f88960fe3bee89682911d0ea403a68cba53504",
+    "scale_work/n600_zero_dtheta0p05.json": "072616545183f24c6b11affe379b44d8765a977007de4eb1f7deef3efca2a6cc",
+    "scale_work/n600_zero_dtheta0p025.json": "571f84ee5a9249d1cdbc4a4c6f0a243ffac713ef6014596713419c77230f7182",
+    "tbc_model.py": "bc7f7541434920ae9d5a9bdca396dc86306fb383a7d9f4bff19902077de641fc",
+    "resumable_winding.py": "fb147d73f5c7b09dd2e33ad562bb0937f2b4f6e16069b72fe5f8931b9e5a9cf0",
+    "run_disorder.py": "a5b543e05b7f1e2136fc6e948c8607e3efc105f959d254a7dbce2169156964e9",
+    "run_scale_diagnostic.py": "83e1bbbb7348177de05702d201869c6df77b468320c56913f2be2d1d713e59a2",
+    "verify_scale_diagnostic.py": "f7dbd1e68e1d0a79f045670b53819720db94e2d01c3a70eddbbdf451766f9e85",
+    "build_n600_report.py": "b0757c756dec7099efafa0e9c6cbbd56676050bfe06c28aaaf36931d563f3639",
+    "build_n600_report.js": "3a4dce5da9f713028075bb73ff0c75a88f2165cb071e8e316fbb0040739bcfd9",
+    "record_n600_qa.py": "f1c050b3be75b074b5cea8ffc9114d325379302ca99b35ca34d197425e32b302",
+    "test_n600_report.py": "3dd2e03c53639f0ef2a8915d6224b697574fc25918aae86bd0a478da6b4db2d6"
+  },
+  "scope": {
+    "n600_tail_growth_confirmed": true,
+    "n640_automatically_justified": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "n600_run.log"
+}
