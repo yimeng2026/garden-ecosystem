@@ -1,0 +1,71 @@
+{
+  "schema": "floquet-bdg-reversal-verification-v1",
+  "recorded_utc": "2026-11-11T06:46:35.809542+00:00",
+  "all_passed": true,
+  "test_count": 6,
+  "original_independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "reversal_decomposition",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_reversal_units.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-反转单元机制诊断.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_reversal_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_reversal_units.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "multi_seed_profile_control.json": "d903eadbdecc716719fccd33b5bddd8464be5a59dc1a65dacc75c751756e6c01",
+    "multi_seed_independent.json": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+    "reversal_unit_analysis.json": "554b60d7fc514f18cfdf411d2ff6ca350990adac22320a4b3337310004a7598f",
+    "reversal-units.png": "323f073dd80a08003fd592d206ea3be9362b2477ada074b5b1add4473685e0b2",
+    "REVERSAL_UNITS.md": "7e155e38514ce115f4c3858b5e662c5940e016ff361ef93f8a4d200b55aab95a",
+    "Floquet-BdG-反转单元机制诊断.docx": "50e4c4b252d9dc1f1f917fe6a44b687e43c66403601e5b20620478025031336b",
+    "reversal-word-qa.json": "70c9203b07b57227d738bd4e04594c674e48dce732c3c3940b9f3b4785723742",
+    "reversal-word-render/report.json": "738bcb26d5e202690d8fac243d819fde605d0b0deab12f9fe317535a07e9d0a3",
+    "analyze_reversal_units.py": "3bfb6bdb3cc15473b597c1406b54fd511a5061344709842a2fe5673ace01b20b",
+    "build_reversal_report.js": "ab8c7a71c929925e286623d7bfb907ec9a55bf97d1c98083e23b64f9ef85c243",
+    "record_reversal_qa.py": "769394b44be27ae11055b529bb72e6611e5c8cb3bf156d8e87bc979b482e8868",
+    "test_reversal_units.py": "fa9e65226471ce292e34e3524a0247cedc1bc129a85b4d5e2f7262d5b687385a",
+    "reversal_run.log": "4abd16bc314997b22a455cc307d6d582da5280d522a14ddaf0e85ad7b4bdf80c"
+  },
+  "scope": {
+    "targeted_reversal_decomposition_evaluated": true,
+    "right_driven_symmetrization_is_descriptive_only": true,
+    "broadening_is_not_endpoint_loss": true,
+    "new_seed_count": 0,
+    "n640_automatically_justified": false,
+    "repeated_category_analysis_pending": true,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "reversal_run.log"
+}
