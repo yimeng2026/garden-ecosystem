@@ -139,7 +139,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_near_miss_qa.py
 {
   "schema": "floquet-bdg-near-miss-word-qa-v1",
-  "recordedUtc": "2026-11-11T09:34:54.885117+00:00",
+  "recordedUtc": "2026-11-11T09:57:20.995939+00:00",
   "sourceSha256": {
     "near_miss_spatial_protocol.json": "679095de8ed6f34cc1bdb21e7c59fd5f0f0a490a7e7aeac7f775efc859639a17",
     "near_miss_spatial_analysis.json": "9a7916e54ec332714185956b471d28edab0419003ad90d6fa649084490af43bc",
@@ -186,7 +186,7 @@ test_tables_fit_word_page (__main__.NearMissSpatialTests.test_tables_fit_word_pa
 test_windows_recomputed_from_independently_verified_profiles (__main__.NearMissSpatialTests.test_windows_recomputed_from_independently_verified_profiles) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.054s
+Ran 6 tests in 0.052s
 
 OK
 exit_code=0

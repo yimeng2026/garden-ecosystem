@@ -1,0 +1,135 @@
+$ fixed_n_path_analysis: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_fixed_n_path.py
+{"completed_strength": 0.04, "center_separation": 0.0022531868054483637, "pair_centers": [1.8101838719578416e-05, 0.0022712886441679423]}
+{"completed_strength": 0.0425, "center_separation": 0.002234795015837553, "pair_centers": [0.00021916919343109844, 0.0024539642092686513]}
+{"completed_strength": 0.045, "center_separation": 0.0023684717825554922, "pair_centers": [6.0833434374626415e-05, 0.0024293052169301185]}
+{"completed_strength": 0.0475, "center_separation": 0.002611571041952891, "pair_centers": [8.251108809522902e-05, 0.00269408213004812]}
+{"completed_strength": 0.05, "center_separation": 0.0029015153398740516, "pair_centers": [6.055550038966538e-05, 0.002962070840263717]}
+{"completed_strength": 0.0525, "center_separation": 0.0036265979033125255, "pair_centers": [0.00019484746578264151, 0.003821445369095167]}
+{"completed_strength": 0.055, "center_separation": 0.004161349898584879, "pair_centers": [3.591474406635182e-05, 0.004197264642651231]}
+{"completed_strength": 0.0575, "center_separation": 0.0038429748325366016, "pair_centers": [5.059745359424145e-05, 0.003893572286130843]}
+{"completed_strength": 0.06, "center_separation": 0.003897781000643404, "pair_centers": [2.3681776966983213e-05, 0.003921462777610387]}
+{
+  "summary": {
+    "diagonal_link_count": 8,
+    "swapped_link_count": 0,
+    "tie_link_count": 0,
+    "assignment_sequence": [
+      {
+        "from": 0.04,
+        "to": 0.0425,
+        "dominant_assignment": "diagonal"
+      },
+      {
+        "from": 0.0425,
+        "to": 0.045,
+        "dominant_assignment": "diagonal"
+      },
+      {
+        "from": 0.045,
+        "to": 0.0475,
+        "dominant_assignment": "diagonal"
+      },
+      {
+        "from": 0.0475,
+        "to": 0.05,
+        "dominant_assignment": "diagonal"
+      },
+      {
+        "from": 0.05,
+        "to": 0.0525,
+        "dominant_assignment": "diagonal"
+      },
+      {
+        "from": 0.0525,
+        "to": 0.055,
+        "dominant_assignment": "diagonal"
+      },
+      {
+        "from": 0.055,
+        "to": 0.0575,
+        "dominant_assignment": "diagonal"
+      },
+      {
+        "from": 0.0575,
+        "to": 0.06,
+        "dominant_assignment": "diagonal"
+      }
+    ],
+    "min_center_separation": 0.002234795015837553,
+    "min_center_separation_strength": 0.0425,
+    "max_adjacent_center_separation_change": 0.000725082563438474,
+    "pair0_joint_pass_strengths": [
+      0.04,
+      0.0425,
+      0.045,
+      0.0475,
+      0.05
+    ],
+    "pair1_joint_pass_strengths": []
+  },
+  "max_reference_profile_absolute_error": 0.0,
+  "max_reference_distance_absolute_error": 0.0
+}
+generated fixed_n_path_analysis.json fixed-n-path.png FIXED_N_PATH.md
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-固定尺寸参数路径.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_fixed_n_path_qa.py
+{
+  "schema": "floquet-bdg-fixed-n-path-word-qa-v1",
+  "recordedUtc": "2026-11-11T09:57:58.866258+00:00",
+  "sourceSha256": {
+    "fixed_n_path_protocol.json": "9485300fc5f0a2f18df15e6499424611d40902c2c01cf5341bcce4a68a12becf",
+    "fixed_n_path_analysis.json": "aca217e838a73469eeb1bfb9686bf6be22910d85f1f997c792905235f3552ab2",
+    "swap_candidate_spectrum_analysis.json": "67283bfcf6d1f2d5a107f959ae9219d2e5fa2d14c27c5f9685de026ad62efc6d",
+    "fixed-n-path.png": "37bdc0d43c59251f639f49e96af6e47da06370300866baf1aa2f5aaf8d572eed",
+    "build_fixed_n_path_report.js": "ef2c3c9bdce0bdeb96274ff5bf02098a3ba4703a1e57e407a9fce7cc080f92dc"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "f19e63558ff908df884abe7962ebd6a1a086df085abeb1beb5950ffb2834a961",
+    "renderReportSha256": "731654f36452ea667db3440e118acd446fa2c0dfa9073c8f3bc19a176936e3c8"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "f19e63558ff908df884abe7962ebd6a1a086df085abeb1beb5950ffb2834a961",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看四个单页；OMML公式、九点谱表、路径图、八条链接和边界说明完整，无近空白页或裁切。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_fixed_n_path.py -v
+test_discrete_path_is_not_crossing_or_state_tracking_proof (__main__.FixedNPathTests.test_discrete_path_is_not_crossing_or_state_tracking_proof) ... ok
+test_figure_markdown_and_reviewed_word (__main__.FixedNPathTests.test_figure_markdown_and_reviewed_word) ... ok
+test_path_centers_and_adjacent_overlaps_are_consistent (__main__.FixedNPathTests.test_path_centers_and_adjacent_overlaps_are_consistent) ... ok
+test_protocol_registry_and_sources (__main__.FixedNPathTests.test_protocol_registry_and_sources) ... ok
+test_reference_cell_profiles_and_distances_are_reproduced (__main__.FixedNPathTests.test_reference_cell_profiles_and_distances_are_reproduced) ... ok
+test_summary_counts_and_extrema_are_exact (__main__.FixedNPathTests.test_summary_counts_and_extrema_are_exact) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.034s
+
+OK
+exit_code=0

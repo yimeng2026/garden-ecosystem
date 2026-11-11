@@ -585,7 +585,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_reversal_qa.py
 {
   "schema": "floquet-bdg-reversal-word-qa-v1",
-  "recordedUtc": "2026-11-11T09:34:49.042727+00:00",
+  "recordedUtc": "2026-11-11T09:57:15.120765+00:00",
   "sourceSha256": {
     "reversal_unit_analysis.json": "554b60d7fc514f18cfdf411d2ff6ca350990adac22320a4b3337310004a7598f",
     "multi_seed_profile_control.json": "d903eadbdecc716719fccd33b5bddd8464be5a59dc1a65dacc75c751756e6c01",

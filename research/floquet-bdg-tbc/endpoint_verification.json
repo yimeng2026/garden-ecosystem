@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-endpoint-verification-v1",
-  "recorded_utc": "2026-11-11T09:34:18.208656+00:00",
+  "recorded_utc": "2026-11-11T09:56:44.354725+00:00",
   "all_passed": true,
   "test_count": 7,
   "independent_projectors_passed": true,
@@ -60,14 +60,14 @@
     "endpoint-subspaces.png": "309c027bff0a26059e6453f8a3d63c893a2e1c419c773f48fec5a90d8ffd3be5",
     "ENDPOINT_SUBSPACES.md": "29ed7ac1cf68f090b00ad870a8fa713af1102681961a7295fd3ba18173342fdf",
     "Floquet-BdG-端点子空间诊断.docx": "79c6ca8b3541065e5129a7798f8ace6c80b3307b9976276a1415516c35a96ef8",
-    "endpoint-word-qa.json": "86121722e5eebddbcb6d36bf4db4757fb0412438d2f9bfcf06dcacd1975d308b",
+    "endpoint-word-qa.json": "7e703ff4bb5b7afe60dc19aff28bc3314753e4e73a7d42e74ad5c956eed95eed",
     "endpoint-word-render/report.json": "3b56732cda684b13e612fe45346b9348ad3cbf272b6926731b4118f6c0b1d0ff",
     "analyze_endpoint_subspaces.py": "009031b749116df45d935e9ad6ac5793405b5481d91527d424acf12a45f0300e",
     "verify_endpoint_subspaces.py": "cfb4ab0cd1e34459bf58a5bdc879759019e0adb3a23a4316afb6feb3cb5fdcfc",
     "build_endpoint_report.js": "5e46779f2b9625e1bdbd3bcf6389a7d4a20ed12c2827bf96030d2ed36da29a33",
     "record_endpoint_qa.py": "49d486400aed5ffe5e9a7242334bc28d22e3a8e6a9af941b6c3e029790806c67",
     "test_endpoint_subspaces.py": "ca05f15cb1ff15b1d0715470549e3533276edeef885e5d2dcea839a0e2ada415",
-    "endpoint_run.log": "5e83f27a873e420feb5b83c90e7b82893042b2ecdd06140cbc460fb28e0eb5db"
+    "endpoint_run.log": "8a06ed49f222f586a684aeb0761bfb92071cedb4a08f7b628051a95d8b3b454a"
   },
   "scope": {
     "n400_single_end_mechanism_evaluated": true,

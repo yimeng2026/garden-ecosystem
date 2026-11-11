@@ -1,0 +1,95 @@
+{
+  "schema": "floquet-bdg-fixed-n-path-verification-v1",
+  "recorded_utc": "2026-11-11T09:57:59.019984+00:00",
+  "all_passed": true,
+  "test_count": 6,
+  "original_independent_projectors_passed": true,
+  "new_independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "fixed_n_path_analysis",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_fixed_n_path.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-固定尺寸参数路径.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_fixed_n_path_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_fixed_n_path.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "fixed_n_path_protocol.json": "9485300fc5f0a2f18df15e6499424611d40902c2c01cf5341bcce4a68a12becf",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "swap_candidate_spectrum_analysis.json": "67283bfcf6d1f2d5a107f959ae9219d2e5fa2d14c27c5f9685de026ad62efc6d",
+    "multi_seed_independent.json": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "fixed_n_path_analysis.json": "aca217e838a73469eeb1bfb9686bf6be22910d85f1f997c792905235f3552ab2",
+    "fixed-n-path.png": "37bdc0d43c59251f639f49e96af6e47da06370300866baf1aa2f5aaf8d572eed",
+    "FIXED_N_PATH.md": "6dc184e378ae2d7005a52b76c5b943a7408980cd853c12e708e0d81bec92f033",
+    "Floquet-BdG-固定尺寸参数路径.docx": "f19e63558ff908df884abe7962ebd6a1a086df085abeb1beb5950ffb2834a961",
+    "fixed-n-path-word-qa.json": "0c4f334549b9a5e5705740dc9e1a49ee303af3dee811fa79aaee80eea03def8a",
+    "fixed-n-path-word-render/report.json": "731654f36452ea667db3440e118acd446fa2c0dfa9073c8f3bc19a176936e3c8",
+    "analyze_fixed_n_path.py": "7b7c23495d906365557ef537728d55d7cc5f92782c2f16cdeed214e544d2a7f4",
+    "build_fixed_n_path_report.js": "ef2c3c9bdce0bdeb96274ff5bf02098a3ba4703a1e57e407a9fce7cc080f92dc",
+    "record_fixed_n_path_qa.py": "ab66ef7f57e486f579c5a79350732c8398454803d24172ca7c8aff285934ee85",
+    "test_fixed_n_path.py": "1e009c83862501a34d31ad33e0cf89488b9da8313c824edc3d4628f462204b62",
+    "fixed_n_path_run.log": "afac3c754931fed77dcce1d04acb384d55220b57b4405d3cd8e0e2ac84aff141"
+  },
+  "scope": {
+    "fixed_n_path_analysis_evaluated": true,
+    "n": 400,
+    "seed": 6,
+    "parameter_points": 9,
+    "adjacent_links": 8,
+    "diagonal_link_count": 8,
+    "swapped_link_count": 0,
+    "min_center_separation": 0.002234795015837553,
+    "min_center_separation_strength": 0.0425,
+    "max_adjacent_center_separation_change": 0.000725082563438474,
+    "pair0_joint_pass_strengths": [
+      0.04,
+      0.0425,
+      0.045,
+      0.0475,
+      0.05
+    ],
+    "pair1_joint_pass_strengths": [],
+    "same_n_overlap_is_not_continuous_tracking": true,
+    "continuous_path_proof": false,
+    "spectral_crossing_proven": false,
+    "avoided_crossing_claim": false,
+    "state_exchange_proven": false,
+    "second_pair_topological_claim": false,
+    "new_taxonomy_claim": false,
+    "n640_automatically_justified": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "fixed_n_path_run.log"
+}
