@@ -10,8 +10,11 @@ import zipfile
 from pathlib import Path
 
 from PIL import Image
+import numpy as np
 
 ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT))
+from analyze_subspace_overlap import embedded_orthonormal_basis, overlap_entry  # noqa: E402
 
 
 def sha(path):
@@ -89,6 +92,64 @@ class SubspaceOverlapTests(unittest.TestCase):
                 self.assertAlmostEqual(grid["swapped_score"], swapped, places=12)
                 expected = "diagonal" if diagonal > swapped else "swapped" if swapped > diagonal else "tie_exact"
                 self.assertEqual(grid["dominant_assignment"], expected)
+
+    def test_overlap_entry_is_symmetric_under_direction_reversal(self):
+        rng = np.random.default_rng(20261111)
+        first = np.linalg.qr(rng.normal(size=(40, 2)) + 1j * rng.normal(size=(40, 2)), mode="reduced")[0]
+        second = np.linalg.qr(rng.normal(size=(40, 2)) + 1j * rng.normal(size=(40, 2)), mode="reduced")[0]
+        forward = overlap_entry(first, second)
+        reverse = overlap_entry(second, first)
+        self.assertAlmostEqual(forward["overlap"], reverse["overlap"], places=14)
+        self.assertTrue(np.allclose(forward["singular_values"], reverse["singular_values"], rtol=0, atol=1e-14))
+        direct_forward = np.linalg.norm(first.conj().T @ second, "fro") ** 2 / 2
+        direct_reverse = np.linalg.norm(second.conj().T @ first, "fro") ** 2 / 2
+        self.assertAlmostEqual(forward["overlap"], direct_forward, places=14)
+        self.assertAlmostEqual(reverse["overlap"], direct_reverse, places=14)
+        self.assertLessEqual(np.linalg.norm(first.conj().T @ first - np.eye(2), "fro"), 1e-12)
+        self.assertLessEqual(np.linalg.norm(second.conj().T @ second - np.eye(2), "fro"), 1e-12)
+
+    def test_full_common_space_overlap_is_symmetric_but_rectangular_block_need_not_be(self):
+        rng = np.random.default_rng(1107)
+        raw400 = [rng.normal(size=(4, 2, 2)) + 1j * rng.normal(size=(4, 2, 2)) for _ in range(2)]
+        raw600 = [rng.normal(size=(6, 2, 2)) + 1j * rng.normal(size=(6, 2, 2)) for _ in range(2)]
+        for subspace in raw400 + raw600:
+            n = subspace.shape[0]
+            restored = subspace.reshape((2 * n, 2)).reshape((n, 2, 2))
+            self.assertTrue(np.array_equal(restored, subspace))
+        q400 = [embedded_orthonormal_basis(subspace, 24) for subspace in raw400]
+        q600 = [embedded_orthonormal_basis(subspace, 24) for subspace in raw600]
+        common = q400 + q600
+        full = np.array([[overlap_entry(first, second)["overlap"] for second in common] for first in common])
+        self.assertTrue(np.allclose(full, full.T, rtol=0, atol=1e-14))
+        self.assertTrue(np.allclose(np.diag(full), np.ones(4), rtol=0, atol=1e-14))
+        rectangular = full[:2, 2:]
+        # rectangular[0,1] and rectangular[1,0] involve four distinct subspaces;
+        # their actual transposes lie outside this N400-by-N600 rectangular block.
+        self.assertGreater(abs(rectangular[0, 1] - rectangular[1, 0]), 1e-8)
+        for i in range(2):
+            for j in range(2):
+                reverse = overlap_entry(q600[j], q400[i])["overlap"]
+                self.assertAlmostEqual(rectangular[i, j], reverse, places=14)
+
+    def test_actual_candidate_direction_audit_is_bound(self):
+        path = ROOT / "overlap_symmetry_diagnostic.json"
+        self.assertTrue(path.is_file(), "Actual-candidate overlap symmetry diagnostic is missing")
+        data = load("overlap_symmetry_diagnostic.json")
+        self.assertEqual(data["schema"], "floquet-bdg-overlap-symmetry-diagnostic-v1")
+        self.assertEqual((data["seed"], data["strength"], data["common_grid"]), (6, 0.05, 1200))
+        self.assertEqual([row["method"] for row in data["methods"]], ["linear_point", "cell_average"])
+        self.assertLessEqual(data["summary"]["max_direction_absolute_error"], 1e-12)
+        self.assertLessEqual(data["summary"]["max_svd_direct_absolute_error"], 1e-12)
+        self.assertLessEqual(data["summary"]["max_orthonormality_error"], 1e-12)
+        self.assertEqual(data["summary"]["reshape_roundtrip_absolute_error"], 0.0)
+        for method in data["methods"]:
+            self.assertEqual(method["n400_n600_m"], [400, 600, 1200])
+            self.assertGreater(abs(method["O01_minus_O10"]), 1e-6)
+            for row in method["entries"]:
+                for entry in row:
+                    self.assertAlmostEqual(entry["forward"], entry["reverse"], places=14)
+        self.assertFalse(data["production_formula_changed"])
+        self.assertFalse(data["scientific_scores_changed"])
 
     def test_overlap_does_not_promote_rank_matching_to_state_tracking(self):
         data = load("subspace_overlap_analysis.json")

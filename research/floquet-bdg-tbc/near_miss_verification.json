@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-near-miss-spatial-verification-v1",
-  "recorded_utc": "2026-11-11T10:57:27.321203+00:00",
+  "recorded_utc": "2026-11-11T11:17:08.466628+00:00",
   "all_passed": true,
   "test_count": 6,
   "original_independent_projectors_passed": true,
@@ -54,13 +54,13 @@
     "near-miss-spatial.png": "a38295c3f7c6581125daa21a16fd378ba918ab1f0f1919efdb6a96c326f6e299",
     "NEAR_MISS_SPATIAL.md": "f15a05d36a95ada29db50d69f0c60503be540cd238d913892cea053d8b0fb06a",
     "Floquet-BdG-近miss空间分布与次近对.docx": "2f6254821ee958e1b4d5182cfaafbaa18ca4d864acc0999c65bee1ebabbd4e1c",
-    "near-miss-word-qa.json": "9757cfc83bd16450610ebafe47d8f2cb0682d096676528c93a6a9c2e6f7835f7",
+    "near-miss-word-qa.json": "1125c74c0544c7b8a14a1998d4a28c3514502b736063f1905050ae2c1e5e108e",
     "near-miss-word-render/report.json": "e169556e9e696ca579153ae163ff6237bb6a2d704f8d693bd580e7868fd41677",
     "analyze_near_miss_spatial.py": "ac0bb16c7615e82c09e80022a683f40c94b447b2e0c306e22e2fce170f13787c",
     "build_near_miss_report.js": "5009bd9aac8a773a98be7e2429be313c3b4502e49d089ad62ae7387e3207ad88",
     "record_near_miss_qa.py": "ad3343c166ffdda9331b6f0f0e40aa3f70a3a93d2d1ba520d28a526d11164926",
     "test_near_miss_spatial.py": "27a1246deb2f2cc1e4b00b8b8f1aeb67fc177cf9a90efb9333ea849f30b890f6",
-    "near_miss_run.log": "e1ed708e179d671348e3ce2fcc0e04416f6965357de01b3297882931aaa6d108"
+    "near_miss_run.log": "42432c8003f9ec0d0649a5e162ebbbaa2d49ca2dcc9ea0ebc2f8e92e2815648b"
   },
   "scope": {
     "near_miss_spatial_analysis_evaluated": true,

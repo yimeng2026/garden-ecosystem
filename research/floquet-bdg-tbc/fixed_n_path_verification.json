@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-fixed-n-path-verification-v1",
-  "recorded_utc": "2026-11-11T10:58:04.887930+00:00",
+  "recorded_utc": "2026-11-11T11:17:50.810983+00:00",
   "all_passed": true,
   "test_count": 6,
   "original_independent_projectors_passed": true,
@@ -54,13 +54,13 @@
     "fixed-n-path.png": "37bdc0d43c59251f639f49e96af6e47da06370300866baf1aa2f5aaf8d572eed",
     "FIXED_N_PATH.md": "6dc184e378ae2d7005a52b76c5b943a7408980cd853c12e708e0d81bec92f033",
     "Floquet-BdG-固定尺寸参数路径.docx": "f19e63558ff908df884abe7962ebd6a1a086df085abeb1beb5950ffb2834a961",
-    "fixed-n-path-word-qa.json": "d6ce1b6315556369a241936559b0578a4b642eaa5543046e4aa06910ce9ec221",
+    "fixed-n-path-word-qa.json": "b296d90e421a97626dd07836f81bd86fe9243df45d95323ac38d377e6c97c02c",
     "fixed-n-path-word-render/report.json": "731654f36452ea667db3440e118acd446fa2c0dfa9073c8f3bc19a176936e3c8",
     "analyze_fixed_n_path.py": "7b7c23495d906365557ef537728d55d7cc5f92782c2f16cdeed214e544d2a7f4",
     "build_fixed_n_path_report.js": "ef2c3c9bdce0bdeb96274ff5bf02098a3ba4703a1e57e407a9fce7cc080f92dc",
     "record_fixed_n_path_qa.py": "ab66ef7f57e486f579c5a79350732c8398454803d24172ca7c8aff285934ee85",
     "test_fixed_n_path.py": "1e009c83862501a34d31ad33e0cf89488b9da8313c824edc3d4628f462204b62",
-    "fixed_n_path_run.log": "f98c4862fd3bb74f9314572439e411d28333a63e8971bc3fe95f8982809011c8"
+    "fixed_n_path_run.log": "e642c01989890db5fe301486e79d65aa6c555644ed74ce34bd17d8b708c4e2cc"
   },
   "scope": {
     "fixed_n_path_analysis_evaluated": true,

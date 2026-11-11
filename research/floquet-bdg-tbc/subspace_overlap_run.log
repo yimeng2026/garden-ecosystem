@@ -12,6 +12,209 @@ $ subspace_overlap_analysis: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon
 }
 generated subspace_overlap_analysis.json subspace-overlap.png SUBSPACE_OVERLAP.md
 exit_code=0
+$ overlap_symmetry_diagnostic: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\diagnose_overlap_symmetry.py
+{
+  "deterministic_complex_qr": {
+    "forward": 0.05289031955277794,
+    "reverse": 0.05289031955277794,
+    "direction_absolute_error": 0.0,
+    "svd_direct_forward_absolute_error": 1.3877787807814457e-17,
+    "svd_direct_reverse_absolute_error": 1.3877787807814457e-17,
+    "forward_singular_values": [
+      0.27310972424266733,
+      0.17661177092609112
+    ],
+    "reverse_singular_values": [
+      0.27310972424266733,
+      0.17661177092609112
+    ],
+    "first_orthonormality_error": 3.1676639673831405e-16,
+    "second_orthonormality_error": 8.916411167297361e-16
+  }
+}
+{
+  "method": "linear_point",
+  "n400_n600_m": [
+    400,
+    600,
+    1200
+  ],
+  "reshape_roundtrip_absolute_error": 0.0,
+  "entries": [
+    [
+      {
+        "forward": 0.0033042079185467816,
+        "reverse": 0.0033042079185467816,
+        "direction_absolute_error": 0.0,
+        "svd_direct_forward_absolute_error": 8.673617379884035e-19,
+        "svd_direct_reverse_absolute_error": 8.673617379884035e-19,
+        "forward_singular_values": [
+          0.0804476817460694,
+          0.011687015819989979
+        ],
+        "reverse_singular_values": [
+          0.0804476817460694,
+          0.011687015819989979
+        ],
+        "first_orthonormality_error": 1.2117462897802937e-15,
+        "second_orthonormality_error": 1.5643166550504807e-15
+      },
+      {
+        "forward": 0.004205821624720487,
+        "reverse": 0.004205821624720487,
+        "direction_absolute_error": 0.0,
+        "svd_direct_forward_absolute_error": 0.0,
+        "svd_direct_reverse_absolute_error": 0.0,
+        "forward_singular_values": [
+          0.09167566612571036,
+          0.002686166385065666
+        ],
+        "reverse_singular_values": [
+          0.09167566612571036,
+          0.0026861663850656784
+        ],
+        "first_orthonormality_error": 1.2117462897802937e-15,
+        "second_orthonormality_error": 1.1109166973105323e-15
+      }
+    ],
+    [
+      {
+        "forward": 0.000489720752947316,
+        "reverse": 0.0004897207529473161,
+        "direction_absolute_error": 1.0842021724855044e-19,
+        "svd_direct_forward_absolute_error": 0.0,
+        "svd_direct_reverse_absolute_error": 1.0842021724855044e-19,
+        "forward_singular_values": [
+          0.029682108137120904,
+          0.009920381163589077
+        ],
+        "reverse_singular_values": [
+          0.029682108137120907,
+          0.009920381163589075
+        ],
+        "first_orthonormality_error": 1.6936465455830067e-15,
+        "second_orthonormality_error": 1.5643166550504807e-15
+      },
+      {
+        "forward": 0.0007110779388206341,
+        "reverse": 0.0007110779388206341,
+        "direction_absolute_error": 0.0,
+        "svd_direct_forward_absolute_error": 0.0,
+        "svd_direct_reverse_absolute_error": 0.0,
+        "forward_singular_values": [
+          0.03627531471960531,
+          0.010308123962916565
+        ],
+        "reverse_singular_values": [
+          0.03627531471960531,
+          0.010308123962916561
+        ],
+        "first_orthonormality_error": 1.6936465455830067e-15,
+        "second_orthonormality_error": 1.1109166973105323e-15
+      }
+    ]
+  ],
+  "O01_minus_O10": 0.0037161008717731714,
+  "max_direction_absolute_error": 1.0842021724855044e-19,
+  "max_svd_direct_absolute_error": 8.673617379884035e-19,
+  "max_orthonormality_error": 1.6936465455830067e-15
+}
+{
+  "method": "cell_average",
+  "n400_n600_m": [
+    400,
+    600,
+    1200
+  ],
+  "reshape_roundtrip_absolute_error": 0.0,
+  "entries": [
+    [
+      {
+        "forward": 0.0032100590605698876,
+        "reverse": 0.0032100590605698876,
+        "direction_absolute_error": 0.0,
+        "svd_direct_forward_absolute_error": 8.673617379884035e-19,
+        "svd_direct_reverse_absolute_error": 8.673617379884035e-19,
+        "forward_singular_values": [
+          0.07933658863209835,
+          0.011217121973170268
+        ],
+        "reverse_singular_values": [
+          0.07933658863209835,
+          0.011217121973170263
+        ],
+        "first_orthonormality_error": 2.4679065853015304e-15,
+        "second_orthonormality_error": 9.961119977695898e-16
+      },
+      {
+        "forward": 0.0041261357461628255,
+        "reverse": 0.004126135746162823,
+        "direction_absolute_error": 2.6020852139652106e-18,
+        "svd_direct_forward_absolute_error": 1.734723475976807e-18,
+        "svd_direct_reverse_absolute_error": 1.734723475976807e-18,
+        "forward_singular_values": [
+          0.09080247387755488,
+          0.002679968291158253
+        ],
+        "reverse_singular_values": [
+          0.09080247387755486,
+          0.002679968291158246
+        ],
+        "first_orthonormality_error": 2.4679065853015304e-15,
+        "second_orthonormality_error": 8.831770080096235e-16
+      }
+    ],
+    [
+      {
+        "forward": 0.0004801135017432006,
+        "reverse": 0.0004801135017432005,
+        "direction_absolute_error": 1.0842021724855044e-19,
+        "svd_direct_forward_absolute_error": 5.421010862427522e-20,
+        "svd_direct_reverse_absolute_error": 5.421010862427522e-20,
+        "forward_singular_values": [
+          0.02941027187922233,
+          0.00976027210054236
+        ],
+        "reverse_singular_values": [
+          0.02941027187922232,
+          0.009760272100542363
+        ],
+        "first_orthonormality_error": 2.1878135459263255e-15,
+        "second_orthonormality_error": 9.961119977695898e-16
+      },
+      {
+        "forward": 0.0007023699483900235,
+        "reverse": 0.000702369948390024,
+        "direction_absolute_error": 4.336808689942018e-19,
+        "svd_direct_forward_absolute_error": 2.168404344971009e-19,
+        "svd_direct_reverse_absolute_error": 2.168404344971009e-19,
+        "forward_singular_values": [
+          0.036026591465817284,
+          0.010335598876463245
+        ],
+        "reverse_singular_values": [
+          0.03602659146581729,
+          0.010335598876463254
+        ],
+        "first_orthonormality_error": 2.1878135459263255e-15,
+        "second_orthonormality_error": 8.831770080096235e-16
+      }
+    ]
+  ],
+  "O01_minus_O10": 0.003646022244419625,
+  "max_direction_absolute_error": 2.6020852139652106e-18,
+  "max_svd_direct_absolute_error": 1.734723475976807e-18,
+  "max_orthonormality_error": 2.4679065853015304e-15
+}
+{
+  "diagnosis_scope": "direction_reversal_is_required; O01_equals_O10_is_not_required_for_four_distinct_subspaces",
+  "max_direction_absolute_error": 2.6020852139652106e-18,
+  "max_svd_direct_absolute_error": 1.734723475976807e-18,
+  "max_orthonormality_error": 2.4679065853015304e-15,
+  "reshape_roundtrip_absolute_error": 0.0
+}
+generated overlap_symmetry_diagnostic.json
+exit_code=0
 $ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-跨尺寸子空间重叠.docx
 no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
 PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
@@ -20,7 +223,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_subspace_overlap_qa.py
 {
   "schema": "floquet-bdg-subspace-overlap-word-qa-v1",
-  "recordedUtc": "2026-11-11T10:57:39.367888+00:00",
+  "recordedUtc": "2026-11-11T11:17:24.346855+00:00",
   "sourceSha256": {
     "subspace_overlap_protocol.json": "1c6c4b18fdbb8a0df42ffad36a7bbc7c44748b02b51d188b4fbbded62a453a71",
     "subspace_overlap_analysis.json": "ad158072c581628e86c44a4e0fd67cd2039ebbf2b2f16ce1ff4eb71afe09e283",
@@ -59,15 +262,18 @@ $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share
 }
 exit_code=0
 $ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_subspace_overlap.py -v
+test_actual_candidate_direction_audit_is_bound (__main__.SubspaceOverlapTests.test_actual_candidate_direction_audit_is_bound) ... ok
 test_figure_markdown_and_reviewed_word (__main__.SubspaceOverlapTests.test_figure_markdown_and_reviewed_word) ... ok
 test_frozen_registry_and_sources (__main__.SubspaceOverlapTests.test_frozen_registry_and_sources) ... ok
+test_full_common_space_overlap_is_symmetric_but_rectangular_block_need_not_be (__main__.SubspaceOverlapTests.test_full_common_space_overlap_is_symmetric_but_rectangular_block_need_not_be) ... ok
 test_overlap_does_not_promote_rank_matching_to_state_tracking (__main__.SubspaceOverlapTests.test_overlap_does_not_promote_rank_matching_to_state_tracking) ... ok
+test_overlap_entry_is_symmetric_under_direction_reversal (__main__.SubspaceOverlapTests.test_overlap_entry_is_symmetric_under_direction_reversal) ... ok
 test_previous_categories_and_pair_response_evidence_are_unchanged (__main__.SubspaceOverlapTests.test_previous_categories_and_pair_response_evidence_are_unchanged) ... ok
 test_principal_subspace_metrics_are_internally_consistent (__main__.SubspaceOverlapTests.test_principal_subspace_metrics_are_internally_consistent) ... ok
 test_recomputed_eigenvectors_match_frozen_profiles (__main__.SubspaceOverlapTests.test_recomputed_eigenvectors_match_frozen_profiles) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.033s
+Ran 9 tests in 0.028s
 
 OK
 exit_code=0

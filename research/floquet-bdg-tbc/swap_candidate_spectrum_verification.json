@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-swap-candidate-spectrum-verification-v1",
-  "recorded_utc": "2026-11-11T10:57:56.268763+00:00",
+  "recorded_utc": "2026-11-11T11:17:42.173455+00:00",
   "all_passed": true,
   "test_count": 6,
   "original_independent_projectors_passed": true,
@@ -54,13 +54,13 @@
     "swap-candidate-spectrum.png": "b2e996b727f305d0a13b796b125f86ec53ce937e8b90350384c4ba87ed8f5d6c",
     "SWAP_CANDIDATE_SPECTRUM.md": "970f1ebc49ece47e164a34e171858f22e907dc9cfcf120fb4e7ff7146018d8d7",
     "Floquet-BdG-交换候选谱结构.docx": "99af83f044f111f40ac642cb775e901e97cf6ef8a334e84b951d1bf109e7b3a6",
-    "swap-candidate-spectrum-word-qa.json": "9a6406eb517e14e0789f1ab313100d289621ac78902895d78dc0eb09cca7d90f",
+    "swap-candidate-spectrum-word-qa.json": "57569a8c2d85bb6b671bb1380ac4d8ecbba7d8a8b7344e4a7a78f41dfa2da5b7",
     "swap-candidate-spectrum-word-render/report.json": "a078fd707725be7e49b5564be9e33fec146f7079410bab0a6587ab6742487b19",
     "analyze_swap_candidate_spectrum.py": "e5fa455f3229033a1d82161ebcc5ccaa986b44b7d5a5a9922f3a5b7716cfb27f",
     "build_swap_candidate_spectrum_report.js": "047e8accf648c98ac7780178cefa48b99d971620ba4fc1f7a8ee27b12ee02cb5",
     "record_swap_candidate_spectrum_qa.py": "b6befcb5c95ad12deb8b2bf947624b266c62a599cdcd64a3053e6ffd4b31cd18",
     "test_swap_candidate_spectrum.py": "e7376dd7425f8b38036829f110764e01ba0bc7863e0459a83bdc02519d28399a",
-    "swap_candidate_spectrum_run.log": "5a61ebc63963e33f71a1fa1a50a4be900e1202bb255e4e190c742bbd1bdeb258"
+    "swap_candidate_spectrum_run.log": "e200be4f339a947d56340da42a6e0c11d2e9c28970b86fda697bb41b036dc600"
   },
   "scope": {
     "swap_candidate_spectrum_analysis_evaluated": true,
