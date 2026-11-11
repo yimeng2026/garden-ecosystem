@@ -91,7 +91,7 @@ def main():
     record = {
         "schema": "floquet-bdg-matched-beta-verification-v1",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-        "all_passed": passed, "test_count": 7 if passed else None, "check_only": check_only,
+        "all_passed": passed, "test_count": 8 if passed else None, "check_only": check_only,
         "independent_recheck_passed": independent.get("all_passed"),
         "independent_max_spectrum_absolute_error": independent.get("max_spectrum_absolute_error"),
         "independent_max_pair_center_absolute_error": independent.get("max_pair_center_absolute_error"),

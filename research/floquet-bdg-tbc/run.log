@@ -10,7 +10,7 @@ test_disordered_onsite_terms_and_chiral (__main__.TBCStructureTests.test_disorde
 test_step_origin_and_unitarity (__main__.TBCStructureTests.test_step_origin_and_unitarity) ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 12.554s
+Ran 9 tests in 13.091s
 
 OK
 exit_code=0
@@ -49,7 +49,7 @@ test_strength_checkpoint_row_counts (__main__.DisorderContractTests.test_strengt
 test_uniform_control_is_separate (__main__.DisorderContractTests.test_uniform_control_is_separate) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.646s
+Ran 8 tests in 0.656s
 
 OK
 exit_code=0
@@ -105,7 +105,7 @@ test_preregistered_registry (__main__.FiniteSizeTargetTests.test_preregistered_r
 test_zero_only_evaluation_preserves_amplitude_contract (__main__.FiniteSizeTargetTests.test_zero_only_evaluation_preserves_amplitude_contract) ... ok
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.162s
+Ran 4 tests in 0.157s
 
 OK
 exit_code=0
@@ -134,7 +134,7 @@ test_size_trend_table (__main__.FiniteSizeReportTests.test_size_trend_table) ...
 test_visual_hash_binding (__main__.FiniteSizeReportTests.test_visual_hash_binding) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.317s
+Ran 5 tests in 0.331s
 
 OK
 exit_code=0
@@ -149,7 +149,7 @@ test_eigh_free_propagator_matches_expm (__main__.SpectralBackendTests.test_eigh_
 test_single_grid_cannot_claim_convergence (__main__.SpectralBackendTests.test_single_grid_cannot_claim_convergence) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.380s
+Ran 5 tests in 0.405s
 
 OK
 exit_code=0
@@ -178,7 +178,7 @@ test_registry_and_independent_counts (__main__.N320ReportTests.test_registry_and
 test_visual_hash_binding (__main__.N320ReportTests.test_visual_hash_binding) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.011s
+Ran 5 tests in 0.014s
 
 OK
 exit_code=0
@@ -193,7 +193,7 @@ test_chunk_resume_and_reference_equality (__main__.ResumableWindingTests.test_ch
 test_metadata_mismatch_is_rejected (__main__.ResumableWindingTests.test_metadata_mismatch_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.305s
+Ran 5 tests in 0.330s
 
 OK
 exit_code=0
@@ -221,7 +221,7 @@ test_n400_result_and_independent_agreement (__main__.ScaleReportTests.test_n400_
 test_visual_hash_binding (__main__.ScaleReportTests.test_visual_hash_binding) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.015s
+Ran 5 tests in 0.017s
 
 OK
 exit_code=0
@@ -236,7 +236,7 @@ test_chunk_resume_and_reference_equality (__main__.ResumableWindingTests.test_ch
 test_metadata_mismatch_is_rejected (__main__.ResumableWindingTests.test_metadata_mismatch_is_rejected) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.299s
+Ran 5 tests in 0.307s
 
 OK
 exit_code=0
@@ -478,7 +478,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_endpoint_qa.py
 {
   "schema": "floquet-bdg-endpoint-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:49:53.715347+00:00",
+  "recordedUtc": "2026-11-11T15:29:32.758394+00:00",
   "sourceSha256": {
     "endpoint_subspace_analysis.json": "a37ca37fe9c8aaf54f1d363cc2ba3006efb4857c1aa97ba2999f37b681c98b74",
     "endpoint-subspaces.png": "309c027bff0a26059e6453f8a3d63c893a2e1c419c773f48fec5a90d8ffd3be5",
@@ -523,7 +523,7 @@ test_second_pair_cannot_retroactively_restore_endpoint (__main__.EndpointSubspac
 test_single_end_and_second_pair_mechanism_readout (__main__.EndpointSubspaceTests.test_single_end_and_second_pair_mechanism_readout) ... ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.019s
+Ran 7 tests in 0.020s
 
 OK
 exit_code=0
@@ -616,7 +616,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_matched_qa.py
 {
   "schema": "floquet-bdg-matched-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:50:00.399666+00:00",
+  "recordedUtc": "2026-11-11T15:29:39.539238+00:00",
   "sourceSha256": {
     "matched_profile_control.json": "77e01d93c6fd466fde283b34c6afffc52d73acf4a38af18febf87bb56f733a04",
     "matched_profile_independent.json": "1659c566c87a05e14e2de9fa5f3bd8044c9cd2b235c2c0c12dfdb6f5ffc36ab6",
@@ -662,7 +662,7 @@ test_observed_directions_do_not_promote_new_topology (__main__.MatchedProfileTes
 test_word_error_value_matches_latest_independent_backend (__main__.MatchedProfileTests.test_word_error_value_matches_latest_independent_backend) ... ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.017s
+Ran 7 tests in 0.018s
 
 OK
 exit_code=0
@@ -963,7 +963,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_multi_seed_qa.py
 {
   "schema": "floquet-bdg-multi-seed-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:50:23.412779+00:00",
+  "recordedUtc": "2026-11-11T15:30:02.354019+00:00",
   "sourceSha256": {
     "multi_seed_protocol.json": "d6f1a440a94ef75bc57ebef64f76a9a3d5e5978ee3016c3340bd63bab454521c",
     "multi_seed_profile_control.json": "d903eadbdecc716719fccd33b5bddd8464be5a59dc1a65dacc75c751756e6c01",
@@ -1010,7 +1010,7 @@ test_stability_conclusions_match_all_sign_counts (__main__.MultiSeedTests.test_s
 test_word_error_value_matches_latest_independent_backend (__main__.MultiSeedTests.test_word_error_value_matches_latest_independent_backend) ... ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.030s
+Ran 7 tests in 0.032s
 
 OK
 exit_code=0
@@ -1604,7 +1604,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_reversal_qa.py
 {
   "schema": "floquet-bdg-reversal-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:50:24.765380+00:00",
+  "recordedUtc": "2026-11-11T15:30:03.694980+00:00",
   "sourceSha256": {
     "reversal_unit_analysis.json": "554b60d7fc514f18cfdf411d2ff6ca350990adac22320a4b3337310004a7598f",
     "multi_seed_profile_control.json": "d903eadbdecc716719fccd33b5bddd8464be5a59dc1a65dacc75c751756e6c01",
@@ -1717,7 +1717,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_category_qa.py
 {
   "schema": "floquet-bdg-category-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:50:27.790300+00:00",
+  "recordedUtc": "2026-11-11T15:30:06.827011+00:00",
   "sourceSha256": {
     "repeated_category_protocol.json": "3cf8e4b5347cdadf2f172972243856530932be1c32a26c3a22fe7a11e38a9cac",
     "category_new_cells.json": "8df63b89ad43a2ef196b5137f942144d93b414c0b0abb3e5a2bf84b6e476d6ae",
@@ -1763,7 +1763,7 @@ test_old_cells_and_reference_categories_are_unchanged (__main__.RepeatedCategory
 test_protocol_and_new_cell_registry (__main__.RepeatedCategoryTests.test_protocol_and_new_cell_registry) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.041s
+Ran 5 tests in 0.042s
 
 OK
 exit_code=0
@@ -1807,7 +1807,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_unclassified_qa.py
 {
   "schema": "floquet-bdg-unclassified-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:50:29.125301+00:00",
+  "recordedUtc": "2026-11-11T15:30:08.214448+00:00",
   "sourceSha256": {
     "unclassified_signature_analysis.json": "fd4751a578e330d9d942c45b51a8ef1056dfa9a58cb4e42bfd6db3a61f79099e",
     "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
@@ -1852,7 +1852,7 @@ test_signatures_do_not_change_original_categories (__main__.UnclassifiedSignatur
 test_unclassified_has_three_descriptive_signatures (__main__.UnclassifiedSignatureTests.test_unclassified_has_three_descriptive_signatures) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.024s
+Ran 5 tests in 0.025s
 
 OK
 exit_code=0
@@ -2000,7 +2000,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_near_miss_qa.py
 {
   "schema": "floquet-bdg-near-miss-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:50:30.592278+00:00",
+  "recordedUtc": "2026-11-11T15:30:09.711480+00:00",
   "sourceSha256": {
     "near_miss_spatial_protocol.json": "679095de8ed6f34cc1bdb21e7c59fd5f0f0a490a7e7aeac7f775efc859639a17",
     "near_miss_spatial_analysis.json": "9a7916e54ec332714185956b471d28edab0419003ad90d6fa649084490af43bc",
@@ -2047,7 +2047,7 @@ test_tables_fit_word_page (__main__.NearMissSpatialTests.test_tables_fit_word_pa
 test_windows_recomputed_from_independently_verified_profiles (__main__.NearMissSpatialTests.test_windows_recomputed_from_independently_verified_profiles) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.050s
+Ran 6 tests in 0.052s
 
 OK
 exit_code=0
@@ -2135,7 +2135,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_pair_response_qa.py
 {
   "schema": "floquet-bdg-pair-response-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:50:32.070703+00:00",
+  "recordedUtc": "2026-11-11T15:30:11.233372+00:00",
   "sourceSha256": {
     "pair_response_protocol.json": "1576a22234b92d569e44afc53808225269631e20e7156d46721bd25cd64704a1",
     "pair_response_analysis.json": "87661b75fdb55d79ac766e7c527247ebde9d11d475fccd2c433582369b894b8d",
@@ -2182,7 +2182,7 @@ test_second_pair_is_rank_matched_not_tracked_or_topological (__main__.PairRespon
 test_sign_tables_are_descriptive_and_complete (__main__.PairResponseTests.test_sign_tables_are_descriptive_and_complete) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.338s
+Ran 6 tests in 0.401s
 
 OK
 exit_code=0
@@ -2414,7 +2414,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_subspace_overlap_qa.py
 {
   "schema": "floquet-bdg-subspace-overlap-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:50:46.579111+00:00",
+  "recordedUtc": "2026-11-11T15:30:26.066261+00:00",
   "sourceSha256": {
     "subspace_overlap_protocol.json": "1c6c4b18fdbb8a0df42ffad36a7bbc7c44748b02b51d188b4fbbded62a453a71",
     "subspace_overlap_analysis.json": "ad158072c581628e86c44a4e0fd67cd2039ebbf2b2f16ce1ff4eb71afe09e283",
@@ -2467,7 +2467,7 @@ test_principal_subspace_metrics_are_internally_consistent (__main__.SubspaceOver
 test_recomputed_eigenvectors_match_frozen_profiles (__main__.SubspaceOverlapTests.test_recomputed_eigenvectors_match_frozen_profiles) ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 0.027s
+Ran 9 tests in 0.032s
 
 OK
 exit_code=0
@@ -2500,7 +2500,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_embedding_robustness_qa.py
 {
   "schema": "floquet-bdg-embedding-robustness-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:50:57.895356+00:00",
+  "recordedUtc": "2026-11-11T15:30:37.545105+00:00",
   "sourceSha256": {
     "embedding_robustness_protocol.json": "e7165492ca173f10435aaa394116f6c2e91e02a6095a6669af3deb45fcb20a79",
     "embedding_robustness_analysis.json": "d62108d415aed1b0bdacd8f74f8e4e86db38830cdfa0f3bdcf49cd7aab2d586a",
@@ -2567,7 +2567,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_embedding_census_qa.py
 {
   "schema": "floquet-bdg-embedding-census-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:50:59.474683+00:00",
+  "recordedUtc": "2026-11-11T15:30:39.234840+00:00",
   "sourceSha256": {
     "embedding_census_protocol.json": "ccf32cff8be12a96b60effeb0fec8cd7aa22b846418e2d55ec71aaaa02c922f4",
     "embedding_census_analysis.json": "c62d4158580378583a9abee081e9d08da9380cd2e226e132da32ac0394ffc7d0",
@@ -2617,7 +2617,7 @@ test_overlap_metrics_and_assignments_are_consistent (__main__.EmbeddingCensusTes
 test_summary_counts_and_swap_candidates_are_exact (__main__.EmbeddingCensusTests.test_summary_counts_and_swap_candidates_are_exact) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.041s
+Ran 6 tests in 0.040s
 
 OK
 exit_code=0
@@ -2648,7 +2648,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_swap_candidate_spectrum_qa.py
 {
   "schema": "floquet-bdg-swap-candidate-spectrum-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:51:04.213920+00:00",
+  "recordedUtc": "2026-11-11T15:30:44.008202+00:00",
   "sourceSha256": {
     "swap_candidate_spectrum_protocol.json": "a0ca42621184032ed7a47209d01f3fc2307c7ce7c04d03c4834d36c5c2c55261",
     "swap_candidate_spectrum_analysis.json": "67283bfcf6d1f2d5a107f959ae9219d2e5fa2d14c27c5f9685de026ad62efc6d",
@@ -2697,7 +2697,7 @@ test_static_rank_is_not_parameter_tracking (__main__.SwapCandidateSpectrumTests.
 test_target_registry_and_sources (__main__.SwapCandidateSpectrumTests.test_target_registry_and_sources) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.035s
+Ran 6 tests in 0.036s
 
 OK
 exit_code=0
@@ -2786,7 +2786,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_fixed_n_path_qa.py
 {
   "schema": "floquet-bdg-fixed-n-path-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:51:12.947696+00:00",
+  "recordedUtc": "2026-11-11T15:30:52.670104+00:00",
   "sourceSha256": {
     "fixed_n_path_protocol.json": "9485300fc5f0a2f18df15e6499424611d40902c2c01cf5341bcce4a68a12becf",
     "fixed_n_path_analysis.json": "aca217e838a73469eeb1bfb9686bf6be22910d85f1f997c792905235f3552ab2",
@@ -2873,7 +2873,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_path_refinement_qa.py
 {
   "schema": "floquet-bdg-path-refinement-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:51:22.355083+00:00",
+  "recordedUtc": "2026-11-11T15:31:02.152708+00:00",
   "sourceSha256": {
     "path_refinement_protocol.json": "3ca375c15793ef28f64a65608b7e11b7c3afb6c37458280bc9d5b8a7b7f4fd84",
     "path_refinement_analysis.json": "99a72c98602509de7bd6a4fd2f32fc6bb32fd276816576e1dc32100785047af8",
@@ -2922,7 +2922,7 @@ test_refinement_registry_and_sources (__main__.PathRefinementTests.test_refineme
 test_region_and_global_summaries_are_exact (__main__.PathRefinementTests.test_region_and_global_summaries_are_exact) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.025s
+Ran 6 tests in 0.024s
 
 OK
 exit_code=0
@@ -2940,7 +2940,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_n600_path_qa.py
 {
   "schema": "floquet-bdg-n600-path-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:51:23.989777+00:00",
+  "recordedUtc": "2026-11-11T15:31:03.794021+00:00",
   "sourceSha256": {
     "n600_path_protocol.json": "b75dd435fadfce9fee59d3827336220fdde1b17ecb1b493c8463b87d98ea28fd",
     "n600_path_analysis.json": "42cfae36089c692c9aad952d5fa8139defdb99f6b658725d8558e8fc71a60938",
@@ -2989,7 +2989,7 @@ test_size_replication_is_not_crossing_or_invariance_proof (__main__.N600PathTest
 test_summaries_and_n400_comparison_are_exact (__main__.N600PathTests.test_summaries_and_n400_comparison_are_exact) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.034s
+Ran 6 tests in 0.036s
 
 OK
 exit_code=0
@@ -3007,20 +3007,20 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_n600_valley_qa.py
 {
   "schema": "floquet-bdg-n600-valley-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:51:25.659031+00:00",
+  "recordedUtc": "2026-11-11T15:31:05.541252+00:00",
   "sourceSha256": {
     "n600_valley_protocol.json": "5b0cb07dc20814a33ee005dd1f79fb42502e1f23a1d703c89da07841d383eade",
     "n600_valley_analysis.json": "dbc9593a91cf54ce2a07bc05292816c74c0f4b8b050377f5bd0cf7b879fa1ab4",
     "n600_path_analysis.json": "42cfae36089c692c9aad952d5fa8139defdb99f6b658725d8558e8fc71a60938",
     "path_refinement_analysis.json": "99a72c98602509de7bd6a4fd2f32fc6bb32fd276816576e1dc32100785047af8",
     "n600-valley.png": "1821f887092caeb3910e065b2520f8e3619136c7f7946e76bd2473739c408819",
-    "build_n600_valley_report.js": "a768319117b09ffb588bfdde99b87adac12866355e695450a6115e4b867479c5"
+    "build_n600_valley_report.js": "334339333748a0c80f2fbc1f718b64c31897d858cb9fcb4a3445aa2178c7009b"
   },
   "finalValidation": {
     "route": "kimi-word docx.py build with vendored docx-js",
     "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
-    "docxSha256": "fb6289cd8aafd14b67072c63921ea6db77bf0d5639cef5bf139b197fe878cec9",
-    "renderReportSha256": "eaf91b57f0afc934f2640c64b2405f2258a8fa9e21981655f951680618fa50ac"
+    "docxSha256": "fd11d3efbf650f41cced8410c47434b7956e59dadb09baece910186992e87e1a",
+    "renderReportSha256": "460d13c15a7593dd05a98f0f25aecf6e7237a19a3b390061c10d78413280a0ea"
   },
   "visualReview": {
     "status": "passed",
@@ -3034,7 +3034,7 @@ $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share
     "contactSheetRead": true,
     "nearBlankPages": [],
     "clippedPages": [],
-    "docxSha256": "fb6289cd8aafd14b67072c63921ea6db77bf0d5639cef5bf139b197fe878cec9",
+    "docxSha256": "fd11d3efbf650f41cced8410c47434b7956e59dadb09baece910186992e87e1a",
     "tocPageMapping": [
       2,
       3,
@@ -3057,7 +3057,7 @@ test_summary_and_size_comparison_are_exact (__main__.N600ValleyTests.test_summar
 test_valley_is_not_crossing_or_invariance_proof (__main__.N600ValleyTests.test_valley_is_not_crossing_or_invariance_proof) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.024s
+Ran 6 tests in 0.026s
 
 OK
 exit_code=0
@@ -3102,7 +3102,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_overlap_confounding_qa.py
 {
   "schema": "floquet-bdg-overlap-confounding-word-qa-v1",
-  "recordedUtc": "2026-11-11T13:51:28.994528+00:00",
+  "recordedUtc": "2026-11-11T15:31:09.022653+00:00",
   "sourceSha256": {
     "overlap_confounding_protocol.json": "6d08fbc8e5d64085cad3635a3766c2050da5ebe51f6f6372bf71d4107274d717",
     "overlap_confounding_analysis.json": "1ac3e76108f81b46e61ddd75eae32e52bfb697d3ad0bfe347aa2da57baa08948",
@@ -3151,7 +3151,7 @@ test_representation_fidelity_is_bidirectional_and_not_a_correction (__main__.Ove
 test_same_n_rank_controls_identify_embedding_leakage (__main__.OverlapConfoundingTests.test_same_n_rank_controls_identify_embedding_leakage) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.042s
+Ran 6 tests in 0.044s
 
 OK
 exit_code=0
@@ -3216,19 +3216,19 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_matched_beta_qa.py
 {
   "schema": "floquet-bdg-matched-beta-word-qa-v1",
-  "recordedUtc": "2026-11-11T14:44:11.964446+00:00",
+  "recordedUtc": "2026-11-11T15:31:14.213358+00:00",
   "sourceSha256": {
     "matched_beta_control_protocol.json": "bc75d2aa396027bdf87f4b7b40c5807de98a262b05f9f899caf9e3bbf9f823b2",
     "matched_beta_control_analysis.json": "ce1e99cde0e1184f77fa53d9238f054b022e848aa9533fbe6bf145a855b2257b",
     "swap_candidate_spectrum_analysis.json": "67283bfcf6d1f2d5a107f959ae9219d2e5fa2d14c27c5f9685de026ad62efc6d",
     "matched-beta-control.png": "cba787f10d6b8357cbb5a3f5fabc80677e5217b4a3bf5784ad40ca72b69b236e",
-    "build_matched_beta_report.js": "34e4fd46519818a3084e06ab05b0e2106685f382e701fccbc77c0dae4ed5baef"
+    "build_matched_beta_report.js": "7166e60078414a786586d146358dba15b8377b39849f11573c673c4acac4e093"
   },
   "finalValidation": {
     "route": "kimi-word docx.py build with vendored docx-js",
     "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
-    "docxSha256": "040762942ec1e992bd75aeb2ab016578ecd57568cb123fc288eaaad275d5d2be",
-    "renderReportSha256": "b8ae049b35eedd95dcb7fc31a33140aab922a86ed5c4e0bac7717e01c59ee10d"
+    "docxSha256": "8747dea3bf3d9c09c7c7328718a16168942122cf4709453b79e6df627462472e",
+    "renderReportSha256": "a1499260c0e3044909feb3b40fa5e1397a8d13f6a1266f42a995d539adfba1b7"
   },
   "visualReview": {
     "status": "passed",
@@ -3242,7 +3242,7 @@ $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share
     "contactSheetRead": true,
     "nearBlankPages": [],
     "clippedPages": [],
-    "docxSha256": "040762942ec1e992bd75aeb2ab016578ecd57568cb123fc288eaaad275d5d2be",
+    "docxSha256": "8747dea3bf3d9c09c7c7328718a16168942122cf4709453b79e6df627462472e",
     "tocPageMapping": [
       2,
       3,
@@ -3264,11 +3264,115 @@ test_independent_nested_beta_and_spectrum_recheck (__main__.MatchedBetaControlTe
 test_protocol_and_exact_nested_coarsening (__main__.MatchedBetaControlTests.test_protocol_and_exact_nested_coarsening) ... ok
 test_representation_and_native_rank_controls (__main__.MatchedBetaControlTests.test_representation_and_native_rank_controls) ... ok
 test_spectrum_and_pair_metrics_are_consistent (__main__.MatchedBetaControlTests.test_spectrum_and_pair_metrics_are_consistent) ... ok
+test_word_layout_regression_guards (__main__.MatchedBetaControlTests.test_word_layout_regression_guards) ... ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.033s
+Ran 8 tests in 0.045s
 
 OK
 exit_code=0
 matched_beta_overall passed check_only True
+exit_code=0
+$ matched_beta_batch_a_suite: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_matched_beta_batch_a_verification.py --check-only
+$ matched_beta_batch_a_evidence_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_matched_beta_batch_a.py --check-only
+{"check_only": true, "realizations": 8, "control_cells": 16, "coarsening_error": 0, "all_passed": true}
+exit_code=0
+$ matched_beta_batch_a_independent_recheck: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_matched_beta_batch_a.py
+{
+  "schema": "floquet-bdg-matched-beta-batch-a-independent-v1",
+  "protocol_sha256": "353f1a9567a918657ce928790337ac76e564afb9c157fcc3b7653ed015a482ef",
+  "analysis_sha256": "871e5cfdc33a792ac4e0ec84e19a372a6a1b5154f0ec4262eee3ec8f8da9f898",
+  "realization_count": 8,
+  "cell_count": 16,
+  "max_master_profile_absolute_error": 0.0,
+  "max_coarsening_absolute_error": 0.0,
+  "max_spectrum_absolute_error": 0.0,
+  "max_pair_center_absolute_error": 0.0,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "all_passed": true
+}
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-共同无序剖面第一批尺寸隔离.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_matched_beta_batch_a_qa.py
+{
+  "schema": "floquet-bdg-matched-beta-batch-a-word-qa-v1",
+  "recordedUtc": "2026-11-11T15:32:31.027553+00:00",
+  "sourceSha256": {
+    "matched_beta_batch_a_protocol.json": "353f1a9567a918657ce928790337ac76e564afb9c157fcc3b7653ed015a482ef",
+    "matched_beta_batch_a_analysis.json": "871e5cfdc33a792ac4e0ec84e19a372a6a1b5154f0ec4262eee3ec8f8da9f898",
+    "matched_beta_batch_a_independent.json": "a3629d3d5d8c5f4e9a6a71fa899b86fe60238f4890e45017405f6c15e743b11f",
+    "matched-beta-batch-a.png": "ca69a97a971e995b080e5744b4d6d2f651f9877a511245cac8669fa619ba85c8",
+    "build_matched_beta_batch_a_report.js": "9c77b85b446c62ec0403c2388a8b9ba5d615e66f756adb496cae34225c5a692d"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "f989913a4d484f1233f031a607fdc617aa3212d5d5ac9c423e7ab5b5e4512c99",
+    "renderReportSha256": "c5e9edd4b00af100e65c04d9f56c2f5a68640fbdc1b745f51e24f7e756414879"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "f989913a4d484f1233f031a607fdc617aa3212d5d5ac9c423e7ab5b5e4512c99",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看五个单页；嵌套块平均OMML、16行谱表、8行分配表、四面板图、强度配对及边界完整，无近空白页、裁切或表后叠字。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_matched_beta_batch_a.py -v
+test_cross_size_overlap_direction_and_descriptive_counts (__main__.MatchedBetaBatchATests.test_cross_size_overlap_direction_and_descriptive_counts) ... ok
+test_figure_markdown_and_native_word_review (__main__.MatchedBetaBatchATests.test_figure_markdown_and_native_word_review) ... ok
+test_independent_nested_beta_and_spectrum_recheck (__main__.MatchedBetaBatchATests.test_independent_nested_beta_and_spectrum_recheck) ... ok
+test_protocol_and_exact_nested_coarsening (__main__.MatchedBetaBatchATests.test_protocol_and_exact_nested_coarsening) ... ok
+test_representation_and_native_rank_controls (__main__.MatchedBetaBatchATests.test_representation_and_native_rank_controls) ... ok
+test_spectrum_and_pair_metrics_are_consistent (__main__.MatchedBetaBatchATests.test_spectrum_and_pair_metrics_are_consistent) ... ok
+test_strength_pairs_anchor_and_interpretation_boundaries (__main__.MatchedBetaBatchATests.test_strength_pairs_anchor_and_interpretation_boundaries) ... ok
+test_word_layout_and_analysis_scope (__main__.MatchedBetaBatchATests.test_word_layout_and_analysis_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.120s
+
+OK
+exit_code=0
+matched_beta_batch_a_overall passed check_only True
+exit_code=0
+$ log_reuse_suite: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_verification_log_reuse.py -v
+test_command_mismatch_is_rejected (__main__.VerificationLogReuseTests.test_command_mismatch_is_rejected) ... ok
+test_complete_unique_zero_log_is_accepted (__main__.VerificationLogReuseTests.test_complete_unique_zero_log_is_accepted) ... ok
+test_duplicate_label_is_rejected (__main__.VerificationLogReuseTests.test_duplicate_label_is_rejected) ... ok
+test_full_runner_registers_this_suite (__main__.VerificationLogReuseTests.test_full_runner_registers_this_suite) ... ok
+test_missing_label_is_rejected (__main__.VerificationLogReuseTests.test_missing_label_is_rejected) ... ok
+test_nested_suite_uses_exit_before_next_top_level_command (__main__.VerificationLogReuseTests.test_nested_suite_uses_exit_before_next_top_level_command) ... ok
+test_nonzero_exit_is_rejected (__main__.VerificationLogReuseTests.test_nonzero_exit_is_rejected) ... ok
+test_progress_log_is_visible_to_next_command (__main__.VerificationLogReuseTests.test_progress_log_is_visible_to_next_command) ... ok
+test_same_label_with_distinct_commands_is_accepted (__main__.VerificationLogReuseTests.test_same_label_with_distinct_commands_is_accepted) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.201s
+
+OK
 exit_code=0

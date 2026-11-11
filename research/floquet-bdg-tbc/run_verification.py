@@ -51,6 +51,21 @@ def parse_completed_log(text, commands):
     return rows
 
 
+def run_commands_with_progress(commands, cwd, env, log_path):
+    """Persist every completed top-level command before starting the next."""
+    rows, logs = [], []
+    log_path.write_text("", encoding="utf-8")
+    for label, command, timeout in commands:
+        completed = subprocess.run(command, cwd=cwd, env=env, text=True, encoding="utf-8", capture_output=True, timeout=timeout)
+        output = completed.stdout + completed.stderr
+        logs.extend([f"$ {label}: {' '.join(command)}", output.rstrip(), f"exit_code={completed.returncode}"])
+        rows.append({"label": label, "command": command, "exit_code": completed.returncode})
+        log_path.write_text("\n".join(logs) + "\n", encoding="utf-8")
+        if completed.returncode != 0:
+            break
+    return rows, logs
+
+
 def main():
     for name in ("tmp", "pycache", "matplotlib", "npm"):
         (CACHE / name).mkdir(parents=True, exist_ok=True)
@@ -95,6 +110,8 @@ def main():
         ("n600_valley_suite", [sys.executable, str(ROOT / "run_n600_valley_verification.py"), "--check-only"], 180),
         ("overlap_confounding_suite", [sys.executable, str(ROOT / "run_overlap_confounding_verification.py"), "--check-only"], 180),
         ("matched_beta_control_suite", [sys.executable, str(ROOT / "run_matched_beta_verification.py"), "--check-only"], 180),
+        ("matched_beta_batch_a_suite", [sys.executable, str(ROOT / "run_matched_beta_batch_a_verification.py"), "--check-only"], 180),
+        ("log_reuse_suite", [sys.executable, str(ROOT / "test_verification_log_reuse.py"), "-v"], 60),
     ]
     rows, logs = [], []
     if "--reuse-completed-log" in sys.argv:
@@ -102,13 +119,7 @@ def main():
         rows = parse_completed_log(completed_text, commands)
         logs = completed_text.splitlines()
     else:
-        for label, command, timeout in commands:
-            completed = subprocess.run(command, cwd=WORKTREE, env=env, text=True, encoding="utf-8", capture_output=True, timeout=timeout)
-            output = completed.stdout + completed.stderr
-            logs.extend([f"$ {label}: {' '.join(command)}", output.rstrip(), f"exit_code={completed.returncode}"])
-            rows.append({"label": label, "command": command, "exit_code": completed.returncode})
-            if completed.returncode != 0:
-                break
+        rows, logs = run_commands_with_progress(commands, WORKTREE, env, ROOT / "run.log")
     passed = len(rows) == len(commands) and all(row["exit_code"] == 0 for row in rows)
     (ROOT / "run.log").write_text("\n".join(logs) + "\n", encoding="utf-8")
     result_data = json.loads((ROOT / "results.json").read_text(encoding="utf-8"))
@@ -138,6 +149,7 @@ def main():
     n600_valley_verification = json.loads((ROOT / "n600_valley_verification.json").read_text(encoding="utf-8")) if (ROOT / "n600_valley_verification.json").exists() else {}
     overlap_confounding_verification = json.loads((ROOT / "overlap_confounding_verification.json").read_text(encoding="utf-8")) if (ROOT / "overlap_confounding_verification.json").exists() else {}
     matched_beta_verification = json.loads((ROOT / "matched_beta_verification.json").read_text(encoding="utf-8")) if (ROOT / "matched_beta_verification.json").exists() else {}
+    matched_beta_batch_a_verification = json.loads((ROOT / "matched_beta_batch_a_verification.json").read_text(encoding="utf-8")) if (ROOT / "matched_beta_batch_a_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -258,6 +270,12 @@ def main():
         "matched_beta_run.log", "analyze_matched_beta_control.py", "verify_matched_beta.py",
         "build_matched_beta_report.js", "record_matched_beta_qa.py", "test_matched_beta_control.py",
         "run_matched_beta_verification.py",
+        "matched_beta_batch_a_protocol.json", "matched_beta_batch_a_analysis.json", "matched_beta_batch_a_independent.json",
+        "matched-beta-batch-a.png", "MATCHED_BETA_BATCH_A.md", "Floquet-BdG-共同无序剖面第一批尺寸隔离.docx",
+        "matched-beta-batch-a-word-qa.json", "matched-beta-batch-a-word-render/report.json", "matched_beta_batch_a_verification.json",
+        "matched_beta_batch_a_run.log", "analyze_matched_beta_batch_a.py", "verify_matched_beta_batch_a.py",
+        "build_matched_beta_batch_a_report.js", "record_matched_beta_batch_a_qa.py", "test_matched_beta_batch_a.py",
+        "run_matched_beta_batch_a_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py", "run_verification.py", "test_verification_log_reuse.py",
@@ -268,7 +286,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 9 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None, "overlap_confounding": 6 if passed else None, "matched_beta_control": 7 if passed else None, "log_reuse": 7 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 9 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None, "overlap_confounding": 6 if passed else None, "matched_beta_control": 8 if passed else None, "matched_beta_batch_a": 8 if passed else None, "log_reuse": 9 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -348,6 +366,10 @@ def main():
         "matched_beta_independent_recheck_passed": matched_beta_verification.get("independent_recheck_passed"),
         "matched_beta_visual_review_status": matched_beta_verification.get("visual_review_status"),
         "matched_beta_size_effect_separated": matched_beta_verification.get("scope", {}).get("size_effect_separated"),
+        "matched_beta_batch_a_all_passed": matched_beta_batch_a_verification.get("all_passed"),
+        "matched_beta_batch_a_independent_recheck_passed": matched_beta_batch_a_verification.get("independent_recheck_passed"),
+        "matched_beta_batch_a_visual_review_status": matched_beta_batch_a_verification.get("visual_review_status"),
+        "matched_beta_batch_a_size_effect_separated": matched_beta_batch_a_verification.get("scope", {}).get("size_effect_separated"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
@@ -461,6 +483,20 @@ def main():
             "matched_beta_old_candidate_is_different_realization": True,
             "matched_beta_difference_from_original_is_not_size_effect": True,
             "matched_beta_universal_size_law_claim": False,
+            "matched_beta_batch_a_analysis_evaluated": "passed",
+            "matched_beta_batch_a_realizations": 8,
+            "matched_beta_batch_a_control_cells": 16,
+            "matched_beta_batch_a_strength_pairs": 4,
+            "matched_beta_batch_a_common_disorder_profile_control_computed": True,
+            "matched_beta_batch_a_size_effect_separated": "matched_nested_profile_descriptive_only",
+            "matched_beta_batch_a_assignment_counts": {"linear_point": {"diagonal": 24}, "cell_average": {"diagonal": 24}},
+            "matched_beta_batch_a_same_rank_all_grids_both_methods_count": 8,
+            "matched_beta_batch_a_method_agreement_all_grids_count": 8,
+            "matched_beta_batch_a_center_separation_delta_range": [-0.0015124798449896535, 0.00039312849249900465],
+            "matched_beta_batch_a_anchor_included_in_counts": False,
+            "matched_beta_batch_a_all_results_retained": True,
+            "matched_beta_batch_a_universal_size_law_claim": False,
+            "matched_beta_batch_a_statistical_significance_claim": False,
             "new_taxonomy_claim": False,
             "universal_category_claim": False,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,

@@ -1,0 +1,43 @@
+{
+  "schema": "floquet-bdg-matched-beta-batch-a-word-qa-v1",
+  "recordedUtc": "2026-11-11T15:32:31.027553+00:00",
+  "sourceSha256": {
+    "matched_beta_batch_a_protocol.json": "353f1a9567a918657ce928790337ac76e564afb9c157fcc3b7653ed015a482ef",
+    "matched_beta_batch_a_analysis.json": "871e5cfdc33a792ac4e0ec84e19a372a6a1b5154f0ec4262eee3ec8f8da9f898",
+    "matched_beta_batch_a_independent.json": "a3629d3d5d8c5f4e9a6a71fa899b86fe60238f4890e45017405f6c15e743b11f",
+    "matched-beta-batch-a.png": "ca69a97a971e995b080e5744b4d6d2f651f9877a511245cac8669fa619ba85c8",
+    "build_matched_beta_batch_a_report.js": "9c77b85b446c62ec0403c2388a8b9ba5d615e66f756adb496cae34225c5a692d"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "f989913a4d484f1233f031a607fdc617aa3212d5d5ac9c423e7ab5b5e4512c99",
+    "renderReportSha256": "c5e9edd4b00af100e65c04d9f56c2f5a68640fbdc1b745f51e24f7e756414879"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "f989913a4d484f1233f031a607fdc617aa3212d5d5ac9c423e7ab5b5e4512c99",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看五个单页；嵌套块平均OMML、16行谱表、8行分配表、四面板图、强度配对及边界完整，无近空白页、裁切或表后叠字。"
+  }
+}

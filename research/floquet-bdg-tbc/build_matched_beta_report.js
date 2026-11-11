@@ -26,8 +26,8 @@ const toc = (entries) => {
   return ImportedXmlComponent.fromXmlString(`<w:sdt xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:sdtPr><w:alias w:val="目录"/></w:sdtPr><w:sdtContent><w:p><w:r><w:fldChar w:fldCharType="begin" w:dirty="true"/><w:instrText xml:space="preserve"> TOC \\o &quot;1-2&quot; \\h \\z \\u </w:instrText><w:fldChar w:fldCharType="separate"/></w:r></w:p>${cached}<w:p><w:r><w:fldChar w:fldCharType="end"/></w:r></w:p></w:sdtContent></w:sdt>`).root[0];
 };
 const cell = (text, index, widths, header, size = 9) => new TableCell({
-  children: [para(run(text, { size, bold: header }), { spacing: { after: 0, line: 160 } })],
-  width: { size: widths[index], type: WidthType.DXA }, margins: { top: 20, bottom: 20, left: 35, right: 35 },
+  children: [para(run(text, { size, bold: header }), { spacing: { after: 40, line: 240, lineRule: "auto" } })],
+  width: { size: widths[index], type: WidthType.DXA }, margins: { top: 80, bottom: 80, left: 60, right: 60 },
   shading: header ? { type: ShadingType.CLEAR, fill: palette.fill } : undefined,
 });
 const makeTable = (headers, rows, widths, size = 9) => new Table({
@@ -50,7 +50,7 @@ const comparisonTable = makeTable(["无序实现", "线性点值", "单元平均
 const titles = ["一、共同无序剖面与谱结构", "二、跨尺寸与跨表示图证据", "三、实现依赖与解释边界"];
 const children = [
   para(run("Floquet-BdG 共同无序剖面尺寸隔离", { bold: true, size: 34, color: palette.dark }), { heading: HeadingLevel.TITLE, alignment: AlignmentType.CENTER, spacing: { before: 600, after: 220 } }),
-  para(run("同一主剖面，而不是仅仅同一个 seed", { bold: true, size: 25, color: palette.primary }), { alignment: AlignmentType.CENTER, spacing: { after: 230 } }),
+  para(run("同一主剖面，而不是仅共享随机种子名称", { bold: true, size: 25, color: palette.primary }), { alignment: AlignmentType.CENTER, spacing: { after: 230 } }),
   para(run("seed=6，r=0.05 · N=400／600 · 两个新控制单元", { size: 20, color: palette.light }), { alignment: AlignmentType.CENTER, spacing: { after: 260 } }),
   para(run("2026-11-11　不新增类别，不补算体 winding，未计算 N=640", { size: 19, color: palette.accent }), { alignment: AlignmentType.CENTER, spacing: { after: 300 } }),
   heading("目录"),
@@ -66,7 +66,7 @@ const children = [
   spectrumTable,
   heading("两种共同表示的三个网格", 2),
   assignmentTable,
-  para(run("跨尺寸重叠不做归一化修正，也不将跨表示自一致性用作校正因子。", { size: 17, color: palette.light })),
+  para(run("跨尺寸重叠不做归一化修正，也不将跨表示自一致性用作校正因子。", { size: 17, color: palette.light }), { spacing: { before: 120, after: 100, line: 270 } }),
   pageBreak(),
 
   heading(titles[1]),
@@ -79,7 +79,7 @@ const children = [
 
   heading(titles[2]),
   comparisonTable,
-  body("旧交换候选与共同β(x)控制属于不同无序实现。分配方向的变化只能说明实现依赖性，不能把两次计算直接相减并命名为尺寸效应或谱交叉。"),
+  para(run("旧交换候选与共同β(x)控制属于不同无序实现。分配方向的变化只能说明实现依赖性，不能把两次计算直接相减并命名为尺寸效应或谱交叉。"), { indent: { firstLine: 400 }, spacing: { before: 120, after: 100, line: 270 } }),
   citedBody("本轮闭合的是共同β(x)定向控制，而不是普遍尺寸律。下一步应把同一协议扩展到预登记种子和强度，避免后验选择有利剖面。", 3),
   body("不宣称尺寸不变、真实态交换、避免交叉、次近对拓扑性或体winding。复现：python research/floquet-bdg-tbc/analyze_matched_beta_control.py。"),
   para(run("证据边界：两个新控制单元的描述性尺寸隔离；不做统计显著性、连续路径或热力学极限推断。", { size: 18, color: palette.accent })),

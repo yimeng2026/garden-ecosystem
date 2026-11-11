@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-pair-response-word-qa-v1",
-  "recordedUtc": "2026-11-11T14:42:17.992605+00:00",
+  "recordedUtc": "2026-11-11T15:30:11.233372+00:00",
   "sourceSha256": {
     "pair_response_protocol.json": "1576a22234b92d569e44afc53808225269631e20e7156d46721bd25cd64704a1",
     "pair_response_analysis.json": "87661b75fdb55d79ac766e7c527247ebde9d11d475fccd2c433582369b894b8d",

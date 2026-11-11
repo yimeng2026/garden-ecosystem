@@ -9,7 +9,7 @@ exit_code=0
 $ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_n600_valley_qa.py
 {
   "schema": "floquet-bdg-n600-valley-word-qa-v1",
-  "recordedUtc": "2026-11-11T14:43:13.581661+00:00",
+  "recordedUtc": "2026-11-11T15:31:05.541252+00:00",
   "sourceSha256": {
     "n600_valley_protocol.json": "5b0cb07dc20814a33ee005dd1f79fb42502e1f23a1d703c89da07841d383eade",
     "n600_valley_analysis.json": "dbc9593a91cf54ce2a07bc05292816c74c0f4b8b050377f5bd0cf7b879fa1ab4",
@@ -59,7 +59,7 @@ test_summary_and_size_comparison_are_exact (__main__.N600ValleyTests.test_summar
 test_valley_is_not_crossing_or_invariance_proof (__main__.N600ValleyTests.test_valley_is_not_crossing_or_invariance_proof) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.027s
+Ran 6 tests in 0.026s
 
 OK
 exit_code=0

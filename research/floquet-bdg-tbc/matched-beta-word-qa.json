@@ -1,18 +1,18 @@
 {
   "schema": "floquet-bdg-matched-beta-word-qa-v1",
-  "recordedUtc": "2026-11-11T14:48:37.881877+00:00",
+  "recordedUtc": "2026-11-11T15:31:14.213358+00:00",
   "sourceSha256": {
     "matched_beta_control_protocol.json": "bc75d2aa396027bdf87f4b7b40c5807de98a262b05f9f899caf9e3bbf9f823b2",
     "matched_beta_control_analysis.json": "ce1e99cde0e1184f77fa53d9238f054b022e848aa9533fbe6bf145a855b2257b",
     "swap_candidate_spectrum_analysis.json": "67283bfcf6d1f2d5a107f959ae9219d2e5fa2d14c27c5f9685de026ad62efc6d",
     "matched-beta-control.png": "cba787f10d6b8357cbb5a3f5fabc80677e5217b4a3bf5784ad40ca72b69b236e",
-    "build_matched_beta_report.js": "34e4fd46519818a3084e06ab05b0e2106685f382e701fccbc77c0dae4ed5baef"
+    "build_matched_beta_report.js": "7166e60078414a786586d146358dba15b8377b39849f11573c673c4acac4e093"
   },
   "finalValidation": {
     "route": "kimi-word docx.py build with vendored docx-js",
     "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
-    "docxSha256": "040762942ec1e992bd75aeb2ab016578ecd57568cb123fc288eaaad275d5d2be",
-    "renderReportSha256": "b8ae049b35eedd95dcb7fc31a33140aab922a86ed5c4e0bac7717e01c59ee10d"
+    "docxSha256": "8747dea3bf3d9c09c7c7328718a16168942122cf4709453b79e6df627462472e",
+    "renderReportSha256": "a1499260c0e3044909feb3b40fa5e1397a8d13f6a1266f42a995d539adfba1b7"
   },
   "visualReview": {
     "status": "passed",
@@ -26,7 +26,7 @@
     "contactSheetRead": true,
     "nearBlankPages": [],
     "clippedPages": [],
-    "docxSha256": "040762942ec1e992bd75aeb2ab016578ecd57568cb123fc288eaaad275d5d2be",
+    "docxSha256": "8747dea3bf3d9c09c7c7328718a16168942122cf4709453b79e6df627462472e",
     "tocPageMapping": [
       2,
       3,

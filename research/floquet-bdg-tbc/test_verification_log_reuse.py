@@ -57,6 +57,31 @@ class VerificationLogReuseTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "command mismatch"):
             self.module.parse_completed_log(self.valid.replace("python second.py", "python other.py"), self.commands)
 
+    def test_full_runner_registers_this_suite(self):
+        source = (ROOT / "run_verification.py").read_text(encoding="utf-8")
+        expected = '("log_reuse_suite", [sys.executable, str(ROOT / "test_verification_log_reuse.py"), "-v"], 60)'
+        self.assertIn(expected, source)
+
+    def test_progress_log_is_visible_to_next_command(self):
+        import os
+        import tempfile
+
+        self.assertTrue(hasattr(self.module, "run_commands_with_progress"), "Incremental command logger is missing")
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            log = Path(directory) / "progress.log"
+            check_first = (
+                "from pathlib import Path; import sys; "
+                f"sys.exit(0 if 'exit_code=0' in Path(r'{log}').read_text(encoding='utf-8') else 9)"
+            )
+            commands = [
+                ("first", [sys.executable, "-c", "print('first completed')"], 10),
+                ("second", [sys.executable, "-c", check_first], 10),
+            ]
+            rows, logs = self.module.run_commands_with_progress(commands, ROOT, os.environ.copy(), log)
+            self.assertEqual([row["exit_code"] for row in rows], [0, 0])
+            self.assertIn("first completed", log.read_text(encoding="utf-8"))
+            self.assertEqual(log.read_text(encoding="utf-8"), "\n".join(logs) + "\n")
+
 
 if __name__ == "__main__":
     suite = unittest.defaultTestLoader.loadTestsFromModule(sys.modules[__name__])

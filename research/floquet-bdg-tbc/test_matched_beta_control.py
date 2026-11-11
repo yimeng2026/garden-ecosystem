@@ -162,6 +162,40 @@ class MatchedBetaControlTests(unittest.TestCase):
         self.assertEqual(qa["visualReview"]["clippedPages"], [])
 
 
+    def test_word_layout_regression_guards(self):
+        from xml.etree import ElementTree as ET
+
+        docx = ROOT / "Floquet-BdG-共同无序剖面尺寸隔离.docx"
+        with zipfile.ZipFile(docx) as package:
+            root = ET.fromstring(package.read("word/document.xml"))
+        ns = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"}
+        attr = lambda name: f"{{{ns['w']}}}{name}"
+        paragraphs = root.findall(".//w:p", ns)
+        subtitle = next(p for p in paragraphs if "同一主剖面" in "".join(p.itertext()))
+        self.assertEqual("".join(subtitle.itertext()), "同一主剖面，而不是仅共享随机种子名称")
+        for table in root.findall(".//w:tbl", ns):
+            for cell in table.findall(".//w:tc", ns):
+                spacing = cell.find("w:p/w:pPr/w:spacing", ns)
+                self.assertIsNotNone(spacing)
+                self.assertEqual(spacing.get(attr("after")), "40")
+                self.assertEqual(spacing.get(attr("line")), "240")
+                self.assertEqual(spacing.get(attr("lineRule")), "auto")
+                margins = cell.find("w:tcPr/w:tcMar", ns)
+                self.assertIsNotNone(margins)
+                for side, expected in (("top", "80"), ("bottom", "80"), ("left", "60"), ("right", "60")):
+                    self.assertEqual(margins.find(f"w:{side}", ns).get(attr("w")), expected)
+        body = root.find("w:body", ns)
+        blocks = list(body)
+        following_texts = ("跨尺寸重叠不做归一化修正", "旧交换候选与共同")
+        for index, block in enumerate(blocks[:-1]):
+            if block.tag != attr("tbl"):
+                continue
+            following = blocks[index + 1]
+            text = "".join(following.itertext())
+            if text.startswith(following_texts):
+                self.assertEqual(following.find("w:pPr/w:spacing", ns).get(attr("before")), "120")
+
+
 if __name__ == "__main__":
     suite = unittest.defaultTestLoader.loadTestsFromModule(sys.modules[__name__])
     result = unittest.TextTestRunner(verbosity=2).run(suite)
