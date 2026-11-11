@@ -1,0 +1,45 @@
+{
+  "schema": "floquet-bdg-seed6-matrix-path-word-qa-v1",
+  "recordedUtc": "2026-11-11T23:13:21.480014+00:00",
+  "sourceSha256": {
+    "seed6_matrix_path_protocol.json": "80c81b735ea4d15e20f2c76688f0529fd962ec00510a68e6b9b10a67218027ad",
+    "seed6_matrix_path_analysis.json": "59699eca97c5dbf34411f19839c1f3dd579e7af9b2b6ee9f32234923352a1b34",
+    "seed6_matrix_path_independent.json": "4e33e98080c05bfd0584d4223b086d5898c851c20a174ac530eeffae29036c1c",
+    "matched_beta_batch_b_analysis.json": "c2055fa215bcab2cf23e1ec818d77b78b3e7d8f5c3809b4eedb69ab49eec2db5",
+    "matched_beta_batch_c_analysis.json": "3e08944f3c61a06f6a2ad119d88e9c62d5cc231627a03d7af760818d1b99cf13",
+    "seed6-matrix-path.png": "55108600d160632aa55393b39d861ab97ccb1d4e8a7307c124ecdbbd09247de7",
+    "build_seed6_matrix_path_report.js": "9ee69348f8fc768ff07fdcdab3d0f5bc2a7a123d8a2e7fec4882e62bd4ec0167"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "18363a4c36c07e0570ebdfd548eb5fed8cad4dae3c5f850ff6d424fe29aabbee",
+    "renderReportSha256": "fab2264c5c7c0ab732d8d6fec0e98975194c23c66869e4a4209afd604c6177b2"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "18363a4c36c07e0570ebdfd548eb5fed8cad4dae3c5f850ff6d424fe29aabbee",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看五个单页；原生公式、18行谱表、矩阵项与主导通道表、四面板图、原生链接及边界完整，无近空白页、裁切或表后叠字。"
+  }
+}

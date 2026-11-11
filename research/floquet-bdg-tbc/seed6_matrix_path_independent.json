@@ -1,0 +1,30 @@
+{
+  "schema": "floquet-bdg-seed6-matrix-path-independent-v1",
+  "protocol_sha256": "80c81b735ea4d15e20f2c76688f0529fd962ec00510a68e6b9b10a67218027ad",
+  "analysis_sha256": "59699eca97c5dbf34411f19839c1f3dd579e7af9b2b6ee9f32234923352a1b34",
+  "batch_b_analysis_sha256": "c2055fa215bcab2cf23e1ec818d77b78b3e7d8f5c3809b4eedb69ab49eec2db5",
+  "batch_c_analysis_sha256": "3e08944f3c61a06f6a2ad119d88e9c62d5cc231627a03d7af760818d1b99cf13",
+  "cell_count": 18,
+  "cross_size_path_matrix_count": 54,
+  "native_adjacent_link_count": 16,
+  "entry_link_count": 192,
+  "max_coarsening_absolute_error": 0.0,
+  "max_spectrum_absolute_error": 0.0,
+  "max_pair_center_absolute_error": 0.0,
+  "max_matrix_absolute_error": 0.0,
+  "max_singular_absolute_error": 0.0,
+  "max_entry_delta_absolute_error": 0.0,
+  "max_native_link_absolute_error": 0.0,
+  "max_representation_fidelity_absolute_error": 0.0,
+  "max_direction_absolute_error": 6.938893903907228e-18,
+  "driver_mismatch_count": 0,
+  "endpoint_binding": {
+    "max_matrix_absolute_error": 0.0,
+    "max_singular_absolute_error": 0.0,
+    "max_spectrum_absolute_error": 0.0,
+    "endpoint_recomputation_is_not_new_realization": true
+  },
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "all_passed": true
+}

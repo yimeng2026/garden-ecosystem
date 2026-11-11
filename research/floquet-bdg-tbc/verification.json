@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-tbc-complete-verification-v2",
-  "recorded_utc": "2026-11-11T22:54:51.733589+00:00",
+  "recorded_utc": "2026-11-11T23:13:37.006408+00:00",
   "all_passed": true,
   "test_counts": {
     "baseline": 9,
@@ -36,6 +36,7 @@
     "matched_beta_batch_b": 9,
     "matched_beta_batch_c": 9,
     "overlap_matrix_response": 8,
+    "seed6_matrix_path": 9,
     "log_reuse": 9
   },
   "commands": [
@@ -354,6 +355,15 @@
         "--check-only"
       ],
       "exit_code": 0
+    },
+    {
+      "label": "seed6_matrix_path_suite",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\run_seed6_matrix_path_verification.py",
+        "--check-only"
+      ],
+      "exit_code": 0
     }
   ],
   "environment": {
@@ -378,7 +388,7 @@
     "REPORT.md": "f1c7d2678b1c0082fef1d57840171fc592b8e9670b0fd6d02d42e19e873ec9ed",
     "Floquet-BdG-TBC无序对照报告.docx": "039dbf5b4bd73e90492932bc5ec98d32c644948da5af730fd9087fd80f222939",
     "word-qa/report.json": "7251e0c94c75236faec17d7431f734ec8f0d44b2a7e682e438c3731cacdf2dcf",
-    "run.log": "f706d4c3ebdee59dfaa6bda6260f88949bd43308550670be90ee9444dbd13cb6",
+    "run.log": "c9e31340ea1d208ceb49127a3fcc6e506ce58ce707e0cd17b30914be0b5b51cd",
     "ERRATA.md": "e435f0115edbb8fd7b26218515204d1501e2db94ef94935c1b15cc1bddb6b229",
     "finite_size_zero.json": "813a48c05e0e4cb80fbd615e908115572a646c75c438d33160fd1918d59ec50b",
     "finite_size_independent.json": "5b3c8925a63c1f1f62eef8d5a171f32a4e98e24ad1c67aeaf1d7af671097b932",
@@ -782,6 +792,22 @@
     "record_overlap_matrix_response_qa.py": "ca9a902959685113bef45ec2209240c510b6cbd2009effc0f801884e3512b65e",
     "test_overlap_matrix_response.py": "972c0b18716fa2271d70e75a56f4cf788d12fceab05aa6d91c578f9e1a175040",
     "run_overlap_matrix_response_verification.py": "9620a37887ead7cdfc94c79940db0162671243a01ea146082fefb8c68a6ff29a",
+    "seed6_matrix_path_protocol.json": "80c81b735ea4d15e20f2c76688f0529fd962ec00510a68e6b9b10a67218027ad",
+    "seed6_matrix_path_analysis.json": "59699eca97c5dbf34411f19839c1f3dd579e7af9b2b6ee9f32234923352a1b34",
+    "seed6_matrix_path_independent.json": "4e33e98080c05bfd0584d4223b086d5898c851c20a174ac530eeffae29036c1c",
+    "seed6-matrix-path.png": "55108600d160632aa55393b39d861ab97ccb1d4e8a7307c124ecdbbd09247de7",
+    "SEED6_MATRIX_PATH.md": "a6e493ccaae629383cd6b0fcbddd101d5da1fdc258c35e3efbd3f981466b4425",
+    "Floquet-BdG-固定种子矩阵路径.docx": "18363a4c36c07e0570ebdfd548eb5fed8cad4dae3c5f850ff6d424fe29aabbee",
+    "seed6-matrix-path-word-qa.json": "6c8904b568dbf3b6790e17d3d7278e7e5c7ad44f87d313cdd54a3a51392ffdf4",
+    "seed6-matrix-path-word-render/report.json": "fab2264c5c7c0ab732d8d6fec0e98975194c23c66869e4a4209afd604c6177b2",
+    "seed6_matrix_path_verification.json": "84ff8c0af12518bb1e842b3f2a50417159076f934de41ab0e5a592b95bdb4d08",
+    "seed6_matrix_path_run.log": "9b299ecfde069404358c8152996814b860f56de86ffbc7146e87ce85ea90c28d",
+    "analyze_seed6_matrix_path.py": "f3a9595d6f11e01fcf60e7e3bec37c473ef8c9bf27ee5d02511044362cb95488",
+    "verify_seed6_matrix_path.py": "e2bbd4df08471cf942f5ce5c10dad3af42a448622e335b06723bf01e75a58259",
+    "build_seed6_matrix_path_report.js": "9ee69348f8fc768ff07fdcdab3d0f5bc2a7a123d8a2e7fec4882e62bd4ec0167",
+    "record_seed6_matrix_path_qa.py": "4a9565a55734ed189c28a151662b95c1ee5ec552515cdc93f288cc8df0544da1",
+    "test_seed6_matrix_path.py": "d58988b41546bc8443a8c9b2348fc05791c5f7c7ef301d6d2730aa9e662ad767",
+    "run_seed6_matrix_path_verification.py": "59d35b3898c22e6d3071d699b5a485b3624d7d3051d50c5276b534c9d6e6e5fd",
     "tbc_model.py": "bc7f7541434920ae9d5a9bdca396dc86306fb383a7d9f4bff19902077de641fc",
     "test_tbc.py": "b9c6d07e0571a059bf9af0f8179fd0e1fa18e43673f733eb1db958aa1dfb841f",
     "run_tbc.py": "ca2f38ef0623a7b941d9240b795a7995ffd226083a73c681c42469fa821d59ff",
@@ -793,7 +819,7 @@
     "build_report.js": "9a7d3463ca8a54ec48f659b294a59feb02909ec05529ed3af13eb917a961e276",
     "record_word_qa.py": "05923bfe7343998bcf1da68ee4e0fb175f9863a924968eb614c94b05fdb85168",
     "test_report.py": "ae5a094729fc9aac80c7ad935bb9277281cb73dc16ecfaf1e061a371a263cbda",
-    "run_verification.py": "032f5c9672dc280783fa070ffe56e609e6f7926a0c0ec22fe3199581d915c4dd",
+    "run_verification.py": "c359be9997ab57e4e1a7c3539e106555e7f352f8defd9eda4c69afeda6e997fe",
     "test_verification_log_reuse.py": "74ba6d245d085783fe9778244d3b9f3e0705804bd7e8d181edbf50901af27fa4"
   },
   "observed_status": "clean_floquet_baseline_passed",
@@ -884,6 +910,9 @@
   "overlap_matrix_response_all_passed": true,
   "overlap_matrix_response_independent_recheck_passed": true,
   "overlap_matrix_response_visual_review_status": "passed",
+  "seed6_matrix_path_all_passed": true,
+  "seed6_matrix_path_independent_recheck_passed": true,
+  "seed6_matrix_path_visual_review_status": "passed",
   "scope": {
     "static_baseline_checked": true,
     "clean_kicked_baseline_checked": true,
@@ -1130,6 +1159,25 @@
     "overlap_matrix_response_near_zero_denominator_caution_required": true,
     "overlap_matrix_response_causal_mechanism_proven": false,
     "overlap_matrix_response_statistical_significance_claim": false,
+    "seed6_matrix_path_analysis_evaluated": "passed",
+    "seed6_matrix_path_strength_points": 9,
+    "seed6_matrix_path_adjacent_links_per_size": 8,
+    "seed6_matrix_path_new_interior_cells": 14,
+    "seed6_matrix_path_endpoint_control_cells": 4,
+    "seed6_matrix_path_evaluated_cells": 18,
+    "seed6_matrix_path_matrices": 54,
+    "seed6_matrix_path_native_links": 16,
+    "seed6_matrix_path_entry_links": 192,
+    "seed6_matrix_path_not_merged_into_batch_counts": true,
+    "seed6_matrix_path_assignment_change_count": 0,
+    "seed6_matrix_path_o00_driver_links_per_method": 8,
+    "seed6_matrix_path_o01_driver_links_per_method": 3,
+    "seed6_matrix_path_o10_driver_links_per_method": 5,
+    "seed6_matrix_path_n400_min_native_diagonal": 0.34900788903940594,
+    "seed6_matrix_path_n600_min_native_diagonal": 0.299582434590759,
+    "seed6_matrix_path_continuous_path_proof": false,
+    "seed6_matrix_path_spectral_crossing_proven": false,
+    "seed6_matrix_path_state_exchange_proven": false,
     "new_taxonomy_claim": false,
     "universal_category_claim": false,
     "localization_scale_analysis_pending": false,

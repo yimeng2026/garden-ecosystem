@@ -3661,3 +3661,109 @@ OK
 exit_code=0
 overlap_matrix_response_overall passed check_only True
 exit_code=0
+$ seed6_matrix_path_suite: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_seed6_matrix_path_verification.py --check-only
+$ seed6_matrix_path_evidence_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_seed6_matrix_path.py --check-only
+{"check_only": true, "cells": 18, "path_matrices": 54, "native_links": 16, "entry_links": 192, "all_passed": true}
+exit_code=0
+$ seed6_matrix_path_independent_recheck: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_seed6_matrix_path.py
+{
+  "schema": "floquet-bdg-seed6-matrix-path-independent-v1",
+  "protocol_sha256": "80c81b735ea4d15e20f2c76688f0529fd962ec00510a68e6b9b10a67218027ad",
+  "analysis_sha256": "59699eca97c5dbf34411f19839c1f3dd579e7af9b2b6ee9f32234923352a1b34",
+  "batch_b_analysis_sha256": "c2055fa215bcab2cf23e1ec818d77b78b3e7d8f5c3809b4eedb69ab49eec2db5",
+  "batch_c_analysis_sha256": "3e08944f3c61a06f6a2ad119d88e9c62d5cc231627a03d7af760818d1b99cf13",
+  "cell_count": 18,
+  "cross_size_path_matrix_count": 54,
+  "native_adjacent_link_count": 16,
+  "entry_link_count": 192,
+  "max_coarsening_absolute_error": 0.0,
+  "max_spectrum_absolute_error": 0.0,
+  "max_pair_center_absolute_error": 0.0,
+  "max_matrix_absolute_error": 0.0,
+  "max_singular_absolute_error": 0.0,
+  "max_entry_delta_absolute_error": 0.0,
+  "max_native_link_absolute_error": 0.0,
+  "max_representation_fidelity_absolute_error": 0.0,
+  "max_direction_absolute_error": 6.938893903907228e-18,
+  "driver_mismatch_count": 0,
+  "endpoint_binding": {
+    "max_matrix_absolute_error": 0.0,
+    "max_singular_absolute_error": 0.0,
+    "max_spectrum_absolute_error": 0.0,
+    "endpoint_recomputation_is_not_new_realization": true
+  },
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "all_passed": true
+}
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-固定种子矩阵路径.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_seed6_matrix_path_qa.py
+{
+  "schema": "floquet-bdg-seed6-matrix-path-word-qa-v1",
+  "recordedUtc": "2026-11-11T23:13:21.480014+00:00",
+  "sourceSha256": {
+    "seed6_matrix_path_protocol.json": "80c81b735ea4d15e20f2c76688f0529fd962ec00510a68e6b9b10a67218027ad",
+    "seed6_matrix_path_analysis.json": "59699eca97c5dbf34411f19839c1f3dd579e7af9b2b6ee9f32234923352a1b34",
+    "seed6_matrix_path_independent.json": "4e33e98080c05bfd0584d4223b086d5898c851c20a174ac530eeffae29036c1c",
+    "matched_beta_batch_b_analysis.json": "c2055fa215bcab2cf23e1ec818d77b78b3e7d8f5c3809b4eedb69ab49eec2db5",
+    "matched_beta_batch_c_analysis.json": "3e08944f3c61a06f6a2ad119d88e9c62d5cc231627a03d7af760818d1b99cf13",
+    "seed6-matrix-path.png": "55108600d160632aa55393b39d861ab97ccb1d4e8a7307c124ecdbbd09247de7",
+    "build_seed6_matrix_path_report.js": "9ee69348f8fc768ff07fdcdab3d0f5bc2a7a123d8a2e7fec4882e62bd4ec0167"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "18363a4c36c07e0570ebdfd548eb5fed8cad4dae3c5f850ff6d424fe29aabbee",
+    "renderReportSha256": "fab2264c5c7c0ab732d8d6fec0e98975194c23c66869e4a4209afd604c6177b2"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "18363a4c36c07e0570ebdfd548eb5fed8cad4dae3c5f850ff6d424fe29aabbee",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看五个单页；原生公式、18行谱表、矩阵项与主导通道表、四面板图、原生链接及边界完整，无近空白页、裁切或表后叠字。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_seed6_matrix_path.py -v
+test_cross_size_matrices_and_assignment_counts (__main__.Seed6MatrixPathTests.test_cross_size_matrices_and_assignment_counts) ... ok
+test_entry_extrema_drivers_and_singular_channels (__main__.Seed6MatrixPathTests.test_entry_extrema_drivers_and_singular_channels) ... ok
+test_figure_markdown_and_native_word_review (__main__.Seed6MatrixPathTests.test_figure_markdown_and_native_word_review) ... ok
+test_independent_path_spectrum_matrix_and_link_recheck (__main__.Seed6MatrixPathTests.test_independent_path_spectrum_matrix_and_link_recheck) ... ok
+test_native_adjacent_links_and_finite_path_boundaries (__main__.Seed6MatrixPathTests.test_native_adjacent_links_and_finite_path_boundaries) ... ok
+test_protocol_cells_counts_and_nested_profiles (__main__.Seed6MatrixPathTests.test_protocol_cells_counts_and_nested_profiles) ... ok
+test_representation_fidelity_and_rank_controls (__main__.Seed6MatrixPathTests.test_representation_fidelity_and_rank_controls) ... ok
+test_spectra_and_endpoint_bindings (__main__.Seed6MatrixPathTests.test_spectra_and_endpoint_bindings) ... ok
+test_word_layout_and_analysis_scope (__main__.Seed6MatrixPathTests.test_word_layout_and_analysis_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.076s
+
+OK
+exit_code=0
+seed6_matrix_path_overall passed check_only True
+exit_code=0
