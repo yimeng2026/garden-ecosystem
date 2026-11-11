@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-tbc-finite-size-verification-v1",
-  "recorded_utc": "2026-11-11T04:48:40.324660+00:00",
+  "recorded_utc": "2026-11-11T05:28:03.862230+00:00",
   "all_passed": true,
   "unit_test_count": 4,
   "report_test_count": 5,
@@ -81,8 +81,8 @@
     "finite-size-endpoints.png": "daac4319d1c6a9529b8abf3d9a03836ac034a13615958550470853a4e9dd7156",
     "FINITE_SIZE.md": "6a3ab906dfd4a5ac0561587360d9b0dfe8a5d27cd1d90006931b9c9a0d845a14",
     "Floquet-BdG-TBC有限尺寸报告.docx": "b7c4cb3122a4dd7757a13dd368c5eb3565b989b5169b7e9ef49302991cbf6e74",
-    "finite-word-qa/report.json": "67ad8a002a8882e90474218fefa3b292a93db2d216981cfb4dafea0e280efff7",
-    "finite_run.log": "a8e502ff3142df471351fedbc04b121b03a2fd77005224376c80026afc7177f2",
+    "finite-word-qa/report.json": "ccf1bc3a0c2915350e33463e77cb2374a021a19faec3a596d6c3e8cb404c5b6a",
+    "finite_run.log": "ba20e30e3970799273a8e3da5869fdaa67a517f8db36c95dfc86b5e156de1e84",
     "run_disorder.py": "a5b543e05b7f1e2136fc6e948c8607e3efc105f959d254a7dbce2169156964e9",
     "run_finite_size.py": "4f92dff49141c6fe5bc950a5d5d32ab303a56a1f8018783ae995ea419219168e",
     "test_finite_size.py": "10aa8c2f992670c37c838c61aead931c35aa1a95260c9239dee96e353788e4dc",

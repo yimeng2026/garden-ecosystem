@@ -1,0 +1,36 @@
+{
+  "schema": "floquet-bdg-endpoint-word-qa-v1",
+  "recordedUtc": "2026-11-11T05:28:25.207303+00:00",
+  "sourceSha256": {
+    "endpoint_subspace_analysis.json": "a37ca37fe9c8aaf54f1d363cc2ba3006efb4857c1aa97ba2999f37b681c98b74",
+    "endpoint-subspaces.png": "309c027bff0a26059e6453f8a3d63c893a2e1c419c773f48fec5a90d8ffd3be5",
+    "build_endpoint_report.js": "5e46779f2b9625e1bdbd3bcf6389a7d4a20ed12c2827bf96030d2ed36da29a33"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "79c6ca8b3541065e5129a7798f8ace6c80b3307b9976276a1415516c35a96ef8",
+    "renderReportSha256": "3b56732cda684b13e612fe45346b9348ad3cbf272b6926731b4118f6c0b1d0ff"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "79c6ca8b3541065e5129a7798f8ace6c80b3307b9976276a1415516c35a96ef8",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "note": "全部单页已查看；仅编号级别覆盖的低风险兼容提示，不是正文内容丢失。"
+  }
+}

@@ -49,6 +49,7 @@ def main():
         ("n320_suite", [sys.executable, str(ROOT / "run_n320_verification.py")], 180),
         ("n400_suite", [sys.executable, str(ROOT / "run_scale_verification.py")], 180),
         ("n600_suite", [sys.executable, str(ROOT / "run_n600_verification.py")], 180),
+        ("endpoint_suite", [sys.executable, str(ROOT / "run_endpoint_verification.py")], 180),
     ]
     rows, logs = [], []
     for label, command, timeout in commands:
@@ -69,6 +70,7 @@ def main():
     n320_verification = json.loads((ROOT / "n320_verification.json").read_text(encoding="utf-8")) if (ROOT / "n320_verification.json").exists() else {}
     n400_verification = json.loads((ROOT / "scale_verification.json").read_text(encoding="utf-8")) if (ROOT / "scale_verification.json").exists() else {}
     n600_verification = json.loads((ROOT / "n600_verification.json").read_text(encoding="utf-8")) if (ROOT / "n600_verification.json").exists() else {}
+    endpoint_verification = json.loads((ROOT / "endpoint_verification.json").read_text(encoding="utf-8")) if (ROOT / "endpoint_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -97,6 +99,11 @@ def main():
         "n600_verification.json", "n600_run.log", "build_n600_report.py", "build_n600_report.js",
         "record_n600_qa.py", "test_n600_report.py", "run_n600_verification.py",
         "scale_work/n600_zero_dtheta0p05.json", "scale_work/n600_zero_dtheta0p025.json",
+        "endpoint_subspace_analysis.json", "endpoint_subspace_independent.json", "endpoint-subspaces.png",
+        "ENDPOINT_SUBSPACES.md", "Floquet-BdG-端点子空间诊断.docx", "endpoint-word-qa.json",
+        "endpoint-word-render/report.json", "endpoint_verification.json", "endpoint_run.log",
+        "analyze_endpoint_subspaces.py", "verify_endpoint_subspaces.py", "build_endpoint_report.js",
+        "record_endpoint_qa.py", "test_endpoint_subspaces.py", "run_endpoint_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py",
@@ -107,7 +114,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -132,12 +139,19 @@ def main():
         "n600_independent_agreement": n600_verification.get("independent_agreement"),
         "n600_visual_review_status": n600_verification.get("visual_review_status"),
         "n600_visual_pass_claimed": n600_verification.get("visual_pass_claimed"),
+        "endpoint_all_passed": endpoint_verification.get("all_passed"),
+        "endpoint_independent_projectors_passed": endpoint_verification.get("independent_projectors_passed"),
+        "endpoint_visual_review_status": endpoint_verification.get("visual_review_status"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
             "n320_tbc_winding_computed": passed, "n400_threshold_diagnostic_evaluated": passed,
             "n600_tail_growth_evaluated": "passed", "n640_tbc_winding_computed": False,
             "n640_automatically_justified": False,
+            "endpoint_subspace_diagnostic_evaluated": "passed",
+            "n400_single_end_weight_is_not_two_end_recovery": True,
+            "n600_second_pair_is_not_alternate_endpoint": True,
+            "uniform_strength_profile_control_pending": True,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,
             "paired_control_rows": 12, "uniform_controls_are_independent_random_samples": False,
             "double_kick_diagnostic_excluded": True,

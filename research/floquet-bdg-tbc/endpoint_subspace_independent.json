@@ -1,0 +1,58 @@
+{
+  "schema": "floquet-bdg-endpoint-independent-v1",
+  "source_sha256": "242e53c9bc81a9a2751cfe5ff191664cb8d3f1a2d6f2a167a790d020dec5b320",
+  "analysis_sha256": "a37ca37fe9c8aaf54f1d363cc2ba3006efb4857c1aa97ba2999f37b681c98b74",
+  "eigensolver": "scipy.linalg.eig",
+  "projector": "direct_gram_inverse",
+  "tolerance": 1e-10,
+  "all_passed": true,
+  "cases": [
+    {
+      "n": 400,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "spectrum_indices": [
+            794,
+            795
+          ],
+          "max_profile_absolute_error": 4.163336342344337e-17,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "spectrum_indices": [
+            789,
+            788
+          ],
+          "max_profile_absolute_error": 1.3877787807814457e-17,
+          "edge_weight_absolute_error": 1.1102230246251565e-16
+        }
+      ]
+    },
+    {
+      "n": 600,
+      "pairs": [
+        {
+          "pair_index": 0,
+          "spectrum_indices": [
+            1194,
+            1195
+          ],
+          "max_profile_absolute_error": 6.938893903907228e-18,
+          "edge_weight_absolute_error": 2.220446049250313e-16
+        },
+        {
+          "pair_index": 1,
+          "spectrum_indices": [
+            1116,
+            1117
+          ],
+          "max_profile_absolute_error": 5.204170427930421e-18,
+          "edge_weight_absolute_error": 6.938893903907228e-18
+        }
+      ]
+    }
+  ],
+  "scope": "Independent numerical reproduction only; no new physics input and no retroactive endpoint recovery."
+}

@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-tbc-complete-verification-v2",
-  "recorded_utc": "2026-11-11T04:48:55.156627+00:00",
+  "recorded_utc": "2026-11-11T05:28:25.380110+00:00",
   "all_passed": true,
   "test_counts": {
     "baseline": 9,
@@ -13,7 +13,8 @@
     "n400_resume": 5,
     "n400_report": 5,
     "n600_resume": 5,
-    "n600_report": 5
+    "n600_report": 5,
+    "endpoint_subspace": 7
   },
   "commands": [
     {
@@ -137,6 +138,14 @@
         "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\run_n600_verification.py"
       ],
       "exit_code": 0
+    },
+    {
+      "label": "endpoint_suite",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\run_endpoint_verification.py"
+      ],
+      "exit_code": 0
     }
   ],
   "environment": {
@@ -147,7 +156,7 @@
     "cache_root": "D:\\kimi-cache\\tbc"
   },
   "sha256": {
-    "results.json": "58552c0d94f9abc1c40e43126584c353a78d288aff2914b79acfa845c85aaca9",
+    "results.json": "872ae835f35b73b50f844ec7681eff5c912e0fb34514e97579b11e86294c4c9e",
     "independent_verification.json": "e0c4097f897646bb63f97c4699e5164b3302838747e5f955d093b507d315abb7",
     "disorder_results.json": "454ec9a5012a5196cba1b310ad0e7d80816082926268e318b35d52e05ad16e4a",
     "disorder_results.csv": "4fee714b29a81b36222e19598c0669dcfa51c4c08c274cd9d2cd07cb5a79be3e",
@@ -160,8 +169,8 @@
     "disorder-gaps.png": "1a77233603959221fcc987a0322253e2cd314b08908dedd73bfc82b87b29b7f1",
     "REPORT.md": "f1c7d2678b1c0082fef1d57840171fc592b8e9670b0fd6d02d42e19e873ec9ed",
     "Floquet-BdG-TBC无序对照报告.docx": "039dbf5b4bd73e90492932bc5ec98d32c644948da5af730fd9087fd80f222939",
-    "word-qa/report.json": "4f32fa84b89f9e2ba27257298ebdb99685a7bcd1f6ab085ae9c591f058d8ebad",
-    "run.log": "8a4bedf50b2733953c4185c9ea47fb4e468a813dd64993d5811f463b0e53ffae",
+    "word-qa/report.json": "401c04de62cc9eecd1cbf5413d3e75d76cf86e89fffa504bad23e5259d2701a9",
+    "run.log": "84d149f40f7b6f1b8e1ed0a5f6ea978965b3e4ec18987f9e024a826c20cc91fc",
     "ERRATA.md": "e435f0115edbb8fd7b26218515204d1501e2db94ef94935c1b15cc1bddb6b229",
     "finite_size_zero.json": "813a48c05e0e4cb80fbd615e908115572a646c75c438d33160fd1918d59ec50b",
     "finite_size_independent.json": "5b3c8925a63c1f1f62eef8d5a171f32a4e98e24ad1c67aeaf1d7af671097b932",
@@ -171,9 +180,9 @@
     "finite-size-endpoints.png": "daac4319d1c6a9529b8abf3d9a03836ac034a13615958550470853a4e9dd7156",
     "FINITE_SIZE.md": "6a3ab906dfd4a5ac0561587360d9b0dfe8a5d27cd1d90006931b9c9a0d845a14",
     "Floquet-BdG-TBC有限尺寸报告.docx": "b7c4cb3122a4dd7757a13dd368c5eb3565b989b5169b7e9ef49302991cbf6e74",
-    "finite-word-qa/report.json": "67ad8a002a8882e90474218fefa3b292a93db2d216981cfb4dafea0e280efff7",
-    "finite_verification.json": "2bec4954809d2b4991606a87cea45100f68c112078621c0dc046f9cb3fbccc0e",
-    "finite_run.log": "a8e502ff3142df471351fedbc04b121b03a2fd77005224376c80026afc7177f2",
+    "finite-word-qa/report.json": "ccf1bc3a0c2915350e33463e77cb2374a021a19faec3a596d6c3e8cb404c5b6a",
+    "finite_verification.json": "a04f36d31010759b333eaabf01dbb959d385c9c75de13f1a5c29c8fdcaf61aab",
+    "finite_run.log": "ba20e30e3970799273a8e3da5869fdaa67a517f8db36c95dfc86b5e156de1e84",
     "run_finite_size.py": "4f92dff49141c6fe5bc950a5d5d32ab303a56a1f8018783ae995ea419219168e",
     "test_finite_size.py": "10aa8c2f992670c37c838c61aead931c35aa1a95260c9239dee96e353788e4dc",
     "verify_finite_size.py": "429d4186fcba928dc678fba90f2f2ccd67e62207a4567da4fb8c15c00d36006b",
@@ -189,9 +198,9 @@
     "n320-endpoints.png": "af3016198f8e8a3bed7a5d90449fe2e6cdbf37fde8200743b457f9f89ddf968f",
     "N320.md": "dc358e92db61341c5b1d096b23959d53ca954a97ffca1bc7d000670b17ef0350",
     "Floquet-BdG-TBC-N320定向报告.docx": "b795ff95f9744fb40e6ffe1eb628d8f782ed2cfb8e331581d8eda8b2c211eacb",
-    "n320-word-qa/report.json": "7832dc4f7d0140cac45bebc254f13a8e1202f8b921a1659f246441535426296f",
-    "n320_verification.json": "5487349c3e7c8fc2cbb1013971c99b450fef05ec1b5712324c22dc9ab55ac51b",
-    "n320_run.log": "eab889be665e654c1d594be2cadf0b9007a6a26a4c3155d575f00334b37fc2ff",
+    "n320-word-qa/report.json": "676dee821a973a2e0f6ad3abbff4e3a0c84e925d85d3f222a2af5e923df1e66d",
+    "n320_verification.json": "408e2bec5cddfd1e99e13837ff6735b5c8f0c2609db669e11700f445b4ffab17",
+    "n320_run.log": "e49d49d1477eabc437b4a3803a0d16364b6b04e4f35d5d6531d13e0396772cdf",
     "run_n320.py": "3c4486e7443d66a4bfb31e2ca3b7f960cbfe837c92385a1227fd3eabeaca16f0",
     "test_n320.py": "647113e10e82d24839a2837728f4d3328d36028ab82a016e5a9c0a4491ee4f2c",
     "verify_n320.py": "8c3bd4f2d9bd8ae130e55da7ae53a33b0f0b540ca0013f6270a4372d7eefdf18",
@@ -208,9 +217,9 @@
     "n400-coverage.png": "9999cc31f15307c9b9503aead94b4da81f46f5ccbc8502aab4025bf00d6563fd",
     "SCALE_DIAGNOSTIC.md": "13fd591e94fbc23d49afe11ecaa9671e482f4e1350655892c82c0b70e47d8100",
     "Floquet-BdG-N400阈值诊断报告.docx": "e7ccaed059b26b8024d90f6883f9b10e1c01ff3d3d4c0c96315928f8e5d1a914",
-    "n400-word-qa/report.json": "6b95b44046862f76f10043e3b200248f75afdd134dc7e66afb59220d53e50c40",
-    "scale_verification.json": "079093c0f73e29fd4deb76c490478bba5dc865358110d4eac2f27803b30cf3af",
-    "scale_run.log": "47a4ab1fa7aa07eddd2776bec2c22772b2daafd86d979e4d86bc92b3e4ce6109",
+    "n400-word-qa/report.json": "6e133a2652f138d76041829d82f5bb8acdeb19d4b7e73f1eb49f2f1c66f72c00",
+    "scale_verification.json": "0fca6489d236389ab670d35a8f13f5946d29e6f4099af3ac0137b745bd265620",
+    "scale_run.log": "4fc53f4cf3a94b987af3f0a80c494106490b11fba02d5b7c14bf46814967b3fa",
     "resumable_winding.py": "fb147d73f5c7b09dd2e33ad562bb0937f2b4f6e16069b72fe5f8931b9e5a9cf0",
     "run_scale_diagnostic.py": "83e1bbbb7348177de05702d201869c6df77b468320c56913f2be2d1d713e59a2",
     "verify_scale_diagnostic.py": "f7dbd1e68e1d0a79f045670b53819720db94e2d01c3a70eddbbdf451766f9e85",
@@ -228,9 +237,9 @@
     "n600-coverage.png": "e5789ea9046c78b50b47053d838f1a65477a1e83c73acc5a7cea5c8ba4746a51",
     "N600_DIAGNOSTIC.md": "564dd86dcebc0376e8c469417a083c2eff7d143f32c8ecee6a27d570dc28d114",
     "Floquet-BdG-N600尾长诊断报告.docx": "40bd486d796d3b3f2b770c051b5ab1e14379abce02f28bf695cdaee548eb2a2f",
-    "n600-word-qa/report.json": "e710738c1c1f71dcc52554ad820797eb260cb0cfa10202cba515485e3cc10520",
-    "n600_verification.json": "f83347482c1745e53472243fc44502653a46d11703faad1c6d08041c89ad43ae",
-    "n600_run.log": "82ed2f837c37d4bca25327a019f88960fe3bee89682911d0ea403a68cba53504",
+    "n600-word-qa/report.json": "f046d4345ab646c8ad004b6b8be61844aa2e679f201b15b6fe4b9514c8c45ccc",
+    "n600_verification.json": "7a72f6a6897cf2685ef3081dc8c7028904e4823b7cb9b872ad67e885e2f25761",
+    "n600_run.log": "ea0b1504cd508f980ee89ef62896afca73bea119dde8e9c31d1b1e9cd4a7e47e",
     "build_n600_report.py": "b0757c756dec7099efafa0e9c6cbbd56676050bfe06c28aaaf36931d563f3639",
     "build_n600_report.js": "3a4dce5da9f713028075bb73ff0c75a88f2165cb071e8e316fbb0040739bcfd9",
     "record_n600_qa.py": "f1c050b3be75b074b5cea8ffc9114d325379302ca99b35ca34d197425e32b302",
@@ -238,6 +247,21 @@
     "run_n600_verification.py": "20a79dc09f2bee2677fbf4039bb486d3adeba6f8d19dc008a62bba112ee3d0a0",
     "scale_work/n600_zero_dtheta0p05.json": "072616545183f24c6b11affe379b44d8765a977007de4eb1f7deef3efca2a6cc",
     "scale_work/n600_zero_dtheta0p025.json": "571f84ee5a9249d1cdbc4a4c6f0a243ffac713ef6014596713419c77230f7182",
+    "endpoint_subspace_analysis.json": "a37ca37fe9c8aaf54f1d363cc2ba3006efb4857c1aa97ba2999f37b681c98b74",
+    "endpoint_subspace_independent.json": "21bef1c70876ed4afa840570ad1cc7321c3190e216ce3565f4c318793d0e39cb",
+    "endpoint-subspaces.png": "309c027bff0a26059e6453f8a3d63c893a2e1c419c773f48fec5a90d8ffd3be5",
+    "ENDPOINT_SUBSPACES.md": "29ed7ac1cf68f090b00ad870a8fa713af1102681961a7295fd3ba18173342fdf",
+    "Floquet-BdG-端点子空间诊断.docx": "79c6ca8b3541065e5129a7798f8ace6c80b3307b9976276a1415516c35a96ef8",
+    "endpoint-word-qa.json": "a21e49206f0c977526cb9d928d33fa37366bb783c51631b947a51539e702c0be",
+    "endpoint-word-render/report.json": "3b56732cda684b13e612fe45346b9348ad3cbf272b6926731b4118f6c0b1d0ff",
+    "endpoint_verification.json": "2822338d1b5e0fcd8f4faae86fc75b5566c84a35bdbeb6ca05ea6847ba5e0edd",
+    "endpoint_run.log": "3feb13ac6473cf251f22ed81f7d664314125b3b545e590929329210941fe55cd",
+    "analyze_endpoint_subspaces.py": "009031b749116df45d935e9ad6ac5793405b5481d91527d424acf12a45f0300e",
+    "verify_endpoint_subspaces.py": "cfb4ab0cd1e34459bf58a5bdc879759019e0adb3a23a4316afb6feb3cb5fdcfc",
+    "build_endpoint_report.js": "5e46779f2b9625e1bdbd3bcf6389a7d4a20ed12c2827bf96030d2ed36da29a33",
+    "record_endpoint_qa.py": "49d486400aed5ffe5e9a7242334bc28d22e3a8e6a9af941b6c3e029790806c67",
+    "test_endpoint_subspaces.py": "ca05f15cb1ff15b1d0715470549e3533276edeef885e5d2dcea839a0e2ada415",
+    "run_endpoint_verification.py": "178a2b2337023705134a5c0512be525e832393b201c55c1bbf30b9c2d323d02c",
     "tbc_model.py": "bc7f7541434920ae9d5a9bdca396dc86306fb383a7d9f4bff19902077de641fc",
     "test_tbc.py": "b9c6d07e0571a059bf9af0f8179fd0e1fa18e43673f733eb1db958aa1dfb841f",
     "run_tbc.py": "ca2f38ef0623a7b941d9240b795a7995ffd226083a73c681c42469fa821d59ff",
@@ -268,6 +292,9 @@
   "n600_independent_agreement": true,
   "n600_visual_review_status": "unavailable_exit_6_no_retry",
   "n600_visual_pass_claimed": false,
+  "endpoint_all_passed": true,
+  "endpoint_independent_projectors_passed": true,
+  "endpoint_visual_review_status": "passed",
   "scope": {
     "static_baseline_checked": true,
     "clean_kicked_baseline_checked": true,
@@ -278,6 +305,10 @@
     "n600_tail_growth_evaluated": "passed",
     "n640_tbc_winding_computed": false,
     "n640_automatically_justified": false,
+    "endpoint_subspace_diagnostic_evaluated": "passed",
+    "n400_single_end_weight_is_not_two_end_recovery": true,
+    "n600_second_pair_is_not_alternate_endpoint": true,
+    "uniform_strength_profile_control_pending": true,
     "localization_scale_analysis_pending": false,
     "independent_disorder_realizations": 12,
     "paired_control_rows": 12,
