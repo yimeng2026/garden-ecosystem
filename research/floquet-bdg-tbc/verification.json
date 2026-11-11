@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-tbc-complete-verification-v2",
-  "recorded_utc": "2026-11-11T23:31:01.046879+00:00",
+  "recorded_utc": "2026-11-11T23:56:51.350430+00:00",
   "all_passed": true,
   "test_counts": {
     "baseline": 9,
@@ -38,6 +38,7 @@
     "overlap_matrix_response": 8,
     "seed6_matrix_path": 9,
     "seed6_matrix_midpoint": 10,
+    "seed01_matrix_midpoint": 10,
     "log_reuse": 9
   },
   "commands": [
@@ -374,6 +375,15 @@
         "--check-only"
       ],
       "exit_code": 0
+    },
+    {
+      "label": "seed01_matrix_midpoint_suite",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\run_seed01_matrix_midpoint_verification.py",
+        "--check-only"
+      ],
+      "exit_code": 0
     }
   ],
   "environment": {
@@ -398,7 +408,7 @@
     "REPORT.md": "f1c7d2678b1c0082fef1d57840171fc592b8e9670b0fd6d02d42e19e873ec9ed",
     "Floquet-BdG-TBC无序对照报告.docx": "039dbf5b4bd73e90492932bc5ec98d32c644948da5af730fd9087fd80f222939",
     "word-qa/report.json": "7251e0c94c75236faec17d7431f734ec8f0d44b2a7e682e438c3731cacdf2dcf",
-    "run.log": "b742af6dcdcb39772c571231f0c24deeea2deb6583998d9936b7c9348590a7b6",
+    "run.log": "c315849b3bae9a7236faf3174f9dc5811ae3ad92099bce163332e7d14b98de0e",
     "ERRATA.md": "e435f0115edbb8fd7b26218515204d1501e2db94ef94935c1b15cc1bddb6b229",
     "finite_size_zero.json": "813a48c05e0e4cb80fbd615e908115572a646c75c438d33160fd1918d59ec50b",
     "finite_size_independent.json": "5b3c8925a63c1f1f62eef8d5a171f32a4e98e24ad1c67aeaf1d7af671097b932",
@@ -834,6 +844,22 @@
     "record_seed6_matrix_midpoint_qa.py": "0284251fa9ba84411b76eacc360112b688cb345d27aeb03f89e60d55146bcfe0",
     "test_seed6_matrix_midpoint.py": "23ef5fc448edfc953f9c77b81577522275e2c7eeefc582c37f193c5fdb6f313a",
     "run_seed6_matrix_midpoint_verification.py": "837c71f6bd5f0644b8eb52b4bc45f0d6888f628424b4393c929fad2b7e89ccde",
+    "seed01_matrix_midpoint_protocol.json": "b700643ffd1385b16f381e9dee886d6d002275948857b640ef09d2dfb30359e3",
+    "seed01_matrix_midpoint_analysis.json": "2b2fdca42a4ab3110bf9fbc903b01723c09e27e90bee4cc14075b0b08e90deae",
+    "seed01_matrix_midpoint_independent.json": "b4c5bfe9cad3bd4ee17300c08cbd4bcdfd39dd96f357d1d1cd0140a15ec0a276",
+    "seed01-matrix-midpoint.png": "3f608c3817a9d8b2aadd64f7fd372271b5bccc6b42faa4a2acf6f1dbc7adc0c1",
+    "SEED01_MATRIX_MIDPOINT.md": "ff59a5aaa2b5c0b119c3034a58590535215ff4415b96829eb3ff85b298c3c57a",
+    "Floquet-BdG-跨种子跳变窗口中点对照.docx": "2883b8a7caba35fc57417c7881fa3405a8ebc3f439449191a525f4ba9d52ad64",
+    "seed01-matrix-midpoint-word-qa.json": "5ac967b356e894d9459ef72ab0ff130fc349979eaa87305bdfe164ccfe4e02d4",
+    "seed01-matrix-midpoint-word-render/report.json": "3199e1c3722139d88cae093c623de2cef67dc99e170463634043257c2b2c041d",
+    "seed01_matrix_midpoint_verification.json": "e98939a04aa8a93cfc637a4c09db008344b540a2ea2b64edaaaab2116f7f71f1",
+    "seed01_matrix_midpoint_run.log": "63a92e7fa8c938439d8456763b92815d4f26ee9f3a8afadb971b23da582aa480",
+    "analyze_seed01_matrix_midpoint.py": "2c04f97d58095b7def3151bc5a1f5591ddf030d616f7e11640022f1781c7fd3a",
+    "verify_seed01_matrix_midpoint.py": "c1779685f928083b5e4615ae9174d08e70f167cdd3bdea6f61ed02288a7ff98a",
+    "build_seed01_matrix_midpoint_report.js": "d82b047297c4c9a665f7cad31c655a0140abbff5e107f921457c131a89783790",
+    "record_seed01_matrix_midpoint_qa.py": "c7c6cea508960e0559a018a32896396901d3ab417dd480ebe99c7b47f29cfd61",
+    "test_seed01_matrix_midpoint.py": "129800d3bc7d01c9185dc75ea7ce4e768706fe33c023e7c8add0f530dc10f785",
+    "run_seed01_matrix_midpoint_verification.py": "a2d52ac605508db163ef7638db3acc6bfc5434e12042d2a271dc23d9dc338125",
     "tbc_model.py": "bc7f7541434920ae9d5a9bdca396dc86306fb383a7d9f4bff19902077de641fc",
     "test_tbc.py": "b9c6d07e0571a059bf9af0f8179fd0e1fa18e43673f733eb1db958aa1dfb841f",
     "run_tbc.py": "ca2f38ef0623a7b941d9240b795a7995ffd226083a73c681c42469fa821d59ff",
@@ -845,7 +871,7 @@
     "build_report.js": "9a7d3463ca8a54ec48f659b294a59feb02909ec05529ed3af13eb917a961e276",
     "record_word_qa.py": "05923bfe7343998bcf1da68ee4e0fb175f9863a924968eb614c94b05fdb85168",
     "test_report.py": "ae5a094729fc9aac80c7ad935bb9277281cb73dc16ecfaf1e061a371a263cbda",
-    "run_verification.py": "5a27752a7968bfea1e22f740f87af857960f4f29046cffaa049e02d57d9ce0f0",
+    "run_verification.py": "5832567ffcffbbd2efed1e5557e5a21db7c77a01bb926e80bb18b971727ecbfe",
     "test_verification_log_reuse.py": "74ba6d245d085783fe9778244d3b9f3e0705804bd7e8d181edbf50901af27fa4"
   },
   "observed_status": "clean_floquet_baseline_passed",
@@ -942,6 +968,9 @@
   "seed6_matrix_midpoint_all_passed": true,
   "seed6_matrix_midpoint_independent_recheck_passed": true,
   "seed6_matrix_midpoint_visual_review_status": "passed",
+  "seed01_matrix_midpoint_all_passed": true,
+  "seed01_matrix_midpoint_independent_recheck_passed": true,
+  "seed01_matrix_midpoint_visual_review_status": "passed",
   "scope": {
     "static_baseline_checked": true,
     "clean_kicked_baseline_checked": true,
@@ -1225,6 +1254,24 @@
     "seed6_matrix_midpoint_continuous_path_proof": false,
     "seed6_matrix_midpoint_spectral_crossing_proven": false,
     "seed6_matrix_midpoint_state_exchange_proven": false,
+    "seed01_matrix_midpoint_analysis_evaluated": "passed",
+    "seed01_matrix_midpoint_new_seed_paths": 2,
+    "seed01_matrix_midpoint_new_control_cells": 52,
+    "seed01_matrix_midpoint_matrices": 156,
+    "seed01_matrix_midpoint_native_links": 48,
+    "seed01_matrix_midpoint_entry_links": 576,
+    "seed01_matrix_midpoint_not_merged_into_batch_counts": true,
+    "seed01_matrix_midpoint_reference_seed6_recomputed": false,
+    "seed01_matrix_midpoint_seed0_jump_change_count": 4,
+    "seed01_matrix_midpoint_seed1_jump_change_count": 0,
+    "seed01_matrix_midpoint_seed6_jump_change_count": 6,
+    "seed01_matrix_midpoint_driver_change_count_per_seed": 4,
+    "seed01_matrix_midpoint_same_min_strength_count": 1,
+    "seed01_matrix_midpoint_same_max_strength_count": 2,
+    "seed01_matrix_midpoint_same_max_jump_link_count": 0,
+    "seed01_matrix_midpoint_continuous_path_proof": false,
+    "seed01_matrix_midpoint_spectral_crossing_proven": false,
+    "seed01_matrix_midpoint_state_exchange_proven": false,
     "new_taxonomy_claim": false,
     "universal_category_claim": false,
     "localization_scale_analysis_pending": false,

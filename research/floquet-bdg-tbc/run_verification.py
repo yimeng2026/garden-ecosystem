@@ -117,6 +117,7 @@ def main():
         ("overlap_matrix_response_suite", [sys.executable, str(ROOT / "run_overlap_matrix_response_verification.py"), "--check-only"], 180),
         ("seed6_matrix_path_suite", [sys.executable, str(ROOT / "run_seed6_matrix_path_verification.py"), "--check-only"], 180),
         ("seed6_matrix_midpoint_suite", [sys.executable, str(ROOT / "run_seed6_matrix_midpoint_verification.py"), "--check-only"], 180),
+        ("seed01_matrix_midpoint_suite", [sys.executable, str(ROOT / "run_seed01_matrix_midpoint_verification.py"), "--check-only"], 180),
     ]
     rows, logs = [], []
     if "--reuse-completed-log" in sys.argv:
@@ -160,6 +161,7 @@ def main():
     overlap_matrix_response_verification = json.loads((ROOT / "overlap_matrix_response_verification.json").read_text(encoding="utf-8")) if (ROOT / "overlap_matrix_response_verification.json").exists() else {}
     seed6_matrix_path_verification = json.loads((ROOT / "seed6_matrix_path_verification.json").read_text(encoding="utf-8")) if (ROOT / "seed6_matrix_path_verification.json").exists() else {}
     seed6_matrix_midpoint_verification = json.loads((ROOT / "seed6_matrix_midpoint_verification.json").read_text(encoding="utf-8")) if (ROOT / "seed6_matrix_midpoint_verification.json").exists() else {}
+    seed01_matrix_midpoint_verification = json.loads((ROOT / "seed01_matrix_midpoint_verification.json").read_text(encoding="utf-8")) if (ROOT / "seed01_matrix_midpoint_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -316,6 +318,12 @@ def main():
         "seed6_matrix_midpoint_run.log", "analyze_seed6_matrix_midpoint.py", "verify_seed6_matrix_midpoint.py",
         "build_seed6_matrix_midpoint_report.js", "record_seed6_matrix_midpoint_qa.py", "test_seed6_matrix_midpoint.py",
         "run_seed6_matrix_midpoint_verification.py",
+        "seed01_matrix_midpoint_protocol.json", "seed01_matrix_midpoint_analysis.json", "seed01_matrix_midpoint_independent.json",
+        "seed01-matrix-midpoint.png", "SEED01_MATRIX_MIDPOINT.md", "Floquet-BdG-跨种子跳变窗口中点对照.docx",
+        "seed01-matrix-midpoint-word-qa.json", "seed01-matrix-midpoint-word-render/report.json", "seed01_matrix_midpoint_verification.json",
+        "seed01_matrix_midpoint_run.log", "analyze_seed01_matrix_midpoint.py", "verify_seed01_matrix_midpoint.py",
+        "build_seed01_matrix_midpoint_report.js", "record_seed01_matrix_midpoint_qa.py", "test_seed01_matrix_midpoint.py",
+        "run_seed01_matrix_midpoint_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py", "run_verification.py", "test_verification_log_reuse.py",
@@ -326,7 +334,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 9 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None, "overlap_confounding": 6 if passed else None, "matched_beta_control": 8 if passed else None, "matched_beta_batch_a": 8 if passed else None, "matched_beta_batch_b": 9 if passed else None, "matched_beta_batch_c": 9 if passed else None, "overlap_matrix_response": 8 if passed else None, "seed6_matrix_path": 9 if passed else None, "seed6_matrix_midpoint": 10 if passed else None, "log_reuse": 9 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 9 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None, "overlap_confounding": 6 if passed else None, "matched_beta_control": 8 if passed else None, "matched_beta_batch_a": 8 if passed else None, "matched_beta_batch_b": 9 if passed else None, "matched_beta_batch_c": 9 if passed else None, "overlap_matrix_response": 8 if passed else None, "seed6_matrix_path": 9 if passed else None, "seed6_matrix_midpoint": 10 if passed else None, "seed01_matrix_midpoint": 10 if passed else None, "log_reuse": 9 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -427,6 +435,9 @@ def main():
         "seed6_matrix_midpoint_all_passed": seed6_matrix_midpoint_verification.get("all_passed"),
         "seed6_matrix_midpoint_independent_recheck_passed": seed6_matrix_midpoint_verification.get("independent_recheck_passed"),
         "seed6_matrix_midpoint_visual_review_status": seed6_matrix_midpoint_verification.get("visual_review_status"),
+        "seed01_matrix_midpoint_all_passed": seed01_matrix_midpoint_verification.get("all_passed"),
+        "seed01_matrix_midpoint_independent_recheck_passed": seed01_matrix_midpoint_verification.get("independent_recheck_passed"),
+        "seed01_matrix_midpoint_visual_review_status": seed01_matrix_midpoint_verification.get("visual_review_status"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
@@ -638,6 +649,24 @@ def main():
             "seed6_matrix_midpoint_continuous_path_proof": False,
             "seed6_matrix_midpoint_spectral_crossing_proven": False,
             "seed6_matrix_midpoint_state_exchange_proven": False,
+            "seed01_matrix_midpoint_analysis_evaluated": "passed",
+            "seed01_matrix_midpoint_new_seed_paths": 2,
+            "seed01_matrix_midpoint_new_control_cells": 52,
+            "seed01_matrix_midpoint_matrices": 156,
+            "seed01_matrix_midpoint_native_links": 48,
+            "seed01_matrix_midpoint_entry_links": 576,
+            "seed01_matrix_midpoint_not_merged_into_batch_counts": True,
+            "seed01_matrix_midpoint_reference_seed6_recomputed": False,
+            "seed01_matrix_midpoint_seed0_jump_change_count": 4,
+            "seed01_matrix_midpoint_seed1_jump_change_count": 0,
+            "seed01_matrix_midpoint_seed6_jump_change_count": 6,
+            "seed01_matrix_midpoint_driver_change_count_per_seed": 4,
+            "seed01_matrix_midpoint_same_min_strength_count": 1,
+            "seed01_matrix_midpoint_same_max_strength_count": 2,
+            "seed01_matrix_midpoint_same_max_jump_link_count": 0,
+            "seed01_matrix_midpoint_continuous_path_proof": False,
+            "seed01_matrix_midpoint_spectral_crossing_proven": False,
+            "seed01_matrix_midpoint_state_exchange_proven": False,
             "new_taxonomy_claim": False,
             "universal_category_claim": False,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,

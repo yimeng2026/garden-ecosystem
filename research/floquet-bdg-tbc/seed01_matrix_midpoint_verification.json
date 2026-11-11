@@ -1,0 +1,168 @@
+{
+  "schema": "floquet-bdg-seed01-matrix-midpoint-verification-v1",
+  "recorded_utc": "2026-11-11T23:56:28.940096+00:00",
+  "all_passed": true,
+  "test_count": 10,
+  "check_only": true,
+  "independent_recheck_passed": true,
+  "independent_max_spectrum_absolute_error": 0.0,
+  "independent_max_matrix_absolute_error": 0.0,
+  "independent_max_entry_delta_absolute_error": 0.0,
+  "independent_max_native_link_absolute_error": 0.0,
+  "visual_review_status": "passed",
+  "rendered_pages": 5,
+  "commands": [
+    {
+      "label": "seed01_matrix_midpoint_evidence_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_seed01_matrix_midpoint.py",
+        "--check-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "seed01_matrix_midpoint_independent_recheck",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\verify_seed01_matrix_midpoint.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-跨种子跳变窗口中点对照.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_seed01_matrix_midpoint_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_seed01_matrix_midpoint.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "seed01_matrix_midpoint_protocol.json": "b700643ffd1385b16f381e9dee886d6d002275948857b640ef09d2dfb30359e3",
+    "seed01_matrix_midpoint_analysis.json": "2b2fdca42a4ab3110bf9fbc903b01723c09e27e90bee4cc14075b0b08e90deae",
+    "seed01_matrix_midpoint_independent.json": "b4c5bfe9cad3bd4ee17300c08cbd4bcdfd39dd96f357d1d1cd0140a15ec0a276",
+    "seed01-matrix-midpoint.png": "3f608c3817a9d8b2aadd64f7fd372271b5bccc6b42faa4a2acf6f1dbc7adc0c1",
+    "SEED01_MATRIX_MIDPOINT.md": "ff59a5aaa2b5c0b119c3034a58590535215ff4415b96829eb3ff85b298c3c57a",
+    "Floquet-BdG-跨种子跳变窗口中点对照.docx": "2883b8a7caba35fc57417c7881fa3405a8ebc3f439449191a525f4ba9d52ad64",
+    "seed01-matrix-midpoint-word-qa.json": "5ac967b356e894d9459ef72ab0ff130fc349979eaa87305bdfe164ccfe4e02d4",
+    "seed01-matrix-midpoint-word-render/report.json": "3199e1c3722139d88cae093c623de2cef67dc99e170463634043257c2b2c041d",
+    "seed01_matrix_midpoint_verification.json": "409b8ff3b14faef04110be39717619d75047596089bc18460fe76faf1ec88ad7",
+    "seed01_matrix_midpoint_run.log": "63a92e7fa8c938439d8456763b92815d4f26ee9f3a8afadb971b23da582aa480",
+    "analyze_seed01_matrix_midpoint.py": "2c04f97d58095b7def3151bc5a1f5591ddf030d616f7e11640022f1781c7fd3a",
+    "verify_seed01_matrix_midpoint.py": "c1779685f928083b5e4615ae9174d08e70f167cdd3bdea6f61ed02288a7ff98a",
+    "build_seed01_matrix_midpoint_report.js": "d82b047297c4c9a665f7cad31c655a0140abbff5e107f921457c131a89783790",
+    "record_seed01_matrix_midpoint_qa.py": "c7c6cea508960e0559a018a32896396901d3ab417dd480ebe99c7b47f29cfd61",
+    "test_seed01_matrix_midpoint.py": "129800d3bc7d01c9185dc75ea7ce4e768706fe33c023e7c8add0f530dc10f785",
+    "run_seed01_matrix_midpoint_verification.py": "a2d52ac605508db163ef7638db3acc6bfc5434e12042d2a271dc23d9dc338125",
+    "seed6_matrix_midpoint_analysis.json": "dc95212ab89d25487b60b326364a3911eed9a56c35ba9d867b1adc6acc58a761",
+    "matched_beta_batch_a_analysis.json": "871e5cfdc33a792ac4e0ec84e19a372a6a1b5154f0ec4262eee3ec8f8da9f898",
+    "matched_beta_batch_c_analysis.json": "3e08944f3c61a06f6a2ad119d88e9c62d5cc231627a03d7af760818d1b99cf13"
+  },
+  "scope": {
+    "seed01_matrix_midpoint_analysis_evaluated": true,
+    "new_seed_paths": 2,
+    "reference_seed": 6,
+    "new_control_cells": 52,
+    "cross_size_path_matrices": 156,
+    "native_adjacent_links": 48,
+    "entry_links": 576,
+    "not_merged_into_batch_counts": true,
+    "reference_seed6_recomputed": false,
+    "cross_size_assignment_counts": {
+      "linear_point": {
+        "diagonal": 78
+      },
+      "cell_average": {
+        "diagonal": 78
+      }
+    },
+    "method_grid_assignment_change_count": 0,
+    "summary_by_seed": [
+      {
+        "seed": 0,
+        "new_control_cells": 26,
+        "cross_size_assignment_counts": {
+          "linear_point": {
+            "diagonal": 39
+          },
+          "cell_average": {
+            "diagonal": 39
+          }
+        },
+        "method_grid_assignment_change_count": 0,
+        "jump_change_count": 4,
+        "driver_comparison_change_count": 4,
+        "new_extrema_midpoint_count": 2,
+        "min_representation_fidelity": 0.9754396737892382,
+        "max_representation_fidelity": 0.9914445146621144,
+        "max_direction_absolute_error": 1.3877787807814457e-17
+      },
+      {
+        "seed": 1,
+        "new_control_cells": 26,
+        "cross_size_assignment_counts": {
+          "linear_point": {
+            "diagonal": 39
+          },
+          "cell_average": {
+            "diagonal": 39
+          }
+        },
+        "method_grid_assignment_change_count": 0,
+        "jump_change_count": 0,
+        "driver_comparison_change_count": 4,
+        "new_extrema_midpoint_count": 2,
+        "min_representation_fidelity": 0.9757723800649614,
+        "max_representation_fidelity": 0.9913088959819074,
+        "max_direction_absolute_error": 2.0816681711721685e-17
+      }
+    ],
+    "same_min_strength_across_all_count": 1,
+    "same_max_strength_across_all_count": 2,
+    "same_max_jump_link_across_all_count": 0,
+    "endpoint_binding": {
+      "max_matrix_absolute_error": 0.0,
+      "max_singular_absolute_error": 0.0,
+      "max_spectrum_absolute_error": 0.0,
+      "endpoint_recomputation_is_not_new_realization": true
+    },
+    "min_representation_fidelity": 0.9754396737892382,
+    "max_representation_fidelity": 0.9914445146621144,
+    "max_linear_point_off_diagonal": 1.5109145346456818e-06,
+    "max_cell_average_off_diagonal": 7.908596432200665e-26,
+    "normalization_correction_applied": false,
+    "representation_invariant_claim": false,
+    "statistical_significance_claim": false,
+    "continuous_path_proof": false,
+    "spectral_crossing_proven": false,
+    "avoided_crossing_claim": false,
+    "state_exchange_proven": false,
+    "causal_mechanism_proven": false,
+    "new_winding_computed": false,
+    "n640_computed": false,
+    "thermodynamic_limit_proof": false,
+    "old_candidate_is_different_realization": true,
+    "difference_from_original_is_not_size_effect": true
+  },
+  "log": "seed01_matrix_midpoint_run.log"
+}

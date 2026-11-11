@@ -1,0 +1,46 @@
+{
+  "schema": "floquet-bdg-seed01-matrix-midpoint-word-qa-v1",
+  "recordedUtc": "2026-11-11T23:56:28.575329+00:00",
+  "sourceSha256": {
+    "seed01_matrix_midpoint_protocol.json": "b700643ffd1385b16f381e9dee886d6d002275948857b640ef09d2dfb30359e3",
+    "seed01_matrix_midpoint_analysis.json": "2b2fdca42a4ab3110bf9fbc903b01723c09e27e90bee4cc14075b0b08e90deae",
+    "seed01_matrix_midpoint_independent.json": "b4c5bfe9cad3bd4ee17300c08cbd4bcdfd39dd96f357d1d1cd0140a15ec0a276",
+    "seed6_matrix_midpoint_analysis.json": "dc95212ab89d25487b60b326364a3911eed9a56c35ba9d867b1adc6acc58a761",
+    "matched_beta_batch_a_analysis.json": "871e5cfdc33a792ac4e0ec84e19a372a6a1b5154f0ec4262eee3ec8f8da9f898",
+    "matched_beta_batch_c_analysis.json": "3e08944f3c61a06f6a2ad119d88e9c62d5cc231627a03d7af760818d1b99cf13",
+    "seed01-matrix-midpoint.png": "3f608c3817a9d8b2aadd64f7fd372271b5bccc6b42faa4a2acf6f1dbc7adc0c1",
+    "build_seed01_matrix_midpoint_report.js": "d82b047297c4c9a665f7cad31c655a0140abbff5e107f921457c131a89783790"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "2883b8a7caba35fc57417c7881fa3405a8ebc3f439449191a525f4ba9d52ad64",
+    "renderReportSha256": "3199e1c3722139d88cae093c623de2cef67dc99e170463634043257c2b2c041d"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "2883b8a7caba35fc57417c7881fa3405a8ebc3f439449191a525f4ba9d52ad64",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看五个单页；原生公式、跨种子汇总、16行中点谱表、跳变对照、四面板图、主导项与原生链接完整，无近空白页、裁切或表后叠字。"
+  }
+}
