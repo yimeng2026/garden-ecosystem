@@ -1,0 +1,39 @@
+{
+  "schema": "floquet-bdg-pair-response-word-qa-v1",
+  "recordedUtc": "2026-11-11T08:13:49.605143+00:00",
+  "sourceSha256": {
+    "pair_response_protocol.json": "1576a22234b92d569e44afc53808225269631e20e7156d46721bd25cd64704a1",
+    "pair_response_analysis.json": "87661b75fdb55d79ac766e7c527247ebde9d11d475fccd2c433582369b894b8d",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "near_miss_spatial_analysis.json": "9a7916e54ec332714185956b471d28edab0419003ad90d6fa649084490af43bc",
+    "pair-response-audit.png": "5612657a44bce2aca72a8cad9284b493791d508ad3cff33ae61ac34d1ec5fc2c",
+    "build_pair_response_report.js": "852853a03ca082266ee78494308eec70987f975c8a6963e3a96d2b907edf2393"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "99ce39fef995eb6ccc7e9821fef96f2452e131461c9ef1193c72c570ca7a0f0c",
+    "renderReportSha256": "ec0bfbec8d408cab66856692626872a718d425f0371837b77c85d47779667665"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": false,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "99ce39fef995eb6ccc7e9821fef96f2452e131461c9ef1193c72c570ca7a0f0c",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "note": "全部四个单页已逐一查看；16行对照表、OMML公式、高对比度响应图、两张符号列联和边界说明完整，无近空白页或裁切。"
+  }
+}

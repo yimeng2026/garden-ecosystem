@@ -1,0 +1,132 @@
+$ pair_response_analysis: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_pair_responses.py
+{
+  "schema": "floquet-bdg-pair-response-analysis-v1",
+  "analysis_date": "2026-11-11",
+  "protocol_sha256": "1576a22234b92d569e44afc53808225269631e20e7156d46721bd25cd64704a1",
+  "source_sha256": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+  "near_miss_source_sha256": "9a7916e54ec332714185956b471d28edab0419003ad90d6fa649084490af43bc",
+  "original_independent_source_sha256": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+  "new_independent_source_sha256": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+  "pair_identity": "same_spectral_rank_not_adiabatic_state_tracking",
+  "new_seed_count": 0,
+  "new_eigenpairs_computed": false,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "new_taxonomy_claim": false,
+  "categories_changed": false,
+  "second_pair_topological_claim": false,
+  "statistical_significance_claim": false,
+  "universal_mechanism_claim": false,
+  "original_category_counts": {
+    "tail_growth_without_endpoint_recovery": 3,
+    "right_end_weakening_with_broadening": 1,
+    "right_end_driven_symmetrization": 3,
+    "left_end_driven_threshold": 2,
+    "other_unclassified": 7
+  },
+  "edge_sign_crosstab": {
+    "-1": {
+      "-1": 2,
+      "0": 0,
+      "1": 3
+    },
+    "0": {
+      "-1": 0,
+      "0": 0,
+      "1": 0
+    },
+    "1": {
+      "-1": 7,
+      "0": 0,
+      "1": 4
+    }
+  },
+  "L50_sign_crosstab": {
+    "-1": {
+      "-1": 1,
+      "0": 0,
+      "1": 4
+    },
+    "0": {
+      "-1": 0,
+      "0": 0,
+      "1": 0
+    },
+    "1": {
+      "-1": 2,
+      "0": 0,
+      "1": 9
+    }
+  },
+  "edge_relation_counts": {
+    "same_nonzero": 6,
+    "opposite_nonzero": 10
+  },
+  "L50_relation_counts": {
+    "same_nonzero": 10,
+    "opposite_nonzero": 6
+  },
+  "second_pair_joint_pass_contrasts": 0,
+  "max_original_metric_recompute_error": 2.220446049250313e-16
+}
+generated pair_response_analysis.json pair-response-audit.png PAIR_RESPONSE_AUDIT.md
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-最近对与次近对响应审计.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_pair_response_qa.py
+{
+  "schema": "floquet-bdg-pair-response-word-qa-v1",
+  "recordedUtc": "2026-11-11T08:13:49.605143+00:00",
+  "sourceSha256": {
+    "pair_response_protocol.json": "1576a22234b92d569e44afc53808225269631e20e7156d46721bd25cd64704a1",
+    "pair_response_analysis.json": "87661b75fdb55d79ac766e7c527247ebde9d11d475fccd2c433582369b894b8d",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "near_miss_spatial_analysis.json": "9a7916e54ec332714185956b471d28edab0419003ad90d6fa649084490af43bc",
+    "pair-response-audit.png": "5612657a44bce2aca72a8cad9284b493791d508ad3cff33ae61ac34d1ec5fc2c",
+    "build_pair_response_report.js": "852853a03ca082266ee78494308eec70987f975c8a6963e3a96d2b907edf2393"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "99ce39fef995eb6ccc7e9821fef96f2452e131461c9ef1193c72c570ca7a0f0c",
+    "renderReportSha256": "ec0bfbec8d408cab66856692626872a718d425f0371837b77c85d47779667665"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": false,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "99ce39fef995eb6ccc7e9821fef96f2452e131461c9ef1193c72c570ca7a0f0c",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "note": "全部四个单页已逐一查看；16行对照表、OMML公式、高对比度响应图、两张符号列联和边界说明完整，无近空白页或裁切。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_pair_responses.py -v
+test_figure_markdown_and_reviewed_word (__main__.PairResponseTests.test_figure_markdown_and_reviewed_word) ... ok
+test_first_pair_deltas_match_frozen_comparisons (__main__.PairResponseTests.test_first_pair_deltas_match_frozen_comparisons) ... ok
+test_frozen_registry_and_sources (__main__.PairResponseTests.test_frozen_registry_and_sources) ... ok
+test_records_reproduce_original_endpoint_definitions (__main__.PairResponseTests.test_records_reproduce_original_endpoint_definitions) ... ok
+test_second_pair_is_rank_matched_not_tracked_or_topological (__main__.PairResponseTests.test_second_pair_is_rank_matched_not_tracked_or_topological) ... ok
+test_sign_tables_are_descriptive_and_complete (__main__.PairResponseTests.test_sign_tables_are_descriptive_and_complete) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.360s
+
+OK
+exit_code=0

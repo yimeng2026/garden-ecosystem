@@ -56,6 +56,7 @@ def main():
         ("category_suite", [sys.executable, str(ROOT / "run_category_verification.py")], 180),
         ("unclassified_suite", [sys.executable, str(ROOT / "run_unclassified_verification.py")], 180),
         ("near_miss_suite", [sys.executable, str(ROOT / "run_near_miss_verification.py")], 180),
+        ("pair_response_suite", [sys.executable, str(ROOT / "run_pair_response_verification.py")], 180),
     ]
     rows, logs = [], []
     for label, command, timeout in commands:
@@ -83,6 +84,7 @@ def main():
     category_verification = json.loads((ROOT / "category_verification.json").read_text(encoding="utf-8")) if (ROOT / "category_verification.json").exists() else {}
     unclassified_verification = json.loads((ROOT / "unclassified_verification.json").read_text(encoding="utf-8")) if (ROOT / "unclassified_verification.json").exists() else {}
     near_miss_verification = json.loads((ROOT / "near_miss_verification.json").read_text(encoding="utf-8")) if (ROOT / "near_miss_verification.json").exists() else {}
+    pair_response_verification = json.loads((ROOT / "pair_response_verification.json").read_text(encoding="utf-8")) if (ROOT / "pair_response_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -146,6 +148,11 @@ def main():
         "near-miss-word-render/report.json", "near_miss_verification.json", "near_miss_run.log",
         "analyze_near_miss_spatial.py", "build_near_miss_report.js", "record_near_miss_qa.py",
         "test_near_miss_spatial.py", "run_near_miss_verification.py",
+        "pair_response_protocol.json", "pair_response_analysis.json", "pair-response-audit.png",
+        "PAIR_RESPONSE_AUDIT.md", "Floquet-BdG-最近对与次近对响应审计.docx", "pair-response-word-qa.json",
+        "pair-response-word-render/report.json", "pair_response_verification.json", "pair_response_run.log",
+        "analyze_pair_responses.py", "build_pair_response_report.js", "record_pair_response_qa.py",
+        "test_pair_responses.py", "run_pair_response_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py",
@@ -156,7 +163,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -202,6 +209,9 @@ def main():
         "near_miss_all_passed": near_miss_verification.get("all_passed"),
         "near_miss_original_independent_projectors_passed": near_miss_verification.get("original_independent_projectors_passed"),
         "near_miss_visual_review_status": near_miss_verification.get("visual_review_status"),
+        "pair_response_all_passed": pair_response_verification.get("all_passed"),
+        "pair_response_original_independent_projectors_passed": pair_response_verification.get("original_independent_projectors_passed"),
+        "pair_response_visual_review_status": pair_response_verification.get("visual_review_status"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
@@ -234,6 +244,14 @@ def main():
             "fixed40_and_original10pct_separated": True,
             "second_pair_is_descriptive_only": True,
             "near_miss_second_pair_not_topological": True,
+            "pair_response_analysis_evaluated": "passed",
+            "pair_response_edge_same_nonzero": 6,
+            "pair_response_edge_opposite_nonzero": 10,
+            "pair_response_L50_same_nonzero": 10,
+            "pair_response_L50_opposite_nonzero": 6,
+            "pair_response_second_joint_pass_contrasts": 0,
+            "pair_rank_matching_is_not_state_tracking": True,
+            "pair_response_not_statistical_significance": True,
             "new_taxonomy_claim": False,
             "universal_category_claim": False,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,
