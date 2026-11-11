@@ -1,0 +1,64 @@
+$ n600_path_evidence_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_n600_path.py --check-only
+{"check_only": true, "regions": 2, "new_parameter_points": 9, "all_passed": true}
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-N600路径复核.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_n600_path_qa.py
+{
+  "schema": "floquet-bdg-n600-path-word-qa-v1",
+  "recordedUtc": "2026-11-11T10:39:09.830759+00:00",
+  "sourceSha256": {
+    "n600_path_protocol.json": "b75dd435fadfce9fee59d3827336220fdde1b17ecb1b493c8463b87d98ea28fd",
+    "n600_path_analysis.json": "42cfae36089c692c9aad952d5fa8139defdb99f6b658725d8558e8fc71a60938",
+    "path_refinement_analysis.json": "99a72c98602509de7bd6a4fd2f32fc6bb32fd276816576e1dc32100785047af8",
+    "n600-path.png": "0609fac537d5a531666468760bc84807b7f911a4d67138820df3374101719d02",
+    "build_n600_path_report.js": "19fc779afc7d3784046b18119f3cfbdc33592bb8377af71bad936f58bd983b85"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "d192e94e33c12c766d4094f6cae02412f1358180723377ebc3c7a3dd8cb10c46",
+    "renderReportSha256": "8b5ea5076ebc14f8c21010460c35e0557f7a15a6235a57ff913cbb0bc0793471"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "d192e94e33c12c766d4094f6cae02412f1358180723377ebc3c7a3dd8cb10c46",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看四个单页；OMML公式、两个尺寸点表、路径图、八条链接和尺寸差异完整，无近空白页或裁切。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_n600_path.py -v
+test_centers_and_adjacent_overlaps_are_consistent (__main__.N600PathTests.test_centers_and_adjacent_overlaps_are_consistent) ... ok
+test_figure_markdown_and_reviewed_word (__main__.N600PathTests.test_figure_markdown_and_reviewed_word) ... ok
+test_reference_cell_is_reproduced (__main__.N600PathTests.test_reference_cell_is_reproduced) ... ok
+test_registry_and_sources (__main__.N600PathTests.test_registry_and_sources) ... ok
+test_size_replication_is_not_crossing_or_invariance_proof (__main__.N600PathTests.test_size_replication_is_not_crossing_or_invariance_proof) ... ok
+test_summaries_and_n400_comparison_are_exact (__main__.N600PathTests.test_summaries_and_n400_comparison_are_exact) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.034s
+
+OK
+exit_code=0

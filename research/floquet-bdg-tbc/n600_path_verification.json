@@ -1,0 +1,118 @@
+{
+  "schema": "floquet-bdg-n600-path-verification-v1",
+  "recorded_utc": "2026-11-11T10:39:09.990038+00:00",
+  "all_passed": true,
+  "test_count": 6,
+  "check_only": true,
+  "original_independent_projectors_passed": true,
+  "new_independent_projectors_passed": true,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "n600_path_evidence_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_n600_path.py",
+        "--check-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-N600路径复核.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_n600_path_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_n600_path.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "n600_path_protocol.json": "b75dd435fadfce9fee59d3827336220fdde1b17ecb1b493c8463b87d98ea28fd",
+    "repeated_category_analysis.json": "cdc15fc0a4dd3a0872f12ea9f148492eea105e268a2ab3452f19ef03f2af75a2",
+    "path_refinement_analysis.json": "99a72c98602509de7bd6a4fd2f32fc6bb32fd276816576e1dc32100785047af8",
+    "fixed_n_path_analysis.json": "aca217e838a73469eeb1bfb9686bf6be22910d85f1f997c792905235f3552ab2",
+    "swap_candidate_spectrum_analysis.json": "67283bfcf6d1f2d5a107f959ae9219d2e5fa2d14c27c5f9685de026ad62efc6d",
+    "multi_seed_independent.json": "92611b3bc3cde38404a20ccc8786f3f1cca7b2fc1320cd02e3a2bfe5dee27481",
+    "category_new_cells_independent.json": "84993065d45c7272b6f7b03e502aedd624528681e6912ccbe00977f9bc00dbf9",
+    "n600_path_analysis.json": "42cfae36089c692c9aad952d5fa8139defdb99f6b658725d8558e8fc71a60938",
+    "n600-path.png": "0609fac537d5a531666468760bc84807b7f911a4d67138820df3374101719d02",
+    "N600_PATH.md": "52dbc32c9ed095e4f0db207bffc75e24f34ab24851651bf425f0ae83ad45feab",
+    "Floquet-BdG-N600路径复核.docx": "d192e94e33c12c766d4094f6cae02412f1358180723377ebc3c7a3dd8cb10c46",
+    "n600-path-word-qa.json": "679f883d86703c364d2b13545df51db7e9cc28352c91f02c31f1fa78df762dd5",
+    "n600-path-word-render/report.json": "8b5ea5076ebc14f8c21010460c35e0557f7a15a6235a57ff913cbb0bc0793471",
+    "analyze_n600_path.py": "eb4e71327588b78e7f96841da87856dca5a187aa8844bffb0c4052d7159ee4fb",
+    "build_n600_path_report.js": "19fc779afc7d3784046b18119f3cfbdc33592bb8377af71bad936f58bd983b85",
+    "record_n600_path_qa.py": "34a3a6b9d280b332219a734d18a629aa840ff9d40bc66548484a4a68ab1bc97e",
+    "test_n600_path.py": "390f9fb5fb2ed4aaae038088091066f1021d07bf07252da72f426a6404df9341",
+    "n600_path_run.log": "3c6e51851b4ec35e3b7632ac7b948f8baa8381164f38c2edc3e41574635f7ff9"
+  },
+  "scope": {
+    "n600_path_analysis_evaluated": true,
+    "n": 600,
+    "seed": 6,
+    "refined_points": 10,
+    "adjacent_links": 8,
+    "new_unique_strengths": [
+      0.04,
+      0.04125,
+      0.0425,
+      0.04375,
+      0.045,
+      0.050625,
+      0.05125,
+      0.051875,
+      0.0525
+    ],
+    "diagonal_link_count": 8,
+    "swapped_link_count": 0,
+    "assignment_agreement_with_n400": 8,
+    "min_center_separation": 0.0013216246877071761,
+    "min_center_separation_strength": 0.04375,
+    "max_adjacent_center_separation_change": 0.00036595219294647467,
+    "max_change_link": {
+      "from": 0.0425,
+      "to": 0.04375
+    },
+    "min_center_separation_same_strength": false,
+    "max_change_same_link": false,
+    "pair0_joint_pass_strengths": [
+      0.04,
+      0.04125,
+      0.0425,
+      0.04375,
+      0.045
+    ],
+    "pair1_joint_pass_strengths": [],
+    "max_reference_error": 0.0,
+    "size_invariance_claim": false,
+    "continuous_path_proof": false,
+    "spectral_crossing_proven": false,
+    "avoided_crossing_claim": false,
+    "state_exchange_proven": false,
+    "second_pair_topological_claim": false,
+    "new_taxonomy_claim": false,
+    "n640_automatically_justified": false,
+    "thermodynamic_limit_proof": false
+  },
+  "log": "n600_path_run.log"
+}

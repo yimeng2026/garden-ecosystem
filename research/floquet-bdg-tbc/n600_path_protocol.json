@@ -1,0 +1,28 @@
+{
+  "schema": "floquet-bdg-n600-path-protocol-v1",
+  "analysis_date": "2026-11-11",
+  "registered_before_analysis": true,
+  "n": 600,
+  "seed": 6,
+  "regions": {
+    "max_change": [0.05, 0.050625, 0.05125, 0.051875, 0.0525],
+    "minimum_region": [0.04, 0.04125, 0.0425, 0.04375, 0.045]
+  },
+  "rationale": "replicate exactly the two regions refined at N=400, without cross-size eigenvector dot products",
+  "reference_strength": 0.05,
+  "random_stream": "beta = default_rng(20261111 + seed).random(N), identical at every strength",
+  "adjacent_overlap": "same-N two-dimensional subspaces and the same QR/SVD metric as N=400",
+  "reference_gate": "at r=0.05 reproduce the frozen N=600 pair profiles, edge weights, distances, separation ratios and diagnostic flags within 1e-10",
+  "new_parameter_points": 9,
+  "new_seed_count": 0,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "size_invariance_claim": false,
+  "continuous_path_proof": false,
+  "spectral_crossing_proven": false,
+  "avoided_crossing_claim": false,
+  "state_exchange_proven": false,
+  "second_pair_topological_claim": false,
+  "new_taxonomy_claim": false,
+  "universal_mechanism_claim": false
+}
