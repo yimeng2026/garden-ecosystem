@@ -3470,3 +3470,95 @@ OK
 exit_code=0
 matched_beta_batch_b_overall passed check_only True
 exit_code=0
+$ matched_beta_batch_c_suite: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_matched_beta_batch_c_verification.py --check-only
+$ matched_beta_batch_c_evidence_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_matched_beta_batch_c.py --check-only
+{"check_only": true, "new_realizations": 8, "new_control_cells": 16, "combined_realizations": 24, "all_passed": true}
+exit_code=0
+$ matched_beta_batch_c_independent_recheck: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_matched_beta_batch_c.py
+{
+  "schema": "floquet-bdg-matched-beta-batch-c-independent-v1",
+  "protocol_sha256": "c76f8f63a1a8f94903b2ef6a89b04c78e8f9450dc70b361e82f56fe54d2a1cfa",
+  "analysis_sha256": "3e08944f3c61a06f6a2ad119d88e9c62d5cc231627a03d7af760818d1b99cf13",
+  "realization_count": 8,
+  "cell_count": 16,
+  "new_rebuilt_cell_count": 16,
+  "anchor_rechecked_cell_count": 0,
+  "max_master_profile_absolute_error": 0.0,
+  "max_coarsening_absolute_error": 0.0,
+  "max_spectrum_absolute_error": 0.0,
+  "max_pair_center_absolute_error": 0.0,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "all_passed": true
+}
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-共同无序剖面第三批高强度配对.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_matched_beta_batch_c_qa.py
+{
+  "schema": "floquet-bdg-matched-beta-batch-c-word-qa-v1",
+  "recordedUtc": "2026-11-11T22:34:29.557481+00:00",
+  "sourceSha256": {
+    "matched_beta_batch_c_protocol.json": "c76f8f63a1a8f94903b2ef6a89b04c78e8f9450dc70b361e82f56fe54d2a1cfa",
+    "matched_beta_batch_c_analysis.json": "3e08944f3c61a06f6a2ad119d88e9c62d5cc231627a03d7af760818d1b99cf13",
+    "matched_beta_batch_c_independent.json": "31d5413020b9bbee292be7107d3992a22225b22bff7daff39deb52ecc761b2c9",
+    "matched_beta_batch_a_analysis.json": "871e5cfdc33a792ac4e0ec84e19a372a6a1b5154f0ec4262eee3ec8f8da9f898",
+    "matched_beta_batch_b_analysis.json": "c2055fa215bcab2cf23e1ec818d77b78b3e7d8f5c3809b4eedb69ab49eec2db5",
+    "matched-beta-batch-c.png": "23123ecff534c10813944bb23482209d1d6efc3b3b1ed31a8d3a42b371a3a75b",
+    "build_matched_beta_batch_c_report.js": "099c521e67ca14134b79c6fc11034cd82b46de6bd1565078ac557c1a28d6856f"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "8b7273cce9b13a44a82bffa2e56dc314b90964c76c5731d08c977d3f8c15950e",
+    "renderReportSha256": "3ed9664a2041f41f47b0e5958fb086b4f88ff723517eb2ed298a5c0e60c65902"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "8b7273cce9b13a44a82bffa2e56dc314b90964c76c5731d08c977d3f8c15950e",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看五个单页；原生公式、16行谱表、8行分配表、高强度配对、三批联合图及边界完整，无近空白页、裁切或表后叠字。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_matched_beta_batch_c.py -v
+test_cross_size_overlap_direction_and_descriptive_counts (__main__.MatchedBetaBatchCTests.test_cross_size_overlap_direction_and_descriptive_counts) ... ok
+test_figure_markdown_and_native_word_review (__main__.MatchedBetaBatchCTests.test_figure_markdown_and_native_word_review) ... ok
+test_high_strength_pairs_sources_and_boundaries (__main__.MatchedBetaBatchCTests.test_high_strength_pairs_sources_and_boundaries) ... ok
+test_independent_new_spectrum_recheck (__main__.MatchedBetaBatchCTests.test_independent_new_spectrum_recheck) ... ok
+test_protocol_new_counts_and_exact_coarsening (__main__.MatchedBetaBatchCTests.test_protocol_new_counts_and_exact_coarsening) ... ok
+test_representation_and_native_rank_controls (__main__.MatchedBetaBatchCTests.test_representation_and_native_rank_controls) ... ok
+test_spectrum_and_pair_metrics_are_consistent (__main__.MatchedBetaBatchCTests.test_spectrum_and_pair_metrics_are_consistent) ... ok
+test_unique_combined_a_b_c_coverage (__main__.MatchedBetaBatchCTests.test_unique_combined_a_b_c_coverage) ... ok
+test_word_layout_and_analysis_scope (__main__.MatchedBetaBatchCTests.test_word_layout_and_analysis_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.171s
+
+OK
+exit_code=0
+matched_beta_batch_c_overall passed check_only True
+exit_code=0

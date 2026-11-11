@@ -1,0 +1,45 @@
+{
+  "schema": "floquet-bdg-matched-beta-batch-c-word-qa-v1",
+  "recordedUtc": "2026-11-11T22:34:29.557481+00:00",
+  "sourceSha256": {
+    "matched_beta_batch_c_protocol.json": "c76f8f63a1a8f94903b2ef6a89b04c78e8f9450dc70b361e82f56fe54d2a1cfa",
+    "matched_beta_batch_c_analysis.json": "3e08944f3c61a06f6a2ad119d88e9c62d5cc231627a03d7af760818d1b99cf13",
+    "matched_beta_batch_c_independent.json": "31d5413020b9bbee292be7107d3992a22225b22bff7daff39deb52ecc761b2c9",
+    "matched_beta_batch_a_analysis.json": "871e5cfdc33a792ac4e0ec84e19a372a6a1b5154f0ec4262eee3ec8f8da9f898",
+    "matched_beta_batch_b_analysis.json": "c2055fa215bcab2cf23e1ec818d77b78b3e7d8f5c3809b4eedb69ab49eec2db5",
+    "matched-beta-batch-c.png": "23123ecff534c10813944bb23482209d1d6efc3b3b1ed31a8d3a42b371a3a75b",
+    "build_matched_beta_batch_c_report.js": "099c521e67ca14134b79c6fc11034cd82b46de6bd1565078ac557c1a28d6856f"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "8b7273cce9b13a44a82bffa2e56dc314b90964c76c5731d08c977d3f8c15950e",
+    "renderReportSha256": "3ed9664a2041f41f47b0e5958fb086b4f88ff723517eb2ed298a5c0e60c65902"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "8b7273cce9b13a44a82bffa2e56dc314b90964c76c5731d08c977d3f8c15950e",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看五个单页；原生公式、16行谱表、8行分配表、高强度配对、三批联合图及边界完整，无近空白页、裁切或表后叠字。"
+  }
+}

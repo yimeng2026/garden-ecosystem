@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-tbc-complete-verification-v2",
-  "recorded_utc": "2026-11-11T22:19:51.051720+00:00",
+  "recorded_utc": "2026-11-11T22:34:45.841282+00:00",
   "all_passed": true,
   "test_counts": {
     "baseline": 9,
@@ -34,6 +34,7 @@
     "matched_beta_control": 8,
     "matched_beta_batch_a": 8,
     "matched_beta_batch_b": 9,
+    "matched_beta_batch_c": 9,
     "log_reuse": 9
   },
   "commands": [
@@ -334,6 +335,15 @@
         "--check-only"
       ],
       "exit_code": 0
+    },
+    {
+      "label": "matched_beta_batch_c_suite",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\run_matched_beta_batch_c_verification.py",
+        "--check-only"
+      ],
+      "exit_code": 0
     }
   ],
   "environment": {
@@ -358,7 +368,7 @@
     "REPORT.md": "f1c7d2678b1c0082fef1d57840171fc592b8e9670b0fd6d02d42e19e873ec9ed",
     "Floquet-BdG-TBC无序对照报告.docx": "039dbf5b4bd73e90492932bc5ec98d32c644948da5af730fd9087fd80f222939",
     "word-qa/report.json": "7251e0c94c75236faec17d7431f734ec8f0d44b2a7e682e438c3731cacdf2dcf",
-    "run.log": "d6f4a216e266a15a6f73b2f67ea1d6db71662f706de0a4d02acf2926b76578c3",
+    "run.log": "47b7436669999239903f0c06538b9e3527d3e8f90901fc83eeb824a9d9a247a3",
     "ERRATA.md": "e435f0115edbb8fd7b26218515204d1501e2db94ef94935c1b15cc1bddb6b229",
     "finite_size_zero.json": "813a48c05e0e4cb80fbd615e908115572a646c75c438d33160fd1918d59ec50b",
     "finite_size_independent.json": "5b3c8925a63c1f1f62eef8d5a171f32a4e98e24ad1c67aeaf1d7af671097b932",
@@ -730,6 +740,22 @@
     "record_matched_beta_batch_b_qa.py": "42b1f724e64385ff8355bebef2b9c637b4e15c27e9912b44cb7fcff2d2aa7eca",
     "test_matched_beta_batch_b.py": "8f89ae5e3b20d9b6d5be847a625139ab9831d5889f148ba66e5adca3f5155de4",
     "run_matched_beta_batch_b_verification.py": "c5024e009a7f406b373d252ecb2e353b38337b0edd3c53f12b4081d558bd5a1f",
+    "matched_beta_batch_c_protocol.json": "c76f8f63a1a8f94903b2ef6a89b04c78e8f9450dc70b361e82f56fe54d2a1cfa",
+    "matched_beta_batch_c_analysis.json": "3e08944f3c61a06f6a2ad119d88e9c62d5cc231627a03d7af760818d1b99cf13",
+    "matched_beta_batch_c_independent.json": "31d5413020b9bbee292be7107d3992a22225b22bff7daff39deb52ecc761b2c9",
+    "matched-beta-batch-c.png": "23123ecff534c10813944bb23482209d1d6efc3b3b1ed31a8d3a42b371a3a75b",
+    "MATCHED_BETA_BATCH_C.md": "f1aef9ec7be3ab19309d42e7e67ecf7bec07b49286d7e8c1961460b5c3904edc",
+    "Floquet-BdG-共同无序剖面第三批高强度配对.docx": "8b7273cce9b13a44a82bffa2e56dc314b90964c76c5731d08c977d3f8c15950e",
+    "matched-beta-batch-c-word-qa.json": "fd90f2fcc52b5ffdb72b36e4292137e75625ccef010a5671c67f07638a76457d",
+    "matched-beta-batch-c-word-render/report.json": "3ed9664a2041f41f47b0e5958fb086b4f88ff723517eb2ed298a5c0e60c65902",
+    "matched_beta_batch_c_verification.json": "8609b53f573b3d42495a223757453b840f5a60a71ccfa27289618b25b8a6528e",
+    "matched_beta_batch_c_run.log": "0f0e8e1dd89ae6199c65aca71ca9018603be8c198c9b687bee7f682604dfe8ef",
+    "analyze_matched_beta_batch_c.py": "3dae80497c734ec6098d9d4f007ca3cfee0a53ee9fc64be14935472c4f9d8900",
+    "verify_matched_beta_batch_c.py": "0b1f6ed0766ad8eba911abdc91b6a428481aca75e86955f110c6c1833bf8ce7b",
+    "build_matched_beta_batch_c_report.js": "099c521e67ca14134b79c6fc11034cd82b46de6bd1565078ac557c1a28d6856f",
+    "record_matched_beta_batch_c_qa.py": "ceb00287cb3e2f957248a4ce3ddd4f83b1a7019462ce61391bcc0c956e11479f",
+    "test_matched_beta_batch_c.py": "f5b63d82c60357adaeaf4d53e569babafdfce619e32d5a4f7aac2f1ee6d8ebb5",
+    "run_matched_beta_batch_c_verification.py": "f7697d5cc3b6f2d8f1d5d648d0aa21ea8828c6aea4ebacf42db12543e6f1387c",
     "tbc_model.py": "bc7f7541434920ae9d5a9bdca396dc86306fb383a7d9f4bff19902077de641fc",
     "test_tbc.py": "b9c6d07e0571a059bf9af0f8179fd0e1fa18e43673f733eb1db958aa1dfb841f",
     "run_tbc.py": "ca2f38ef0623a7b941d9240b795a7995ffd226083a73c681c42469fa821d59ff",
@@ -741,7 +767,7 @@
     "build_report.js": "9a7d3463ca8a54ec48f659b294a59feb02909ec05529ed3af13eb917a961e276",
     "record_word_qa.py": "05923bfe7343998bcf1da68ee4e0fb175f9863a924968eb614c94b05fdb85168",
     "test_report.py": "ae5a094729fc9aac80c7ad935bb9277281cb73dc16ecfaf1e061a371a263cbda",
-    "run_verification.py": "779fc71853ec488a4e7f9d719da83abfed7da54a005b2560063c52be2f30ae6c",
+    "run_verification.py": "7053897d851a4fe63e2953991181e0e493d7a734a573843700bff7bdc3281dea",
     "test_verification_log_reuse.py": "74ba6d245d085783fe9778244d3b9f3e0705804bd7e8d181edbf50901af27fa4"
   },
   "observed_status": "clean_floquet_baseline_passed",
@@ -825,6 +851,10 @@
   "matched_beta_batch_b_independent_recheck_passed": true,
   "matched_beta_batch_b_visual_review_status": "passed",
   "matched_beta_batch_b_size_effect_separated": "matched_nested_profile_descriptive_only",
+  "matched_beta_batch_c_all_passed": true,
+  "matched_beta_batch_c_independent_recheck_passed": true,
+  "matched_beta_batch_c_visual_review_status": "passed",
+  "matched_beta_batch_c_size_effect_separated": "matched_nested_profile_descriptive_only",
   "scope": {
     "static_baseline_checked": true,
     "clean_kicked_baseline_checked": true,
@@ -994,10 +1024,10 @@
       -0.0024072367692100655,
       0.0002639120377132334
     ],
-    "matched_beta_combined_realizations": 16,
-    "matched_beta_combined_control_cells": 32,
-    "matched_beta_combined_unique_seed_strength_keys": true,
-    "matched_beta_combined_assignment_counts": {
+    "matched_beta_ab_realizations": 16,
+    "matched_beta_ab_control_cells": 32,
+    "matched_beta_ab_unique_seed_strength_keys": true,
+    "matched_beta_ab_assignment_counts": {
       "linear_point": {
         "diagonal": 48
       },
@@ -1005,12 +1035,57 @@
         "diagonal": 48
       }
     },
-    "matched_beta_combined_center_separation_delta_range": [
+    "matched_beta_ab_center_separation_delta_range": [
       -0.0024072367692100655,
       0.00039312849249900465
     ],
-    "matched_beta_combined_universal_size_law_claim": false,
-    "matched_beta_combined_statistical_significance_claim": false,
+    "matched_beta_batch_c_analysis_evaluated": "passed",
+    "matched_beta_batch_c_new_realizations": 8,
+    "matched_beta_batch_c_new_control_cells": 16,
+    "matched_beta_batch_c_reused_anchor_realizations": 0,
+    "matched_beta_batch_c_prior_results_recomputed": false,
+    "matched_beta_batch_c_assignment_counts": {
+      "linear_point": {
+        "diagonal": 24
+      },
+      "cell_average": {
+        "diagonal": 24
+      }
+    },
+    "matched_beta_batch_c_center_separation_delta_range": [
+      -0.003003532898690424,
+      0.0007549402257624946
+    ],
+    "matched_beta_batch_c_diagonal_score_ratio_range": [
+      1.8192117651075608,
+      4.707601412367147
+    ],
+    "matched_beta_batch_c_swapped_score_ratio_range": [
+      0.015546869459411717,
+      5.667440794324665
+    ],
+    "matched_beta_batch_c_direction_changes": 0,
+    "matched_beta_abc_realizations": 24,
+    "matched_beta_abc_control_cells": 48,
+    "matched_beta_abc_unique_seed_strength_keys": true,
+    "matched_beta_abc_assignment_counts": {
+      "linear_point": {
+        "diagonal": 72
+      },
+      "cell_average": {
+        "diagonal": 72
+      }
+    },
+    "matched_beta_abc_center_separation_delta_range": [
+      -0.003003532898690424,
+      0.0007549402257624946
+    ],
+    "matched_beta_abc_representation_fidelity_range": [
+      0.9746956097201178,
+      0.9954679547921588
+    ],
+    "matched_beta_abc_universal_size_law_claim": false,
+    "matched_beta_abc_statistical_significance_claim": false,
     "new_taxonomy_claim": false,
     "universal_category_claim": false,
     "localization_scale_analysis_pending": false,
