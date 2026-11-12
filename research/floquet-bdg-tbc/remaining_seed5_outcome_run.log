@@ -1,0 +1,107 @@
+$ remaining_seed5_outcome_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_remaining_seed_outcome.py --seed 5 --check-only
+{"check_only": true, "seed": 5, "cells": 26, "path_matrices": 78, "native_links": 24, "entry_links": 288, "jump_change_count": 6, "candidate_evaluation_deferred": true, "all_passed": true}
+exit_code=0
+$ remaining_seed5_independent_recheck: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_remaining_seed_outcome.py --seed 5
+{
+  "schema": "floquet-bdg-remaining-seed-path-outcome-independent-v1",
+  "seed": 5,
+  "protocol_sha256": "84d820bab463695c461a8c65908ccf51f7d0bf721771e026664ddd2ffa8d80b1",
+  "analysis_sha256": "97acc238770f79ad644c3f10aa88f78c0943d860d1f9772594e3533ab3a809a4",
+  "candidate_source_analysis_sha256": "8cc667ebae8aaf124a444d7fe2f15a7e8d5bd42dd7ee38892e03f996efb670d2",
+  "cell_count": 26,
+  "cross_size_path_matrix_count": 78,
+  "native_adjacent_link_count": 24,
+  "entry_link_count": 288,
+  "jump_change_count": 6,
+  "driver_comparison_change_count": 4,
+  "max_master_absolute_error": 0.0,
+  "max_beta_absolute_error": 0.0,
+  "max_spectrum_absolute_error": 0.0,
+  "max_pair_center_absolute_error": 0.0,
+  "max_matrix_absolute_error": 0.0,
+  "max_singular_absolute_error": 0.0,
+  "max_entry_delta_absolute_error": 0.0,
+  "max_native_link_absolute_error": 0.0,
+  "max_representation_fidelity_absolute_error": 0.0,
+  "entry_driver_mismatch_count": 0,
+  "jump_outcome_mismatch_count": 0,
+  "driver_outcome_mismatch_count": 0,
+  "endpoint_binding": {
+    "max_matrix_absolute_error": 0.0,
+    "max_singular_absolute_error": 0.0,
+    "max_spectrum_absolute_error": 0.0
+  },
+  "preregistered_floquet_cells_recomputed": 26,
+  "additional_unregistered_floquet_spectra": 0,
+  "new_floquet_spectra_recomputed": false,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "candidate_evaluation_performed": false,
+  "all_passed": true
+}
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-seed5-剩余种子路径结局.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_remaining_seed_outcome_qa.py --seed 5
+{
+  "schema": "floquet-bdg-remaining-seed-outcome-word-qa-v1",
+  "recordedUtc": "2026-11-12T01:19:10.365742+00:00",
+  "seed": 5,
+  "sourceSha256": {
+    "remaining_seed_outcome_protocol.json": "84d820bab463695c461a8c65908ccf51f7d0bf721771e026664ddd2ffa8d80b1",
+    "remaining_seed5_path_outcome_analysis.json": "97acc238770f79ad644c3f10aa88f78c0943d860d1f9772594e3533ab3a809a4",
+    "remaining_seed5_path_outcome_independent.json": "f6931804513abcd44aa4635a22f1643068412abacbf6b19e12491da09ed2e9c5",
+    "profile_stat_candidates_analysis.json": "8cc667ebae8aaf124a444d7fe2f15a7e8d5bd42dd7ee38892e03f996efb670d2",
+    "remaining-seed5-outcome.png": "2fd580773d69319ddeda2d6eb5038dea248ed79281cc5efe71fcf6b15a1f8e40",
+    "build_remaining_seed_outcome_report.js": "287a8408f01b31eda1cd779c7937f713f07944503e294e14dd7de13ec7424ff2"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "72d307550cc038e556afd4fd07c3fee687c82ff0904b1fd0d2b1a41c562a963d",
+    "renderReportSha256": "6e589dd41f1864984e0dfcd5df0440b4811e3bb1b83db21d9af6cbcb0e0f490f"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "72d307550cc038e556afd4fd07c3fee687c82ff0904b1fd0d2b1a41c562a963d",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看四个单页；目录、冻结协议、路径结局汇总、原生公式、四面板图、8项跳变表、独立复核与证据边界完整，无近空白页、裁切或表后叠字。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_remaining_seed5_outcome.py -v
+test_endpoint_sources_bind_to_existing_batches (__main__.RemainingSeed5OutcomeTests.test_endpoint_sources_bind_to_existing_batches) ... ok
+test_figure_markdown_and_global_registration (__main__.RemainingSeed5OutcomeTests.test_figure_markdown_and_global_registration) ... ok
+test_independent_recheck_is_complete (__main__.RemainingSeed5OutcomeTests.test_independent_recheck_is_complete) ... ok
+test_jump_and_driver_outcomes_match_stored_comparisons (__main__.RemainingSeed5OutcomeTests.test_jump_and_driver_outcomes_match_stored_comparisons) ... ok
+test_native_word_layout_and_visual_review (__main__.RemainingSeed5OutcomeTests.test_native_word_layout_and_visual_review) ... ok
+test_no_candidate_validation_or_new_category_is_claimed (__main__.RemainingSeed5OutcomeTests.test_no_candidate_validation_or_new_category_is_claimed) ... ok
+test_protocol_freezes_holdout_candidates_and_pair_rule (__main__.RemainingSeed5OutcomeTests.test_protocol_freezes_holdout_candidates_and_pair_rule) ... ok
+test_seed5_profile_and_preregistered_inventory (__main__.RemainingSeed5OutcomeTests.test_seed5_profile_and_preregistered_inventory) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.092s
+
+OK
+exit_code=0
