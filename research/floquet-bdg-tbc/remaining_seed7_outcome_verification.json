@@ -1,0 +1,119 @@
+{
+  "schema": "floquet-bdg-remaining-seed7-outcome-verification-v1",
+  "recorded_utc": "2026-11-12T01:32:36.885975+00:00",
+  "all_passed": true,
+  "test_count": 8,
+  "check_only": true,
+  "independent_recheck_passed": true,
+  "independent_max_matrix_absolute_error": 0.0,
+  "independent_max_entry_delta_absolute_error": 0.0,
+  "independent_max_native_link_absolute_error": 0.0,
+  "visual_review_status": "passed",
+  "rendered_pages": 4,
+  "commands": [
+    {
+      "label": "remaining_seed7_outcome_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_remaining_seed_outcome.py",
+        "--seed",
+        "7",
+        "--check-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "remaining_seed7_independent_recheck",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\verify_remaining_seed_outcome.py",
+        "--seed",
+        "7"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-seed7-剩余种子路径结局.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_remaining_seed_outcome_qa.py",
+        "--seed",
+        "7"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_remaining_seed7_outcome.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "remaining_seed_outcome_protocol.json": "84d820bab463695c461a8c65908ccf51f7d0bf721771e026664ddd2ffa8d80b1",
+    "remaining_seed7_path_outcome_analysis.json": "9b9edde605a2fea18c1db766b191b6b920d01e31d8bbebd499e74db90ba1da93",
+    "remaining_seed7_path_outcome_independent.json": "b4dfde1cdfa8c27fd0718606bd8900e30b92180dc7f0f5a0f43524274f3443e4",
+    "remaining-seed7-outcome.png": "ffb8e19cc314807c4fe50fa7010e7fbb683cb174fc5959cccf14c70fa3a84ce8",
+    "REMAINING_SEED7_OUTCOME.md": "1ccd14535975a26640a838b973bb8a0c044a0b457c561f312f892eab7196fdbf",
+    "Floquet-BdG-seed7-剩余种子路径结局.docx": "ac696e6ca5c333c2d0a31df4d727a9a18cd674a0fdee5ec22ca5ac1e8ac767d2",
+    "remaining-seed7-outcome-word-qa.json": "1e944df1f4d948a582dde2c6a8aa7e3f2ca44d0a53ec24d21e4605c949cab19b",
+    "remaining-seed7-outcome-word-render/report.json": "1edbd1b44412e9f73432db1e6632e8191cdce4ee28da5f1659a5ca3f4e5f4caf",
+    "remaining_seed7_outcome_verification.json": "7885a26f68e2920499aef5e9d9be2a680020cd3d5fe2b5c4d449b807ef392f5d",
+    "remaining_seed7_outcome_run.log": "9f003465446d3a9a25857595d39371248a79e122ed1f7a3d4d8e983f2a4465f1",
+    "analyze_remaining_seed_outcome.py": "6481ae36c8b8024624dec3e2c031e69955587d68668a2ab50326db399ef838bb",
+    "verify_remaining_seed_outcome.py": "570e99373b6bf9657ff62600a0c47e1fa49baa58a4cb466d5b870b0d1755c12c",
+    "build_remaining_seed_outcome_report.js": "8b5d44713de5215e577fa5c364f3af8ede3e4546f7dcff89730d5485567c6770",
+    "record_remaining_seed_outcome_qa.py": "725533a7d81ed2182d0012d535f748c15888dfb2bbd3f93f9a855af64cb7ad0f",
+    "test_remaining_seed7_outcome.py": "bd81e3c205a1b51a6e88734196e10ab3fa09cfd297ca043a6ff7b50ee4ed0a16",
+    "run_remaining_seed7_verification.py": "57c2b29d083c9a1be39ee080d0e3222a3d88f2d47251e1c9e6708ab8d58c6194"
+  },
+  "scope": {
+    "remaining_seed7_outcome_analysis_evaluated": true,
+    "seed": 7,
+    "completed_remaining_outcome_seeds": [
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "remaining_outcome_seeds_pending": [],
+    "all_remaining_path_outcomes_exist": true,
+    "new_control_cells": 26,
+    "cross_size_path_matrices": 78,
+    "native_adjacent_links": 24,
+    "entry_links": 288,
+    "jump_change_count": 2,
+    "driver_comparison_change_count": 4,
+    "new_extrema_midpoint_count": 4,
+    "new_disorder_realization_count": 0,
+    "candidate_evaluation_deferred": true,
+    "candidate_validation_completed": false,
+    "holdout_pair_evaluations": [],
+    "pristine_external_holdout_claim": false,
+    "predictive_model_fitted": false,
+    "correlation_claim": false,
+    "statistical_significance_claim": false,
+    "causal_mechanism_proven": false,
+    "continuous_path_proof": false,
+    "spectral_crossing_proven": false,
+    "state_exchange_proven": false,
+    "new_winding_computed": false,
+    "n640_computed": false,
+    "new_taxonomy_claim": false
+  },
+  "log": "remaining_seed7_outcome_run.log"
+}

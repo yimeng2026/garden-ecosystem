@@ -47,6 +47,9 @@ const fmt = (value) => Number(value).toPrecision(6).replace(/\.0+$/, "");
 const allSeeds = [2, 3, 4, 5, 7];
 const completed = allSeeds.filter((value) => value === seed || fs.existsSync(path.join(root, `remaining_seed${value}_path_outcome_analysis.json`)));
 const pending = allSeeds.filter((value) => !completed.includes(value));
+const progressText = pending.length
+  ? `当前已完成 seed=${completed.join("、")} 的路径结局；待完成 seed=${pending.join("、")}。五个剩余种子全部齐备之前，候选逐对评估保持关闭。`
+  : `当前已完成 seed=${completed.join("、")} 的路径结局。五个剩余种子已全部齐备；本报告尚未执行候选逐对评估。`;
 const summary = analysis.summary;
 const summaryTable = makeTable(
   ["seed", "尺寸单元", "跨尺寸矩阵", "原生链接", "跳变改变数", "主导改变数", "新中点极值数"],
@@ -90,7 +93,7 @@ const children = [
   small("N=400 时每块 12 个值，N=600 时每块 8 个值。跨尺寸矩阵不是同尺寸态跟踪，原生有限链接也不是连续路径证明。"),
   summaryTable,
   equation([sub("J", "s"), new MathRun(" = ∑"), sup("1", "changed"), new MathRun("，按两种表示与四个矩阵项逐对计数")]),
-  body(`当前已完成 seed=${completed.join("、")} 的路径结局；待完成 seed=${pending.join("、")}。五个剩余种子全部齐备之前，候选逐对评估保持关闭。`),
+  body(progressText),
   small(`本种子的跳变改变数为 ${summary.jump_change_count}，主导项计数改变数为 ${summary.driver_comparison_change_count}，新增中点参与极值的位置数为 ${summary.new_extrema_midpoint_count}。这些结局分别报告，不能互相替代。`),
   pageBreak(),
 

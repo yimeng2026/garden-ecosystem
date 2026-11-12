@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-tbc-complete-verification-v2",
-  "recorded_utc": "2026-11-12T01:19:20.643836+00:00",
+  "recorded_utc": "2026-11-12T01:33:13.251658+00:00",
   "all_passed": true,
   "test_counts": {
     "baseline": 9,
@@ -44,6 +44,7 @@
     "remaining_seed3_outcome": 7,
     "remaining_seed4_outcome": 8,
     "remaining_seed5_outcome": 8,
+    "remaining_seed7_outcome": 8,
     "log_reuse": 9
   },
   "commands": [
@@ -434,6 +435,15 @@
         "--check-only"
       ],
       "exit_code": 0
+    },
+    {
+      "label": "remaining_seed7_outcome_suite",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\run_remaining_seed7_verification.py",
+        "--check-only"
+      ],
+      "exit_code": 0
     }
   ],
   "environment": {
@@ -458,7 +468,7 @@
     "REPORT.md": "f1c7d2678b1c0082fef1d57840171fc592b8e9670b0fd6d02d42e19e873ec9ed",
     "Floquet-BdG-TBC无序对照报告.docx": "039dbf5b4bd73e90492932bc5ec98d32c644948da5af730fd9087fd80f222939",
     "word-qa/report.json": "7251e0c94c75236faec17d7431f734ec8f0d44b2a7e682e438c3731cacdf2dcf",
-    "run.log": "ca884546c6ff785187b2976e0c49a8d77d52ba4fc9d99ce83e9fd21c4ccca232",
+    "run.log": "b0f74d589e83c99b1ee21af29e3c05d0b3caf9349e15a8a4454a45c3ba4e81e5",
     "ERRATA.md": "e435f0115edbb8fd7b26218515204d1501e2db94ef94935c1b15cc1bddb6b229",
     "finite_size_zero.json": "813a48c05e0e4cb80fbd615e908115572a646c75c438d33160fd1918d59ec50b",
     "finite_size_independent.json": "5b3c8925a63c1f1f62eef8d5a171f32a4e98e24ad1c67aeaf1d7af671097b932",
@@ -955,7 +965,7 @@
     "remaining-seed4-outcome-word-render/report.json": "75ed01d38403a2fdfba9098b48424f286b871dafe37a055bafbd70fc28161308",
     "remaining_seed4_outcome_verification.json": "45d29470898af220d7121b4f795410643a8e2547a8a2295cbbb108f626baeed6",
     "remaining_seed4_outcome_run.log": "03c37d2c6b19cd5012d6166a7f2bf5952b7d0fce911f9f04f9bb7023334f8fe7",
-    "build_remaining_seed_outcome_report.js": "287a8408f01b31eda1cd779c7937f713f07944503e294e14dd7de13ec7424ff2",
+    "build_remaining_seed_outcome_report.js": "8b5d44713de5215e577fa5c364f3af8ede3e4546f7dcff89730d5485567c6770",
     "record_remaining_seed_outcome_qa.py": "725533a7d81ed2182d0012d535f748c15888dfb2bbd3f93f9a855af64cb7ad0f",
     "test_remaining_seed4_outcome.py": "952691c0b7a5d5aa90340f80d602995f20a81432201f59f115e299522acdfaf1",
     "run_remaining_seed4_verification.py": "78ebd0378bf7f375a2d3e367a7f522e74a0c67fe2a48f80e47d755b8d69ce8a1",
@@ -970,6 +980,17 @@
     "remaining_seed5_outcome_run.log": "4f0c73b0e1a5c8fc64941ba23fbd822ea927dae655d0cbe6d9fcd88d6721fe95",
     "test_remaining_seed5_outcome.py": "29f7521a5c368e5b1db76abbe45647eb2df6295d9da70d092c7e22f1af99d2a7",
     "run_remaining_seed5_verification.py": "821371e2c175dd613112d170dea44cfc0735599ef9adb8f61c0b71a734200957",
+    "remaining_seed7_path_outcome_analysis.json": "9b9edde605a2fea18c1db766b191b6b920d01e31d8bbebd499e74db90ba1da93",
+    "remaining_seed7_path_outcome_independent.json": "b4dfde1cdfa8c27fd0718606bd8900e30b92180dc7f0f5a0f43524274f3443e4",
+    "remaining-seed7-outcome.png": "ffb8e19cc314807c4fe50fa7010e7fbb683cb174fc5959cccf14c70fa3a84ce8",
+    "REMAINING_SEED7_OUTCOME.md": "1ccd14535975a26640a838b973bb8a0c044a0b457c561f312f892eab7196fdbf",
+    "Floquet-BdG-seed7-剩余种子路径结局.docx": "ac696e6ca5c333c2d0a31df4d727a9a18cd674a0fdee5ec22ca5ac1e8ac767d2",
+    "remaining-seed7-outcome-word-qa.json": "1e944df1f4d948a582dde2c6a8aa7e3f2ca44d0a53ec24d21e4605c949cab19b",
+    "remaining-seed7-outcome-word-render/report.json": "1edbd1b44412e9f73432db1e6632e8191cdce4ee28da5f1659a5ca3f4e5f4caf",
+    "remaining_seed7_outcome_verification.json": "7ce224a8a63828b498926cb5d9f431df026c0d834fcec806877a45bbd86dd1e5",
+    "remaining_seed7_outcome_run.log": "9f003465446d3a9a25857595d39371248a79e122ed1f7a3d4d8e983f2a4465f1",
+    "test_remaining_seed7_outcome.py": "bd81e3c205a1b51a6e88734196e10ab3fa09cfd297ca043a6ff7b50ee4ed0a16",
+    "run_remaining_seed7_verification.py": "57c2b29d083c9a1be39ee080d0e3222a3d88f2d47251e1c9e6708ab8d58c6194",
     "tbc_model.py": "bc7f7541434920ae9d5a9bdca396dc86306fb383a7d9f4bff19902077de641fc",
     "test_tbc.py": "b9c6d07e0571a059bf9af0f8179fd0e1fa18e43673f733eb1db958aa1dfb841f",
     "run_tbc.py": "ca2f38ef0623a7b941d9240b795a7995ffd226083a73c681c42469fa821d59ff",
@@ -981,7 +1002,7 @@
     "build_report.js": "9a7d3463ca8a54ec48f659b294a59feb02909ec05529ed3af13eb917a961e276",
     "record_word_qa.py": "05923bfe7343998bcf1da68ee4e0fb175f9863a924968eb614c94b05fdb85168",
     "test_report.py": "ae5a094729fc9aac80c7ad935bb9277281cb73dc16ecfaf1e061a371a263cbda",
-    "run_verification.py": "aa98ebe01238d67b543f018091a3fe89f5619889cd45eb2af4a77dc4e19ef560",
+    "run_verification.py": "e44a45ab62383e2414ffc420e50970244a0f6dbeac1cc6d367f47c7b9df6da21",
     "test_verification_log_reuse.py": "74ba6d245d085783fe9778244d3b9f3e0705804bd7e8d181edbf50901af27fa4"
   },
   "observed_status": "clean_floquet_baseline_passed",
@@ -1094,6 +1115,9 @@
   "remaining_seed5_outcome_all_passed": true,
   "remaining_seed5_outcome_independent_recheck_passed": true,
   "remaining_seed5_outcome_visual_review_status": "passed",
+  "remaining_seed7_outcome_all_passed": true,
+  "remaining_seed7_outcome_independent_recheck_passed": true,
+  "remaining_seed7_outcome_visual_review_status": "passed",
   "scope": {
     "static_baseline_checked": true,
     "clean_kicked_baseline_checked": true,
@@ -1426,16 +1450,16 @@
     "profile_stat_candidates_statistical_significance_claim": false,
     "profile_stat_candidates_new_winding_computed": false,
     "profile_stat_candidates_n640_computed": false,
-    "remaining_seed_outcome_analysis_evaluated": "seeds2_3_4_5_only",
+    "remaining_seed_outcome_analysis_evaluated": "all5_path_outcomes_ready_candidate_evaluation_pending",
     "remaining_seed_outcome_completed_seeds": [
       2,
       3,
       4,
-      5
-    ],
-    "remaining_seed_outcome_pending_seeds": [
+      5,
       7
     ],
+    "remaining_seed_outcome_pending_seeds": [],
+    "remaining_seed_outcome_all_exist": true,
     "remaining_seed2_new_control_cells": 26,
     "remaining_seed2_cross_size_path_matrices": 78,
     "remaining_seed2_native_adjacent_links": 24,
@@ -1494,6 +1518,21 @@
     "remaining_seed5_statistical_significance_claim": false,
     "remaining_seed5_new_winding_computed": false,
     "remaining_seed5_n640_computed": false,
+    "remaining_seed7_new_control_cells": 26,
+    "remaining_seed7_cross_size_path_matrices": 78,
+    "remaining_seed7_native_adjacent_links": 24,
+    "remaining_seed7_entry_links": 288,
+    "remaining_seed7_jump_change_count": 2,
+    "remaining_seed7_driver_comparison_change_count": 4,
+    "remaining_seed7_new_extrema_midpoint_count": 4,
+    "remaining_seed7_candidate_evaluation_deferred": true,
+    "remaining_seed7_candidate_validation_completed": false,
+    "remaining_seed7_pristine_external_holdout_claim": false,
+    "remaining_seed7_predictive_model_fitted": false,
+    "remaining_seed7_correlation_claim": false,
+    "remaining_seed7_statistical_significance_claim": false,
+    "remaining_seed7_new_winding_computed": false,
+    "remaining_seed7_n640_computed": false,
     "new_taxonomy_claim": false,
     "universal_category_claim": false,
     "localization_scale_analysis_pending": false,
