@@ -1,0 +1,170 @@
+{
+  "schema": "floquet-bdg-holdout-pair-evaluation-verification-v1",
+  "recorded_utc": "2026-11-12T01:51:38.803433+00:00",
+  "all_passed": true,
+  "test_count": 8,
+  "check_only": true,
+  "independent_recheck_passed": true,
+  "independent_pair_record_mismatch_count": 0,
+  "independent_summary_mismatch_count": 0,
+  "visual_review_status": "passed",
+  "rendered_pages": 5,
+  "commands": [
+    {
+      "label": "holdout_pair_evaluation_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_holdout_pair_evaluation.py",
+        "--check-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "holdout_pair_independent_recheck",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\verify_holdout_pair_evaluation.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-剩余种子候选逐对方向检验.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_holdout_pair_evaluation_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_holdout_pair_evaluation.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "holdout_pair_evaluation_analysis.json": "e6c0b0f44fb741d3214782e6f6b2f5608e39f13f3ba0d82e9fa13651385d5a3f",
+    "holdout_pair_evaluation_independent.json": "e42ac1de6afd163c239f5398fef9d0c2bfbfd43c27bdfb60fbde64444211319a",
+    "holdout-pair-evaluation.png": "52e4c4f9812146e4ce5d3b4c38cecdf2d191c8a481b8a39db22f96d09382274e",
+    "HOLDOUT_PAIR_EVALUATION.md": "9e8a1e26bf7873509123db14b9ea3cd78909df28c330eb03a73d734d9d1c049e",
+    "Floquet-BdG-剩余种子候选逐对方向检验.docx": "5250b7dce6e2509944c0fa2f14daf78b72f9ed71fa66c60d3b72f1ed0c5d9c0b",
+    "holdout-pair-evaluation-word-qa.json": "c40562bf0958727e70bfd958c239eecd9867bcb115543b020e23959b42a64be7",
+    "holdout-pair-evaluation-word-render/report.json": "a7999ee0f660cdb683b62911e3af08a3bc3b82be61a53bcb66fdf0d332577ade",
+    "holdout_pair_evaluation_verification.json": "fa3988184e0173b7ca42f7bff2eb577d856ffb2307b5f435dc9016edaa502a29",
+    "holdout_pair_evaluation_run.log": "69d09391524864d8e717799654e68165f58613d17140bb9be6a52d57b2fa442b",
+    "analyze_holdout_pair_evaluation.py": "e55b2c030d5de03b9780d827a59e973be4a55ad7e85db7411c53f2fb221c1668",
+    "verify_holdout_pair_evaluation.py": "91bce92e25423468b3d70cb6eb1824e0809f165721d3705ff12e88d8de9fbfd2",
+    "build_holdout_pair_evaluation_report.js": "a718268065648bc3e3bc0c5b029fa07a7ff77cea6152aef505a0295c2717bb6a",
+    "record_holdout_pair_evaluation_qa.py": "da5f161ceed40f0abb411f0c7d743fbb6c05e2d79e06c11b2cdd39645fb4a92e",
+    "test_holdout_pair_evaluation.py": "73179856e43f6f45353977d53060ada8069c3f54915f07a850b15d6b956c41a2",
+    "run_holdout_pair_evaluation_verification.py": "4441fd99cc7508ef4d135a8e88878737439144ac1c34e7207832751f6d3e63f2"
+  },
+  "scope": {
+    "holdout_pair_evaluation_analysis_evaluated": true,
+    "candidate_count": 16,
+    "pair_count_per_candidate": 25,
+    "unfiltered_pair_record_count": 400,
+    "informative_pair_count": 20,
+    "uninformative_pair_count": 5,
+    "training_only_pair_count_excluded": 3,
+    "all_informative_pairs_consistent_count": 0,
+    "all_informative_pairs_consistent_names": [],
+    "candidate_consistency": {
+      "mean": [
+        12,
+        8
+      ],
+      "q01": [
+        16,
+        4
+      ],
+      "q02": [
+        11,
+        9
+      ],
+      "q05": [
+        12,
+        8
+      ],
+      "q25": [
+        16,
+        4
+      ],
+      "q50": [
+        13,
+        7
+      ],
+      "q98": [
+        16,
+        4
+      ],
+      "q99": [
+        18,
+        2
+      ],
+      "low_frac_0p2": [
+        14,
+        6
+      ],
+      "high_frac_0p85": [
+        9,
+        11
+      ],
+      "high_frac_0p9": [
+        8,
+        12
+      ],
+      "lag1": [
+        10,
+        10
+      ],
+      "roughness_rms": [
+        16,
+        4
+      ],
+      "total_variation": [
+        14,
+        6
+      ],
+      "sign_changes": [
+        13,
+        7
+      ],
+      "block_std_max": [
+        18,
+        2
+      ]
+    },
+    "failed_pairs_removed": false,
+    "tie_pairs_removed": false,
+    "directional_screen_completed": true,
+    "candidate_evaluation_completed": true,
+    "predictive_validation_completed": false,
+    "pair_evaluation_is_not_prediction": true,
+    "pristine_external_holdout_claim": false,
+    "predictive_model_fitted": false,
+    "correlation_claim": false,
+    "predictive_accuracy_computed": false,
+    "statistical_significance_claim": false,
+    "causal_mechanism_proven": false,
+    "new_floquet_cells_computed": 0,
+    "new_floquet_spectra_recomputed": false,
+    "new_winding_computed": false,
+    "n640_computed": false,
+    "new_taxonomy_claim": false
+  },
+  "log": "holdout_pair_evaluation_run.log"
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "floquet-bdg-holdout-pair-evaluation-word-qa-v1",
+  "recordedUtc": "2026-11-12T01:51:38.611150+00:00",
+  "sourceSha256": {
+    "remaining_seed_outcome_protocol.json": "84d820bab463695c461a8c65908ccf51f7d0bf721771e026664ddd2ffa8d80b1",
+    "profile_stat_candidates_analysis.json": "8cc667ebae8aaf124a444d7fe2f15a7e8d5bd42dd7ee38892e03f996efb670d2",
+    "holdout_pair_evaluation_analysis.json": "e6c0b0f44fb741d3214782e6f6b2f5608e39f13f3ba0d82e9fa13651385d5a3f",
+    "holdout_pair_evaluation_independent.json": "e42ac1de6afd163c239f5398fef9d0c2bfbfd43c27bdfb60fbde64444211319a",
+    "holdout-pair-evaluation.png": "52e4c4f9812146e4ce5d3b4c38cecdf2d191c8a481b8a39db22f96d09382274e",
+    "build_holdout_pair_evaluation_report.js": "a718268065648bc3e3bc0c5b029fa07a7ff77cea6152aef505a0295c2717bb6a",
+    "seed01_matrix_midpoint_analysis.json": "2b2fdca42a4ab3110bf9fbc903b01723c09e27e90bee4cc14075b0b08e90deae",
+    "seed6_matrix_midpoint_analysis.json": "dc95212ab89d25487b60b326364a3911eed9a56c35ba9d867b1adc6acc58a761",
+    "remaining_seed2_path_outcome_analysis.json": "cce25928de38868a3e5b0333933db9ea6f8ca153b379f728f364c1469b7068c0",
+    "remaining_seed3_path_outcome_analysis.json": "786c9181f695a8eeeb7195f04dfc0b9337ea03d6743057cfda826e0fa7c08043",
+    "remaining_seed4_path_outcome_analysis.json": "f9035ac51845f0a319ea0b90303dec673acb81483c685e1d6795b8fe14fa62f4",
+    "remaining_seed5_path_outcome_analysis.json": "97acc238770f79ad644c3f10aa88f78c0943d860d1f9772594e3533ab3a809a4",
+    "remaining_seed7_path_outcome_analysis.json": "9b9edde605a2fea18c1db766b191b6b920d01e31d8bbebd499e74db90ba1da93"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "5250b7dce6e2509944c0fa2f14daf78b72f9ed71fa66c60d3b72f1ed0c5d9c0b",
+    "renderReportSha256": "a7999ee0f660cdb683b62911e3af08a3bc3b82be61a53bcb66fdf0d332577ade"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "5250b7dce6e2509944c0fa2f14daf78b72f9ed71fa66c60d3b72f1ed0c5d9c0b",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看五个单页；目录、8个路径结局、原生公式、四面板图、5个跳变平局、全部16项候选结果、独立复核与边界完整，无近空白页、裁切或表后叠字。"
+  }
+}
