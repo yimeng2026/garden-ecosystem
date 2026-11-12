@@ -119,6 +119,7 @@ def main():
         ("seed6_matrix_midpoint_suite", [sys.executable, str(ROOT / "run_seed6_matrix_midpoint_verification.py"), "--check-only"], 180),
         ("seed01_matrix_midpoint_suite", [sys.executable, str(ROOT / "run_seed01_matrix_midpoint_verification.py"), "--check-only"], 180),
         ("profile_stat_candidates_suite", [sys.executable, str(ROOT / "run_profile_stat_candidates_verification.py"), "--check-only"], 180),
+        ("remaining_seed2_outcome_suite", [sys.executable, str(ROOT / "run_remaining_seed2_verification.py"), "--check-only"], 180),
     ]
     rows, logs = [], []
     if "--reuse-completed-log" in sys.argv:
@@ -164,6 +165,7 @@ def main():
     seed6_matrix_midpoint_verification = json.loads((ROOT / "seed6_matrix_midpoint_verification.json").read_text(encoding="utf-8")) if (ROOT / "seed6_matrix_midpoint_verification.json").exists() else {}
     seed01_matrix_midpoint_verification = json.loads((ROOT / "seed01_matrix_midpoint_verification.json").read_text(encoding="utf-8")) if (ROOT / "seed01_matrix_midpoint_verification.json").exists() else {}
     profile_stat_candidates_verification = json.loads((ROOT / "profile_stat_candidates_verification.json").read_text(encoding="utf-8")) if (ROOT / "profile_stat_candidates_verification.json").exists() else {}
+    remaining_seed2_outcome_verification = json.loads((ROOT / "remaining_seed2_outcome_verification.json").read_text(encoding="utf-8")) if (ROOT / "remaining_seed2_outcome_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -332,6 +334,10 @@ def main():
         "profile_stat_candidates_run.log", "analyze_profile_stat_candidates.py", "verify_profile_stat_candidates.py",
         "build_profile_stat_candidates_report.js", "record_profile_stat_candidates_qa.py", "test_profile_stat_candidates.py",
         "run_profile_stat_candidates_verification.py",
+        "remaining_seed_outcome_protocol.json", "remaining_seed2_path_outcome_analysis.json", "remaining_seed2_path_outcome_independent.json",
+        "remaining-seed2-outcome.png", "REMAINING_SEED2_OUTCOME.md", "remaining_seed2_outcome_verification.json",
+        "remaining_seed2_outcome_run.log", "analyze_remaining_seed_outcome.py", "verify_remaining_seed2_outcome.py",
+        "test_remaining_seed2_outcome.py", "run_remaining_seed2_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py", "run_verification.py", "test_verification_log_reuse.py",
@@ -342,7 +348,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 9 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None, "overlap_confounding": 6 if passed else None, "matched_beta_control": 8 if passed else None, "matched_beta_batch_a": 8 if passed else None, "matched_beta_batch_b": 9 if passed else None, "matched_beta_batch_c": 9 if passed else None, "overlap_matrix_response": 8 if passed else None, "seed6_matrix_path": 9 if passed else None, "seed6_matrix_midpoint": 10 if passed else None, "seed01_matrix_midpoint": 10 if passed else None, "profile_stat_candidates": 8 if passed else None, "log_reuse": 9 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 9 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None, "overlap_confounding": 6 if passed else None, "matched_beta_control": 8 if passed else None, "matched_beta_batch_a": 8 if passed else None, "matched_beta_batch_b": 9 if passed else None, "matched_beta_batch_c": 9 if passed else None, "overlap_matrix_response": 8 if passed else None, "seed6_matrix_path": 9 if passed else None, "seed6_matrix_midpoint": 10 if passed else None, "seed01_matrix_midpoint": 10 if passed else None, "profile_stat_candidates": 8 if passed else None, "remaining_seed2_outcome": 7 if passed else None, "log_reuse": 9 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -449,6 +455,8 @@ def main():
         "profile_stat_candidates_all_passed": profile_stat_candidates_verification.get("all_passed"),
         "profile_stat_candidates_independent_recheck_passed": profile_stat_candidates_verification.get("independent_recheck_passed"),
         "profile_stat_candidates_visual_review_status": profile_stat_candidates_verification.get("visual_review_status"),
+        "remaining_seed2_outcome_all_passed": remaining_seed2_outcome_verification.get("all_passed"),
+        "remaining_seed2_outcome_independent_recheck_passed": remaining_seed2_outcome_verification.get("independent_recheck_passed"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
@@ -692,6 +700,23 @@ def main():
             "profile_stat_candidates_statistical_significance_claim": False,
             "profile_stat_candidates_new_winding_computed": False,
             "profile_stat_candidates_n640_computed": False,
+            "remaining_seed_outcome_analysis_evaluated": "seed2_only",
+            "remaining_seed_outcome_completed_seeds": [2],
+            "remaining_seed_outcome_pending_seeds": [3, 4, 5, 7],
+            "remaining_seed2_new_control_cells": 26,
+            "remaining_seed2_cross_size_path_matrices": 78,
+            "remaining_seed2_native_adjacent_links": 24,
+            "remaining_seed2_entry_links": 288,
+            "remaining_seed2_jump_change_count": remaining_seed2_outcome_verification.get("scope", {}).get("jump_change_count"),
+            "remaining_seed2_driver_comparison_change_count": remaining_seed2_outcome_verification.get("scope", {}).get("driver_comparison_change_count"),
+            "remaining_seed2_candidate_evaluation_deferred": True,
+            "remaining_seed2_candidate_validation_completed": False,
+            "remaining_seed2_pristine_external_holdout_claim": False,
+            "remaining_seed2_predictive_model_fitted": False,
+            "remaining_seed2_correlation_claim": False,
+            "remaining_seed2_statistical_significance_claim": False,
+            "remaining_seed2_new_winding_computed": False,
+            "remaining_seed2_n640_computed": False,
             "new_taxonomy_claim": False,
             "universal_category_claim": False,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,
