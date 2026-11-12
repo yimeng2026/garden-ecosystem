@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-tbc-complete-verification-v2",
-  "recorded_utc": "2026-11-12T00:52:43.299893+00:00",
+  "recorded_utc": "2026-11-12T01:07:34.165842+00:00",
   "all_passed": true,
   "test_counts": {
     "baseline": 9,
@@ -42,6 +42,7 @@
     "profile_stat_candidates": 8,
     "remaining_seed2_outcome": 7,
     "remaining_seed3_outcome": 7,
+    "remaining_seed4_outcome": 8,
     "log_reuse": 9
   },
   "commands": [
@@ -414,6 +415,15 @@
         "--check-only"
       ],
       "exit_code": 0
+    },
+    {
+      "label": "remaining_seed4_outcome_suite",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\run_remaining_seed4_verification.py",
+        "--check-only"
+      ],
+      "exit_code": 0
     }
   ],
   "environment": {
@@ -438,7 +448,7 @@
     "REPORT.md": "f1c7d2678b1c0082fef1d57840171fc592b8e9670b0fd6d02d42e19e873ec9ed",
     "Floquet-BdG-TBC无序对照报告.docx": "039dbf5b4bd73e90492932bc5ec98d32c644948da5af730fd9087fd80f222939",
     "word-qa/report.json": "7251e0c94c75236faec17d7431f734ec8f0d44b2a7e682e438c3731cacdf2dcf",
-    "run.log": "35574185663fad8a29e4b4aef0b3db96bebfca2958abac4f2ca3032c54d8fcf8",
+    "run.log": "bbac691b5bc302d4cabdc48d8a054e6405b42578208f8d0bb5850ff196fea294",
     "ERRATA.md": "e435f0115edbb8fd7b26218515204d1501e2db94ef94935c1b15cc1bddb6b229",
     "finite_size_zero.json": "813a48c05e0e4cb80fbd615e908115572a646c75c438d33160fd1918d59ec50b",
     "finite_size_independent.json": "5b3c8925a63c1f1f62eef8d5a171f32a4e98e24ad1c67aeaf1d7af671097b932",
@@ -926,6 +936,19 @@
     "verify_remaining_seed_outcome.py": "570e99373b6bf9657ff62600a0c47e1fa49baa58a4cb466d5b870b0d1755c12c",
     "test_remaining_seed3_outcome.py": "3a8848626fdb5d769fedd61d4112090c34763c1fb92f422a1bfb5786cd4176d3",
     "run_remaining_seed3_verification.py": "9b1a48026c7218ddd9402b03bcc8dde5f87576ebacb0907b3a042f0ec4aa958b",
+    "remaining_seed4_path_outcome_analysis.json": "f9035ac51845f0a319ea0b90303dec673acb81483c685e1d6795b8fe14fa62f4",
+    "remaining_seed4_path_outcome_independent.json": "f27b4b539e0e162ed1c58e88135ee2829ca764eee7caa2741118752b500958ce",
+    "remaining-seed4-outcome.png": "d896480b9fe760ece53f35643761ed62210b1eaa0bb2dbb398bf85c1e2eec7b6",
+    "REMAINING_SEED4_OUTCOME.md": "350aabfbebd167de2a7eb21d600c8463bec8aa0114b9340939af5250dc8481cb",
+    "Floquet-BdG-seed4-剩余种子路径结局.docx": "1123632365b05ce526c507ab0b7f25c7b6c1da76bf4fc0794f10d38cc988d5b0",
+    "remaining-seed4-outcome-word-qa.json": "78534cf580053e3e538c4fd951364168109b8019d1860515cdc53215b394cdd5",
+    "remaining-seed4-outcome-word-render/report.json": "75ed01d38403a2fdfba9098b48424f286b871dafe37a055bafbd70fc28161308",
+    "remaining_seed4_outcome_verification.json": "45d29470898af220d7121b4f795410643a8e2547a8a2295cbbb108f626baeed6",
+    "remaining_seed4_outcome_run.log": "03c37d2c6b19cd5012d6166a7f2bf5952b7d0fce911f9f04f9bb7023334f8fe7",
+    "build_remaining_seed_outcome_report.js": "287a8408f01b31eda1cd779c7937f713f07944503e294e14dd7de13ec7424ff2",
+    "record_remaining_seed_outcome_qa.py": "725533a7d81ed2182d0012d535f748c15888dfb2bbd3f93f9a855af64cb7ad0f",
+    "test_remaining_seed4_outcome.py": "952691c0b7a5d5aa90340f80d602995f20a81432201f59f115e299522acdfaf1",
+    "run_remaining_seed4_verification.py": "78ebd0378bf7f375a2d3e367a7f522e74a0c67fe2a48f80e47d755b8d69ce8a1",
     "tbc_model.py": "bc7f7541434920ae9d5a9bdca396dc86306fb383a7d9f4bff19902077de641fc",
     "test_tbc.py": "b9c6d07e0571a059bf9af0f8179fd0e1fa18e43673f733eb1db958aa1dfb841f",
     "run_tbc.py": "ca2f38ef0623a7b941d9240b795a7995ffd226083a73c681c42469fa821d59ff",
@@ -937,7 +960,7 @@
     "build_report.js": "9a7d3463ca8a54ec48f659b294a59feb02909ec05529ed3af13eb917a961e276",
     "record_word_qa.py": "05923bfe7343998bcf1da68ee4e0fb175f9863a924968eb614c94b05fdb85168",
     "test_report.py": "ae5a094729fc9aac80c7ad935bb9277281cb73dc16ecfaf1e061a371a263cbda",
-    "run_verification.py": "5981411e640f74838d89dee0b8c3884dc69e0521b27a5adbabc642a99f127231",
+    "run_verification.py": "60b28491148f40434fa931fa4dfd54b0e1cb308d083b0025369efacf93d711a5",
     "test_verification_log_reuse.py": "74ba6d245d085783fe9778244d3b9f3e0705804bd7e8d181edbf50901af27fa4"
   },
   "observed_status": "clean_floquet_baseline_passed",
@@ -1044,6 +1067,9 @@
   "remaining_seed2_outcome_independent_recheck_passed": true,
   "remaining_seed3_outcome_all_passed": true,
   "remaining_seed3_outcome_independent_recheck_passed": true,
+  "remaining_seed4_outcome_all_passed": true,
+  "remaining_seed4_outcome_independent_recheck_passed": true,
+  "remaining_seed4_outcome_visual_review_status": "passed",
   "scope": {
     "static_baseline_checked": true,
     "clean_kicked_baseline_checked": true,
@@ -1376,13 +1402,13 @@
     "profile_stat_candidates_statistical_significance_claim": false,
     "profile_stat_candidates_new_winding_computed": false,
     "profile_stat_candidates_n640_computed": false,
-    "remaining_seed_outcome_analysis_evaluated": "seeds2_3_only",
+    "remaining_seed_outcome_analysis_evaluated": "seeds2_3_4_only",
     "remaining_seed_outcome_completed_seeds": [
       2,
-      3
+      3,
+      4
     ],
     "remaining_seed_outcome_pending_seeds": [
-      4,
       5,
       7
     ],
@@ -1414,6 +1440,21 @@
     "remaining_seed3_statistical_significance_claim": false,
     "remaining_seed3_new_winding_computed": false,
     "remaining_seed3_n640_computed": false,
+    "remaining_seed4_new_control_cells": 26,
+    "remaining_seed4_cross_size_path_matrices": 78,
+    "remaining_seed4_native_adjacent_links": 24,
+    "remaining_seed4_entry_links": 288,
+    "remaining_seed4_jump_change_count": 0,
+    "remaining_seed4_driver_comparison_change_count": 4,
+    "remaining_seed4_new_extrema_midpoint_count": 1,
+    "remaining_seed4_candidate_evaluation_deferred": true,
+    "remaining_seed4_candidate_validation_completed": false,
+    "remaining_seed4_pristine_external_holdout_claim": false,
+    "remaining_seed4_predictive_model_fitted": false,
+    "remaining_seed4_correlation_claim": false,
+    "remaining_seed4_statistical_significance_claim": false,
+    "remaining_seed4_new_winding_computed": false,
+    "remaining_seed4_n640_computed": false,
     "new_taxonomy_claim": false,
     "universal_category_claim": false,
     "localization_scale_analysis_pending": false,

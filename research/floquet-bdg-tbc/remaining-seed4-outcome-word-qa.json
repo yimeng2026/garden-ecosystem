@@ -1,0 +1,43 @@
+{
+  "schema": "floquet-bdg-remaining-seed-outcome-word-qa-v1",
+  "recordedUtc": "2026-11-12T01:07:22.480461+00:00",
+  "seed": 4,
+  "sourceSha256": {
+    "remaining_seed_outcome_protocol.json": "84d820bab463695c461a8c65908ccf51f7d0bf721771e026664ddd2ffa8d80b1",
+    "remaining_seed4_path_outcome_analysis.json": "f9035ac51845f0a319ea0b90303dec673acb81483c685e1d6795b8fe14fa62f4",
+    "remaining_seed4_path_outcome_independent.json": "f27b4b539e0e162ed1c58e88135ee2829ca764eee7caa2741118752b500958ce",
+    "profile_stat_candidates_analysis.json": "8cc667ebae8aaf124a444d7fe2f15a7e8d5bd42dd7ee38892e03f996efb670d2",
+    "remaining-seed4-outcome.png": "d896480b9fe760ece53f35643761ed62210b1eaa0bb2dbb398bf85c1e2eec7b6",
+    "build_remaining_seed_outcome_report.js": "287a8408f01b31eda1cd779c7937f713f07944503e294e14dd7de13ec7424ff2"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "1123632365b05ce526c507ab0b7f25c7b6c1da76bf4fc0794f10d38cc988d5b0",
+    "renderReportSha256": "75ed01d38403a2fdfba9098b48424f286b871dafe37a055bafbd70fc28161308"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 4,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "1123632365b05ce526c507ab0b7f25c7b6c1da76bf4fc0794f10d38cc988d5b0",
+    "tocPageMapping": [
+      2,
+      3,
+      4
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看四个单页；目录、冻结协议、路径结局汇总、原生公式、四面板图、8项跳变表、独立复核与证据边界完整，无近空白页、裁切或表后叠字。"
+  }
+}
