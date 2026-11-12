@@ -1,0 +1,91 @@
+{
+  "schema": "floquet-bdg-remaining-seed3-outcome-verification-v1",
+  "recorded_utc": "2026-11-12T00:52:34.843041+00:00",
+  "all_passed": true,
+  "test_count": 7,
+  "check_only": true,
+  "independent_recheck_passed": true,
+  "independent_max_matrix_absolute_error": 0.0,
+  "independent_max_entry_delta_absolute_error": 0.0,
+  "independent_max_native_link_absolute_error": 0.0,
+  "commands": [
+    {
+      "label": "remaining_seed3_outcome_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_remaining_seed_outcome.py",
+        "--seed",
+        "3",
+        "--check-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "remaining_seed3_independent_recheck",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\verify_remaining_seed_outcome.py",
+        "--seed",
+        "3"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_remaining_seed3_outcome.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "remaining_seed_outcome_protocol.json": "84d820bab463695c461a8c65908ccf51f7d0bf721771e026664ddd2ffa8d80b1",
+    "remaining_seed3_path_outcome_analysis.json": "786c9181f695a8eeeb7195f04dfc0b9337ea03d6743057cfda826e0fa7c08043",
+    "remaining_seed3_path_outcome_independent.json": "6ca49b320a95d2d8d0fd5b11604f506bd49692cb426d6835da4b2956226f37f0",
+    "remaining-seed3-outcome.png": "9da0251da3d89b7bac68c512c8323e95b0ec2d8ec39e2fd958356766f742cf45",
+    "REMAINING_SEED3_OUTCOME.md": "887fe0530669058ac6e4076140b6f750979d6452bdd62599fa53eb5aad24f855",
+    "remaining_seed3_outcome_verification.json": "4b5837ab2ded5589194b803bc1e841fc95e1caf340943920d0d0d96edb972f10",
+    "remaining_seed3_outcome_run.log": "8fc6865b6574717fe0dc4844284ca561ff20b6db9252abf92a8edfc6e62c247d",
+    "analyze_remaining_seed_outcome.py": "6481ae36c8b8024624dec3e2c031e69955587d68668a2ab50326db399ef838bb",
+    "verify_remaining_seed_outcome.py": "570e99373b6bf9657ff62600a0c47e1fa49baa58a4cb466d5b870b0d1755c12c",
+    "test_remaining_seed3_outcome.py": "3a8848626fdb5d769fedd61d4112090c34763c1fb92f422a1bfb5786cd4176d3",
+    "run_remaining_seed3_verification.py": "9b1a48026c7218ddd9402b03bcc8dde5f87576ebacb0907b3a042f0ec4aa958b"
+  },
+  "scope": {
+    "remaining_seed3_outcome_analysis_evaluated": true,
+    "seed": 3,
+    "completed_remaining_outcome_seeds": [
+      2,
+      3
+    ],
+    "remaining_outcome_seeds_pending": [
+      4,
+      5,
+      7
+    ],
+    "new_control_cells": 26,
+    "cross_size_path_matrices": 78,
+    "native_adjacent_links": 24,
+    "entry_links": 288,
+    "jump_change_count": 0,
+    "driver_comparison_change_count": 4,
+    "new_disorder_realization_count": 0,
+    "candidate_evaluation_deferred": true,
+    "candidate_validation_completed": false,
+    "holdout_pair_evaluations": [],
+    "pristine_external_holdout_claim": false,
+    "predictive_model_fitted": false,
+    "correlation_claim": false,
+    "statistical_significance_claim": false,
+    "causal_mechanism_proven": false,
+    "continuous_path_proof": false,
+    "spectral_crossing_proven": false,
+    "state_exchange_proven": false,
+    "new_winding_computed": false,
+    "n640_computed": false,
+    "new_taxonomy_claim": false
+  },
+  "log": "remaining_seed3_outcome_run.log"
+}
