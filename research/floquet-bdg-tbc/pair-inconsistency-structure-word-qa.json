@@ -1,0 +1,47 @@
+{
+  "schema": "floquet-bdg-pair-inconsistency-structure-word-qa-v1",
+  "recordedUtc": "2026-11-12T02:13:02.650160+00:00",
+  "sourceSha256": {
+    "pair_inconsistency_structure_protocol.json": "f339c4b93dd6b1f82ce36c8aa646fb973c0b18b5dd67a12e96412e86564712d1",
+    "holdout_pair_evaluation_analysis.json": "e6c0b0f44fb741d3214782e6f6b2f5608e39f13f3ba0d82e9fa13651385d5a3f",
+    "pair_inconsistency_structure_analysis.json": "520a8fba0bc23905d6fbfc16773a02f420ae06a619acf42e842e054bb6dc67d7",
+    "pair_inconsistency_structure_independent.json": "0f225ced0dc269e6aa3b1a5ef9491221e1bd51955f47ff0355691e4e8d2e4166",
+    "pair-inconsistency-structure.png": "a2034b6fc85c493f7db35df1b70c0745c53d4be8554f28f0e00e6b3cb87b08a5",
+    "build_pair_inconsistency_structure_report.js": "aad523607ea1b1b79e2e68c6d1c80bae1bc321814133565b6c2e5197e9c0c6c4"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "165c9784a30fbe6dbfa5aa1176f6849d1f8925ae593763ae11406f4d8b552623",
+    "renderReportSha256": "104b01699a77ab5542697842eaa7dee572e88401cf5f225c2070f07a12845009"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "165c9784a30fbe6dbfa5aa1176f6849d1f8925ae593763ae11406f4d8b552623",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "renderCommandExitCode": 6,
+    "renderOutputComplete": true,
+    "renderRecovery": "The render command returned a temporary-directory permission error after producing a complete five-page report. Existing outputs were reviewed once; no render retry was made.",
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "渲染命令返回临时目录权限错误，但既有report.json、联系表和五个单页完整。已先查看联系表，再逐一查看五个单页；目录、20个无序对汇总、原生公式、四面板图、最接近候选比较、16个失败集合、独立复核与边界完整，无近空白页、裁切或表后叠字。未重新渲染。"
+  }
+}

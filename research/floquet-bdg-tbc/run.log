@@ -4654,3 +4654,130 @@ OK
 exit_code=0
 holdout_pair_evaluation_overall passed check_only True
 exit_code=0
+$ pair_inconsistency_structure_suite: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_pair_inconsistency_structure_verification.py --check-only
+$ pair_inconsistency_structure_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_pair_inconsistency_structure.py --check-only
+{"check_only": true, "pair_summaries": 20, "overlap_records": 120, "total_inconsistent_assignments": 104, "all_passed": true}
+exit_code=0
+$ pair_inconsistency_structure_independent_recheck: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_pair_inconsistency_structure.py
+{
+  "schema": "floquet-bdg-pair-inconsistency-structure-independent-v1",
+  "protocol_sha256": "f339c4b93dd6b1f82ce36c8aa646fb973c0b18b5dd67a12e96412e86564712d1",
+  "analysis_sha256": "520a8fba0bc23905d6fbfc16773a02f420ae06a619acf42e842e054bb6dc67d7",
+  "source_pair_evaluation_sha256": "e6c0b0f44fb741d3214782e6f6b2f5608e39f13f3ba0d82e9fa13651385d5a3f",
+  "pair_summary_count": 20,
+  "overlap_record_count": 120,
+  "total_inconsistent_assignments": 104,
+  "all_candidates_inconsistent_pairs": [],
+  "all_candidates_consistent_pairs": [],
+  "max_pair_inconsistent_candidate_count": 12,
+  "closest_candidate_comparison": {
+    "metric_a": "q99",
+    "metric_b": "block_std_max",
+    "intersection_count": 1,
+    "union_count": 3,
+    "only_a_count": 1,
+    "only_b_count": 1,
+    "shared_pairs": [
+      [
+        0,
+        2
+      ]
+    ],
+    "only_a_pairs": [
+      [
+        2,
+        6
+      ]
+    ],
+    "only_b_pairs": [
+      [
+        2,
+        5
+      ]
+    ],
+    "jaccard": 0.3333333333333333
+  },
+  "pair_summary_mismatch_count": 0,
+  "failure_set_mismatch_count": 0,
+  "overlap_mismatch_count": 0,
+  "spectrum_mismatch_count": 0,
+  "closest_comparison_mismatch_count": 0,
+  "new_floquet_spectra_recomputed": false,
+  "new_floquet_cells_computed": 0,
+  "predictive_model_fitted": false,
+  "correlation_computed": false,
+  "p_values_computed": false,
+  "all_passed": true
+}
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-候选不一致对结构分析.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_pair_inconsistency_structure_qa.py
+{
+  "schema": "floquet-bdg-pair-inconsistency-structure-word-qa-v1",
+  "recordedUtc": "2026-11-12T02:13:02.650160+00:00",
+  "sourceSha256": {
+    "pair_inconsistency_structure_protocol.json": "f339c4b93dd6b1f82ce36c8aa646fb973c0b18b5dd67a12e96412e86564712d1",
+    "holdout_pair_evaluation_analysis.json": "e6c0b0f44fb741d3214782e6f6b2f5608e39f13f3ba0d82e9fa13651385d5a3f",
+    "pair_inconsistency_structure_analysis.json": "520a8fba0bc23905d6fbfc16773a02f420ae06a619acf42e842e054bb6dc67d7",
+    "pair_inconsistency_structure_independent.json": "0f225ced0dc269e6aa3b1a5ef9491221e1bd51955f47ff0355691e4e8d2e4166",
+    "pair-inconsistency-structure.png": "a2034b6fc85c493f7db35df1b70c0745c53d4be8554f28f0e00e6b3cb87b08a5",
+    "build_pair_inconsistency_structure_report.js": "aad523607ea1b1b79e2e68c6d1c80bae1bc321814133565b6c2e5197e9c0c6c4"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "165c9784a30fbe6dbfa5aa1176f6849d1f8925ae593763ae11406f4d8b552623",
+    "renderReportSha256": "104b01699a77ab5542697842eaa7dee572e88401cf5f225c2070f07a12845009"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "165c9784a30fbe6dbfa5aa1176f6849d1f8925ae593763ae11406f4d8b552623",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "renderCommandExitCode": 6,
+    "renderOutputComplete": true,
+    "renderRecovery": "The render command returned a temporary-directory permission error after producing a complete five-page report. Existing outputs were reviewed once; no render retry was made.",
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "渲染命令返回临时目录权限错误，但既有report.json、联系表和五个单页完整。已先查看联系表，再逐一查看五个单页；目录、20个无序对汇总、原生公式、四面板图、最接近候选比较、16个失败集合、独立复核与边界完整，无近空白页、裁切或表后叠字。未重新渲染。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_pair_inconsistency_structure.py -v
+test_all_twenty_pair_summaries_and_spectrum (__main__.PairInconsistencyStructureTests.test_all_twenty_pair_summaries_and_spectrum) ... ok
+test_analysis_does_not_claim_prediction_or_external_validation (__main__.PairInconsistencyStructureTests.test_analysis_does_not_claim_prediction_or_external_validation) ... ok
+test_failure_sets_and_overlap_records (__main__.PairInconsistencyStructureTests.test_failure_sets_and_overlap_records) ... ok
+test_figure_markdown_and_global_registration (__main__.PairInconsistencyStructureTests.test_figure_markdown_and_global_registration) ... ok
+test_independent_recheck (__main__.PairInconsistencyStructureTests.test_independent_recheck) ... ok
+test_native_word_layout_and_visual_review (__main__.PairInconsistencyStructureTests.test_native_word_layout_and_visual_review) ... ok
+test_no_rule_change_or_selective_filtering (__main__.PairInconsistencyStructureTests.test_no_rule_change_or_selective_filtering) ... ok
+test_protocol_and_source_binding (__main__.PairInconsistencyStructureTests.test_protocol_and_source_binding) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.027s
+
+OK
+exit_code=0
+pair_inconsistency_structure_overall passed check_only True
+exit_code=0

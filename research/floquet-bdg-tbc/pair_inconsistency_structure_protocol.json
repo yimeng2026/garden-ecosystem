@@ -1,0 +1,32 @@
+{
+  "schema": "floquet-bdg-pair-inconsistency-structure-protocol-v1",
+  "analysis_date": "2026-11-12",
+  "registered_before_structure_analysis": true,
+  "source_pair_evaluation": {
+    "path": "holdout_pair_evaluation_analysis.json",
+    "sha256": "e6c0b0f44fb741d3214782e6f6b2f5608e39f13f3ba0d82e9fa13651385d5a3f"
+  },
+  "informative_pair_count": 20,
+  "candidate_count": 16,
+  "overlap_pair_count": 120,
+  "closest_candidate_names": ["q99", "block_std_max"],
+  "pair_summary_definition": "For each of the 20 informative seed pairs, count candidate-consistent and candidate-inconsistent assignments. Retain the complete metric names in both sets and candidate zero-difference names separately.",
+  "failure_set_definition": "For each candidate, retain every informative pair whose frozen consistency flag is false. Candidate zero differences remain in that set and are also listed separately. Jump-tie pairs are not part of these 20 structural summaries and remain unchanged in the source.",
+  "shared_failure_spectrum_definition": "For every integer k from 0 through 16, report the number and identity of informative pairs with exactly k inconsistent candidates. Do not merge k values into new categories.",
+  "overlap_definition": "For each of the 120 candidate pairs, compute failure-set intersection, union, shared pairs and one-sided counts. Jaccard is intersection_count / union_count when union_count > 0 and null otherwise.",
+  "closest_comparison_definition": "Compare the two candidates with the smallest inconsistent-pair counts in the frozen source, q99 and block_std_max, including shared and one-sided failing pairs. This is not an ensemble or revised acceptance rule.",
+  "zero_candidate_difference_retained_separately": true,
+  "empty_union_jaccard_is_null": true,
+  "causal_attribution_allowed": false,
+  "strict_rule_changed": false,
+  "new_metric_proposed": false,
+  "ensemble_rule_proposed": false,
+  "predictive_model_fitted": false,
+  "correlation_claim": false,
+  "predictive_accuracy_computed": false,
+  "statistical_significance_claim": false,
+  "new_floquet_cells_computed": 0,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "new_taxonomy_claim": false
+}

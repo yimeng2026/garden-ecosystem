@@ -125,6 +125,7 @@ def main():
         ("remaining_seed5_outcome_suite", [sys.executable, str(ROOT / "run_remaining_seed5_verification.py"), "--check-only"], 180),
         ("remaining_seed7_outcome_suite", [sys.executable, str(ROOT / "run_remaining_seed7_verification.py"), "--check-only"], 180),
         ("holdout_pair_evaluation_suite", [sys.executable, str(ROOT / "run_holdout_pair_evaluation_verification.py"), "--check-only"], 180),
+        ("pair_inconsistency_structure_suite", [sys.executable, str(ROOT / "run_pair_inconsistency_structure_verification.py"), "--check-only"], 180),
     ]
     rows, logs = [], []
     if "--reuse-completed-log" in sys.argv:
@@ -176,6 +177,7 @@ def main():
     remaining_seed5_outcome_verification = json.loads((ROOT / "remaining_seed5_outcome_verification.json").read_text(encoding="utf-8")) if (ROOT / "remaining_seed5_outcome_verification.json").exists() else {}
     remaining_seed7_outcome_verification = json.loads((ROOT / "remaining_seed7_outcome_verification.json").read_text(encoding="utf-8")) if (ROOT / "remaining_seed7_outcome_verification.json").exists() else {}
     holdout_pair_evaluation_verification = json.loads((ROOT / "holdout_pair_evaluation_verification.json").read_text(encoding="utf-8")) if (ROOT / "holdout_pair_evaluation_verification.json").exists() else {}
+    pair_inconsistency_structure_verification = json.loads((ROOT / "pair_inconsistency_structure_verification.json").read_text(encoding="utf-8")) if (ROOT / "pair_inconsistency_structure_verification.json").exists() else {}
     old_disorder = json.loads((ROOT.parent / "floquet-bdg-disorder" / "results.json").read_text(encoding="utf-8"))
     artifacts = [
         "results.json", "independent_verification.json", "disorder_results.json", "disorder_results.csv",
@@ -371,6 +373,12 @@ def main():
         "holdout_pair_evaluation_run.log", "analyze_holdout_pair_evaluation.py", "verify_holdout_pair_evaluation.py",
         "build_holdout_pair_evaluation_report.js", "record_holdout_pair_evaluation_qa.py", "test_holdout_pair_evaluation.py",
         "run_holdout_pair_evaluation_verification.py",
+        "pair_inconsistency_structure_protocol.json", "pair_inconsistency_structure_analysis.json", "pair_inconsistency_structure_independent.json",
+        "pair-inconsistency-structure.png", "PAIR_INCONSISTENCY_STRUCTURE.md", "Floquet-BdG-候选不一致对结构分析.docx",
+        "pair-inconsistency-structure-word-qa.json", "pair-inconsistency-structure-word-render/report.json", "pair_inconsistency_structure_verification.json",
+        "pair_inconsistency_structure_run.log", "analyze_pair_inconsistency_structure.py", "verify_pair_inconsistency_structure.py",
+        "build_pair_inconsistency_structure_report.js", "record_pair_inconsistency_structure_qa.py", "test_pair_inconsistency_structure.py",
+        "run_pair_inconsistency_structure_verification.py",
         "tbc_model.py", "test_tbc.py", "run_tbc.py", "verify_tbc.py", "run_disorder.py",
         "test_disorder.py", "verify_disorder.py", "build_disorder_report.py", "build_report.js",
         "record_word_qa.py", "test_report.py", "run_verification.py", "test_verification_log_reuse.py",
@@ -381,7 +389,7 @@ def main():
         "schema": "floquet-bdg-tbc-complete-verification-v2",
         "recorded_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "all_passed": passed,
-        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 9 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None, "overlap_confounding": 6 if passed else None, "matched_beta_control": 8 if passed else None, "matched_beta_batch_a": 8 if passed else None, "matched_beta_batch_b": 9 if passed else None, "matched_beta_batch_c": 9 if passed else None, "overlap_matrix_response": 8 if passed else None, "seed6_matrix_path": 9 if passed else None, "seed6_matrix_midpoint": 10 if passed else None, "seed01_matrix_midpoint": 10 if passed else None, "profile_stat_candidates": 8 if passed else None, "remaining_seed2_outcome": 7 if passed else None, "remaining_seed3_outcome": 7 if passed else None, "remaining_seed4_outcome": 8 if passed else None, "remaining_seed5_outcome": 8 if passed else None, "remaining_seed7_outcome": 8 if passed else None, "holdout_pair_evaluation": 8 if passed else None, "log_reuse": 9 if passed else None},
+        "test_counts": {"baseline": 9 if passed else None, "disorder": 8 if passed else None, "report": 5 if passed else None, "finite_unit": 4 if passed else None, "finite_report": 5 if passed else None, "n320_backend": 5 if passed else None, "n320_report": 5 if passed else None, "n400_resume": 5 if passed else None, "n400_report": 5 if passed else None, "n600_resume": 5 if passed else None, "n600_report": 5 if passed else None, "endpoint_subspace": 7 if passed else None, "matched_profile": 7 if passed else None, "multi_seed_profile": 7 if passed else None, "reversal_decomposition": 6 if passed else None, "repeated_categories": 5 if passed else None, "unclassified_signatures": 5 if passed else None, "near_miss_spatial": 6 if passed else None, "pair_responses": 6 if passed else None, "subspace_overlap": 9 if passed else None, "embedding_robustness": 6 if passed else None, "embedding_census": 6 if passed else None, "swap_candidate_spectrum": 6 if passed else None, "fixed_n_path": 6 if passed else None, "path_refinement": 6 if passed else None, "n600_path": 6 if passed else None, "n600_valley": 6 if passed else None, "overlap_confounding": 6 if passed else None, "matched_beta_control": 8 if passed else None, "matched_beta_batch_a": 8 if passed else None, "matched_beta_batch_b": 9 if passed else None, "matched_beta_batch_c": 9 if passed else None, "overlap_matrix_response": 8 if passed else None, "seed6_matrix_path": 9 if passed else None, "seed6_matrix_midpoint": 10 if passed else None, "seed01_matrix_midpoint": 10 if passed else None, "profile_stat_candidates": 8 if passed else None, "remaining_seed2_outcome": 7 if passed else None, "remaining_seed3_outcome": 7 if passed else None, "remaining_seed4_outcome": 8 if passed else None, "remaining_seed5_outcome": 8 if passed else None, "remaining_seed7_outcome": 8 if passed else None, "holdout_pair_evaluation": 8 if passed else None, "pair_inconsistency_structure": 8 if passed else None, "log_reuse": 9 if passed else None},
         "commands": rows,
         "environment": {
             "python": platform.python_version(), "numpy": np.__version__, "scipy": scipy.__version__,
@@ -504,6 +512,9 @@ def main():
         "holdout_pair_evaluation_all_passed": holdout_pair_evaluation_verification.get("all_passed"),
         "holdout_pair_evaluation_independent_recheck_passed": holdout_pair_evaluation_verification.get("independent_recheck_passed"),
         "holdout_pair_evaluation_visual_review_status": holdout_pair_evaluation_verification.get("visual_review_status"),
+        "pair_inconsistency_structure_all_passed": pair_inconsistency_structure_verification.get("all_passed"),
+        "pair_inconsistency_structure_independent_recheck_passed": pair_inconsistency_structure_verification.get("independent_recheck_passed"),
+        "pair_inconsistency_structure_visual_review_status": pair_inconsistency_structure_verification.get("visual_review_status"),
         "scope": {
             "static_baseline_checked": passed, "clean_kicked_baseline_checked": passed,
             "disorder_evaluated": passed, "n160_zero_gap_evaluated": passed,
@@ -845,6 +856,31 @@ def main():
             "holdout_pair_new_floquet_cells_computed": 0,
             "holdout_pair_new_winding_computed": False,
             "holdout_pair_n640_computed": False,
+            "pair_inconsistency_structure_analysis_evaluated": "passed",
+            "pair_inconsistency_pair_summary_count": 20,
+            "pair_inconsistency_candidate_failure_set_count": 16,
+            "pair_inconsistency_overlap_record_count": 120,
+            "pair_inconsistency_total_inconsistent_assignments": 104,
+            "pair_inconsistency_all_candidates_inconsistent_pairs": pair_inconsistency_structure_verification.get("scope", {}).get("all_candidates_inconsistent_pairs"),
+            "pair_inconsistency_all_candidates_consistent_pairs": pair_inconsistency_structure_verification.get("scope", {}).get("all_candidates_consistent_pairs"),
+            "pair_inconsistency_max_pair_inconsistent_candidate_count": pair_inconsistency_structure_verification.get("scope", {}).get("max_pair_inconsistent_candidate_count"),
+            "pair_inconsistency_closest_candidate_comparison": pair_inconsistency_structure_verification.get("scope", {}).get("closest_candidate_comparison"),
+            "pair_inconsistency_source_records_unchanged": True,
+            "pair_inconsistency_strict_rule_changed": False,
+            "pair_inconsistency_failed_pairs_removed": False,
+            "pair_inconsistency_tie_pairs_removed": False,
+            "pair_inconsistency_new_metric_proposed": False,
+            "pair_inconsistency_ensemble_rule_proposed": False,
+            "pair_inconsistency_structure_is_descriptive_only": True,
+            "pair_inconsistency_causal_attribution_completed": False,
+            "pair_inconsistency_predictive_validation_completed": False,
+            "pair_inconsistency_pristine_external_holdout_claim": False,
+            "pair_inconsistency_predictive_model_fitted": False,
+            "pair_inconsistency_correlation_claim": False,
+            "pair_inconsistency_statistical_significance_claim": False,
+            "pair_inconsistency_new_floquet_cells_computed": 0,
+            "pair_inconsistency_new_winding_computed": False,
+            "pair_inconsistency_n640_computed": False,
             "new_taxonomy_claim": False,
             "universal_category_claim": False,
             "localization_scale_analysis_pending": False, "independent_disorder_realizations": 12,

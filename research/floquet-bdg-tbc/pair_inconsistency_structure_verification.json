@@ -1,0 +1,133 @@
+{
+  "schema": "floquet-bdg-pair-inconsistency-structure-verification-v1",
+  "recorded_utc": "2026-11-12T02:13:02.802819+00:00",
+  "all_passed": true,
+  "test_count": 8,
+  "check_only": true,
+  "independent_recheck_passed": true,
+  "independent_overlap_mismatch_count": 0,
+  "visual_review_status": "passed",
+  "rendered_pages": 5,
+  "render_command_exit_code": 6,
+  "render_output_complete": true,
+  "commands": [
+    {
+      "label": "pair_inconsistency_structure_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_pair_inconsistency_structure.py",
+        "--check-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "pair_inconsistency_structure_independent_recheck",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\verify_pair_inconsistency_structure.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-候选不一致对结构分析.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_pair_inconsistency_structure_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_pair_inconsistency_structure.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "pair_inconsistency_structure_protocol.json": "f339c4b93dd6b1f82ce36c8aa646fb973c0b18b5dd67a12e96412e86564712d1",
+    "pair_inconsistency_structure_analysis.json": "520a8fba0bc23905d6fbfc16773a02f420ae06a619acf42e842e054bb6dc67d7",
+    "pair_inconsistency_structure_independent.json": "0f225ced0dc269e6aa3b1a5ef9491221e1bd51955f47ff0355691e4e8d2e4166",
+    "pair-inconsistency-structure.png": "a2034b6fc85c493f7db35df1b70c0745c53d4be8554f28f0e00e6b3cb87b08a5",
+    "PAIR_INCONSISTENCY_STRUCTURE.md": "29807cbfa2e19682c2fed0a070e6de6c42b58e77c86bd6e2de599d4434efb4d9",
+    "Floquet-BdG-候选不一致对结构分析.docx": "165c9784a30fbe6dbfa5aa1176f6849d1f8925ae593763ae11406f4d8b552623",
+    "pair-inconsistency-structure-word-qa.json": "2ab1f556ed70d56d35a4ccfc76ae12967080af82c74191232976c4fe6c98c148",
+    "pair-inconsistency-structure-word-render/report.json": "104b01699a77ab5542697842eaa7dee572e88401cf5f225c2070f07a12845009",
+    "pair_inconsistency_structure_verification.json": "5887ecb22645bce6c3a2bcc060150d932b9152cbd36feefd57ea5e10d5f2ad26",
+    "pair_inconsistency_structure_run.log": "218d275f73c0340ef89dbc998c1d87d9ea1c77882e1636aa7b0c5185efee2606",
+    "analyze_pair_inconsistency_structure.py": "581bd9ba52c86b55dbbf54450c5125541955aac8b4de2e64d6c0dff2e01fa3c9",
+    "verify_pair_inconsistency_structure.py": "7c4c49606b5aa640a8a5c80c78030ff18bb6cea86cf37efdc52e87ceaf32732b",
+    "build_pair_inconsistency_structure_report.js": "aad523607ea1b1b79e2e68c6d1c80bae1bc321814133565b6c2e5197e9c0c6c4",
+    "record_pair_inconsistency_structure_qa.py": "9c4c128f90b0812e81a674c1003c22527ec35ef83278a5a664c4483954ec66e5",
+    "test_pair_inconsistency_structure.py": "29958c2bdd50d26816020ceefc70b74c7877809d5d9e4ebfeef932f43661d755",
+    "run_pair_inconsistency_structure_verification.py": "e7ea664431b875769c0ce0465cfbe57a1066ca4b64bb523a569f4bea8bd43d68"
+  },
+  "scope": {
+    "pair_inconsistency_structure_analysis_evaluated": true,
+    "pair_summary_count": 20,
+    "candidate_failure_set_count": 16,
+    "overlap_record_count": 120,
+    "total_inconsistent_assignments": 104,
+    "all_candidates_inconsistent_pairs": [],
+    "all_candidates_consistent_pairs": [],
+    "max_pair_inconsistent_candidate_count": 12,
+    "closest_candidate_comparison": {
+      "metric_a": "q99",
+      "metric_b": "block_std_max",
+      "intersection_count": 1,
+      "union_count": 3,
+      "only_a_count": 1,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          2,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          5
+        ]
+      ],
+      "jaccard": 0.3333333333333333
+    },
+    "source_records_unchanged": true,
+    "strict_rule_changed": false,
+    "failed_pairs_removed": false,
+    "tie_pairs_removed": false,
+    "new_metric_proposed": false,
+    "ensemble_rule_proposed": false,
+    "structure_is_descriptive_only": true,
+    "causal_attribution_completed": false,
+    "predictive_validation_completed": false,
+    "pristine_external_holdout_claim": false,
+    "predictive_model_fitted": false,
+    "correlation_claim": false,
+    "predictive_accuracy_computed": false,
+    "statistical_significance_claim": false,
+    "new_floquet_cells_computed": 0,
+    "new_winding_computed": false,
+    "n640_computed": false,
+    "new_taxonomy_claim": false
+  },
+  "log": "pair_inconsistency_structure_run.log"
+}

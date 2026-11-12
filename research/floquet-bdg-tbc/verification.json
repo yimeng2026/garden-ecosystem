@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-tbc-complete-verification-v2",
-  "recorded_utc": "2026-11-12T01:51:53.248468+00:00",
+  "recorded_utc": "2026-11-12T02:13:16.525177+00:00",
   "all_passed": true,
   "test_counts": {
     "baseline": 9,
@@ -46,6 +46,7 @@
     "remaining_seed5_outcome": 8,
     "remaining_seed7_outcome": 8,
     "holdout_pair_evaluation": 8,
+    "pair_inconsistency_structure": 8,
     "log_reuse": 9
   },
   "commands": [
@@ -454,6 +455,15 @@
         "--check-only"
       ],
       "exit_code": 0
+    },
+    {
+      "label": "pair_inconsistency_structure_suite",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\run_pair_inconsistency_structure_verification.py",
+        "--check-only"
+      ],
+      "exit_code": 0
     }
   ],
   "environment": {
@@ -478,7 +488,7 @@
     "REPORT.md": "f1c7d2678b1c0082fef1d57840171fc592b8e9670b0fd6d02d42e19e873ec9ed",
     "Floquet-BdG-TBC无序对照报告.docx": "039dbf5b4bd73e90492932bc5ec98d32c644948da5af730fd9087fd80f222939",
     "word-qa/report.json": "7251e0c94c75236faec17d7431f734ec8f0d44b2a7e682e438c3731cacdf2dcf",
-    "run.log": "c9534d7c55ea5d822f6e5328c23eecf4c0fd9d3fe7e075994b272a5804a586a5",
+    "run.log": "a35179164386d8ade257f44e5f53a9cfef61e7718814302f6229af114157dc50",
     "ERRATA.md": "e435f0115edbb8fd7b26218515204d1501e2db94ef94935c1b15cc1bddb6b229",
     "finite_size_zero.json": "813a48c05e0e4cb80fbd615e908115572a646c75c438d33160fd1918d59ec50b",
     "finite_size_independent.json": "5b3c8925a63c1f1f62eef8d5a171f32a4e98e24ad1c67aeaf1d7af671097b932",
@@ -1016,6 +1026,22 @@
     "record_holdout_pair_evaluation_qa.py": "da5f161ceed40f0abb411f0c7d743fbb6c05e2d79e06c11b2cdd39645fb4a92e",
     "test_holdout_pair_evaluation.py": "73179856e43f6f45353977d53060ada8069c3f54915f07a850b15d6b956c41a2",
     "run_holdout_pair_evaluation_verification.py": "4441fd99cc7508ef4d135a8e88878737439144ac1c34e7207832751f6d3e63f2",
+    "pair_inconsistency_structure_protocol.json": "f339c4b93dd6b1f82ce36c8aa646fb973c0b18b5dd67a12e96412e86564712d1",
+    "pair_inconsistency_structure_analysis.json": "520a8fba0bc23905d6fbfc16773a02f420ae06a619acf42e842e054bb6dc67d7",
+    "pair_inconsistency_structure_independent.json": "0f225ced0dc269e6aa3b1a5ef9491221e1bd51955f47ff0355691e4e8d2e4166",
+    "pair-inconsistency-structure.png": "a2034b6fc85c493f7db35df1b70c0745c53d4be8554f28f0e00e6b3cb87b08a5",
+    "PAIR_INCONSISTENCY_STRUCTURE.md": "29807cbfa2e19682c2fed0a070e6de6c42b58e77c86bd6e2de599d4434efb4d9",
+    "Floquet-BdG-候选不一致对结构分析.docx": "165c9784a30fbe6dbfa5aa1176f6849d1f8925ae593763ae11406f4d8b552623",
+    "pair-inconsistency-structure-word-qa.json": "2ab1f556ed70d56d35a4ccfc76ae12967080af82c74191232976c4fe6c98c148",
+    "pair-inconsistency-structure-word-render/report.json": "104b01699a77ab5542697842eaa7dee572e88401cf5f225c2070f07a12845009",
+    "pair_inconsistency_structure_verification.json": "8b7a2152791f9e4986cb5dd875dbac81016319dfa3f70d3f2142cd2543c59bbd",
+    "pair_inconsistency_structure_run.log": "218d275f73c0340ef89dbc998c1d87d9ea1c77882e1636aa7b0c5185efee2606",
+    "analyze_pair_inconsistency_structure.py": "581bd9ba52c86b55dbbf54450c5125541955aac8b4de2e64d6c0dff2e01fa3c9",
+    "verify_pair_inconsistency_structure.py": "7c4c49606b5aa640a8a5c80c78030ff18bb6cea86cf37efdc52e87ceaf32732b",
+    "build_pair_inconsistency_structure_report.js": "aad523607ea1b1b79e2e68c6d1c80bae1bc321814133565b6c2e5197e9c0c6c4",
+    "record_pair_inconsistency_structure_qa.py": "9c4c128f90b0812e81a674c1003c22527ec35ef83278a5a664c4483954ec66e5",
+    "test_pair_inconsistency_structure.py": "29958c2bdd50d26816020ceefc70b74c7877809d5d9e4ebfeef932f43661d755",
+    "run_pair_inconsistency_structure_verification.py": "e7ea664431b875769c0ce0465cfbe57a1066ca4b64bb523a569f4bea8bd43d68",
     "tbc_model.py": "bc7f7541434920ae9d5a9bdca396dc86306fb383a7d9f4bff19902077de641fc",
     "test_tbc.py": "b9c6d07e0571a059bf9af0f8179fd0e1fa18e43673f733eb1db958aa1dfb841f",
     "run_tbc.py": "ca2f38ef0623a7b941d9240b795a7995ffd226083a73c681c42469fa821d59ff",
@@ -1027,7 +1053,7 @@
     "build_report.js": "9a7d3463ca8a54ec48f659b294a59feb02909ec05529ed3af13eb917a961e276",
     "record_word_qa.py": "05923bfe7343998bcf1da68ee4e0fb175f9863a924968eb614c94b05fdb85168",
     "test_report.py": "ae5a094729fc9aac80c7ad935bb9277281cb73dc16ecfaf1e061a371a263cbda",
-    "run_verification.py": "d3109f72f4ba45b5ac585ce2eca4c81860307813025c8fc8922fe040a0263ca3",
+    "run_verification.py": "d2c5db247e49f949eaf89f1ca177993258fa5da847300fb6b3177d3ea874c15e",
     "test_verification_log_reuse.py": "74ba6d245d085783fe9778244d3b9f3e0705804bd7e8d181edbf50901af27fa4"
   },
   "observed_status": "clean_floquet_baseline_passed",
@@ -1146,6 +1172,9 @@
   "holdout_pair_evaluation_all_passed": true,
   "holdout_pair_evaluation_independent_recheck_passed": true,
   "holdout_pair_evaluation_visual_review_status": "passed",
+  "pair_inconsistency_structure_all_passed": true,
+  "pair_inconsistency_structure_independent_recheck_passed": true,
+  "pair_inconsistency_structure_visual_review_status": "passed",
   "scope": {
     "static_baseline_checked": true,
     "clean_kicked_baseline_checked": true,
@@ -1647,6 +1676,57 @@
     "holdout_pair_new_floquet_cells_computed": 0,
     "holdout_pair_new_winding_computed": false,
     "holdout_pair_n640_computed": false,
+    "pair_inconsistency_structure_analysis_evaluated": "passed",
+    "pair_inconsistency_pair_summary_count": 20,
+    "pair_inconsistency_candidate_failure_set_count": 16,
+    "pair_inconsistency_overlap_record_count": 120,
+    "pair_inconsistency_total_inconsistent_assignments": 104,
+    "pair_inconsistency_all_candidates_inconsistent_pairs": [],
+    "pair_inconsistency_all_candidates_consistent_pairs": [],
+    "pair_inconsistency_max_pair_inconsistent_candidate_count": 12,
+    "pair_inconsistency_closest_candidate_comparison": {
+      "metric_a": "q99",
+      "metric_b": "block_std_max",
+      "intersection_count": 1,
+      "union_count": 3,
+      "only_a_count": 1,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          2,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          5
+        ]
+      ],
+      "jaccard": 0.3333333333333333
+    },
+    "pair_inconsistency_source_records_unchanged": true,
+    "pair_inconsistency_strict_rule_changed": false,
+    "pair_inconsistency_failed_pairs_removed": false,
+    "pair_inconsistency_tie_pairs_removed": false,
+    "pair_inconsistency_new_metric_proposed": false,
+    "pair_inconsistency_ensemble_rule_proposed": false,
+    "pair_inconsistency_structure_is_descriptive_only": true,
+    "pair_inconsistency_causal_attribution_completed": false,
+    "pair_inconsistency_predictive_validation_completed": false,
+    "pair_inconsistency_pristine_external_holdout_claim": false,
+    "pair_inconsistency_predictive_model_fitted": false,
+    "pair_inconsistency_correlation_claim": false,
+    "pair_inconsistency_statistical_significance_claim": false,
+    "pair_inconsistency_new_floquet_cells_computed": 0,
+    "pair_inconsistency_new_winding_computed": false,
+    "pair_inconsistency_n640_computed": false,
     "new_taxonomy_claim": false,
     "universal_category_claim": false,
     "localization_scale_analysis_pending": false,

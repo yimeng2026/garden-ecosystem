@@ -1,0 +1,50 @@
+{
+  "schema": "floquet-bdg-pair-inconsistency-structure-independent-v1",
+  "protocol_sha256": "f339c4b93dd6b1f82ce36c8aa646fb973c0b18b5dd67a12e96412e86564712d1",
+  "analysis_sha256": "520a8fba0bc23905d6fbfc16773a02f420ae06a619acf42e842e054bb6dc67d7",
+  "source_pair_evaluation_sha256": "e6c0b0f44fb741d3214782e6f6b2f5608e39f13f3ba0d82e9fa13651385d5a3f",
+  "pair_summary_count": 20,
+  "overlap_record_count": 120,
+  "total_inconsistent_assignments": 104,
+  "all_candidates_inconsistent_pairs": [],
+  "all_candidates_consistent_pairs": [],
+  "max_pair_inconsistent_candidate_count": 12,
+  "closest_candidate_comparison": {
+    "metric_a": "q99",
+    "metric_b": "block_std_max",
+    "intersection_count": 1,
+    "union_count": 3,
+    "only_a_count": 1,
+    "only_b_count": 1,
+    "shared_pairs": [
+      [
+        0,
+        2
+      ]
+    ],
+    "only_a_pairs": [
+      [
+        2,
+        6
+      ]
+    ],
+    "only_b_pairs": [
+      [
+        2,
+        5
+      ]
+    ],
+    "jaccard": 0.3333333333333333
+  },
+  "pair_summary_mismatch_count": 0,
+  "failure_set_mismatch_count": 0,
+  "overlap_mismatch_count": 0,
+  "spectrum_mismatch_count": 0,
+  "closest_comparison_mismatch_count": 0,
+  "new_floquet_spectra_recomputed": false,
+  "new_floquet_cells_computed": 0,
+  "predictive_model_fitted": false,
+  "correlation_computed": false,
+  "p_values_computed": false,
+  "all_passed": true
+}

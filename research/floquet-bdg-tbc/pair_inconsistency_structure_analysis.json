@@ -1,0 +1,8163 @@
+{
+  "schema": "floquet-bdg-pair-inconsistency-structure-v1",
+  "analysis_date": "2026-11-12",
+  "report_date": "2026-11-12",
+  "protocol_sha256": "f339c4b93dd6b1f82ce36c8aa646fb973c0b18b5dd67a12e96412e86564712d1",
+  "source_pair_evaluation_sha256": "e6c0b0f44fb741d3214782e6f6b2f5608e39f13f3ba0d82e9fa13651385d5a3f",
+  "candidate_names": [
+    "mean",
+    "q01",
+    "q02",
+    "q05",
+    "q25",
+    "q50",
+    "q98",
+    "q99",
+    "low_frac_0p2",
+    "high_frac_0p85",
+    "high_frac_0p9",
+    "lag1",
+    "roughness_rms",
+    "total_variation",
+    "sign_changes",
+    "block_std_max"
+  ],
+  "source_pair_record_count": 400,
+  "source_uninformative_pair_count": 5,
+  "source_records_unchanged": true,
+  "pair_summaries": [
+    {
+      "seed_a": 0,
+      "seed_b": 2,
+      "jump_a": 4,
+      "jump_b": 2,
+      "consistent_count": 6,
+      "inconsistent_count": 10,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "q02",
+        "q05",
+        "high_frac_0p9",
+        "lag1",
+        "roughness_rms",
+        "total_variation"
+      ],
+      "inconsistent_metric_names": [
+        "mean",
+        "q01",
+        "q25",
+        "q50",
+        "q98",
+        "q99",
+        "low_frac_0p2",
+        "high_frac_0p85",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 0,
+      "seed_b": 3,
+      "jump_a": 4,
+      "jump_b": 0,
+      "consistent_count": 11,
+      "inconsistent_count": 5,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "q01",
+        "q02",
+        "q05",
+        "q25",
+        "q50",
+        "q98",
+        "q99",
+        "lag1",
+        "roughness_rms",
+        "total_variation",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "mean",
+        "low_frac_0p2",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "sign_changes"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 0,
+      "seed_b": 4,
+      "jump_a": 4,
+      "jump_b": 0,
+      "consistent_count": 14,
+      "inconsistent_count": 2,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "mean",
+        "q01",
+        "q02",
+        "q25",
+        "q50",
+        "q98",
+        "q99",
+        "low_frac_0p2",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "lag1",
+        "roughness_rms",
+        "total_variation",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "q05",
+        "sign_changes"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 0,
+      "seed_b": 5,
+      "jump_a": 4,
+      "jump_b": 6,
+      "consistent_count": 6,
+      "inconsistent_count": 10,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "q01",
+        "q25",
+        "q99",
+        "low_frac_0p2",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "mean",
+        "q02",
+        "q05",
+        "q50",
+        "q98",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "lag1",
+        "roughness_rms",
+        "total_variation"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 0,
+      "seed_b": 7,
+      "jump_a": 4,
+      "jump_b": 2,
+      "consistent_count": 13,
+      "inconsistent_count": 3,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "mean",
+        "q05",
+        "q25",
+        "q50",
+        "q98",
+        "q99",
+        "low_frac_0p2",
+        "high_frac_0p85",
+        "lag1",
+        "roughness_rms",
+        "total_variation",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "q01",
+        "q02",
+        "high_frac_0p9"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 1,
+      "seed_b": 2,
+      "jump_a": 0,
+      "jump_b": 2,
+      "consistent_count": 14,
+      "inconsistent_count": 2,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "mean",
+        "q01",
+        "q25",
+        "q50",
+        "q98",
+        "q99",
+        "low_frac_0p2",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "lag1",
+        "roughness_rms",
+        "total_variation",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "q02",
+        "q05"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 1,
+      "seed_b": 5,
+      "jump_a": 0,
+      "jump_b": 6,
+      "consistent_count": 12,
+      "inconsistent_count": 4,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "mean",
+        "q01",
+        "q05",
+        "q25",
+        "q50",
+        "q98",
+        "q99",
+        "low_frac_0p2",
+        "roughness_rms",
+        "total_variation",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "q02",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "lag1"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 1,
+      "seed_b": 7,
+      "jump_a": 0,
+      "jump_b": 2,
+      "consistent_count": 11,
+      "inconsistent_count": 5,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "q01",
+        "q02",
+        "q05",
+        "q98",
+        "q99",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "lag1",
+        "roughness_rms",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "mean",
+        "q25",
+        "q50",
+        "low_frac_0p2",
+        "total_variation"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 2,
+      "seed_b": 3,
+      "jump_a": 2,
+      "jump_b": 0,
+      "consistent_count": 10,
+      "inconsistent_count": 6,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "mean",
+        "q01",
+        "q25",
+        "q50",
+        "q98",
+        "q99",
+        "low_frac_0p2",
+        "roughness_rms",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "q02",
+        "q05",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "lag1",
+        "total_variation"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 2,
+      "seed_b": 4,
+      "jump_a": 2,
+      "jump_b": 0,
+      "consistent_count": 13,
+      "inconsistent_count": 3,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "mean",
+        "q01",
+        "q25",
+        "q50",
+        "q98",
+        "q99",
+        "low_frac_0p2",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "roughness_rms",
+        "total_variation",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "q02",
+        "q05",
+        "lag1"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 2,
+      "seed_b": 5,
+      "jump_a": 2,
+      "jump_b": 6,
+      "consistent_count": 4,
+      "inconsistent_count": 12,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "q01",
+        "q02",
+        "q05",
+        "q99"
+      ],
+      "inconsistent_metric_names": [
+        "mean",
+        "q25",
+        "q50",
+        "q98",
+        "low_frac_0p2",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "lag1",
+        "roughness_rms",
+        "total_variation",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 2,
+      "seed_b": 6,
+      "jump_a": 2,
+      "jump_b": 6,
+      "consistent_count": 13,
+      "inconsistent_count": 3,
+      "zero_diff_count": 1,
+      "consistent_metric_names": [
+        "mean",
+        "q01",
+        "q02",
+        "q05",
+        "q25",
+        "q50",
+        "q98",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "lag1",
+        "roughness_rms",
+        "total_variation",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "q99",
+        "low_frac_0p2",
+        "sign_changes"
+      ],
+      "candidate_zero_diff_names": [
+        "low_frac_0p2"
+      ],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 3,
+      "seed_b": 5,
+      "jump_a": 0,
+      "jump_b": 6,
+      "consistent_count": 9,
+      "inconsistent_count": 7,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "q01",
+        "q05",
+        "q25",
+        "q50",
+        "q98",
+        "q99",
+        "low_frac_0p2",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "mean",
+        "q02",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "lag1",
+        "roughness_rms",
+        "total_variation"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 3,
+      "seed_b": 6,
+      "jump_a": 0,
+      "jump_b": 6,
+      "consistent_count": 14,
+      "inconsistent_count": 2,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "mean",
+        "q01",
+        "q02",
+        "q05",
+        "q25",
+        "q50",
+        "q98",
+        "q99",
+        "low_frac_0p2",
+        "lag1",
+        "roughness_rms",
+        "total_variation",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "high_frac_0p85",
+        "high_frac_0p9"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 3,
+      "seed_b": 7,
+      "jump_a": 0,
+      "jump_b": 2,
+      "consistent_count": 6,
+      "inconsistent_count": 10,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "q01",
+        "q02",
+        "q05",
+        "q98",
+        "q99",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "mean",
+        "q25",
+        "q50",
+        "low_frac_0p2",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "lag1",
+        "roughness_rms",
+        "total_variation",
+        "sign_changes"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 4,
+      "seed_b": 5,
+      "jump_a": 0,
+      "jump_b": 6,
+      "consistent_count": 10,
+      "inconsistent_count": 6,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "mean",
+        "q01",
+        "q25",
+        "q98",
+        "q99",
+        "low_frac_0p2",
+        "roughness_rms",
+        "total_variation",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "q02",
+        "q05",
+        "q50",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "lag1"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 4,
+      "seed_b": 6,
+      "jump_a": 0,
+      "jump_b": 6,
+      "consistent_count": 15,
+      "inconsistent_count": 1,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "mean",
+        "q01",
+        "q02",
+        "q25",
+        "q50",
+        "q98",
+        "q99",
+        "low_frac_0p2",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "lag1",
+        "roughness_rms",
+        "total_variation",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "q05"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 4,
+      "seed_b": 7,
+      "jump_a": 0,
+      "jump_b": 2,
+      "consistent_count": 11,
+      "inconsistent_count": 5,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "q01",
+        "q02",
+        "q25",
+        "q98",
+        "q99",
+        "low_frac_0p2",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "roughness_rms",
+        "total_variation",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "mean",
+        "q05",
+        "q50",
+        "lag1",
+        "sign_changes"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 5,
+      "seed_b": 7,
+      "jump_a": 6,
+      "jump_b": 2,
+      "consistent_count": 10,
+      "inconsistent_count": 6,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "mean",
+        "q05",
+        "q25",
+        "q50",
+        "q99",
+        "low_frac_0p2",
+        "roughness_rms",
+        "total_variation",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "q01",
+        "q02",
+        "q98",
+        "high_frac_0p85",
+        "high_frac_0p9",
+        "lag1"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    },
+    {
+      "seed_a": 6,
+      "seed_b": 7,
+      "jump_a": 6,
+      "jump_b": 2,
+      "consistent_count": 14,
+      "inconsistent_count": 2,
+      "zero_diff_count": 0,
+      "consistent_metric_names": [
+        "mean",
+        "q02",
+        "q05",
+        "q25",
+        "q50",
+        "q98",
+        "q99",
+        "low_frac_0p2",
+        "high_frac_0p85",
+        "lag1",
+        "roughness_rms",
+        "total_variation",
+        "sign_changes",
+        "block_std_max"
+      ],
+      "inconsistent_metric_names": [
+        "q01",
+        "high_frac_0p9"
+      ],
+      "candidate_zero_diff_names": [],
+      "all_candidates_inconsistent": false,
+      "all_candidates_consistent": false
+    }
+  ],
+  "candidate_failure_sets": [
+    {
+      "metric": "mean",
+      "failing_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "zero_diff_pairs": []
+    },
+    {
+      "metric": "q01",
+      "failing_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "zero_diff_pairs": []
+    },
+    {
+      "metric": "q02",
+      "failing_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "zero_diff_pairs": []
+    },
+    {
+      "metric": "q05",
+      "failing_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "zero_diff_pairs": []
+    },
+    {
+      "metric": "q25",
+      "failing_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "zero_diff_pairs": []
+    },
+    {
+      "metric": "q50",
+      "failing_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "zero_diff_pairs": []
+    },
+    {
+      "metric": "q98",
+      "failing_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "zero_diff_pairs": []
+    },
+    {
+      "metric": "q99",
+      "failing_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "zero_diff_pairs": []
+    },
+    {
+      "metric": "low_frac_0p2",
+      "failing_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "zero_diff_pairs": [
+        [
+          2,
+          6
+        ]
+      ]
+    },
+    {
+      "metric": "high_frac_0p85",
+      "failing_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "zero_diff_pairs": []
+    },
+    {
+      "metric": "high_frac_0p9",
+      "failing_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "zero_diff_pairs": []
+    },
+    {
+      "metric": "lag1",
+      "failing_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "zero_diff_pairs": []
+    },
+    {
+      "metric": "roughness_rms",
+      "failing_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "zero_diff_pairs": []
+    },
+    {
+      "metric": "total_variation",
+      "failing_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "zero_diff_pairs": []
+    },
+    {
+      "metric": "sign_changes",
+      "failing_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "zero_diff_pairs": []
+    },
+    {
+      "metric": "block_std_max",
+      "failing_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "zero_diff_pairs": []
+    }
+  ],
+  "shared_failure_spectrum": [
+    {
+      "inconsistent_candidate_count": 0,
+      "pair_count": 0,
+      "pairs": []
+    },
+    {
+      "inconsistent_candidate_count": 1,
+      "pair_count": 1,
+      "pairs": [
+        [
+          4,
+          6
+        ]
+      ]
+    },
+    {
+      "inconsistent_candidate_count": 2,
+      "pair_count": 4,
+      "pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          6,
+          7
+        ]
+      ]
+    },
+    {
+      "inconsistent_candidate_count": 3,
+      "pair_count": 3,
+      "pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          6
+        ]
+      ]
+    },
+    {
+      "inconsistent_candidate_count": 4,
+      "pair_count": 1,
+      "pairs": [
+        [
+          1,
+          5
+        ]
+      ]
+    },
+    {
+      "inconsistent_candidate_count": 5,
+      "pair_count": 3,
+      "pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ]
+    },
+    {
+      "inconsistent_candidate_count": 6,
+      "pair_count": 3,
+      "pairs": [
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ]
+    },
+    {
+      "inconsistent_candidate_count": 7,
+      "pair_count": 1,
+      "pairs": [
+        [
+          3,
+          5
+        ]
+      ]
+    },
+    {
+      "inconsistent_candidate_count": 8,
+      "pair_count": 0,
+      "pairs": []
+    },
+    {
+      "inconsistent_candidate_count": 9,
+      "pair_count": 0,
+      "pairs": []
+    },
+    {
+      "inconsistent_candidate_count": 10,
+      "pair_count": 3,
+      "pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ]
+    },
+    {
+      "inconsistent_candidate_count": 11,
+      "pair_count": 0,
+      "pairs": []
+    },
+    {
+      "inconsistent_candidate_count": 12,
+      "pair_count": 1,
+      "pairs": [
+        [
+          2,
+          5
+        ]
+      ]
+    },
+    {
+      "inconsistent_candidate_count": 13,
+      "pair_count": 0,
+      "pairs": []
+    },
+    {
+      "inconsistent_candidate_count": 14,
+      "pair_count": 0,
+      "pairs": []
+    },
+    {
+      "inconsistent_candidate_count": 15,
+      "pair_count": 0,
+      "pairs": []
+    },
+    {
+      "inconsistent_candidate_count": 16,
+      "pair_count": 0,
+      "pairs": []
+    }
+  ],
+  "overlap_records": [
+    {
+      "metric_a": "mean",
+      "metric_b": "q01",
+      "intersection_count": 1,
+      "union_count": 11,
+      "only_a_count": 7,
+      "only_b_count": 3,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "jaccard": 0.09090909090909091
+    },
+    {
+      "metric_a": "mean",
+      "metric_b": "q02",
+      "intersection_count": 2,
+      "union_count": 15,
+      "only_a_count": 6,
+      "only_b_count": 7,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.13333333333333333
+    },
+    {
+      "metric_a": "mean",
+      "metric_b": "q05",
+      "intersection_count": 2,
+      "union_count": 14,
+      "only_a_count": 6,
+      "only_b_count": 6,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "jaccard": 0.14285714285714285
+    },
+    {
+      "metric_a": "mean",
+      "metric_b": "q25",
+      "intersection_count": 4,
+      "union_count": 8,
+      "only_a_count": 4,
+      "only_b_count": 0,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [],
+      "jaccard": 0.5
+    },
+    {
+      "metric_a": "mean",
+      "metric_b": "q50",
+      "intersection_count": 6,
+      "union_count": 9,
+      "only_a_count": 2,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          4,
+          5
+        ]
+      ],
+      "jaccard": 0.6666666666666666
+    },
+    {
+      "metric_a": "mean",
+      "metric_b": "q98",
+      "intersection_count": 3,
+      "union_count": 9,
+      "only_a_count": 5,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.3333333333333333
+    },
+    {
+      "metric_a": "mean",
+      "metric_b": "q99",
+      "intersection_count": 1,
+      "union_count": 9,
+      "only_a_count": 7,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          6
+        ]
+      ],
+      "jaccard": 0.1111111111111111
+    },
+    {
+      "metric_a": "mean",
+      "metric_b": "low_frac_0p2",
+      "intersection_count": 5,
+      "union_count": 9,
+      "only_a_count": 3,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          6
+        ]
+      ],
+      "jaccard": 0.5555555555555556
+    },
+    {
+      "metric_a": "mean",
+      "metric_b": "high_frac_0p85",
+      "intersection_count": 6,
+      "union_count": 13,
+      "only_a_count": 2,
+      "only_b_count": 5,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.46153846153846156
+    },
+    {
+      "metric_a": "mean",
+      "metric_b": "high_frac_0p9",
+      "intersection_count": 5,
+      "union_count": 15,
+      "only_a_count": 3,
+      "only_b_count": 7,
+      "shared_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "jaccard": 0.3333333333333333
+    },
+    {
+      "metric_a": "mean",
+      "metric_b": "lag1",
+      "intersection_count": 5,
+      "union_count": 13,
+      "only_a_count": 3,
+      "only_b_count": 5,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.38461538461538464
+    },
+    {
+      "metric_a": "mean",
+      "metric_b": "roughness_rms",
+      "intersection_count": 4,
+      "union_count": 8,
+      "only_a_count": 4,
+      "only_b_count": 0,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [],
+      "jaccard": 0.5
+    },
+    {
+      "metric_a": "mean",
+      "metric_b": "total_variation",
+      "intersection_count": 5,
+      "union_count": 9,
+      "only_a_count": 3,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          3
+        ]
+      ],
+      "jaccard": 0.5555555555555556
+    },
+    {
+      "metric_a": "mean",
+      "metric_b": "sign_changes",
+      "intersection_count": 5,
+      "union_count": 10,
+      "only_a_count": 3,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "jaccard": 0.5
+    },
+    {
+      "metric_a": "mean",
+      "metric_b": "block_std_max",
+      "intersection_count": 2,
+      "union_count": 8,
+      "only_a_count": 6,
+      "only_b_count": 0,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [],
+      "jaccard": 0.25
+    },
+    {
+      "metric_a": "q01",
+      "metric_b": "q02",
+      "intersection_count": 2,
+      "union_count": 11,
+      "only_a_count": 2,
+      "only_b_count": 7,
+      "shared_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "jaccard": 0.18181818181818182
+    },
+    {
+      "metric_a": "q01",
+      "metric_b": "q05",
+      "intersection_count": 0,
+      "union_count": 12,
+      "only_a_count": 4,
+      "only_b_count": 8,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q01",
+      "metric_b": "q25",
+      "intersection_count": 1,
+      "union_count": 7,
+      "only_a_count": 3,
+      "only_b_count": 3,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.14285714285714285
+    },
+    {
+      "metric_a": "q01",
+      "metric_b": "q50",
+      "intersection_count": 1,
+      "union_count": 10,
+      "only_a_count": 3,
+      "only_b_count": 6,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.1
+    },
+    {
+      "metric_a": "q01",
+      "metric_b": "q98",
+      "intersection_count": 2,
+      "union_count": 6,
+      "only_a_count": 2,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "jaccard": 0.3333333333333333
+    },
+    {
+      "metric_a": "q01",
+      "metric_b": "q99",
+      "intersection_count": 1,
+      "union_count": 5,
+      "only_a_count": 3,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          6
+        ]
+      ],
+      "jaccard": 0.2
+    },
+    {
+      "metric_a": "q01",
+      "metric_b": "low_frac_0p2",
+      "intersection_count": 1,
+      "union_count": 9,
+      "only_a_count": 3,
+      "only_b_count": 5,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.1111111111111111
+    },
+    {
+      "metric_a": "q01",
+      "metric_b": "high_frac_0p85",
+      "intersection_count": 2,
+      "union_count": 13,
+      "only_a_count": 2,
+      "only_b_count": 9,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "jaccard": 0.15384615384615385
+    },
+    {
+      "metric_a": "q01",
+      "metric_b": "high_frac_0p9",
+      "intersection_count": 3,
+      "union_count": 13,
+      "only_a_count": 1,
+      "only_b_count": 9,
+      "shared_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "jaccard": 0.23076923076923078
+    },
+    {
+      "metric_a": "q01",
+      "metric_b": "lag1",
+      "intersection_count": 1,
+      "union_count": 13,
+      "only_a_count": 3,
+      "only_b_count": 9,
+      "shared_pairs": [
+        [
+          5,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.07692307692307693
+    },
+    {
+      "metric_a": "q01",
+      "metric_b": "roughness_rms",
+      "intersection_count": 0,
+      "union_count": 8,
+      "only_a_count": 4,
+      "only_b_count": 4,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q01",
+      "metric_b": "total_variation",
+      "intersection_count": 0,
+      "union_count": 10,
+      "only_a_count": 4,
+      "only_b_count": 6,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q01",
+      "metric_b": "sign_changes",
+      "intersection_count": 1,
+      "union_count": 10,
+      "only_a_count": 3,
+      "only_b_count": 6,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.1
+    },
+    {
+      "metric_a": "q01",
+      "metric_b": "block_std_max",
+      "intersection_count": 1,
+      "union_count": 5,
+      "only_a_count": 3,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          5
+        ]
+      ],
+      "jaccard": 0.2
+    },
+    {
+      "metric_a": "q02",
+      "metric_b": "q05",
+      "intersection_count": 5,
+      "union_count": 12,
+      "only_a_count": 4,
+      "only_b_count": 3,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.4166666666666667
+    },
+    {
+      "metric_a": "q02",
+      "metric_b": "q25",
+      "intersection_count": 0,
+      "union_count": 13,
+      "only_a_count": 9,
+      "only_b_count": 4,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q02",
+      "metric_b": "q50",
+      "intersection_count": 2,
+      "union_count": 14,
+      "only_a_count": 7,
+      "only_b_count": 5,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.14285714285714285
+    },
+    {
+      "metric_a": "q02",
+      "metric_b": "q98",
+      "intersection_count": 2,
+      "union_count": 11,
+      "only_a_count": 7,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "jaccard": 0.18181818181818182
+    },
+    {
+      "metric_a": "q02",
+      "metric_b": "q99",
+      "intersection_count": 0,
+      "union_count": 11,
+      "only_a_count": 9,
+      "only_b_count": 2,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q02",
+      "metric_b": "low_frac_0p2",
+      "intersection_count": 0,
+      "union_count": 15,
+      "only_a_count": 9,
+      "only_b_count": 6,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q02",
+      "metric_b": "high_frac_0p85",
+      "intersection_count": 6,
+      "union_count": 14,
+      "only_a_count": 3,
+      "only_b_count": 5,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.42857142857142855
+    },
+    {
+      "metric_a": "q02",
+      "metric_b": "high_frac_0p9",
+      "intersection_count": 7,
+      "union_count": 14,
+      "only_a_count": 2,
+      "only_b_count": 5,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "jaccard": 0.5
+    },
+    {
+      "metric_a": "q02",
+      "metric_b": "lag1",
+      "intersection_count": 7,
+      "union_count": 12,
+      "only_a_count": 2,
+      "only_b_count": 3,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.5833333333333334
+    },
+    {
+      "metric_a": "q02",
+      "metric_b": "roughness_rms",
+      "intersection_count": 2,
+      "union_count": 11,
+      "only_a_count": 7,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.18181818181818182
+    },
+    {
+      "metric_a": "q02",
+      "metric_b": "total_variation",
+      "intersection_count": 3,
+      "union_count": 12,
+      "only_a_count": 6,
+      "only_b_count": 3,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.25
+    },
+    {
+      "metric_a": "q02",
+      "metric_b": "sign_changes",
+      "intersection_count": 0,
+      "union_count": 16,
+      "only_a_count": 9,
+      "only_b_count": 7,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q02",
+      "metric_b": "block_std_max",
+      "intersection_count": 0,
+      "union_count": 11,
+      "only_a_count": 9,
+      "only_b_count": 2,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q05",
+      "metric_b": "q25",
+      "intersection_count": 0,
+      "union_count": 12,
+      "only_a_count": 8,
+      "only_b_count": 4,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q05",
+      "metric_b": "q50",
+      "intersection_count": 3,
+      "union_count": 12,
+      "only_a_count": 5,
+      "only_b_count": 4,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.25
+    },
+    {
+      "metric_a": "q05",
+      "metric_b": "q98",
+      "intersection_count": 1,
+      "union_count": 11,
+      "only_a_count": 7,
+      "only_b_count": 3,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.09090909090909091
+    },
+    {
+      "metric_a": "q05",
+      "metric_b": "q99",
+      "intersection_count": 0,
+      "union_count": 10,
+      "only_a_count": 8,
+      "only_b_count": 2,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q05",
+      "metric_b": "low_frac_0p2",
+      "intersection_count": 0,
+      "union_count": 14,
+      "only_a_count": 8,
+      "only_b_count": 6,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q05",
+      "metric_b": "high_frac_0p85",
+      "intersection_count": 3,
+      "union_count": 16,
+      "only_a_count": 5,
+      "only_b_count": 8,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.1875
+    },
+    {
+      "metric_a": "q05",
+      "metric_b": "high_frac_0p9",
+      "intersection_count": 3,
+      "union_count": 17,
+      "only_a_count": 5,
+      "only_b_count": 9,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "jaccard": 0.17647058823529413
+    },
+    {
+      "metric_a": "q05",
+      "metric_b": "lag1",
+      "intersection_count": 5,
+      "union_count": 13,
+      "only_a_count": 3,
+      "only_b_count": 5,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.38461538461538464
+    },
+    {
+      "metric_a": "q05",
+      "metric_b": "roughness_rms",
+      "intersection_count": 1,
+      "union_count": 11,
+      "only_a_count": 7,
+      "only_b_count": 3,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.09090909090909091
+    },
+    {
+      "metric_a": "q05",
+      "metric_b": "total_variation",
+      "intersection_count": 2,
+      "union_count": 12,
+      "only_a_count": 6,
+      "only_b_count": 4,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.16666666666666666
+    },
+    {
+      "metric_a": "q05",
+      "metric_b": "sign_changes",
+      "intersection_count": 2,
+      "union_count": 13,
+      "only_a_count": 6,
+      "only_b_count": 5,
+      "shared_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.15384615384615385
+    },
+    {
+      "metric_a": "q05",
+      "metric_b": "block_std_max",
+      "intersection_count": 0,
+      "union_count": 10,
+      "only_a_count": 8,
+      "only_b_count": 2,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q25",
+      "metric_b": "q50",
+      "intersection_count": 4,
+      "union_count": 7,
+      "only_a_count": 0,
+      "only_b_count": 3,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.5714285714285714
+    },
+    {
+      "metric_a": "q25",
+      "metric_b": "q98",
+      "intersection_count": 2,
+      "union_count": 6,
+      "only_a_count": 2,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.3333333333333333
+    },
+    {
+      "metric_a": "q25",
+      "metric_b": "q99",
+      "intersection_count": 1,
+      "union_count": 5,
+      "only_a_count": 3,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          6
+        ]
+      ],
+      "jaccard": 0.2
+    },
+    {
+      "metric_a": "q25",
+      "metric_b": "low_frac_0p2",
+      "intersection_count": 4,
+      "union_count": 6,
+      "only_a_count": 0,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "jaccard": 0.6666666666666666
+    },
+    {
+      "metric_a": "q25",
+      "metric_b": "high_frac_0p85",
+      "intersection_count": 3,
+      "union_count": 12,
+      "only_a_count": 1,
+      "only_b_count": 8,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          1,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.25
+    },
+    {
+      "metric_a": "q25",
+      "metric_b": "high_frac_0p9",
+      "intersection_count": 2,
+      "union_count": 14,
+      "only_a_count": 2,
+      "only_b_count": 10,
+      "shared_pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "jaccard": 0.14285714285714285
+    },
+    {
+      "metric_a": "q25",
+      "metric_b": "lag1",
+      "intersection_count": 2,
+      "union_count": 12,
+      "only_a_count": 2,
+      "only_b_count": 8,
+      "shared_pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.16666666666666666
+    },
+    {
+      "metric_a": "q25",
+      "metric_b": "roughness_rms",
+      "intersection_count": 2,
+      "union_count": 6,
+      "only_a_count": 2,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "jaccard": 0.3333333333333333
+    },
+    {
+      "metric_a": "q25",
+      "metric_b": "total_variation",
+      "intersection_count": 3,
+      "union_count": 7,
+      "only_a_count": 1,
+      "only_b_count": 3,
+      "shared_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "jaccard": 0.42857142857142855
+    },
+    {
+      "metric_a": "q25",
+      "metric_b": "sign_changes",
+      "intersection_count": 3,
+      "union_count": 8,
+      "only_a_count": 1,
+      "only_b_count": 4,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          1,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.375
+    },
+    {
+      "metric_a": "q25",
+      "metric_b": "block_std_max",
+      "intersection_count": 2,
+      "union_count": 4,
+      "only_a_count": 2,
+      "only_b_count": 0,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_b_pairs": [],
+      "jaccard": 0.5
+    },
+    {
+      "metric_a": "q50",
+      "metric_b": "q98",
+      "intersection_count": 3,
+      "union_count": 8,
+      "only_a_count": 4,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.375
+    },
+    {
+      "metric_a": "q50",
+      "metric_b": "q99",
+      "intersection_count": 1,
+      "union_count": 8,
+      "only_a_count": 6,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          6
+        ]
+      ],
+      "jaccard": 0.125
+    },
+    {
+      "metric_a": "q50",
+      "metric_b": "low_frac_0p2",
+      "intersection_count": 4,
+      "union_count": 9,
+      "only_a_count": 3,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "jaccard": 0.4444444444444444
+    },
+    {
+      "metric_a": "q50",
+      "metric_b": "high_frac_0p85",
+      "intersection_count": 5,
+      "union_count": 13,
+      "only_a_count": 2,
+      "only_b_count": 6,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.38461538461538464
+    },
+    {
+      "metric_a": "q50",
+      "metric_b": "high_frac_0p9",
+      "intersection_count": 4,
+      "union_count": 15,
+      "only_a_count": 3,
+      "only_b_count": 8,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "jaccard": 0.26666666666666666
+    },
+    {
+      "metric_a": "q50",
+      "metric_b": "lag1",
+      "intersection_count": 5,
+      "union_count": 12,
+      "only_a_count": 2,
+      "only_b_count": 5,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.4166666666666667
+    },
+    {
+      "metric_a": "q50",
+      "metric_b": "roughness_rms",
+      "intersection_count": 3,
+      "union_count": 8,
+      "only_a_count": 4,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          3,
+          5
+        ]
+      ],
+      "jaccard": 0.375
+    },
+    {
+      "metric_a": "q50",
+      "metric_b": "total_variation",
+      "intersection_count": 4,
+      "union_count": 9,
+      "only_a_count": 3,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "jaccard": 0.4444444444444444
+    },
+    {
+      "metric_a": "q50",
+      "metric_b": "sign_changes",
+      "intersection_count": 4,
+      "union_count": 10,
+      "only_a_count": 3,
+      "only_b_count": 3,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "jaccard": 0.4
+    },
+    {
+      "metric_a": "q50",
+      "metric_b": "block_std_max",
+      "intersection_count": 2,
+      "union_count": 7,
+      "only_a_count": 5,
+      "only_b_count": 0,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [],
+      "jaccard": 0.2857142857142857
+    },
+    {
+      "metric_a": "q98",
+      "metric_b": "q99",
+      "intersection_count": 1,
+      "union_count": 5,
+      "only_a_count": 3,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          6
+        ]
+      ],
+      "jaccard": 0.2
+    },
+    {
+      "metric_a": "q98",
+      "metric_b": "low_frac_0p2",
+      "intersection_count": 2,
+      "union_count": 8,
+      "only_a_count": 2,
+      "only_b_count": 4,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.25
+    },
+    {
+      "metric_a": "q98",
+      "metric_b": "high_frac_0p85",
+      "intersection_count": 4,
+      "union_count": 11,
+      "only_a_count": 0,
+      "only_b_count": 7,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_a_pairs": [],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "jaccard": 0.36363636363636365
+    },
+    {
+      "metric_a": "q98",
+      "metric_b": "high_frac_0p9",
+      "intersection_count": 3,
+      "union_count": 13,
+      "only_a_count": 1,
+      "only_b_count": 9,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "jaccard": 0.23076923076923078
+    },
+    {
+      "metric_a": "q98",
+      "metric_b": "lag1",
+      "intersection_count": 3,
+      "union_count": 11,
+      "only_a_count": 1,
+      "only_b_count": 7,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.2727272727272727
+    },
+    {
+      "metric_a": "q98",
+      "metric_b": "roughness_rms",
+      "intersection_count": 2,
+      "union_count": 6,
+      "only_a_count": 2,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.3333333333333333
+    },
+    {
+      "metric_a": "q98",
+      "metric_b": "total_variation",
+      "intersection_count": 2,
+      "union_count": 8,
+      "only_a_count": 2,
+      "only_b_count": 4,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.25
+    },
+    {
+      "metric_a": "q98",
+      "metric_b": "sign_changes",
+      "intersection_count": 2,
+      "union_count": 9,
+      "only_a_count": 2,
+      "only_b_count": 5,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.2222222222222222
+    },
+    {
+      "metric_a": "q98",
+      "metric_b": "block_std_max",
+      "intersection_count": 2,
+      "union_count": 4,
+      "only_a_count": 2,
+      "only_b_count": 0,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [],
+      "jaccard": 0.5
+    },
+    {
+      "metric_a": "q99",
+      "metric_b": "low_frac_0p2",
+      "intersection_count": 2,
+      "union_count": 6,
+      "only_a_count": 0,
+      "only_b_count": 4,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "only_a_pairs": [],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.3333333333333333
+    },
+    {
+      "metric_a": "q99",
+      "metric_b": "high_frac_0p85",
+      "intersection_count": 1,
+      "union_count": 12,
+      "only_a_count": 1,
+      "only_b_count": 10,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          2,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.08333333333333333
+    },
+    {
+      "metric_a": "q99",
+      "metric_b": "high_frac_0p9",
+      "intersection_count": 0,
+      "union_count": 14,
+      "only_a_count": 2,
+      "only_b_count": 12,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q99",
+      "metric_b": "lag1",
+      "intersection_count": 0,
+      "union_count": 12,
+      "only_a_count": 2,
+      "only_b_count": 10,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q99",
+      "metric_b": "roughness_rms",
+      "intersection_count": 0,
+      "union_count": 6,
+      "only_a_count": 2,
+      "only_b_count": 4,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q99",
+      "metric_b": "total_variation",
+      "intersection_count": 0,
+      "union_count": 8,
+      "only_a_count": 2,
+      "only_b_count": 6,
+      "shared_pairs": [],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "jaccard": 0.0
+    },
+    {
+      "metric_a": "q99",
+      "metric_b": "sign_changes",
+      "intersection_count": 2,
+      "union_count": 7,
+      "only_a_count": 0,
+      "only_b_count": 5,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "only_a_pairs": [],
+      "only_b_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.2857142857142857
+    },
+    {
+      "metric_a": "q99",
+      "metric_b": "block_std_max",
+      "intersection_count": 1,
+      "union_count": 3,
+      "only_a_count": 1,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          2,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          5
+        ]
+      ],
+      "jaccard": 0.3333333333333333
+    },
+    {
+      "metric_a": "low_frac_0p2",
+      "metric_b": "high_frac_0p85",
+      "intersection_count": 4,
+      "union_count": 13,
+      "only_a_count": 2,
+      "only_b_count": 7,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.3076923076923077
+    },
+    {
+      "metric_a": "low_frac_0p2",
+      "metric_b": "high_frac_0p9",
+      "intersection_count": 3,
+      "union_count": 15,
+      "only_a_count": 3,
+      "only_b_count": 9,
+      "shared_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "jaccard": 0.2
+    },
+    {
+      "metric_a": "low_frac_0p2",
+      "metric_b": "lag1",
+      "intersection_count": 2,
+      "union_count": 14,
+      "only_a_count": 4,
+      "only_b_count": 8,
+      "shared_pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "jaccard": 0.14285714285714285
+    },
+    {
+      "metric_a": "low_frac_0p2",
+      "metric_b": "roughness_rms",
+      "intersection_count": 2,
+      "union_count": 8,
+      "only_a_count": 4,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "jaccard": 0.25
+    },
+    {
+      "metric_a": "low_frac_0p2",
+      "metric_b": "total_variation",
+      "intersection_count": 3,
+      "union_count": 9,
+      "only_a_count": 3,
+      "only_b_count": 3,
+      "shared_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "jaccard": 0.3333333333333333
+    },
+    {
+      "metric_a": "low_frac_0p2",
+      "metric_b": "sign_changes",
+      "intersection_count": 5,
+      "union_count": 8,
+      "only_a_count": 1,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          1,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.625
+    },
+    {
+      "metric_a": "low_frac_0p2",
+      "metric_b": "block_std_max",
+      "intersection_count": 2,
+      "union_count": 6,
+      "only_a_count": 4,
+      "only_b_count": 0,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_b_pairs": [],
+      "jaccard": 0.3333333333333333
+    },
+    {
+      "metric_a": "high_frac_0p85",
+      "metric_b": "high_frac_0p9",
+      "intersection_count": 10,
+      "union_count": 13,
+      "only_a_count": 1,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "jaccard": 0.7692307692307693
+    },
+    {
+      "metric_a": "high_frac_0p85",
+      "metric_b": "lag1",
+      "intersection_count": 8,
+      "union_count": 13,
+      "only_a_count": 3,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.6153846153846154
+    },
+    {
+      "metric_a": "high_frac_0p85",
+      "metric_b": "roughness_rms",
+      "intersection_count": 4,
+      "union_count": 11,
+      "only_a_count": 7,
+      "only_b_count": 0,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [],
+      "jaccard": 0.36363636363636365
+    },
+    {
+      "metric_a": "high_frac_0p85",
+      "metric_b": "total_variation",
+      "intersection_count": 5,
+      "union_count": 12,
+      "only_a_count": 6,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          1,
+          7
+        ]
+      ],
+      "jaccard": 0.4166666666666667
+    },
+    {
+      "metric_a": "high_frac_0p85",
+      "metric_b": "sign_changes",
+      "intersection_count": 4,
+      "union_count": 14,
+      "only_a_count": 7,
+      "only_b_count": 3,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.2857142857142857
+    },
+    {
+      "metric_a": "high_frac_0p85",
+      "metric_b": "block_std_max",
+      "intersection_count": 2,
+      "union_count": 11,
+      "only_a_count": 9,
+      "only_b_count": 0,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [],
+      "jaccard": 0.18181818181818182
+    },
+    {
+      "metric_a": "high_frac_0p9",
+      "metric_b": "lag1",
+      "intersection_count": 8,
+      "union_count": 14,
+      "only_a_count": 4,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.5714285714285714
+    },
+    {
+      "metric_a": "high_frac_0p9",
+      "metric_b": "roughness_rms",
+      "intersection_count": 4,
+      "union_count": 12,
+      "only_a_count": 8,
+      "only_b_count": 0,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [],
+      "jaccard": 0.3333333333333333
+    },
+    {
+      "metric_a": "high_frac_0p9",
+      "metric_b": "total_variation",
+      "intersection_count": 5,
+      "union_count": 13,
+      "only_a_count": 7,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          1,
+          7
+        ]
+      ],
+      "jaccard": 0.38461538461538464
+    },
+    {
+      "metric_a": "high_frac_0p9",
+      "metric_b": "sign_changes",
+      "intersection_count": 3,
+      "union_count": 16,
+      "only_a_count": 9,
+      "only_b_count": 4,
+      "shared_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.1875
+    },
+    {
+      "metric_a": "high_frac_0p9",
+      "metric_b": "block_std_max",
+      "intersection_count": 1,
+      "union_count": 13,
+      "only_a_count": 11,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "jaccard": 0.07692307692307693
+    },
+    {
+      "metric_a": "lag1",
+      "metric_b": "roughness_rms",
+      "intersection_count": 4,
+      "union_count": 10,
+      "only_a_count": 6,
+      "only_b_count": 0,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [],
+      "jaccard": 0.4
+    },
+    {
+      "metric_a": "lag1",
+      "metric_b": "total_variation",
+      "intersection_count": 5,
+      "union_count": 11,
+      "only_a_count": 5,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          1,
+          7
+        ]
+      ],
+      "jaccard": 0.45454545454545453
+    },
+    {
+      "metric_a": "lag1",
+      "metric_b": "sign_changes",
+      "intersection_count": 3,
+      "union_count": 14,
+      "only_a_count": 7,
+      "only_b_count": 4,
+      "shared_pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "jaccard": 0.21428571428571427
+    },
+    {
+      "metric_a": "lag1",
+      "metric_b": "block_std_max",
+      "intersection_count": 1,
+      "union_count": 11,
+      "only_a_count": 9,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "jaccard": 0.09090909090909091
+    },
+    {
+      "metric_a": "roughness_rms",
+      "metric_b": "total_variation",
+      "intersection_count": 4,
+      "union_count": 6,
+      "only_a_count": 0,
+      "only_b_count": 2,
+      "shared_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [],
+      "only_b_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "jaccard": 0.6666666666666666
+    },
+    {
+      "metric_a": "roughness_rms",
+      "metric_b": "sign_changes",
+      "intersection_count": 2,
+      "union_count": 9,
+      "only_a_count": 2,
+      "only_b_count": 5,
+      "shared_pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.2222222222222222
+    },
+    {
+      "metric_a": "roughness_rms",
+      "metric_b": "block_std_max",
+      "intersection_count": 1,
+      "union_count": 5,
+      "only_a_count": 3,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "jaccard": 0.2
+    },
+    {
+      "metric_a": "total_variation",
+      "metric_b": "sign_changes",
+      "intersection_count": 2,
+      "union_count": 11,
+      "only_a_count": 4,
+      "only_b_count": 5,
+      "shared_pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "jaccard": 0.18181818181818182
+    },
+    {
+      "metric_a": "total_variation",
+      "metric_b": "block_std_max",
+      "intersection_count": 1,
+      "union_count": 7,
+      "only_a_count": 5,
+      "only_b_count": 1,
+      "shared_pairs": [
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "only_b_pairs": [
+        [
+          0,
+          2
+        ]
+      ],
+      "jaccard": 0.14285714285714285
+    },
+    {
+      "metric_a": "sign_changes",
+      "metric_b": "block_std_max",
+      "intersection_count": 2,
+      "union_count": 7,
+      "only_a_count": 5,
+      "only_b_count": 0,
+      "shared_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "only_a_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "only_b_pairs": [],
+      "jaccard": 0.2857142857142857
+    }
+  ],
+  "closest_candidate_comparison": {
+    "metric_a": "q99",
+    "metric_b": "block_std_max",
+    "intersection_count": 1,
+    "union_count": 3,
+    "only_a_count": 1,
+    "only_b_count": 1,
+    "shared_pairs": [
+      [
+        0,
+        2
+      ]
+    ],
+    "only_a_pairs": [
+      [
+        2,
+        6
+      ]
+    ],
+    "only_b_pairs": [
+      [
+        2,
+        5
+      ]
+    ],
+    "jaccard": 0.3333333333333333
+  },
+  "total_inconsistent_assignments": 104,
+  "all_preregistered_results_retained": true,
+  "strict_rule_changed": false,
+  "failed_pairs_removed": false,
+  "tie_pairs_removed": false,
+  "new_metric_proposed": false,
+  "ensemble_rule_proposed": false,
+  "structure_is_descriptive_only": true,
+  "causal_attribution_completed": false,
+  "predictive_validation_completed": false,
+  "pristine_external_holdout_claim": false,
+  "predictive_model_fitted": false,
+  "correlation_claim": false,
+  "predictive_accuracy_computed": false,
+  "statistical_significance_claim": false,
+  "causal_mechanism_proven": false,
+  "continuous_path_proof": false,
+  "spectral_crossing_proven": false,
+  "state_exchange_proven": false,
+  "thermodynamic_limit_proof": false,
+  "new_taxonomy_claim": false,
+  "new_floquet_cells_computed": 0,
+  "new_floquet_spectra_recomputed": false,
+  "new_winding_computed": false,
+  "n640_computed": false
+}
