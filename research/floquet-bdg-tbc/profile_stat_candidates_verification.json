@@ -1,0 +1,129 @@
+{
+  "schema": "floquet-bdg-profile-stat-candidates-verification-v1",
+  "recorded_utc": "2026-11-12T00:23:15.738885+00:00",
+  "all_passed": true,
+  "test_count": 8,
+  "check_only": true,
+  "independent_recheck_passed": true,
+  "independent_max_master_absolute_error": 0.0,
+  "independent_max_beta_absolute_error": 0.0,
+  "independent_max_metric_absolute_error": 0.0,
+  "visual_review_status": "passed",
+  "rendered_pages": 5,
+  "commands": [
+    {
+      "label": "profile_stat_candidates_evidence_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\analyze_profile_stat_candidates.py",
+        "--check-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "profile_stat_candidates_independent_recheck",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\verify_profile_stat_candidates.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "docx_gate",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\kimi-code\\home\\plugins\\managed\\kimi-word\\skills\\kimi-word\\scripts\\docx.py",
+        "validate",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\Floquet-BdG-无序剖面候选统计指标.docx"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "visual_hash_binding",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\record_profile_stat_candidates_qa.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "report_contracts",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\test_profile_stat_candidates.py",
+        "-v"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sha256": {
+    "profile_stat_candidates_protocol.json": "7cb9b8786288f59cf92c9d9e286b949c05fd80d108b3c453f534d166ea0b2817",
+    "profile_stat_candidates_analysis.json": "8cc667ebae8aaf124a444d7fe2f15a7e8d5bd42dd7ee38892e03f996efb670d2",
+    "profile_stat_candidates_independent.json": "ec11eebdfe31588135e0ab79e6833500b630b8404d0344efb3dc570c8a9ab2bb",
+    "profile-stat-candidates.png": "aba8449aa242547032c605fe3556f90ed24230670dd19b34bfa9de532d6436cd",
+    "PROFILE_STAT_CANDIDATES.md": "5d62cc2eaa86627b2f52fa6244bdc3b7afbc40d7635439dbd711d79f3a18a413",
+    "Floquet-BdG-无序剖面候选统计指标.docx": "bd024c5c1fe1a3254794e8aa176a2f76c31493690acedd3d1e79509fb886bc13",
+    "profile-stat-candidates-word-qa.json": "8381bc072f224287083c3533837e70d7db903f88276f3b43c70c78ec87bca91d",
+    "profile-stat-candidates-word-render/report.json": "904c4c006da594f7209adf8d89719f333ef979a628c36a56bbc2e0bd25755e10",
+    "profile_stat_candidates_verification.json": "f2725c6d6275709bfec3d65d258674c41c75c595d2148bb53da4f644e0aa4586",
+    "profile_stat_candidates_run.log": "a78422d4289ef4f264d71e08558ef50316ff2046851c29aba5f9e2e7bca61068",
+    "analyze_profile_stat_candidates.py": "56402ba542745364a2c702695fee0f8b793229c4d53bdc9a4ff7250565c7cf04",
+    "verify_profile_stat_candidates.py": "a78bce5c3d9d08cf78e5121bd8dd5d50b81f097871924c8d16012de3f0dd4b6d",
+    "build_profile_stat_candidates_report.js": "27c4f438f8f57bc616399ccdaf3b725a37d986e641e6b2ad0de768f035c0153a",
+    "record_profile_stat_candidates_qa.py": "8458f23d817fb7ad4683c0b58c8cdd777d1ab424f78af56d1b5f77c6fc438903",
+    "test_profile_stat_candidates.py": "9599eb9e6f70b9d4d7a1afdc6553cd3e0e52287d9c50f7069113fdd1659db1a7",
+    "run_profile_stat_candidates_verification.py": "55142d28af6052a330f1c70085f7353c24768338e551b9da76c899899be5a585"
+  },
+  "scope": {
+    "profile_stat_candidates_analysis_evaluated": true,
+    "profile_count": 8,
+    "metric_record_count": 40,
+    "master_metric_count": 31,
+    "block_metric_count": 9,
+    "candidate_count": 16,
+    "candidate_names": [
+      "mean",
+      "q01",
+      "q02",
+      "q05",
+      "q25",
+      "q50",
+      "q98",
+      "q99",
+      "low_frac_0p2",
+      "high_frac_0p85",
+      "high_frac_0p9",
+      "lag1",
+      "roughness_rms",
+      "total_variation",
+      "sign_changes",
+      "block_std_max"
+    ],
+    "candidate_labels_are_exploratory_only": true,
+    "remaining_seed_preregistration_required_before_use": true,
+    "path_jump_counts": {
+      "0": 4,
+      "1": 0,
+      "6": 6
+    },
+    "path_driver_counts": {
+      "0": 4,
+      "1": 4,
+      "6": 4
+    },
+    "new_floquet_cells": 0,
+    "new_seed_count": 0,
+    "new_floquet_spectra_recomputed": false,
+    "predictive_model_fitted": false,
+    "correlation_claim": false,
+    "statistical_significance_claim": false,
+    "causal_mechanism_proven": false,
+    "universal_size_law_claim": false,
+    "thermodynamic_limit_proof": false,
+    "new_winding_computed": false,
+    "n640_computed": false,
+    "new_taxonomy_claim": false,
+    "categories_changed": false
+  },
+  "log": "profile_stat_candidates_run.log"
+}

@@ -3982,3 +3982,122 @@ OK
 exit_code=0
 seed01_matrix_midpoint_overall passed check_only True
 exit_code=0
+$ profile_stat_candidates_suite: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\run_profile_stat_candidates_verification.py --check-only
+$ profile_stat_candidates_evidence_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\analyze_profile_stat_candidates.py --check-only
+{"check_only": true, "profiles": 8, "metric_records": 40, "candidates": 16, "all_passed": true}
+exit_code=0
+$ profile_stat_candidates_independent_recheck: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\verify_profile_stat_candidates.py
+{
+  "schema": "floquet-bdg-profile-stat-candidates-independent-v1",
+  "protocol_sha256": "7cb9b8786288f59cf92c9d9e286b949c05fd80d108b3c453f534d166ea0b2817",
+  "analysis_sha256": "8cc667ebae8aaf124a444d7fe2f15a7e8d5bd42dd7ee38892e03f996efb670d2",
+  "profile_count": 8,
+  "metric_record_count": 40,
+  "candidate_count": 16,
+  "candidate_names": [
+    "mean",
+    "q01",
+    "q02",
+    "q05",
+    "q25",
+    "q50",
+    "q98",
+    "q99",
+    "low_frac_0p2",
+    "high_frac_0p85",
+    "high_frac_0p9",
+    "lag1",
+    "roughness_rms",
+    "total_variation",
+    "sign_changes",
+    "block_std_max"
+  ],
+  "max_master_absolute_error": 0.0,
+  "max_beta_absolute_error": 0.0,
+  "max_metric_absolute_error": 0.0,
+  "source_mismatch_count": 0,
+  "profile_mismatch_count": 0,
+  "label_mismatch_count": 0,
+  "candidate_mismatch_count": 0,
+  "source_mismatches": [],
+  "profile_mismatches": [],
+  "label_mismatches": [],
+  "candidate_mismatches": [],
+  "new_floquet_spectra_recomputed": false,
+  "predictive_model_fitted": false,
+  "correlation_computed": false,
+  "p_values_computed": false,
+  "all_passed": true
+}
+exit_code=0
+$ docx_gate: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\kimi-code\home\plugins\managed\kimi-word\skills\kimi-word\scripts\docx.py validate C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\Floquet-BdG-无序剖面候选统计指标.docx
+no baseline: treating the whole file as a new artifact — all checks and repairs apply to your own output. If this is an edit of an existing document, pass --baseline (usually prep's work/baseline.docx)
+PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)
+(no --baseline: legality gate only; a new document has no 'what changed' to check)
+exit_code=0
+$ visual_hash_binding: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\record_profile_stat_candidates_qa.py
+{
+  "schema": "floquet-bdg-profile-stat-candidates-word-qa-v1",
+  "recordedUtc": "2026-11-12T00:23:15.431298+00:00",
+  "sourceSha256": {
+    "profile_stat_candidates_protocol.json": "7cb9b8786288f59cf92c9d9e286b949c05fd80d108b3c453f534d166ea0b2817",
+    "profile_stat_candidates_analysis.json": "8cc667ebae8aaf124a444d7fe2f15a7e8d5bd42dd7ee38892e03f996efb670d2",
+    "profile_stat_candidates_independent.json": "ec11eebdfe31588135e0ab79e6833500b630b8404d0344efb3dc570c8a9ab2bb",
+    "seed01_matrix_midpoint_analysis.json": "2b2fdca42a4ab3110bf9fbc903b01723c09e27e90bee4cc14075b0b08e90deae",
+    "seed6_matrix_midpoint_analysis.json": "dc95212ab89d25487b60b326364a3911eed9a56c35ba9d867b1adc6acc58a761",
+    "matched_beta_batch_a_analysis.json": "871e5cfdc33a792ac4e0ec84e19a372a6a1b5154f0ec4262eee3ec8f8da9f898",
+    "matched_beta_batch_b_analysis.json": "c2055fa215bcab2cf23e1ec818d77b78b3e7d8f5c3809b4eedb69ab49eec2db5",
+    "profile-stat-candidates.png": "aba8449aa242547032c605fe3556f90ed24230670dd19b34bfa9de532d6436cd",
+    "build_profile_stat_candidates_report.js": "27c4f438f8f57bc616399ccdaf3b725a37d986e641e6b2ad0de768f035c0153a"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "bd024c5c1fe1a3254794e8aa176a2f76c31493690acedd3d1e79509fb886bc13",
+    "renderReportSha256": "904c4c006da594f7209adf8d89719f333ef979a628c36a56bbc2e0bd25755e10"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "bd024c5c1fe1a3254794e8aa176a2f76c31493690acedd3d1e79509fb886bc13",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看五个单页；目录、八个主剖面统计表、前12项候选表、原生公式、四面板图、独立复核表与边界说明完整，无近空白页、裁切或表后叠字。"
+  }
+}
+exit_code=0
+$ report_contracts: C:\Users\一梦\AppData\Roaming\kimi-desktop\daimon-share\daimon\runtime\python\.venv\Scripts\python.exe C:\Users\一梦\Documents\kimi\workspace\.worktrees\room-temp-isotope-dft-audit\research\floquet-bdg-tbc\test_profile_stat_candidates.py -v
+test_block_metrics_and_lag_statistics (__main__.ProfileStatCandidatesTests.test_block_metrics_and_lag_statistics) ... ok
+test_candidate_rule_and_coarsening_labels (__main__.ProfileStatCandidatesTests.test_candidate_rule_and_coarsening_labels) ... ok
+test_figure_markdown_and_native_word_review (__main__.ProfileStatCandidatesTests.test_figure_markdown_and_native_word_review) ... ok
+test_independent_metric_recheck (__main__.ProfileStatCandidatesTests.test_independent_metric_recheck) ... ok
+test_master_metric_definitions (__main__.ProfileStatCandidatesTests.test_master_metric_definitions) ... ok
+test_path_bindings_and_no_prediction_boundary (__main__.ProfileStatCandidatesTests.test_path_bindings_and_no_prediction_boundary) ... ok
+test_sources_dedup_profiles_and_metric_inventory (__main__.ProfileStatCandidatesTests.test_sources_dedup_profiles_and_metric_inventory) ... ok
+test_word_layout_and_analysis_scope (__main__.ProfileStatCandidatesTests.test_word_layout_and_analysis_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.118s
+
+OK
+exit_code=0
+profile_stat_candidates_overall passed check_only True
+exit_code=0

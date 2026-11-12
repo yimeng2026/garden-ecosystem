@@ -1,0 +1,36 @@
+{
+  "schema": "floquet-bdg-profile-stat-candidates-protocol-v1",
+  "analysis_date": "2026-11-12",
+  "registered_before_analysis": true,
+  "seed_values": [0, 1, 2, 3, 4, 5, 6, 7],
+  "comparison_seed_values": [0, 1, 6],
+  "master_grid": 4800,
+  "n_values": [400, 600],
+  "rng_seed_formula": "20261111 + seed",
+  "source_policy": "Deduplicate the established seed masters from batches A and B. Do not recompute Floquet spectra, select profiles, fit a predictive model or compute p-values.",
+  "master_metrics": ["mean", "std", "min", "q01", "q02", "q05", "q10", "q25", "q50", "q75", "q90", "q95", "q98", "q99", "max", "mad", "iqr", "low_frac_0p05", "low_frac_0p1", "low_frac_0p2", "high_frac_0p8", "high_frac_0p85", "high_frac_0p9", "high_frac_0p95", "lag1", "lag2", "lag3", "lag4", "roughness_rms", "total_variation", "sign_changes"],
+  "block_metrics": ["block_mean_min", "block_mean_max", "block_mean_std", "block_std_max", "block_std_mean", "low_block_frac_0p1", "high_block_frac_0p8", "left_right_delta", "endpoint_delta"],
+  "block_construction": "For N=400 use 12-value nested block means; for N=600 use 8-value nested block means. Local standard deviations use population ddof=0.",
+  "candidate_rule": "A metric must have at least 6 distinct values among 8 seeds and either strictly increase or strictly decrease along seed=1,0,6, matching or opposing the jump-change counts 0,4,6. Otherwise it is unordered and not shortlisted.",
+  "coarsening_rule": "For block metrics, record whether N=400 and N=600 produce the same strict direction. This is a descriptive robustness label, not independent validation.",
+  "selection_boundary": "Candidates are exploratory only. No correlation, regression, causal attribution, predictive accuracy, p-value or statistical significance is computed or implied. The driver-change count is 4 for all three comparison seeds and cannot supply an ordering.",
+  "path_sources": {
+    "seed01": {"path": "seed01_matrix_midpoint_analysis.json", "sha256": "2b2fdca42a4ab3110bf9fbc903b01723c09e27e90bee4cc14075b0b08e90deae"},
+    "seed6": {"path": "seed6_matrix_midpoint_analysis.json", "sha256": "dc95212ab89d25487b60b326364a3911eed9a56c35ba9d867b1adc6acc58a761"}
+  },
+  "source_profiles": {
+    "batch_a": {"path": "matched_beta_batch_a_analysis.json", "sha256": "871e5cfdc33a792ac4e0ec84e19a372a6a1b5154f0ec4262eee3ec8f8da9f898"},
+    "batch_b": {"path": "matched_beta_batch_b_analysis.json", "sha256": "c2055fa215bcab2cf23e1ec818d77b78b3e7d8f5c3809b4eedb69ab49eec2db5"}
+  },
+  "new_floquet_cells_computed": 0,
+  "new_seed_count": 0,
+  "new_winding_computed": false,
+  "n640_computed": false,
+  "new_taxonomy_claim": false,
+  "predictive_model_fitted": false,
+  "correlation_claim": false,
+  "statistical_significance_claim": false,
+  "causal_mechanism_proven": false,
+  "universal_size_law_claim": false,
+  "thermodynamic_limit_proof": false
+}

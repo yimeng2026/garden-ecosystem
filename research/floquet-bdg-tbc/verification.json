@@ -1,6 +1,6 @@
 {
   "schema": "floquet-bdg-tbc-complete-verification-v2",
-  "recorded_utc": "2026-11-11T23:56:51.350430+00:00",
+  "recorded_utc": "2026-11-12T00:23:32.937009+00:00",
   "all_passed": true,
   "test_counts": {
     "baseline": 9,
@@ -39,6 +39,7 @@
     "seed6_matrix_path": 9,
     "seed6_matrix_midpoint": 10,
     "seed01_matrix_midpoint": 10,
+    "profile_stat_candidates": 8,
     "log_reuse": 9
   },
   "commands": [
@@ -384,6 +385,15 @@
         "--check-only"
       ],
       "exit_code": 0
+    },
+    {
+      "label": "profile_stat_candidates_suite",
+      "command": [
+        "C:\\Users\\一梦\\AppData\\Roaming\\kimi-desktop\\daimon-share\\daimon\\runtime\\python\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\一梦\\Documents\\kimi\\workspace\\.worktrees\\room-temp-isotope-dft-audit\\research\\floquet-bdg-tbc\\run_profile_stat_candidates_verification.py",
+        "--check-only"
+      ],
+      "exit_code": 0
     }
   ],
   "environment": {
@@ -408,7 +418,7 @@
     "REPORT.md": "f1c7d2678b1c0082fef1d57840171fc592b8e9670b0fd6d02d42e19e873ec9ed",
     "Floquet-BdG-TBC无序对照报告.docx": "039dbf5b4bd73e90492932bc5ec98d32c644948da5af730fd9087fd80f222939",
     "word-qa/report.json": "7251e0c94c75236faec17d7431f734ec8f0d44b2a7e682e438c3731cacdf2dcf",
-    "run.log": "c315849b3bae9a7236faf3174f9dc5811ae3ad92099bce163332e7d14b98de0e",
+    "run.log": "9ded458fe9be25e198f2c3a4b523abab3d7197e20204ae5595d6bbf41f851b85",
     "ERRATA.md": "e435f0115edbb8fd7b26218515204d1501e2db94ef94935c1b15cc1bddb6b229",
     "finite_size_zero.json": "813a48c05e0e4cb80fbd615e908115572a646c75c438d33160fd1918d59ec50b",
     "finite_size_independent.json": "5b3c8925a63c1f1f62eef8d5a171f32a4e98e24ad1c67aeaf1d7af671097b932",
@@ -860,6 +870,22 @@
     "record_seed01_matrix_midpoint_qa.py": "c7c6cea508960e0559a018a32896396901d3ab417dd480ebe99c7b47f29cfd61",
     "test_seed01_matrix_midpoint.py": "129800d3bc7d01c9185dc75ea7ce4e768706fe33c023e7c8add0f530dc10f785",
     "run_seed01_matrix_midpoint_verification.py": "a2d52ac605508db163ef7638db3acc6bfc5434e12042d2a271dc23d9dc338125",
+    "profile_stat_candidates_protocol.json": "7cb9b8786288f59cf92c9d9e286b949c05fd80d108b3c453f534d166ea0b2817",
+    "profile_stat_candidates_analysis.json": "8cc667ebae8aaf124a444d7fe2f15a7e8d5bd42dd7ee38892e03f996efb670d2",
+    "profile_stat_candidates_independent.json": "ec11eebdfe31588135e0ab79e6833500b630b8404d0344efb3dc570c8a9ab2bb",
+    "profile-stat-candidates.png": "aba8449aa242547032c605fe3556f90ed24230670dd19b34bfa9de532d6436cd",
+    "PROFILE_STAT_CANDIDATES.md": "5d62cc2eaa86627b2f52fa6244bdc3b7afbc40d7635439dbd711d79f3a18a413",
+    "Floquet-BdG-无序剖面候选统计指标.docx": "bd024c5c1fe1a3254794e8aa176a2f76c31493690acedd3d1e79509fb886bc13",
+    "profile-stat-candidates-word-qa.json": "8381bc072f224287083c3533837e70d7db903f88276f3b43c70c78ec87bca91d",
+    "profile-stat-candidates-word-render/report.json": "904c4c006da594f7209adf8d89719f333ef979a628c36a56bbc2e0bd25755e10",
+    "profile_stat_candidates_verification.json": "26ab6f48f33251272ccc7293928cde437a9f848d3e436e1e5ceb333ed14cebaa",
+    "profile_stat_candidates_run.log": "a78422d4289ef4f264d71e08558ef50316ff2046851c29aba5f9e2e7bca61068",
+    "analyze_profile_stat_candidates.py": "56402ba542745364a2c702695fee0f8b793229c4d53bdc9a4ff7250565c7cf04",
+    "verify_profile_stat_candidates.py": "a78bce5c3d9d08cf78e5121bd8dd5d50b81f097871924c8d16012de3f0dd4b6d",
+    "build_profile_stat_candidates_report.js": "27c4f438f8f57bc616399ccdaf3b725a37d986e641e6b2ad0de768f035c0153a",
+    "record_profile_stat_candidates_qa.py": "8458f23d817fb7ad4683c0b58c8cdd777d1ab424f78af56d1b5f77c6fc438903",
+    "test_profile_stat_candidates.py": "9599eb9e6f70b9d4d7a1afdc6553cd3e0e52287d9c50f7069113fdd1659db1a7",
+    "run_profile_stat_candidates_verification.py": "55142d28af6052a330f1c70085f7353c24768338e551b9da76c899899be5a585",
     "tbc_model.py": "bc7f7541434920ae9d5a9bdca396dc86306fb383a7d9f4bff19902077de641fc",
     "test_tbc.py": "b9c6d07e0571a059bf9af0f8179fd0e1fa18e43673f733eb1db958aa1dfb841f",
     "run_tbc.py": "ca2f38ef0623a7b941d9240b795a7995ffd226083a73c681c42469fa821d59ff",
@@ -871,7 +897,7 @@
     "build_report.js": "9a7d3463ca8a54ec48f659b294a59feb02909ec05529ed3af13eb917a961e276",
     "record_word_qa.py": "05923bfe7343998bcf1da68ee4e0fb175f9863a924968eb614c94b05fdb85168",
     "test_report.py": "ae5a094729fc9aac80c7ad935bb9277281cb73dc16ecfaf1e061a371a263cbda",
-    "run_verification.py": "5832567ffcffbbd2efed1e5557e5a21db7c77a01bb926e80bb18b971727ecbfe",
+    "run_verification.py": "eef80680584fbcc1f75d23303700d0408787b560d96dc651ef3114b407a48868",
     "test_verification_log_reuse.py": "74ba6d245d085783fe9778244d3b9f3e0705804bd7e8d181edbf50901af27fa4"
   },
   "observed_status": "clean_floquet_baseline_passed",
@@ -971,6 +997,9 @@
   "seed01_matrix_midpoint_all_passed": true,
   "seed01_matrix_midpoint_independent_recheck_passed": true,
   "seed01_matrix_midpoint_visual_review_status": "passed",
+  "profile_stat_candidates_all_passed": true,
+  "profile_stat_candidates_independent_recheck_passed": true,
+  "profile_stat_candidates_visual_review_status": "passed",
   "scope": {
     "static_baseline_checked": true,
     "clean_kicked_baseline_checked": true,
@@ -1272,6 +1301,37 @@
     "seed01_matrix_midpoint_continuous_path_proof": false,
     "seed01_matrix_midpoint_spectral_crossing_proven": false,
     "seed01_matrix_midpoint_state_exchange_proven": false,
+    "profile_stat_candidates_analysis_evaluated": "passed",
+    "profile_stat_candidates_profile_count": 8,
+    "profile_stat_candidates_metric_record_count": 40,
+    "profile_stat_candidates_candidate_count": 16,
+    "profile_stat_candidates_candidate_names": [
+      "mean",
+      "q01",
+      "q02",
+      "q05",
+      "q25",
+      "q50",
+      "q98",
+      "q99",
+      "low_frac_0p2",
+      "high_frac_0p85",
+      "high_frac_0p9",
+      "lag1",
+      "roughness_rms",
+      "total_variation",
+      "sign_changes",
+      "block_std_max"
+    ],
+    "profile_stat_candidates_labels_are_exploratory_only": true,
+    "profile_stat_candidates_remaining_seed_preregistration_required": true,
+    "profile_stat_candidates_new_floquet_cells": 0,
+    "profile_stat_candidates_new_floquet_spectra_recomputed": false,
+    "profile_stat_candidates_predictive_model_fitted": false,
+    "profile_stat_candidates_correlation_claim": false,
+    "profile_stat_candidates_statistical_significance_claim": false,
+    "profile_stat_candidates_new_winding_computed": false,
+    "profile_stat_candidates_n640_computed": false,
     "new_taxonomy_claim": false,
     "universal_category_claim": false,
     "localization_scale_analysis_pending": false,

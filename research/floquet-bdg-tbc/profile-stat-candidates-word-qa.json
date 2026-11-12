@@ -1,0 +1,47 @@
+{
+  "schema": "floquet-bdg-profile-stat-candidates-word-qa-v1",
+  "recordedUtc": "2026-11-12T00:23:15.431298+00:00",
+  "sourceSha256": {
+    "profile_stat_candidates_protocol.json": "7cb9b8786288f59cf92c9d9e286b949c05fd80d108b3c453f534d166ea0b2817",
+    "profile_stat_candidates_analysis.json": "8cc667ebae8aaf124a444d7fe2f15a7e8d5bd42dd7ee38892e03f996efb670d2",
+    "profile_stat_candidates_independent.json": "ec11eebdfe31588135e0ab79e6833500b630b8404d0344efb3dc570c8a9ab2bb",
+    "seed01_matrix_midpoint_analysis.json": "2b2fdca42a4ab3110bf9fbc903b01723c09e27e90bee4cc14075b0b08e90deae",
+    "seed6_matrix_midpoint_analysis.json": "dc95212ab89d25487b60b326364a3911eed9a56c35ba9d867b1adc6acc58a761",
+    "matched_beta_batch_a_analysis.json": "871e5cfdc33a792ac4e0ec84e19a372a6a1b5154f0ec4262eee3ec8f8da9f898",
+    "matched_beta_batch_b_analysis.json": "c2055fa215bcab2cf23e1ec818d77b78b3e7d8f5c3809b4eedb69ab49eec2db5",
+    "profile-stat-candidates.png": "aba8449aa242547032c605fe3556f90ed24230670dd19b34bfa9de532d6436cd",
+    "build_profile_stat_candidates_report.js": "27c4f438f8f57bc616399ccdaf3b725a37d986e641e6b2ad0de768f035c0153a"
+  },
+  "finalValidation": {
+    "route": "kimi-word docx.py build with vendored docx-js",
+    "summary": "PASSED (21 parts XSD + semantic checks; gen: 6 checks clean)",
+    "docxSha256": "bd024c5c1fe1a3254794e8aa176a2f76c31493690acedd3d1e79509fb886bc13",
+    "renderReportSha256": "904c4c006da594f7209adf8d89719f333ef979a628c36a56bbc2e0bd25755e10"
+  },
+  "visualReview": {
+    "status": "passed",
+    "pagesReviewed": 5,
+    "reviewedPages": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png"
+    ],
+    "contactSheetRead": true,
+    "nearBlankPages": [],
+    "clippedPages": [],
+    "docxSha256": "bd024c5c1fe1a3254794e8aa176a2f76c31493690acedd3d1e79509fb886bc13",
+    "tocPageMapping": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "libreOfficeFallbackUsed": false,
+    "contentLossFindingsReviewed": [
+      "word/numbering.xml w:lvlOverride；默认编号覆盖不影响本报告正文"
+    ],
+    "note": "已先查看联系表，再逐一查看五个单页；目录、八个主剖面统计表、前12项候选表、原生公式、四面板图、独立复核表与边界说明完整，无近空白页、裁切或表后叠字。"
+  }
+}
